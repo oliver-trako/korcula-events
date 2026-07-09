@@ -4,6 +4,7 @@
     events: { events: [] },
     sourceReport: { counts: {}, rows: [] },
     socialReport: { counts: {}, rows: [] },
+    posterReport: { counts: {}, results: [] },
     panel: "candidates"
   };
 
@@ -121,6 +122,30 @@
     </article>`).join("");
   }
 
+  function renderPosters() {
+    const panel = $("#panel-posters");
+    const rows = state.posterReport.results || [];
+    if (!rows.length) {
+      panel.innerHTML = '<div class="source-row empty-review">No poster OCR report yet. Add posters to 2026 Events and run ingestion.</div>';
+      return;
+    }
+    panel.innerHTML = rows.map((row) => {
+      const imageHref = row.imagePath ? row.imagePath.replace(/^2026 Events\//, "../2026%20Events/") : "";
+      const hints = [
+        (row.dateHints || []).length ? "dates: " + row.dateHints.join(", ") : "",
+        (row.timeHints || []).length ? "times: " + row.timeHints.join(", ") : ""
+      ].filter(Boolean).join(" · ");
+      return `<article class="source-row">
+        <div>
+          <h2>${escapeHtml(row.imagePath || "Poster")}</h2>
+          <p>${escapeHtml([row.status, hints].filter(Boolean).join(" · "))}</p>
+          <p>${escapeHtml(short(row.textSnippet || row.note || row.error || "", 400))}</p>
+        </div>
+        ${imageHref ? `<a class="review-home open-link" href="${escapeHtml(imageHref)}" target="_blank" rel="noopener">Open poster</a>` : ""}
+      </article>`;
+    }).join("");
+  }
+
   function renderSources() {
     const panel = $("#panel-sources");
     const rows = state.sourceReport.rows || [];
@@ -144,6 +169,7 @@
   function render() {
     statusCounts();
     renderCandidates();
+    renderPosters();
     renderSocial();
     renderSources();
   }
@@ -153,7 +179,7 @@
     document.querySelectorAll(".review-tabs button").forEach((btn) => {
       btn.classList.toggle("active", btn.dataset.panel === panelName);
     });
-    ["candidates", "social", "sources"].forEach((name) => {
+    ["candidates", "posters", "social", "sources"].forEach((name) => {
       $("#panel-" + name).hidden = name !== panelName;
     });
   }
@@ -225,16 +251,18 @@
   }
 
   async function init() {
-    const [pending, events, sourceReport, socialReport] = await Promise.all([
+    const [pending, events, sourceReport, socialReport, posterReport] = await Promise.all([
       loadJson("data/pending-events.json", state.pending),
       loadJson("data/events.json", state.events),
       loadJson("data/source-check-report.json", state.sourceReport),
-      loadJson("data/social-source-report.json", state.socialReport)
+      loadJson("data/social-source-report.json", state.socialReport),
+      loadJson("data/poster-ocr-report.json", state.posterReport)
     ]);
     state.pending = pending;
     state.events = events;
     state.sourceReport = sourceReport;
     state.socialReport = socialReport;
+    state.posterReport = posterReport;
     bindEvents();
     render();
     setPanel("candidates");

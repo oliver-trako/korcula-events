@@ -48,7 +48,7 @@ jobs:
 
       - name: Run poster OCR
         shell: pwsh
-        run: ./scripts/ocr-posters.ps1
+        run: ./scripts/ocr-posters.ps1 -CreateCandidates
 
       - name: Create pull request
         uses: peter-evans/create-pull-request@v8
@@ -62,4 +62,5 @@ jobs:
             Auto-approved structured candidates may have been merged into `events.json`.
             Low-confidence social, OCR, and search candidates remain in `pending-events.json` for review.
             Social pages/groups are listed in `social-source-report.json` for manual review unless API access is configured.
+            Poster OCR results are listed in `poster-ocr-report.json`.
           labels: event-ingestion

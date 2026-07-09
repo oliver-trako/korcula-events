@@ -189,7 +189,7 @@ function Get-MoreskaTicketEvents {
         en = "Korcula's famous sword dance with live wind orchestra. Tickets are listed on the official Moreska website."
         hr = "Poznati korculanski macevalacki ples uz puhacki orkestar. Ulaznice su navedene na sluzbenoj stranici Moreske."
       }
-      ticketUrl = $Row.url
+      ticketUrl = "https://moreska.eu/tickets"
       website = "https://moreska.eu/"
       sourceId = $Row.sourceId
       source = $Row.url

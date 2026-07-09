@@ -50,6 +50,10 @@ Polish the static Korcula Island Events website before registering `korcula-even
   - Framework preset: None / static
 - Cloudflare Pages preview is live at `https://korcula-events.pages.dev/` as of 2026-07-09.
 - Verified production paths return 200: `/`, `/data/events.json`, `/assets/logo-korcula-events.svg`, and generated hero image path.
+- Custom domains are active with SSL as of 2026-07-09:
+  - `https://korcula-events.com/`
+  - `https://www.korcula-events.com/`
+- Verified custom-domain production paths return 200: root domain, www domain, `/data/events.json`, `/robots.txt`, `/sitemap.xml`, `/assets/logo-korcula-events.svg`, and generated hero image path.
 
 ## Data quality notes
 

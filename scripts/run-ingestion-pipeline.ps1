@@ -17,7 +17,8 @@ if (-not ($CheckSources -or $ExtractCandidates -or $Classify -or $MergeApproved)
   $MergeApproved = $true
 }
 
-$sourceSummary = Join-Path $env:TEMP "korcula-source-checks/summary.json"
+$tempRoot = if ($env:TEMP) { $env:TEMP } elseif ($env:TMPDIR) { $env:TMPDIR } else { [System.IO.Path]::GetTempPath() }
+$sourceSummary = Join-Path $tempRoot "korcula-source-checks/summary.json"
 $scriptDir = $PSScriptRoot
 
 if ($CheckSources) {

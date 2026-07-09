@@ -21,6 +21,44 @@ function Ensure-Dir {
   }
 }
 
+function Get-FirstMatchValues {
+  param(
+    [string]$Text,
+    [string]$Pattern,
+    [int]$Limit = 20
+  )
+  return @([regex]::Matches($Text, $Pattern) | Select-Object -First $Limit | ForEach-Object { $_.Value })
+}
+
+function Get-TextSnippet {
+  param(
+    [string]$Text,
+    [string[]]$Needles,
+    [int]$Length = 900
+  )
+
+  if (-not $Text) { return "" }
+
+  $firstIndex = -1
+  foreach ($needle in $Needles) {
+    if (-not $needle) { continue }
+    $idx = $Text.IndexOf($needle, [System.StringComparison]::OrdinalIgnoreCase)
+    if ($idx -ge 0 -and ($firstIndex -lt 0 -or $idx -lt $firstIndex)) {
+      $firstIndex = $idx
+    }
+  }
+
+  if ($firstIndex -lt 0) {
+    $dateMatch = [regex]::Match($Text, '\b(\d{1,2})[./-](\d{1,2})(?:[./-](\d{2,4}))?\b')
+    if ($dateMatch.Success) { $firstIndex = $dateMatch.Index }
+  }
+
+  if ($firstIndex -lt 0) { $firstIndex = 0 }
+  $start = [Math]::Max(0, $firstIndex - 180)
+  $take = [Math]::Min($Length, $Text.Length - $start)
+  return $Text.Substring($start, $take).Trim()
+}
+
 $sourcesDoc = Get-Content -Raw -Path $SourcesPath | ConvertFrom-Json
 $stamp = Get-Date -Format "yyyyMMdd-HHmmss"
 Ensure-Dir $OutDir
@@ -72,6 +110,8 @@ foreach ($source in $sourcesDoc.sources) {
 
       $text = ($response.Content -replace '<script[\s\S]*?</script>', ' ' -replace '<style[\s\S]*?</style>', ' ' -replace '<[^>]+>', ' ')
       $text = ($text -replace '\s+', ' ').Trim()
+      $titleMatch = [regex]::Match($response.Content, '<title[^>]*>([\s\S]*?)</title>', [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
+      $pageTitle = if ($titleMatch.Success) { (($titleMatch.Groups[1].Value -replace '<[^>]+>', ' ') -replace '\s+', ' ').Trim() } else { $null }
       $textPath = $null
 
       if ($SaveSnapshots) {
@@ -86,6 +126,11 @@ foreach ($source in $sourcesDoc.sources) {
         if ($text -match [regex]::Escape([string]$kw)) { $hits += [string]$kw }
       }
 
+      $dateHints = Get-FirstMatchValues -Text $text -Pattern '\b(\d{1,2})[./-](\d{1,2})(?:[./-](\d{2,4}))?\b'
+      $timeHints = Get-FirstMatchValues -Text $text -Pattern '\b([01]?\d|2[0-3])[:.](\d{2})\b'
+      $snippetNeedles = @($dateHints + $timeHints + $hits) | Where-Object { $_ } | Select-Object -First 12
+      $textSnippet = Get-TextSnippet -Text $text -Needles $snippetNeedles
+
       $results += [pscustomobject]@{
         sourceId = $source.id
         sourceName = $source.name
@@ -94,7 +139,12 @@ foreach ($source in $sourcesDoc.sources) {
         url = $url
         status = "fetched"
         statusCode = [int]$response.StatusCode
+        pageTitle = $pageTitle
+        contentLength = $text.Length
+        textSnippet = $textSnippet
         textPath = $textPath
+        dateHints = @($dateHints)
+        timeHints = @($timeHints)
         keywordHits = $hits
       }
     } catch {

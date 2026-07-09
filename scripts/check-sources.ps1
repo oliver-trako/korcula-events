@@ -1,6 +1,6 @@
 param(
   [string]$SourcesPath = "site/data/sources.json",
-  [string]$OutDir = (Join-Path $env:TEMP "korcula-source-checks"),
+  [string]$OutDir = (Join-Path ([System.IO.Path]::GetTempPath()) "korcula-source-checks"),
   [switch]$IncludeSocial,
   [switch]$SaveSnapshots,
   [string]$Priority,

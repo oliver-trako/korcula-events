@@ -1,6 +1,6 @@
 param(
   [string]$PosterDir = "2026 Events",
-  [string]$OutPath = (Join-Path $env:TEMP "korcula-poster-ocr/ocr-results.json")
+  [string]$OutPath = (Join-Path ([System.IO.Path]::GetTempPath()) "korcula-poster-ocr/ocr-results.json")
 )
 
 $ErrorActionPreference = "Stop"

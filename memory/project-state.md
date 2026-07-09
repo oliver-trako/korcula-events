@@ -15,6 +15,8 @@ Polish the static Korcula Island Events website before registering `korcula-even
 - `2026 Events/` contains original flyer/poster images used by the site.
 - `scripts/` contains local source-checking, OCR, extraction, and merge helpers.
 - `.claude/launch.json` runs the site locally with `npx --yes serve -l 5500 .`.
+- The OneDrive project folder is a Microsoft reparse directory and cannot host `.git` reliably. Git deployment is currently handled from a normal copy at `C:\Users\oliver\korcula-events-deploy`.
+- GitHub repo: `https://github.com/oliver-trako/korcula-events`
 
 ## Product direction
 
@@ -40,6 +42,7 @@ Polish the static Korcula Island Events website before registering `korcula-even
 - Target hosting is Cloudflare's free static hosting path once the website is approved.
 - Do not assume domain, Cloudflare project, or DNS already exists.
 - Static hosting alone will not run scrapers; scheduled checks require Cloudflare Workers Cron or an external/local runner.
+- Initial site source was pushed to GitHub `main` on 2026-07-09 from `C:\Users\oliver\korcula-events-deploy`.
 
 ## Data quality notes
 

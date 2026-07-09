@@ -1,0 +1,465 @@
+{
+  "meta": {
+    "generated": "2026-07-09",
+    "purpose": "Directory of websites, ticket pages, social pages, organisers, venues, and village/community pages to monitor for Korcula Island Events.",
+    "workflow": "Sources generate candidate events. Candidate events require review before being merged into events.json.",
+    "scrapeModes": {
+      "html": "Stable public webpage suitable for periodic fetch and text extraction.",
+      "ticketing": "Ticket/event platform page suitable for structured or semi-structured extraction.",
+      "manual-social": "Facebook/Instagram/social page; use as discovery lead and manual review source.",
+      "search-lead": "Search query or social search pattern; use to find new posts/pages/events.",
+      "poster-folder": "Local poster/image folder suitable for OCR and manual review."
+    }
+  },
+  "sources": [
+    {
+      "id": "visit-korcula",
+      "name": "Tourist Board of the Town of Korcula",
+      "type": "official-board",
+      "town": "korcula",
+      "priority": "high",
+      "checkFrequencyDays": 1,
+      "confidence": "high",
+      "urls": [
+        { "kind": "website", "url": "https://visitkorcula.eu/en/events/", "scrapeMode": "html" },
+        { "kind": "facebook", "url": "https://www.facebook.com/KorculaTouristBoard/", "scrapeMode": "manual-social" }
+      ],
+      "keywords": ["Korcula", "summer", "events", "festival", "kino", "koncert", "Račišće", "Pupnat", "Žrnovo", "Kneže"],
+      "notes": "Primary official source for Korcula Town and villages including Racisce, Pupnat, Zrnovo and Kneze."
+    },
+    {
+      "id": "visit-korcula-racisce",
+      "name": "Summer in Racisce",
+      "type": "official-event-page",
+      "town": "racisce",
+      "priority": "high",
+      "checkFrequencyDays": 2,
+      "confidence": "high",
+      "urls": [
+        { "kind": "website", "url": "https://visitkorcula.eu/en/events/summer-in-racisce/", "scrapeMode": "html" }
+      ],
+      "keywords": ["Račišće", "Igre Račića", "buće", "cinema", "Pumpurela", "Račiška kronika"],
+      "notes": "Official page has previously listed village sports, cinema, pancakes and Pumpurela events."
+    },
+    {
+      "id": "visit-lumbarda",
+      "name": "Visit Lumbarda",
+      "type": "official-board",
+      "town": "lumbarda",
+      "priority": "high",
+      "checkFrequencyDays": 1,
+      "confidence": "high",
+      "urls": [
+        { "kind": "website", "url": "https://www.visitlumbarda.eu/", "scrapeMode": "html" },
+        { "kind": "facebook", "url": "https://www.facebook.com/visitlumbarda/", "scrapeMode": "manual-social" }
+      ],
+      "keywords": ["Lumbarda", "Grk", "wine", "Prvi Žal", "Lumbarajske užance", "festival"]
+    },
+    {
+      "id": "tz-vela-luka",
+      "name": "Vela Luka Tourist Board",
+      "type": "official-board",
+      "town": "vela-luka",
+      "priority": "high",
+      "checkFrequencyDays": 1,
+      "confidence": "high",
+      "urls": [
+        { "kind": "website", "url": "https://tzvelaluka.hr/", "scrapeMode": "html" }
+      ],
+      "keywords": ["Vela Luka", "Luško lito", "concert", "festival", "Proizd", "Casablanca"]
+    },
+    {
+      "id": "tz-blato",
+      "name": "Tourist Board Blato",
+      "type": "official-board",
+      "town": "blato",
+      "priority": "high",
+      "checkFrequencyDays": 2,
+      "confidence": "high",
+      "urls": [
+        { "kind": "website", "url": "https://tz-blato.hr/", "scrapeMode": "html" }
+      ],
+      "keywords": ["Blato", "Blatsko ljeto", "Wine & Dine", "Kumpanjija", "Plokata"]
+    },
+    {
+      "id": "smokvica-brna",
+      "name": "Smokvica / Brna Tourist Sources",
+      "type": "official-board",
+      "town": "smokvica",
+      "priority": "high",
+      "checkFrequencyDays": 2,
+      "confidence": "medium",
+      "urls": [
+        { "kind": "search", "url": "https://www.google.com/search?q=Smokvica+Brna+events+Kor%C4%8Dula", "scrapeMode": "search-lead" }
+      ],
+      "keywords": ["Smokvica", "Brna", "Smokviško lito", "Brodetijada", "wine"]
+    },
+    {
+      "id": "visit-orebic",
+      "name": "Orebic Tourist Board",
+      "type": "official-board",
+      "town": "orebic",
+      "priority": "medium",
+      "checkFrequencyDays": 2,
+      "confidence": "high",
+      "urls": [
+        { "kind": "website", "url": "https://visitorebic-croatia.hr/", "scrapeMode": "html" }
+      ],
+      "keywords": ["Orebić", "Pelješac", "Viganj", "Kućište", "Lovište", "concert", "festival", "folklore"]
+    },
+    {
+      "id": "moreska",
+      "name": "Moreška Korčula",
+      "type": "cultural-organiser",
+      "town": "korcula",
+      "priority": "high",
+      "checkFrequencyDays": 2,
+      "confidence": "high",
+      "urls": [
+        { "kind": "website", "url": "https://moreska.eu/", "scrapeMode": "html" },
+        { "kind": "tickets", "url": "https://moreska.eu/tickets/", "scrapeMode": "ticketing" }
+      ],
+      "keywords": ["Moreška", "sword dance", "tickets", "performance"]
+    },
+    {
+      "id": "blue-korcula",
+      "name": "Blue Bar / Blue Club Korcula",
+      "type": "venue",
+      "town": "korcula",
+      "priority": "high",
+      "checkFrequencyDays": 1,
+      "confidence": "medium",
+      "urls": [
+        { "kind": "website", "url": "https://bluekorcula.com/club", "scrapeMode": "html" },
+        { "kind": "facebook", "url": "https://www.facebook.com/bluekorcula/", "scrapeMode": "manual-social" },
+        { "kind": "instagram", "url": "https://www.instagram.com/bluekorcula/", "scrapeMode": "manual-social" },
+        { "kind": "ticketing-search", "url": "https://core-event.co/en/search?query=Kor%C4%8Dula", "scrapeMode": "ticketing" }
+      ],
+      "keywords": ["Blue Club", "Blue Bar", "Korčula", "DJ", "tickets", "CoreEvent", "nightlife"]
+    },
+    {
+      "id": "boogie-jungle",
+      "name": "Boogie Jungle / Boogie Beach",
+      "type": "venue",
+      "town": "korcula",
+      "priority": "high",
+      "checkFrequencyDays": 1,
+      "confidence": "medium",
+      "urls": [
+        { "kind": "facebook", "url": "https://www.facebook.com/thejungleclub1/", "scrapeMode": "manual-social" },
+        { "kind": "search", "url": "https://www.google.com/search?q=Boogie+Jungle+Kor%C4%8Dula+events", "scrapeMode": "search-lead" }
+      ],
+      "keywords": ["Boogie Jungle", "Boogie Beach", "Korkyralis", "DJ", "festival", "shuttle"]
+    },
+    {
+      "id": "la-banya",
+      "name": "La Banya Beach Oasis",
+      "type": "venue",
+      "town": "zrnovo",
+      "priority": "high",
+      "checkFrequencyDays": 1,
+      "confidence": "medium",
+      "urls": [
+        { "kind": "website", "url": "https://labanya.hr", "scrapeMode": "html" },
+        { "kind": "instagram", "url": "https://www.instagram.com/la__banya/", "scrapeMode": "manual-social" },
+        { "kind": "facebook", "url": "https://www.facebook.com/LaBanyaKorcula/", "scrapeMode": "manual-social" }
+      ],
+      "keywords": ["La Banya", "live music", "jazz", "disco aperitivo", "Žrnovo"]
+    },
+    {
+      "id": "prvi-zal",
+      "name": "Prvi Žal Beach Bar",
+      "type": "venue",
+      "town": "lumbarda",
+      "priority": "medium",
+      "checkFrequencyDays": 2,
+      "confidence": "low",
+      "urls": [
+        { "kind": "search", "url": "https://www.google.com/search?q=Prvi+%C5%BDal+Beach+Bar+Lumbarda+events", "scrapeMode": "search-lead" }
+      ],
+      "keywords": ["Prvi Žal", "Lumbarda", "beach bar", "music", "DJ"]
+    },
+    {
+      "id": "udruga-mladih-racisce",
+      "name": "Udruga Mladih Račišće",
+      "type": "community-association",
+      "town": "racisce",
+      "priority": "high",
+      "checkFrequencyDays": 2,
+      "confidence": "medium",
+      "urls": [
+        { "kind": "facebook", "url": "https://www.facebook.com/people/Udruga-Mladih-Ra%C4%8Di%C5%A1%C4%87e/100005643139445/", "scrapeMode": "manual-social" }
+      ],
+      "keywords": ["Udruga Mladih Račišće", "Račišće", "buće", "turnir", "zabava", "koncert", "mladi"],
+      "notes": "Important social-only source for small village events."
+    },
+    {
+      "id": "mjesni-odbor-racisce",
+      "name": "Mjesni odbor Račišće",
+      "type": "community-board",
+      "town": "racisce",
+      "priority": "high",
+      "checkFrequencyDays": 2,
+      "confidence": "medium",
+      "urls": [
+        { "kind": "facebook", "url": "https://www.facebook.com/moracisce2015/", "scrapeMode": "manual-social" }
+      ],
+      "keywords": ["Mjesni odbor Račišće", "Račišće", "dječje buće", "Igre Račića", "Pumpurela", "riva", "nogometno igralište", "nogomet", "vaterpolo", "košarka"],
+      "notes": "Search results show village notices and children's buće activity."
+    },
+    {
+      "id": "kneze-local-events",
+      "name": "Kneže Local Events",
+      "type": "village-lead",
+      "town": "kneze",
+      "priority": "medium",
+      "checkFrequencyDays": 3,
+      "confidence": "low",
+      "urls": [
+        { "kind": "search", "url": "https://www.google.com/search?q=Kne%C5%BEe+Kor%C4%8Dula+bu%C4%87e+turnir+event", "scrapeMode": "search-lead" },
+        { "kind": "search", "url": "https://www.facebook.com/search/top?q=Kne%C5%BEe%20Kor%C4%8Dula%20bu%C4%87e", "scrapeMode": "manual-social" }
+      ],
+      "keywords": ["Kneže", "buće", "turnir", "fešta", "Korčula"]
+    },
+    {
+      "id": "island-sports-tournaments",
+      "name": "Island Sports Tournament Leads",
+      "type": "sports-lead",
+      "town": "island-wide",
+      "priority": "high",
+      "checkFrequencyDays": 2,
+      "confidence": "low",
+      "urls": [
+        { "kind": "search", "url": "https://www.google.com/search?q=Kor%C4%8Dula+nogometni+turnir+2026", "scrapeMode": "search-lead" },
+        { "kind": "search", "url": "https://www.google.com/search?q=Kor%C4%8Dula+vaterpolo+turnir+2026", "scrapeMode": "search-lead" },
+        { "kind": "search", "url": "https://www.google.com/search?q=Kor%C4%8Dula+ko%C5%A1arka%C5%A1ki+turnir+2026", "scrapeMode": "search-lead" },
+        { "kind": "facebook-search", "url": "https://www.facebook.com/search/top?q=Kor%C4%8Dula%20nogometni%20turnir", "scrapeMode": "manual-social" },
+        { "kind": "facebook-search", "url": "https://www.facebook.com/search/top?q=Kor%C4%8Dula%20vaterpolo%20turnir", "scrapeMode": "manual-social" },
+        { "kind": "facebook-search", "url": "https://www.facebook.com/search/top?q=Kor%C4%8Dula%20ko%C5%A1arka%C5%A1ki%20turnir", "scrapeMode": "manual-social" }
+      ],
+      "keywords": ["nogomet", "mali nogomet", "football", "soccer", "vaterpolo", "waterpolo", "košarka", "basketball", "turnir", "tournament", "sportske igre"],
+      "notes": "Covers small football/soccer, waterpolo and basketball tournaments that are often promoted through social posts or posters."
+    },
+    {
+      "id": "village-sports-racisce-kneze",
+      "name": "Račišće / Kneže Village Sports Leads",
+      "type": "sports-lead",
+      "town": "racisce",
+      "priority": "high",
+      "checkFrequencyDays": 2,
+      "confidence": "low",
+      "urls": [
+        { "kind": "search", "url": "https://www.google.com/search?q=Ra%C4%8Di%C5%A1%C4%87e+nogomet+vaterpolo+ko%C5%A1arka+turnir", "scrapeMode": "search-lead" },
+        { "kind": "search", "url": "https://www.google.com/search?q=Kne%C5%BEe+nogomet+vaterpolo+ko%C5%A1arka+turnir", "scrapeMode": "search-lead" },
+        { "kind": "facebook-search", "url": "https://www.facebook.com/search/top?q=Ra%C4%8Di%C5%A1%C4%87e%20nogomet%20turnir", "scrapeMode": "manual-social" },
+        { "kind": "facebook-search", "url": "https://www.facebook.com/search/top?q=Kne%C5%BEe%20nogomet%20turnir", "scrapeMode": "manual-social" }
+      ],
+      "keywords": ["Račišće", "Kneže", "nogomet", "mali nogomet", "vaterpolo", "košarka", "buće", "turnir", "sportske igre"],
+      "notes": "Explicitly tracks small village sports that may not appear in tourist-board programmes."
+    },
+    {
+      "id": "core-event-korcula",
+      "name": "CoreEvent Korcula Tickets",
+      "type": "ticketing-platform",
+      "town": "korcula",
+      "priority": "high",
+      "checkFrequencyDays": 1,
+      "confidence": "medium",
+      "urls": [
+        { "kind": "search", "url": "https://core-event.co/en/search?query=Kor%C4%8Dula", "scrapeMode": "ticketing" },
+        { "kind": "search", "url": "https://core-event.co/en/search?query=Korcula", "scrapeMode": "ticketing" }
+      ],
+      "keywords": ["Korčula", "Korcula", "Blue Club", "tickets", "event"]
+    },
+    {
+      "id": "korcula-events-facebook-group",
+      "name": "Korcula Events Facebook Group",
+      "type": "social-group",
+      "town": "island-wide",
+      "priority": "high",
+      "checkFrequencyDays": 1,
+      "confidence": "medium",
+      "urls": [
+        { "kind": "facebook-group", "url": "https://www.facebook.com/groups/korculaevents/", "scrapeMode": "manual-social" }
+      ],
+      "keywords": ["Korcula Events", "Korčula", "event", "tonight", "concert", "festival", "Moreska", "gastro", "party"],
+      "notes": "Island-wide social group that surfaces official and informal events. Use as a discovery lead only."
+    },
+    {
+      "id": "korcula-travel-facebook-group",
+      "name": "Korcula Travel Facebook Group",
+      "type": "social-group",
+      "town": "island-wide",
+      "priority": "medium",
+      "checkFrequencyDays": 3,
+      "confidence": "low",
+      "urls": [
+        { "kind": "facebook-group", "url": "https://www.facebook.com/groups/korculatravel/", "scrapeMode": "manual-social" }
+      ],
+      "keywords": ["Korcula", "live music", "beach bar", "restaurant", "tonight", "festival", "event"],
+      "notes": "Travel group can reveal restaurants, bars and one-off social events missed by official sources."
+    },
+    {
+      "id": "adriatic-pearl-weekly-events",
+      "name": "Adriatic Pearl Korcula Weekly Events",
+      "type": "event-aggregator",
+      "town": "korcula",
+      "priority": "high",
+      "checkFrequencyDays": 1,
+      "confidence": "medium",
+      "urls": [
+        { "kind": "website", "url": "https://adriaticpearlkorcula.com/weeklyevents", "scrapeMode": "html" },
+        { "kind": "search", "url": "https://www.google.com/search?q=Adriatic+Pearl+Korcula+weekly+events", "scrapeMode": "search-lead" }
+      ],
+      "keywords": ["weekly events", "Moreška", "gastro", "concert", "tickets", "Korcula"]
+    },
+    {
+      "id": "korculainfo-guides",
+      "name": "Korculainfo Village and Event Guides",
+      "type": "guide-site",
+      "town": "island-wide",
+      "priority": "medium",
+      "checkFrequencyDays": 14,
+      "confidence": "medium",
+      "urls": [
+        { "kind": "website", "url": "https://www.korculainfo.com/zrnovo/", "scrapeMode": "html" },
+        { "kind": "website", "url": "https://www.korculainfo.com/pupnat/", "scrapeMode": "html" },
+        { "kind": "website", "url": "https://www.korculainfo.com/cara/", "scrapeMode": "html" }
+      ],
+      "keywords": ["Moštra", "Kumpanija", "Gospa od Sniga", "Sveti Rok", "village day", "feast"],
+      "notes": "Good for annual village traditions and missing baseline recurring events, not daily updates."
+    },
+    {
+      "id": "zrnovo-local-sources",
+      "name": "Žrnovo / Postrana Local Sources",
+      "type": "village-lead",
+      "town": "zrnovo",
+      "priority": "high",
+      "checkFrequencyDays": 3,
+      "confidence": "medium",
+      "urls": [
+        { "kind": "website", "url": "https://www.zrnovo.com/", "scrapeMode": "html" },
+        { "kind": "facebook-search", "url": "https://www.facebook.com/search/top?q=%C5%BDrnovo%20Postrana%20events", "scrapeMode": "manual-social" },
+        { "kind": "facebook-search", "url": "https://www.facebook.com/search/top?q=KUD%20Mi%C5%A1njice%20%C5%BDrnovo", "scrapeMode": "manual-social" }
+      ],
+      "keywords": ["Žrnovo", "Postrana", "Moštra", "KUD Mišnjice", "Makarunada", "Sveti Rok", "folklore", "makaruni"]
+    },
+    {
+      "id": "pupnat-local-sources",
+      "name": "Pupnat Local Sources",
+      "type": "village-lead",
+      "town": "pupnat",
+      "priority": "high",
+      "checkFrequencyDays": 3,
+      "confidence": "medium",
+      "urls": [
+        { "kind": "facebook-group", "url": "https://www.facebook.com/groups/3010485445830625/", "scrapeMode": "manual-social" },
+        { "kind": "facebook-group", "url": "https://www.facebook.com/groups/272104876242925/", "scrapeMode": "manual-social" },
+        { "kind": "facebook-search", "url": "https://www.facebook.com/search/top?q=Pupnat%20Kumpanija%20event", "scrapeMode": "manual-social" }
+      ],
+      "keywords": ["Pupnat", "VU Kumpanjija Pupnat", "Gospa od Sniga", "Dan mjesta", "Kumpanija", "concert", "fešta"]
+    },
+    {
+      "id": "cara-zavalatica-local-sources",
+      "name": "Čara / Zavalatica Local Sources",
+      "type": "village-lead",
+      "town": "cara",
+      "priority": "high",
+      "checkFrequencyDays": 3,
+      "confidence": "low",
+      "urls": [
+        { "kind": "website", "url": "https://www.korculainfo.com/cara/", "scrapeMode": "html" },
+        { "kind": "facebook-search", "url": "https://www.facebook.com/search/top?q=Kumpanija%20%C4%8Cara%20Kor%C4%8Dula", "scrapeMode": "manual-social" },
+        { "kind": "facebook-search", "url": "https://www.facebook.com/search/top?q=Zavalatica%20Kor%C4%8Dula%20event", "scrapeMode": "manual-social" }
+      ],
+      "keywords": ["Čara", "Zavalatica", "Kumpanija Čara", "Pošip", "wine festival", "Konoba Albert", "fešta", "Our Lady"]
+    },
+    {
+      "id": "smokvica-brna-expanded",
+      "name": "Visit Smokvica-Brna Expanded Sources",
+      "type": "official-board",
+      "town": "smokvica",
+      "priority": "high",
+      "checkFrequencyDays": 2,
+      "confidence": "high",
+      "urls": [
+        { "kind": "website", "url": "https://visitsmokvicabrna.com/", "scrapeMode": "html" },
+        { "kind": "facebook", "url": "https://www.facebook.com/Smokvica.Brna/", "scrapeMode": "manual-social" }
+      ],
+      "keywords": ["Smokvica", "Brna", "Smokviško lito", "Brodetijada", "Pošip", "Kumpanija", "fisherman night", "klapa"]
+    },
+    {
+      "id": "central-island-wine-sources",
+      "name": "Central Island Wine and Winery Sources",
+      "type": "wine-lead",
+      "town": "cara",
+      "priority": "medium",
+      "checkFrequencyDays": 5,
+      "confidence": "low",
+      "urls": [
+        { "kind": "search", "url": "https://www.google.com/search?q=Kor%C4%8Dula+Po%C5%A1ip+Days+Smokvica+%C4%8Cara+events", "scrapeMode": "search-lead" },
+        { "kind": "facebook-search", "url": "https://www.facebook.com/search/top?q=Kor%C4%8Dula%20Island%20Wine%20Festival%20%C4%8Cara%20Smokvica", "scrapeMode": "manual-social" },
+        { "kind": "facebook-search", "url": "https://www.facebook.com/search/top?q=winery%20%C4%8Cara%20Kor%C4%8Dula%20event", "scrapeMode": "manual-social" }
+      ],
+      "keywords": ["Pošip Days", "Korčula Island Wine Festival", "Čara", "Smokvica", "Zavalatica", "winery", "wine tasting", "Pošip"]
+    },
+    {
+      "id": "aminess-korcula-entertainment",
+      "name": "Aminess Korčula Entertainment",
+      "type": "hotel-entertainment",
+      "town": "korcula",
+      "priority": "medium",
+      "checkFrequencyDays": 3,
+      "confidence": "medium",
+      "urls": [
+        { "kind": "website", "url": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/", "scrapeMode": "html" },
+        { "kind": "facebook", "url": "https://www.facebook.com/AminessHotels/", "scrapeMode": "manual-social" }
+      ],
+      "keywords": ["Aminess", "Marko Polo", "live music", "entertainment", "promenade", "Korčula"]
+    },
+    {
+      "id": "vela-luka-nightlife-and-culture",
+      "name": "Vela Luka Nightlife and Cultural Leads",
+      "type": "venue-lead",
+      "town": "vela-luka",
+      "priority": "high",
+      "checkFrequencyDays": 2,
+      "confidence": "low",
+      "urls": [
+        { "kind": "facebook", "url": "https://www.facebook.com/pages/Casablanca-Vela-Luka/209259985785114", "scrapeMode": "manual-social" },
+        { "kind": "facebook-search", "url": "https://www.facebook.com/search/top?q=FD%20Kumpanija%20Vela%20Luka%20event", "scrapeMode": "manual-social" },
+        { "kind": "facebook-search", "url": "https://www.facebook.com/search/top?q=Vela%20Luka%20concert%20event", "scrapeMode": "manual-social" }
+      ],
+      "keywords": ["Vela Luka", "Casablanca", "FD Kumpanija Vela Luka", "Luško lito", "concert", "night bar", "klapa"]
+    },
+    {
+      "id": "lumbarda-venue-leads",
+      "name": "Lumbarda Beach Bar and Venue Leads",
+      "type": "venue-lead",
+      "town": "lumbarda",
+      "priority": "medium",
+      "checkFrequencyDays": 3,
+      "confidence": "low",
+      "urls": [
+        { "kind": "facebook", "url": "https://www.facebook.com/beachbarprvizal/", "scrapeMode": "manual-social" },
+        { "kind": "instagram-search", "url": "https://www.instagram.com/explore/search/keyword/?q=Lumbarda%20Moon%20Bar", "scrapeMode": "manual-social" },
+        { "kind": "search", "url": "https://www.google.com/search?q=Lumbarda+Moon+Bar+events+Kor%C4%8Dula", "scrapeMode": "search-lead" }
+      ],
+      "keywords": ["Lumbarda", "Prvi Žal", "Moon Bar", "beach bar", "live music", "DJ", "Grk"]
+    },
+    {
+      "id": "local-poster-folder",
+      "name": "Local Poster Folder",
+      "type": "poster-folder",
+      "town": "island-wide",
+      "priority": "high",
+      "checkFrequencyDays": 1,
+      "confidence": "medium",
+      "urls": [
+        { "kind": "folder", "url": "../../2026 Events", "scrapeMode": "poster-folder" }
+      ],
+      "keywords": ["poster", "flyer", "OCR", "date", "time", "venue"],
+      "notes": "Use local OCR workflow on newly saved flyers/posters."
+    }
+  ]
+}

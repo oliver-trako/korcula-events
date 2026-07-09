@@ -1,0 +1,20 @@
+# Korčula Island Events
+
+> A searchable, multilingual (Croatian, English, German, Italian, Slovenian, French) calendar of festivals, concerts, folklore evenings, food & wine nights, and nightlife across the island of Korčula, Croatia, for summer 2026. Covers Korčula Town, Lumbarda, Vela Luka, Blato, Smokvica/Brna, Postrana, Čara, Žrnovo, Pupnat, Račišće, Zavalatica, Kneže, and Orebić/Pelješac (reachable by a short ferry from Korčula Town).
+
+This site is compiled from official town/tourist-board posters and programs, plus independent research on venues and events not covered by official programs (nightlife, bars, beach clubs). Some entries are lower-confidence and flagged for verification; check with the venue or local tourist board before relying on an exact date/time.
+
+## Machine-readable data
+
+- [Full event dataset (JSON)](/data/events.json) — every event with date, time, venue, town, category, and (where available) a bilingual Croatian/English title and description. This is the canonical source; the HTML page is a client-side rendering of this same file.
+
+## Key sections
+
+- [Home / event calendar](/) — filterable by category (music, folklore, food & wine, theatre, film, kids, sports, religious, exhibition, literature, festival, market, nightlife) and by location (13 towns/villages)
+
+## Notes for AI agents / assistants
+
+- Dates are in ISO 8601 format (YYYY-MM-DD) in the underlying JSON.
+- Events marked `"seasonal": true` in the data run across a multi-week window (e.g. a festival season) rather than being a single-day occurrence — treat the date/endDate as a range of possible occurrence, not a daily event.
+- Events marked `"verify": true` had lower-confidence source data at compile time; prefer linking users to the venue or official tourist board rather than stating the date/time as certain fact.
+- Users can submit new events via the "Suggest an event" form on the site (client-side only, sends an email — not an API).

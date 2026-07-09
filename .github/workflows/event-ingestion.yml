@@ -1,0 +1,57 @@
+name: Event ingestion
+
+on:
+  workflow_dispatch:
+    inputs:
+      priority:
+        description: Source priority to check
+        required: false
+        default: high
+      limit:
+        description: Maximum source URL entries to process, 0 for unlimited
+        required: false
+        default: "0"
+  schedule:
+    - cron: "17 5 * * *"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Install OCR dependency
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y tesseract-ocr tesseract-ocr-hrv
+
+      - name: Run ingestion pipeline
+        shell: pwsh
+        run: |
+          $priority = "${{ github.event.inputs.priority }}"
+          if (-not $priority) { $priority = "high" }
+          $limit = "${{ github.event.inputs.limit }}"
+          if (-not $limit) { $limit = "0" }
+          ./scripts/run-ingestion-pipeline.ps1 -Priority $priority -Limit ([int]$limit)
+
+      - name: Run poster OCR
+        shell: pwsh
+        run: ./scripts/ocr-posters.ps1
+
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: automation/event-ingestion
+          title: "Update event candidates and auto-approved events"
+          commit-message: "Update event candidates and auto-approved events"
+          body: |
+            Automated event ingestion run.
+
+            Auto-approved structured candidates may have been merged into `events.json`.
+            Low-confidence social, OCR, and search candidates remain in `pending-events.json` for review.
+          labels: event-ingestion

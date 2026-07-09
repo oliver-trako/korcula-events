@@ -1,0 +1,69 @@
+{
+  "meta": {
+    "generated": "2026-07-09",
+    "purpose": "Rules for deciding which discovered event candidates can be auto-published and which require human review.",
+    "principle": "Auto-publish only complete structured event records from reliable sources. Social, OCR, and search-derived candidates require review."
+  },
+  "autoPublish": {
+    "enabled": true,
+    "allowedSourceTypes": [
+      "official-board",
+      "official-event-page",
+      "cultural-organiser",
+      "ticketing-platform"
+    ],
+    "allowedScrapeModes": [
+      "html",
+      "ticketing"
+    ],
+    "requiredSourceConfidence": [
+      "high"
+    ],
+    "requiredEventFields": [
+      "id",
+      "date",
+      "town",
+      "venue",
+      "cats",
+      "hr",
+      "en",
+      "sourceId",
+      "source"
+    ],
+    "blockedCandidateKinds": [
+      "manual-social",
+      "search-lead",
+      "poster-folder",
+      "ocr",
+      "email-forward"
+    ],
+    "blockedIfVerifyTrue": true,
+    "blockedIfDateAmbiguous": true,
+    "blockedIfDuplicateId": true
+  },
+  "reviewRequired": {
+    "sourceTypes": [
+      "social-group",
+      "community-association",
+      "community-board",
+      "village-lead",
+      "sports-lead",
+      "venue-lead",
+      "wine-lead",
+      "guide-site",
+      "poster-folder",
+      "hotel-entertainment"
+    ],
+    "scrapeModes": [
+      "manual-social",
+      "search-lead",
+      "poster-folder"
+    ],
+    "reasons": [
+      "social posts can be incomplete or removed",
+      "poster OCR can misread dates, times, names, and diacritics",
+      "search leads can point to old or unrelated events",
+      "village/community events often need local context before publishing"
+    ]
+  }
+}

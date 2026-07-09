@@ -552,6 +552,7 @@
 
     const dayWrap = $("#calDayEvents");
     dayWrap.innerHTML = "";
+    const hasActiveSearchOrFilter = Boolean(state.query || state.cats.size || state.towns.size);
     if (state.calSelectedDate) {
       const dayEvents = filtered.filter((e) => isOngoing(e, state.calSelectedDate));
       const h = document.createElement("h2");
@@ -560,6 +561,13 @@
       dayWrap.appendChild(h);
       if (!dayEvents.length) dayWrap.appendChild(elNote(T.noEventsFiltered));
       dayEvents.forEach((e) => dayWrap.appendChild(eventCard(e, false)));
+    } else if (hasActiveSearchOrFilter) {
+      const h = document.createElement("h2");
+      h.style.cssText = "font-size:.95rem;color:var(--sea-deep);margin:0 0 10px;";
+      h.textContent = T.matchingEvents;
+      dayWrap.appendChild(h);
+      if (!filtered.length) dayWrap.appendChild(elNote(T.noEventsFiltered));
+      filtered.slice(0, 30).forEach((e) => dayWrap.appendChild(eventCard(e, true)));
     }
   }
 

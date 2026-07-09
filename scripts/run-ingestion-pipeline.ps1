@@ -22,7 +22,7 @@ $sourceSummary = Join-Path $tempRoot "korcula-source-checks/summary.json"
 $scriptDir = $PSScriptRoot
 
 if ($CheckSources) {
-  $checkArgs = @{ Priority = $Priority }
+  $checkArgs = @{ Priority = $Priority; SaveSnapshots = $true }
   if ($Limit -gt 0) { $checkArgs.Limit = $Limit }
   & (Join-Path $scriptDir "check-sources.ps1") @checkArgs
 }

@@ -4,7 +4,8 @@ param(
   [switch]$IncludeSocial,
   [switch]$SaveSnapshots,
   [string]$Priority,
-  [int]$Limit = 0
+  [int]$Limit = 0,
+  [string]$ReportPath = "site/data/source-check-report.json"
 )
 
 $ErrorActionPreference = "Stop"
@@ -18,6 +19,14 @@ function Ensure-Dir {
   param([string]$Path)
   if (-not (Test-Path -LiteralPath $Path)) {
     New-Item -ItemType Directory -Force -Path $Path | Out-Null
+  }
+}
+
+function Ensure-FileDir {
+  param([string]$Path)
+  $dir = Split-Path -Parent $Path
+  if ($dir -and -not (Test-Path -LiteralPath $dir)) {
+    New-Item -ItemType Directory -Force -Path $dir | Out-Null
   }
 }
 
@@ -105,7 +114,7 @@ foreach ($source in $sourcesDoc.sources) {
     }
 
     try {
-      $response = Invoke-WebRequest -UseBasicParsing -Uri $url -TimeoutSec 20
+      $response = Invoke-WebRequest -UseBasicParsing -Uri $url -TimeoutSec 20 -MaximumRedirection 8
       $safe = New-SafeName "$($source.id)-$($entry.kind)"
 
       $text = ($response.Content -replace '<script[\s\S]*?</script>', ' ' -replace '<style[\s\S]*?</style>', ' ' -replace '<[^>]+>', ' ')
@@ -167,9 +176,39 @@ foreach ($source in $sourcesDoc.sources) {
 $summaryPath = Join-Path $OutDir "summary.json"
 $results | ConvertTo-Json -Depth 8 | Set-Content -Path $summaryPath -Encoding UTF8
 
+$report = [pscustomobject]@{
+  generated = (Get-Date).ToString("s")
+  priority = $Priority
+  limit = $Limit
+  counts = [pscustomobject]@{
+    fetched = @($results | Where-Object status -eq 'fetched').Count
+    errors = @($results | Where-Object status -eq 'error').Count
+    skipped = @($results | Where-Object { $_.status -like 'skipped-*' }).Count
+  }
+  rows = @($results | ForEach-Object {
+    [pscustomobject]@{
+      sourceId = $_.sourceId
+      sourceName = $_.sourceName
+      kind = $_.kind
+      scrapeMode = $_.scrapeMode
+      url = $_.url
+      status = $_.status
+      statusCode = $_.statusCode
+      error = $_.error
+      note = $_.note
+      dateHintCount = @($_.dateHints).Count
+      timeHintCount = @($_.timeHints).Count
+      keywordHits = @($_.keywordHits)
+    }
+  })
+}
+Ensure-FileDir $ReportPath
+$report | ConvertTo-Json -Depth 12 | Set-Content -Path $ReportPath -Encoding UTF8
+
 Write-Host "Source check complete:"
 Write-Host "  Output dir: $OutDir"
 Write-Host "  Summary:    $summaryPath"
+Write-Host "  Report:     $ReportPath"
 Write-Host "  Fetched:    $(($results | Where-Object status -eq 'fetched').Count)"
 Write-Host "  Errors:     $(($results | Where-Object status -eq 'error').Count)"
 Write-Host "  Skipped:    $(($results | Where-Object { $_.status -like 'skipped-*' }).Count)"

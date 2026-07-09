@@ -9,6 +9,16 @@ $ErrorActionPreference = "Stop"
 $eventsDoc = Get-Content -Raw -Path $EventsPath | ConvertFrom-Json
 $pendingDoc = Get-Content -Raw -Path $PendingPath | ConvertFrom-Json
 
+function Set-ObjectProperty {
+  param($Object, [string]$Name, $Value)
+  $prop = $Object.PSObject.Properties[$Name]
+  if ($null -eq $prop) {
+    $Object | Add-Member -NotePropertyName $Name -NotePropertyValue $Value
+  } else {
+    $prop.Value = $Value
+  }
+}
+
 $existingIds = @{}
 foreach ($event in $eventsDoc.events) {
   $existingIds[[string]$event.id] = $true
@@ -52,8 +62,8 @@ $eventsDoc.events = @($eventsDoc.events | Sort-Object date, time, id)
 
 foreach ($candidate in $pendingDoc.candidates) {
   if ($candidate.status -eq "approved" -and $candidate.event -and -not $existingIds.ContainsKey([string]$candidate.event.id)) {
-    $candidate.status = "merged"
-    $candidate.mergedAt = (Get-Date).ToString("s")
+    Set-ObjectProperty $candidate "status" "merged"
+    Set-ObjectProperty $candidate "mergedAt" (Get-Date).ToString("s")
   }
 }
 

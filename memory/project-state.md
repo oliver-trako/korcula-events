@@ -43,6 +43,13 @@ Polish the static Korcula Island Events website before registering `korcula-even
 - Do not assume domain, Cloudflare project, or DNS already exists.
 - Static hosting alone will not run scrapers; scheduled checks require Cloudflare Workers Cron or an external/local runner.
 - Initial site source was pushed to GitHub `main` on 2026-07-09 from `C:\Users\oliver\korcula-events-deploy`.
+- Cloudflare Pages build settings should be:
+  - Build command: `npm run build`
+  - Build output directory: `dist`
+  - Root directory: repository root
+  - Framework preset: None / static
+- Cloudflare Pages preview is live at `https://korcula-events.pages.dev/` as of 2026-07-09.
+- Verified production paths return 200: `/`, `/data/events.json`, `/assets/logo-korcula-events.svg`, and generated hero image path.
 
 ## Data quality notes
 

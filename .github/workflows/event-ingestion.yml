@@ -39,6 +39,13 @@ jobs:
           if (-not $limit) { $limit = "0" }
           ./scripts/run-ingestion-pipeline.ps1 -Priority $priority -Limit ([int]$limit)
 
+      - name: Build social source report
+        shell: pwsh
+        run: |
+          $priority = "${{ github.event.inputs.priority }}"
+          if (-not $priority) { $priority = "high" }
+          ./scripts/build-social-source-report.ps1 -Priority $priority -IncludeSearchLeads
+
       - name: Run poster OCR
         shell: pwsh
         run: ./scripts/ocr-posters.ps1
@@ -54,4 +61,5 @@ jobs:
 
             Auto-approved structured candidates may have been merged into `events.json`.
             Low-confidence social, OCR, and search candidates remain in `pending-events.json` for review.
+            Social pages/groups are listed in `social-source-report.json` for manual review unless API access is configured.
           labels: event-ingestion

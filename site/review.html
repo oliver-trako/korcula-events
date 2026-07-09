@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Korčula Events Review</title>
+<link rel="icon" href="assets/logo-korcula-events.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/review.css">
+</head>
+<body class="review-page">
+  <header class="review-header">
+    <div class="review-brand">
+      <img src="assets/logo-korcula-events.svg" alt="">
+      <div>
+        <h1>Event Review</h1>
+        <p>Approve structured candidates, inspect source checks, and work through social leads.</p>
+      </div>
+    </div>
+    <a class="review-home" href="index.html">Open site</a>
+  </header>
+
+  <main class="review-shell">
+    <section class="review-toolbar" aria-label="Review tools">
+      <div class="review-stat"><strong id="statPending">0</strong><span>pending</span></div>
+      <div class="review-stat"><strong id="statStructured">0</strong><span>structured</span></div>
+      <div class="review-stat"><strong id="statSocial">0</strong><span>social leads</span></div>
+      <div class="review-stat"><strong id="statErrors">0</strong><span>source errors</span></div>
+      <div class="review-actions">
+        <button id="downloadPending" type="button">Download pending</button>
+        <button id="downloadEvents" type="button">Download events</button>
+      </div>
+    </section>
+
+    <section class="review-import">
+      <label>
+        <span>Replace pending-events.json</span>
+        <input id="pendingUpload" type="file" accept="application/json,.json">
+      </label>
+      <label>
+        <span>Replace events.json</span>
+        <input id="eventsUpload" type="file" accept="application/json,.json">
+      </label>
+    </section>
+
+    <nav class="review-tabs" aria-label="Review sections">
+      <button class="active" data-panel="candidates">Candidates</button>
+      <button data-panel="social">Social watchlist</button>
+      <button data-panel="sources">Source checks</button>
+    </nav>
+
+    <section id="panel-candidates" class="review-panel"></section>
+    <section id="panel-social" class="review-panel" hidden></section>
+    <section id="panel-sources" class="review-panel" hidden></section>
+  </main>
+
+  <script src="js/review.js"></script>
+</body>
+</html>

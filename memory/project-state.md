@@ -54,6 +54,10 @@ Polish the static Korcula Island Events website before registering `korcula-even
   - `https://korcula-events.com/`
   - `https://www.korcula-events.com/`
 - Verified custom-domain production paths return 200: root domain, www domain, `/data/events.json`, `/robots.txt`, `/sitemap.xml`, `/assets/logo-korcula-events.svg`, and generated hero image path.
+- Search/analytics setup completed by Oliver:
+  - Google Search Console property added and sitemap submitted.
+  - Bing Webmaster Tools added and sitemap submitted/imported.
+  - Cloudflare Web Analytics enabled.
 
 ## Data quality notes
 

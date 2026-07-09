@@ -212,7 +212,8 @@
     smokviskoLito: "WhatsApp Image 2026-07-08 at 23.01.19.jpeg",
     litoUPostrani: "WhatsApp Image 2026-07-08 at 23.01.33.jpeg",
     dicoHomo: "WhatsApp Image 2026-07-08 at 23.01.40.jpeg",
-    luskoLito: "WhatsApp Image 2026-07-08 at 23.01.50.jpeg"
+    luskoLito: "WhatsApp Image 2026-07-08 at 23.01.50.jpeg",
+    litoURaciscu: "lito-u-raciscu.jpeg"
   };
   const NO_FLYER_IDS = new Set(["kt-brodogradnja","kt-kulkviz","kt-moreska-season","kt-svtodor","kt-swordfest","kt-korkyra-baroque","kt-markopolo-gala","kt-winefest"]);
 
@@ -239,6 +240,7 @@
     if (id.startsWith("blato-")) return flyerUrl(FLYERS.blatskoLjeto);
     if (id.startsWith("smk-")) return flyerUrl(FLYERS.smokviskoLito);
     if (id.startsWith("pst-")) return flyerUrl(FLYERS.litoUPostrani);
+    if (id.startsWith("racisce-")) return flyerUrl(FLYERS.litoURaciscu);
     if (id === "cara-vuco") return flyerUrl(FLYERS.sinisaVuco);
     if (id.startsWith("rc-")) return flyerUrl(FLYERS.dicoHomo);
     return null;

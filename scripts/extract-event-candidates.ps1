@@ -1,6 +1,7 @@
 param(
   [string]$SourceCheckSummary,
-  [string]$PendingPath = "site/data/pending-events.json"
+  [string]$PendingPath = "site/data/pending-events.json",
+  [switch]$WhatIf
 )
 
 $ErrorActionPreference = "Stop"
@@ -47,7 +48,7 @@ foreach ($row in $summary | Where-Object { $_.status -eq "fetched" }) {
   }
 }
 
-if ($newCandidates.Count -gt 0) {
+if ($newCandidates.Count -gt 0 -and -not $WhatIf) {
   $pendingDoc.candidates += $newCandidates
   $pendingDoc | ConvertTo-Json -Depth 20 | Set-Content -Path $PendingPath -Encoding UTF8
 }
@@ -55,3 +56,6 @@ if ($newCandidates.Count -gt 0) {
 Write-Host "Candidate extraction complete:"
 Write-Host "  New candidates: $($newCandidates.Count)"
 Write-Host "  Pending file:   $PendingPath"
+if ($WhatIf) {
+  Write-Host "  WhatIf: no files changed"
+}

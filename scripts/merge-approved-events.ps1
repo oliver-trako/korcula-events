@@ -31,11 +31,16 @@ foreach ($candidate in $approved) {
   $toMerge += $event
 }
 
-if ($WhatIf) {
+if ($WhatIf -or $toMerge.Count -eq 0) {
   Write-Host "Approved candidates: $($approved.Count)"
-  Write-Host "Would merge:         $($toMerge.Count)"
-  Write-Host "Would skip:          $($skipped.Count)"
-  $skipped | Format-Table -AutoSize
+  if ($WhatIf) {
+    Write-Host "Would merge:         $($toMerge.Count)"
+    Write-Host "Would skip:          $($skipped.Count)"
+  } else {
+    Write-Host "Merged:              0"
+    Write-Host "Skipped:             $($skipped.Count)"
+  }
+  if ($skipped.Count) { $skipped | Format-Table -AutoSize }
   exit 0
 }
 

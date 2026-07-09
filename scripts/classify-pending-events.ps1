@@ -24,6 +24,16 @@ function Add-Reason {
   if (-not $Reasons.Contains($Reason)) { [void]$Reasons.Add($Reason) }
 }
 
+function Set-ObjectProperty {
+  param($Object, [string]$Name, $Value)
+  $prop = $Object.PSObject.Properties[$Name]
+  if ($null -eq $prop) {
+    $Object | Add-Member -NotePropertyName $Name -NotePropertyValue $Value
+  } else {
+    $prop.Value = $Value
+  }
+}
+
 $pendingDoc = Get-Content -Raw -Path $PendingPath | ConvertFrom-Json
 $sourcesDoc = Get-Content -Raw -Path $SourcesPath | ConvertFrom-Json
 $eventsDoc = Get-Content -Raw -Path $EventsPath | ConvertFrom-Json
@@ -100,15 +110,15 @@ foreach ($candidate in $pendingDoc.candidates) {
   }
 
   if ($reasons.Count -eq 0) {
-    $candidate.status = "approved"
-    $candidate.reviewMode = "auto-approved"
-    $candidate.reviewedAt = (Get-Date).ToString("s")
-    $candidate.reviewNotes = "Auto-approved by ingestion policy."
+    Set-ObjectProperty $candidate "status" "approved"
+    Set-ObjectProperty $candidate "reviewMode" "auto-approved"
+    Set-ObjectProperty $candidate "reviewedAt" (Get-Date).ToString("s")
+    Set-ObjectProperty $candidate "reviewNotes" "Auto-approved by ingestion policy."
     $autoApproved++
   } else {
-    $candidate.status = "needs-review"
-    $candidate.reviewMode = "human-review"
-    $candidate.reviewReasons = @($reasons)
+    Set-ObjectProperty $candidate "status" "needs-review"
+    Set-ObjectProperty $candidate "reviewMode" "human-review"
+    Set-ObjectProperty $candidate "reviewReasons" @($reasons)
     $needsReview++
   }
 }

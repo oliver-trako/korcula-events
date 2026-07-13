@@ -282,6 +282,24 @@
 
   function isOngoing(e, iso) {
     if (e.seasonal) return false; // seasonal/recurring-window events are shown in their own strip, not per-day
+    if (e.date > iso || (e.endDate && iso > e.endDate)) return false;
+    if (e.recurring) {
+      const recurrence = String(e.recurring).toLowerCase();
+      if (recurrence.includes("daily")) return true;
+      const weekdays = {
+        sunday: 0,
+        monday: 1,
+        tuesday: 2,
+        wednesday: 3,
+        thursday: 4,
+        friday: 5,
+        saturday: 6
+      };
+      for (const [name, day] of Object.entries(weekdays)) {
+        if (recurrence.includes(name)) return parseISO(iso).getDay() === day;
+      }
+      return true;
+    }
     if (!e.endDate) return e.date === iso;
     return e.date <= iso && iso <= e.endDate;
   }
@@ -302,15 +320,32 @@
     return 24 * 60 + 1;
   }
 
+  function timeBadgeLabel(e) {
+    const time = String(e.time || "");
+    const lower = time.toLowerCase();
+    const labels = {
+      morning: { hr:"Jutro", en:"Morning", de:"Morgen", it:"Mattina", sl:"Jutro", fr:"Matin" },
+      afternoon: { hr:"Popodne", en:"Afternoon", de:"Nachmittag", it:"Pomeriggio", sl:"Popoldne", fr:"Après-midi" },
+      evening: { hr:"Večer", en:"Evening", de:"Abend", it:"Sera", sl:"Večer", fr:"Soir" },
+      late: { hr:"Kasno", en:"Late", de:"Spät", it:"Tardi", sl:"Pozno", fr:"Tard" },
+      varies: { hr:"Razno", en:"Varies", de:"Variiert", it:"Varia", sl:"Različno", fr:"Variable" },
+      tbc: { hr:"TBC", en:"TBC", de:"TBC", it:"TBC", sl:"TBC", fr:"TBC" }
+    };
+    const pick = (key) => labels[key][state.lang] || labels[key].en;
+    if (!time) return "•";
+    if (/^\d/.test(time)) return time;
+    if (lower.includes("after midnight") || lower.includes("midnight")) return pick("late");
+    if (lower.includes("morning")) return pick("morning");
+    if (lower.includes("afternoon")) return pick("afternoon");
+    if (lower.includes("evening")) return pick("evening");
+    if (lower.includes("varies")) return pick("varies");
+    if (lower.includes("tbc")) return pick("tbc");
+    return time.length <= 10 ? time : "•";
+  }
+
   function eventTitle(e) {
     if (state.lang === "hr") return e.hr || e.en || "";
     return e[state.lang] || e.en || e.hr || "";
-  }
-
-  function eventSecondaryTitle(e) {
-    const primary = eventTitle(e);
-    if (state.lang === "hr") return e.en && e.en !== primary ? e.en : "";
-    return e.hr && e.hr !== primary ? e.hr : "";
   }
 
   function compareEvents(a, b) {
@@ -319,8 +354,21 @@
       String(a.id || "").localeCompare(String(b.id || ""));
   }
 
+  function compareEventsForDay(a, b) {
+    const aExact = /^\d{1,2}:\d{2}/.test(String(a.time || ""));
+    const bExact = /^\d{1,2}:\d{2}/.test(String(b.time || ""));
+    if (aExact !== bExact) return aExact ? -1 : 1;
+    return eventStartMinutes(a) - eventStartMinutes(b) ||
+      eventTitle(a).localeCompare(eventTitle(b)) ||
+      String(a.id || "").localeCompare(String(b.id || ""));
+  }
+
   function sortEvents(list) {
     return list.slice().sort(compareEvents);
+  }
+
+  function sortDayEvents(list) {
+    return list.slice().sort(compareEventsForDay);
   }
 
   function isFerryRelevant(e) {
@@ -370,9 +418,9 @@
     const T = t();
     const iso = todayISO();
     const filtered = state.events.filter(matchesFilters);
-    const todayList = sortEvents(filtered.filter((e) => isOngoing(e, iso)));
+    const todayList = sortDayEvents(filtered.filter((e) => isOngoing(e, iso)));
     const tomorrowISO = (() => { const d = parseISO(iso); d.setDate(d.getDate() + 1); return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0"); })();
-    const tomorrowList = sortEvents(filtered.filter((e) => isOngoing(e, tomorrowISO)));
+    const tomorrowList = sortDayEvents(filtered.filter((e) => isOngoing(e, tomorrowISO)));
     const weekList = sortEvents(filtered.filter((e) => {
       const db = daysBetween(iso, e.date);
       return db > 1 && db <= 7;
@@ -477,9 +525,9 @@
       badge.innerHTML = '<span class="time" style="display:block;font-size:.68rem;">' + fmtDate(e.date, {short:true}) + (e.endDate ? " – " + fmtDate(e.endDate, {short:true}) : "") + "</span>";
       badge.style.flexBasis = "72px";
     } else if (showDate) {
-      badge.innerHTML = '<span class="day">' + d.getDate() + '</span><span class="mon">' + T.months[d.getMonth()].slice(0,3) + "</span>" + (e.time && e.time.match(/^\d/) ? '<span class="time">' + e.time + "</span>" : "");
+      badge.innerHTML = '<span class="day">' + d.getDate() + '</span><span class="mon">' + T.months[d.getMonth()].slice(0,3) + "</span>" + (e.time ? '<span class="time">' + timeBadgeLabel(e) + "</span>" : "");
     } else {
-      badge.innerHTML = (e.time && e.time.match(/^\d/) ? e.time : "•");
+      badge.innerHTML = timeBadgeLabel(e);
       badge.style.fontSize = "1rem";
     }
 
@@ -489,13 +537,6 @@
     title.className = "event-title";
     title.textContent = eventTitle(e);
     body.appendChild(title);
-    const secondary = eventSecondaryTitle(e);
-    if (secondary) {
-      const sub = document.createElement("p");
-      sub.className = "event-title-en";
-      sub.textContent = secondary;
-      body.appendChild(sub);
-    }
 
     const meta = document.createElement("div");
     meta.className = "event-meta";
@@ -578,7 +619,7 @@
     for (let day = 1; day <= daysInMonth; day++) {
       const cellDate = new Date(month.getFullYear(), month.getMonth(), day);
       const cellISO = cellDate.getFullYear() + "-" + String(cellDate.getMonth()+1).padStart(2,"0") + "-" + String(day).padStart(2,"0");
-      const dayEvents = sortEvents(filtered.filter((e) => isOngoing(e, cellISO)));
+      const dayEvents = sortDayEvents(filtered.filter((e) => isOngoing(e, cellISO)));
 
       const cell = document.createElement("div");
       cell.className = "cal-cell" + (cellISO === iso ? " today" : "") + (cellISO === state.calSelectedDate ? " selected" : "");
@@ -601,7 +642,7 @@
     dayWrap.innerHTML = "";
     const hasActiveSearchOrFilter = Boolean(state.query || state.cats.size || state.towns.size);
     if (state.calSelectedDate) {
-      const dayEvents = sortEvents(filtered.filter((e) => isOngoing(e, state.calSelectedDate)));
+      const dayEvents = sortDayEvents(filtered.filter((e) => isOngoing(e, state.calSelectedDate)));
       const h = document.createElement("h2");
       h.style.cssText = "font-size:.95rem;color:var(--sea-deep);margin:0 0 10px;";
       h.textContent = fmtDate(state.calSelectedDate);
@@ -728,10 +769,8 @@
     const body = $("#modalBody");
     state.activeEventId = e.id;
     const primaryTitle = eventTitle(e);
-    const secondaryTitle = eventSecondaryTitle(e);
     let html = "<div class='modal-body'>";
     html += "<h2>" + primaryTitle + "</h2>";
-    if (secondaryTitle) html += "<p class='modal-en'>" + secondaryTitle + "</p>";
     html += "<div class='modal-row'><strong>" + T.dateLabel + "</strong> " + fmtDate(e.date) + (e.endDate ? " – " + fmtDate(e.endDate) : "") + (e.time ? " · " + e.time : "") + "</div>";
     html += "<div class='modal-row'><strong>" + T.placeLabel + "</strong> <a class='maps-link' href='" + mapsUrl(e) + "' target='_blank' rel='noopener'>" + townName(e.town) + (e.venue ? ", " + e.venue : "") + " ↗</a></div>";
     html += "<div class='event-cats'>" + e.cats.map((c) => "<span class='cat-pill'>" + (T.catLabels[c]||c) + "</span>").join("") + "</div>";

@@ -167,12 +167,59 @@ const infoPages = {
       <div class="seo-grid">
         <div class="seo-card"><strong>Calendar</strong><a href="/">Interactive event calendar</a></div>
         <div class="seo-card"><strong>Events</strong><a href="/events/">All event pages</a></div>
+        <div class="seo-card"><strong>Guides</strong><a href="/guides/">Planning guides</a></div>
         <div class="seo-card"><strong>Places</strong><a href="/places/">Events by town and village</a></div>
         <div class="seo-card"><strong>Categories</strong><a href="/categories/">Events by category</a></div>
         <div class="seo-card"><strong>Contact</strong><a href="/contact/">Submit an event or correction</a></div>
         <div class="seo-card"><strong>Search engines</strong><a href="/sitemap.xml">XML sitemap</a></div>
       </div>
     `
+  }
+};
+
+const guidePages = {
+  "tonight": {
+    title: "Things to Do in Korčula Tonight | Events This Evening",
+    h1: "Things to Do in Korčula Tonight",
+    description: "Find concerts, cinema, folklore, nightlife and family events happening tonight on Korčula island.",
+    intro: "A focused guide for visitors already on the island who want to know what is happening tonight, from early-evening culture to late-night beach clubs.",
+    filter: (event, ctx) => occursOnDate(event, ctx.today)
+  },
+  "this-week": {
+    title: "Korčula Events This Week | Concerts, Festivals and Nightlife",
+    h1: "Korčula Events This Week",
+    description: "See what is on this week on Korčula island, including concerts, festivals, theatre, family events and nightlife.",
+    intro: "Plan the next few days on Korčula with a week-ahead view of concerts, village programmes, family activities, sport, food and nightlife.",
+    filter: (event, ctx) => dateInRange(event.date, ctx.today, ctx.weekEnd) || (event.endDate && dateRangesOverlap(event.date, event.endDate, ctx.today, ctx.weekEnd))
+  },
+  "nightlife-guide": {
+    title: "Korčula Nightlife Guide 2026 | Beach Clubs, Bars and DJ Nights",
+    h1: "Korčula Nightlife Guide 2026",
+    description: "Korčula nightlife guide covering beach clubs, DJ nights, late bars and summer party events.",
+    intro: "Korčula nightlife is split between waterfront bars, old-town spots, beach venues and open-air summer clubs. This guide highlights the recurring nightlife programmes and dated party events currently in the calendar.",
+    filter: (event) => (event.cats || []).includes("nightlife")
+  },
+  "kids-family": {
+    title: "Korčula with Kids 2026 | Family Events and Children’s Activities",
+    h1: "Korčula with Kids",
+    description: "Family-friendly Korčula events including kids' theatre, cinema, workshops, games and activities.",
+    intro: "Family events on Korčula include open-air cinema, children's theatre, workshops, beach games, village activities and sports programmes.",
+    filter: (event) => (event.cats || []).includes("kids")
+  },
+  "summer-festivals": {
+    title: "Best Summer Festivals on Korčula 2026",
+    h1: "Best Summer Festivals on Korčula",
+    description: "A guide to Korčula summer festivals, village feasts, folklore, wine nights, music festivals and seasonal programmes.",
+    intro: "Korčula's summer calendar is built around village feasts, folklore, wine nights, open-air music, sword-dance traditions and seasonal cultural programmes.",
+    filter: (event) => (event.cats || []).includes("festival") || (event.cats || []).includes("folklore") || /feast|festival|summer|lito|night|dan mjesta/i.test(`${event.en || ""} ${event.hr || ""}`)
+  },
+  "things-to-do": {
+    title: "Things to Do in Korčula 2026 | Events, Culture and Nightlife",
+    h1: "Things to Do in Korčula",
+    description: "Things to do in Korčula, from Moreška and festivals to wine nights, family activities, beaches, concerts and nightlife.",
+    intro: "Use the events calendar as a practical things-to-do guide: start with culture and family activities by day, then choose concerts, wine nights, village feasts or nightlife in the evening.",
+    filter: () => true,
+    limit: 90
   }
 };
 
@@ -522,6 +569,32 @@ function townName(towns, id, lang = "en") {
   return town ? (town[lang] || town.en || town.hr || id) : id;
 }
 
+function addDays(iso, days) {
+  const date = new Date(`${iso}T00:00:00Z`);
+  date.setUTCDate(date.getUTCDate() + days);
+  return date.toISOString().slice(0, 10);
+}
+
+function dateInRange(iso, start, end) {
+  return iso >= start && iso <= end;
+}
+
+function dateRangesOverlap(startA, endA, startB, endB) {
+  return startA <= endB && startB <= endA;
+}
+
+function occursOnDate(event, iso) {
+  if (event.date > iso || (event.endDate && iso > event.endDate)) return false;
+  if (!event.endDate) return event.date === iso;
+  if (event.seasonal) return event.date <= iso && iso <= event.endDate;
+  if (!event.recurring) return event.date <= iso && iso <= event.endDate;
+  const recurrence = String(event.recurring).toLowerCase();
+  if (recurrence.includes("daily")) return true;
+  const weekdays = { sunday:0, monday:1, tuesday:2, wednesday:3, thursday:4, friday:5, saturday:6 };
+  const day = new Date(`${iso}T00:00:00Z`).getUTCDay();
+  return Object.entries(weekdays).some(([name, value]) => recurrence.includes(name) && day === value);
+}
+
 function eventUrl(event) {
   return `${siteUrl}/events/${slugify(titleFor(event, "en"))}-${slugify(event.id)}/`;
 }
@@ -532,6 +605,10 @@ function eventPath(event) {
 
 function categoryUrl(cat) {
   return `${siteUrl}/categories/${slugify(cat)}/`;
+}
+
+function guideUrl(slug) {
+  return `${siteUrl}/guides/${slug}/`;
 }
 
 function placeUrl(townId) {
@@ -585,13 +662,23 @@ ${alternates}
 .seo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:18px 0}
 .seo-card{background:#fff;border:1px solid var(--border);border-radius:8px;padding:12px}
 .seo-card strong{display:block;color:var(--sea-deep);margin-bottom:4px}
+.seo-card a{color:var(--sea-deeper);font-weight:800;text-decoration:none}
+.seo-card a:hover{text-decoration:underline}
+.seo-section{background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px;margin:18px 0;box-shadow:var(--shadow)}
+.seo-two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}
+.seo-detail-list{display:grid;gap:8px;margin:0}
+.seo-detail-list div{display:grid;grid-template-columns:96px 1fr;gap:8px;border-bottom:1px solid var(--border);padding:8px 0}
+.seo-detail-list dt{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-soft);font-weight:800}
+.seo-detail-list dd{margin:0;color:var(--ink)}
+.seo-pill-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.seo-pill{background:var(--sand);border:1px solid var(--border);border-radius:999px;padding:6px 10px;color:var(--sea-deep);font-weight:800;font-size:.78rem}
 .seo-form{background:#fff;border:1px solid var(--border);border-radius:12px;padding:16px;display:grid;gap:12px;margin-top:14px;box-shadow:var(--shadow)}
 .seo-form label{display:grid;gap:5px;color:var(--ink);font-size:.86rem;font-weight:800}
 .seo-form input,.seo-form textarea{font:inherit;border:1px solid var(--border);border-radius:8px;padding:10px;background:var(--sand)}
 .seo-form button{justify-self:start;background:var(--sea-deep);color:#fff;border:none;border-radius:8px;padding:11px 15px;font:inherit;font-weight:800;cursor:pointer}
 .seo-small{font-size:.82rem}
 .seo-footer{max-width:960px;margin:0 auto 24px;padding:0 16px}
-@media(max-width:640px){.seo-header-inner{align-items:flex-start;flex-direction:column}.seo-grid{grid-template-columns:1fr}.seo-top-nav{gap:9px}}
+@media(max-width:640px){.seo-header-inner{align-items:flex-start;flex-direction:column}.seo-grid,.seo-two-col{grid-template-columns:1fr}.seo-top-nav{gap:9px}.seo-detail-list div{grid-template-columns:1fr}}
 </style>
 ${schemaHtml}
 </head>
@@ -605,6 +692,7 @@ ${schemaHtml}
     <nav class="seo-top-nav" aria-label="Main navigation">
       <a href="/">Calendar</a>
       <a href="/events/">Events</a>
+      <a href="/guides/">Guides</a>
       <a href="/places/">Places</a>
       <a href="/categories/">Categories</a>
       <a href="/contact/">Contact</a>
@@ -627,6 +715,7 @@ ${body}
       <nav class="footer-nav" aria-label="Browse">
         <strong>Browse</strong>
         <a href="/events/">All events</a>
+        <a href="/guides/">Guides</a>
         <a href="/places/">Places</a>
         <a href="/categories/">Categories</a>
         <a href="/categories/nightlife/">Nightlife</a>
@@ -653,6 +742,33 @@ function eventList(events, towns, lang = "en", limit = events.length) {
     const meta = [event.date + (event.endDate ? ` to ${event.endDate}` : ""), event.time, townName(towns, event.town, lang), event.venue].filter(Boolean).join(" · ");
     return `<li><a href="${esc(eventUrl(event))}">${esc(title)}</a><span class="seo-meta">${esc(meta)}</span></li>`;
   }).join("\n")}</ul>`;
+}
+
+function compactEventFacts(event, towns) {
+  const facts = [
+    ["Date", `${event.date}${event.endDate ? ` to ${event.endDate}` : ""}`],
+    ["Time", event.time],
+    ["Town", townName(towns, event.town, "en")],
+    ["Venue", event.venue],
+    ["Recurring", event.recurring],
+    ["Seasonal", event.seasonal ? "Yes" : ""],
+    ["Source status", event.verify ? "Needs verification before relying on exact details" : "Listed from current calendar data"]
+  ].filter(([, value]) => value);
+  return `<dl class="seo-detail-list">${facts.map(([label, value]) => `<div><dt>${esc(label)}</dt><dd>${esc(value)}</dd></div>`).join("")}</dl>`;
+}
+
+function eventNarrative(event, towns) {
+  const title = titleFor(event, "en");
+  const town = townName(towns, event.town, "en");
+  const categoryText = (event.cats || []).map((cat) => catLabels[cat] || cat).join(", ");
+  const pieces = [
+    `${title} is listed in the Korčula Island Events calendar for ${town}${event.venue ? ` at ${event.venue}` : ""}.`,
+    event.time ? `The listed time is ${event.time}.` : "",
+    event.endDate ? `The event runs from ${event.date} to ${event.endDate}.` : `The listed date is ${event.date}.`,
+    categoryText ? `It is currently grouped under ${categoryText}.` : "",
+    event.verify ? "Because this listing is marked for verification, use the source links below before making firm plans." : "Use the links below for organiser, ticketing or source details where available."
+  ].filter(Boolean);
+  return pieces.join(" ");
 }
 
 function eventSchema(event, towns) {
@@ -763,6 +879,60 @@ async function buildSeoPages(data) {
   }));
   urls.add(`${siteUrl}/events/`);
 
+  await writePage(path.join(dist, "guides", "index.html"), pageShell({
+    title: "Korčula Event Guides 2026 | Tonight, This Week, Nightlife and Family",
+    description: "Korčula event guides for tonight, this week, nightlife, family activities, summer festivals and things to do.",
+    canonical: `${siteUrl}/guides/`,
+    body: `
+      <section class="seo-hero">
+        <p><a href="/">Open interactive calendar</a></p>
+        <h1>Korčula Event Guides</h1>
+        <p class="seo-lede">Planning-focused guides for common visitor searches: what is on tonight, what is happening this week, where to go with kids, and where to find nightlife or summer festivals.</p>
+      </section>
+      <div class="seo-grid">
+        ${Object.entries(guidePages).map(([slug, guide]) => `<div class="seo-card"><strong>${esc(guide.h1)}</strong><a href="/guides/${esc(slug)}/">Open guide</a></div>`).join("")}
+      </div>
+    `,
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      name: "Korčula Event Guides 2026",
+      url: `${siteUrl}/guides/`
+    }
+  }));
+  urls.add(`${siteUrl}/guides/`);
+
+  const guideContext = { today: buildDate, weekEnd: addDays(buildDate, 7) };
+  for (const [slug, guide] of Object.entries(guidePages)) {
+    const guideEvents = events.filter((event) => guide.filter(event, guideContext)).slice(0, guide.limit || events.length);
+    const url = guideUrl(slug);
+    urls.add(url);
+    await writePage(path.join(dist, "guides", slug, "index.html"), pageShell({
+      title: guide.title,
+      description: guide.description,
+      canonical: url,
+      body: `
+        <section class="seo-hero">
+          <p><a href="/guides/">All guides</a> · <a href="/">Interactive calendar</a></p>
+          <h1>${esc(guide.h1)}</h1>
+          <p class="seo-lede">${esc(guide.intro)}</p>
+          <div class="seo-grid">
+            <div class="seo-card"><strong>${guideEvents.length} matching listings</strong><span>Generated from the current event database.</span></div>
+            <div class="seo-card"><strong>Last updated</strong><span>${esc(buildDate)}</span></div>
+            <div class="seo-card"><strong>Planning tip</strong><span>Check event source links before committing to tickets or travel.</span></div>
+          </div>
+        </section>
+        ${guideEvents.length ? eventList(guideEvents, towns, "en") : "<p>No matching events are currently listed. Check the main calendar for more options.</p>"}
+      `,
+      schema: {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        name: guide.h1,
+        url
+      }
+    }));
+  }
+
   for (const [slug, page] of Object.entries(infoPages)) {
     const url = `${siteUrl}/${slug}/`;
     urls.add(url);
@@ -797,6 +967,12 @@ async function buildSeoPages(data) {
       ["Instagram", event.instagram],
       ["Source", event.source]
     ].filter(([, href]) => href);
+    const relatedByTown = events.filter((item) => item.id !== event.id && item.town === event.town).slice(0, 6);
+    const relatedByCategory = events.filter((item) => item.id !== event.id && (item.cats || []).some((cat) => (event.cats || []).includes(cat))).slice(0, 6);
+    const pills = [
+      ...((event.cats || []).map((cat) => `<a class="seo-pill" href="${esc(categoryUrl(cat))}">${esc(catLabels[cat] || cat)}</a>`)),
+      `<a class="seo-pill" href="${esc(placeUrl(event.town))}">${esc(town)}</a>`
+    ].join("");
     await writePage(eventPath(event), pageShell({
       title: `${title} | Korčula Events 2026`,
       description: description.slice(0, 155),
@@ -811,9 +987,24 @@ async function buildSeoPages(data) {
             <div class="seo-card"><strong>Place</strong><span>${esc(town)}${event.venue ? ` · ${esc(event.venue)}` : ""}</span></div>
             <div class="seo-card"><strong>Category</strong><span>${esc((event.cats || []).map((cat) => catLabels[cat] || cat).join(", "))}</span></div>
           </div>
+          <div class="seo-pill-row">${pills}</div>
+        </section>
+        <section class="seo-section seo-two-col">
+          <div>
+            <h2>Event details</h2>
+            ${compactEventFacts(event, towns)}
+          </div>
+          <div>
+            <h2>What to know</h2>
+            <p>${esc(eventNarrative(event, towns))}</p>
+            ${event.hr && event.hr !== title ? `<p><strong>Local title:</strong> ${esc(event.hr)}</p>` : ""}
+            ${event.desc && event.desc.hr ? `<p><strong>Croatian note:</strong> ${esc(stripHtml(event.desc.hr))}</p>` : ""}
+          </div>
         </section>
         ${event.verify ? "<p>Details are marked for verification. Check the linked source before relying on the exact time.</p>" : ""}
-        ${sourceLinks.length ? `<h2>More details</h2><ul>${sourceLinks.map(([label, href]) => `<li><a href="${esc(href)}">${esc(label)}</a></li>`).join("")}</ul>` : ""}
+        ${sourceLinks.length ? `<section class="seo-section"><h2>Source and booking links</h2><ul>${sourceLinks.map(([label, href]) => `<li><a href="${esc(href)}">${esc(label)}</a></li>`).join("")}</ul></section>` : ""}
+        ${relatedByTown.length ? `<section class="seo-section"><h2>More events in ${esc(town)}</h2>${eventList(relatedByTown, towns, "en", 6)}</section>` : ""}
+        ${relatedByCategory.length ? `<section class="seo-section"><h2>Similar events</h2>${eventList(relatedByCategory, towns, "en", 6)}</section>` : ""}
       `,
       schema: eventSchema(event, towns)
     }));

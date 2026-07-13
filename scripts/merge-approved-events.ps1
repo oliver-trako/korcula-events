@@ -19,6 +19,71 @@ function Set-ObjectProperty {
   }
 }
 
+function Normalize-Text {
+  param([string]$Text)
+  if (-not $Text) { return "" }
+  $normalized = $Text.ToLowerInvariant().Normalize([System.Text.NormalizationForm]::FormD)
+  $chars = foreach ($char in $normalized.ToCharArray()) {
+    if ([Globalization.CharUnicodeInfo]::GetUnicodeCategory($char) -ne [Globalization.UnicodeCategory]::NonSpacingMark) {
+      $char
+    }
+  }
+  return ((-join $chars) -replace '[^a-z0-9]+', ' ').Trim()
+}
+
+function Get-TokenSet {
+  param([string]$Text)
+  $ignore = @("the","and","or","in","at","of","for","with","by","a","an","kino","concert","koncert","festival","event","events","korcula","korcula")
+  $tokens = Normalize-Text $Text -split '\s+' | Where-Object { $_.Length -gt 2 -and $_ -notin $ignore }
+  $set = @{}
+  foreach ($token in $tokens) { $set[$token] = $true }
+  return $set
+}
+
+function Get-JaccardScore {
+  param($Left, $Right)
+  if (-not $Left -or -not $Right) { return 0 }
+  $union = @{}
+  $intersection = 0
+  foreach ($key in $Left.Keys) { $union[$key] = $true }
+  foreach ($key in $Right.Keys) {
+    if ($Left.ContainsKey($key)) { $intersection++ }
+    $union[$key] = $true
+  }
+  if ($union.Count -eq 0) { return 0 }
+  return [Math]::Round($intersection / $union.Count, 3)
+}
+
+function Get-EventTitle {
+  param($Event)
+  if ($null -eq $Event) { return "" }
+  return [string]($Event.en, $Event.hr, $Event.id | Where-Object { $_ } | Select-Object -First 1)
+}
+
+function Test-FuzzyDuplicate {
+  param($CandidateEvent, $ExistingEvents)
+  if ($null -eq $CandidateEvent -or -not $CandidateEvent.date) { return $false }
+  $candidateTitle = Get-EventTitle $CandidateEvent
+  $candidateTokens = Get-TokenSet $candidateTitle
+  $candidateVenue = Normalize-Text ([string]$CandidateEvent.venue)
+  foreach ($existing in $ExistingEvents) {
+    if ([string]$existing.date -ne [string]$CandidateEvent.date) { continue }
+    $score = 0.30
+    if ($CandidateEvent.town -and $existing.town -and [string]$CandidateEvent.town -eq [string]$existing.town) { $score += 0.15 }
+    if ($CandidateEvent.time -and $existing.time -and [string]$CandidateEvent.time -eq [string]$existing.time) { $score += 0.15 }
+    $existingVenue = Normalize-Text ([string]$existing.venue)
+    if ($candidateVenue -and $existingVenue -and ($candidateVenue -eq $existingVenue -or $candidateVenue.Contains($existingVenue) -or $existingVenue.Contains($candidateVenue))) { $score += 0.18 }
+    $categoryOverlap = $false
+    foreach ($cat in @($CandidateEvent.cats)) {
+      if ($cat -and $cat -in @($existing.cats)) { $categoryOverlap = $true; break }
+    }
+    $titleScore = Get-JaccardScore $candidateTokens (Get-TokenSet (Get-EventTitle $existing))
+    $score += [Math]::Min(0.35, [double]($titleScore * 0.35))
+    if ($score -ge 0.58 -and ($titleScore -ge 0.18 -or $categoryOverlap)) { return $true }
+  }
+  return $false
+}
+
 $existingIds = @{}
 foreach ($event in $eventsDoc.events) {
   $existingIds[[string]$event.id] = $true
@@ -36,6 +101,12 @@ foreach ($candidate in $approved) {
   }
   if ($existingIds.ContainsKey([string]$event.id)) {
     $skipped += [pscustomobject]@{ candidateId = $candidate.id; eventId = $event.id; reason = "event id already exists" }
+    continue
+  }
+  if ([string]$candidate.duplicateRisk -eq "high" -or (Test-FuzzyDuplicate -CandidateEvent $event -ExistingEvents $eventsDoc.events)) {
+    Set-ObjectProperty $candidate "status" "needs-review"
+    Set-ObjectProperty $candidate "reviewMode" "human-review"
+    $skipped += [pscustomobject]@{ candidateId = $candidate.id; eventId = $event.id; reason = "possible fuzzy duplicate" }
     continue
   }
   $toMerge += $event

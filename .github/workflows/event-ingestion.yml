@@ -50,17 +50,55 @@ jobs:
         shell: pwsh
         run: ./scripts/ocr-posters.ps1 -CreateCandidates
 
+      - name: Summarize ingestion results
+        id: summary
+        shell: pwsh
+        run: |
+          $pending = Get-Content -Raw site/data/pending-events.json | ConvertFrom-Json
+          $sourceReport = Get-Content -Raw site/data/source-check-report.json | ConvertFrom-Json
+          $socialReport = Get-Content -Raw site/data/social-source-report.json | ConvertFrom-Json
+          $posterReport = Get-Content -Raw site/data/poster-ocr-report.json | ConvertFrom-Json
+          $candidates = @($pending.candidates)
+          $needsReview = @($candidates | Where-Object { $_.status -in @("new","needs-review") }).Count
+          $structured = @($candidates | Where-Object { $_.event }).Count
+          $duplicates = @($candidates | Where-Object { $_.duplicateRisk -eq "high" }).Count
+          $sourceErrors = @($sourceReport.rows | Where-Object { $_.status -eq "error" }).Count
+          $socialLeads = @($socialReport.rows).Count
+          $posterCandidates = @($posterReport.results | Where-Object { $_.candidateId }).Count
+          $body = @"
+          Automated event ingestion run.
+
+          Review dashboard after this PR deploys from the branch:
+          https://korcula-events.com/review.html
+
+          Files to review in this PR:
+          - `site/data/pending-events.json`
+          - `site/data/events.json`
+          - `site/data/source-check-report.json`
+          - `site/data/social-source-report.json`
+          - `site/data/poster-ocr-report.json`
+
+          Summary:
+          - Needs review: $needsReview
+          - Structured candidates: $structured
+          - Possible duplicates flagged: $duplicates
+          - Source errors: $sourceErrors
+          - Social leads in watchlist: $socialLeads
+          - Poster OCR candidates: $posterCandidates
+
+          Auto-approved structured candidates may have been merged into `events.json`.
+          Low-confidence social, OCR, duplicate-risk, and search candidates remain in `pending-events.json` for review.
+          Social pages/groups are listed in `social-source-report.json` for manual review unless API access is configured.
+          "@
+          $body | Set-Content -Path pr-body.md -Encoding UTF8
+          "needs_review=$needsReview" >> $env:GITHUB_OUTPUT
+
       - name: Create pull request
         uses: peter-evans/create-pull-request@v8
         with:
           branch: automation/event-ingestion
           title: "Update event candidates and auto-approved events"
           commit-message: "Update event candidates and auto-approved events"
-          body: |
-            Automated event ingestion run.
-
-            Auto-approved structured candidates may have been merged into `events.json`.
-            Low-confidence social, OCR, and search candidates remain in `pending-events.json` for review.
-            Social pages/groups are listed in `social-source-report.json` for manual review unless API access is configured.
-            Poster OCR results are listed in `poster-ocr-report.json`.
+          body-path: pr-body.md
           labels: event-ingestion
+          assignees: oliver-trako

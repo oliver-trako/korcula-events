@@ -64,6 +64,10 @@
 
   function candidateCard(candidate, index) {
     const reasons = (candidate.reviewReasons || []).map((r) => `<span class="review-pill warn">${escapeHtml(r)}</span>`).join("");
+    const duplicateRisk = candidate.duplicateRisk === "high" ? '<span class="review-pill warn">possible duplicate</span>' : "";
+    const duplicateMatches = (candidate.duplicateMatches || []).map((match) => {
+      return `<li><strong>${escapeHtml(match.eventId)}</strong> (${escapeHtml(match.score)}) ${escapeHtml(match.title || "")} ${escapeHtml([match.date, match.time, match.venue].filter(Boolean).join(" · "))}</li>`;
+    }).join("");
     const evidence = candidate.evidence || {};
     const eventJson = candidate.event ? JSON.stringify(candidate.event, null, 2) : "";
     const snippet = evidence.textSnippet || candidate.notes || "";
@@ -76,9 +80,11 @@
           <span class="review-pill ${statusClass}">${escapeHtml(candidate.status || "new")}</span>
           <span class="review-pill">${escapeHtml(candidate.sourceName || "Unknown source")}</span>
           ${candidate.event ? '<span class="review-pill ok">structured</span>' : '<span class="review-pill warn">evidence only</span>'}
+          ${duplicateRisk}
           ${reasons}
         </div>
         <p class="review-subtitle">${escapeHtml(eventSubtitle(candidate))}</p>
+        ${duplicateMatches ? `<div class="review-snippet"><strong>Possible existing matches:</strong><ul>${duplicateMatches}</ul></div>` : ""}
         <p class="review-snippet">${escapeHtml(snippet)}</p>
         ${candidate.sourceUrl ? `<p class="review-snippet"><a href="${escapeHtml(candidate.sourceUrl)}" target="_blank" rel="noopener">Open source</a></p>` : ""}
       </div>

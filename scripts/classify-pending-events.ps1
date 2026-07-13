@@ -34,6 +34,125 @@ function Set-ObjectProperty {
   }
 }
 
+function Normalize-Text {
+  param([string]$Text)
+  if (-not $Text) { return "" }
+  $normalized = $Text.ToLowerInvariant().Normalize([System.Text.NormalizationForm]::FormD)
+  $chars = foreach ($char in $normalized.ToCharArray()) {
+    if ([Globalization.CharUnicodeInfo]::GetUnicodeCategory($char) -ne [Globalization.UnicodeCategory]::NonSpacingMark) {
+      $char
+    }
+  }
+  return ((-join $chars) -replace '[^a-z0-9]+', ' ').Trim()
+}
+
+function Get-TokenSet {
+  param([string]$Text)
+  $ignore = @("the","and","or","in","at","of","for","with","by","a","an","kino","concert","koncert","festival","event","events","korcula","korcula")
+  $tokens = Normalize-Text $Text -split '\s+' | Where-Object { $_.Length -gt 2 -and $_ -notin $ignore }
+  $set = @{}
+  foreach ($token in $tokens) { $set[$token] = $true }
+  return $set
+}
+
+function Get-JaccardScore {
+  param($Left, $Right)
+  if (-not $Left -or -not $Right) { return 0 }
+  $union = @{}
+  $intersection = 0
+  foreach ($key in $Left.Keys) { $union[$key] = $true }
+  foreach ($key in $Right.Keys) {
+    if ($Left.ContainsKey($key)) { $intersection++ }
+    $union[$key] = $true
+  }
+  if ($union.Count -eq 0) { return 0 }
+  return [Math]::Round($intersection / $union.Count, 3)
+}
+
+function Get-EventTitle {
+  param($Event)
+  if ($null -eq $Event) { return "" }
+  return [string]($Event.en, $Event.hr, $Event.id | Where-Object { $_ } | Select-Object -First 1)
+}
+
+function Get-FuzzyDuplicateMatches {
+  param($CandidateEvent, $ExistingEvents)
+  if ($null -eq $CandidateEvent -or -not $CandidateEvent.date) { return @() }
+
+  $candidateTitle = Get-EventTitle $CandidateEvent
+  $candidateTokens = Get-TokenSet $candidateTitle
+  $candidateVenue = Normalize-Text ([string]$CandidateEvent.venue)
+  $candidateTown = [string]$CandidateEvent.town
+  $candidateTime = [string]$CandidateEvent.time
+
+  $matches = @()
+  foreach ($existing in $ExistingEvents) {
+    if (-not $existing.date) { continue }
+    $sameDate = [string]$existing.date -eq [string]$CandidateEvent.date
+    $rangeOverlap = $existing.endDate -and ([string]$existing.date -le [string]$CandidateEvent.date) -and ([string]$CandidateEvent.date -le [string]$existing.endDate)
+    if (-not ($sameDate -or $rangeOverlap)) { continue }
+
+    $score = 0.0
+    $reasons = [System.Collections.Generic.List[string]]::new()
+    if ($sameDate) { $score += 0.30; [void]$reasons.Add("same date") }
+    elseif ($rangeOverlap) { $score += 0.18; [void]$reasons.Add("date within existing range") }
+
+    if ($candidateTown -and $existing.town -and [string]$existing.town -eq $candidateTown) {
+      $score += 0.15
+      [void]$reasons.Add("same town")
+    }
+
+    $categoryOverlap = $false
+    foreach ($cat in @($CandidateEvent.cats)) {
+      if ($cat -and $cat -in @($existing.cats)) {
+        $categoryOverlap = $true
+        break
+      }
+    }
+    if ($categoryOverlap) {
+      [void]$reasons.Add("overlapping category")
+    }
+
+    $existingTime = [string]$existing.time
+    if ($candidateTime -and $existingTime -and $candidateTime -eq $existingTime) {
+      $score += 0.15
+      [void]$reasons.Add("same time")
+    }
+
+    $existingVenue = Normalize-Text ([string]$existing.venue)
+    if ($candidateVenue -and $existingVenue) {
+      if ($candidateVenue -eq $existingVenue) {
+        $score += 0.20
+        [void]$reasons.Add("same venue")
+      } elseif ($candidateVenue.Contains($existingVenue) -or $existingVenue.Contains($candidateVenue)) {
+        $score += 0.12
+        [void]$reasons.Add("similar venue")
+      }
+    }
+
+    $titleScore = Get-JaccardScore $candidateTokens (Get-TokenSet (Get-EventTitle $existing))
+    if ($titleScore -gt 0) {
+      $score += [Math]::Min(0.35, [double]($titleScore * 0.35))
+      if ($titleScore -ge 0.45) { [void]$reasons.Add("similar title") }
+    }
+
+    $score = [Math]::Round([Math]::Min(1.0, [double]$score), 3)
+    if ($score -ge 0.58 -and ($titleScore -ge 0.18 -or $categoryOverlap)) {
+      $matches += [pscustomobject]@{
+        eventId = $existing.id
+        title = Get-EventTitle $existing
+        date = $existing.date
+        time = $existing.time
+        venue = $existing.venue
+        score = $score
+        reasons = @($reasons)
+      }
+    }
+  }
+
+  return @($matches | Sort-Object score -Descending | Select-Object -First 5)
+}
+
 $pendingDoc = Get-Content -Raw -Path $PendingPath | ConvertFrom-Json
 $sourcesDoc = Get-Content -Raw -Path $SourcesPath | ConvertFrom-Json
 $eventsDoc = Get-Content -Raw -Path $EventsPath | ConvertFrom-Json
@@ -102,6 +221,16 @@ foreach ($candidate in $pendingDoc.candidates) {
 
     if ($policyDoc.autoPublish.blockedIfDuplicateId -and $event.id -and $existingIds.ContainsKey([string]$event.id)) {
       Add-Reason $reasons "duplicate event id: $($event.id)"
+    }
+
+    $duplicateMatches = @(Get-FuzzyDuplicateMatches -CandidateEvent $event -ExistingEvents $eventsDoc.events)
+    if ($duplicateMatches.Count -gt 0) {
+      Set-ObjectProperty $candidate "duplicateRisk" "high"
+      Set-ObjectProperty $candidate "duplicateMatches" $duplicateMatches
+      Add-Reason $reasons "possible duplicate of existing event: $($duplicateMatches[0].eventId) ($($duplicateMatches[0].score))"
+    } else {
+      Set-ObjectProperty $candidate "duplicateRisk" "low"
+      Set-ObjectProperty $candidate "duplicateMatches" @()
     }
 
     if ($policyDoc.autoPublish.blockedIfDateAmbiguous -and $event.time -match 'tbc|varies|evening|morning|afternoon') {

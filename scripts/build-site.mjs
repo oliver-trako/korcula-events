@@ -5,6 +5,7 @@ const root = process.cwd();
 const dist = path.join(root, "dist");
 const siteUrl = "https://korcula-events.com";
 const buildDate = new Date().toISOString().slice(0, 10);
+const defaultShareImage = `${siteUrl}/generated_images/019f4238-0d22-7c61-a5de-d8d8a9751fdf/ig_08cb38e27fc1cd4c016a4e6b76535c8191b68b7bca395d86af.png`;
 
 const langMeta = {
   hr: {
@@ -651,6 +652,12 @@ function flyerUrl(name) {
   return flyerBase + encodeURIComponent(name).replace(/%2F/g, "/");
 }
 
+function absoluteUrl(url) {
+  if (!url) return "";
+  const fullUrl = /^https?:\/\//i.test(url) ? url : `${siteUrl}${url.startsWith("/") ? "" : "/"}${url}`;
+  return encodeURI(fullUrl);
+}
+
 function getFlyer(event) {
   const id = event.id;
   if (id.startsWith("kt-fermata")) return flyerUrl(flyers.fermata);
@@ -746,11 +753,32 @@ function icsDataUrl(event, towns) {
   return `data:text/calendar;charset=utf8,${encodeURIComponent(ics)}`;
 }
 
-function pageShell({ lang = "en", title, description, canonical, body, schema }) {
-  const alternates = Object.keys(langMeta)
-    .map((code) => `<link rel="alternate" hreflang="${code}" href="${siteUrl}/${code}/">`)
-    .join("\n");
+function languageAlternates(canonical) {
+  const languageHomeUrls = new Set(Object.keys(langMeta).map((code) => `${siteUrl}/${code}/`));
+  if (!languageHomeUrls.has(canonical)) return "";
+  return [
+    `<link rel="alternate" hreflang="x-default" href="${siteUrl}/">`,
+    ...Object.keys(langMeta).map((code) => `<link rel="alternate" hreflang="${code}" href="${siteUrl}/${code}/">`)
+  ].join("\n");
+}
+
+function breadcrumbSchema(items) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      item: item.url
+    }))
+  };
+}
+
+function pageShell({ lang = "en", title, description, canonical, body, schema, image = defaultShareImage, type = "website" }) {
+  const alternates = languageAlternates(canonical);
   const schemaHtml = schema ? `<script type="application/ld+json">${JSON.stringify(schema)}</script>` : "";
+  const imageUrl = absoluteUrl(image) || defaultShareImage;
   return `<!DOCTYPE html>
 <html lang="${esc(lang)}">
 <head>
@@ -761,6 +789,17 @@ function pageShell({ lang = "en", title, description, canonical, body, schema })
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="${esc(canonical)}">
 ${alternates}
+<meta property="og:type" content="${esc(type)}">
+<meta property="og:site_name" content="Korčula Island Events">
+<meta property="og:title" content="${esc(title)}">
+<meta property="og:description" content="${esc(description)}">
+<meta property="og:url" content="${esc(canonical)}">
+<meta property="og:image" content="${esc(imageUrl)}">
+<meta property="og:image:alt" content="${esc(title)}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="${esc(title)}">
+<meta name="twitter:description" content="${esc(description)}">
+<meta name="twitter:image" content="${esc(imageUrl)}">
 <link rel="stylesheet" href="/css/style.css">
 <style>
 .seo-header{max-width:960px;margin:0 auto;padding:20px 16px 0}
@@ -800,9 +839,10 @@ ${alternates}
 .seo-poster{background:#fff;border:1px solid var(--border);border-radius:12px;padding:10px;box-shadow:var(--shadow)}
 .seo-poster img{display:block;width:100%;border-radius:8px;object-fit:cover}
 .seo-action-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
-.seo-action{display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--border);border-radius:8px;padding:9px 11px;color:var(--sea-deeper);background:#fff;font-weight:800;text-decoration:none;font-size:.82rem}
+.seo-action{display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--border);border-radius:8px;padding:9px 11px;color:var(--sea-deeper);background:#fff;font:inherit;font-weight:800;text-decoration:none;font-size:.82rem;cursor:pointer}
 .seo-action.primary{background:var(--sea-deep);border-color:var(--sea-deep);color:#fff}
 .seo-action:hover{text-decoration:underline}
+.seo-action[aria-pressed="true"]{background:var(--sand);border-color:var(--sea-deep)}
 .seo-form{background:#fff;border:1px solid var(--border);border-radius:12px;padding:16px;display:grid;gap:12px;margin-top:14px;box-shadow:var(--shadow)}
 .seo-form label{display:grid;gap:5px;color:var(--ink);font-size:.86rem;font-weight:800}
 .seo-form input,.seo-form textarea{font:inherit;border:1px solid var(--border);border-radius:8px;padding:10px;background:var(--sand)}
@@ -864,6 +904,58 @@ ${body}
     </div>
   </div>
 </footer>
+<script>
+(() => {
+  const favoriteKey = "korcula:favouriteEvents";
+  const readFavorites = () => {
+    try { return JSON.parse(localStorage.getItem(favoriteKey) || "[]"); } catch { return []; }
+  };
+  const writeFavorites = (items) => localStorage.setItem(favoriteKey, JSON.stringify(items));
+  document.querySelectorAll("[data-favorite-event]").forEach((button) => {
+    const id = button.dataset.favoriteEvent;
+    const sync = () => {
+      const saved = readFavorites().includes(id);
+      button.setAttribute("aria-pressed", saved ? "true" : "false");
+      button.textContent = saved ? "Saved to favourites" : "Save favourite";
+    };
+    button.addEventListener("click", () => {
+      const items = readFavorites();
+      const next = items.includes(id) ? items.filter((item) => item !== id) : [...items, id];
+      writeFavorites(next);
+      sync();
+    });
+    sync();
+  });
+  document.querySelectorAll("[data-copy-url]").forEach((button) => {
+    button.addEventListener("click", async () => {
+      const url = button.dataset.copyUrl || location.href;
+      try {
+        await navigator.clipboard.writeText(url);
+        const previous = button.textContent;
+        button.textContent = "Link copied";
+        setTimeout(() => { button.textContent = previous; }, 1600);
+      } catch {
+        location.href = url;
+      }
+    });
+  });
+  document.querySelectorAll("[data-share-event]").forEach((button) => {
+    button.addEventListener("click", async () => {
+      const url = button.dataset.shareUrl || location.href;
+      const title = button.dataset.shareTitle || document.title;
+      if (navigator.share) {
+        try { await navigator.share({ title, url }); return; } catch {}
+      }
+      try {
+        await navigator.clipboard.writeText(url);
+        button.textContent = "Link copied";
+      } catch {
+        location.href = url;
+      }
+    });
+  });
+})();
+</script>
 </body>
 </html>`;
 }
@@ -905,6 +997,7 @@ function eventNarrative(event, towns) {
 
 function eventSchema(event, towns) {
   const description = descFor(event, "en") || `${titleFor(event, "en")} in ${townName(towns, event.town, "en")}, Korčula, Croatia.`;
+  const flyer = getFlyer(event);
   const schema = {
     "@context": "https://schema.org",
     "@type": "Event",
@@ -920,6 +1013,7 @@ function eventSchema(event, towns) {
     },
     description
   };
+  if (flyer) schema.image = [absoluteUrl(flyer)];
   if (event.endDate) schema.endDate = isoDateTime(event, true);
   if (/besplatan|slobodan|free/i.test(`${event.hr || ""} ${event.en || ""}`)) schema.isAccessibleForFree = true;
   if (event.ticketUrl) {
@@ -1105,6 +1199,9 @@ async function buildSeoPages(data) {
     const mapHref = mapsUrl(event, towns);
     const gcalHref = googleCalendarUrl(event, towns);
     const icsHref = icsDataUrl(event, towns);
+    const shareText = `${title} | Korčula Events 2026`;
+    const whatsappHref = `https://wa.me/?text=${encodeURIComponent(`${shareText} ${url}`)}`;
+    const facebookHref = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
     const pills = [
       ...((event.cats || []).map((cat) => `<a class="seo-pill" href="${esc(categoryUrl(cat))}">${esc(catLabels[cat] || cat)}</a>`)),
       `<a class="seo-pill" href="${esc(placeUrl(event.town))}">${esc(town)}</a>`
@@ -1113,6 +1210,8 @@ async function buildSeoPages(data) {
       title: `${title} | Korčula Events 2026`,
       description: description.slice(0, 155),
       canonical: url,
+      image: flyer || defaultShareImage,
+      type: "article",
       body: `
         <section class="seo-hero">
           <p><a href="/events/">All events</a> · <a href="/">Interactive calendar</a></p>
@@ -1129,6 +1228,11 @@ async function buildSeoPages(data) {
                 <a class="seo-action primary" href="${esc(gcalHref)}" target="_blank" rel="noopener">Android / Google Calendar</a>
                 <a class="seo-action" href="${esc(icsHref)}" download="${esc(event.id)}.ics">iPhone / Apple Calendar (.ics)</a>
                 <a class="seo-action" href="${esc(mapHref)}" target="_blank" rel="noopener">Open in Google Maps</a>
+                <button class="seo-action" type="button" data-favorite-event="${esc(event.id)}" aria-pressed="false">Save favourite</button>
+                <button class="seo-action" type="button" data-share-event data-share-url="${esc(url)}" data-share-title="${esc(shareText)}">Share</button>
+                <a class="seo-action" href="${esc(whatsappHref)}" target="_blank" rel="noopener">WhatsApp</a>
+                <a class="seo-action" href="${esc(facebookHref)}" target="_blank" rel="noopener">Facebook</a>
+                <button class="seo-action" type="button" data-copy-url="${esc(url)}">Copy link / Instagram</button>
               </div>
             </div>
             ${flyer ? `<aside class="seo-poster"><a href="${esc(flyer)}"><img src="${esc(flyer)}" alt="${esc(title)} event poster"></a></aside>` : ""}
@@ -1152,7 +1256,14 @@ async function buildSeoPages(data) {
         ${relatedByTown.length ? `<section class="seo-section"><h2>More events in ${esc(town)}</h2>${eventList(relatedByTown, towns, "en", 6)}</section>` : ""}
         ${relatedByCategory.length ? `<section class="seo-section"><h2>Similar events</h2>${eventList(relatedByCategory, towns, "en", 6)}</section>` : ""}
       `,
-      schema: eventSchema(event, towns)
+      schema: [
+        eventSchema(event, towns),
+        breadcrumbSchema([
+          { name: "Home", url: `${siteUrl}/` },
+          { name: "Events", url: `${siteUrl}/events/` },
+          { name: title, url }
+        ])
+      ]
     }));
   }
 

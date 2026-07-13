@@ -36,6 +36,14 @@ function Convert-NumericDate {
   return "{0:D4}-{1:D2}-{2:D2}" -f [int]$m.Groups['y'].Value, [int]$m.Groups['m'].Value, [int]$m.Groups['d'].Value
 }
 
+function Convert-KorculaShortDate {
+  param([string]$Day, [string]$Month, [string]$Year = "2026")
+  if (-not $Day -or -not $Month) { return $null }
+  if (-not $Year) { $Year = "2026" }
+  if ($Year.Length -eq 2) { $Year = "20$Year" }
+  return "{0:D4}-{1:D2}-{2:D2}" -f [int]$Year, [int]$Month, [int]$Day
+}
+
 function Convert-TextDate {
   param([string]$Day, [string]$Month, [string]$Year)
   $months = @{
@@ -200,6 +208,67 @@ function Get-MoreskaTicketEvents {
   return @($events)
 }
 
+function Get-KulturaKorculaEvents {
+  param($Row, [string]$Text)
+
+  if ([string]$Row.sourceId -ne "centar-kulture-korcula") {
+    return @()
+  }
+
+  $events = @()
+  $seen = @{}
+  $categoryPattern = "Kino Mediteran|KINO|Kino|Koncert klasične glazbe|Koncert|Kazalište|Predstava"
+  $weekdayPattern = "ponedjeljak|utorak|srijeda|četvrtak|petak|subota|nedjelja"
+  $pattern = "(?<category>$categoryPattern)\s*/\s*(?<title>[^/]{3,160}?)\s*/\s*(?:(?<weekday>$weekdayPattern)\s*,\s*)?(?<day>\d{1,2})\.(?<month>\d{1,2})\.?(?:\s*(?<year>\d{4}))?\s*,?\s*(?<time>\d{1,2}:\d{2})(?:\s*/\s*(?<venue>[^/]{0,100}?))?(?=\s+[A-ZČĆŽŠĐ]|\s+Administrator|\s+$)"
+
+  foreach ($match in [regex]::Matches($Text, $pattern, [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)) {
+    $category = (Decode-Text $match.Groups['category'].Value).Trim()
+    $title = (Decode-Text $match.Groups['title'].Value).Trim()
+    $title = ($title -replace '\s+', ' ').Trim().Trim('-').Trim('|').Trim()
+    if (-not $title -or $title.Length -lt 3) { continue }
+    if ($title -match 'Početna|Najave događanja|Kontakt|Traži Facebook') { continue }
+
+    $date = Convert-KorculaShortDate $match.Groups['day'].Value $match.Groups['month'].Value $match.Groups['year'].Value
+    if (-not $date -or $date -lt '2026-01-01') { continue }
+
+    $venue = (Decode-Text $match.Groups['venue'].Value).Trim()
+    $venue = ($venue -replace '\s+', ' ').Trim().Trim('/').Trim()
+    if ($venue -match 'Ljetno') { $venue = "Ljetno kino Korčula" }
+    elseif ($venue -match 'Katedrala') { $venue = "Katedrala sv. Marka" }
+    elseif ($venue -match 'Centar za kulturu') { $venue = "Centar za kulturu Korčula" }
+    elseif (-not $venue -or $venue.Length -lt 4 -or $venue -match '^[0-9+]+$|sink|Iznad|Žanr|Režija') {
+      if ($category -match 'Mediteran') { $venue = "Ljetno kino Korčula" }
+      else { $venue = "Centar za kulturu Korčula" }
+    }
+
+    $cats = @("film")
+    if ($category -match 'Koncert') { $cats = @("music") }
+    elseif ($category -match 'Kazalište|Predstava') { $cats = @("theatre") }
+
+    $id = "kultura-korcula-$date-$(New-Slug $title)"
+    if ($seen.ContainsKey($id)) { continue }
+    $seen[$id] = $true
+
+    $event = [pscustomobject][ordered]@{
+      id = $id
+      date = $date
+      time = $match.Groups['time'].Value
+      town = "korcula"
+      venue = $venue
+      cats = $cats
+      hr = "$category / $title"
+      en = "$category / $title"
+      sourceId = $Row.sourceId
+      source = $Row.url
+      website = $Row.url
+      verify = $true
+    }
+    $events += $event
+  }
+
+  return @($events)
+}
+
 function New-Candidate {
   param($Row, $Event, [string]$Text, $DateHints, $TimeHints)
 
@@ -280,6 +349,7 @@ foreach ($row in $summary | Where-Object { $_.status -eq "fetched" }) {
   $structuredEvents = @()
   $structuredEvents += Get-MoreskaTicketEvents -Row $row -Text $text
   $structuredEvents += Get-VisitKorculaEvents -Row $row -Text $text
+  $structuredEvents += Get-KulturaKorculaEvents -Row $row -Text $text
 
   if ($structuredEvents.Count -gt 0) {
     foreach ($event in $structuredEvents) {

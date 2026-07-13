@@ -42,6 +42,21 @@
       "notes": "Official page has previously listed village sports, cinema, pancakes and Pumpurela events."
     },
     {
+      "id": "centar-kulture-korcula",
+      "name": "Centar za kulturu Korčula",
+      "type": "cultural-organiser",
+      "town": "korcula",
+      "priority": "high",
+      "checkFrequencyDays": 1,
+      "confidence": "high",
+      "urls": [
+        { "kind": "website", "url": "https://kulturakorcula.hr/kino-najave/", "scrapeMode": "html" },
+        { "kind": "facebook", "url": "https://www.facebook.com/kulturakorcula/", "scrapeMode": "manual-social" }
+      ],
+      "keywords": ["Kino", "Kino Mediteran", "Ljetno kino", "Centar za kulturu Korčula", "koncert", "kazalište", "film", "Korčula"],
+      "notes": "Official culture-centre listings for cinema, open-air cinema, classical concerts, theatre and cultural events in Korčula Town."
+    },
+    {
       "id": "visit-lumbarda",
       "name": "Visit Lumbarda",
       "type": "official-board",

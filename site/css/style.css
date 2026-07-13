@@ -344,6 +344,9 @@ main { max-width:900px; margin: 0 auto; padding: 14px 16px 0; }
 
 /* ---------- Footer ---------- */
 .site-footer { max-width:900px; margin: 30px auto 0; padding: 18px 16px 0; border-top:1px solid var(--border); }
+.footer-nav { display:flex; justify-content:center; gap:14px; flex-wrap:wrap; margin-bottom:10px; font-size:.84rem; }
+.footer-nav a { color:var(--sea-deeper); font-weight:800; text-decoration:none; }
+.footer-nav a:hover { text-decoration:underline; }
 .ferry-info { background:#fff; border:1px solid var(--border); border-radius:12px; padding:12px 14px; margin-bottom:14px; }
 .ferry-info strong { color: var(--sea-deep); display:block; margin-bottom:4px; }
 .ferry-info p { margin:0; font-size:.85rem; color:var(--ink-soft); }

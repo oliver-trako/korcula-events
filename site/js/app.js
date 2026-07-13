@@ -34,6 +34,18 @@
 
   const $ = (sel, root) => (root || document).querySelector(sel);
   const $$ = (sel, root) => Array.from((root || document).querySelectorAll(sel));
+  const setText = (sel, text) => {
+    const node = $(sel);
+    if (node) node.textContent = text;
+  };
+  const setValue = (sel, value) => {
+    const node = $(sel);
+    if (node) node.value = value;
+  };
+  const setPlaceholder = (sel, text) => {
+    const node = $(sel);
+    if (node) node.placeholder = text;
+  };
 
   function t() { return I18N[state.lang]; }
 
@@ -89,37 +101,37 @@
   function applyLang() {
     const T = t();
     document.documentElement.lang = state.lang;
-    $("#langSelect").value = state.lang;
+    setValue("#langSelect", state.lang);
     document.title = T.siteTitle;
-    $("#siteTitle").textContent = T.siteTitle;
-    $("#tagline").textContent = T.tagline;
-    $("#heroKicker").textContent = T.heroKicker;
-    $("#heroText").textContent = T.heroText;
-    $("#searchInput").placeholder = T.searchPlaceholder;
-    $("#searchInput").value = state.query;
-    $("#navToday").textContent = T.navToday;
-    $("#navAgenda").textContent = T.navAgenda;
-    $("#navCalendar").textContent = T.navCalendar;
-    $("#navSeason").textContent = T.navSeason;
-    $("#navMap").textContent = T.navMap;
-    $("#filterCategory").textContent = T.filterCategory;
-    $("#filterLocation").textContent = T.filterLocation;
-    $("#filterCategoryLabel").textContent = T.filterCategory;
-    $("#filterLocationLabel").textContent = T.filterLocation;
-    $("#filterClearLabel").textContent = T.filterClear;
-    $("#footerNote").textContent = T.footerNote;
-    $("#footerBuilt").textContent = T.footerBuilt;
-    $("#suggestFabLabel").textContent = T.suggestFab;
-    $("#suggestTitle").textContent = T.suggestTitle;
-    $("#suggestIntro").textContent = T.suggestIntro;
-    $("#lblEventName").textContent = T.lblEventName;
-    $("#lblEventDate").textContent = T.lblEventDate;
-    $("#lblEventTime").textContent = T.lblEventTime;
-    $("#lblEventVenue").textContent = T.lblEventVenue;
-    $("#lblEventDesc").textContent = T.lblEventDesc;
-    $("#lblSubmitterContact").textContent = T.lblSubmitterContact;
-    $("#lblAttachFlyer").textContent = T.attachFlyer;
-    $("#suggestSubmitBtn").textContent = T.suggestSubmit;
+    setText("#siteTitle", T.siteTitle);
+    setText("#tagline", T.tagline);
+    setText("#heroKicker", T.heroKicker);
+    setText("#heroText", T.heroText);
+    setPlaceholder("#searchInput", T.searchPlaceholder);
+    setValue("#searchInput", state.query);
+    setText("#navToday", T.navToday);
+    setText("#navAgenda", T.navAgenda);
+    setText("#navCalendar", T.navCalendar);
+    setText("#navSeason", T.navSeason);
+    setText("#navMap", T.navMap);
+    setText("#filterCategory", T.filterCategory);
+    setText("#filterLocation", T.filterLocation);
+    setText("#filterCategoryLabel", T.filterCategory);
+    setText("#filterLocationLabel", T.filterLocation);
+    setText("#filterClearLabel", T.filterClear);
+    setText("#footerNote", T.footerNote);
+    setText("#footerBuilt", T.footerBuilt);
+    setText("#suggestFabLabel", T.suggestFab);
+    setText("#suggestTitle", T.suggestTitle);
+    setText("#suggestIntro", T.suggestIntro);
+    setText("#lblEventName", T.lblEventName);
+    setText("#lblEventDate", T.lblEventDate);
+    setText("#lblEventTime", T.lblEventTime);
+    setText("#lblEventVenue", T.lblEventVenue);
+    setText("#lblEventDesc", T.lblEventDesc);
+    setText("#lblSubmitterContact", T.lblSubmitterContact);
+    setText("#lblAttachFlyer", T.attachFlyer);
+    setText("#suggestSubmitBtn", T.suggestSubmit);
     buildFilterChips();
   }
 

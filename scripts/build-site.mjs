@@ -655,7 +655,11 @@ function flyerUrl(name) {
 function absoluteUrl(url) {
   if (!url) return "";
   const fullUrl = /^https?:\/\//i.test(url) ? url : `${siteUrl}${url.startsWith("/") ? "" : "/"}${url}`;
-  return encodeURI(fullUrl);
+  try {
+    return encodeURI(decodeURI(fullUrl));
+  } catch {
+    return encodeURI(fullUrl).replaceAll("%25", "%");
+  }
 }
 
 function getFlyer(event) {
@@ -773,6 +777,50 @@ function breadcrumbSchema(items) {
       item: item.url
     }))
   };
+}
+
+function itemListSchema(name, url, items) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name,
+    url,
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      url: typeof item === "string" ? item : item.url,
+      name: typeof item === "string" ? undefined : item.name
+    }))
+  };
+}
+
+function faqSchema(items) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer
+      }
+    }))
+  };
+}
+
+function sitemapPriority(url) {
+  if (url === `${siteUrl}/`) return "1.0";
+  if (url === `${siteUrl}/events/` || url === `${siteUrl}/guides/`) return "0.9";
+  if (url.includes("/events/")) return "0.8";
+  if (url.includes("/guides/") || url.includes("/places/") || url.includes("/categories/")) return "0.7";
+  return "0.5";
+}
+
+function sitemapChangefreq(url) {
+  if (url === `${siteUrl}/` || url === `${siteUrl}/events/`) return "daily";
+  if (url.includes("/events/") || url.includes("/guides/")) return "weekly";
+  return "monthly";
 }
 
 function pageShell({ lang = "en", title, description, canonical, body, schema, image = defaultShareImage, type = "website" }) {
@@ -1096,12 +1144,23 @@ async function buildSeoPages(data) {
       </section>
       ${eventList(events, towns, "en")}
     `,
-    schema: {
-      "@context": "https://schema.org",
-      "@type": "CollectionPage",
-      name: "All Korčula Events 2026",
-      url: `${siteUrl}/events/`
-    }
+    schema: [
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        name: "All Korčula Events 2026",
+        url: `${siteUrl}/events/`,
+        description: "Crawlable index of Korčula island events for summer 2026."
+      },
+      itemListSchema("All Korčula Events 2026", `${siteUrl}/events/`, events.slice(0, 100).map((event) => ({
+        name: titleFor(event, "en"),
+        url: eventUrl(event)
+      }))),
+      breadcrumbSchema([
+        { name: "Home", url: `${siteUrl}/` },
+        { name: "Events", url: `${siteUrl}/events/` }
+      ])
+    ]
   }));
   urls.add(`${siteUrl}/events/`);
 
@@ -1119,12 +1178,22 @@ async function buildSeoPages(data) {
         ${Object.entries(guidePages).map(([slug, guide]) => `<div class="seo-card"><strong>${esc(guide.h1)}</strong><a href="/guides/${esc(slug)}/">Open guide</a></div>`).join("")}
       </div>
     `,
-    schema: {
-      "@context": "https://schema.org",
-      "@type": "CollectionPage",
-      name: "Korčula Event Guides 2026",
-      url: `${siteUrl}/guides/`
-    }
+    schema: [
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        name: "Korčula Event Guides 2026",
+        url: `${siteUrl}/guides/`
+      },
+      itemListSchema("Korčula Event Guides 2026", `${siteUrl}/guides/`, Object.entries(guidePages).map(([slug, guide]) => ({
+        name: guide.h1,
+        url: guideUrl(slug)
+      }))),
+      breadcrumbSchema([
+        { name: "Home", url: `${siteUrl}/` },
+        { name: "Guides", url: `${siteUrl}/guides/` }
+      ])
+    ]
   }));
   urls.add(`${siteUrl}/guides/`);
 
@@ -1150,12 +1219,34 @@ async function buildSeoPages(data) {
         </section>
         ${guideEvents.length ? eventList(guideEvents, towns, "en") : "<p>No matching events are currently listed. Check the main calendar for more options.</p>"}
       `,
-      schema: {
-        "@context": "https://schema.org",
-        "@type": "CollectionPage",
-        name: guide.h1,
-        url
-      }
+      schema: [
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          name: guide.h1,
+          url,
+          description: guide.description
+        },
+        itemListSchema(guide.h1, url, guideEvents.slice(0, 60).map((event) => ({
+          name: titleFor(event, "en"),
+          url: eventUrl(event)
+        }))),
+        breadcrumbSchema([
+          { name: "Home", url: `${siteUrl}/` },
+          { name: "Guides", url: `${siteUrl}/guides/` },
+          { name: guide.h1, url }
+        ]),
+        faqSchema([
+          {
+            question: `How current is ${guide.h1}?`,
+            answer: `This guide is generated from the current Korčula Events database and was last rebuilt on ${buildDate}. Always check event source links before booking or travelling.`
+          },
+          {
+            question: "Does Korčula Events include smaller villages and local programmes?",
+            answer: "Yes. The calendar includes Korčula Town, Lumbarda, Vela Luka, Blato, Smokvica, Račišće, Žrnovo, Postrana, Čara, Pupnat, Kneže, Zavalatica and nearby Orebić or Pelješac events where relevant."
+          }
+        ])
+      ]
     }));
   }
 
@@ -1281,7 +1372,25 @@ async function buildSeoPages(data) {
         const count = events.filter((event) => event.town === town.id).length;
         return `<li><a href="${esc(placeUrl(town.id))}">${esc(town.en || town.hr)}</a><span class="seo-meta">${count} events</span></li>`;
       }).join("")}</ul>
-    `
+    `,
+    schema: [
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        name: "Korčula Events by Place",
+        url: `${siteUrl}/places/`
+      },
+      itemListSchema("Korčula Events by Place", `${siteUrl}/places/`, towns
+        .filter((town) => events.some((event) => event.town === town.id))
+        .map((town) => ({
+          name: town.en || town.hr,
+          url: placeUrl(town.id)
+        }))),
+      breadcrumbSchema([
+        { name: "Home", url: `${siteUrl}/` },
+        { name: "Places", url: `${siteUrl}/places/` }
+      ])
+    ]
   }));
   urls.add(`${siteUrl}/places/`);
 
@@ -1301,7 +1410,25 @@ async function buildSeoPages(data) {
           <p class="seo-lede">Events and summer programmes in ${esc(town.en || town.hr)}, including cultural evenings, music, food, sport and seasonal village programmes where available.</p>
         </section>
         ${eventList(townEvents, towns, "en")}
-      `
+      `,
+      schema: [
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          name: `${town.en || town.hr} Events 2026`,
+          url,
+          description: `Events in ${town.en || town.hr}, Korčula island, in 2026.`
+        },
+        itemListSchema(`${town.en || town.hr} Events 2026`, url, townEvents.slice(0, 60).map((event) => ({
+          name: titleFor(event, "en"),
+          url: eventUrl(event)
+        }))),
+        breadcrumbSchema([
+          { name: "Home", url: `${siteUrl}/` },
+          { name: "Places", url: `${siteUrl}/places/` },
+          { name: town.en || town.hr, url }
+        ])
+      ]
     }));
   }
 
@@ -1319,7 +1446,25 @@ async function buildSeoPages(data) {
         const count = events.filter((event) => (event.cats || []).includes(cat)).length;
         return `<li><a href="${esc(categoryUrl(cat))}">${esc(catLabels[cat])}</a><span class="seo-meta">${count} events</span></li>`;
       }).join("")}</ul>
-    `
+    `,
+    schema: [
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        name: "Korčula Events by Category",
+        url: `${siteUrl}/categories/`
+      },
+      itemListSchema("Korčula Events by Category", `${siteUrl}/categories/`, Object.keys(catLabels)
+        .filter((cat) => events.some((event) => (event.cats || []).includes(cat)))
+        .map((cat) => ({
+          name: catLabels[cat],
+          url: categoryUrl(cat)
+        }))),
+      breadcrumbSchema([
+        { name: "Home", url: `${siteUrl}/` },
+        { name: "Categories", url: `${siteUrl}/categories/` }
+      ])
+    ]
   }));
   urls.add(`${siteUrl}/categories/`);
 
@@ -1339,7 +1484,25 @@ async function buildSeoPages(data) {
           <p class="seo-lede">A focused list of ${esc(catLabels[cat].toLowerCase())} events across Korčula island, sorted by date and linked back to source details where available.</p>
         </section>
         ${eventList(catEvents, towns, "en")}
-      `
+      `,
+      schema: [
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          name: `Korčula ${catLabels[cat]} Events 2026`,
+          url,
+          description: `${catLabels[cat]} events on Korčula island in 2026.`
+        },
+        itemListSchema(`Korčula ${catLabels[cat]} Events 2026`, url, catEvents.slice(0, 60).map((event) => ({
+          name: titleFor(event, "en"),
+          url: eventUrl(event)
+        }))),
+        breadcrumbSchema([
+          { name: "Home", url: `${siteUrl}/` },
+          { name: "Categories", url: `${siteUrl}/categories/` },
+          { name: catLabels[cat], url }
+        ])
+      ]
     }));
   }
 
@@ -1348,8 +1511,8 @@ async function buildSeoPages(data) {
 ${Array.from(urls).sort().map((url) => `  <url>
     <loc>${esc(url)}</loc>
     <lastmod>${buildDate}</lastmod>
-    <changefreq>${url === `${siteUrl}/` ? "daily" : "weekly"}</changefreq>
-    <priority>${url === `${siteUrl}/` ? "1.0" : "0.7"}</priority>
+    <changefreq>${sitemapChangefreq(url)}</changefreq>
+    <priority>${sitemapPriority(url)}</priority>
   </url>`).join("\n")}
 </urlset>
 `;

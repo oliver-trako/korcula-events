@@ -299,6 +299,7 @@ main { max-width:900px; margin: 0 auto; padding: 14px 16px 0; }
 .modal-action-btn.primary-save { background:var(--sea-deep); border-color:var(--sea-deep); color:#fff; }
 .modal-action-btn:hover { border-color: var(--sea-light); }
 .modal-action-btn.primary-save:hover { border-color:var(--sea-light); background:var(--sea); }
+.modal-action-btn[aria-pressed="true"] { background:var(--sand); border-color:var(--sea-deep); color:var(--sea-deep); }
 .calendar-unavailable-note {
   background:#f7fbfd; border:1px solid #b8d5e8; border-radius:10px; color:var(--sea-deep);
   font-size:.8rem; margin:8px 0 0; padding:9px 10px;

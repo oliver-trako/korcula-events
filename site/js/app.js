@@ -1030,6 +1030,67 @@
     return "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(q);
   }
 
+  function slugify(value) {
+    return String(value || "")
+      .normalize("NFKD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "")
+      .slice(0, 80) || "event";
+  }
+
+  function eventDetailUrl(e) {
+    return location.origin + "/events/" + slugify(e.en || e.hr || e.id) + "-" + slugify(e.id) + "/";
+  }
+
+  function readSavedEvents() {
+    try { return JSON.parse(localStorage.getItem("korcula:favouriteEvents") || "[]"); }
+    catch (err) { return []; }
+  }
+
+  function writeSavedEvents(items) {
+    localStorage.setItem("korcula:favouriteEvents", JSON.stringify(items));
+  }
+
+  function syncFavoriteButton(button, id) {
+    const saved = readSavedEvents().includes(id);
+    button.setAttribute("aria-pressed", saved ? "true" : "false");
+    button.textContent = saved ? (t().savedFavourite || "Saved") : (t().saveFavourite || "Save favourite");
+  }
+
+  function toggleFavorite(e, button) {
+    const items = readSavedEvents();
+    const next = items.includes(e.id) ? items.filter((id) => id !== e.id) : items.concat(e.id);
+    writeSavedEvents(next);
+    syncFavoriteButton(button, e.id);
+  }
+
+  async function copyEventLink(url, button) {
+    try {
+      await navigator.clipboard.writeText(url);
+      const original = button.textContent;
+      button.textContent = t().linkCopied;
+      setTimeout(() => { button.textContent = original; }, 1800);
+    } catch (err) {
+      location.href = url;
+    }
+  }
+
+  async function shareEvent(e, button) {
+    const url = eventDetailUrl(e);
+    const title = eventTitle(e) + " | Korčula Events";
+    if (navigator.share) {
+      try {
+        await navigator.share({ title, url });
+        return;
+      } catch (err) {
+        // Fall back to copying below when the share sheet is cancelled or unavailable.
+      }
+    }
+    await copyEventLink(url, button);
+  }
+
   function eventLinks(e) {
     const T = t();
     const defs = [
@@ -1133,14 +1194,46 @@
     copyBtn.className = "modal-action-btn";
     copyBtn.type = "button";
     copyBtn.textContent = T.copyLink;
-    copyBtn.onclick = () => {
-      const url = location.origin + location.pathname + "#event=" + e.id;
-      navigator.clipboard && navigator.clipboard.writeText(url).then(() => {
-        copyBtn.textContent = T.linkCopied;
-        setTimeout(() => { copyBtn.textContent = T.copyLink; }, 1800);
-      });
-    };
+    copyBtn.onclick = () => copyEventLink(eventDetailUrl(e), copyBtn);
     actionRow.appendChild(copyBtn);
+
+    const favBtn = document.createElement("button");
+    favBtn.className = "modal-action-btn";
+    favBtn.type = "button";
+    favBtn.onclick = () => toggleFavorite(e, favBtn);
+    syncFavoriteButton(favBtn, e.id);
+    actionRow.appendChild(favBtn);
+
+    const shareBtn = document.createElement("button");
+    shareBtn.className = "modal-action-btn";
+    shareBtn.type = "button";
+    shareBtn.textContent = T.shareEvent || "Share";
+    shareBtn.onclick = () => shareEvent(e, shareBtn);
+    actionRow.appendChild(shareBtn);
+
+    const whatsAppBtn = document.createElement("a");
+    whatsAppBtn.className = "modal-action-btn";
+    whatsAppBtn.href = "https://wa.me/?text=" + encodeURIComponent(eventTitle(e) + " | Korčula Events " + eventDetailUrl(e));
+    whatsAppBtn.target = "_blank";
+    whatsAppBtn.rel = "noopener";
+    whatsAppBtn.textContent = "WhatsApp";
+    actionRow.appendChild(whatsAppBtn);
+
+    const facebookBtn = document.createElement("a");
+    facebookBtn.className = "modal-action-btn";
+    facebookBtn.href = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(eventDetailUrl(e));
+    facebookBtn.target = "_blank";
+    facebookBtn.rel = "noopener";
+    facebookBtn.textContent = "Facebook";
+    actionRow.appendChild(facebookBtn);
+
+    const instagramBtn = document.createElement("button");
+    instagramBtn.className = "modal-action-btn";
+    instagramBtn.type = "button";
+    instagramBtn.textContent = T.copyForInstagram || "Copy link / Instagram";
+    instagramBtn.onclick = () => copyEventLink(eventDetailUrl(e), instagramBtn);
+    actionRow.appendChild(instagramBtn);
+
     body.querySelector(".modal-body").appendChild(actionRow);
 
     modal.hidden = false;

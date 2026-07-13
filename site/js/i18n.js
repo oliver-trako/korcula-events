@@ -67,6 +67,10 @@ const I18N = {
     googleCalendar: "Google kalendar",
     downloadIcs: "iPhone / Outlook (.ics)",
     copyLink: "Kopiraj poveznicu",
+    shareEvent: "Podijeli",
+    saveFavourite: "Spremi omiljeno",
+    savedFavourite: "Spremljeno",
+    copyForInstagram: "Kopiraj za Instagram",
     linkCopied: "Kopirano!"
   },
   en: {
@@ -135,6 +139,10 @@ const I18N = {
     googleCalendar: "Google Calendar",
     downloadIcs: "iPhone / Outlook (.ics)",
     copyLink: "Copy link",
+    shareEvent: "Share",
+    saveFavourite: "Save favourite",
+    savedFavourite: "Saved favourite",
+    copyForInstagram: "Copy link / Instagram",
     linkCopied: "Copied!"
   },
   de: {
@@ -203,6 +211,10 @@ const I18N = {
     googleCalendar: "Google Kalender",
     downloadIcs: "iPhone / Outlook (.ics)",
     copyLink: "Link kopieren",
+    shareEvent: "Teilen",
+    saveFavourite: "Favorit speichern",
+    savedFavourite: "Gespeichert",
+    copyForInstagram: "Link für Instagram kopieren",
     linkCopied: "Kopiert!"
   },
   it: {
@@ -271,6 +283,10 @@ const I18N = {
     googleCalendar: "Google Calendar",
     downloadIcs: "iPhone / Outlook (.ics)",
     copyLink: "Copia link",
+    shareEvent: "Condividi",
+    saveFavourite: "Salva preferito",
+    savedFavourite: "Preferito salvato",
+    copyForInstagram: "Copia link / Instagram",
     linkCopied: "Copiato!"
   },
   sl: {
@@ -339,6 +355,10 @@ const I18N = {
     googleCalendar: "Google koledar",
     downloadIcs: "iPhone / Outlook (.ics)",
     copyLink: "Kopiraj povezavo",
+    shareEvent: "Deli",
+    saveFavourite: "Shrani priljubljeno",
+    savedFavourite: "Shranjeno",
+    copyForInstagram: "Kopiraj povezavo / Instagram",
     linkCopied: "Kopirano!"
   },
   fr: {
@@ -407,6 +427,10 @@ const I18N = {
     googleCalendar: "Google Agenda",
     downloadIcs: "iPhone / Outlook (.ics)",
     copyLink: "Copier le lien",
+    shareEvent: "Partager",
+    saveFavourite: "Ajouter aux favoris",
+    savedFavourite: "Ajouté aux favoris",
+    copyForInstagram: "Copier le lien / Instagram",
     linkCopied: "Copié !"
   }
 };

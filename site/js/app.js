@@ -1235,7 +1235,7 @@
   }
 
   // ---------- Suggest an event ----------
-  const SUGGEST_EMAIL = "oliver.trako@whiteleopard.com.au";
+  const SUGGEST_EMAIL = "events@korcula-events.com";
 
   function openSuggest() {
     lastFocusedEl = document.activeElement;

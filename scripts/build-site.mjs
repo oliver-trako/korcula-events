@@ -107,9 +107,15 @@ const infoPages = {
     description: "Contact Korčula Island Events to suggest a listing correction, submit a new event, or share a useful event source.",
     h1: "Contact",
     body: `
-      <p>To suggest a new event, correction, poster or useful source, use the “Suggest an event” button on the main calendar.</p>
-      <p>You can also email event details to <a href="mailto:oliver.trako@whiteleopard.com.au">oliver.trako@whiteleopard.com.au</a>.</p>
-      <p>Please include the event name, date, time, venue, town, source link and poster image if available.</p>
+      <p>Use this form to suggest a new event, correct an existing listing, share a poster, or recommend a useful source for Korčula island events.</p>
+      <form class="seo-form" action="mailto:events@korcula-events.com" method="post" enctype="text/plain">
+        <label><span>Your name</span><input name="name" autocomplete="name"></label>
+        <label><span>Your email</span><input name="email" type="email" autocomplete="email"></label>
+        <label><span>Subject</span><input name="subject" required placeholder="Event submission, correction, or source suggestion"></label>
+        <label><span>Message</span><textarea name="message" rows="6" required placeholder="Include event name, date, time, venue, town, source link and poster details if available."></textarea></label>
+        <button type="submit">Send message</button>
+      </form>
+      <p class="seo-small">The form opens your email app and sends to the public site mailbox. A direct server-side form can be added later once the mailbox or form endpoint is configured.</p>
     `
   },
   privacy: {
@@ -124,7 +130,7 @@ const infoPages = {
       <h2>What we do not do</h2>
       <p>We do not run advertising cookies, sell visitor data, or require user accounts.</p>
       <h2>Contact</h2>
-      <p>For privacy questions or corrections, email <a href="mailto:oliver.trako@whiteleopard.com.au">oliver.trako@whiteleopard.com.au</a>.</p>
+      <p>For privacy questions or corrections, use the <a href="/contact/">contact form</a>.</p>
     `
   },
   terms: {
@@ -150,6 +156,22 @@ const infoPages = {
       <p>The site may use Cloudflare Web Analytics to measure aggregate traffic and performance. It is intended to be privacy-friendly and does not use advertising tracking.</p>
       <h2>Advertising cookies</h2>
       <p>We do not currently use advertising cookies or behavioural ad tracking.</p>
+    `
+  },
+  sitemap: {
+    title: "Site Map | Korčula Island Events",
+    description: "A human-readable site map for Korčula Island Events.",
+    h1: "Site Map",
+    body: `
+      <p>Use this page to jump to the main sections of Korčula Island Events.</p>
+      <div class="seo-grid">
+        <div class="seo-card"><strong>Calendar</strong><a href="/">Interactive event calendar</a></div>
+        <div class="seo-card"><strong>Events</strong><a href="/events/">All event pages</a></div>
+        <div class="seo-card"><strong>Places</strong><a href="/places/">Events by town and village</a></div>
+        <div class="seo-card"><strong>Categories</strong><a href="/categories/">Events by category</a></div>
+        <div class="seo-card"><strong>Contact</strong><a href="/contact/">Submit an event or correction</a></div>
+        <div class="seo-card"><strong>Search engines</strong><a href="/sitemap.xml">XML sitemap</a></div>
+      </div>
     `
   }
 };
@@ -540,23 +562,87 @@ function pageShell({ lang = "en", title, description, canonical, body, schema })
 ${alternates}
 <link rel="stylesheet" href="/css/style.css">
 <style>
+.seo-header{max-width:960px;margin:0 auto;padding:20px 16px 0}
+.seo-header-inner{background:#fff;border:1px solid var(--border);border-radius:12px;padding:16px;display:flex;align-items:center;justify-content:space-between;gap:16px;box-shadow:var(--shadow)}
+.seo-brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--sea-deeper)}
+.seo-brand img{width:48px;height:48px;border-radius:10px}
+.seo-brand strong{font-family:var(--font-display);font-size:1.15rem;line-height:1}
+.seo-top-nav{display:flex;gap:12px;flex-wrap:wrap;font-size:.84rem}
+.seo-top-nav a{color:var(--sea-deeper);font-weight:800;text-decoration:none}
+.seo-top-nav a:hover{text-decoration:underline}
 .seo-page{max-width:900px;margin:0 auto;padding:28px 16px 48px}
+.seo-hero{background:#fff;border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:18px;box-shadow:var(--shadow)}
 .seo-page h1{font-family:var(--font-display);color:var(--sea-deep);font-size:clamp(2rem,5vw,3.5rem);line-height:1;margin:0 0 12px}
 .seo-page h2{font-size:1.1rem;color:var(--sea-deep);margin:28px 0 12px}
 .seo-page p{color:var(--ink-soft);line-height:1.6}
+.seo-lede{font-size:1.03rem;max-width:68ch}
 .seo-nav{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0}
 .seo-nav a,.seo-event-list a{color:var(--sea-deeper);font-weight:800;text-decoration:none}
 .seo-nav a:hover,.seo-event-list a:hover{text-decoration:underline}
 .seo-event-list{display:grid;gap:10px;margin:0;padding:0;list-style:none}
 .seo-event-list li{background:#fff;border:1px solid var(--border);border-radius:8px;padding:12px}
 .seo-meta{display:block;color:var(--ink-soft);font-size:.88rem;margin-top:4px}
+.seo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:18px 0}
+.seo-card{background:#fff;border:1px solid var(--border);border-radius:8px;padding:12px}
+.seo-card strong{display:block;color:var(--sea-deep);margin-bottom:4px}
+.seo-form{background:#fff;border:1px solid var(--border);border-radius:12px;padding:16px;display:grid;gap:12px;margin-top:14px;box-shadow:var(--shadow)}
+.seo-form label{display:grid;gap:5px;color:var(--ink);font-size:.86rem;font-weight:800}
+.seo-form input,.seo-form textarea{font:inherit;border:1px solid var(--border);border-radius:8px;padding:10px;background:var(--sand)}
+.seo-form button{justify-self:start;background:var(--sea-deep);color:#fff;border:none;border-radius:8px;padding:11px 15px;font:inherit;font-weight:800;cursor:pointer}
+.seo-small{font-size:.82rem}
+.seo-footer{max-width:960px;margin:0 auto 24px;padding:0 16px}
+@media(max-width:640px){.seo-header-inner{align-items:flex-start;flex-direction:column}.seo-grid{grid-template-columns:1fr}.seo-top-nav{gap:9px}}
 </style>
 ${schemaHtml}
 </head>
 <body>
+<header class="seo-header">
+  <div class="seo-header-inner">
+    <a class="seo-brand" href="/">
+      <img src="/assets/logo-korcula-events.svg" alt="">
+      <strong>Korčula Island Events</strong>
+    </a>
+    <nav class="seo-top-nav" aria-label="Main navigation">
+      <a href="/">Calendar</a>
+      <a href="/events/">Events</a>
+      <a href="/places/">Places</a>
+      <a href="/categories/">Categories</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+  </div>
+</header>
 <main class="seo-page">
 ${body}
 </main>
+<footer class="seo-footer">
+  <div class="footer-shell">
+    <div class="footer-brand">
+      <img class="footer-mark" src="/assets/logo-korcula-events.svg" alt="" aria-hidden="true">
+      <div>
+        <strong>Korčula Island Events</strong>
+        <p class="footer-note">A practical, independent guide to concerts, festivals, folklore, food, sport and nightlife across Korčula island.</p>
+      </div>
+    </div>
+    <div class="footer-columns">
+      <nav class="footer-nav" aria-label="Browse">
+        <strong>Browse</strong>
+        <a href="/events/">All events</a>
+        <a href="/places/">Places</a>
+        <a href="/categories/">Categories</a>
+        <a href="/categories/nightlife/">Nightlife</a>
+      </nav>
+      <nav class="footer-nav" aria-label="Information">
+        <strong>Info</strong>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+        <a href="/privacy/">Privacy</a>
+        <a href="/terms/">Terms</a>
+        <a href="/cookies/">Cookies</a>
+        <a href="/sitemap/">Site map</a>
+      </nav>
+    </div>
+  </div>
+</footer>
 </body>
 </html>`;
 }
@@ -615,9 +701,16 @@ async function buildSeoPages(data) {
 
   for (const [lang, meta] of Object.entries(langMeta)) {
     const body = `
-      <p><a href="/">${esc(meta.openCalendar)}</a></p>
-      <h1>${esc(meta.title)}</h1>
-      <p>${esc(meta.intro)}</p>
+      <section class="seo-hero">
+        <p><a href="/">${esc(meta.openCalendar)}</a></p>
+        <h1>${esc(meta.title)}</h1>
+        <p class="seo-lede">${esc(meta.intro)}</p>
+        <div class="seo-grid">
+          <div class="seo-card"><strong>279 events</strong><span>Concerts, feasts, culture, sports and nightlife.</span></div>
+          <div class="seo-card"><strong>Island wide</strong><span>Korčula Town, villages, Vela Luka, Lumbarda and nearby Orebić.</span></div>
+          <div class="seo-card"><strong>Updated sources</strong><span>Official programmes, posters, venues and community leads.</span></div>
+        </div>
+      </section>
       <nav class="seo-nav">
         <a href="/events/">${esc(meta.allEvents)}</a>
         <a href="/places/">${esc(meta.places)}</a>
@@ -649,9 +742,16 @@ async function buildSeoPages(data) {
     description: "Browse all 2026 Korčula island events by date, including concerts, festivals, folklore, food and wine, kids' activities, sport and nightlife.",
     canonical: `${siteUrl}/events/`,
     body: `
-      <p><a href="/">Open interactive calendar</a></p>
-      <h1>All Korčula Events 2026</h1>
-      <p>Indexable event list for Korčula Town, Lumbarda, Vela Luka, Blato, Smokvica, Račišće, Žrnovo, Čara, Pupnat, Kneže and nearby Orebić.</p>
+      <section class="seo-hero">
+        <p><a href="/">Open interactive calendar</a></p>
+        <h1>All Korčula Events 2026</h1>
+        <p class="seo-lede">Browse the full summer calendar for Korčula island, from Moreška and village feasts to wine nights, children's events, sport, open-air concerts and beach clubs.</p>
+        <div class="seo-grid">
+          <div class="seo-card"><strong>Search intent</strong><span>Built for visitors looking for what is on today, this week and this summer.</span></div>
+          <div class="seo-card"><strong>Local coverage</strong><span>Includes main towns, smaller villages and nearby Orebić/Pelješac by ferry.</span></div>
+          <div class="seo-card"><strong>Source links</strong><span>Events include venue, organiser or tourist-board links where available.</span></div>
+        </div>
+      </section>
       ${eventList(events, towns, "en")}
     `,
     schema: {
@@ -702,12 +802,16 @@ async function buildSeoPages(data) {
       description: description.slice(0, 155),
       canonical: url,
       body: `
-        <p><a href="/events/">All events</a> · <a href="/">Interactive calendar</a></p>
-        <h1>${esc(title)}</h1>
-        <p><strong>Date:</strong> ${esc(event.date)}${event.endDate ? ` to ${esc(event.endDate)}` : ""}${event.time ? ` · ${esc(event.time)}` : ""}</p>
-        <p><strong>Place:</strong> ${esc(town)}${event.venue ? ` · ${esc(event.venue)}` : ""}</p>
-        <p>${esc(description)}</p>
-        <p><strong>Categories:</strong> ${esc((event.cats || []).map((cat) => catLabels[cat] || cat).join(", "))}</p>
+        <section class="seo-hero">
+          <p><a href="/events/">All events</a> · <a href="/">Interactive calendar</a></p>
+          <h1>${esc(title)}</h1>
+          <p class="seo-lede">${esc(description)}</p>
+          <div class="seo-grid">
+            <div class="seo-card"><strong>Date</strong><span>${esc(event.date)}${event.endDate ? ` to ${esc(event.endDate)}` : ""}${event.time ? ` · ${esc(event.time)}` : ""}</span></div>
+            <div class="seo-card"><strong>Place</strong><span>${esc(town)}${event.venue ? ` · ${esc(event.venue)}` : ""}</span></div>
+            <div class="seo-card"><strong>Category</strong><span>${esc((event.cats || []).map((cat) => catLabels[cat] || cat).join(", "))}</span></div>
+          </div>
+        </section>
         ${event.verify ? "<p>Details are marked for verification. Check the linked source before relying on the exact time.</p>" : ""}
         ${sourceLinks.length ? `<h2>More details</h2><ul>${sourceLinks.map(([label, href]) => `<li><a href="${esc(href)}">${esc(label)}</a></li>`).join("")}</ul>` : ""}
       `,
@@ -720,8 +824,11 @@ async function buildSeoPages(data) {
     description: "Browse Korčula island events by town and village, including Korčula Town, Lumbarda, Vela Luka, Blato, Smokvica, Račišće and Orebić.",
     canonical: `${siteUrl}/places/`,
     body: `
-      <p><a href="/">Open interactive calendar</a></p>
-      <h1>Korčula Events by Place</h1>
+      <section class="seo-hero">
+        <p><a href="/">Open interactive calendar</a></p>
+        <h1>Korčula Events by Place</h1>
+        <p class="seo-lede">Find events by town, village and nearby ferry destination. This helps visitors plan around where they are staying and how far they want to travel.</p>
+      </section>
       <ul class="seo-event-list">${towns.map((town) => {
         const count = events.filter((event) => event.town === town.id).length;
         return `<li><a href="${esc(placeUrl(town.id))}">${esc(town.en || town.hr)}</a><span class="seo-meta">${count} events</span></li>`;
@@ -740,9 +847,11 @@ async function buildSeoPages(data) {
       description: `Concerts, festivals, folklore, food and wine, sport and nightlife in ${town.en || town.hr}, Korčula island, in 2026.`,
       canonical: url,
       body: `
-        <p><a href="/places/">All places</a> · <a href="/">Interactive calendar</a></p>
-        <h1>${esc(town.en || town.hr)} Events 2026</h1>
-        <p>Events and summer programmes in ${esc(town.en || town.hr)}.</p>
+        <section class="seo-hero">
+          <p><a href="/places/">All places</a> · <a href="/">Interactive calendar</a></p>
+          <h1>${esc(town.en || town.hr)} Events 2026</h1>
+          <p class="seo-lede">Events and summer programmes in ${esc(town.en || town.hr)}, including cultural evenings, music, food, sport and seasonal village programmes where available.</p>
+        </section>
         ${eventList(townEvents, towns, "en")}
       `
     }));
@@ -753,8 +862,11 @@ async function buildSeoPages(data) {
     description: "Browse Korčula island events by category, including music, folklore, food and wine, kids' events, sport, festivals and nightlife.",
     canonical: `${siteUrl}/categories/`,
     body: `
-      <p><a href="/">Open interactive calendar</a></p>
-      <h1>Korčula Events by Category</h1>
+      <section class="seo-hero">
+        <p><a href="/">Open interactive calendar</a></p>
+        <h1>Korčula Events by Category</h1>
+        <p class="seo-lede">Browse the island calendar by activity type, from music and folklore to family events, sport, nightlife, cinema and food and wine.</p>
+      </section>
       <ul class="seo-event-list">${Object.keys(catLabels).map((cat) => {
         const count = events.filter((event) => (event.cats || []).includes(cat)).length;
         return `<li><a href="${esc(categoryUrl(cat))}">${esc(catLabels[cat])}</a><span class="seo-meta">${count} events</span></li>`;
@@ -773,8 +885,11 @@ async function buildSeoPages(data) {
       description: `Browse ${catLabels[cat].toLowerCase()} events on Korčula island in 2026 by date, town and venue.`,
       canonical: url,
       body: `
-        <p><a href="/categories/">All categories</a> · <a href="/">Interactive calendar</a></p>
-        <h1>Korčula ${esc(catLabels[cat])} Events 2026</h1>
+        <section class="seo-hero">
+          <p><a href="/categories/">All categories</a> · <a href="/">Interactive calendar</a></p>
+          <h1>Korčula ${esc(catLabels[cat])} Events 2026</h1>
+          <p class="seo-lede">A focused list of ${esc(catLabels[cat].toLowerCase())} events across Korčula island, sorted by date and linked back to source details where available.</p>
+        </section>
         ${eventList(catEvents, towns, "en")}
       `
     }));

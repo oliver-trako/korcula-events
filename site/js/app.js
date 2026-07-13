@@ -28,7 +28,8 @@
     calSelectedDate: null,
     events: [],
     towns_meta: [],
-    ferry: null
+    ferry: null,
+    activeEventId: null
   };
 
   const $ = (sel, root) => (root || document).querySelector(sel);
@@ -64,10 +65,11 @@
   fetch("data/events.json")
     .then((r) => r.json())
     .then((data) => {
-      state.events = data.events.slice().sort((a, b) => (a.date + (a.time||"")).localeCompare(b.date + (b.time||"")));
+      state.events = data.events.slice().sort(compareEvents);
       state.towns_meta = data.meta.towns;
       state.ferry = (data.practicalInfo || {}).ferry_korcula_orebic || null;
       state.calMonth = (() => { const d = parseISO(todayISO()); return new Date(d.getFullYear(), d.getMonth(), 1); })();
+      state.calSelectedDate = todayISO();
       init();
     })
     .catch((err) => {
@@ -105,8 +107,6 @@
     $("#filterCategoryLabel").textContent = T.filterCategory;
     $("#filterLocationLabel").textContent = T.filterLocation;
     $("#filterClearLabel").textContent = T.filterClear;
-    $("#ferryInfoTitle").textContent = T.ferryInfoTitle;
-    $("#ferryInfoText").textContent = state.ferry ? state.ferry[state.lang] || state.ferry.en : "";
     $("#footerNote").textContent = T.footerNote;
     $("#footerBuilt").textContent = T.footerBuilt;
     $("#suggestFabLabel").textContent = T.suggestFab;
@@ -278,6 +278,43 @@
     return e.seasonal && e.date <= iso && (!e.endDate || iso <= e.endDate);
   }
 
+  function eventStartMinutes(e) {
+    const time = String(e.time || "").toLowerCase();
+    const m = time.match(/(\d{1,2}):(\d{2})/);
+    if (m) return parseInt(m[1], 10) * 60 + parseInt(m[2], 10);
+    if (time.includes("morning")) return 9 * 60;
+    if (time.includes("afternoon")) return 14 * 60;
+    if (time.includes("evening")) return 19 * 60;
+    if (time.includes("midnight")) return 24 * 60;
+    if (time.includes("varies")) return 23 * 60 + 59;
+    return 24 * 60 + 1;
+  }
+
+  function eventTitle(e) {
+    if (state.lang === "hr") return e.hr || e.en || "";
+    return e[state.lang] || e.en || e.hr || "";
+  }
+
+  function eventSecondaryTitle(e) {
+    const primary = eventTitle(e);
+    if (state.lang === "hr") return e.en && e.en !== primary ? e.en : "";
+    return e.hr && e.hr !== primary ? e.hr : "";
+  }
+
+  function compareEvents(a, b) {
+    return String(a.date || "").localeCompare(String(b.date || "")) ||
+      eventStartMinutes(a) - eventStartMinutes(b) ||
+      String(a.id || "").localeCompare(String(b.id || ""));
+  }
+
+  function sortEvents(list) {
+    return list.slice().sort(compareEvents);
+  }
+
+  function isFerryRelevant(e) {
+    return e.town === "orebic" || e.town === "peljesac";
+  }
+
   // ---------- Rendering dispatcher ----------
   function render() {
     buildFilterChips();
@@ -321,14 +358,14 @@
     const T = t();
     const iso = todayISO();
     const filtered = state.events.filter(matchesFilters);
-    const todayList = filtered.filter((e) => isOngoing(e, iso));
+    const todayList = sortEvents(filtered.filter((e) => isOngoing(e, iso)));
     const tomorrowISO = (() => { const d = parseISO(iso); d.setDate(d.getDate() + 1); return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0"); })();
-    const tomorrowList = filtered.filter((e) => isOngoing(e, tomorrowISO));
-    const weekList = filtered.filter((e) => {
+    const tomorrowList = sortEvents(filtered.filter((e) => isOngoing(e, tomorrowISO)));
+    const weekList = sortEvents(filtered.filter((e) => {
       const db = daysBetween(iso, e.date);
       return db > 1 && db <= 7;
-    });
-    const laterList = filtered.filter((e) => daysBetween(iso, e.date) > 7).slice(0, 40);
+    }));
+    const laterList = sortEvents(filtered.filter((e) => daysBetween(iso, e.date) > 7)).slice(0, 40);
 
     const root = $("#view-today");
     root.innerHTML = "";
@@ -345,7 +382,7 @@
 
   function renderSeason() {
     const T = t();
-    const list = state.events.filter(matchesFilters).filter((e) => e.seasonal).sort((a, b) => a.date.localeCompare(b.date));
+    const list = sortEvents(state.events.filter(matchesFilters).filter((e) => e.seasonal));
     const root = $("#view-season");
     root.innerHTML = "";
     if (!list.length) { root.appendChild(elNote(T.noEventsFiltered)); return; }
@@ -393,7 +430,7 @@
   // ---------- Agenda view (full chronological, grouped by date) ----------
   function renderAgenda() {
     const T = t();
-    const filtered = state.events.filter(matchesFilters).slice().sort((a,b)=> (a.date+(a.time||"")).localeCompare(b.date+(b.time||"")));
+    const filtered = sortEvents(state.events.filter(matchesFilters));
     const root = $("#view-agenda");
     root.innerHTML = "";
     if (!filtered.length) { root.appendChild(elNote(T.noEventsFiltered)); return; }
@@ -438,17 +475,13 @@
     body.className = "event-body";
     const title = document.createElement("p");
     title.className = "event-title";
-    title.textContent = state.lang === "hr" ? e.hr : e.en;
+    title.textContent = eventTitle(e);
     body.appendChild(title);
-    if (state.lang !== "hr" && e.en !== e.hr) {
+    const secondary = eventSecondaryTitle(e);
+    if (secondary) {
       const sub = document.createElement("p");
       sub.className = "event-title-en";
-      sub.textContent = e.hr;
-      body.appendChild(sub);
-    } else if (state.lang === "hr" && e.en !== e.hr) {
-      const sub = document.createElement("p");
-      sub.className = "event-title-en";
-      sub.textContent = e.en;
+      sub.textContent = secondary;
       body.appendChild(sub);
     }
 
@@ -499,7 +532,7 @@
       card.appendChild(thumb);
     }
 
-    const cardLabel = state.lang === "hr" ? e.hr : e.en;
+    const cardLabel = eventTitle(e);
     makeAccessibleClickable(card, () => openModal(e), cardLabel);
     return card;
   }
@@ -533,7 +566,7 @@
     for (let day = 1; day <= daysInMonth; day++) {
       const cellDate = new Date(month.getFullYear(), month.getMonth(), day);
       const cellISO = cellDate.getFullYear() + "-" + String(cellDate.getMonth()+1).padStart(2,"0") + "-" + String(day).padStart(2,"0");
-      const dayEvents = filtered.filter((e) => isOngoing(e, cellISO));
+      const dayEvents = sortEvents(filtered.filter((e) => isOngoing(e, cellISO)));
 
       const cell = document.createElement("div");
       cell.className = "cal-cell" + (cellISO === iso ? " today" : "") + (cellISO === state.calSelectedDate ? " selected" : "");
@@ -556,7 +589,7 @@
     dayWrap.innerHTML = "";
     const hasActiveSearchOrFilter = Boolean(state.query || state.cats.size || state.towns.size);
     if (state.calSelectedDate) {
-      const dayEvents = filtered.filter((e) => isOngoing(e, state.calSelectedDate));
+      const dayEvents = sortEvents(filtered.filter((e) => isOngoing(e, state.calSelectedDate)));
       const h = document.createElement("h2");
       h.style.cssText = "font-size:.95rem;color:var(--sea-deep);margin:0 0 10px;";
       h.textContent = fmtDate(state.calSelectedDate);
@@ -569,7 +602,7 @@
       h.textContent = T.matchingEvents;
       dayWrap.appendChild(h);
       if (!filtered.length) dayWrap.appendChild(elNote(T.noEventsFiltered));
-      filtered.slice(0, 30).forEach((e) => dayWrap.appendChild(eventCard(e, true)));
+      sortEvents(filtered).slice(0, 30).forEach((e) => dayWrap.appendChild(eventCard(e, true)));
     }
   }
 
@@ -623,7 +656,7 @@
   function googleCalUrl(e) {
     const r = eventTimeRange(e);
     const dates = r.allDay ? r.startYMD + "/" + r.endYMD : r.startYMD + "T" + r.startHM + "/" + r.endYMD + "T" + r.endHM;
-    const title = state.lang === "hr" ? e.hr : e.en;
+    const title = eventTitle(e);
     const details = ((e.desc && (e.desc[state.lang] || e.desc.en)) || "") + (e.source ? "\n\n" + e.source : "");
     const location = (e.venue ? e.venue + ", " : "") + townName(e.town) + ", Croatia";
     return "https://calendar.google.com/calendar/render?action=TEMPLATE" +
@@ -635,7 +668,7 @@
 
   function icsDataUrl(e) {
     const r = eventTimeRange(e);
-    const title = state.lang === "hr" ? e.hr : e.en;
+    const title = eventTitle(e);
     const desc = ((e.desc && (e.desc[state.lang] || e.desc.en)) || "").replace(/\n/g, "\\n");
     const location = (e.venue ? e.venue + ", " : "") + townName(e.town) + ", Croatia";
     const dtLines = r.allDay
@@ -681,11 +714,12 @@
     const T = t();
     const modal = $("#eventModal");
     const body = $("#modalBody");
-    const primaryTitle = state.lang === "hr" ? e.hr : e.en;
-    const secondaryTitle = state.lang === "hr" ? e.en : e.hr;
+    state.activeEventId = e.id;
+    const primaryTitle = eventTitle(e);
+    const secondaryTitle = eventSecondaryTitle(e);
     let html = "<div class='modal-body'>";
     html += "<h2>" + primaryTitle + "</h2>";
-    if (secondaryTitle !== primaryTitle) html += "<p class='modal-en'>" + secondaryTitle + "</p>";
+    if (secondaryTitle) html += "<p class='modal-en'>" + secondaryTitle + "</p>";
     html += "<div class='modal-row'><strong>" + T.dateLabel + "</strong> " + fmtDate(e.date) + (e.endDate ? " – " + fmtDate(e.endDate) : "") + (e.time ? " · " + e.time : "") + "</div>";
     html += "<div class='modal-row'><strong>" + T.placeLabel + "</strong> <a class='maps-link' href='" + mapsUrl(e) + "' target='_blank' rel='noopener'>" + townName(e.town) + (e.venue ? ", " + e.venue : "") + " ↗</a></div>";
     html += "<div class='event-cats'>" + e.cats.map((c) => "<span class='cat-pill'>" + (T.catLabels[c]||c) + "</span>").join("") + "</div>";
@@ -694,6 +728,11 @@
       if (d) html += "<p class='modal-desc'>" + d + "</p>";
     }
     if (e.verify) html += "<div class='verify-note'>⚠ " + T.verifyNote + "</div>";
+    if (isFerryRelevant(e) && state.ferry) {
+      const ferryText = state.ferry[state.lang] || state.ferry.en || "";
+      const ferrySource = state.ferry.source || "https://www.jadrolinija.hr/";
+      html += "<div class='ferry-info event-ferry-info'><strong>" + T.ferryInfoTitle + "</strong><p>" + ferryText + "</p><a href='" + ferrySource + "' target='_blank' rel='noopener'>" + (T.ferryScheduleLink || T.sourceLabel) + " ↗</a></div>";
+    }
     html += "</div>";
     body.innerHTML = html;
 
@@ -773,6 +812,7 @@
 
   function closeModal() {
     $("#eventModal").hidden = true;
+    state.activeEventId = null;
     document.body.style.overflow = "";
     if (lastFocusedEl) lastFocusedEl.focus();
     history.replaceState(null, "", location.pathname + location.search);
@@ -792,6 +832,10 @@
       localStorage.setItem("kk_lang", state.lang);
       applyLang();
       render();
+      if (!$("#eventModal").hidden && state.activeEventId) {
+        const active = state.events.find((x) => x.id === state.activeEventId);
+        if (active) openModal(active);
+      }
     });
 
     $$(".view-tab").forEach((btn) => {
@@ -814,12 +858,14 @@
 
     $("#calPrev").addEventListener("click", () => {
       state.calMonth = new Date(state.calMonth.getFullYear(), state.calMonth.getMonth() - 1, 1);
-      state.calSelectedDate = null;
+      const today = parseISO(todayISO());
+      state.calSelectedDate = today.getFullYear() === state.calMonth.getFullYear() && today.getMonth() === state.calMonth.getMonth() ? todayISO() : null;
       renderCalendar();
     });
     $("#calNext").addEventListener("click", () => {
       state.calMonth = new Date(state.calMonth.getFullYear(), state.calMonth.getMonth() + 1, 1);
-      state.calSelectedDate = null;
+      const today = parseISO(todayISO());
+      state.calSelectedDate = today.getFullYear() === state.calMonth.getFullYear() && today.getMonth() === state.calMonth.getMonth() ? todayISO() : null;
       renderCalendar();
     });
 

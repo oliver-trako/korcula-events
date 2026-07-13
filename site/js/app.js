@@ -1219,6 +1219,19 @@
     $("#suggestClose").addEventListener("click", closeSuggest);
     $("#suggestBackdrop").addEventListener("click", closeSuggest);
     $("#suggestForm").addEventListener("submit", onSuggestSubmit);
+
+    if (localStorage.getItem("kk_cookie_ok") !== "1") {
+      const notice = $("#cookieNotice");
+      if (notice) notice.hidden = false;
+    }
+    const cookieAccept = $("#cookieAccept");
+    if (cookieAccept) {
+      cookieAccept.addEventListener("click", () => {
+        localStorage.setItem("kk_cookie_ok", "1");
+        const notice = $("#cookieNotice");
+        if (notice) notice.hidden = true;
+      });
+    }
   }
 
   // ---------- Suggest an event ----------

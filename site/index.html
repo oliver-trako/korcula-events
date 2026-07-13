@@ -234,14 +234,48 @@
 </div>
 
 <footer class="site-footer">
-  <nav class="footer-nav" aria-label="Browse event pages">
-    <a href="/events/">Events</a>
-    <a href="/places/">Places</a>
-    <a href="/categories/">Categories</a>
-  </nav>
-  <p id="footerNote" class="footer-note"></p>
-  <p class="footer-built"><span id="footerBuilt"></span></p>
+  <div class="footer-shell">
+    <div class="footer-brand">
+      <img class="footer-mark" src="assets/logo-korcula-events.svg" alt="" aria-hidden="true">
+      <div>
+        <strong>Korčula Island Events</strong>
+        <p id="footerNote" class="footer-note"></p>
+      </div>
+    </div>
+    <div class="footer-columns">
+      <nav class="footer-nav" aria-label="Browse event pages">
+        <strong>Browse</strong>
+        <a href="/events/">All events</a>
+        <a href="/places/">Places</a>
+        <a href="/categories/">Categories</a>
+        <a href="/categories/nightlife/">Nightlife</a>
+      </nav>
+      <nav class="footer-nav" aria-label="Helpful pages">
+        <strong>Info</strong>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+        <a href="/privacy/">Privacy</a>
+        <a href="/terms/">Terms</a>
+        <a href="/cookies/">Cookies</a>
+      </nav>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span id="footerBuilt"></span>
+    <span>Updated for summer 2026</span>
+  </div>
 </footer>
+
+<div id="cookieNotice" class="cookie-notice" hidden>
+  <div>
+    <strong>Cookies & privacy</strong>
+    <p>This site uses essential browser storage and privacy-friendly analytics to understand visits. No advertising cookies.</p>
+  </div>
+  <div class="cookie-actions">
+    <a href="/cookies/">Learn more</a>
+    <button id="cookieAccept" type="button">Accept all</button>
+  </div>
+</div>
 
 <script src="js/i18n.js"></script>
 <script src="js/app.js"></script>

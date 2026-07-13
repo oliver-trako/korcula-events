@@ -91,6 +91,69 @@ const catLabels = {
   nightlife: "Nightlife"
 };
 
+const infoPages = {
+  about: {
+    title: "About Korčula Island Events",
+    description: "About Korčula Island Events, an independent event calendar for Korčula island and nearby Orebić.",
+    h1: "About Korčula Island Events",
+    body: `
+      <p>Korčula Island Events is an independent calendar for visitors, locals, accommodation hosts and trip planners looking for concerts, festivals, folklore, food and wine, sport, kids' activities and nightlife across Korčula island.</p>
+      <p>The calendar combines official tourist-board programmes, event posters, venue pages and community sources. Events marked for verification should be checked with the linked source before relying on exact details.</p>
+      <p><a href="/">Open the interactive calendar</a> or browse <a href="/events/">all event pages</a>.</p>
+    `
+  },
+  contact: {
+    title: "Contact Korčula Island Events",
+    description: "Contact Korčula Island Events to suggest a listing correction, submit a new event, or share a useful event source.",
+    h1: "Contact",
+    body: `
+      <p>To suggest a new event, correction, poster or useful source, use the “Suggest an event” button on the main calendar.</p>
+      <p>You can also email event details to <a href="mailto:oliver.trako@whiteleopard.com.au">oliver.trako@whiteleopard.com.au</a>.</p>
+      <p>Please include the event name, date, time, venue, town, source link and poster image if available.</p>
+    `
+  },
+  privacy: {
+    title: "Privacy Policy | Korčula Island Events",
+    description: "Privacy policy for Korčula Island Events, including analytics, local storage and event submissions.",
+    h1: "Privacy Policy",
+    body: `
+      <p>Korčula Island Events is designed as a public information website. You can browse the calendar without creating an account.</p>
+      <h2>Information we process</h2>
+      <p>The site may use privacy-friendly analytics provided by Cloudflare Web Analytics to understand aggregate visits and page performance. The language selection and cookie notice preference are stored in your browser using local storage.</p>
+      <p>If you submit an event or contact us by email, the details you provide may be used to review, verify and publish event information.</p>
+      <h2>What we do not do</h2>
+      <p>We do not run advertising cookies, sell visitor data, or require user accounts.</p>
+      <h2>Contact</h2>
+      <p>For privacy questions or corrections, email <a href="mailto:oliver.trako@whiteleopard.com.au">oliver.trako@whiteleopard.com.au</a>.</p>
+    `
+  },
+  terms: {
+    title: "Terms and Conditions | Korčula Island Events",
+    description: "Terms and conditions for using Korčula Island Events.",
+    h1: "Terms and Conditions",
+    body: `
+      <p>Korčula Island Events is provided as a public event guide. We aim to keep listings useful and current, but event dates, times, venues, ticketing and availability can change.</p>
+      <p>Always check the linked source, venue, organiser or tourist-board page before making travel, ticketing or attendance decisions.</p>
+      <p>External links are provided for convenience. We are not responsible for the content, availability or policies of third-party websites.</p>
+      <p>By using the site, you accept that the calendar is informational and provided without guarantees of completeness or accuracy.</p>
+    `
+  },
+  cookies: {
+    title: "Cookie Policy | Korčula Island Events",
+    description: "Cookie and local storage policy for Korčula Island Events.",
+    h1: "Cookie Policy",
+    body: `
+      <p>This site keeps cookies and browser storage minimal.</p>
+      <h2>Essential browser storage</h2>
+      <p>The site stores your selected language and whether you dismissed the cookie notice in your browser. This helps the calendar remember your preferences.</p>
+      <h2>Analytics</h2>
+      <p>The site may use Cloudflare Web Analytics to measure aggregate traffic and performance. It is intended to be privacy-friendly and does not use advertising tracking.</p>
+      <h2>Advertising cookies</h2>
+      <p>We do not currently use advertising cookies or behavioural ad tracking.</p>
+    `
+  }
+};
+
 const eventTranslationRules = {
   de: [
     ["\"Kids, Let's Play!\" — Croatian Red Cross children's day camp", "\"Kinder, lasst uns spielen!\" — Tagescamp des Kroatischen Roten Kreuzes"],
@@ -599,6 +662,27 @@ async function buildSeoPages(data) {
     }
   }));
   urls.add(`${siteUrl}/events/`);
+
+  for (const [slug, page] of Object.entries(infoPages)) {
+    const url = `${siteUrl}/${slug}/`;
+    urls.add(url);
+    await writePage(path.join(dist, slug, "index.html"), pageShell({
+      title: page.title,
+      description: page.description,
+      canonical: url,
+      body: `
+        <p><a href="/">Open interactive calendar</a></p>
+        <h1>${esc(page.h1)}</h1>
+        ${page.body}
+      `,
+      schema: {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: page.h1,
+        url
+      }
+    }));
+  }
 
   for (const event of events) {
     const url = eventUrl(event);

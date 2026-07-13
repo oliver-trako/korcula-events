@@ -622,6 +622,130 @@ function isoDateTime(event, end = false) {
   return `${date}T${match[1].padStart(2, "0")}:${match[2]}:00+02:00`;
 }
 
+const flyerBase = "/2026 Events/";
+const flyers = {
+  hkdNapredak: "711533429_10238862739681621_7132440665447619987_n.jpg",
+  brunoRacki: "726622978_1324662396311754_1196331273202483318_n.jpg",
+  fermata: "729089446_1330560095917082_5424991246713228614_n.jpg",
+  malaVelaLukaSah: "733810265_1004139169178619_7406030034854469969_n.jpg",
+  sinisaVuco: "739965778_3184088421782240_727211797039421734_n.jpg",
+  praviPrijatelj: "741439623_1623547135830221_2514987522212171195_n.jpg",
+  ekoKlik: "726427451_1622113932189830_4644658454319049907_n.jfif",
+  blatskoLjeto: "728951558_2842843536074422_8664357824117296469_n.jfif",
+  kulturnoAvgust1: "729080791_2365533420921531_4732103117572546297_n.jfif",
+  kulturnoSrpanj1: "729089537_2052799258997320_7966040970482679038_n.jfif",
+  kulturnoAvgust2: "729953708_1801545614355331_6875222987793021677_n.jfif",
+  kulturnoSrpanj2: "730584727_2758199641242412_4857147205496412772_n.jfif",
+  nogometNaPlazi: "731808257_2355501548310712_7501183823000969035_n.jfif",
+  hakunaMatata: "741209865_1350510197149943_3713384124144151341_n.jfif",
+  lumbarajskeUzance: "WhatsApp Image 2026-07-08 at 22.58.52.jpeg",
+  smokviskoLito: "WhatsApp Image 2026-07-08 at 23.01.19.jpeg",
+  litoUPostrani: "WhatsApp Image 2026-07-08 at 23.01.33.jpeg",
+  dicoHomo: "WhatsApp Image 2026-07-08 at 23.01.40.jpeg",
+  luskoLito: "WhatsApp Image 2026-07-08 at 23.01.50.jpeg",
+  litoURaciscu: "lito-u-raciscu.jpeg"
+};
+const noFlyerIds = new Set(["kt-brodogradnja","kt-kulkviz","kt-moreska-season","kt-svtodor","kt-swordfest","kt-korkyra-baroque","kt-markopolo-gala","kt-winefest"]);
+
+function flyerUrl(name) {
+  return flyerBase + encodeURIComponent(name).replace(/%2F/g, "/");
+}
+
+function getFlyer(event) {
+  const id = event.id;
+  if (id.startsWith("kt-fermata")) return flyerUrl(flyers.fermata);
+  if (id.startsWith("kt-") && !noFlyerIds.has(id)) {
+    const month = event.date.slice(5, 7);
+    const day = parseInt(event.date.slice(8, 10), 10);
+    if (month === "07") return flyerUrl(day <= 14 ? flyers.kulturnoSrpanj1 : flyers.kulturnoSrpanj2);
+    if (month === "08") return flyerUrl(day <= 12 ? flyers.kulturnoAvgust1 : flyers.kulturnoAvgust2);
+    return null;
+  }
+  if (id === "lb-lutke-ekoklik") return flyerUrl(flyers.ekoKlik);
+  if (id === "lb-lutke-prijatelj" || id === "lb-lutke-0820") return flyerUrl(flyers.praviPrijatelj);
+  if (id === "lb-nogomet") return flyerUrl(flyers.nogometNaPlazi);
+  if (id === "lb-hakuna") return flyerUrl(flyers.hakunaMatata);
+  if (id.startsWith("lb-")) return flyerUrl(flyers.lumbarajskeUzance);
+  if (id === "vl-napredak") return flyerUrl(flyers.hkdNapredak);
+  if (id === "vl-racki") return flyerUrl(flyers.brunoRacki);
+  if (id === "vl-chess-mala") return flyerUrl(flyers.malaVelaLukaSah);
+  if (id.startsWith("vl-")) return flyerUrl(flyers.luskoLito);
+  if (id.startsWith("blato-")) return flyerUrl(flyers.blatskoLjeto);
+  if (id.startsWith("smk-")) return flyerUrl(flyers.smokviskoLito);
+  if (id.startsWith("pst-")) return flyerUrl(flyers.litoUPostrani);
+  if (id.startsWith("racisce-")) return flyerUrl(flyers.litoURaciscu);
+  if (id === "cara-vuco") return flyerUrl(flyers.sinisaVuco);
+  if (id.startsWith("rc-")) return flyerUrl(flyers.dicoHomo);
+  return null;
+}
+
+function eventTimeRange(event) {
+  const startYMD = event.date.replaceAll("-", "");
+  const endDate = event.endDate || event.date;
+  const explicit = String(event.time || "").match(/^(\d{1,2}):(\d{2})/);
+  if (!explicit) {
+    const end = new Date(`${endDate}T00:00:00Z`);
+    end.setUTCDate(end.getUTCDate() + 1);
+    return { allDay: true, startYMD, endYMD: end.toISOString().slice(0, 10).replaceAll("-", "") };
+  }
+  const hour = parseInt(explicit[1], 10);
+  const minute = parseInt(explicit[2], 10);
+  const h = String(hour).padStart(2, "0");
+  const m = String(minute).padStart(2, "0");
+  const start = `${startYMD}T${h}${m}00`;
+  const endMinutes = hour * 60 + minute + 120;
+  const endDayOffset = Math.floor(endMinutes / 1440);
+  const endClockMinutes = endMinutes % 1440;
+  const end = new Date(`${event.date}T00:00:00Z`);
+  end.setUTCDate(end.getUTCDate() + endDayOffset);
+  const endYMD = end.toISOString().slice(0, 10).replaceAll("-", "");
+  const endH = String(Math.floor(endClockMinutes / 60)).padStart(2, "0");
+  const endM = String(endClockMinutes % 60).padStart(2, "0");
+  return { allDay: false, start, end: `${endYMD}T${endH}${endM}00` };
+}
+
+function mapsUrl(event, towns) {
+  const q = [event.venue, townName(towns, event.town, "en"), "Croatia"].filter(Boolean).join(", ");
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}`;
+}
+
+function googleCalendarUrl(event, towns) {
+  const range = eventTimeRange(event);
+  const dates = range.allDay ? `${range.startYMD}/${range.endYMD}` : `${range.start}/${range.end}`;
+  const title = titleFor(event, "en");
+  const details = [descFor(event, "en"), event.source || event.website || event.ticketUrl].filter(Boolean).join("\n\n");
+  const location = [event.venue, townName(towns, event.town, "en"), "Croatia"].filter(Boolean).join(", ");
+  return "https://calendar.google.com/calendar/render?action=TEMPLATE" +
+    `&text=${encodeURIComponent(title)}` +
+    `&dates=${encodeURIComponent(dates)}` +
+    `&details=${encodeURIComponent(details)}` +
+    `&location=${encodeURIComponent(location)}`;
+}
+
+function icsDataUrl(event, towns) {
+  const range = eventTimeRange(event);
+  const title = titleFor(event, "en").replaceAll("\n", " ");
+  const description = [descFor(event, "en"), event.source || event.website || event.ticketUrl].filter(Boolean).join("\\n\\n").replaceAll("\n", "\\n");
+  const location = [event.venue, townName(towns, event.town, "en"), "Croatia"].filter(Boolean).join(", ").replaceAll("\n", " ");
+  const dateLines = range.allDay
+    ? `DTSTART;VALUE=DATE:${range.startYMD}\r\nDTEND;VALUE=DATE:${range.endYMD}`
+    : `DTSTART:${range.start}\r\nDTEND:${range.end}`;
+  const ics = [
+    "BEGIN:VCALENDAR",
+    "VERSION:2.0",
+    "PRODID:-//Korcula Events//EN",
+    "BEGIN:VEVENT",
+    `UID:${event.id}@korcula-events.com`,
+    dateLines,
+    `SUMMARY:${title}`,
+    `DESCRIPTION:${description}`,
+    `LOCATION:${location}`,
+    "END:VEVENT",
+    "END:VCALENDAR"
+  ].join("\r\n");
+  return `data:text/calendar;charset=utf8,${encodeURIComponent(ics)}`;
+}
+
 function pageShell({ lang = "en", title, description, canonical, body, schema }) {
   const alternates = Object.keys(langMeta)
     .map((code) => `<link rel="alternate" hreflang="${code}" href="${siteUrl}/${code}/">`)
@@ -672,12 +796,20 @@ ${alternates}
 .seo-detail-list dd{margin:0;color:var(--ink)}
 .seo-pill-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
 .seo-pill{background:var(--sand);border:1px solid var(--border);border-radius:999px;padding:6px 10px;color:var(--sea-deep);font-weight:800;font-size:.78rem}
+.seo-event-layout{display:grid;grid-template-columns:minmax(0,1fr) 220px;gap:18px;align-items:start}
+.seo-poster{background:#fff;border:1px solid var(--border);border-radius:12px;padding:10px;box-shadow:var(--shadow)}
+.seo-poster img{display:block;width:100%;border-radius:8px;object-fit:cover}
+.seo-action-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.seo-action{display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--border);border-radius:8px;padding:9px 11px;color:var(--sea-deeper);background:#fff;font-weight:800;text-decoration:none;font-size:.82rem}
+.seo-action.primary{background:var(--sea-deep);border-color:var(--sea-deep);color:#fff}
+.seo-action:hover{text-decoration:underline}
 .seo-form{background:#fff;border:1px solid var(--border);border-radius:12px;padding:16px;display:grid;gap:12px;margin-top:14px;box-shadow:var(--shadow)}
 .seo-form label{display:grid;gap:5px;color:var(--ink);font-size:.86rem;font-weight:800}
 .seo-form input,.seo-form textarea{font:inherit;border:1px solid var(--border);border-radius:8px;padding:10px;background:var(--sand)}
 .seo-form button{justify-self:start;background:var(--sea-deep);color:#fff;border:none;border-radius:8px;padding:11px 15px;font:inherit;font-weight:800;cursor:pointer}
 .seo-small{font-size:.82rem}
 .seo-footer{max-width:960px;margin:0 auto 24px;padding:0 16px}
+@media(max-width:760px){.seo-event-layout{grid-template-columns:1fr}}
 @media(max-width:640px){.seo-header-inner{align-items:flex-start;flex-direction:column}.seo-grid,.seo-two-col{grid-template-columns:1fr}.seo-top-nav{gap:9px}.seo-detail-list div{grid-template-columns:1fr}}
 </style>
 ${schemaHtml}
@@ -969,6 +1101,10 @@ async function buildSeoPages(data) {
     ].filter(([, href]) => href);
     const relatedByTown = events.filter((item) => item.id !== event.id && item.town === event.town).slice(0, 6);
     const relatedByCategory = events.filter((item) => item.id !== event.id && (item.cats || []).some((cat) => (event.cats || []).includes(cat))).slice(0, 6);
+    const flyer = getFlyer(event);
+    const mapHref = mapsUrl(event, towns);
+    const gcalHref = googleCalendarUrl(event, towns);
+    const icsHref = icsDataUrl(event, towns);
     const pills = [
       ...((event.cats || []).map((cat) => `<a class="seo-pill" href="${esc(categoryUrl(cat))}">${esc(catLabels[cat] || cat)}</a>`)),
       `<a class="seo-pill" href="${esc(placeUrl(event.town))}">${esc(town)}</a>`
@@ -980,12 +1116,22 @@ async function buildSeoPages(data) {
       body: `
         <section class="seo-hero">
           <p><a href="/events/">All events</a> · <a href="/">Interactive calendar</a></p>
-          <h1>${esc(title)}</h1>
-          <p class="seo-lede">${esc(description)}</p>
-          <div class="seo-grid">
-            <div class="seo-card"><strong>Date</strong><span>${esc(event.date)}${event.endDate ? ` to ${esc(event.endDate)}` : ""}${event.time ? ` · ${esc(event.time)}` : ""}</span></div>
-            <div class="seo-card"><strong>Place</strong><span>${esc(town)}${event.venue ? ` · ${esc(event.venue)}` : ""}</span></div>
-            <div class="seo-card"><strong>Category</strong><span>${esc((event.cats || []).map((cat) => catLabels[cat] || cat).join(", "))}</span></div>
+          <div class="seo-event-layout">
+            <div>
+              <h1>${esc(title)}</h1>
+              <p class="seo-lede">${esc(description)}</p>
+              <div class="seo-grid">
+                <div class="seo-card"><strong>Date</strong><span>${esc(event.date)}${event.endDate ? ` to ${esc(event.endDate)}` : ""}${event.time ? ` · ${esc(event.time)}` : ""}</span></div>
+                <div class="seo-card"><strong>Place</strong><span>${esc(town)}${event.venue ? ` · ${esc(event.venue)}` : ""}</span></div>
+                <div class="seo-card"><strong>Category</strong><span>${esc((event.cats || []).map((cat) => catLabels[cat] || cat).join(", "))}</span></div>
+              </div>
+              <div class="seo-action-row">
+                <a class="seo-action primary" href="${esc(gcalHref)}" target="_blank" rel="noopener">Android / Google Calendar</a>
+                <a class="seo-action" href="${esc(icsHref)}" download="${esc(event.id)}.ics">iPhone / Apple Calendar (.ics)</a>
+                <a class="seo-action" href="${esc(mapHref)}" target="_blank" rel="noopener">Open in Google Maps</a>
+              </div>
+            </div>
+            ${flyer ? `<aside class="seo-poster"><a href="${esc(flyer)}"><img src="${esc(flyer)}" alt="${esc(title)} event poster"></a></aside>` : ""}
           </div>
           <div class="seo-pill-row">${pills}</div>
         </section>

@@ -61,6 +61,39 @@ jobs:
           $socialReport = Get-Content -Raw site/data/social-source-report.json | ConvertFrom-Json
           $posterReport = Get-Content -Raw site/data/poster-ocr-report.json | ConvertFrom-Json
           $candidates = @($pending.candidates)
+          function Get-CandidateTitle($candidate) {
+            if ($candidate.event) {
+              return [string](@($candidate.event.en, $candidate.event.hr, $candidate.event.id) | Where-Object { $_ } | Select-Object -First 1)
+            }
+            return [string](@($candidate.sourceName, $candidate.id) | Where-Object { $_ } | Select-Object -First 1)
+          }
+          function Get-CandidateWhen($candidate) {
+            if (-not $candidate.event) { return "" }
+            $parts = @($candidate.event.date)
+            if ($candidate.event.endDate) { $parts += "to $($candidate.event.endDate)" }
+            $parts += $candidate.event.time
+            return [string](($parts | Where-Object { $_ }) -join " ")
+          }
+          function Format-CandidateList($items, [int]$limit = 25) {
+            $rows = @($items | Select-Object -First $limit | ForEach-Object {
+              $title = (Get-CandidateTitle $_) -replace '\|', '/'
+              $when = (Get-CandidateWhen $_) -replace '\|', '/'
+              $place = [string]((@($_.event.town, $_.event.venue) | Where-Object { $_ }) -join " / ")
+              $place = $place -replace '\|', '/'
+              $source = [string](@($_.sourceName, $_.sourceId) | Where-Object { $_ } | Select-Object -First 1)
+              $source = $source -replace '\|', '/'
+              $match = ""
+              if ($_.duplicateMatches -and @($_.duplicateMatches).Count -gt 0) {
+                $best = @($_.duplicateMatches)[0]
+                $match = "$($best.eventId) ($($best.score))" -replace '\|', '/'
+              }
+              "| $title | $when | $place | $source | $match |"
+            })
+            if ($rows.Count -eq 0) { return "_None._" }
+            $header = "| Event | When | Place | Source | Duplicate match |`n|---|---|---|---|---|"
+            $more = if (@($items).Count -gt $limit) { "`n`n_And $(@($items).Count - $limit) more._" } else { "" }
+            return $header + "`n" + ($rows -join "`n") + $more
+          }
           $needsReview = @($candidates | Where-Object { $_.status -in @("new","needs-review") }).Count
           $autoApproved = @($candidates | Where-Object { $_.reviewMode -eq "auto-approved" }).Count
           $autoRejected = @($candidates | Where-Object { $_.reviewMode -eq "auto-rejected" }).Count
@@ -70,6 +103,10 @@ jobs:
           $sourceErrors = @($sourceReport.rows | Where-Object { $_.status -eq "error" }).Count
           $socialLeads = @($socialReport.rows).Count
           $posterCandidates = @($posterReport.results | Where-Object { $_.candidateId }).Count
+          $approvedList = Format-CandidateList -items @($candidates | Where-Object { $_.reviewMode -eq "auto-approved" })
+          $duplicateList = Format-CandidateList -items @($candidates | Where-Object { $_.reviewMode -eq "auto-duplicate" })
+          $rejectedList = Format-CandidateList -items @($candidates | Where-Object { $_.reviewMode -eq "auto-rejected" })
+          $reviewList = Format-CandidateList -items @($candidates | Where-Object { $_.status -in @("new","needs-review") })
           $body = @"
           Automated event ingestion run.
 
@@ -97,6 +134,22 @@ jobs:
           Auto-approved structured candidates may have been merged into events.json.
           Low-confidence social, OCR, duplicate-risk, and search candidates remain in pending-events.json for review.
           Social pages/groups are listed in social-source-report.json for manual review unless API access is configured.
+
+          ## Auto-approved / imported
+
+          $approvedList
+
+          ## Auto-marked duplicates
+
+          $duplicateList
+
+          ## Auto-rejected stale events
+
+          $rejectedList
+
+          ## Needs human review
+
+          $reviewList
           "@
           $body | Set-Content -Path "$env:RUNNER_TEMP/pr-body.md" -Encoding UTF8
           "needs_review=$needsReview" >> $env:GITHUB_OUTPUT

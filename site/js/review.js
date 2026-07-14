@@ -5,6 +5,7 @@
     sourceReport: { counts: {}, rows: [] },
     socialReport: { counts: {}, rows: [] },
     posterReport: { counts: {}, results: [] },
+    loadErrors: [],
     panel: "candidates",
     ref: new URLSearchParams(window.location.search).get("ref") || ""
   };
@@ -14,17 +15,17 @@
   function dataUrl(path) {
     if (!state.ref) return path;
     const params = new URLSearchParams({ ref: state.ref });
-    return `https://api.github.com/repos/oliver-trako/korcula-events/contents/site/${path}?${params.toString()}`;
+    return `review-data/${path}?${params.toString()}`;
   }
 
   async function loadJson(path, fallback) {
     try {
-      const headers = state.ref ? { Accept: "application/vnd.github.raw" } : {};
-      const res = await fetch(dataUrl(path), { cache: "no-store", headers });
+      const res = await fetch(dataUrl(path), { cache: "no-store" });
       if (!res.ok) throw new Error(res.status + " " + res.statusText);
       return await res.json();
     } catch (err) {
       console.warn("Could not load", path, err);
+      state.loadErrors.push(`${path}: ${err.message || err}`);
       return fallback;
     }
   }
@@ -187,11 +188,28 @@
 
   function render() {
     renderRefNotice();
+    renderLoadErrors();
     statusCounts();
     renderCandidates();
     renderPosters();
     renderSocial();
     renderSources();
+  }
+
+  function renderLoadErrors() {
+    let alert = $(".review-load-errors");
+    if (!alert) {
+      alert = document.createElement("section");
+      alert.className = "review-load-errors";
+      document.querySelector(".review-shell").prepend(alert);
+    }
+    if (!state.loadErrors.length) {
+      alert.hidden = true;
+      alert.innerHTML = "";
+      return;
+    }
+    alert.hidden = false;
+    alert.innerHTML = `<strong>Some review data could not be loaded.</strong><ul>${state.loadErrors.map((err) => `<li>${escapeHtml(err)}</li>`).join("")}</ul>`;
   }
 
   function renderRefNotice() {

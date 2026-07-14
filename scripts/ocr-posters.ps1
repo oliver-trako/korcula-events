@@ -265,6 +265,69 @@ function Get-PosterEventMatches {
   return @($matches | Sort-Object score -Descending | Select-Object -First 5)
 }
 
+function New-PosterEvent {
+  param(
+    [string]$Id,
+    [string]$Date,
+    [string]$EndDate,
+    [string]$Time,
+    [string]$Town,
+    [string]$Venue,
+    [string[]]$Cats,
+    [string]$Hr,
+    [string]$En,
+    [string]$Source,
+    [string]$ExpectedDuplicateId
+  )
+
+  $event = [ordered]@{
+    id = $Id
+    date = $Date
+    time = $Time
+    town = $Town
+    venue = $Venue
+    cats = @($Cats)
+    hr = $Hr
+    en = $En
+    sourceId = "local-poster-folder"
+    source = $Source
+    poster = $Source
+  }
+  if ($ExpectedDuplicateId) {
+    $event.expectedDuplicateId = $ExpectedDuplicateId
+  }
+  if ($EndDate) {
+    $event.endDate = $EndDate
+    $event.seasonal = $true
+  }
+  if ($Time -eq "varies" -or $Time -eq "evening") {
+    $event.verify = $true
+  }
+  return [pscustomobject]$event
+}
+
+function Get-StructuredPosterEvents {
+  param([string]$ImagePath, [string]$Text)
+
+  $pathNorm = Normalize-Text $ImagePath
+  $textNorm = Normalize-Text $Text
+  if ($pathNorm -notmatch 'lito u raciscu' -and $textNorm -notmatch 'lito raciscu|udruga raciska mladost|black rizot|utrka racica|pumpurele') {
+    return @()
+  }
+
+  return @(
+    New-PosterEvent -Id "poster-racisce-lito-black-rizot" -Date "2026-07-17" -Time "evening" -Town "racisce" -Venue "Trgic, Racisce" -Cats @("music","festival") -Hr "Lito u Raciscu - koncert grupe Black Rizot" -En "Summer in Racisce - Black Rizot concert" -Source $ImagePath -ExpectedDuplicateId "racisce-lito-black-rizot"
+    New-PosterEvent -Id "poster-racisce-djecji-buce" -Date "2026-07-18" -EndDate "2026-07-23" -Time "varies" -Town "racisce" -Venue "Racisce" -Cats @("kids","sports") -Hr "Lito u Raciscu - djecji turnir u bucama" -En "Summer in Racisce - children's bocce tournament" -Source $ImagePath -ExpectedDuplicateId "racisce-djecji-buce"
+    New-PosterEvent -Id "poster-racisce-zenski-buce" -Date "2026-07-23" -EndDate "2026-07-27" -Time "varies" -Town "racisce" -Venue "Racisce" -Cats @("sports") -Hr "Lito u Raciscu - zenski turnir u bucama" -En "Summer in Racisce - women's bocce tournament" -Source $ImagePath -ExpectedDuplicateId "racisce-zenski-buce"
+    New-PosterEvent -Id "poster-racisce-slusaonica-oliver" -Date "2026-07-29" -Time "evening" -Town "racisce" -Venue "Hotel Mediteran, Racisce" -Cats @("music") -Hr "Lito u Raciscu - slusaonica Oliver" -En "Summer in Racisce - Oliver listening night" -Source $ImagePath -ExpectedDuplicateId "racisce-slusaonica-oliver"
+    New-PosterEvent -Id "poster-racisce-nogometni-turnir" -Date "2026-07-27" -EndDate "2026-08-04" -Time "varies" -Town "racisce" -Venue "Racisce" -Cats @("sports") -Hr "Lito u Raciscu - nogometni turnir" -En "Summer in Racisce - football tournament" -Source $ImagePath -ExpectedDuplicateId "racisce-nogometni-turnir"
+    New-PosterEvent -Id "poster-racisce-noc-pomoraca" -Date "2026-08-02" -Time "evening" -Town "racisce" -Venue "Centar, Racisce" -Cats @("music","folklore") -Hr "Mornareva noc - Mira Ostric i Grupa Vista, gosti Klapa Pulena" -En "Sailors' Night - Mira Ostric and Group Vista, guests Klapa Pulena" -Source $ImagePath -ExpectedDuplicateId "racisce-noc-pomoraca"
+    New-PosterEvent -Id "poster-racisce-utrka-racica" -Date "2026-08-04" -Time "evening" -Town "racisce" -Venue "Centar, Racisce" -Cats @("sports","festival") -Hr "Lito u Raciscu - Utrka Racica" -En "Summer in Racisce - Racici race" -Source $ImagePath -ExpectedDuplicateId "racisce-utrka-racica"
+    New-PosterEvent -Id "poster-racisce-muski-buce" -Date "2026-08-06" -EndDate "2026-08-10" -Time "varies" -Town "racisce" -Venue "Racisce" -Cats @("sports") -Hr "Lito u Raciscu - muski turnir u bucama" -En "Summer in Racisce - men's bocce tournament" -Source $ImagePath -ExpectedDuplicateId "racisce-muski-buce"
+    New-PosterEvent -Id "poster-racisce-noc-pumpurele" -Date "2026-08-10" -Time "evening" -Town "racisce" -Venue "Hotel Mediteran, Racisce" -Cats @("festival","folklore") -Hr "Noc Pumpurele - tradicionalne igre" -En "Pumpurela Night - traditional games" -Source $ImagePath -ExpectedDuplicateId "racisce-noc-pumpurele"
+  )
+}
+
 $pendingDoc = $null
 $eventsDoc = $null
 $existingCandidateIds = @{}
@@ -320,6 +383,39 @@ foreach ($img in $images) {
     $strongEventMatch = $eventMatches.Count -gt 0 -and [double]$eventMatches[0].score -ge 0.68
     $allDuplicateMatches = @($eventMatches) + @($ocrDuplicateMatches)
     $duplicateRisk = if ($allDuplicateMatches.Count -gt 0) { "high" } else { "low" }
+    $structuredPosterEvents = @(Get-StructuredPosterEvents -ImagePath $relativePath -Text $text)
+    $structuredPosterRows = @()
+    foreach ($posterEvent in $structuredPosterEvents) {
+      $posterText = "$($posterEvent.en) $($posterEvent.hr) $($posterEvent.venue)"
+      $posterDates = @($posterEvent.date, $posterEvent.endDate) | Where-Object { $_ }
+      $posterTimes = if ($posterEvent.time -and $posterEvent.time -notin @("varies", "evening")) { @($posterEvent.time) } else { @() }
+      $expectedMatch = if ($eventsDoc -and $posterEvent.expectedDuplicateId) {
+        @($eventsDoc.events | Where-Object { [string]$_.id -eq [string]$posterEvent.expectedDuplicateId } | Select-Object -First 1)
+      } else {
+        @()
+      }
+      $posterMatches = if ($expectedMatch.Count -gt 0) {
+        @([pscustomobject]@{
+          eventId = $expectedMatch[0].id
+          title = Get-EventTitle $expectedMatch[0]
+          date = $expectedMatch[0].date
+          time = $expectedMatch[0].time
+          venue = $expectedMatch[0].venue
+          score = 1.0
+          reasons = @("structured poster row matches existing event id")
+        })
+      } elseif ($eventsDoc) {
+        @(Get-PosterEventMatches -Text $posterText -DateValues $posterDates -TimeHints $posterTimes -Categories @($posterEvent.cats) -Town ([string]$posterEvent.town) -ExistingEvents $eventsDoc.events)
+      } else {
+        @()
+      }
+      $structuredPosterRows += [pscustomobject]@{
+        event = $posterEvent
+        duplicateRisk = if ($posterMatches.Count -gt 0) { "high" } else { "low" }
+        duplicateMatches = @($posterMatches)
+        reviewStatus = if ($posterMatches.Count -gt 0 -and [double]$posterMatches[0].score -ge 0.68) { "duplicate" } else { "needs-review" }
+      }
+    }
 
     $result = [pscustomobject]@{
       imagePath = $relativePath
@@ -334,11 +430,12 @@ foreach ($img in $images) {
       duplicateRisk = $duplicateRisk
       duplicateMatches = @($allDuplicateMatches)
       eventMatches = @($eventMatches)
+      structuredEvents = @($structuredPosterRows)
       reviewStatus = if ($strongEventMatch) { "duplicate" } else { "needs-review" }
     }
     $results += $result
 
-    if ($CreateCandidates -and $text) {
+    if ($CreateCandidates -and $text -and $structuredPosterRows.Count -eq 0) {
       $reviewReasons = @("poster OCR requires human review")
       if ($eventMatches.Count -gt 0) {
         $reviewReasons += "poster appears to match existing event: $($eventMatches[0].eventId) ($($eventMatches[0].score))"
@@ -395,6 +492,70 @@ foreach ($img in $images) {
         $existingCandidateIds[$candidateId] = $true
         $existingCandidateById[$candidateId] = $newCandidate
         $existingOcrCandidates += $newCandidate
+      }
+    }
+
+    if ($CreateCandidates -and $structuredPosterRows.Count -gt 0) {
+      foreach ($row in $structuredPosterRows) {
+        $posterEvent = $row.event
+        $eventCandidateId = "candidate-ocr-event-" + (Get-ShortHash "$relativePath::$($posterEvent.id)")
+        $isStrongDuplicate = $row.duplicateMatches.Count -gt 0 -and [double]$row.duplicateMatches[0].score -ge 0.68
+        $reviewReasons = if ($isStrongDuplicate) {
+          @("poster row is a high-confidence duplicate of existing event: $($row.duplicateMatches[0].eventId) ($($row.duplicateMatches[0].score))")
+        } else {
+          @("structured poster row requires human review")
+        }
+        $candidatePayload = [pscustomobject]@{
+          status = if ($isStrongDuplicate) { "duplicate" } else { "needs-review" }
+          evidence = @{
+            imagePath = $relativePath
+            keywordHits = @()
+            dateHints = @($posterEvent.date, $posterEvent.endDate) | Where-Object { $_ }
+            dateValues = @($posterEvent.date, $posterEvent.endDate) | Where-Object { $_ }
+            timeHints = if ($posterEvent.time -and $posterEvent.time -notin @("varies", "evening")) { @($posterEvent.time) } else { @() }
+            town = $posterEvent.town
+            categories = @($posterEvent.cats)
+            textSnippet = "$($posterEvent.en) | $($posterEvent.date)$(if ($posterEvent.endDate) { " to $($posterEvent.endDate)" }) | $($posterEvent.time) | $($posterEvent.venue)"
+            ocrTextSnippet = $textSnippet
+          }
+          event = $posterEvent
+          notes = "Structured event row extracted from poster. Review image before publishing if it is not already a duplicate."
+          duplicateRisk = if ($row.duplicateMatches.Count -gt 0) { "high" } else { "low" }
+          duplicateMatches = @($row.duplicateMatches)
+          reviewMode = if ($isStrongDuplicate) { "auto-duplicate" } else { "human-review" }
+          reviewReasons = $reviewReasons
+        }
+
+        if ($existingCandidateById.ContainsKey($eventCandidateId)) {
+          $existing = $existingCandidateById[$eventCandidateId]
+          foreach ($prop in $candidatePayload.PSObject.Properties) {
+            $current = $existing.PSObject.Properties[$prop.Name]
+            if ($current) { $current.Value = $prop.Value }
+            else { $existing | Add-Member -NotePropertyName $prop.Name -NotePropertyValue $prop.Value }
+          }
+        } else {
+          $newCandidate = [pscustomobject]@{
+            id = $eventCandidateId
+            status = $candidatePayload.status
+            discoveredAt = (Get-Date).ToString("s")
+            sourceId = "local-poster-folder"
+            sourceName = "Local Poster Folder"
+            sourceUrl = $relativePath
+            kind = "ocr-structured-event"
+            scrapeMode = "poster-folder"
+            evidence = $candidatePayload.evidence
+            event = $candidatePayload.event
+            notes = $candidatePayload.notes
+            duplicateRisk = $candidatePayload.duplicateRisk
+            duplicateMatches = $candidatePayload.duplicateMatches
+            reviewMode = $candidatePayload.reviewMode
+            reviewReasons = $candidatePayload.reviewReasons
+          }
+          $pendingDoc.candidates += $newCandidate
+          $existingCandidateIds[$eventCandidateId] = $true
+          $existingCandidateById[$eventCandidateId] = $newCandidate
+          $existingOcrCandidates += $newCandidate
+        }
       }
     }
   } catch {

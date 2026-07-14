@@ -94,6 +94,26 @@ jobs:
             $more = if (@($items).Count -gt $limit) { "`n`n_And $(@($items).Count - $limit) more._" } else { "" }
             return $header + "`n" + ($rows -join "`n") + $more
           }
+          function Format-PosterMatchList($items, [int]$limit = 25) {
+            $rows = @($items | Select-Object -First $limit | ForEach-Object {
+              $match = @($_.eventMatches + $_.duplicateMatches) | Where-Object { $_ } | Select-Object -First 1
+              $image = [string]$_.imagePath -replace '\|', '/'
+              $signals = [string](@(
+                $(if ($_.town) { "town: $($_.town)" }),
+                $(if ($_.categories) { "cats: $(@($_.categories) -join ', ')" }),
+                $(if ($_.dateValues) { "dates: $(@($_.dateValues) -join ', ')" }),
+                $(if ($_.timeHints) { "times: $(@($_.timeHints) -join ', ')" })
+              ) | Where-Object { $_ }) -join "; "
+              $signals = $signals -replace '\|', '/'
+              $matchText = if ($match) { "$($match.eventId) ($($match.score)) $($match.title)" } else { "" }
+              $matchText = $matchText -replace '\|', '/'
+              "| $image | $($_.reviewStatus) | $signals | $matchText |"
+            })
+            if ($rows.Count -eq 0) { return "_None._" }
+            $header = "| Poster | Review status | Extracted signals | Existing match |`n|---|---|---|---|"
+            $more = if (@($items).Count -gt $limit) { "`n`n_And $(@($items).Count - $limit) more._" } else { "" }
+            return $header + "`n" + ($rows -join "`n") + $more
+          }
           $needsReview = @($candidates | Where-Object { $_.status -in @("new","needs-review") }).Count
           $autoApproved = @($candidates | Where-Object { $_.reviewMode -eq "auto-approved" }).Count
           $autoRejected = @($candidates | Where-Object { $_.reviewMode -eq "auto-rejected" }).Count
@@ -103,10 +123,12 @@ jobs:
           $sourceErrors = @($sourceReport.rows | Where-Object { $_.status -eq "error" }).Count
           $socialLeads = @($socialReport.rows).Count
           $posterCandidates = @($posterReport.results | Where-Object { $_.candidateId }).Count
+          $posterMatches = @($posterReport.results | Where-Object { $_.duplicateRisk -eq "high" }).Count
           $approvedList = Format-CandidateList -items @($candidates | Where-Object { $_.reviewMode -eq "auto-approved" })
           $duplicateList = Format-CandidateList -items @($candidates | Where-Object { $_.reviewMode -eq "auto-duplicate" })
           $rejectedList = Format-CandidateList -items @($candidates | Where-Object { $_.reviewMode -eq "auto-rejected" })
           $reviewList = Format-CandidateList -items @($candidates | Where-Object { $_.status -in @("new","needs-review") })
+          $posterMatchList = Format-PosterMatchList -items @($posterReport.results | Where-Object { $_.duplicateRisk -eq "high" })
           $body = @"
           Automated event ingestion run.
 
@@ -130,6 +152,7 @@ jobs:
           - Source errors: $sourceErrors
           - Social leads in watchlist: $socialLeads
           - Poster OCR candidates: $posterCandidates
+          - Poster OCR matched existing events: $posterMatches
 
           Auto-approved structured candidates may have been merged into events.json.
           Low-confidence social, OCR, duplicate-risk, and search candidates remain in pending-events.json for review.
@@ -146,6 +169,10 @@ jobs:
           ## Auto-rejected stale events
 
           $rejectedList
+
+          ## Poster OCR matched existing events
+
+          $posterMatchList
 
           ## Needs human review
 

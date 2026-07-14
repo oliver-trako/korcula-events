@@ -153,12 +153,18 @@
       const imageHref = row.imagePath ? row.imagePath.replace(/^2026 Events\//, "../2026%20Events/") : "";
       const hints = [
         (row.dateHints || []).length ? "dates: " + row.dateHints.join(", ") : "",
-        (row.timeHints || []).length ? "times: " + row.timeHints.join(", ") : ""
+        (row.timeHints || []).length ? "times: " + row.timeHints.join(", ") : "",
+        row.town ? "town: " + row.town : "",
+        (row.categories || []).length ? "categories: " + row.categories.join(", ") : ""
       ].filter(Boolean).join(" · ");
+      const matches = (row.eventMatches || row.duplicateMatches || []).map((match) => {
+        return `<li><strong>${escapeHtml(match.eventId || match.candidateId)}</strong> (${escapeHtml(match.score)}) ${escapeHtml(match.title || match.imagePath || "")} ${escapeHtml([match.date, match.time, match.venue].filter(Boolean).join(" · "))}</li>`;
+      }).join("");
       return `<article class="source-row">
         <div>
           <h2>${escapeHtml(row.imagePath || "Poster")}</h2>
-          <p>${escapeHtml([row.status, hints].filter(Boolean).join(" · "))}</p>
+          <p>${escapeHtml([row.status, row.reviewStatus, row.duplicateRisk === "high" ? "matched existing event" : "", hints].filter(Boolean).join(" · "))}</p>
+          ${matches ? `<div class="review-snippet"><strong>Likely existing matches:</strong><ul>${matches}</ul></div>` : ""}
           <p>${escapeHtml(short(row.textSnippet || row.note || row.error || "", 400))}</p>
         </div>
         ${imageHref ? `<a class="review-home open-link" href="${escapeHtml(imageHref)}" target="_blank" rel="noopener">Open poster</a>` : ""}

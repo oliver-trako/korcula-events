@@ -54,12 +54,16 @@ jobs:
         id: summary
         shell: pwsh
         run: |
+          $branchName = "automation/event-ingestion"
+          $reviewUrl = "https://korcula-events.com/review.html?ref=$([uri]::EscapeDataString($branchName))"
           $pending = Get-Content -Raw site/data/pending-events.json | ConvertFrom-Json
           $sourceReport = Get-Content -Raw site/data/source-check-report.json | ConvertFrom-Json
           $socialReport = Get-Content -Raw site/data/social-source-report.json | ConvertFrom-Json
           $posterReport = Get-Content -Raw site/data/poster-ocr-report.json | ConvertFrom-Json
           $candidates = @($pending.candidates)
           $needsReview = @($candidates | Where-Object { $_.status -in @("new","needs-review") }).Count
+          $autoApproved = @($candidates | Where-Object { $_.reviewMode -eq "auto-approved" }).Count
+          $autoRejected = @($candidates | Where-Object { $_.reviewMode -eq "auto-rejected" }).Count
           $structured = @($candidates | Where-Object { $_.event }).Count
           $duplicates = @($candidates | Where-Object { $_.duplicateRisk -eq "high" }).Count
           $sourceErrors = @($sourceReport.rows | Where-Object { $_.status -eq "error" }).Count
@@ -68,8 +72,8 @@ jobs:
           $body = @"
           Automated event ingestion run.
 
-          Review dashboard after this PR deploys from the branch:
-          https://korcula-events.com/review.html
+          Protected review dashboard for this PR branch:
+          $reviewUrl
 
           Files to review in this PR:
           - `site/data/pending-events.json`
@@ -80,6 +84,8 @@ jobs:
 
           Summary:
           - Needs review: $needsReview
+          - Auto-approved: $autoApproved
+          - Auto-rejected stale events: $autoRejected
           - Structured candidates: $structured
           - Possible duplicates flagged: $duplicates
           - Source errors: $sourceErrors
@@ -90,7 +96,7 @@ jobs:
           Low-confidence social, OCR, duplicate-risk, and search candidates remain in `pending-events.json` for review.
           Social pages/groups are listed in `social-source-report.json` for manual review unless API access is configured.
           "@
-          $body | Set-Content -Path pr-body.md -Encoding UTF8
+          $body | Set-Content -Path "$env:RUNNER_TEMP/pr-body.md" -Encoding UTF8
           "needs_review=$needsReview" >> $env:GITHUB_OUTPUT
 
       - name: Create pull request
@@ -99,6 +105,6 @@ jobs:
           branch: automation/event-ingestion
           title: "Update event candidates and auto-approved events"
           commit-message: "Update event candidates and auto-approved events"
-          body-path: pr-body.md
+          body-path: ${{ runner.temp }}/pr-body.md
           labels: event-ingestion
           assignees: oliver-trako

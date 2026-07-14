@@ -37,9 +37,10 @@
       "ocr",
       "email-forward"
     ],
-    "blockedIfVerifyTrue": true,
+    "blockedIfVerifyTrue": false,
     "blockedIfDateAmbiguous": true,
-    "blockedIfDuplicateId": true
+    "blockedIfDuplicateId": true,
+    "autoRejectPastEvents": true
   },
   "reviewRequired": {
     "sourceTypes": [

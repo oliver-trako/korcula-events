@@ -5,18 +5,26 @@
     sourceReport: { counts: {}, rows: [] },
     socialReport: { counts: {}, rows: [] },
     posterReport: { counts: {}, results: [] },
-    panel: "candidates"
+    panel: "candidates",
+    ref: new URLSearchParams(window.location.search).get("ref") || ""
   };
 
   const $ = (sel) => document.querySelector(sel);
 
-  async function loadJson(url, fallback) {
+  function dataUrl(path) {
+    if (!state.ref) return path;
+    const params = new URLSearchParams({ ref: state.ref });
+    return `https://api.github.com/repos/oliver-trako/korcula-events/contents/site/${path}?${params.toString()}`;
+  }
+
+  async function loadJson(path, fallback) {
     try {
-      const res = await fetch(url, { cache: "no-store" });
+      const headers = state.ref ? { Accept: "application/vnd.github.raw" } : {};
+      const res = await fetch(dataUrl(path), { cache: "no-store", headers });
       if (!res.ok) throw new Error(res.status + " " + res.statusText);
       return await res.json();
     } catch (err) {
-      console.warn("Could not load", url, err);
+      console.warn("Could not load", path, err);
       return fallback;
     }
   }
@@ -173,11 +181,28 @@
   }
 
   function render() {
+    renderRefNotice();
     statusCounts();
     renderCandidates();
     renderPosters();
     renderSocial();
     renderSources();
+  }
+
+  function renderRefNotice() {
+    let notice = $(".review-ref-notice");
+    if (!notice) {
+      notice = document.createElement("section");
+      notice.className = "review-ref-notice";
+      document.querySelector(".review-shell").prepend(notice);
+    }
+    if (state.ref) {
+      notice.innerHTML = `<strong>Reviewing branch data:</strong> ${escapeHtml(state.ref)} <a href="review.html">Switch to live data</a>`;
+      notice.hidden = false;
+    } else {
+      notice.innerHTML = "<strong>Reviewing live data.</strong> Open the ingestion PR review link to inspect branch candidates before merge.";
+      notice.hidden = false;
+    }
   }
 
   function setPanel(panelName) {

@@ -63,6 +63,7 @@
 .review-toolbar,
 .review-import,
 .review-tabs,
+.review-ref-notice,
 .review-card,
 .social-row,
 .source-row {
@@ -78,6 +79,22 @@
   gap:10px;
   align-items:stretch;
   padding:12px;
+}
+
+.review-ref-notice {
+  margin-bottom:12px;
+  padding:12px 14px;
+  color:var(--ink-soft);
+  font-size:.88rem;
+}
+
+.review-ref-notice strong {
+  color:var(--sea-deep);
+}
+
+.review-ref-notice a {
+  color:var(--sea-deep);
+  font-weight:800;
 }
 
 .review-stat {

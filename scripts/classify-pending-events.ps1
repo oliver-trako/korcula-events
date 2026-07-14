@@ -169,8 +169,10 @@ foreach ($event in $eventsDoc.events) {
 }
 
 $autoApproved = 0
+$autoRejected = 0
 $needsReview = 0
 $unchanged = 0
+$today = (Get-Date).ToString("yyyy-MM-dd")
 
 foreach ($candidate in $pendingDoc.candidates) {
   if ($candidate.status -notin @("new", "needs-review", "auto-review")) {
@@ -209,6 +211,16 @@ foreach ($candidate in $pendingDoc.candidates) {
   }
 
   if ($event) {
+    $eventEnd = if ($event.endDate) { [string]$event.endDate } else { [string]$event.date }
+    if ($policyDoc.autoPublish.autoRejectPastEvents -and $eventEnd -and $eventEnd -lt $today) {
+      Set-ObjectProperty $candidate "status" "rejected"
+      Set-ObjectProperty $candidate "reviewMode" "auto-rejected"
+      Set-ObjectProperty $candidate "reviewedAt" (Get-Date).ToString("s")
+      Set-ObjectProperty $candidate "reviewReasons" @("event date is in the past")
+      $autoRejected++
+      continue
+    }
+
     foreach ($field in $policyDoc.autoPublish.requiredEventFields) {
       if (-not (Has-FieldValue $event ([string]$field))) {
         Add-Reason $reasons "missing required event field: $field"
@@ -258,6 +270,7 @@ if (-not $WhatIf) {
 
 Write-Host "Classification complete:"
 Write-Host "  Auto-approved: $autoApproved"
+Write-Host "  Auto-rejected: $autoRejected"
 Write-Host "  Needs review:  $needsReview"
 Write-Host "  Unchanged:     $unchanged"
 if ($WhatIf) {

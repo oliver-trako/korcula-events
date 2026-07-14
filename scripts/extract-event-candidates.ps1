@@ -77,6 +77,38 @@ function Convert-TextDate {
   return "{0:D4}-{1:D2}-{2:D2}" -f [int]$Year, [int]$months[$key], [int]$Day
 }
 
+function Convert-ClockTime {
+  param([string]$Value)
+  if (-not $Value) { return $null }
+  $m = [regex]::Match($Value.Trim(), '^(?<h>\d{1,2})(?:[:.](?<m>\d{2}))?\s*(?<ampm>AM|PM)?$', [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
+  if (-not $m.Success) { return $null }
+  $hour = [int]$m.Groups['h'].Value
+  $minute = if ($m.Groups['m'].Success) { [int]$m.Groups['m'].Value } else { 0 }
+  $ampm = $m.Groups['ampm'].Value.ToUpperInvariant()
+  if ($ampm -eq "PM" -and $hour -lt 12) { $hour += 12 }
+  if ($ampm -eq "AM" -and $hour -eq 12) { $hour = 0 }
+  if ($hour -gt 23 -or $minute -gt 59) { return $null }
+  return "{0:D2}:{1:D2}" -f $hour, $minute
+}
+
+function Convert-HtmlToText {
+  param([string]$Html)
+  if (-not $Html) { return "" }
+  $text = ($Html -replace '<script[\s\S]*?</script>', ' ' -replace '<style[\s\S]*?</style>', ' ' -replace '<[^>]+>', ' ')
+  return (Decode-Text (($text -replace '\s+', ' ').Trim()))
+}
+
+function Invoke-FetchHtml {
+  param([string]$Url)
+  try {
+    $response = Invoke-WebRequest -UseBasicParsing -Uri $Url -TimeoutSec 20 -MaximumRedirection 8
+    return [string]$response.Content
+  } catch {
+    Write-Warning "Could not fetch $Url`: $($_.Exception.Message)"
+    return $null
+  }
+}
+
 function Get-CandidateSignature {
   param($SourceUrl, $Event, $DateHints, $TimeHints, $KeywordHits)
   if ($Event -and $Event.id) { return "event::$($Event.id)".ToLowerInvariant() }
@@ -131,11 +163,148 @@ function Get-DefaultVenue {
   return 'Korcula'
 }
 
+function Get-VisitKorculaEventLinks {
+  param([string]$Url)
+  $html = Invoke-FetchHtml -Url $Url
+  if (-not $html) { return @() }
+
+  $links = @{}
+  foreach ($match in [regex]::Matches($html, 'href=["''](?<href>[^"'']*/en/events/[^"'']+/)["'']', [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)) {
+    $href = Decode-Text $match.Groups['href'].Value
+    if ($href -match '/en/events/(feed|page/\d+)/?$') { continue }
+    if ($href.StartsWith('/')) { $href = "https://visitkorcula.eu$href" }
+    if ($href -notmatch '^https://visitkorcula\.eu/en/events/[^/]+/$') { continue }
+    $links[$href] = $true
+  }
+  return @($links.Keys | Sort-Object)
+}
+
+function Get-VisitKorculaCategory {
+  param([string]$Title, [string]$Text)
+  $combined = Normalize-Text "$Title $Text"
+  $cats = [System.Collections.Generic.List[string]]::new()
+  if ($combined -match 'kino|cinema|film') { [void]$cats.Add("film") }
+  if ($combined -match 'moreska|sword|dance|theodor|theodor') { [void]$cats.Add("folklore") }
+  if ($combined -match 'festival|festivity|day of') { [void]$cats.Add("festival") }
+  if ($combined -match 'robot|programming|workshop|school|children|chess') { [void]$cats.Add("kids") }
+  if ($combined -match 'workshop|school|programming|robot') { [void]$cats.Add("workshop") }
+  if ($combined -match 'chess|sah') { [void]$cats.Add("sports") }
+  if ($combined -match 'mass|procession|brotherhood|theodor') { [void]$cats.Add("religious") }
+  if ($cats.Count -eq 0) { [void]$cats.Add("culture") }
+  return @($cats | Select-Object -Unique)
+}
+
+function Get-VisitKorculaDetailEvent {
+  param([string]$Url)
+
+  $html = Invoke-FetchHtml -Url $Url
+  if (-not $html) { return $null }
+  $text = Convert-HtmlToText $html
+  $main = $text
+  $start = $main.IndexOf('News Events', [System.StringComparison]::OrdinalIgnoreCase)
+  if ($start -ge 0) { $main = $main.Substring($start) }
+  $other = $main.IndexOf('Other events', [System.StringComparison]::OrdinalIgnoreCase)
+  if ($other -gt 0) { $main = $main.Substring(0, $other) }
+
+  $title = $null
+  $titleMatch = [regex]::Match($main, 'EN FR IT DE HR\s+(?<title>.+?)\s+Add Event', [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
+  if ($titleMatch.Success) {
+    $title = ($titleMatch.Groups['title'].Value -replace '\s+', ' ').Trim()
+  } else {
+    $htmlTitle = [regex]::Match($html, '<title[^>]*>(?<title>[\s\S]*?)</title>', [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
+    if ($htmlTitle.Success) {
+      $title = ((Decode-Text ($htmlTitle.Groups['title'].Value -replace '<[^>]+>', ' ')) -replace '\|.*$', '').Trim()
+    }
+  }
+  if (-not $title -or $title.Length -lt 4) { return $null }
+
+  $date = $null
+  $endDate = $null
+  $rangeMatch = [regex]::Match($main, 'Add Event(?:\s+Photo\s+[^0-9]+)?\s*(?<sd>\d{1,2})\s*-\s*(?<ed>\d{1,2})\s+(?<sm>Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)\s*-\s*(?<em>Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)', [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
+  if ($rangeMatch.Success) {
+    $date = Convert-TextDate $rangeMatch.Groups['sd'].Value $rangeMatch.Groups['sm'].Value "2026"
+    $endDate = Convert-TextDate $rangeMatch.Groups['ed'].Value $rangeMatch.Groups['em'].Value "2026"
+  } else {
+    $singleDateMatch = [regex]::Match($main, 'Add Event(?:\s+Photo\s+[^0-9]+)?\s*(?<d>\d{1,2})\s+(?<m>Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)\b', [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
+    if ($singleDateMatch.Success) {
+      $date = Convert-TextDate $singleDateMatch.Groups['d'].Value $singleDateMatch.Groups['m'].Value "2026"
+    }
+  }
+  if (-not $date -or $date -lt '2026-01-01') { return $null }
+
+  $time = $null
+  $recurring = $null
+  $recurringMatch = [regex]::Match($main, 'Every\s+(?<days>[A-Za-z,\s]+?)\s+at\s+(?<time>\d{1,2}[:.]\d{2}\s*(?:AM|PM)?)', [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
+  if ($recurringMatch.Success) {
+    $time = Convert-ClockTime $recurringMatch.Groups['time'].Value
+    $recurring = "Every $($recurringMatch.Groups['days'].Value.Trim())"
+  }
+  if (-not $time) {
+    $atTimeMatch = [regex]::Match($main, '\bat\s+(?<time>\d{1,2}[:.]\d{2}\s*(?:AM|PM)?)', [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
+    if ($atTimeMatch.Success) { $time = Convert-ClockTime $atTimeMatch.Groups['time'].Value }
+  }
+  if (-not $time) {
+    $plainTimeMatch = [regex]::Match($main, '\b(?<time>[012]?\d:\d{2})\b')
+    if ($plainTimeMatch.Success) { $time = Convert-ClockTime $plainTimeMatch.Groups['time'].Value }
+  }
+
+  $venue = $null
+  $venueMatch = [regex]::Match($main, '\bin\s+(?<venue>Ljetno kino(?:\s*/\s*[^:]+)?)', [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
+  if ($venueMatch.Success) {
+    $venue = ($venueMatch.Groups['venue'].Value -replace '\s+', ' ').Trim()
+    if ($venue -match 'Ljetno kino') { $venue = "Ljetno kino / Korcula Summer Theatre" }
+  }
+  if (-not $venue) {
+    $libraryMatch = [regex]::Match($main, '(?<venue>Ivan Vidali Public Library(?:,\s*[^ ]+)?)', [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
+    if ($libraryMatch.Success) { $venue = "Ivan Vidali Public Library, Korcula" }
+  }
+  if (-not $venue) {
+    $squareMatch = [regex]::Match($main, '\bat the\s+(?<venue>Trg pomirenja square)', [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
+    if ($squareMatch.Success) { $venue = $squareMatch.Groups['venue'].Value.Trim() }
+  }
+  if (-not $venue) { $venue = "Korcula" }
+
+  $id = "visit-korcula-$date-$(New-Slug $title)"
+  $event = [ordered]@{
+    id = $id
+    date = $date
+    time = $time
+    town = "korcula"
+    venue = $venue
+    cats = @(Get-VisitKorculaCategory -Title $title -Text $main)
+    hr = $title
+    en = $title
+    sourceId = "visit-korcula"
+    source = $Url
+    website = $Url
+  }
+  if ($endDate) {
+    $event.endDate = $endDate
+    $event.seasonal = $true
+  }
+  if ($recurring) {
+    $event.recurring = $recurring
+  }
+  if (-not $time -or $venue -eq "Korcula") {
+    $event.verify = $true
+  }
+  return [pscustomobject]$event
+}
+
 function Get-VisitKorculaEvents {
   param($Row, [string]$Text)
 
   if ([string]$Row.sourceId -notin @("visit-korcula", "visit-korcula-racisce")) {
     return @()
+  }
+
+  if ([string]$Row.sourceId -eq "visit-korcula") {
+    $detailEvents = @()
+    foreach ($link in Get-VisitKorculaEventLinks -Url ([string]$Row.url)) {
+      $event = Get-VisitKorculaDetailEvent -Url $link
+      if ($event) { $detailEvents += $event }
+    }
+    return @($detailEvents)
   }
 
   $events = @()
@@ -242,7 +411,8 @@ function Get-KulturaKorculaEvents {
     $title = (Decode-Text $match.Groups['title'].Value).Trim()
     $title = ($title -replace '\s+', ' ').Trim().Trim('-').Trim('|').Trim()
     if (-not $title -or $title.Length -lt 3) { continue }
-    if ($title -match 'Početna|Najave događanja|Kontakt|Traži Facebook') { continue }
+    $titleNorm = Normalize-Text $title
+    if ($titleNorm -match 'pocetna|najave dogadanja|kontakt|trazi facebook') { continue }
 
     $date = Convert-KorculaShortDate $match.Groups['day'].Value $match.Groups['month'].Value $match.Groups['year'].Value
     if (-not $date -or $date -lt '2026-01-01') { continue }

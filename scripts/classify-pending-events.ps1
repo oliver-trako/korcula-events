@@ -74,7 +74,19 @@ function Normalize-Text {
 function Get-TokenSet {
   param([string]$Text)
   $ignore = @("the","and","or","in","at","of","for","with","by","a","an","kino","concert","koncert","festival","event","events","korcula","korcula")
-  $tokens = Normalize-Text $Text -split '\s+' | Where-Object { $_.Length -gt 2 -and $_ -notin $ignore }
+  $aliases = @{
+    theodor = "theodore"
+    theodors = "theodore"
+    todor = "theodore"
+    todora = "theodore"
+    festivity = "feast"
+    festivities = "feast"
+    workshops = "workshop"
+    programming = "program"
+  }
+  $tokens = (Normalize-Text $Text) -split '\s+' | ForEach-Object {
+    if ($aliases.ContainsKey($_)) { $aliases[$_] } else { $_ }
+  } | Where-Object { $_.Length -gt 2 -and $_ -notin $ignore -and $_ -notmatch '^(19|20)\d{2}$' }
   $set = @{}
   foreach ($token in $tokens) { $set[$token] = $true }
   return $set
@@ -107,7 +119,7 @@ function Get-TokenOverlapCount {
 function Get-EventTitle {
   param($Event)
   if ($null -eq $Event) { return "" }
-  return [string]($Event.en, $Event.hr, $Event.id | Where-Object { $_ } | Select-Object -First 1)
+  return [string](@($Event.en, $Event.hr, $Event.id) | Where-Object { $_ } | Select-Object -First 1)
 }
 
 function Get-FuzzyDuplicateMatches {
@@ -147,6 +159,7 @@ function Get-FuzzyDuplicateMatches {
       }
     }
     if ($categoryOverlap) {
+      $score += 0.08
       [void]$reasons.Add("overlapping category")
     }
 
@@ -310,8 +323,9 @@ foreach ($candidate in $pendingDoc.candidates) {
       $sameDaySameSlot = ("same date" -in $bestReasons) -and ("same town" -in $bestReasons) -and ("overlapping category" -in $bestReasons) -and $sameTime -and $sameOrSimilarVenue
       $seasonCoverage = ("date within existing range" -in $bestReasons) -and ("similar title" -in $bestReasons)
       $sameDayStrongMatch = ("same date" -in $bestReasons) -and ($sameOrSimilarVenue -or $sameTime) -and [double]$bestDuplicate.score -ge 0.78
+      $sameDayTownStrongTitle = ("same date" -in $bestReasons) -and ("same town" -in $bestReasons) -and ("similar title" -in $bestReasons) -and [double]$bestDuplicate.score -ge 0.68
 
-      if ($seasonCoverage -or $sameDayStrongMatch -or $sameDaySameSlot) {
+      if ($seasonCoverage -or $sameDayStrongMatch -or $sameDaySameSlot -or $sameDayTownStrongTitle) {
         Set-ObjectProperty $candidate "status" "duplicate"
         Set-ObjectProperty $candidate "reviewMode" "auto-duplicate"
         Set-ObjectProperty $candidate "reviewedAt" (Get-Date).ToString("s")

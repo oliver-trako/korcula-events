@@ -276,10 +276,11 @@ foreach ($candidate in $pendingDoc.candidates) {
       $bestReasons = @($bestDuplicate.reasons)
       $sameOrSimilarVenue = ("same venue" -in $bestReasons) -or ("similar venue" -in $bestReasons)
       $sameTime = "same time" -in $bestReasons
+      $sameDaySameSlot = ("same date" -in $bestReasons) -and ("same town" -in $bestReasons) -and ("overlapping category" -in $bestReasons) -and $sameTime -and $sameOrSimilarVenue
       $seasonCoverage = ("date within existing range" -in $bestReasons) -and ("similar title" -in $bestReasons)
       $sameDayStrongMatch = ("same date" -in $bestReasons) -and ($sameOrSimilarVenue -or $sameTime) -and [double]$bestDuplicate.score -ge 0.78
 
-      if ($seasonCoverage -or $sameDayStrongMatch) {
+      if ($seasonCoverage -or $sameDayStrongMatch -or $sameDaySameSlot) {
         Set-ObjectProperty $candidate "status" "duplicate"
         Set-ObjectProperty $candidate "reviewMode" "auto-duplicate"
         Set-ObjectProperty $candidate "reviewedAt" (Get-Date).ToString("s")

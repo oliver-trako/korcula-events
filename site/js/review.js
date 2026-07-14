@@ -111,11 +111,16 @@
   function renderCandidates() {
     const panel = $("#panel-candidates");
     const candidates = state.pending.candidates || [];
-    if (!candidates.length) {
+    const actionable = candidates
+      .map((candidate, index) => ({ candidate, index }))
+      .filter((item) => item.candidate.status === "new" || item.candidate.status === "needs-review");
+    const handled = candidates.length - actionable.length;
+    if (!actionable.length) {
       panel.innerHTML = '<div class="review-card empty-review">No pending candidates in this file.</div>';
       return;
     }
-    panel.innerHTML = candidates.map(candidateCard).join("");
+    const note = handled > 0 ? `<div class="review-card empty-review">${handled} auto-handled candidates are hidden from this approval list.</div>` : "";
+    panel.innerHTML = note + actionable.map((item) => candidateCard(item.candidate, item.index)).join("");
   }
 
   function renderSocial() {

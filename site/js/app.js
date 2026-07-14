@@ -903,12 +903,13 @@
 
     const daysInMonth = new Date(month.getFullYear(), month.getMonth() + 1, 0).getDate();
     const iso = todayISO();
-    const filtered = state.events.filter(matchesFilters).filter((e) => !e.seasonal);
+    const filtered = state.events.filter(matchesFilters);
+    const calendarFiltered = filtered.filter((e) => !e.seasonal);
 
     for (let day = 1; day <= daysInMonth; day++) {
       const cellDate = new Date(month.getFullYear(), month.getMonth(), day);
       const cellISO = cellDate.getFullYear() + "-" + String(cellDate.getMonth()+1).padStart(2,"0") + "-" + String(day).padStart(2,"0");
-      const dayEvents = sortDayEvents(filtered.filter((e) => isOngoing(e, cellISO)));
+      const dayEvents = sortDayEvents(calendarFiltered.filter((e) => isOngoing(e, cellISO)));
 
       const cell = document.createElement("div");
       cell.className = "cal-cell" + (cellISO === iso ? " today" : "") + (cellISO === state.calSelectedDate ? " selected" : "");
@@ -930,8 +931,15 @@
     const dayWrap = $("#calDayEvents");
     dayWrap.innerHTML = "";
     const hasActiveSearchOrFilter = Boolean(state.query || state.cats.size || state.towns.size);
-    if (state.calSelectedDate) {
-      const dayEvents = sortDayEvents(filtered.filter((e) => isOngoing(e, state.calSelectedDate)));
+    if (state.query) {
+      const h = document.createElement("h2");
+      h.style.cssText = "font-size:.95rem;color:var(--sea-deep);margin:0 0 10px;";
+      h.textContent = T.matchingEvents;
+      dayWrap.appendChild(h);
+      if (!filtered.length) dayWrap.appendChild(elNote(T.noEventsFiltered));
+      sortEvents(filtered).slice(0, 60).forEach((e) => dayWrap.appendChild(eventCard(e, true)));
+    } else if (state.calSelectedDate) {
+      const dayEvents = sortDayEvents(calendarFiltered.filter((e) => isOngoing(e, state.calSelectedDate)));
       const h = document.createElement("h2");
       h.style.cssText = "font-size:.95rem;color:var(--sea-deep);margin:0 0 10px;";
       h.textContent = fmtDate(state.calSelectedDate);

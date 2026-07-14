@@ -122,6 +122,24 @@
     setText("#filterClearLabel", T.filterClear);
     setText("#footerNote", T.footerNote);
     setText("#footerBuilt", T.footerBuilt);
+    setText("#footerUpdated", T.footerUpdated);
+    setText("#footerBrowseTitle", T.footerBrowseTitle);
+    setText("#footerAllEvents", T.footerAllEvents);
+    setText("#footerGuides", T.footerGuides);
+    setText("#footerPlaces", T.footerPlaces);
+    setText("#footerCategories", T.footerCategories);
+    setText("#footerNightlife", T.footerNightlife);
+    setText("#footerInfoTitle", T.footerInfoTitle);
+    setText("#footerAbout", T.footerAbout);
+    setText("#footerContact", T.footerContact);
+    setText("#footerPrivacy", T.footerPrivacy);
+    setText("#footerTerms", T.footerTerms);
+    setText("#footerCookies", T.footerCookies);
+    setText("#footerSitemap", T.footerSitemap);
+    setText("#cookieTitle", T.cookieTitle);
+    setText("#cookieText", T.cookieText);
+    setText("#cookieLearnMore", T.cookieLearnMore);
+    setText("#cookieAccept", T.cookieAccept);
     setText("#suggestFabLabel", T.suggestFab);
     setText("#suggestTitle", T.suggestTitle);
     setText("#suggestIntro", T.suggestIntro);
@@ -674,7 +692,7 @@
     $$("button.view-tab").forEach((btn) => {
       const active = btn.dataset.view === state.view;
       btn.classList.toggle("active", active);
-      btn.setAttribute("aria-selected", active);
+      btn.setAttribute("aria-pressed", active);
     });
 
     if (state.view === "today") renderToday();
@@ -1285,9 +1303,13 @@
     $$("button.view-tab").forEach((btn) => {
       btn.addEventListener("click", () => { state.view = btn.dataset.view; render(); });
     });
-    $$("[data-scenic-image]").forEach((btn) => {
-      btn.addEventListener("click", () => openFlyer(btn.dataset.scenicImage));
-    });
+    const scenicStrip = $(".scenic-strip");
+    if (scenicStrip) {
+      scenicStrip.addEventListener("click", (ev) => {
+        const btn = ev.target.closest("[data-scenic-image]");
+        if (btn) openFlyer(btn.dataset.scenicImage, ev);
+      });
+    }
 
     $("#searchInput").addEventListener("input", (e) => { state.query = e.target.value.trim(); render(); });
 

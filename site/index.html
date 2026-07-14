@@ -140,11 +140,11 @@
   </div>
 
   <nav class="view-tabs" role="navigation" aria-label="Main event views">
-    <button class="view-tab active" data-view="calendar" role="tab" aria-selected="true" aria-controls="view-calendar"><span id="navCalendar">Kalendar</span></button>
-    <button class="view-tab" data-view="today" role="tab" aria-selected="false" aria-controls="view-today"><span id="navToday">Danas</span></button>
-    <button class="view-tab" data-view="agenda" role="tab" aria-selected="false" aria-controls="view-agenda"><span id="navAgenda">Prikaz popisa</span></button>
-    <button class="view-tab" data-view="season" role="tab" aria-selected="false" aria-controls="view-season"><span id="navSeason">Sezona</span></button>
-    <button class="view-tab" data-view="map" role="tab" aria-selected="false" aria-controls="view-map"><span id="navMap">Mjesta</span></button>
+    <button class="view-tab active" data-view="calendar" aria-pressed="true"><span id="navCalendar">Kalendar</span></button>
+    <button class="view-tab" data-view="today" aria-pressed="false"><span id="navToday">Danas</span></button>
+    <button class="view-tab" data-view="agenda" aria-pressed="false"><span id="navAgenda">Prikaz popisa</span></button>
+    <button class="view-tab" data-view="season" aria-pressed="false"><span id="navSeason">Sezona</span></button>
+    <button class="view-tab" data-view="map" aria-pressed="false"><span id="navMap">Mjesta</span></button>
     <a class="view-tab view-link" href="/categories/"><span id="navCategories">Kategorije</span></a>
   </nav>
 </header>
@@ -171,10 +171,10 @@
 <main id="main">
   <div id="resultsMeta" class="results-meta" aria-live="polite"></div>
 
-  <section id="view-today" class="view-panel" role="tabpanel" aria-label="Today" hidden></section>
-  <section id="view-agenda" class="view-panel" role="tabpanel" aria-label="Full list" hidden></section>
-  <section id="view-season" class="view-panel" role="tabpanel" aria-label="Seasonal programmes" hidden></section>
-  <section id="view-calendar" class="view-panel" role="tabpanel" aria-label="Calendar">
+  <section id="view-today" class="view-panel" aria-label="Today" hidden></section>
+  <section id="view-agenda" class="view-panel" aria-label="Full list" hidden></section>
+  <section id="view-season" class="view-panel" aria-label="Seasonal programmes" hidden></section>
+  <section id="view-calendar" class="view-panel" aria-label="Calendar">
     <div class="cal-header">
       <button id="calPrev" class="cal-nav" aria-label="Previous month">‹</button>
       <h2 id="calMonthLabel"></h2>
@@ -183,7 +183,7 @@
     <div id="calGrid" class="cal-grid"></div>
     <div id="calDayEvents" class="cal-day-events" aria-live="polite"></div>
   </section>
-  <section id="view-map" class="view-panel" role="tabpanel" aria-label="Places" hidden>
+  <section id="view-map" class="view-panel" aria-label="Places" hidden>
     <div id="placeList" class="place-list"></div>
   </section>
 </main>
@@ -262,37 +262,37 @@
     </div>
     <div class="footer-columns">
       <nav class="footer-nav" aria-label="Browse event pages">
-        <strong>Browse</strong>
-        <a href="/events/">All events</a>
-        <a href="/guides/">Guides</a>
-        <a href="/places/">Places</a>
-        <a href="/categories/">Categories</a>
-        <a href="/categories/nightlife/">Nightlife</a>
+        <strong id="footerBrowseTitle">Browse</strong>
+        <a id="footerAllEvents" href="/events/">All events</a>
+        <a id="footerGuides" href="/guides/">Guides</a>
+        <a id="footerPlaces" href="/places/">Places</a>
+        <a id="footerCategories" href="/categories/">Categories</a>
+        <a id="footerNightlife" href="/categories/nightlife/">Nightlife</a>
       </nav>
       <nav class="footer-nav" aria-label="Helpful pages">
-        <strong>Info</strong>
-        <a href="/about/">About</a>
-        <a href="/contact/">Contact</a>
-        <a href="/privacy/">Privacy</a>
-        <a href="/terms/">Terms</a>
-        <a href="/cookies/">Cookies</a>
-        <a href="/sitemap/">Site map</a>
+        <strong id="footerInfoTitle">Info</strong>
+        <a id="footerAbout" href="/about/">About</a>
+        <a id="footerContact" href="/contact/">Contact</a>
+        <a id="footerPrivacy" href="/privacy/">Privacy</a>
+        <a id="footerTerms" href="/terms/">Terms</a>
+        <a id="footerCookies" href="/cookies/">Cookies</a>
+        <a id="footerSitemap" href="/sitemap/">Site map</a>
       </nav>
     </div>
   </div>
   <div class="footer-bottom">
     <span id="footerBuilt"></span>
-    <span>Updated for summer 2026</span>
+    <span id="footerUpdated">Updated for summer 2026</span>
   </div>
 </footer>
 
 <div id="cookieNotice" class="cookie-notice" hidden>
   <div>
-    <strong>Cookies & privacy</strong>
-    <p>This site uses essential browser storage and privacy-friendly analytics to understand visits. No advertising cookies.</p>
+    <strong id="cookieTitle">Cookies & privacy</strong>
+    <p id="cookieText">This site uses essential browser storage and privacy-friendly analytics to understand visits. No advertising cookies.</p>
   </div>
   <div class="cookie-actions">
-    <a href="/cookies/">Learn more</a>
+    <a id="cookieLearnMore" href="/cookies/">Learn more about cookies and privacy</a>
     <button id="cookieAccept" type="button">Accept all</button>
   </div>
 </div>

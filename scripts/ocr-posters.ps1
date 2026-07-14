@@ -158,6 +158,7 @@ foreach ($img in $images) {
 
     $result = [pscustomobject]@{
       imagePath = $relativePath
+      candidateId = if ($text) { $candidateId } else { $null }
       status = "ocr-complete"
       textSnippet = $textSnippet
       dateHints = @($dateHints)

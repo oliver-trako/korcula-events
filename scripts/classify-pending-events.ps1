@@ -324,6 +324,14 @@ foreach ($candidate in $pendingDoc.candidates) {
       Set-ObjectProperty $candidate "duplicateMatches" @()
     }
 
+    if ($candidate.sourceId -eq "visit-korcula" -and ([string]$event.venue -in @("Korcula", "Racisce", "Lumbarda", "Vela Luka", "Orebic", "Smokvica / Brna"))) {
+      Add-Reason $reasons "official event listing has only a default venue"
+    }
+
+    if ($candidate.sourceId -eq "visit-korcula" -and -not (Has-FieldValue $event "time")) {
+      Add-Reason $reasons "official event listing has no event time"
+    }
+
     if ($policyDoc.autoPublish.blockedIfDateAmbiguous -and $event.time -match 'tbc|varies|evening|morning|afternoon') {
       Add-Reason $reasons "ambiguous event time"
     }

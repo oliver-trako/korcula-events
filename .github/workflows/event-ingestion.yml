@@ -98,12 +98,23 @@ jobs:
             $rows = @($items | Select-Object -First $limit | ForEach-Object {
               $match = @($_.eventMatches + $_.duplicateMatches) | Where-Object { $_ } | Select-Object -First 1
               $image = [string]$_.imagePath -replace '\|', '/'
-              $signals = [string](@(
-                $(if ($_.town) { "town: $($_.town)" }),
-                $(if ($_.categories) { "cats: $(@($_.categories) -join ', ')" }),
-                $(if ($_.dateValues) { "dates: $(@($_.dateValues) -join ', ')" }),
-                $(if ($_.timeHints) { "times: $(@($_.timeHints) -join ', ')" })
-              ) | Where-Object { $_ }) -join "; "
+              if ($_.event) {
+                $signals = [string](@(
+                  $(if ($_.event.town) { "town: $($_.event.town)" }),
+                  $(if ($_.event.cats) { "cats: $(@($_.event.cats) -join ', ')" }),
+                  $(if ($_.event.date) { "date: $($_.event.date)" }),
+                  $(if ($_.event.endDate) { "to: $($_.event.endDate)" }),
+                  $(if ($_.event.time) { "time: $($_.event.time)" }),
+                  $(if ($_.event.en) { "event: $($_.event.en)" })
+                ) | Where-Object { $_ }) -join "; "
+              } else {
+                $signals = [string](@(
+                  $(if ($_.town) { "town: $($_.town)" }),
+                  $(if ($_.categories) { "cats: $(@($_.categories) -join ', ')" }),
+                  $(if ($_.dateValues) { "dates: $(@($_.dateValues) -join ', ')" }),
+                  $(if ($_.timeHints) { "times: $(@($_.timeHints) -join ', ')" })
+                ) | Where-Object { $_ }) -join "; "
+              }
               $signals = $signals -replace '\|', '/'
               $matchText = if ($match) { "$($match.eventId) ($($match.score)) $($match.title)" } else { "" }
               $matchText = $matchText -replace '\|', '/'
@@ -122,13 +133,28 @@ jobs:
           $duplicates = @($candidates | Where-Object { $_.duplicateRisk -eq "high" }).Count
           $sourceErrors = @($sourceReport.rows | Where-Object { $_.status -eq "error" }).Count
           $socialLeads = @($socialReport.rows).Count
-          $posterCandidates = @($posterReport.results | Where-Object { $_.candidateId }).Count
-          $posterMatches = @($posterReport.results | Where-Object { $_.duplicateRisk -eq "high" }).Count
+          $posterStructuredRows = @($posterReport.results | ForEach-Object {
+            $imagePath = $_.imagePath
+            @($_.structuredEvents) | ForEach-Object {
+              [pscustomobject]@{
+                imagePath = $imagePath
+                reviewStatus = $_.reviewStatus
+                event = $_.event
+                duplicateMatches = @($_.duplicateMatches)
+                eventMatches = @()
+              }
+            }
+          })
+          $posterCandidates = @($posterReport.results | Where-Object { $_.candidateId }).Count + @($posterStructuredRows).Count
+          $posterMatches = @($posterReport.results | Where-Object { $_.duplicateRisk -eq "high" }).Count + @($posterStructuredRows | Where-Object { @($_.duplicateMatches).Count -gt 0 }).Count
           $approvedList = Format-CandidateList -items @($candidates | Where-Object { $_.reviewMode -eq "auto-approved" })
           $duplicateList = Format-CandidateList -items @($candidates | Where-Object { $_.reviewMode -eq "auto-duplicate" })
           $rejectedList = Format-CandidateList -items @($candidates | Where-Object { $_.reviewMode -eq "auto-rejected" })
           $reviewList = Format-CandidateList -items @($candidates | Where-Object { $_.status -in @("new","needs-review") })
-          $posterMatchList = Format-PosterMatchList -items @($posterReport.results | Where-Object { $_.duplicateRisk -eq "high" })
+          $posterMatchList = Format-PosterMatchList -items @(
+            $posterStructuredRows | Where-Object { @($_.duplicateMatches).Count -gt 0 }
+            $posterReport.results | Where-Object { $_.duplicateRisk -eq "high" }
+          )
           $body = @"
           Automated event ingestion run.
 

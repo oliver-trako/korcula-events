@@ -108,9 +108,10 @@ body {
 .poster-strip img:nth-child(2) { transform:translateY(-12px); }
 
 .scenic-strip {
-  max-width:900px; margin:18px auto 0; display:grid; grid-template-columns:repeat(7, minmax(0, 1fr));
-  gap:6px; overflow:hidden;
+  max-width:900px; margin:18px auto 0; display:grid; grid-auto-flow:column; grid-auto-columns:172px;
+  gap:6px; overflow-x:auto; overflow-y:hidden; scrollbar-width:none; padding-bottom:2px;
 }
+.scenic-strip::-webkit-scrollbar { display:none; }
 .scenic-strip button {
   appearance:none; border:0; background:transparent; padding:0; cursor:zoom-in;
 }
@@ -428,7 +429,7 @@ main { max-width:900px; min-height:760px; margin: 0 auto; padding: 14px 16px 0; 
   .poster-strip img { aspect-ratio:4 / 3; }
   .poster-strip img:nth-child(2) { transform:none; }
   .scenic-strip {
-    display:grid; grid-auto-flow:column; grid-auto-columns:42%; grid-template-columns:none;
+    grid-auto-columns:42%;
     gap:6px; margin-top:14px; overflow-x:auto; scrollbar-width:none; padding-bottom:2px;
   }
   .scenic-strip::-webkit-scrollbar { display:none; }

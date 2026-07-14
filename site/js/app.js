@@ -107,6 +107,8 @@
     setText("#tagline", T.tagline);
     setText("#heroKicker", T.heroKicker);
     setText("#heroText", T.heroText);
+    setText("#highlightTitle", T.highlightTitle);
+    setText("#highlightHint", T.highlightHint);
     setPlaceholder("#searchInput", T.searchPlaceholder);
     setValue("#searchInput", state.query);
     setText("#navToday", T.navToday);
@@ -133,6 +135,7 @@
     setText("#lblSubmitterContact", T.lblSubmitterContact);
     setText("#lblAttachFlyer", T.attachFlyer);
     setText("#suggestSubmitBtn", T.suggestSubmit);
+    renderHighlights();
     buildFilterChips();
   }
 
@@ -257,6 +260,79 @@
     if (id === "cara-vuco") return flyerUrl(FLYERS.sinisaVuco);
     if (id.startsWith("rc-")) return flyerUrl(FLYERS.dicoHomo);
     return null;
+  }
+
+  function flyerThumbUrl(flyer) {
+    const name = decodeURIComponent(flyer.split("/").pop() || "");
+    return "assets/highlights/" + slugify(name.replace(/\.[^.]+$/, "")) + ".webp";
+  }
+
+  function upcomingHighlights(limit) {
+    const today = todayISO();
+    const seen = new Set();
+    return sortEvents(state.events)
+      .filter((e) => !e.seasonal && e.date >= today && getFlyer(e))
+      .filter((e) => {
+        const flyer = getFlyer(e);
+        if (seen.has(flyer)) return false;
+        seen.add(flyer);
+        return true;
+      })
+      .slice(0, limit);
+  }
+
+  function renderHighlights() {
+    const posterStrip = $("#posterStrip");
+    const reel = $("#highlightReel");
+    if (!posterStrip || !reel || !state.events.length) return;
+
+    const highlights = upcomingHighlights(8);
+    posterStrip.innerHTML = "";
+    reel.innerHTML = "";
+
+    highlights.slice(0, 3).forEach((event, index) => {
+      const flyer = getFlyer(event);
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.setAttribute("aria-label", eventTitle(event));
+      const img = document.createElement("img");
+      img.src = flyerThumbUrl(flyer);
+      img.width = 240;
+      img.height = 320;
+      img.loading = index === 0 ? "eager" : "lazy";
+      img.alt = "";
+      btn.appendChild(img);
+      btn.addEventListener("click", () => openModal(event));
+      posterStrip.appendChild(btn);
+    });
+
+    highlights.forEach((event, index) => {
+      const flyer = getFlyer(event);
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "highlight-card";
+      btn.setAttribute("aria-label", eventTitle(event) + ", " + fmtDate(event.date));
+
+      const img = document.createElement("img");
+      img.src = flyerThumbUrl(flyer);
+      img.width = 240;
+      img.height = 320;
+      img.loading = index < 4 ? "eager" : "lazy";
+      img.alt = "";
+
+      const copy = document.createElement("div");
+      const title = document.createElement("strong");
+      title.textContent = eventTitle(event);
+      const date = document.createElement("span");
+      date.textContent = fmtDate(event.date, { short: true }) + (event.time ? " · " + timeBadgeLabel(event) : "");
+      copy.appendChild(title);
+      copy.appendChild(date);
+
+      btn.appendChild(img);
+      btn.appendChild(copy);
+      btn.addEventListener("click", () => openModal(event));
+      reel.appendChild(btn);
+    });
   }
 
   let lastFocusedEl = null;

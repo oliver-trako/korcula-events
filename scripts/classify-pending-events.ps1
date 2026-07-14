@@ -24,6 +24,31 @@ function Add-Reason {
   if (-not $Reasons.Contains($Reason)) { [void]$Reasons.Add($Reason) }
 }
 
+function Test-EvidenceSupportsTown {
+  param($Candidate, [string]$Town)
+  if (-not $Town) { return $true }
+  $text = Normalize-Text ([string]$Candidate.evidence.textSnippet)
+  if (-not $text) { return $false }
+  $townTerms = @{
+    "racisce" = @("racisce", "raciscu")
+    "korcula" = @("korcula", "koreula")
+    "lumbarda" = @("lumbarda")
+    "vela-luka" = @("vela luka")
+    "blato" = @("blato", "blatsko")
+    "smokvica" = @("smokvica", "brna")
+    "orebic" = @("orebic")
+    "kneze" = @("kneze")
+    "zrnovo" = @("zrnovo", "postrana")
+    "pupnat" = @("pupnat")
+    "cara" = @("cara")
+  }
+  if (-not $townTerms.ContainsKey($Town)) { return $true }
+  foreach ($term in $townTerms[$Town]) {
+    if ($text.Contains($term)) { return $true }
+  }
+  return $false
+}
+
 function Set-ObjectProperty {
   param($Object, [string]$Name, $Value)
   $prop = $Object.PSObject.Properties[$Name]
@@ -242,6 +267,12 @@ foreach ($candidate in $pendingDoc.candidates) {
   }
 
   if ($event) {
+    if ($source -and $source.town -and [string]$source.town -notin @("island-wide", "") -and $event.town -and [string]$event.town -eq [string]$source.town) {
+      if (-not (Test-EvidenceSupportsTown -Candidate $candidate -Town ([string]$event.town))) {
+        Add-Reason $reasons "event town is inferred from source but not supported by evidence text: $($event.town)"
+      }
+    }
+
     $eventEnd = if ($event.endDate) { [string]$event.endDate } else { [string]$event.date }
     if ($policyDoc.autoPublish.autoRejectPastEvents -and $eventEnd -and $eventEnd -lt $today) {
       Set-ObjectProperty $candidate "status" "rejected"

@@ -16,6 +16,18 @@ function Decode-Text {
   return [System.Net.WebUtility]::HtmlDecode($Text)
 }
 
+function Normalize-Text {
+  param([string]$Text)
+  if (-not $Text) { return "" }
+  $normalized = (Decode-Text $Text).ToLowerInvariant().Normalize([System.Text.NormalizationForm]::FormD)
+  $chars = foreach ($char in $normalized.ToCharArray()) {
+    if ([Globalization.CharUnicodeInfo]::GetUnicodeCategory($char) -ne [Globalization.UnicodeCategory]::NonSpacingMark) {
+      $char
+    }
+  }
+  return ((-join $chars) -replace '[^a-z0-9]+', ' ').Trim()
+}
+
 function New-Slug {
   param([string]$Text)
   $normalized = (Decode-Text $Text).ToLowerInvariant()
@@ -135,6 +147,10 @@ function Get-VisitKorculaEvents {
     $title = ($title -replace '\s+', ' ').Trim().Trim('-').Trim('|').Trim()
     if (-not $title -or $title.Length -lt 4) { continue }
     if ($title -match 'Discover|Welcome to|Download the brochure|Events EN|Tourist Board|Previous View all Next|View all Next') { continue }
+    if ([string]$Row.sourceId -eq "visit-korcula-racisce") {
+      $titleContext = Normalize-Text "$title $($match.Value)"
+      if ($titleContext -notmatch '\bracisce\b|\braciscu\b|\bračišće\b|\bračišću\b') { continue }
+    }
 
     $date = Convert-NumericDate $match.Groups['start'].Value
     if (-not $date -or $date -lt '2026-01-01') { continue }

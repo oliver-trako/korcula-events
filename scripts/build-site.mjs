@@ -848,7 +848,7 @@ ${alternates}
 <meta name="twitter:title" content="${esc(title)}">
 <meta name="twitter:description" content="${esc(description)}">
 <meta name="twitter:image" content="${esc(imageUrl)}">
-<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/style.min.css">
 <style>
 .seo-header{max-width:960px;margin:0 auto;padding:20px 16px 0}
 .seo-header-inner{background:#fff;border:1px solid var(--border);border-radius:12px;padding:16px;display:flex;align-items:center;justify-content:space-between;gap:16px;box-shadow:var(--shadow)}

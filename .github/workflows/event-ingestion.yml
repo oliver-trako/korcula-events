@@ -76,11 +76,11 @@ jobs:
           $reviewUrl
 
           Files to review in this PR:
-          - `site/data/pending-events.json`
-          - `site/data/events.json`
-          - `site/data/source-check-report.json`
-          - `site/data/social-source-report.json`
-          - `site/data/poster-ocr-report.json`
+          - site/data/pending-events.json
+          - site/data/events.json
+          - site/data/source-check-report.json
+          - site/data/social-source-report.json
+          - site/data/poster-ocr-report.json
 
           Summary:
           - Needs review: $needsReview
@@ -92,9 +92,9 @@ jobs:
           - Social leads in watchlist: $socialLeads
           - Poster OCR candidates: $posterCandidates
 
-          Auto-approved structured candidates may have been merged into `events.json`.
-          Low-confidence social, OCR, duplicate-risk, and search candidates remain in `pending-events.json` for review.
-          Social pages/groups are listed in `social-source-report.json` for manual review unless API access is configured.
+          Auto-approved structured candidates may have been merged into events.json.
+          Low-confidence social, OCR, duplicate-risk, and search candidates remain in pending-events.json for review.
+          Social pages/groups are listed in social-source-report.json for manual review unless API access is configured.
           "@
           $body | Set-Content -Path "$env:RUNNER_TEMP/pr-body.md" -Encoding UTF8
           "needs_review=$needsReview" >> $env:GITHUB_OUTPUT

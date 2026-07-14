@@ -1285,6 +1285,9 @@
     $$("button.view-tab").forEach((btn) => {
       btn.addEventListener("click", () => { state.view = btn.dataset.view; render(); });
     });
+    $$("[data-scenic-image]").forEach((btn) => {
+      btn.addEventListener("click", () => openFlyer(btn.dataset.scenicImage));
+    });
 
     $("#searchInput").addEventListener("input", (e) => { state.query = e.target.value.trim(); render(); });
 

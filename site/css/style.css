@@ -18,8 +18,8 @@
   --radius: 8px;
   --shadow: 0 2px 12px rgba(10,58,86,0.09);
   --shadow-lg: 0 16px 48px rgba(7,41,67,0.28);
-  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
-  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-display: Georgia, "Times New Roman", serif;
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-size: 16px;
 }
 
@@ -50,7 +50,7 @@ body {
 .site-header {
   background:
     linear-gradient(130deg, rgba(7,31,58,.94) 0%, rgba(0,63,125,.82) 42%, rgba(11,95,165,.58) 100%),
-    url("../../generated_images/019f4238-0d22-7c61-a5de-d8d8a9751fdf/ig_08cb38e27fc1cd4c016a4e6b76535c8191b68b7bca395d86af.png") center/cover;
+    url("../assets/hero-korcula-events.webp") center/cover;
   color: #fff;
   padding: 18px 16px 0;
   position: relative;
@@ -169,7 +169,7 @@ body {
 .chip .cnt { opacity:.65; font-size:.75em; margin-left:4px; }
 
 /* ---------- Main / results ---------- */
-main { max-width:900px; margin: 0 auto; padding: 14px 16px 0; }
+main { max-width:900px; min-height:760px; margin: 0 auto; padding: 14px 16px 0; }
 .results-meta { font-size:.8rem; color:var(--ink-soft); margin-bottom:6px; padding-left:2px; }
 .orebic-banner {
   margin-top:8px; background:#e7f2fa; border:1px solid var(--sea-light); border-radius:10px;
@@ -305,9 +305,14 @@ main { max-width:900px; margin: 0 auto; padding: 14px 16px 0; }
   font-size:.8rem; margin:8px 0 0; padding:9px 10px;
 }
 
-.event-flyer-thumb {
-  flex: 0 0 58px; width:58px; height:72px; border-radius:6px; object-fit:cover;
-  border:1px solid var(--border); cursor:zoom-in; align-self:center;
+.event-flyer-btn {
+  flex: 0 0 auto; align-self:center; border:1px solid var(--border); border-radius:8px;
+  background:var(--sand); color:var(--sea-deep); cursor:pointer; font-family:var(--font-body);
+  font-size:.72rem; font-weight:800; line-height:1.15; max-width:58px; min-height:56px;
+  padding:7px 8px; text-align:center;
+}
+.event-flyer-btn:hover {
+  border-color:var(--sea-light); color:var(--sea);
 }
 .flyer-modal { z-index:300; align-items:center; }
 .flyer-modal-close {
@@ -405,7 +410,7 @@ main { max-width:900px; margin: 0 auto; padding: 14px 16px 0; }
   .view-tab { padding:9px 10px; font-size:.8rem; }
   .event-card { gap:10px; padding:12px; }
   .event-time-badge { flex-basis:54px; }
-  .event-flyer-thumb { flex-basis:50px; width:50px; height:62px; }
+  .event-flyer-btn { max-width:54px; min-height:50px; padding:6px; }
   .footer-shell { grid-template-columns:1fr; padding:18px; }
   .footer-columns { grid-template-columns:1fr 1fr; }
   .footer-brand strong { font-size:1.15rem; }

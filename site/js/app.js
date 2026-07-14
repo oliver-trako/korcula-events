@@ -865,13 +865,15 @@
 
     const flyer = getFlyer(e);
     if (flyer) {
-      const thumb = document.createElement("img");
-      thumb.className = "event-flyer-thumb";
-      thumb.src = flyer;
-      thumb.alt = "";
-      thumb.loading = "lazy";
-      makeAccessibleClickable(thumb, (ev) => openFlyer(flyer, ev), T.viewFlyer);
-      card.appendChild(thumb);
+      const flyerBtn = document.createElement("button");
+      flyerBtn.type = "button";
+      flyerBtn.className = "event-flyer-btn";
+      flyerBtn.textContent = T.viewFlyer;
+      flyerBtn.addEventListener("click", (ev) => {
+        ev.stopPropagation();
+        openFlyer(flyer, ev);
+      });
+      card.appendChild(flyerBtn);
     }
 
     const cardLabel = eventTitle(e);

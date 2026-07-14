@@ -98,12 +98,15 @@ jobs:
           "@
           $body | Set-Content -Path "$env:RUNNER_TEMP/pr-body.md" -Encoding UTF8
           "needs_review=$needsReview" >> $env:GITHUB_OUTPUT
+          "auto_approved=$autoApproved" >> $env:GITHUB_OUTPUT
+          "auto_rejected=$autoRejected" >> $env:GITHUB_OUTPUT
+          "duplicates=$duplicates" >> $env:GITHUB_OUTPUT
 
       - name: Create pull request
         uses: peter-evans/create-pull-request@v8
         with:
           branch: automation/event-ingestion
-          title: "Update event candidates and auto-approved events"
+          title: "Event ingestion: ${{ steps.summary.outputs.auto_approved }} auto-approved, ${{ steps.summary.outputs.needs_review }} need review"
           commit-message: "Update event candidates and auto-approved events"
           body-path: ${{ runner.temp }}/pr-body.md
           labels: event-ingestion

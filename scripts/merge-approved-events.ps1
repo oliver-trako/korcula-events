@@ -54,6 +54,16 @@ function Get-JaccardScore {
   return [Math]::Round($intersection / $union.Count, 3)
 }
 
+function Get-TokenOverlapCount {
+  param($Left, $Right)
+  if (-not $Left -or -not $Right) { return 0 }
+  $count = 0
+  foreach ($key in $Left.Keys) {
+    if ($Right.ContainsKey($key)) { $count++ }
+  }
+  return $count
+}
+
 function Get-EventTitle {
   param($Event)
   if ($null -eq $Event) { return "" }
@@ -65,21 +75,45 @@ function Test-FuzzyDuplicate {
   if ($null -eq $CandidateEvent -or -not $CandidateEvent.date) { return $false }
   $candidateTitle = Get-EventTitle $CandidateEvent
   $candidateTokens = Get-TokenSet $candidateTitle
+  $candidateTitleNorm = Normalize-Text $candidateTitle
   $candidateVenue = Normalize-Text ([string]$CandidateEvent.venue)
   foreach ($existing in $ExistingEvents) {
-    if ([string]$existing.date -ne [string]$CandidateEvent.date) { continue }
-    $score = 0.30
-    if ($CandidateEvent.town -and $existing.town -and [string]$CandidateEvent.town -eq [string]$existing.town) { $score += 0.15 }
-    if ($CandidateEvent.time -and $existing.time -and [string]$CandidateEvent.time -eq [string]$existing.time) { $score += 0.15 }
+    if (-not $existing.date) { continue }
+    $sameDate = [string]$existing.date -eq [string]$CandidateEvent.date
+    $candidateEnd = if ($CandidateEvent.endDate) { [string]$CandidateEvent.endDate } else { [string]$CandidateEvent.date }
+    $existingEnd = if ($existing.endDate) { [string]$existing.endDate } else { [string]$existing.date }
+    $rangeOverlap = ([string]$existing.date -le $candidateEnd) -and ([string]$CandidateEvent.date -le $existingEnd)
+    if (-not ($sameDate -or $rangeOverlap)) { continue }
+    $score = if ($sameDate) { 0.30 } else { 0.18 }
+    $sameTown = $CandidateEvent.town -and $existing.town -and [string]$CandidateEvent.town -eq [string]$existing.town
+    if ($sameTown) { $score += 0.15 }
+    $sameTime = $CandidateEvent.time -and $existing.time -and [string]$CandidateEvent.time -eq [string]$existing.time
+    if ($sameTime) { $score += 0.15 }
     $existingVenue = Normalize-Text ([string]$existing.venue)
-    if ($candidateVenue -and $existingVenue -and ($candidateVenue -eq $existingVenue -or $candidateVenue.Contains($existingVenue) -or $existingVenue.Contains($candidateVenue))) { $score += 0.18 }
-    $categoryOverlap = $false
-    foreach ($cat in @($CandidateEvent.cats)) {
-      if ($cat -and $cat -in @($existing.cats)) { $categoryOverlap = $true; break }
+    $venueMatch = $false
+    if ($candidateVenue -and $existingVenue) {
+      if ($candidateVenue -eq $existingVenue) {
+        $venueMatch = $true
+        $score += 0.18
+      } elseif ($candidateVenue.Length -ge 6 -and $existingVenue.Length -ge 6 -and ($candidateVenue.Contains($existingVenue) -or $existingVenue.Contains($candidateVenue))) {
+        $venueMatch = $true
+        $score += 0.12
+      }
     }
-    $titleScore = Get-JaccardScore $candidateTokens (Get-TokenSet (Get-EventTitle $existing))
+    $existingTitle = Get-EventTitle $existing
+    $existingTokens = Get-TokenSet $existingTitle
+    $titleScore = Get-JaccardScore $candidateTokens $existingTokens
+    $titleOverlap = Get-TokenOverlapCount $candidateTokens $existingTokens
+    $existingTitleNorm = Normalize-Text $existingTitle
+    $exactTitle = $candidateTitleNorm -and $candidateTitleNorm -eq $existingTitleNorm
+    $strongTitle = $exactTitle -or $titleScore -ge 0.50 -or ($titleScore -ge 0.34 -and $titleOverlap -ge 2)
     $score += [Math]::Min(0.35, [double]($titleScore * 0.35))
-    if ($score -ge 0.58 -and ($titleScore -ge 0.18 -or $categoryOverlap)) { return $true }
+    $isLikelyDuplicate = (
+      ($sameDate -and $strongTitle -and ($venueMatch -or $sameTime -or $sameTown -or $titleScore -ge 0.70)) -or
+      ($sameDate -and $venueMatch -and $sameTime) -or
+      ($rangeOverlap -and -not $sameDate -and $strongTitle -and ($venueMatch -or $sameTown))
+    )
+    if ($score -ge 0.62 -and $isLikelyDuplicate) { return $true }
   }
   return $false
 }

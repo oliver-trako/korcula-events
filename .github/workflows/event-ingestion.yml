@@ -64,6 +64,7 @@ jobs:
           $needsReview = @($candidates | Where-Object { $_.status -in @("new","needs-review") }).Count
           $autoApproved = @($candidates | Where-Object { $_.reviewMode -eq "auto-approved" }).Count
           $autoRejected = @($candidates | Where-Object { $_.reviewMode -eq "auto-rejected" }).Count
+          $autoDuplicates = @($candidates | Where-Object { $_.reviewMode -eq "auto-duplicate" }).Count
           $structured = @($candidates | Where-Object { $_.event }).Count
           $duplicates = @($candidates | Where-Object { $_.duplicateRisk -eq "high" }).Count
           $sourceErrors = @($sourceReport.rows | Where-Object { $_.status -eq "error" }).Count
@@ -86,6 +87,7 @@ jobs:
           - Needs review: $needsReview
           - Auto-approved: $autoApproved
           - Auto-rejected stale events: $autoRejected
+          - Auto-marked duplicates: $autoDuplicates
           - Structured candidates: $structured
           - Possible duplicates flagged: $duplicates
           - Source errors: $sourceErrors
@@ -100,6 +102,7 @@ jobs:
           "needs_review=$needsReview" >> $env:GITHUB_OUTPUT
           "auto_approved=$autoApproved" >> $env:GITHUB_OUTPUT
           "auto_rejected=$autoRejected" >> $env:GITHUB_OUTPUT
+          "auto_duplicates=$autoDuplicates" >> $env:GITHUB_OUTPUT
           "duplicates=$duplicates" >> $env:GITHUB_OUTPUT
 
       - name: Create pull request

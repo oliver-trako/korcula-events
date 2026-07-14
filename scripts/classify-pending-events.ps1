@@ -69,6 +69,16 @@ function Get-JaccardScore {
   return [Math]::Round($intersection / $union.Count, 3)
 }
 
+function Get-TokenOverlapCount {
+  param($Left, $Right)
+  if (-not $Left -or -not $Right) { return 0 }
+  $count = 0
+  foreach ($key in $Left.Keys) {
+    if ($Right.ContainsKey($key)) { $count++ }
+  }
+  return $count
+}
+
 function Get-EventTitle {
   param($Event)
   if ($null -eq $Event) { return "" }
@@ -89,7 +99,9 @@ function Get-FuzzyDuplicateMatches {
   foreach ($existing in $ExistingEvents) {
     if (-not $existing.date) { continue }
     $sameDate = [string]$existing.date -eq [string]$CandidateEvent.date
-    $rangeOverlap = $existing.endDate -and ([string]$existing.date -le [string]$CandidateEvent.date) -and ([string]$CandidateEvent.date -le [string]$existing.endDate)
+    $candidateEnd = if ($CandidateEvent.endDate) { [string]$CandidateEvent.endDate } else { [string]$CandidateEvent.date }
+    $existingEnd = if ($existing.endDate) { [string]$existing.endDate } else { [string]$existing.date }
+    $rangeOverlap = ([string]$existing.date -le $candidateEnd) -and ([string]$CandidateEvent.date -le $existingEnd)
     if (-not ($sameDate -or $rangeOverlap)) { continue }
 
     $score = 0.0
@@ -114,30 +126,48 @@ function Get-FuzzyDuplicateMatches {
     }
 
     $existingTime = [string]$existing.time
+    $sameTime = $false
     if ($candidateTime -and $existingTime -and $candidateTime -eq $existingTime) {
+      $sameTime = $true
       $score += 0.15
       [void]$reasons.Add("same time")
     }
 
     $existingVenue = Normalize-Text ([string]$existing.venue)
+    $venueMatch = $false
     if ($candidateVenue -and $existingVenue) {
       if ($candidateVenue -eq $existingVenue) {
+        $venueMatch = $true
         $score += 0.20
         [void]$reasons.Add("same venue")
-      } elseif ($candidateVenue.Contains($existingVenue) -or $existingVenue.Contains($candidateVenue)) {
+      } elseif ($candidateVenue.Length -ge 6 -and $existingVenue.Length -ge 6 -and ($candidateVenue.Contains($existingVenue) -or $existingVenue.Contains($candidateVenue))) {
+        $venueMatch = $true
         $score += 0.12
         [void]$reasons.Add("similar venue")
       }
     }
 
-    $titleScore = Get-JaccardScore $candidateTokens (Get-TokenSet (Get-EventTitle $existing))
+    $existingTitle = Get-EventTitle $existing
+    $existingTokens = Get-TokenSet $existingTitle
+    $titleScore = Get-JaccardScore $candidateTokens $existingTokens
+    $titleOverlap = Get-TokenOverlapCount $candidateTokens $existingTokens
+    $candidateTitleNorm = Normalize-Text $candidateTitle
+    $existingTitleNorm = Normalize-Text $existingTitle
+    $exactTitle = $candidateTitleNorm -and $candidateTitleNorm -eq $existingTitleNorm
+    $strongTitle = $exactTitle -or $titleScore -ge 0.50 -or ($titleScore -ge 0.34 -and $titleOverlap -ge 2)
     if ($titleScore -gt 0) {
       $score += [Math]::Min(0.35, [double]($titleScore * 0.35))
-      if ($titleScore -ge 0.45) { [void]$reasons.Add("similar title") }
+      if ($strongTitle) { [void]$reasons.Add("similar title") }
     }
 
     $score = [Math]::Round([Math]::Min(1.0, [double]$score), 3)
-    if ($score -ge 0.58 -and ($titleScore -ge 0.18 -or $categoryOverlap)) {
+    $isLikelyDuplicate = (
+      ($sameDate -and $strongTitle -and ($venueMatch -or $sameTime -or ([string]$existing.town -eq $candidateTown) -or $titleScore -ge 0.70)) -or
+      ($sameDate -and $venueMatch -and $sameTime) -or
+      ($rangeOverlap -and -not $sameDate -and $strongTitle -and ($venueMatch -or ([string]$existing.town -eq $candidateTown)))
+    )
+
+    if ($score -ge 0.62 -and $isLikelyDuplicate) {
       $matches += [pscustomobject]@{
         eventId = $existing.id
         title = Get-EventTitle $existing
@@ -170,6 +200,7 @@ foreach ($event in $eventsDoc.events) {
 
 $autoApproved = 0
 $autoRejected = 0
+$autoDuplicate = 0
 $needsReview = 0
 $unchanged = 0
 $today = (Get-Date).ToString("yyyy-MM-dd")
@@ -240,6 +271,22 @@ foreach ($candidate in $pendingDoc.candidates) {
       Set-ObjectProperty $candidate "duplicateRisk" "high"
       Set-ObjectProperty $candidate "duplicateMatches" $duplicateMatches
       Add-Reason $reasons "possible duplicate of existing event: $($duplicateMatches[0].eventId) ($($duplicateMatches[0].score))"
+
+      $bestDuplicate = $duplicateMatches[0]
+      $bestReasons = @($bestDuplicate.reasons)
+      $sameOrSimilarVenue = ("same venue" -in $bestReasons) -or ("similar venue" -in $bestReasons)
+      $sameTime = "same time" -in $bestReasons
+      $seasonCoverage = ("date within existing range" -in $bestReasons) -and ("similar title" -in $bestReasons)
+      $sameDayStrongMatch = ("same date" -in $bestReasons) -and ($sameOrSimilarVenue -or $sameTime) -and [double]$bestDuplicate.score -ge 0.78
+
+      if ($seasonCoverage -or $sameDayStrongMatch) {
+        Set-ObjectProperty $candidate "status" "duplicate"
+        Set-ObjectProperty $candidate "reviewMode" "auto-duplicate"
+        Set-ObjectProperty $candidate "reviewedAt" (Get-Date).ToString("s")
+        Set-ObjectProperty $candidate "reviewReasons" @("high-confidence duplicate of existing event: $($bestDuplicate.eventId) ($($bestDuplicate.score))")
+        $autoDuplicate++
+        continue
+      }
     } else {
       Set-ObjectProperty $candidate "duplicateRisk" "low"
       Set-ObjectProperty $candidate "duplicateMatches" @()
@@ -271,6 +318,7 @@ if (-not $WhatIf) {
 Write-Host "Classification complete:"
 Write-Host "  Auto-approved: $autoApproved"
 Write-Host "  Auto-rejected: $autoRejected"
+Write-Host "  Auto-duplicate: $autoDuplicate"
 Write-Host "  Needs review:  $needsReview"
 Write-Host "  Unchanged:     $unchanged"
 if ($WhatIf) {

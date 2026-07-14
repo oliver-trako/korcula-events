@@ -128,9 +128,15 @@ body {
   padding: 10px 12px; font-size:.83rem; cursor:pointer; white-space:nowrap;
   border-radius:8px 8px 0 0; font-weight:700; font-family: var(--font-body);
   transition: color .15s ease, background .15s ease;
+  text-align:center; text-decoration:none;
 }
 .view-tab:hover { color: rgba(255,255,255,.92); }
 .view-tab.active { color:#071f3a; background:var(--gold); border-color:var(--gold); box-shadow:0 0 24px rgba(247,201,72,.26); }
+.view-link {
+  display:flex; align-items:center; justify-content:center;
+  background:rgba(255,255,255,.12);
+}
+.view-link:hover { background:rgba(255,255,255,.2); }
 
 /* ---------- Filter bar ---------- */
 .filter-bar {

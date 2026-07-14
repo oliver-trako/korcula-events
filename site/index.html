@@ -120,12 +120,13 @@
     <input type="search" id="searchInput" placeholder="Pretraži događanja…" autocomplete="off">
   </div>
 
-  <nav class="view-tabs" role="tablist">
+  <nav class="view-tabs" role="navigation" aria-label="Main event views">
     <button class="view-tab active" data-view="calendar" role="tab" aria-selected="true" aria-controls="view-calendar"><span id="navCalendar">Kalendar</span></button>
     <button class="view-tab" data-view="today" role="tab" aria-selected="false" aria-controls="view-today"><span id="navToday">Danas</span></button>
-    <button class="view-tab" data-view="agenda" role="tab" aria-selected="false" aria-controls="view-agenda"><span id="navAgenda">Popis</span></button>
+    <button class="view-tab" data-view="agenda" role="tab" aria-selected="false" aria-controls="view-agenda"><span id="navAgenda">Prikaz popisa</span></button>
     <button class="view-tab" data-view="season" role="tab" aria-selected="false" aria-controls="view-season"><span id="navSeason">Sezona</span></button>
     <button class="view-tab" data-view="map" role="tab" aria-selected="false" aria-controls="view-map"><span id="navMap">Mjesta</span></button>
+    <a class="view-tab view-link" href="/categories/"><span id="navCategories">Kategorije</span></a>
   </nav>
 </header>
 

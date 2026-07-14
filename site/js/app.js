@@ -114,6 +114,7 @@
     setText("#navCalendar", T.navCalendar);
     setText("#navSeason", T.navSeason);
     setText("#navMap", T.navMap);
+    setText("#navCategories", T.navCategories);
     setText("#filterCategory", T.filterCategory);
     setText("#filterLocation", T.filterLocation);
     setText("#filterCategoryLabel", T.filterCategory);
@@ -670,7 +671,7 @@
     ["today", "agenda", "calendar", "season", "map"].forEach((v) => {
       $("#view-" + v).hidden = state.view !== v;
     });
-    $$(".view-tab").forEach((btn) => {
+    $$("button.view-tab").forEach((btn) => {
       const active = btn.dataset.view === state.view;
       btn.classList.toggle("active", active);
       btn.setAttribute("aria-selected", active);
@@ -1281,7 +1282,7 @@
       }
     });
 
-    $$(".view-tab").forEach((btn) => {
+    $$("button.view-tab").forEach((btn) => {
       btn.addEventListener("click", () => { state.view = btn.dataset.view; render(); });
     });
 

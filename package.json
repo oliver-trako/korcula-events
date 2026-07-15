@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "node scripts/build-site.mjs"
+    "build:js": "terser site/js/app.js --compress --mangle -o site/js/app.min.js",
+    "build": "npm run build:js && node scripts/build-site.mjs"
+  },
+  "devDependencies": {
+    "terser": "^5.49.0"
   }
 }

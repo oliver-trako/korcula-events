@@ -74,7 +74,7 @@
   }
 
   // ---------- Load data ----------
-  fetch("data/events.json")
+  fetch("data/events.json", { cache: "no-cache" })
     .then((r) => r.json())
     .then((data) => {
       state.events = data.events.slice().sort(compareEvents);

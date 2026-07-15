@@ -1,5 +1,6 @@
 import { cp, mkdir, rm, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
+import { createHash } from "node:crypto";
 
 const root = process.cwd();
 const dist = path.join(root, "dist");
@@ -1535,6 +1536,23 @@ await replaceInFile(path.join(dist, "index.html"), [
 
 await replaceInFile(path.join(dist, "css", "style.css"), [
   ["../../generated_images/", "../generated_images/"]
+]);
+
+// Cache-busting: app.min.js/style.min.css/i18n.js are unversioned filenames, so browsers
+// (and Cloudflare's edge cache) can keep serving a stale copy after a deploy until the
+// cache naturally expires -- most visitors never hard-refresh. Append a short content-hash
+// query string that changes whenever the file's content changes, forcing a fresh fetch.
+async function hashOf(file) {
+  const buf = await readFile(file);
+  return createHash("sha256").update(buf).digest("hex").slice(0, 10);
+}
+const jsHash = await hashOf(path.join(dist, "js", "app.min.js"));
+const i18nHash = await hashOf(path.join(dist, "js", "i18n.js"));
+const cssHash = await hashOf(path.join(dist, "css", "style.min.css"));
+await replaceInFile(path.join(dist, "index.html"), [
+  [`href="css/style.min.css"`, `href="css/style.min.css?v=${cssHash}"`],
+  [`src="js/i18n.js"`, `src="js/i18n.js?v=${i18nHash}"`],
+  [`src="js/app.min.js"`, `src="js/app.min.js?v=${jsHash}"`]
 ]);
 
 const data = JSON.parse(await readFile(path.join(root, "site", "data", "events.json"), "utf8"));

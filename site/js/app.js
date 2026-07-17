@@ -115,6 +115,13 @@
     setText("#navSeason", T.navSeason);
     setText("#navMap", T.navMap);
     setText("#navCategories", T.navCategories);
+    setText("#popularLinksTitle", T.popularLinksTitle);
+    setText("#popularLinksIntro", T.popularLinksIntro);
+    setText("#popularOliver", T.popularOliver);
+    setText("#popularWine", T.popularWine);
+    setText("#popularNightlife", T.popularNightlife);
+    setText("#popularThisWeek", T.popularThisWeek);
+    setText("#popularFestivals", T.popularFestivals);
     setText("#filterCategory", T.filterCategory);
     setText("#filterLocation", T.filterLocation);
     setText("#filterCategoryLabel", T.filterCategory);

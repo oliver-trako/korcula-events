@@ -201,12 +201,37 @@ const guidePages = {
     intro: "Korčula nightlife is split between waterfront bars, old-town spots, beach venues and open-air summer clubs. This guide highlights the recurring nightlife programmes and dated party events currently in the calendar.",
     filter: (event) => (event.cats || []).includes("nightlife")
   },
+  "bars-clubs": {
+    title: "Korčula Bars and Clubs 2026 | Dos Locos, Boogie Jungle, Blue Bar and Nightlife",
+    h1: "Korčula Bars and Clubs",
+    description: "Korčula bars, clubs and nightlife events including Dos Locos, Boogie Jungle, Blue Bar, DJ nights, beach clubs and late bars.",
+    intro: "Search demand is already showing around Korčula bars and clubs. This page pulls together nightlife listings for venues such as Dos Locos, Boogie Jungle, Blue Bar, Peco's Pub, La Banya and other seasonal late-night programmes where they are in the event database.",
+    filter: (event) => (event.cats || []).includes("nightlife") || /dos locos|boogie|blue bar|blue club|peco|la banya|casablanca|club|dj|nightlife/i.test(`${event.en || ""} ${event.hr || ""} ${event.venue || ""}`)
+  },
   "kids-family": {
     title: "Korčula with Kids 2026 | Family Events and Children’s Activities",
     h1: "Korčula with Kids",
     description: "Family-friendly Korčula events including kids' theatre, cinema, workshops, games and activities.",
     intro: "Family events on Korčula include open-air cinema, children's theatre, workshops, beach games, village activities and sports programmes.",
     filter: (event) => (event.cats || []).includes("kids")
+  },
+  "oliver-dragojevic": {
+    title: "Oliver Dragojević Korčula and Vela Luka Events 2026 | Trag u beskraju",
+    h1: "Oliver Dragojević Events on Korčula and Vela Luka",
+    description: "Oliver Dragojević memorial events, concerts and Trag u beskraju listings in Vela Luka and across Korčula island for 2026.",
+    intro: "Oliver Dragojević searches are currently one of the strongest Google signals for the site. This guide groups Oliver memorial events, Trag u beskraju concerts and related Vela Luka listings into one crawlable page.",
+    filter: (event) => /oliver|dragojević|dragojevic|trag u beskraju/i.test(`${event.en || ""} ${event.hr || ""} ${event.desc?.en || ""} ${event.desc?.hr || ""} ${event.venue || ""}`)
+  },
+  "wine-festivals": {
+    title: "Korčula Wine Festivals 2026 | Grk, Sabatina, Wine Nights and Food Events",
+    h1: "Korčula Wine Festivals and Wine Nights",
+    description: "Korčula wine festival guide for Grk wine, Sabatina, food and wine nights, vineyard events and summer tastings.",
+    intro: "Wine and food searches are another strong Google signal. This guide groups Grk wine, Sabatina, wine nights, food festivals and tasting events across Korčula and nearby villages.",
+    filter: (event) => {
+      const cats = event.cats || [];
+      const text = `${event.en || ""} ${event.hr || ""} ${event.desc?.en || ""} ${event.desc?.hr || ""}`;
+      return /wine|vino|vinski|grk|sabatina|tasting|degust/i.test(text) || (cats.includes("food") && !cats.includes("nightlife"));
+    }
   },
   "summer-festivals": {
     title: "Best Summer Festivals on Korčula 2026",

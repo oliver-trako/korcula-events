@@ -6,6 +6,7 @@ const root = process.cwd();
 const dist = path.join(root, "dist");
 const siteUrl = "https://korcula-events.com";
 const buildDate = new Date().toISOString().slice(0, 10);
+const assetVersion = "20260717-2";
 const defaultShareImage = `${siteUrl}/generated_images/019f4238-0d22-7c61-a5de-d8d8a9751fdf/ig_08cb38e27fc1cd4c016a4e6b76535c8191b68b7bca395d86af.png`;
 
 const langMeta = {
@@ -874,7 +875,7 @@ ${alternates}
 <meta name="twitter:title" content="${esc(title)}">
 <meta name="twitter:description" content="${esc(description)}">
 <meta name="twitter:image" content="${esc(imageUrl)}">
-<link rel="stylesheet" href="/css/style.min.css">
+<link rel="stylesheet" href="/css/style.min.css?v=${assetVersion}">
 <style>
 .seo-header{max-width:960px;margin:0 auto;padding:20px 16px 0}
 .seo-header-inner{background:#fff;border:1px solid var(--border);border-radius:12px;padding:16px;display:flex;align-items:center;justify-content:space-between;gap:16px;box-shadow:var(--shadow)}

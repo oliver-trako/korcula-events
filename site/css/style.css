@@ -66,7 +66,8 @@ body {
   display:flex; align-items:flex-start; justify-content:space-between; gap:12px;
   max-width: 900px; margin:0 auto;
 }
-.brand { display:flex; align-items:center; gap:14px; }
+.brand { display:flex; align-items:center; gap:14px; color:#fff; text-decoration:none; }
+.brand:hover h1 { text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:4px; }
 .brand-mark {
   width:64px; height:64px; border-radius:14px;
   box-shadow:0 0 0 1px rgba(255,255,255,.16), 0 12px 28px rgba(7,31,58,.34);
@@ -345,6 +346,16 @@ main { max-width:900px; min-height:760px; margin: 0 auto; padding: 14px 16px 0; 
   position:relative; z-index:1; max-width:92vw; max-height:90vh; border-radius:10px; box-shadow: var(--shadow-lg);
   margin:auto; display:block;
 }
+.gallery-nav {
+  position:fixed; top:50%; transform:translateY(-50%); z-index:302;
+  width:44px; height:58px; border:1px solid rgba(255,255,255,.48); border-radius:8px;
+  background:rgba(255,255,255,.9); color:var(--sea-deeper); font-size:2.2rem; line-height:1;
+  cursor:pointer; box-shadow:var(--shadow-lg);
+}
+.gallery-nav:hover { background:#fff; border-color:var(--gold); }
+.gallery-nav[hidden] { display:none; }
+.gallery-prev { left:18px; }
+.gallery-next { right:18px; }
 
 /* ---------- Suggest an event ---------- */
 .suggest-fab {

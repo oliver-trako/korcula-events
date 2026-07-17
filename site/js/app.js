@@ -280,18 +280,37 @@
   }
 
   let lastFocusedEl = null;
+  let galleryItems = [];
+  let galleryIndex = -1;
 
-  function openFlyer(url, ev) {
+  function setGalleryNavVisible(visible) {
+    $("#galleryPrev").hidden = !visible;
+    $("#galleryNext").hidden = !visible;
+  }
+
+  function openFlyer(url, ev, gallery, index) {
     if (ev) ev.stopPropagation();
     lastFocusedEl = document.activeElement;
+    galleryItems = gallery || [];
+    galleryIndex = Number.isInteger(index) ? index : -1;
     $("#flyerImg").src = url;
+    $("#flyerImg").alt = galleryItems.length ? "Račišće photo" : "Event flyer";
+    setGalleryNavVisible(galleryItems.length > 1);
     $("#flyerModal").hidden = false;
     document.body.style.overflow = "hidden";
     $("#flyerClose").focus();
   }
+  function showGalleryOffset(offset) {
+    if (!galleryItems.length) return;
+    galleryIndex = (galleryIndex + offset + galleryItems.length) % galleryItems.length;
+    $("#flyerImg").src = galleryItems[galleryIndex];
+  }
   function closeFlyer() {
     $("#flyerModal").hidden = true;
     $("#flyerImg").src = "";
+    galleryItems = [];
+    galleryIndex = -1;
+    setGalleryNavVisible(false);
     document.body.style.overflow = "";
     if (lastFocusedEl) lastFocusedEl.focus();
   }
@@ -1309,7 +1328,9 @@
     if (scenicStrip) {
       scenicStrip.addEventListener("click", (ev) => {
         const btn = ev.target.closest("[data-scenic-image]");
-        if (btn) openFlyer(btn.dataset.scenicImage, ev);
+        if (!btn) return;
+        const items = $$("[data-scenic-image]", scenicStrip).map((item) => item.dataset.scenicImage);
+        openFlyer(btn.dataset.scenicImage, ev, items, items.indexOf(btn.dataset.scenicImage));
       });
     }
 
@@ -1344,7 +1365,13 @@
     $("#modalBackdrop").addEventListener("click", closeModal);
     $("#flyerClose").addEventListener("click", closeFlyer);
     $("#flyerBackdrop").addEventListener("click", closeFlyer);
-    document.addEventListener("keydown", (e) => { if (e.key === "Escape") { closeModal(); closeSuggest(); closeFlyer(); } });
+    $("#galleryPrev").addEventListener("click", () => showGalleryOffset(-1));
+    $("#galleryNext").addEventListener("click", () => showGalleryOffset(1));
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") { closeModal(); closeSuggest(); closeFlyer(); }
+      if (!$("#flyerModal").hidden && galleryItems.length > 1 && e.key === "ArrowLeft") showGalleryOffset(-1);
+      if (!$("#flyerModal").hidden && galleryItems.length > 1 && e.key === "ArrowRight") showGalleryOffset(1);
+    });
 
     $("#suggestFab").addEventListener("click", openSuggest);
     $("#suggestClose").addEventListener("click", closeSuggest);

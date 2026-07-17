@@ -85,13 +85,13 @@
 
 <header class="site-header">
   <div class="header-row">
-    <div class="brand">
+    <a class="brand" href="/" aria-label="Korčula Island Events home">
       <img class="brand-mark" src="assets/logo-korcula-events.svg" alt="" aria-hidden="true">
       <div>
         <h1 id="siteTitle">Događanja na Korčuli</h1>
         <p id="tagline" class="tagline">Svi festivali, koncerti i fešte na otoku — na jednom mjestu</p>
       </div>
-    </div>
+    </a>
     <div class="lang-switch">
       <select id="langSelect" aria-label="Language">
         <option value="hr">🇭🇷 Hrvatski</option>
@@ -211,7 +211,9 @@
 <div id="flyerModal" class="modal flyer-modal" hidden role="dialog" aria-modal="true" aria-label="Event flyer">
   <div class="modal-backdrop" id="flyerBackdrop"></div>
   <button class="modal-close flyer-modal-close" id="flyerClose" aria-label="Close">✕</button>
+  <button class="gallery-nav gallery-prev" id="galleryPrev" type="button" aria-label="Previous photo" hidden>‹</button>
   <img id="flyerImg" class="flyer-full-img" src="" alt="Event flyer">
+  <button class="gallery-nav gallery-next" id="galleryNext" type="button" aria-label="Next photo" hidden>›</button>
 </div>
 
 <button id="suggestFab" class="suggest-fab" aria-haspopup="dialog">

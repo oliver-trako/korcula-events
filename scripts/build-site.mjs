@@ -671,7 +671,10 @@ const flyers = {
   litoUPostrani: "WhatsApp Image 2026-07-08 at 23.01.33.jpeg",
   dicoHomo: "WhatsApp Image 2026-07-08 at 23.01.40.jpeg",
   luskoLito: "WhatsApp Image 2026-07-08 at 23.01.50.jpeg",
-  litoURaciscu: "lito-u-raciscu.jpeg"
+  litoURaciscu: "lito-u-raciscu.jpeg",
+  vecerPrsuta: "742480682_122111178783315720_7349343465846962909_n.jpg",
+  vecerPrsuta2: "mediteran-prsut-sir-vino-2.jpeg",
+  vesnaHariBlato: "vesna-pisarovic-hari-roncevic-blato.jpeg"
 };
 const noFlyerIds = new Set(["kt-brodogradnja","kt-kulkviz","kt-moreska-season","kt-svtodor","kt-swordfest","kt-korkyra-baroque","kt-markopolo-gala","kt-winefest"]);
 
@@ -708,9 +711,12 @@ function getFlyer(event) {
   if (id === "vl-racki") return flyerUrl(flyers.brunoRacki);
   if (id === "vl-chess-mala") return flyerUrl(flyers.malaVelaLukaSah);
   if (id.startsWith("vl-")) return flyerUrl(flyers.luskoLito);
+  if (id === "blato-vesna-pisarovic-hari-roncevic") return flyerUrl(flyers.vesnaHariBlato);
   if (id.startsWith("blato-")) return flyerUrl(flyers.blatskoLjeto);
   if (id.startsWith("smk-")) return flyerUrl(flyers.smokviskoLito);
   if (id.startsWith("pst-")) return flyerUrl(flyers.litoUPostrani);
+  if (id === "racisce-vecer-prsuta-2") return flyerUrl(flyers.vecerPrsuta2);
+  if (id === "racisce-vecer-prsuta") return flyerUrl(flyers.vecerPrsuta);
   if (id.startsWith("racisce-")) return flyerUrl(flyers.litoURaciscu);
   if (id === "cara-vuco") return flyerUrl(flyers.sinisaVuco);
   if (id.startsWith("rc-")) return flyerUrl(flyers.dicoHomo);

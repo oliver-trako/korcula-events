@@ -1,11 +1,852 @@
 {
-  "generated": null,
-  "priority": null,
+  "generated": "2026-07-23T12:04:37",
+  "priority": "high",
   "limit": 0,
   "counts": {
-    "fetched": 0,
-    "errors": 0,
-    "skipped": 0
+    "fetched": 13,
+    "errors": 4,
+    "skipped": 36
   },
-  "rows": []
+  "rows": [
+    {
+      "sourceId": "visit-korcula",
+      "sourceName": "Tourist Board of the Town of Korcula",
+      "kind": "website",
+      "scrapeMode": "html",
+      "url": "https://visitkorcula.eu/en/events/",
+      "status": "fetched",
+      "statusCode": 200,
+      "error": null,
+      "note": null,
+      "dateHintCount": 13,
+      "timeHintCount": 2,
+      "keywordHits": [
+        "Korcula",
+        "events"
+      ]
+    },
+    {
+      "sourceId": "visit-korcula",
+      "sourceName": "Tourist Board of the Town of Korcula",
+      "kind": "facebook",
+      "scrapeMode": "manual-social",
+      "url": "https://www.facebook.com/KorculaTouristBoard/",
+      "status": "skipped-social",
+      "statusCode": null,
+      "error": null,
+      "note": "Use as manual/social lead unless IncludeSocial is set.",
+      "dateHintCount": 1,
+      "timeHintCount": 1,
+      "keywordHits": [
+        null
+      ]
+    },
+    {
+      "sourceId": "visit-korcula-racisce",
+      "sourceName": "Summer in Racisce",
+      "kind": "website",
+      "scrapeMode": "html",
+      "url": "https://visitkorcula.eu/en/events/summer-in-racisce/",
+      "status": "fetched",
+      "statusCode": 200,
+      "error": null,
+      "note": null,
+      "dateHintCount": 20,
+      "timeHintCount": 6,
+      "keywordHits": [
+        "Račišće",
+        "Igre Račića",
+        "cinema",
+        "Pumpurela",
+        "Račiška kronika"
+      ]
+    },
+    {
+      "sourceId": "centar-kulture-korcula",
+      "sourceName": "Centar za kulturu Korčula",
+      "kind": "website",
+      "scrapeMode": "html",
+      "url": "https://kulturakorcula.hr/kino-najave/",
+      "status": "fetched",
+      "statusCode": 200,
+      "error": null,
+      "note": null,
+      "dateHintCount": 0,
+      "timeHintCount": 0,
+      "keywordHits": []
+    },
+    {
+      "sourceId": "centar-kulture-korcula",
+      "sourceName": "Centar za kulturu Korčula",
+      "kind": "facebook",
+      "scrapeMode": "manual-social",
+      "url": "https://www.facebook.com/kulturakorcula/",
+      "status": "skipped-social",
+      "statusCode": null,
+      "error": null,
+      "note": "Use as manual/social lead unless IncludeSocial is set.",
+      "dateHintCount": 1,
+      "timeHintCount": 1,
+      "keywordHits": [
+        null
+      ]
+    },
+    {
+      "sourceId": "visit-lumbarda",
+      "sourceName": "Visit Lumbarda",
+      "kind": "website",
+      "scrapeMode": "html",
+      "url": "https://www.visitlumbarda.eu/",
+      "status": "fetched",
+      "statusCode": 200,
+      "error": null,
+      "note": null,
+      "dateHintCount": 0,
+      "timeHintCount": 0,
+      "keywordHits": []
+    },
+    {
+      "sourceId": "visit-lumbarda",
+      "sourceName": "Visit Lumbarda",
+      "kind": "facebook",
+      "scrapeMode": "manual-social",
+      "url": "https://www.facebook.com/visitlumbarda/",
+      "status": "skipped-social",
+      "statusCode": null,
+      "error": null,
+      "note": "Use as manual/social lead unless IncludeSocial is set.",
+      "dateHintCount": 1,
+      "timeHintCount": 1,
+      "keywordHits": [
+        null
+      ]
+    },
+    {
+      "sourceId": "tz-vela-luka",
+      "sourceName": "Vela Luka Tourist Board",
+      "kind": "website",
+      "scrapeMode": "html",
+      "url": "https://tzvelaluka.hr/",
+      "status": "fetched",
+      "statusCode": 200,
+      "error": null,
+      "note": null,
+      "dateHintCount": 0,
+      "timeHintCount": 0,
+      "keywordHits": []
+    },
+    {
+      "sourceId": "tz-blato",
+      "sourceName": "Tourist Board Blato",
+      "kind": "website",
+      "scrapeMode": "html",
+      "url": "https://tzo-blato.hr/en/",
+      "status": "fetched",
+      "statusCode": 200,
+      "error": null,
+      "note": null,
+      "dateHintCount": 0,
+      "timeHintCount": 0,
+      "keywordHits": []
+    },
+    {
+      "sourceId": "smokvica-brna",
+      "sourceName": "Smokvica / Brna Tourist Sources",
+      "kind": "search",
+      "scrapeMode": "search-lead",
+      "url": "https://www.google.com/search?q=Smokvica+Brna+events+Kor%C4%8Dula",
+      "status": "skipped-social",
+      "statusCode": null,
+      "error": null,
+      "note": "Use as manual/social lead unless IncludeSocial is set.",
+      "dateHintCount": 1,
+      "timeHintCount": 1,
+      "keywordHits": [
+        null
+      ]
+    },
+    {
+      "sourceId": "moreska",
+      "sourceName": "Moreška Korčula",
+      "kind": "website",
+      "scrapeMode": "html",
+      "url": "https://moreska.eu/",
+      "status": "fetched",
+      "statusCode": 200,
+      "error": null,
+      "note": null,
+      "dateHintCount": 0,
+      "timeHintCount": 4,
+      "keywordHits": [
+        "Moreška",
+        "sword dance",
+        "tickets",
+        "performance"
+      ]
+    },
+    {
+      "sourceId": "moreska",
+      "sourceName": "Moreška Korčula",
+      "kind": "tickets",
+      "scrapeMode": "ticketing",
+      "url": "https://moreska.eu/tickets",
+      "status": "fetched",
+      "statusCode": 200,
+      "error": null,
+      "note": null,
+      "dateHintCount": 0,
+      "timeHintCount": 12,
+      "keywordHits": [
+        "Moreška",
+        "tickets",
+        "performance"
+      ]
+    },
+    {
+      "sourceId": "blue-korcula",
+      "sourceName": "Blue Bar / Blue Club Korcula",
+      "kind": "website",
+      "scrapeMode": "html",
+      "url": "https://bluekorcula.com/club",
+      "status": "fetched",
+      "statusCode": 200,
+      "error": null,
+      "note": null,
+      "dateHintCount": 0,
+      "timeHintCount": 0,
+      "keywordHits": []
+    },
+    {
+      "sourceId": "blue-korcula",
+      "sourceName": "Blue Bar / Blue Club Korcula",
+      "kind": "facebook",
+      "scrapeMode": "manual-social",
+      "url": "https://www.facebook.com/bluekorcula/",
+      "status": "skipped-social",
+      "statusCode": null,
+      "error": null,
+      "note": "Use as manual/social lead unless IncludeSocial is set.",
+      "dateHintCount": 1,
+      "timeHintCount": 1,
+      "keywordHits": [
+        null
+      ]
+    },
+    {
+      "sourceId": "blue-korcula",
+      "sourceName": "Blue Bar / Blue Club Korcula",
+      "kind": "instagram",
+      "scrapeMode": "manual-social",
+      "url": "https://www.instagram.com/bluekorcula/",
+      "status": "skipped-social",
+      "statusCode": null,
+      "error": null,
+      "note": "Use as manual/social lead unless IncludeSocial is set.",
+      "dateHintCount": 1,
+      "timeHintCount": 1,
+      "keywordHits": [
+        null
+      ]
+    },
+    {
+      "sourceId": "blue-korcula",
+      "sourceName": "Blue Bar / Blue Club Korcula",
+      "kind": "ticketing-search",
+      "scrapeMode": "ticketing",
+      "url": "https://core-event.co/en/search?query=Kor%C4%8Dula",
+      "status": "error",
+      "statusCode": null,
+      "error": "Response status code does not indicate success: 403 (Forbidden).",
+      "note": null,
+      "dateHintCount": 1,
+      "timeHintCount": 1,
+      "keywordHits": [
+        null
+      ]
+    },
+    {
+      "sourceId": "boogie-jungle",
+      "sourceName": "Boogie Jungle / Boogie Beach",
+      "kind": "facebook",
+      "scrapeMode": "manual-social",
+      "url": "https://www.facebook.com/thejungleclub1/",
+      "status": "skipped-social",
+      "statusCode": null,
+      "error": null,
+      "note": "Use as manual/social lead unless IncludeSocial is set.",
+      "dateHintCount": 1,
+      "timeHintCount": 1,
+      "keywordHits": [
+        null
+      ]
+    },
+    {
+      "sourceId": "boogie-jungle",
+      "sourceName": "Boogie Jungle / Boogie Beach",
+      "kind": "search",
+      "scrapeMode": "search-lead",
+      "url": "https://www.google.com/search?q=Boogie+Jungle+Kor%C4%8Dula+events",
+      "status": "skipped-social",
+      "statusCode": null,
+      "error": null,
+      "note": "Use as manual/social lead unless IncludeSocial is set.",
+      "dateHintCount": 1,
+      "timeHintCount": 1,
+      "keywordHits": [
+        null
+      ]
+    },
+    {
+      "sourceId": "la-banya",
+      "sourceName": "La Banya Beach Oasis",
+      "kind": "website",
+      "scrapeMode": "html",
+      "url": "https://labanya.hr",
+      "status": "fetched",
+      "statusCode": 200,
+      "error": null,
+      "note": null,
+      "dateHintCount": 0,
+      "timeHintCount": 0,
+      "keywordHits": []
+    },
+    {
+      "sourceId": "la-banya",
+      "sourceName": "La Banya Beach Oasis",
+      "kind": "instagram",
+      "scrapeMode": "manual-social",
+      "url": "https://www.instagram.com/la__banya/",
+      "status": "skipped-social",
+      "statusCode": null,
+      "error": null,
+      "note": "Use as manual/social lead unless IncludeSocial is set.",
+      "dateHintCount": 1,
+      "timeHintCount": 1,
+      "keywordHits": [
+        null
+      ]
+    },
+    {
+      "sourceId": "la-banya",
+      "sourceName": "La Banya Beach Oasis",
+      "kind": "facebook",
+      "scrapeMode": "manual-social",
+      "url": "https://www.facebook.com/LaBanyaKorcula/",
+      "status": "skipped-social",
+      "statusCode": null,
+      "error": null,
+      "note": "Use as manual/social lead unless IncludeSocial is set.",
+      "dateHintCount": 1,
+      "timeHintCount": 1,
+      "keywordHits": [
+        null
+      ]
+    },
+    {
+      "sourceId": "udruga-mladih-racisce",
+      "sourceName": "Udruga Mladih Račišće",
+      "kind": "facebook",
+      "scrapeMode": "manual-social",
+      "url": "https://www.facebook.com/people/Udruga-Mladih-Ra%C4%8Di%C5%A1%C4%87e/100005643139445/",
+      "status": "skipped-social",
+      "statusCode": null,
+      "error": null,
+      "note": "Use as manual/social lead unless IncludeSocial is set.",
+      "dateHintCount": 1,
+      "timeHintCount": 1,
+      "keywordHits": [
+        null
+      ]
+    },
+    {
+      "sourceId": "mjesni-odbor-racisce",
+      "sourceName": "Mjesni odbor Račišće",
+      "kind": "facebook",
+      "scrapeMode": "manual-social",
+      "url": "https://www.facebook.com/moracisce2015/",
+      "status": "skipped-social",
+      "statusCode": null,
+      "error": null,
+      "note": "Use as manual/social lead unless IncludeSocial is set.",
+      "dateHintCount": 1,
+      "timeHintCount": 1,
+      "keywordHits": [
+        null
+      ]
+    },
+    {
+      "sourceId": "island-sports-tournaments",
+      "sourceName": "Island Sports Tournament Leads",
+      "kind": "search",
+      "scrapeMode": "search-lead",
+      "url": "https://www.google.com/search?q=Kor%C4%8Dula+nogometni+turnir+2026",
+      "status": "skipped-social",
+      "statusCode": null,
+      "error": null,
+      "note": "Use as manual/social lead unless IncludeSocial is set.",
+      "dateHintCount": 1,
+      "timeHintCount": 1,
+      "keywordHits": [
+        null
+      ]
+    },
+    {
+      "sourceId": "island-sports-tournaments",
+      "sourceName": "Island Sports Tournament Leads",
+      "kind": "search",
+      "scrapeMode": "search-lead",
+      "url": "https://www.google.com/search?q=Kor%C4%8Dula+vaterpolo+turnir+2026",
+      "status": "skipped-social",
+      "statusCode": null,
+      "error": null,
+      "note": "Use as manual/social lead unless IncludeSocial is set.",
+      "dateHintCount": 1,
+      "timeHintCount": 1,
+      "keywordHits": [
+        null
+      ]
+    },
+    {
+      "sourceId": "island-sports-tournaments",
+      "sourceName": "Island Sports Tournament Leads",
+      "kind": "search",
+      "scrapeMode": "search-lead",
+      "url": "https://www.google.com/search?q=Kor%C4%8Dula+ko%C5%A1arka%C5%A1ki+turnir+2026",
+      "status": "skipped-social",
+      "statusCode": null,
+      "error": null,
+      "note": "Use as manual/social lead unless IncludeSocial is set.",
+      "dateHintCount": 1,
+      "timeHintCount": 1,
+      "keywordHits": [
+        null
+      ]
+    },
+    {
+      "sourceId": "island-sports-tournaments",
+      "sourceName": "Island Sports Tournament Leads",
+      "kind": "facebook-search",
+      "scrapeMode": "manual-social",
+      "url": "https://www.facebook.com/search/top?q=Kor%C4%8Dula%20nogometni%20turnir",
+      "status": "skipped-social",
+      "statusCode": null,
+      "error": null,
+      "note": "Use as manual/social lead unless IncludeSocial is set.",
+      "dateHintCount": 1,
+      "timeHintCount": 1,
+      "keywordHits": [
+        null
+      ]
+    },
+    {
+      "sourceId": "island-sports-tournaments",
+      "sourceName": "Island Sports Tournament Leads",
+      "kind": "facebook-search",
+      "scrapeMode": "manual-social",
+      "url": "https://www.facebook.com/search/top?q=Kor%C4%8Dula%20vaterpolo%20turnir",
+      "status": "skipped-social",
+      "statusCode": null,
+      "error": null,
+      "note": "Use as manual/social lead unless IncludeSocial is set.",
+      "dateHintCount": 1,
+      "timeHintCount": 1,
+      "keywordHits": [
+        null
+      ]
+    },
+    {
+      "sourceId": "island-sports-tournaments",
+      "sourceName": "Island Sports Tournament Leads",
+      "kind": "facebook-search",
+      "scrapeMode": "manual-social",
+      "url": "https://www.facebook.com/search/top?q=Kor%C4%8Dula%20ko%C5%A1arka%C5%A1ki%20turnir",
+      "status": "skipped-social",
+      "statusCode": null,
+      "error": null,
+      "note": "Use as manual/social lead unless IncludeSocial is set.",
+      "dateHintCount": 1,
+      "timeHintCount": 1,
+      "keywordHits": [
+        null
+      ]
+    },
+    {
+      "sourceId": "village-sports-racisce-kneze",
+      "sourceName": "Račišće / Kneže Village Sports Leads",
+      "kind": "search",
+      "scrapeMode": "search-lead",
+      "url": "https://www.google.com/search?q=Ra%C4%8Di%C5%A1%C4%87e+nogomet+vaterpolo+ko%C5%A1arka+turnir",
+      "status": "skipped-social",
+      "statusCode": null,
+      "error": null,
+      "note": "Use as manual/social lead unless IncludeSocial is set.",
+      "dateHintCount": 1,
+      "timeHintCount": 1,
+      "keywordHits": [
+        null
+      ]
+    },
+    {
+      "sourceId": "village-sports-racisce-kneze",
+      "sourceName": "Račišće / Kneže Village Sports Leads",
+      "kind": "search",
+      "scrapeMode": "search-lead",
+      "url": "https://www.google.com/search?q=Kne%C5%BEe+nogomet+vaterpolo+ko%C5%A1arka+turnir",
+      "status": "skipped-social",
+      "statusCode": null,
+      "error": null,
+      "note": "Use as manual/social lead unless IncludeSocial is set.",
+      "dateHintCount": 1,
+      "timeHintCount": 1,
+      "keywordHits": [
+        null
+      ]
+    },
+    {
+      "sourceId": "village-sports-racisce-kneze",
+      "sourceName": "Račišće / Kneže Village Sports Leads",
+      "kind": "facebook-search",
+      "scrapeMode": "manual-social",
+      "url": "https://www.facebook.com/search/top?q=Ra%C4%8Di%C5%A1%C4%87e%20nogomet%20turnir",
+      "status": "skipped-social",
+      "statusCode": null,
+      "error": null,
+      "note": "Use as manual/social lead unless IncludeSocial is set.",
+      "dateHintCount": 1,
+      "timeHintCount": 1,
+      "keywordHits": [
+        null
+      ]
+    },
+    {
+      "sourceId": "village-sports-racisce-kneze",
+      "sourceName": "Račišće / Kneže Village Sports Leads",
+      "kind": "facebook-search",
+      "scrapeMode": "manual-social",
+      "url": "https://www.facebook.com/search/top?q=Kne%C5%BEe%20nogomet%20turnir",
+      "status": "skipped-social",
+      "statusCode": null,
+      "error": null,
+      "note": "Use as manual/social lead unless IncludeSocial is set.",
+      "dateHintCount": 1,
+      "timeHintCount": 1,
+      "keywordHits": [
+        null
+      ]
+    },
+    {
+      "sourceId": "core-event-korcula",
+      "sourceName": "CoreEvent Korcula Tickets",
+      "kind": "search",
+      "scrapeMode": "ticketing",
+      "url": "https://core-event.co/en/search?query=Kor%C4%8Dula",
+      "status": "error",
+      "statusCode": null,
+      "error": "Response status code does not indicate success: 403 (Forbidden).",
+      "note": null,
+      "dateHintCount": 1,
+      "timeHintCount": 1,
+      "keywordHits": [
+        null
+      ]
+    },
+    {
+      "sourceId": "core-event-korcula",
+      "sourceName": "CoreEvent Korcula Tickets",
+      "kind": "search",
+      "scrapeMode": "ticketing",
+      "url": "https://core-event.co/en/search?query=Korcula",
+      "status": "error",
+      "statusCode": null,
+      "error": "Response status code does not indicate success: 403 (Forbidden).",
+      "note": null,
+      "dateHintCount": 1,
+      "timeHintCount": 1,
+      "keywordHits": [
+        null
+      ]
+    },
+    {
+      "sourceId": "korcula-events-facebook-group",
+      "sourceName": "Korcula Events Facebook Group",
+      "kind": "facebook-group",
+      "scrapeMode": "manual-social",
+      "url": "https://www.facebook.com/groups/korculaevents/",
+      "status": "skipped-social",
+      "statusCode": null,
+      "error": null,
+      "note": "Use as manual/social lead unless IncludeSocial is set.",
+      "dateHintCount": 1,
+      "timeHintCount": 1,
+      "keywordHits": [
+        null
+      ]
+    },
+    {
+      "sourceId": "adriatic-pearl-weekly-events",
+      "sourceName": "Adriatic Pearl Korcula Weekly Events",
+      "kind": "website",
+      "scrapeMode": "html",
+      "url": "https://adriaticpearlkorcula.com/weeklyevents",
+      "status": "error",
+      "statusCode": null,
+      "error": "Response status code does not indicate success: 404 (Not Found).",
+      "note": null,
+      "dateHintCount": 1,
+      "timeHintCount": 1,
+      "keywordHits": [
+        null
+      ]
+    },
+    {
+      "sourceId": "adriatic-pearl-weekly-events",
+      "sourceName": "Adriatic Pearl Korcula Weekly Events",
+      "kind": "search",
+      "scrapeMode": "search-lead",
+      "url": "https://www.google.com/search?q=Adriatic+Pearl+Korcula+weekly+events",
+      "status": "skipped-social",
+      "statusCode": null,
+      "error": null,
+      "note": "Use as manual/social lead unless IncludeSocial is set.",
+      "dateHintCount": 1,
+      "timeHintCount": 1,
+      "keywordHits": [
+        null
+      ]
+    },
+    {
+      "sourceId": "zrnovo-local-sources",
+      "sourceName": "Žrnovo / Postrana Local Sources",
+      "kind": "website",
+      "scrapeMode": "html",
+      "url": "https://www.zrnovo.com/",
+      "status": "fetched",
+      "statusCode": 200,
+      "error": null,
+      "note": null,
+      "dateHintCount": 0,
+      "timeHintCount": 0,
+      "keywordHits": []
+    },
+    {
+      "sourceId": "zrnovo-local-sources",
+      "sourceName": "Žrnovo / Postrana Local Sources",
+      "kind": "facebook-search",
+      "scrapeMode": "manual-social",
+      "url": "https://www.facebook.com/search/top?q=%C5%BDrnovo%20Postrana%20events",
+      "status": "skipped-social",
+      "statusCode": null,
+      "error": null,
+      "note": "Use as manual/social lead unless IncludeSocial is set.",
+      "dateHintCount": 1,
+      "timeHintCount": 1,
+      "keywordHits": [
+        null
+      ]
+    },
+    {
+      "sourceId": "zrnovo-local-sources",
+      "sourceName": "Žrnovo / Postrana Local Sources",
+      "kind": "facebook-search",
+      "scrapeMode": "manual-social",
+      "url": "https://www.facebook.com/search/top?q=KUD%20Mi%C5%A1njice%20%C5%BDrnovo",
+      "status": "skipped-social",
+      "statusCode": null,
+      "error": null,
+      "note": "Use as manual/social lead unless IncludeSocial is set.",
+      "dateHintCount": 1,
+      "timeHintCount": 1,
+      "keywordHits": [
+        null
+      ]
+    },
+    {
+      "sourceId": "pupnat-local-sources",
+      "sourceName": "Pupnat Local Sources",
+      "kind": "facebook-group",
+      "scrapeMode": "manual-social",
+      "url": "https://www.facebook.com/groups/3010485445830625/",
+      "status": "skipped-social",
+      "statusCode": null,
+      "error": null,
+      "note": "Use as manual/social lead unless IncludeSocial is set.",
+      "dateHintCount": 1,
+      "timeHintCount": 1,
+      "keywordHits": [
+        null
+      ]
+    },
+    {
+      "sourceId": "pupnat-local-sources",
+      "sourceName": "Pupnat Local Sources",
+      "kind": "facebook-group",
+      "scrapeMode": "manual-social",
+      "url": "https://www.facebook.com/groups/272104876242925/",
+      "status": "skipped-social",
+      "statusCode": null,
+      "error": null,
+      "note": "Use as manual/social lead unless IncludeSocial is set.",
+      "dateHintCount": 1,
+      "timeHintCount": 1,
+      "keywordHits": [
+        null
+      ]
+    },
+    {
+      "sourceId": "pupnat-local-sources",
+      "sourceName": "Pupnat Local Sources",
+      "kind": "facebook-search",
+      "scrapeMode": "manual-social",
+      "url": "https://www.facebook.com/search/top?q=Pupnat%20Kumpanija%20event",
+      "status": "skipped-social",
+      "statusCode": null,
+      "error": null,
+      "note": "Use as manual/social lead unless IncludeSocial is set.",
+      "dateHintCount": 1,
+      "timeHintCount": 1,
+      "keywordHits": [
+        null
+      ]
+    },
+    {
+      "sourceId": "cara-zavalatica-local-sources",
+      "sourceName": "Čara / Zavalatica Local Sources",
+      "kind": "website",
+      "scrapeMode": "html",
+      "url": "https://www.korculainfo.com/cara/",
+      "status": "fetched",
+      "statusCode": 200,
+      "error": null,
+      "note": null,
+      "dateHintCount": 0,
+      "timeHintCount": 0,
+      "keywordHits": []
+    },
+    {
+      "sourceId": "cara-zavalatica-local-sources",
+      "sourceName": "Čara / Zavalatica Local Sources",
+      "kind": "facebook-search",
+      "scrapeMode": "manual-social",
+      "url": "https://www.facebook.com/search/top?q=Kumpanija%20%C4%8Cara%20Kor%C4%8Dula",
+      "status": "skipped-social",
+      "statusCode": null,
+      "error": null,
+      "note": "Use as manual/social lead unless IncludeSocial is set.",
+      "dateHintCount": 1,
+      "timeHintCount": 1,
+      "keywordHits": [
+        null
+      ]
+    },
+    {
+      "sourceId": "cara-zavalatica-local-sources",
+      "sourceName": "Čara / Zavalatica Local Sources",
+      "kind": "facebook-search",
+      "scrapeMode": "manual-social",
+      "url": "https://www.facebook.com/search/top?q=Zavalatica%20Kor%C4%8Dula%20event",
+      "status": "skipped-social",
+      "statusCode": null,
+      "error": null,
+      "note": "Use as manual/social lead unless IncludeSocial is set.",
+      "dateHintCount": 1,
+      "timeHintCount": 1,
+      "keywordHits": [
+        null
+      ]
+    },
+    {
+      "sourceId": "smokvica-brna-expanded",
+      "sourceName": "Visit Smokvica-Brna Expanded Sources",
+      "kind": "website",
+      "scrapeMode": "html",
+      "url": "https://visitsmokvicabrna.com/",
+      "status": "fetched",
+      "statusCode": 200,
+      "error": null,
+      "note": null,
+      "dateHintCount": 0,
+      "timeHintCount": 0,
+      "keywordHits": []
+    },
+    {
+      "sourceId": "smokvica-brna-expanded",
+      "sourceName": "Visit Smokvica-Brna Expanded Sources",
+      "kind": "facebook",
+      "scrapeMode": "manual-social",
+      "url": "https://www.facebook.com/Smokvica.Brna/",
+      "status": "skipped-social",
+      "statusCode": null,
+      "error": null,
+      "note": "Use as manual/social lead unless IncludeSocial is set.",
+      "dateHintCount": 1,
+      "timeHintCount": 1,
+      "keywordHits": [
+        null
+      ]
+    },
+    {
+      "sourceId": "vela-luka-nightlife-and-culture",
+      "sourceName": "Vela Luka Nightlife and Cultural Leads",
+      "kind": "facebook",
+      "scrapeMode": "manual-social",
+      "url": "https://www.facebook.com/pages/Casablanca-Vela-Luka/209259985785114",
+      "status": "skipped-social",
+      "statusCode": null,
+      "error": null,
+      "note": "Use as manual/social lead unless IncludeSocial is set.",
+      "dateHintCount": 1,
+      "timeHintCount": 1,
+      "keywordHits": [
+        null
+      ]
+    },
+    {
+      "sourceId": "vela-luka-nightlife-and-culture",
+      "sourceName": "Vela Luka Nightlife and Cultural Leads",
+      "kind": "facebook-search",
+      "scrapeMode": "manual-social",
+      "url": "https://www.facebook.com/search/top?q=FD%20Kumpanija%20Vela%20Luka%20event",
+      "status": "skipped-social",
+      "statusCode": null,
+      "error": null,
+      "note": "Use as manual/social lead unless IncludeSocial is set.",
+      "dateHintCount": 1,
+      "timeHintCount": 1,
+      "keywordHits": [
+        null
+      ]
+    },
+    {
+      "sourceId": "vela-luka-nightlife-and-culture",
+      "sourceName": "Vela Luka Nightlife and Cultural Leads",
+      "kind": "facebook-search",
+      "scrapeMode": "manual-social",
+      "url": "https://www.facebook.com/search/top?q=Vela%20Luka%20concert%20event",
+      "status": "skipped-social",
+      "statusCode": null,
+      "error": null,
+      "note": "Use as manual/social lead unless IncludeSocial is set.",
+      "dateHintCount": 1,
+      "timeHintCount": 1,
+      "keywordHits": [
+        null
+      ]
+    },
+    {
+      "sourceId": "local-poster-folder",
+      "sourceName": "Local Poster Folder",
+      "kind": "folder",
+      "scrapeMode": "poster-folder",
+      "url": "../../2026 Events",
+      "status": "skipped-poster-folder",
+      "statusCode": null,
+      "error": null,
+      "note": "Run ocr-posters.ps1 for local poster folders.",
+      "dateHintCount": 1,
+      "timeHintCount": 1,
+      "keywordHits": [
+        null
+      ]
+    }
+  ]
 }

@@ -51,6 +51,12 @@ body {
   background:
     linear-gradient(130deg, rgba(7,31,58,.94) 0%, rgba(0,63,125,.82) 42%, rgba(11,95,165,.58) 100%),
     url("../assets/hero-korcula-events.webp") center/cover;
+  background-image:
+    linear-gradient(130deg, rgba(7,31,58,.94) 0%, rgba(0,63,125,.82) 42%, rgba(11,95,165,.58) 100%),
+    image-set(
+      url("../assets/hero-korcula-events.avif") type("image/avif"),
+      url("../assets/hero-korcula-events.webp") type("image/webp")
+    );
   color: #fff;
   padding: 18px 16px 0;
   position: relative;

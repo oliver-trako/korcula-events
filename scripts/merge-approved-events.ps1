@@ -160,6 +160,11 @@ if ($WhatIf -or $toMerge.Count -eq 0) {
 }
 
 foreach ($event in $toMerge) {
+  if (-not $event.PSObject.Properties["updatedAt"]) {
+    $event | Add-Member -NotePropertyName "updatedAt" -NotePropertyValue (Get-Date).ToString("yyyy-MM-dd")
+  } else {
+    $event.updatedAt = (Get-Date).ToString("yyyy-MM-dd")
+  }
   $eventsDoc.events += $event
 }
 

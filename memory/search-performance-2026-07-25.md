@@ -87,3 +87,29 @@ Validation after `npm run build`:
 - 12/12 Moreška occurrence entities have `endDate`, organizer, performer and two verified offers.
 - 12 Moreška occurrence URLs are present in the sitemap.
 - 87 generated event-image references resolve to generated files.
+
+## Full multilingual and freshness rollout — 25 July 2026
+
+Implemented the next on-site optimization phase across the full event catalogue:
+
+- Added complete public page families in Croatian, English, German, Italian, Slovenian and French.
+- Generated translated event leaf pages, event indexes, guides, place pages, category pages and information/legal pages.
+- Added reciprocal `hreflang` links to every sitemap page while preserving existing English event URLs.
+- Added concise, factual, language-specific fallback descriptions for events without editorial descriptions.
+- Added visible source-confidence, organizer, performer, update-date and past-event information where applicable.
+- Added durable `updatedAt` values to all events; future ingestion merges set the date automatically.
+- Changed the sitemap to emit accurate event `lastmod` values only and removed ignored `priority` and `changefreq`.
+- Replaced generated SVG event cards with 1920×1080, 1600×1200 and 1200×1200 WebP variants.
+- Removed stale hand-maintained Event entities from the interactive homepage.
+- Added an AVIF hero image with WebP fallback and deferred below-the-fold scenic images.
+- Added explicit cancelled, postponed, rescheduled and moved-online schema support.
+
+Validated build:
+
+- 2,053 sitemap URLs.
+- 1,776 individual event pages across six languages.
+- 1,770 eligible Event entities and six Moreška collection pages.
+- 14,371 reciprocal `hreflang` links with no missing targets.
+- 5,310 Event image references backed by 888 valid WebP variants.
+- No broken internal page links or JSON-LD parsing failures.
+- Local mobile Lighthouse: SEO 100 for homepage and translated event page; translated event performance 100 with 1.4 s LCP in the validation run.

@@ -1,13 +1,22 @@
 import { cp, mkdir, readdir, rm, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { createHash } from "node:crypto";
+import sharp from "sharp";
 
 const root = process.cwd();
 const dist = path.join(root, "dist");
 const siteUrl = "https://korcula-events.com";
-const buildDate = new Date().toISOString().slice(0, 10);
+const buildDate = new Intl.DateTimeFormat("en-CA", {
+  timeZone: "Europe/Zagreb",
+  year: "numeric",
+  month: "2-digit",
+  day: "2-digit"
+}).format(new Date());
 const assetVersion = "20260717-2";
 const defaultShareImage = `${siteUrl}/generated_images/019f4238-0d22-7c61-a5de-d8d8a9751fdf/ig_08cb38e27fc1cd4c016a4e6b76535c8191b68b7bca395d86af.png`;
+const seoI18n = JSON.parse(await readFile(path.join(root, "site", "data", "seo-i18n.json"), "utf8"));
+const appI18nSource = await readFile(path.join(root, "site", "js", "i18n.js"), "utf8");
+const appI18n = Function(`${appI18nSource}\nreturn I18N;`)();
 
 const langMeta = {
   hr: {
@@ -623,6 +632,36 @@ function descFor(event, lang = "en") {
   return stripHtml(event.desc[lang] ? direct : translateEventText(direct, lang));
 }
 
+function categoryLabel(cat, lang = "en") {
+  return appI18n[lang]?.catLabels?.[cat] || catLabels[cat] || cat;
+}
+
+function eventHasSource(event) {
+  return Boolean(event.source || event.website || event.facebook || event.instagram || event.ticketUrl);
+}
+
+function eventIsPast(event) {
+  return String(event.endDate || event.date) < buildDate;
+}
+
+function localizedEventDescription(event, towns, lang = "en") {
+  const direct = descFor(event, lang);
+  if (direct) return direct;
+  const title = titleFor(event, lang);
+  const town = townName(towns, event.town, lang);
+  const when = [event.date, event.time].filter(Boolean).join(" · ");
+  const where = [event.venue, town].filter(Boolean).join(", ");
+  const templates = {
+    en: `${title} on ${when} at ${where}. Event listing for Korčula island with calendar, map and source details where available.`,
+    hr: `${title} održava se ${when} na lokaciji ${where}. Zapis događanja na otoku Korčuli s kalendarom, kartom i izvorima gdje su dostupni.`,
+    de: `${title} findet am ${when} in ${where} statt. Veranstaltungseintrag für Korčula mit Kalender, Karte und Quellen, sofern verfügbar.`,
+    it: `${title} si svolge il ${when} presso ${where}. Scheda dell'evento a Korčula con calendario, mappa e fonti, quando disponibili.`,
+    sl: `${title} bo ${when} na lokaciji ${where}. Vnos dogodka na Korčuli s koledarjem, zemljevidom in viri, kjer so na voljo.`,
+    fr: `${title} a lieu le ${when} à ${where}. Fiche de l'événement à Korčula avec calendrier, carte et sources lorsqu'elles sont disponibles.`
+  };
+  return templates[lang] || templates.en;
+}
+
 function townName(towns, id, lang = "en") {
   const town = towns.find((x) => x.id === id);
   return town ? (town[lang] || town.en || town.hr || id) : id;
@@ -654,12 +693,20 @@ function occursOnDate(event, iso) {
   return Object.entries(weekdays).some(([name, value]) => recurrence.includes(name) && day === value);
 }
 
-function eventUrl(event) {
-  return `${siteUrl}/events/${slugify(titleFor(event, "en"))}-${slugify(event.id)}/`;
+function languagePrefix(lang = "en") {
+  return lang === "en" ? "" : `/${lang}`;
 }
 
-function eventPath(event) {
-  return path.join(dist, "events", `${slugify(titleFor(event, "en"))}-${slugify(event.id)}`, "index.html");
+function localizedPath(lang, ...segments) {
+  return path.join(dist, ...(lang === "en" ? [] : [lang]), ...segments, "index.html");
+}
+
+function eventUrl(event, lang = "en") {
+  return `${siteUrl}${languagePrefix(lang)}/events/${slugify(titleFor(event, lang))}-${slugify(event.id)}/`;
+}
+
+function eventPath(event, lang = "en") {
+  return path.join(dist, ...(lang === "en" ? [] : [lang]), "events", `${slugify(titleFor(event, lang))}-${slugify(event.id)}`, "index.html");
 }
 
 function expandEventOccurrences(events) {
@@ -683,16 +730,16 @@ function expandEventOccurrences(events) {
   return expanded;
 }
 
-function categoryUrl(cat) {
-  return `${siteUrl}/categories/${slugify(cat)}/`;
+function categoryUrl(cat, lang = "en") {
+  return `${siteUrl}${languagePrefix(lang)}/categories/${slugify(cat)}/`;
 }
 
-function guideUrl(slug) {
-  return `${siteUrl}/guides/${slug}/`;
+function guideUrl(slug, lang = "en") {
+  return `${siteUrl}${languagePrefix(lang)}/guides/${slug}/`;
 }
 
-function placeUrl(townId) {
-  return `${siteUrl}/places/${slugify(townId)}/`;
+function placeUrl(townId, lang = "en") {
+  return `${siteUrl}${languagePrefix(lang)}/places/${slugify(townId)}/`;
 }
 
 function isoDateTime(event) {
@@ -807,8 +854,9 @@ function getFlyer(event) {
   return null;
 }
 
-function eventImageUrl(event) {
-  return getFlyer(event) || `/assets/event-images/${slugify(event.id)}.svg`;
+function eventImageUrls(event) {
+  const base = `/assets/event-images/${slugify(event.id)}`;
+  return [`${base}-16x9.webp`, `${base}-4x3.webp`, `${base}-1x1.webp`];
 }
 
 function wrapSvgText(value, maxLength = 30, maxLines = 3) {
@@ -826,16 +874,24 @@ function wrapSvgText(value, maxLength = 30, maxLines = 3) {
   return lines;
 }
 
+const sharedFlyerImageJobs = new Map();
+
 async function writeEventImage(event, towns) {
-  if (getFlyer(event)) return;
-  const imagePath = path.join(dist, "assets", "event-images", `${slugify(event.id)}.svg`);
+  const outputDir = path.join(dist, "assets", "event-images");
+  await mkdir(outputDir, { recursive: true });
+  const flyer = getFlyer(event);
+  let source;
+  if (flyer) {
+    const decoded = decodeURIComponent(flyer).replace(/^\/+/, "");
+    source = path.join(root, decoded);
+  }
   const titleLines = wrapSvgText(titleFor(event, "en"), 30, 3);
   const town = townName(towns, event.town, "en");
   const meta = [event.date, event.time, town, event.venue].filter(Boolean).join(" · ");
   const titleSvg = titleLines.map((line, index) =>
     `<text x="72" y="${210 + index * 76}" font-family="Arial, sans-serif" font-size="62" font-weight="700" fill="#fff">${esc(line)}</text>`
   ).join("");
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
 <title id="title">${esc(titleFor(event, "en"))}</title>
 <desc id="desc">${esc(meta)}</desc>
 <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#063b4a"/><stop offset="1" stop-color="#127b86"/></linearGradient></defs>
@@ -848,7 +904,34 @@ ${titleSvg}
 <text x="72" y="580" font-family="Arial, sans-serif" font-size="29" fill="#fff">${esc(meta.slice(0, 92))}</text>
 <text x="72" y="630" font-family="Arial, sans-serif" font-size="24" fill="#d7eef0">korcula-events.com</text>
 </svg>`;
-  await writePage(imagePath, svg);
+  const fallback = Buffer.from(svg);
+  const variants = [
+    ["16x9", 1920, 1080],
+    ["4x3", 1600, 1200],
+    ["1x1", 1200, 1200]
+  ];
+  const outputs = variants.map(([suffix]) => path.join(outputDir, `${slugify(event.id)}-${suffix}.webp`));
+  if (flyer && sharedFlyerImageJobs.has(flyer)) {
+    const cachedOutputs = await sharedFlyerImageJobs.get(flyer);
+    await Promise.all(cachedOutputs.map((cached, index) => cp(cached, outputs[index])));
+    return;
+  }
+  const job = Promise.all(variants.map(async ([, width, height], index) => {
+    await sharp(source || fallback).rotate().resize(width, height, {
+      fit: "cover",
+      position: source ? sharp.strategy.attention : "centre"
+    }).webp({ quality: 84, effort: 2 }).toFile(outputs[index]);
+    return outputs[index];
+  }));
+  if (flyer) sharedFlyerImageJobs.set(flyer, job);
+  await job;
+}
+
+async function writeAllEventImages(events, towns) {
+  const concurrency = 8;
+  for (let index = 0; index < events.length; index += concurrency) {
+    await Promise.all(events.slice(index, index + concurrency).map((event) => writeEventImage(event, towns)));
+  }
 }
 
 function eventTimeRange(event) {
@@ -887,12 +970,12 @@ function mapsUrl(event, towns) {
   return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}`;
 }
 
-function googleCalendarUrl(event, towns) {
+function googleCalendarUrl(event, towns, lang = "en") {
   const range = eventTimeRange(event);
   const dates = range.allDay ? `${range.startYMD}/${range.endYMD}` : `${range.start}/${range.end}`;
-  const title = titleFor(event, "en");
-  const details = [descFor(event, "en"), event.source || event.website || event.ticketUrl].filter(Boolean).join("\n\n");
-  const location = [event.venue, townName(towns, event.town, "en"), "Croatia"].filter(Boolean).join(", ");
+  const title = titleFor(event, lang);
+  const details = [localizedEventDescription(event, towns, lang), event.source || event.website || event.ticketUrl].filter(Boolean).join("\n\n");
+  const location = [event.venue, townName(towns, event.town, lang), "Croatia"].filter(Boolean).join(", ");
   return "https://calendar.google.com/calendar/render?action=TEMPLATE" +
     `&text=${encodeURIComponent(title)}` +
     `&dates=${encodeURIComponent(dates)}` +
@@ -900,11 +983,11 @@ function googleCalendarUrl(event, towns) {
     `&location=${encodeURIComponent(location)}`;
 }
 
-function icsDataUrl(event, towns) {
+function icsDataUrl(event, towns, lang = "en") {
   const range = eventTimeRange(event);
-  const title = titleFor(event, "en").replaceAll("\n", " ");
-  const description = [descFor(event, "en"), event.source || event.website || event.ticketUrl].filter(Boolean).join("\\n\\n").replaceAll("\n", "\\n");
-  const location = [event.venue, townName(towns, event.town, "en"), "Croatia"].filter(Boolean).join(", ").replaceAll("\n", " ");
+  const title = titleFor(event, lang).replaceAll("\n", " ");
+  const description = [localizedEventDescription(event, towns, lang), event.source || event.website || event.ticketUrl].filter(Boolean).join("\\n\\n").replaceAll("\n", "\\n");
+  const location = [event.venue, townName(towns, event.town, lang), "Croatia"].filter(Boolean).join(", ").replaceAll("\n", " ");
   const dateLines = range.allDay
     ? `DTSTART;VALUE=DATE:${range.startYMD}\r\nDTEND;VALUE=DATE:${range.endYMD}`
     : `DTSTART:${range.start}\r\nDTEND:${range.end}`;
@@ -924,12 +1007,29 @@ function icsDataUrl(event, towns) {
   return `data:text/calendar;charset=utf8,${encodeURIComponent(ics)}`;
 }
 
-function languageAlternates(canonical) {
-  const languageHomeUrls = new Set(Object.keys(langMeta).map((code) => `${siteUrl}/${code}/`));
-  if (!languageHomeUrls.has(canonical)) return "";
+function languageAlternates(canonical, alternateUrls) {
+  if (alternateUrls) {
+    return [
+      `<link rel="alternate" hreflang="x-default" href="${esc(alternateUrls.en)}">`,
+      ...Object.keys(langMeta).map((code) => `<link rel="alternate" hreflang="${code}" href="${esc(alternateUrls[code])}">`)
+    ].join("\n");
+  }
+  const pathname = new URL(canonical).pathname;
+  const homeMatch = pathname.match(/^\/(hr|en|de|it|sl|fr)\/$/);
+  if (pathname === "/" || homeMatch) {
+    return [
+      `<link rel="alternate" hreflang="x-default" href="${siteUrl}/">`,
+      ...Object.keys(langMeta).map((code) => `<link rel="alternate" hreflang="${code}" href="${siteUrl}/${code}/">`)
+    ].join("\n");
+  }
+  const basePath = pathname.replace(/^\/(hr|de|it|sl|fr)(?=\/)/, "");
+  const urls = Object.fromEntries(Object.keys(langMeta).map((code) => [
+    code,
+    code === "en" ? `${siteUrl}${basePath}` : `${siteUrl}/${code}${basePath}`
+  ]));
   return [
-    `<link rel="alternate" hreflang="x-default" href="${siteUrl}/">`,
-    ...Object.keys(langMeta).map((code) => `<link rel="alternate" hreflang="${code}" href="${siteUrl}/${code}/">`)
+    `<link rel="alternate" hreflang="x-default" href="${urls.en}">`,
+    ...Object.keys(langMeta).map((code) => `<link rel="alternate" hreflang="${code}" href="${urls[code]}">`)
   ].join("\n");
 }
 
@@ -990,10 +1090,14 @@ function sitemapChangefreq(url) {
   return "monthly";
 }
 
-function pageShell({ lang = "en", title, description, canonical, body, schema, image = defaultShareImage, type = "website" }) {
-  const alternates = languageAlternates(canonical);
+function pageShell({ lang = "en", title, description, canonical, body, schema, image = defaultShareImage, type = "website", alternateUrls }) {
+  const alternates = languageAlternates(canonical, alternateUrls);
   const schemaHtml = schema ? `<script type="application/ld+json">${JSON.stringify(schema)}</script>` : "";
   const imageUrl = absoluteUrl(image) || defaultShareImage;
+  const ui = seoI18n[lang];
+  const appUi = appI18n[lang];
+  const prefix = languagePrefix(lang);
+  const homeHref = lang === "en" ? "/" : `/${lang}/`;
   return `<!DOCTYPE html>
 <html lang="${esc(lang)}">
 <head>
@@ -1072,17 +1176,17 @@ ${schemaHtml}
 <body>
 <header class="seo-header">
   <div class="seo-header-inner">
-    <a class="seo-brand" href="/">
+    <a class="seo-brand" href="${homeHref}">
       <img src="/assets/logo-korcula-events.svg" alt="">
-      <strong>Korčula Island Events</strong>
+      <strong>${esc(appUi.siteTitle)}</strong>
     </a>
-    <nav class="seo-top-nav" aria-label="Main navigation">
-      <a href="/">Calendar</a>
-      <a href="/events/">Events</a>
-      <a href="/guides/">Guides</a>
-      <a href="/places/">Places</a>
-      <a href="/categories/">Categories</a>
-      <a href="/contact/">Contact</a>
+    <nav class="seo-top-nav" aria-label="${esc(appUi.footerBrowseTitle)}">
+      <a href="${homeHref}">${esc(ui.calendar)}</a>
+      <a href="${prefix}/events/">${esc(ui.allEvents)}</a>
+      <a href="${prefix}/guides/">${esc(ui.guides)}</a>
+      <a href="${prefix}/places/">${esc(ui.places)}</a>
+      <a href="${prefix}/categories/">${esc(ui.categories)}</a>
+      <a href="${prefix}/contact/">${esc(ui.info.contact[0])}</a>
     </nav>
   </div>
 </header>
@@ -1094,27 +1198,27 @@ ${body}
     <div class="footer-brand">
       <img class="footer-mark" src="/assets/logo-korcula-events.svg" alt="" aria-hidden="true">
       <div>
-        <strong>Korčula Island Events</strong>
-        <p class="footer-note">A practical, independent guide to concerts, festivals, folklore, food, sport and nightlife across Korčula island.</p>
+        <strong>${esc(appUi.siteTitle)}</strong>
+        <p class="footer-note">${esc(appUi.footerNote)}</p>
       </div>
     </div>
     <div class="footer-columns">
-      <nav class="footer-nav" aria-label="Browse">
-        <strong>Browse</strong>
-        <a href="/events/">All events</a>
-        <a href="/guides/">Guides</a>
-        <a href="/places/">Places</a>
-        <a href="/categories/">Categories</a>
-        <a href="/categories/nightlife/">Nightlife</a>
+      <nav class="footer-nav" aria-label="${esc(appUi.footerBrowseTitle)}">
+        <strong>${esc(appUi.footerBrowseTitle)}</strong>
+        <a href="${prefix}/events/">${esc(ui.allEvents)}</a>
+        <a href="${prefix}/guides/">${esc(ui.guides)}</a>
+        <a href="${prefix}/places/">${esc(ui.places)}</a>
+        <a href="${prefix}/categories/">${esc(ui.categories)}</a>
+        <a href="${prefix}/categories/nightlife/">${esc(categoryLabel("nightlife", lang))}</a>
       </nav>
-      <nav class="footer-nav" aria-label="Information">
-        <strong>Info</strong>
-        <a href="/about/">About</a>
-        <a href="/contact/">Contact</a>
-        <a href="/privacy/">Privacy</a>
-        <a href="/terms/">Terms</a>
-        <a href="/cookies/">Cookies</a>
-        <a href="/sitemap/">Site map</a>
+      <nav class="footer-nav" aria-label="${esc(appUi.footerInfoTitle)}">
+        <strong>${esc(appUi.footerInfoTitle)}</strong>
+        <a href="${prefix}/about/">${esc(ui.info.about[0])}</a>
+        <a href="${prefix}/contact/">${esc(ui.info.contact[0])}</a>
+        <a href="${prefix}/privacy/">${esc(ui.info.privacy[0])}</a>
+        <a href="${prefix}/terms/">${esc(ui.info.terms[0])}</a>
+        <a href="${prefix}/cookies/">${esc(ui.info.cookies[0])}</a>
+        <a href="${prefix}/sitemap/">${esc(ui.info.sitemap[0])}</a>
       </nav>
     </div>
   </div>
@@ -1131,7 +1235,7 @@ ${body}
     const sync = () => {
       const saved = readFavorites().includes(id);
       button.setAttribute("aria-pressed", saved ? "true" : "false");
-      button.textContent = saved ? "Saved to favourites" : "Save favourite";
+      button.textContent = saved ? ${JSON.stringify(appUi.savedFavourite)} : ${JSON.stringify(appUi.saveFavourite)};
     };
     button.addEventListener("click", () => {
       const items = readFavorites();
@@ -1147,7 +1251,7 @@ ${body}
       try {
         await navigator.clipboard.writeText(url);
         const previous = button.textContent;
-        button.textContent = "Link copied";
+        button.textContent = ${JSON.stringify(appUi.linkCopied)};
         setTimeout(() => { button.textContent = previous; }, 1600);
       } catch {
         location.href = url;
@@ -1163,7 +1267,7 @@ ${body}
       }
       try {
         await navigator.clipboard.writeText(url);
-        button.textContent = "Link copied";
+        button.textContent = ${JSON.stringify(appUi.linkCopied)};
       } catch {
         location.href = url;
       }
@@ -1179,52 +1283,44 @@ function eventList(events, towns, lang = "en", limit = events.length) {
   return `<ul class="seo-event-list">${events.slice(0, limit).map((event) => {
     const title = titleFor(event, lang);
     const meta = [event.date + (event.endDate ? ` to ${event.endDate}` : ""), event.time, townName(towns, event.town, lang), event.venue].filter(Boolean).join(" · ");
-    return `<li><a href="${esc(eventUrl(event))}">${esc(title)}</a><span class="seo-meta">${esc(meta)}</span></li>`;
+    return `<li><a href="${esc(eventUrl(event, lang))}">${esc(title)}</a><span class="seo-meta">${esc(meta)}</span></li>`;
   }).join("\n")}</ul>`;
 }
 
-function compactEventFacts(event, towns) {
+function compactEventFacts(event, towns, lang = "en") {
+  const ui = seoI18n[lang];
   const facts = [
-    ["Date", `${event.date}${event.endDate ? ` to ${event.endDate}` : ""}`],
-    ["Time", event.time],
-    ["Town", townName(towns, event.town, "en")],
-    ["Venue", event.venue],
-    ["Recurring", event.recurring],
-    ["Seasonal", event.seasonal ? "Yes" : ""],
-    ["Source status", event.verify ? "Needs verification before relying on exact details" : "Listed from current calendar data"]
+    [ui.date, `${event.date}${event.endDate ? ` – ${event.endDate}` : ""}`],
+    [ui.time, event.time],
+    [ui.place, townName(towns, event.town, lang)],
+    [ui.venue, event.venue],
+    [ui.organizer, event.organizer?.name],
+    [ui.performer, event.performers?.map((item) => item.name).filter(Boolean).join(", ")],
+    [ui.sourceStatus, event.verify ? ui.verify : eventHasSource(event) ? ui.sourceAvailable : ui.sourceMissing],
+    [ui.updated, event.updatedAt]
   ].filter(([, value]) => value);
   return `<dl class="seo-detail-list">${facts.map(([label, value]) => `<div><dt>${esc(label)}</dt><dd>${esc(value)}</dd></div>`).join("")}</dl>`;
 }
 
-function eventNarrative(event, towns) {
-  const title = titleFor(event, "en");
-  const town = townName(towns, event.town, "en");
-  const categoryText = (event.cats || []).map((cat) => catLabels[cat] || cat).join(", ");
-  const pieces = [
-    `${title} is listed in the Korčula Island Events calendar for ${town}${event.venue ? ` at ${event.venue}` : ""}.`,
-    event.time ? `The listed time is ${event.time}.` : "",
-    event.endDate ? `The event runs from ${event.date} to ${event.endDate}.` : `The listed date is ${event.date}.`,
-    categoryText ? `It is currently grouped under ${categoryText}.` : "",
-    event.verify ? "Because this listing is marked for verification, use the source links below before making firm plans." : "Use the links below for organiser, ticketing or source details where available."
-  ].filter(Boolean);
-  return pieces.join(" ");
+function eventNarrative(event, towns, lang = "en") {
+  return localizedEventDescription(event, towns, lang);
 }
 
-function eventGuideLinks(event) {
+function eventGuideLinks(event, lang = "en") {
   const text = `${event.en || ""} ${event.hr || ""} ${event.venue || ""} ${(event.cats || []).join(" ")}`;
   const links = [];
   if (/oliver|dragojević|dragojevic|trag u beskraju/i.test(text)) {
-    links.push(["Oliver Dragojević 2026 guide", "/guides/oliver-dragojevic/"]);
+    links.push([seoI18n[lang].guideTitles["oliver-dragojevic"], `${languagePrefix(lang)}/guides/oliver-dragojevic/`]);
   }
   if ((event.cats || []).includes("nightlife") || /club|bar|dj|boogie|dos locos/i.test(text)) {
-    links.push(["Korčula nightlife events", "/guides/nightlife-guide/"]);
-    links.push(["Korčula bars and clubs", "/guides/bars-clubs/"]);
+    links.push([seoI18n[lang].guideTitles["nightlife-guide"], `${languagePrefix(lang)}/guides/nightlife-guide/`]);
+    links.push([seoI18n[lang].guideTitles["bars-clubs"], `${languagePrefix(lang)}/guides/bars-clubs/`]);
   }
   if (/wine|vino|vinski|grk|sabatina|tasting|degust/i.test(text)) {
-    links.push(["Korčula wine festivals", "/guides/wine-festivals/"]);
+    links.push([seoI18n[lang].guideTitles["wine-festivals"], `${languagePrefix(lang)}/guides/wine-festivals/`]);
   }
   if ((event.cats || []).includes("festival") || (event.cats || []).includes("folklore")) {
-    links.push(["Korčula summer festivals", "/guides/summer-festivals/"]);
+    links.push([seoI18n[lang].guideTitles["summer-festivals"], `${languagePrefix(lang)}/guides/summer-festivals/`]);
   }
   return links.filter((link, index) => links.findIndex((item) => item[1] === link[1]) === index);
 }
@@ -1250,26 +1346,36 @@ function schemaEntity(entity, fallbackType) {
   };
 }
 
-function eventSchema(event, towns, image = eventImageUrl(event)) {
-  const description = descFor(event, "en") || `${titleFor(event, "en")} in ${townName(towns, event.town, "en")}, Korčula, Croatia.`;
+function eventSchema(event, towns, images = eventImageUrls(event), lang = "en") {
+  const description = localizedEventDescription(event, towns, lang);
+  const statusKey = String(event.eventStatus || event.status || "scheduled").toLowerCase();
+  const statusMap = {
+    cancelled: "EventCancelled",
+    canceled: "EventCancelled",
+    postponed: "EventPostponed",
+    rescheduled: "EventRescheduled",
+    movedonline: "EventMovedOnline",
+    scheduled: "EventScheduled"
+  };
   const schema = {
     "@context": "https://schema.org",
     "@type": "Event",
-    name: titleFor(event, "en"),
+    name: titleFor(event, lang),
     startDate: isoDateTime(event),
     eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
-    eventStatus: "https://schema.org/EventScheduled",
-    url: eventUrl(event),
+    eventStatus: `https://schema.org/${statusMap[statusKey] || "EventScheduled"}`,
+    url: eventUrl(event, lang),
     location: {
       "@type": "Place",
       name: event.venue || townName(towns, event.town, "en"),
       address: postalAddress(event, towns)
     },
     description,
-    image: [absoluteUrl(image)]
+    image: images.map(absoluteUrl)
   };
   const endDate = eventEndDateTime(event);
   if (endDate) schema.endDate = endDate;
+  if (event.previousStartDate) schema.previousStartDate = event.previousStartDate;
   if (/besplatan|slobodan|free/i.test(`${event.hr || ""} ${event.en || ""}`)) schema.isAccessibleForFree = true;
   const offers = (event.offers || []).map((offer) => ({
     "@type": "Offer",
@@ -1296,17 +1402,17 @@ function eventSchema(event, towns, image = eventImageUrl(event)) {
   return schema;
 }
 
-function eventSeriesSchema(event) {
+function eventSeriesSchema(event, towns, lang = "en") {
   return {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    name: titleFor(event, "en"),
-    description: descFor(event, "en"),
-    url: eventUrl(event),
+    name: titleFor(event, lang),
+    description: localizedEventDescription(event, towns, lang),
+    url: eventUrl(event, lang),
     hasPart: (event.occurrenceEvents || []).map((occurrence) => ({
       "@type": "WebPage",
-      name: `${titleFor(occurrence, "en")} — ${occurrence.date}`,
-      url: eventUrl(occurrence)
+      name: `${titleFor(occurrence, lang)} — ${occurrence.date}`,
+      url: eventUrl(occurrence, lang)
     }))
   };
 }
@@ -1329,6 +1435,8 @@ async function buildSeoPages(data) {
       event.occurrenceEvents = events.filter((candidate) => candidate.seriesId === event.id);
     }
   }
+  const upcomingEvents = events.filter((event) => !eventIsPast(event));
+  const pastEvents = events.filter(eventIsPast).reverse();
   const urls = new Set([`${siteUrl}/`]);
 
   for (const [lang, meta] of Object.entries(langMeta)) {
@@ -1344,12 +1452,12 @@ async function buildSeoPages(data) {
         </div>
       </section>
       <nav class="seo-nav">
-        <a href="/events/">${esc(meta.allEvents)}</a>
-        <a href="/places/">${esc(meta.places)}</a>
-        <a href="/categories/">${esc(meta.categories)}</a>
+        <a href="${languagePrefix(lang)}/events/">${esc(meta.allEvents)}</a>
+        <a href="${languagePrefix(lang)}/places/">${esc(meta.places)}</a>
+        <a href="${languagePrefix(lang)}/categories/">${esc(meta.categories)}</a>
       </nav>
       <h2>${esc(meta.allEvents)}</h2>
-      ${eventList(events, towns, lang, 80)}
+      ${eventList(upcomingEvents, towns, lang, 80)}
     `;
     const url = `${siteUrl}/${lang}/`;
     urls.add(url);
@@ -1384,7 +1492,10 @@ async function buildSeoPages(data) {
           <div class="seo-card"><strong>Source links</strong><span>Events include venue, organiser or tourist-board links where available.</span></div>
         </div>
       </section>
-      ${eventList(events, towns, "en")}
+      <h2>${esc(seoI18n.en.upcoming)}</h2>
+      ${eventList(upcomingEvents, towns, "en")}
+      <h2>${esc(seoI18n.en.past)}</h2>
+      ${eventList(pastEvents, towns, "en")}
     `,
     schema: [
       {
@@ -1394,7 +1505,7 @@ async function buildSeoPages(data) {
         url: `${siteUrl}/events/`,
         description: "Crawlable index of Korčula island events for summer 2026."
       },
-      itemListSchema("All Korčula Events 2026", `${siteUrl}/events/`, events.slice(0, 100).map((event) => ({
+      itemListSchema("All Korčula Events 2026", `${siteUrl}/events/`, upcomingEvents.slice(0, 100).map((event) => ({
         name: titleFor(event, "en"),
         url: eventUrl(event)
       }))),
@@ -1441,7 +1552,7 @@ async function buildSeoPages(data) {
 
   const guideContext = { today: buildDate, weekEnd: addDays(buildDate, 7) };
   for (const [slug, guide] of Object.entries(guidePages)) {
-    const guideEvents = events.filter((event) => guide.filter(event, guideContext)).slice(0, guide.limit || events.length);
+    const guideEvents = upcomingEvents.filter((event) => guide.filter(event, guideContext)).slice(0, guide.limit || upcomingEvents.length);
     const url = guideUrl(slug);
     urls.add(url);
     await writePage(path.join(dist, "guides", slug, "index.html"), pageShell({
@@ -1513,8 +1624,8 @@ async function buildSeoPages(data) {
     }));
   }
 
+  await writeAllEventImages(events, towns);
   for (const event of events) {
-    await writeEventImage(event, towns);
     const url = eventUrl(event);
     urls.add(url);
     const title = titleFor(event, "en");
@@ -1529,9 +1640,10 @@ async function buildSeoPages(data) {
       ["Instagram", event.instagram],
       ["Source", event.source]
     ].filter(([, href]) => href);
-    const relatedByTown = events.filter((item) => item.id !== event.id && item.town === event.town).slice(0, 6);
-    const relatedByCategory = events.filter((item) => item.id !== event.id && (item.cats || []).some((cat) => (event.cats || []).includes(cat))).slice(0, 6);
-    const flyer = eventImageUrl(event);
+    const relatedByTown = upcomingEvents.filter((item) => item.id !== event.id && item.town === event.town).slice(0, 6);
+    const relatedByCategory = upcomingEvents.filter((item) => item.id !== event.id && (item.cats || []).some((cat) => (event.cats || []).includes(cat))).slice(0, 6);
+    const imageUrls = eventImageUrls(event);
+    const flyer = imageUrls[0];
     const mapHref = mapsUrl(event, towns);
     const gcalHref = googleCalendarUrl(event, towns);
     const icsHref = icsDataUrl(event, towns);
@@ -1573,7 +1685,7 @@ async function buildSeoPages(data) {
                 <button class="seo-action" type="button" data-copy-url="${esc(url)}">Copy link / Instagram</button>
               </div>
             </div>
-            <aside class="seo-poster"><a href="${esc(flyer)}"><img src="${esc(flyer)}" alt="${esc(datedTitle)} event image" width="1200" height="675"></a></aside>
+            <aside class="seo-poster"><a href="${esc(flyer)}"><img src="${esc(flyer)}" alt="${esc(datedTitle)} event image" width="1920" height="1080" fetchpriority="high"></a></aside>
           </div>
           <div class="seo-pill-row">${pills}</div>
           ${guideLinks.length ? `<nav class="seo-nav" aria-label="Related Korčula event guides">${guideLinks.map(([label, href]) => `<a href="${esc(href)}">${esc(label)}</a>`).join("")}</nav>` : ""}
@@ -1581,15 +1693,16 @@ async function buildSeoPages(data) {
         <section class="seo-section seo-two-col">
           <div>
             <h2>Event details</h2>
-            ${compactEventFacts(event, towns)}
+            ${compactEventFacts(event, towns, "en")}
           </div>
           <div>
             <h2>What to know</h2>
-            <p>${esc(eventNarrative(event, towns))}</p>
+            <p>${esc(eventNarrative(event, towns, "en"))}</p>
             ${event.hr && event.hr !== title ? `<p><strong>Local title:</strong> ${esc(event.hr)}</p>` : ""}
             ${event.desc && event.desc.hr ? `<p><strong>Croatian note:</strong> ${esc(stripHtml(event.desc.hr))}</p>` : ""}
           </div>
         </section>
+        ${eventIsPast(event) ? `<p class="seo-section"><strong>${esc(seoI18n.en.passed)}</strong></p>` : ""}
         ${event.verify ? "<p>Details are marked for verification. Check the linked source before relying on the exact time.</p>" : ""}
         ${event.occurrenceEvents?.length ? `<section class="seo-section"><h2>Individual 2026 performances</h2><p>Each performance has its own page, date and structured event listing.</p>${eventList(event.occurrenceEvents, towns, "en")}</section>` : ""}
         ${sourceLinks.length ? `<section class="seo-section"><h2>Source and booking links</h2><ul>${sourceLinks.map(([label, href]) => `<li><a href="${esc(href)}">${esc(label)}</a></li>`).join("")}</ul></section>` : ""}
@@ -1597,13 +1710,14 @@ async function buildSeoPages(data) {
         ${relatedByCategory.length ? `<section class="seo-section"><h2>Similar events</h2>${eventList(relatedByCategory, towns, "en", 6)}</section>` : ""}
       `,
       schema: [
-        event.occurrences?.length ? eventSeriesSchema(event) : eventSchema(event, towns, flyer),
+        event.occurrences?.length ? eventSeriesSchema(event, towns, "en") : eventSchema(event, towns, imageUrls, "en"),
         breadcrumbSchema([
           { name: "Home", url: `${siteUrl}/` },
           { name: "Events", url: `${siteUrl}/events/` },
           { name: datedTitle, url }
         ])
-      ]
+      ],
+      alternateUrls: Object.fromEntries(Object.keys(langMeta).map((lang) => [lang, eventUrl(event, lang)]))
     }));
   }
 
@@ -1755,14 +1869,296 @@ async function buildSeoPages(data) {
     }));
   }
 
+  for (const lang of Object.keys(langMeta).filter((code) => code !== "en")) {
+    const ui = seoI18n[lang];
+    const appUi = appI18n[lang];
+    const eventsIndexUrl = `${siteUrl}/${lang}/events/`;
+    urls.add(eventsIndexUrl);
+    await writePage(localizedPath(lang, "events"), pageShell({
+      lang,
+      title: `${ui.allEvents} 2026 | Korčula Island Events`,
+      description: `${ui.allEvents} 2026: ${langMeta[lang].description}`,
+      canonical: eventsIndexUrl,
+      body: `
+        <section class="seo-hero">
+          <p><a href="/${lang}/">${esc(ui.calendar)}</a></p>
+          <h1>${esc(ui.allEvents)} 2026</h1>
+          <p class="seo-lede">${esc(langMeta[lang].intro)}</p>
+        </section>
+        <h2>${esc(ui.upcoming)}</h2>
+        ${eventList(upcomingEvents, towns, lang)}
+        <h2>${esc(ui.past)}</h2>
+        ${eventList(pastEvents, towns, lang)}
+      `,
+      schema: [
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          name: `${ui.allEvents} 2026`,
+          url: eventsIndexUrl,
+          inLanguage: lang
+        },
+        itemListSchema(`${ui.allEvents} 2026`, eventsIndexUrl, upcomingEvents.slice(0, 100).map((event) => ({
+          name: titleFor(event, lang),
+          url: eventUrl(event, lang)
+        })))
+      ]
+    }));
+
+    const guidesIndexUrl = `${siteUrl}/${lang}/guides/`;
+    urls.add(guidesIndexUrl);
+    await writePage(localizedPath(lang, "guides"), pageShell({
+      lang,
+      title: `${ui.guides} | Korčula Island Events`,
+      description: `${ui.guides}: ${langMeta[lang].description}`,
+      canonical: guidesIndexUrl,
+      body: `
+        <section class="seo-hero">
+          <p><a href="/${lang}/">${esc(ui.calendar)}</a></p>
+          <h1>${esc(ui.guides)}</h1>
+          <p class="seo-lede">${esc(ui.guideIntro)}</p>
+        </section>
+        <div class="seo-grid">
+          ${Object.keys(guidePages).map((slug) => `<div class="seo-card"><strong>${esc(ui.guideTitles[slug])}</strong><a href="/${lang}/guides/${esc(slug)}/">${esc(ui.openGuide)}</a></div>`).join("")}
+        </div>
+      `,
+      schema: {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        name: ui.guides,
+        url: guidesIndexUrl,
+        inLanguage: lang
+      }
+    }));
+
+    for (const [slug, guide] of Object.entries(guidePages)) {
+      const guideEvents = upcomingEvents.filter((event) => guide.filter(event, guideContext)).slice(0, guide.limit || upcomingEvents.length);
+      const url = guideUrl(slug, lang);
+      const guideTitle = ui.guideTitles[slug];
+      urls.add(url);
+      await writePage(localizedPath(lang, "guides", slug), pageShell({
+        lang,
+        title: `${guideTitle} | Korčula Island Events`,
+        description: `${guideTitle}. ${ui.guideIntro}`,
+        canonical: url,
+        body: `
+          <section class="seo-hero">
+            <p><a href="/${lang}/guides/">${esc(ui.guides)}</a> · <a href="/${lang}/">${esc(ui.calendar)}</a></p>
+            <h1>${esc(guideTitle)}</h1>
+            <p class="seo-lede">${esc(ui.guideIntro)}</p>
+            <div class="seo-grid">
+              <div class="seo-card"><strong>${guideEvents.length} ${esc(ui.matching)}</strong></div>
+              <div class="seo-card"><strong>${esc(ui.updated)}</strong><span>${esc(buildDate)}</span></div>
+              <div class="seo-card"><strong>${esc(ui.checkSources)}</strong></div>
+            </div>
+          </section>
+          ${guideEvents.length ? eventList(guideEvents, towns, lang) : `<p>${esc(ui.noMatching)}</p>`}
+        `,
+        schema: [
+          {
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            name: guideTitle,
+            url,
+            inLanguage: lang
+          },
+          itemListSchema(guideTitle, url, guideEvents.slice(0, 60).map((event) => ({
+            name: titleFor(event, lang),
+            url: eventUrl(event, lang)
+          })))
+        ]
+      }));
+    }
+
+    for (const slug of Object.keys(infoPages)) {
+      const [h1, paragraphOne, paragraphTwo] = ui.info[slug];
+      const url = `${siteUrl}/${lang}/${slug}/`;
+      urls.add(url);
+      const extraLinks = slug === "sitemap"
+        ? `<div class="seo-grid">
+            <div class="seo-card"><strong>${esc(ui.allEvents)}</strong><a href="/${lang}/events/">${esc(ui.allEvents)}</a></div>
+            <div class="seo-card"><strong>${esc(ui.guides)}</strong><a href="/${lang}/guides/">${esc(ui.guides)}</a></div>
+            <div class="seo-card"><strong>${esc(ui.places)}</strong><a href="/${lang}/places/">${esc(ui.places)}</a></div>
+            <div class="seo-card"><strong>${esc(ui.categories)}</strong><a href="/${lang}/categories/">${esc(ui.categories)}</a></div>
+          </div>`
+        : "";
+      await writePage(localizedPath(lang, slug), pageShell({
+        lang,
+        title: `${h1} | Korčula Island Events`,
+        description: paragraphOne,
+        canonical: url,
+        body: `
+          <p><a href="/${lang}/">${esc(ui.calendar)}</a></p>
+          <h1>${esc(h1)}</h1>
+          <section class="seo-section">
+            <p>${esc(paragraphOne)}</p>
+            <p>${esc(paragraphTwo)}</p>
+            ${slug === "contact" ? `<p><a href="mailto:events@korcula-events.com">events@korcula-events.com</a></p>` : ""}
+          </section>
+          ${extraLinks}
+        `,
+        schema: {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          name: h1,
+          url,
+          inLanguage: lang
+        }
+      }));
+    }
+
+    for (const event of events) {
+      const url = eventUrl(event, lang);
+      const title = titleFor(event, lang);
+      const datedTitle = event.seriesId ? `${title} — ${event.date}` : title;
+      const town = townName(towns, event.town, lang);
+      const description = localizedEventDescription(event, towns, lang);
+      const sourceLinks = [
+        [ui.website, event.website],
+        [ui.tickets, event.ticketUrl],
+        ["Facebook", event.facebook],
+        ["Instagram", event.instagram],
+        [ui.source, event.source]
+      ].filter(([, href]) => href);
+      const relatedByTown = upcomingEvents.filter((item) => item.id !== event.id && item.town === event.town).slice(0, 6);
+      const relatedByCategory = upcomingEvents.filter((item) => item.id !== event.id && (item.cats || []).some((cat) => (event.cats || []).includes(cat))).slice(0, 6);
+      const imageUrls = eventImageUrls(event);
+      const image = imageUrls[0];
+      const mapHref = mapsUrl(event, towns);
+      const gcalHref = googleCalendarUrl(event, towns, lang);
+      const icsHref = icsDataUrl(event, towns, lang);
+      const guideLinks = eventGuideLinks(event, lang);
+      const shareText = `${datedTitle} | Korčula Events 2026`;
+      const parent = event.seriesId ? baseEvents.find((item) => item.id === event.seriesId) : null;
+      const pills = [
+        ...((event.cats || []).map((cat) => `<a class="seo-pill" href="${esc(categoryUrl(cat, lang))}">${esc(categoryLabel(cat, lang))}</a>`)),
+        `<a class="seo-pill" href="${esc(placeUrl(event.town, lang))}">${esc(town)}</a>`
+      ].join("");
+      urls.add(url);
+      await writePage(eventPath(event, lang), pageShell({
+        lang,
+        title: `${datedTitle} | Korčula Events 2026`,
+        description: description.slice(0, 155),
+        canonical: url,
+        image,
+        type: "article",
+        alternateUrls: Object.fromEntries(Object.keys(langMeta).map((code) => [code, eventUrl(event, code)])),
+        body: `
+          <section class="seo-hero">
+            <p><a href="/${lang}/events/">${esc(ui.allEvents)}</a> · <a href="/${lang}/">${esc(ui.calendar)}</a></p>
+            <div class="seo-event-layout">
+              <div>
+                <h1>${esc(datedTitle)}</h1>
+                <p class="seo-lede">${esc(description)}</p>
+                ${parent ? `<p><a href="${esc(eventUrl(parent, lang))}">${esc(ui.performances)}</a></p>` : ""}
+                <div class="seo-grid">
+                  <div class="seo-card"><strong>${esc(ui.date)}</strong><span>${esc(event.date)}${event.endDate ? ` – ${esc(event.endDate)}` : ""}${event.time ? ` · ${esc(event.time)}` : ""}</span></div>
+                  <div class="seo-card"><strong>${esc(ui.place)}</strong><span>${esc(town)}${event.venue ? ` · ${esc(event.venue)}` : ""}</span></div>
+                  <div class="seo-card"><strong>${esc(ui.category)}</strong><span>${esc((event.cats || []).map((cat) => categoryLabel(cat, lang)).join(", "))}</span></div>
+                </div>
+                <div class="seo-action-row">
+                  <a class="seo-action primary" href="${esc(gcalHref)}" target="_blank" rel="noopener">${esc(appUi.googleCalendar)}</a>
+                  <a class="seo-action" href="${esc(icsHref)}" download="${esc(event.id)}.ics">${esc(appUi.downloadIcs)}</a>
+                  <a class="seo-action" href="${esc(mapHref)}" target="_blank" rel="noopener">Google Maps</a>
+                  <button class="seo-action" type="button" data-favorite-event="${esc(event.id)}" aria-pressed="false">${esc(appUi.saveFavourite)}</button>
+                  <button class="seo-action" type="button" data-share-event data-share-url="${esc(url)}" data-share-title="${esc(shareText)}">${esc(appUi.shareEvent)}</button>
+                  <button class="seo-action" type="button" data-copy-url="${esc(url)}">${esc(appUi.copyLink)}</button>
+                </div>
+              </div>
+              <aside class="seo-poster"><a href="${esc(image)}"><img src="${esc(image)}" alt="${esc(datedTitle)}" width="1920" height="1080" fetchpriority="high"></a></aside>
+            </div>
+            <div class="seo-pill-row">${pills}</div>
+            ${guideLinks.length ? `<nav class="seo-nav">${guideLinks.map(([label, href]) => `<a href="${esc(href)}">${esc(label)}</a>`).join("")}</nav>` : ""}
+          </section>
+          ${eventIsPast(event) ? `<p class="seo-section"><strong>${esc(ui.passed)}</strong></p>` : ""}
+          <section class="seo-section seo-two-col">
+            <div><h2>${esc(ui.details)}</h2>${compactEventFacts(event, towns, lang)}</div>
+            <div>
+              <h2>${esc(ui.know)}</h2>
+              <p>${esc(eventNarrative(event, towns, lang))}</p>
+              ${lang !== "hr" && event.hr ? `<p><strong>${esc(ui.localTitle)}:</strong> ${esc(event.hr)}</p>` : ""}
+            </div>
+          </section>
+          ${event.verify ? `<p class="seo-section">${esc(ui.verify)}</p>` : ""}
+          ${event.occurrenceEvents?.length ? `<section class="seo-section"><h2>${esc(ui.performances)}</h2><p>${esc(ui.performanceIntro)}</p>${eventList(event.occurrenceEvents, towns, lang)}</section>` : ""}
+          ${sourceLinks.length ? `<section class="seo-section"><h2>${esc(ui.sources)}</h2><ul>${sourceLinks.map(([label, href]) => `<li><a href="${esc(href)}">${esc(label)}</a></li>`).join("")}</ul></section>` : ""}
+          ${relatedByTown.length ? `<section class="seo-section"><h2>${esc(ui.moreIn)} ${esc(town)}</h2>${eventList(relatedByTown, towns, lang, 6)}</section>` : ""}
+          ${relatedByCategory.length ? `<section class="seo-section"><h2>${esc(ui.similar)}</h2>${eventList(relatedByCategory, towns, lang, 6)}</section>` : ""}
+        `,
+        schema: [
+          event.occurrences?.length ? eventSeriesSchema(event, towns, lang) : eventSchema(event, towns, imageUrls, lang),
+          breadcrumbSchema([
+            { name: "Home", url: `${siteUrl}/${lang}/` },
+            { name: ui.allEvents, url: eventsIndexUrl },
+            { name: datedTitle, url }
+          ])
+        ]
+      }));
+    }
+
+    const placesIndexUrl = `${siteUrl}/${lang}/places/`;
+    urls.add(placesIndexUrl);
+    await writePage(localizedPath(lang, "places"), pageShell({
+      lang,
+      title: `${ui.places} | Korčula Island Events`,
+      description: ui.browseByPlace,
+      canonical: placesIndexUrl,
+      body: `<section class="seo-hero"><p><a href="/${lang}/">${esc(ui.calendar)}</a></p><h1>${esc(ui.places)}</h1><p class="seo-lede">${esc(ui.browseByPlace)}</p></section>
+        <ul class="seo-event-list">${towns.map((town) => `<li><a href="${esc(placeUrl(town.id, lang))}">${esc(townName(towns, town.id, lang))}</a><span class="seo-meta">${events.filter((event) => event.town === town.id).length}</span></li>`).join("")}</ul>`,
+      schema: { "@context": "https://schema.org", "@type": "CollectionPage", name: ui.places, url: placesIndexUrl, inLanguage: lang }
+    }));
+    for (const town of towns) {
+      const townEvents = events.filter((event) => event.town === town.id);
+      if (!townEvents.length) continue;
+      const url = placeUrl(town.id, lang);
+      const name = townName(towns, town.id, lang);
+      urls.add(url);
+      await writePage(localizedPath(lang, "places", slugify(town.id)), pageShell({
+        lang,
+        title: `${name} — ${ui.allEvents} 2026`,
+        description: `${ui.upcoming}: ${name}, Korčula.`,
+        canonical: url,
+        body: `<section class="seo-hero"><p><a href="/${lang}/places/">${esc(ui.places)}</a></p><h1>${esc(name)} — ${esc(ui.allEvents)}</h1><p class="seo-lede">${esc(ui.browseByPlace)}</p></section>${eventList(townEvents, towns, lang)}`,
+        schema: { "@context": "https://schema.org", "@type": "CollectionPage", name: `${name} — ${ui.allEvents}`, url, inLanguage: lang }
+      }));
+    }
+
+    const categoriesIndexUrl = `${siteUrl}/${lang}/categories/`;
+    urls.add(categoriesIndexUrl);
+    await writePage(localizedPath(lang, "categories"), pageShell({
+      lang,
+      title: `${ui.categories} | Korčula Island Events`,
+      description: ui.browseByCategory,
+      canonical: categoriesIndexUrl,
+      body: `<section class="seo-hero"><p><a href="/${lang}/">${esc(ui.calendar)}</a></p><h1>${esc(ui.categories)}</h1><p class="seo-lede">${esc(ui.browseByCategory)}</p></section>
+        <ul class="seo-event-list">${Object.keys(catLabels).map((cat) => `<li><a href="${esc(categoryUrl(cat, lang))}">${esc(categoryLabel(cat, lang))}</a><span class="seo-meta">${events.filter((event) => (event.cats || []).includes(cat)).length}</span></li>`).join("")}</ul>`,
+      schema: { "@context": "https://schema.org", "@type": "CollectionPage", name: ui.categories, url: categoriesIndexUrl, inLanguage: lang }
+    }));
+    for (const cat of Object.keys(catLabels)) {
+      const catEvents = events.filter((event) => (event.cats || []).includes(cat));
+      if (!catEvents.length) continue;
+      const url = categoryUrl(cat, lang);
+      const name = categoryLabel(cat, lang);
+      urls.add(url);
+      await writePage(localizedPath(lang, "categories", slugify(cat)), pageShell({
+        lang,
+        title: `${name} — ${ui.allEvents} 2026`,
+        description: `${ui.upcoming}: ${name}, Korčula.`,
+        canonical: url,
+        body: `<section class="seo-hero"><p><a href="/${lang}/categories/">${esc(ui.categories)}</a></p><h1>${esc(name)} — ${esc(ui.allEvents)}</h1><p class="seo-lede">${esc(ui.browseByCategory)}</p></section>${eventList(catEvents, towns, lang)}`,
+        schema: { "@context": "https://schema.org", "@type": "CollectionPage", name: `${name} — ${ui.allEvents}`, url, inLanguage: lang }
+      }));
+    }
+  }
+
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${Array.from(urls).sort().map((url) => `  <url>
-    <loc>${esc(url)}</loc>
-    <lastmod>${buildDate}</lastmod>
-    <changefreq>${sitemapChangefreq(url)}</changefreq>
-    <priority>${sitemapPriority(url)}</priority>
-  </url>`).join("\n")}
+${Array.from(urls).sort().map((url) => {
+    const event = events.find((candidate) => Object.keys(langMeta).some((lang) => eventUrl(candidate, lang) === url));
+    return `  <url>
+    <loc>${esc(url)}</loc>${event?.updatedAt ? `\n    <lastmod>${esc(event.updatedAt)}</lastmod>` : ""}
+  </url>`;
+  }).join("\n")}
 </urlset>
 `;
   await writeFile(path.join(dist, "sitemap.xml"), sitemap, "utf8");

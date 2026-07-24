@@ -386,6 +386,40 @@ function Get-MoreskaTicketEvents {
       website = "https://moreska.eu/"
       sourceId = $Row.sourceId
       source = $Row.url
+      durationMinutes = 60
+      address = [pscustomobject][ordered]@{
+        streetAddress = "Summer Cinema"
+        addressLocality = "Korcula"
+        addressRegion = "Dubrovnik-Neretva County"
+        addressCountry = "HR"
+      }
+      organizer = [pscustomobject][ordered]@{
+        name = "HGD Sveta Cecilija"
+        url = "https://moreska.eu/"
+      }
+      performers = @(
+        [pscustomobject][ordered]@{
+          type = "PerformingGroup"
+          name = "Moreska by HGD Sveta Cecilija"
+          url = "https://moreska.eu/"
+        }
+      )
+      offers = @(
+        [pscustomobject][ordered]@{
+          name = "Adult ticket"
+          price = 20
+          priceCurrency = "EUR"
+          availability = "InStock"
+          url = "https://moreska.eu/tickets"
+        },
+        [pscustomobject][ordered]@{
+          name = "Child ticket (under 14)"
+          price = 10
+          priceCurrency = "EUR"
+          availability = "InStock"
+          url = "https://moreska.eu/tickets"
+        }
+      )
     }
     $events += $event
   }

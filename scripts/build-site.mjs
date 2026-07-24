@@ -1,4 +1,4 @@
-import { cp, mkdir, rm, readFile, writeFile } from "node:fs/promises";
+import { cp, mkdir, readdir, rm, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { createHash } from "node:crypto";
 
@@ -196,17 +196,17 @@ const guidePages = {
     filter: (event, ctx) => dateInRange(event.date, ctx.today, ctx.weekEnd) || (event.endDate && dateRangesOverlap(event.date, event.endDate, ctx.today, ctx.weekEnd))
   },
   "nightlife-guide": {
-    title: "Korčula Nightlife Guide 2026 | Beach Clubs, Bars and DJ Nights",
-    h1: "Korčula Nightlife Guide 2026",
-    description: "Korčula nightlife guide covering beach clubs, DJ nights, late bars and summer party events.",
-    intro: "Korčula nightlife is split between waterfront bars, old-town spots, beach venues and open-air summer clubs. This guide highlights the recurring nightlife programmes and dated party events currently in the calendar.",
+    title: "Korčula Nightlife 2026 | Clubs, Bars and DJ Events",
+    h1: "Korčula Nightlife Events 2026",
+    description: "Find Korčula nightlife events for 2026, including DJ nights, open-air clubs, beach parties and late-night summer events by date.",
+    intro: "Plan a night out around dated DJ events, beach parties, open-air club nights and other late summer programmes across Korčula island.",
     filter: (event) => (event.cats || []).includes("nightlife")
   },
   "bars-clubs": {
-    title: "Korčula Bars and Clubs 2026 | Dos Locos, Boogie Jungle, Blue Bar and Nightlife",
+    title: "Best Bars and Clubs in Korčula 2026 | Venue Guide",
     h1: "Korčula Bars and Clubs",
-    description: "Korčula bars, clubs and nightlife events including Dos Locos, Boogie Jungle, Blue Bar, DJ nights, beach clubs and late bars.",
-    intro: "Search demand is already showing around Korčula bars and clubs. This page pulls together nightlife listings for venues such as Dos Locos, Boogie Jungle, Blue Bar, Peco's Pub, La Banya and other seasonal late-night programmes where they are in the event database.",
+    description: "Explore Korčula bars and clubs including Dos Locos, Boogie Jungle and Blue Club, with venue details and recurring DJ programmes.",
+    intro: "Compare the island's late-night venues, including Dos Locos, Boogie Jungle, Blue Bar and Blue Club, Peco's Pub, La Banya and other seasonal bars and clubs represented in the calendar.",
     filter: (event) => (event.cats || []).includes("nightlife") || /dos locos|boogie|blue bar|blue club|peco|la banya|casablanca|club|dj|nightlife/i.test(`${event.en || ""} ${event.hr || ""} ${event.venue || ""}`)
   },
   "kids-family": {
@@ -217,17 +217,17 @@ const guidePages = {
     filter: (event) => (event.cats || []).includes("kids")
   },
   "oliver-dragojevic": {
-    title: "Oliver Dragojević Korčula and Vela Luka Events 2026 | Trag u beskraju",
+    title: "Oliver Dragojević Korčula 2026 | Trag u beskraju Events",
     h1: "Oliver Dragojević Events on Korčula and Vela Luka",
-    description: "Oliver Dragojević memorial events, concerts and Trag u beskraju listings in Vela Luka and across Korčula island for 2026.",
-    intro: "Oliver Dragojević searches are currently one of the strongest Google signals for the site. This guide groups Oliver memorial events, Trag u beskraju concerts and related Vela Luka listings into one crawlable page.",
+    description: "See Oliver Dragojević memorial events and Trag u beskraju concerts in Vela Luka and across Korčula island, with 2026 dates and venues.",
+    intro: "Find the 2026 Trag u beskraju programme, Oliver Dragojević memorial concerts and related events in Vela Luka and across Korčula island.",
     filter: (event) => /oliver|dragojević|dragojevic|trag u beskraju/i.test(`${event.en || ""} ${event.hr || ""} ${event.desc?.en || ""} ${event.desc?.hr || ""} ${event.venue || ""}`)
   },
   "wine-festivals": {
     title: "Korčula Wine Festivals 2026 | Grk, Sabatina, Wine Nights and Food Events",
     h1: "Korčula Wine Festivals and Wine Nights",
     description: "Korčula wine festival guide for Grk wine, Sabatina, food and wine nights, vineyard events and summer tastings.",
-    intro: "Wine and food searches are another strong Google signal. This guide groups Grk wine, Sabatina, wine nights, food festivals and tasting events across Korčula and nearby villages.",
+    intro: "Compare Grk wine celebrations, Sabatina, wine nights, food festivals and tasting events across Korčula and nearby villages.",
     filter: (event) => {
       const cats = event.cats || [];
       const text = `${event.en || ""} ${event.hr || ""} ${event.desc?.en || ""} ${event.desc?.hr || ""}`;
@@ -248,6 +248,37 @@ const guidePages = {
     intro: "Use the events calendar as a practical things-to-do guide: start with culture and family activities by day, then choose concerts, wine nights, village feasts or nightlife in the evening.",
     filter: () => true,
     limit: 90
+  }
+};
+
+const eventSeoOverrides = {
+  "vl-oliver-1": {
+    title: "Trag u beskraju Ferry Concert — Vela Luka, 26 July 2026",
+    description: "Trag u beskraju ferry concert in Vela Luka on 26 July 2026, with Marko Tolja, Iva Ajduković, Mario Pavlić and Ante Gelo Band."
+  },
+  "vl-oliver-4": {
+    title: "Oliver Dragojević Memorial Concert — Vela Luka, 29 July 2026",
+    description: "Oliver Dragojević memorial concert in Vela Luka on 29 July 2026: the main Trag u beskraju event at Ponton with a live HRT broadcast."
+  },
+  "kt-moreska-season": {
+    title: "Moreška Korčula 2026 — Sword Dance Dates and Tickets",
+    description: "Moreška sword dance dates in Korčula for 2026, with performance details, Summer Theatre location and official ticket information."
+  },
+  "nl-boogie-season": {
+    title: "Boogie Jungle Korčula 2026 — Events, DJs and Free Shuttle",
+    description: "Boogie Jungle Korčula 2026: open-air club events, international DJs, Korkyralis Summer Festival and a free shuttle from Korčula Town."
+  },
+  "nl-doslocos": {
+    title: "Dos Locos Korčula 2026 — DJ Nights and Club Events",
+    description: "Dos Locos Korčula 2026: recurring DJ nights near the bus station. Check the latest schedule and related nightlife events."
+  },
+  "nl-bluebar": {
+    title: "Blue Bar and Blue Club Korčula 2026 — DJ Nights",
+    description: "Blue Bar and Blue Club Korčula 2026: waterfront drinks, late-night club hours and rotating summer DJ events."
+  },
+  "or-vatra": {
+    title: "Vatra Concert in Lovište, Orebić — 31 July 2026",
+    description: "Vatra perform in Lovište near Orebić on 31 July 2026. See the concert date, location and nearby Korčula summer events."
   }
 };
 
@@ -631,6 +662,27 @@ function eventPath(event) {
   return path.join(dist, "events", `${slugify(titleFor(event, "en"))}-${slugify(event.id)}`, "index.html");
 }
 
+function expandEventOccurrences(events) {
+  const expanded = [];
+  for (const event of events) {
+    expanded.push(event);
+    for (const occurrence of event.occurrences || []) {
+      const child = {
+        ...event,
+        ...occurrence,
+        id: `${event.id}-${occurrence.date}`,
+        seriesId: event.id,
+        seriesTitle: titleFor(event, "en"),
+        seasonal: false
+      };
+      delete child.occurrences;
+      delete child.endDate;
+      expanded.push(child);
+    }
+  }
+  return expanded;
+}
+
 function categoryUrl(cat) {
   return `${siteUrl}/categories/${slugify(cat)}/`;
 }
@@ -643,11 +695,36 @@ function placeUrl(townId) {
   return `${siteUrl}/places/${slugify(townId)}/`;
 }
 
-function isoDateTime(event, end = false) {
-  const date = end && event.endDate ? event.endDate : event.date;
+function isoDateTime(event) {
   const match = String(event.time || "").match(/^(\d{1,2}):(\d{2})/);
-  if (!match) return date;
-  return `${date}T${match[1].padStart(2, "0")}:${match[2]}:00+02:00`;
+  if (!match) return event.date;
+  return `${event.date}T${match[1].padStart(2, "0")}:${match[2]}:00+02:00`;
+}
+
+function eventEndDateTime(event) {
+  const startMatch = String(event.time || "").match(/^(\d{1,2}):(\d{2})/);
+  if (!startMatch) return event.endDate || null;
+
+  const rangeMatch = String(event.time || "").match(/^\d{1,2}:\d{2}\s*[–—-]\s*(\d{1,2}):(\d{2})/);
+  const endMatch = String(event.endTime || "").match(/^(\d{1,2}):(\d{2})/) || (rangeMatch ? [rangeMatch[0], rangeMatch[1], rangeMatch[2]] : null);
+  if (endMatch) {
+    const startMinutes = Number(startMatch[1]) * 60 + Number(startMatch[2]);
+    const endMinutes = Number(endMatch[1]) * 60 + Number(endMatch[2]);
+    const date = new Date(`${event.date}T00:00:00Z`);
+    if (endMinutes <= startMinutes) date.setUTCDate(date.getUTCDate() + 1);
+    return `${date.toISOString().slice(0, 10)}T${String(endMatch[1]).padStart(2, "0")}:${endMatch[2]}:00+02:00`;
+  }
+
+  if (Number(event.durationMinutes) > 0) {
+    const date = new Date(`${event.date}T${String(startMatch[1]).padStart(2, "0")}:${startMatch[2]}:00Z`);
+    date.setUTCMinutes(date.getUTCMinutes() + Number(event.durationMinutes));
+    return `${date.toISOString().slice(0, 16)}:00+02:00`;
+  }
+
+  if (event.endDate) {
+    return `${event.endDate}T${String(startMatch[1]).padStart(2, "0")}:${startMatch[2]}:00+02:00`;
+  }
+  return null;
 }
 
 const flyerBase = "/2026 Events/";
@@ -697,6 +774,7 @@ function absoluteUrl(url) {
 
 function getFlyer(event) {
   const id = event.id;
+  if (event.seriesId && noFlyerIds.has(event.seriesId)) return null;
   if (id.startsWith("kt-fermata")) return flyerUrl(flyers.fermata);
   if (id.startsWith("kt-") && !noFlyerIds.has(id)) {
     const month = event.date.slice(5, 7);
@@ -729,6 +807,50 @@ function getFlyer(event) {
   return null;
 }
 
+function eventImageUrl(event) {
+  return getFlyer(event) || `/assets/event-images/${slugify(event.id)}.svg`;
+}
+
+function wrapSvgText(value, maxLength = 30, maxLines = 3) {
+  const words = stripHtml(value).split(/\s+/).filter(Boolean);
+  const lines = [];
+  for (const word of words) {
+    const last = lines.at(-1);
+    if (!last || `${last} ${word}`.length > maxLength) lines.push(word);
+    else lines[lines.length - 1] = `${last} ${word}`;
+  }
+  if (lines.length > maxLines) {
+    lines.length = maxLines;
+    lines[maxLines - 1] = `${lines[maxLines - 1].replace(/[.…]+$/, "")}…`;
+  }
+  return lines;
+}
+
+async function writeEventImage(event, towns) {
+  if (getFlyer(event)) return;
+  const imagePath = path.join(dist, "assets", "event-images", `${slugify(event.id)}.svg`);
+  const titleLines = wrapSvgText(titleFor(event, "en"), 30, 3);
+  const town = townName(towns, event.town, "en");
+  const meta = [event.date, event.time, town, event.venue].filter(Boolean).join(" · ");
+  const titleSvg = titleLines.map((line, index) =>
+    `<text x="72" y="${210 + index * 76}" font-family="Arial, sans-serif" font-size="62" font-weight="700" fill="#fff">${esc(line)}</text>`
+  ).join("");
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+<title id="title">${esc(titleFor(event, "en"))}</title>
+<desc id="desc">${esc(meta)}</desc>
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#063b4a"/><stop offset="1" stop-color="#127b86"/></linearGradient></defs>
+<rect width="1200" height="675" fill="url(#bg)"/>
+<circle cx="1070" cy="92" r="220" fill="#f3b64d" opacity=".24"/>
+<circle cx="1110" cy="620" r="270" fill="#e85f45" opacity=".20"/>
+<text x="72" y="92" font-family="Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="5" fill="#f6d99b">KORČULA EVENTS 2026</text>
+${titleSvg}
+<rect x="72" y="520" width="1056" height="2" fill="#fff" opacity=".35"/>
+<text x="72" y="580" font-family="Arial, sans-serif" font-size="29" fill="#fff">${esc(meta.slice(0, 92))}</text>
+<text x="72" y="630" font-family="Arial, sans-serif" font-size="24" fill="#d7eef0">korcula-events.com</text>
+</svg>`;
+  await writePage(imagePath, svg);
+}
+
 function eventTimeRange(event) {
   const startYMD = event.date.replaceAll("-", "");
   const endDate = event.endDate || event.date;
@@ -743,7 +865,13 @@ function eventTimeRange(event) {
   const h = String(hour).padStart(2, "0");
   const m = String(minute).padStart(2, "0");
   const start = `${startYMD}T${h}${m}00`;
-  const endMinutes = hour * 60 + minute + 120;
+  const endClockMatch = String(event.endTime || "").match(/^(\d{1,2}):(\d{2})/) ||
+    String(event.time || "").match(/^\d{1,2}:\d{2}\s*[–—-]\s*(\d{1,2}):(\d{2})/);
+  const duration = Number(event.durationMinutes) > 0 ? Number(event.durationMinutes) : 120;
+  let endMinutes = endClockMatch
+    ? Number(endClockMatch[1]) * 60 + Number(endClockMatch[2])
+    : hour * 60 + minute + duration;
+  if (endClockMatch && endMinutes <= hour * 60 + minute) endMinutes += 1440;
   const endDayOffset = Math.floor(endMinutes / 1440);
   const endClockMinutes = endMinutes % 1440;
   const end = new Date(`${event.date}T00:00:00Z`);
@@ -1082,9 +1210,48 @@ function eventNarrative(event, towns) {
   return pieces.join(" ");
 }
 
-function eventSchema(event, towns) {
+function eventGuideLinks(event) {
+  const text = `${event.en || ""} ${event.hr || ""} ${event.venue || ""} ${(event.cats || []).join(" ")}`;
+  const links = [];
+  if (/oliver|dragojević|dragojevic|trag u beskraju/i.test(text)) {
+    links.push(["Oliver Dragojević 2026 guide", "/guides/oliver-dragojevic/"]);
+  }
+  if ((event.cats || []).includes("nightlife") || /club|bar|dj|boogie|dos locos/i.test(text)) {
+    links.push(["Korčula nightlife events", "/guides/nightlife-guide/"]);
+    links.push(["Korčula bars and clubs", "/guides/bars-clubs/"]);
+  }
+  if (/wine|vino|vinski|grk|sabatina|tasting|degust/i.test(text)) {
+    links.push(["Korčula wine festivals", "/guides/wine-festivals/"]);
+  }
+  if ((event.cats || []).includes("festival") || (event.cats || []).includes("folklore")) {
+    links.push(["Korčula summer festivals", "/guides/summer-festivals/"]);
+  }
+  return links.filter((link, index) => links.findIndex((item) => item[1] === link[1]) === index);
+}
+
+function postalAddress(event, towns) {
+  const supplied = event.address || {};
+  return {
+    "@type": "PostalAddress",
+    ...(supplied.streetAddress ? { streetAddress: supplied.streetAddress } : {}),
+    addressLocality: supplied.addressLocality || townName(towns, event.town, "en"),
+    addressRegion: supplied.addressRegion || "Dubrovnik-Neretva County",
+    ...(supplied.postalCode ? { postalCode: supplied.postalCode } : {}),
+    addressCountry: supplied.addressCountry || "HR"
+  };
+}
+
+function schemaEntity(entity, fallbackType) {
+  if (!entity?.name) return null;
+  return {
+    "@type": entity.type || fallbackType,
+    name: entity.name,
+    ...(entity.url && /^https?:\/\//i.test(entity.url) ? { url: entity.url } : {})
+  };
+}
+
+function eventSchema(event, towns, image = eventImageUrl(event)) {
   const description = descFor(event, "en") || `${titleFor(event, "en")} in ${townName(towns, event.town, "en")}, Korčula, Croatia.`;
-  const flyer = getFlyer(event);
   const schema = {
     "@context": "https://schema.org",
     "@type": "Event",
@@ -1096,22 +1263,52 @@ function eventSchema(event, towns) {
     location: {
       "@type": "Place",
       name: event.venue || townName(towns, event.town, "en"),
-      address: `${townName(towns, event.town, "en")}, Croatia`
+      address: postalAddress(event, towns)
     },
-    description
+    description,
+    image: [absoluteUrl(image)]
   };
-  if (flyer) schema.image = [absoluteUrl(flyer)];
-  if (event.endDate) schema.endDate = isoDateTime(event, true);
+  const endDate = eventEndDateTime(event);
+  if (endDate) schema.endDate = endDate;
   if (/besplatan|slobodan|free/i.test(`${event.hr || ""} ${event.en || ""}`)) schema.isAccessibleForFree = true;
-  if (event.ticketUrl) {
-    schema.offers = {
-      "@type": "Offer",
-      url: event.ticketUrl,
-      availability: "https://schema.org/InStock"
-    };
+  const offers = (event.offers || []).map((offer) => ({
+    "@type": "Offer",
+    ...(offer.name ? { name: offer.name } : {}),
+    price: Number(offer.price),
+    priceCurrency: offer.priceCurrency,
+    url: offer.url,
+    availability: `https://schema.org/${offer.availability || "InStock"}`
+  })).filter((offer) =>
+    Number.isFinite(offer.price) &&
+    offer.priceCurrency &&
+    /^https?:\/\//i.test(offer.url)
+  );
+  if (offers.length) schema.offers = offers;
+  const organizer = schemaEntity(event.organizer, "Organization");
+  if (organizer) schema.organizer = organizer;
+  const performers = (event.performers || []).map((performer) => schemaEntity(performer, "Person")).filter(Boolean);
+  if (performers.length) schema.performer = performers;
+  const sameAs = [event.source, event.website, event.facebook, event.instagram]
+    .filter((url) => /^https?:\/\//i.test(String(url || "")));
+  if (sameAs.length) {
+    schema.sameAs = [...new Set(sameAs)];
   }
-  if (event.source || event.website || event.facebook) schema.sameAs = [event.source || event.website || event.facebook];
   return schema;
+}
+
+function eventSeriesSchema(event) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: titleFor(event, "en"),
+    description: descFor(event, "en"),
+    url: eventUrl(event),
+    hasPart: (event.occurrenceEvents || []).map((occurrence) => ({
+      "@type": "WebPage",
+      name: `${titleFor(occurrence, "en")} — ${occurrence.date}`,
+      url: eventUrl(occurrence)
+    }))
+  };
 }
 
 async function writePage(file, html) {
@@ -1121,11 +1318,17 @@ async function writePage(file, html) {
 
 async function buildSeoPages(data) {
   const towns = data.meta.towns;
-  const events = data.events.slice().sort((a, b) =>
+  const baseEvents = data.events.slice();
+  const events = expandEventOccurrences(baseEvents).sort((a, b) =>
     String(a.date).localeCompare(String(b.date)) ||
     String(a.time || "").localeCompare(String(b.time || "")) ||
     String(a.id).localeCompare(String(b.id))
   );
+  for (const event of baseEvents) {
+    if (event.occurrences?.length) {
+      event.occurrenceEvents = events.filter((candidate) => candidate.seriesId === event.id);
+    }
+  }
   const urls = new Set([`${siteUrl}/`]);
 
   for (const [lang, meta] of Object.entries(langMeta)) {
@@ -1135,7 +1338,7 @@ async function buildSeoPages(data) {
         <h1>${esc(meta.title)}</h1>
         <p class="seo-lede">${esc(meta.intro)}</p>
         <div class="seo-grid">
-          <div class="seo-card"><strong>279 events</strong><span>Concerts, feasts, culture, sports and nightlife.</span></div>
+          <div class="seo-card"><strong>${events.length} events</strong><span>Concerts, feasts, culture, sports and nightlife.</span></div>
           <div class="seo-card"><strong>Island wide</strong><span>Korčula Town, villages, Vela Luka, Lumbarda and nearby Orebić.</span></div>
           <div class="seo-card"><strong>Updated sources</strong><span>Official programmes, posters, venues and community leads.</span></div>
         </div>
@@ -1311,11 +1514,14 @@ async function buildSeoPages(data) {
   }
 
   for (const event of events) {
+    await writeEventImage(event, towns);
     const url = eventUrl(event);
     urls.add(url);
     const title = titleFor(event, "en");
+    const datedTitle = event.seriesId ? `${title} — ${event.date}` : title;
     const town = townName(towns, event.town, "en");
-    const description = descFor(event, "en") || `${title} on ${event.date} in ${town}, Korčula, Croatia.`;
+    const seoOverride = eventSeoOverrides[event.id] || {};
+    const description = seoOverride.description || descFor(event, "en") || `${title} on ${event.date} in ${town}, Korčula, Croatia.`;
     const sourceLinks = [
       ["Website", event.website],
       ["Tickets", event.ticketUrl],
@@ -1325,19 +1531,20 @@ async function buildSeoPages(data) {
     ].filter(([, href]) => href);
     const relatedByTown = events.filter((item) => item.id !== event.id && item.town === event.town).slice(0, 6);
     const relatedByCategory = events.filter((item) => item.id !== event.id && (item.cats || []).some((cat) => (event.cats || []).includes(cat))).slice(0, 6);
-    const flyer = getFlyer(event);
+    const flyer = eventImageUrl(event);
     const mapHref = mapsUrl(event, towns);
     const gcalHref = googleCalendarUrl(event, towns);
     const icsHref = icsDataUrl(event, towns);
-    const shareText = `${title} | Korčula Events 2026`;
+    const shareText = `${datedTitle} | Korčula Events 2026`;
     const whatsappHref = `https://wa.me/?text=${encodeURIComponent(`${shareText} ${url}`)}`;
     const facebookHref = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+    const guideLinks = eventGuideLinks(event);
     const pills = [
       ...((event.cats || []).map((cat) => `<a class="seo-pill" href="${esc(categoryUrl(cat))}">${esc(catLabels[cat] || cat)}</a>`)),
       `<a class="seo-pill" href="${esc(placeUrl(event.town))}">${esc(town)}</a>`
     ].join("");
     await writePage(eventPath(event), pageShell({
-      title: `${title} | Korčula Events 2026`,
+      title: seoOverride.title || `${datedTitle} | Korčula Events 2026`,
       description: description.slice(0, 155),
       canonical: url,
       image: flyer || defaultShareImage,
@@ -1347,8 +1554,9 @@ async function buildSeoPages(data) {
           <p><a href="/events/">All events</a> · <a href="/">Interactive calendar</a></p>
           <div class="seo-event-layout">
             <div>
-              <h1>${esc(title)}</h1>
+              <h1>${esc(datedTitle)}</h1>
               <p class="seo-lede">${esc(description)}</p>
+              ${event.seriesId ? `<p><a href="${esc(eventUrl(baseEvents.find((item) => item.id === event.seriesId)))}">View the full ${esc(event.seriesTitle)} performance series</a></p>` : ""}
               <div class="seo-grid">
                 <div class="seo-card"><strong>Date</strong><span>${esc(event.date)}${event.endDate ? ` to ${esc(event.endDate)}` : ""}${event.time ? ` · ${esc(event.time)}` : ""}</span></div>
                 <div class="seo-card"><strong>Place</strong><span>${esc(town)}${event.venue ? ` · ${esc(event.venue)}` : ""}</span></div>
@@ -1365,9 +1573,10 @@ async function buildSeoPages(data) {
                 <button class="seo-action" type="button" data-copy-url="${esc(url)}">Copy link / Instagram</button>
               </div>
             </div>
-            ${flyer ? `<aside class="seo-poster"><a href="${esc(flyer)}"><img src="${esc(flyer)}" alt="${esc(title)} event poster"></a></aside>` : ""}
+            <aside class="seo-poster"><a href="${esc(flyer)}"><img src="${esc(flyer)}" alt="${esc(datedTitle)} event image" width="1200" height="675"></a></aside>
           </div>
           <div class="seo-pill-row">${pills}</div>
+          ${guideLinks.length ? `<nav class="seo-nav" aria-label="Related Korčula event guides">${guideLinks.map(([label, href]) => `<a href="${esc(href)}">${esc(label)}</a>`).join("")}</nav>` : ""}
         </section>
         <section class="seo-section seo-two-col">
           <div>
@@ -1382,16 +1591,17 @@ async function buildSeoPages(data) {
           </div>
         </section>
         ${event.verify ? "<p>Details are marked for verification. Check the linked source before relying on the exact time.</p>" : ""}
+        ${event.occurrenceEvents?.length ? `<section class="seo-section"><h2>Individual 2026 performances</h2><p>Each performance has its own page, date and structured event listing.</p>${eventList(event.occurrenceEvents, towns, "en")}</section>` : ""}
         ${sourceLinks.length ? `<section class="seo-section"><h2>Source and booking links</h2><ul>${sourceLinks.map(([label, href]) => `<li><a href="${esc(href)}">${esc(label)}</a></li>`).join("")}</ul></section>` : ""}
         ${relatedByTown.length ? `<section class="seo-section"><h2>More events in ${esc(town)}</h2>${eventList(relatedByTown, towns, "en", 6)}</section>` : ""}
         ${relatedByCategory.length ? `<section class="seo-section"><h2>Similar events</h2>${eventList(relatedByCategory, towns, "en", 6)}</section>` : ""}
       `,
       schema: [
-        eventSchema(event, towns),
+        event.occurrences?.length ? eventSeriesSchema(event) : eventSchema(event, towns, flyer),
         breadcrumbSchema([
           { name: "Home", url: `${siteUrl}/` },
           { name: "Events", url: `${siteUrl}/events/` },
-          { name: title, url }
+          { name: datedTitle, url }
         ])
       ]
     }));
@@ -1559,8 +1769,10 @@ ${Array.from(urls).sort().map((url) => `  <url>
   return urls.size;
 }
 
-await rm(dist, { recursive: true, force: true });
 await mkdir(dist, { recursive: true });
+for (const entry of await readdir(dist)) {
+  await rm(path.join(dist, entry), { recursive: true, force: true });
+}
 
 await cp(path.join(root, "site"), dist, { recursive: true });
 await copyIfExists(path.join(root, "generated_images"), path.join(dist, "generated_images"));

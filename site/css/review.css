@@ -183,6 +183,12 @@
   padding:14px;
 }
 
+.review-card.review-target {
+  border-color:var(--olive);
+  box-shadow:0 0 0 3px rgba(110, 136, 63, .18), var(--shadow);
+  scroll-margin-top:18px;
+}
+
 .review-card h2 {
   margin:0 0 4px;
   font-size:1rem;

@@ -7,7 +7,8 @@
     posterReport: { counts: {}, results: [] },
     loadErrors: [],
     panel: "candidates",
-    ref: new URLSearchParams(window.location.search).get("ref") || ""
+    ref: new URLSearchParams(window.location.search).get("ref") || "",
+    candidate: new URLSearchParams(window.location.search).get("candidate") || ""
   };
 
   const $ = (sel) => document.querySelector(sel);
@@ -82,7 +83,7 @@
     const snippet = evidence.textSnippet || candidate.notes || "";
     const statusClass = candidate.status === "merged" || candidate.status === "approved" ? "ok" : "warn";
 
-    return `<article class="review-card" data-index="${index}">
+    return `<article class="review-card" data-index="${index}" data-candidate-id="${escapeHtml(candidate.id || "")}">
       <div>
         <h2>${escapeHtml(eventTitle(candidate))}</h2>
         <div class="review-meta">
@@ -114,14 +115,28 @@
     const candidates = state.pending.candidates || [];
     const actionable = candidates
       .map((candidate, index) => ({ candidate, index }))
-      .filter((item) => item.candidate.status === "new" || item.candidate.status === "needs-review");
+      .filter((item) => state.candidate
+        ? item.candidate.id === state.candidate
+        : item.candidate.status === "new" || item.candidate.status === "needs-review");
     const handled = candidates.length - actionable.length;
     if (!actionable.length) {
-      panel.innerHTML = '<div class="review-card empty-review">No pending candidates in this file.</div>';
+      panel.innerHTML = state.candidate
+        ? `<div class="review-card empty-review">Candidate <strong>${escapeHtml(state.candidate)}</strong> was not found in this branch.</div>`
+        : '<div class="review-card empty-review">No pending candidates in this file.</div>';
       return;
     }
-    const note = handled > 0 ? `<div class="review-card empty-review">${handled} auto-handled candidates are hidden from this approval list.</div>` : "";
+    const note = !state.candidate && handled > 0
+      ? `<div class="review-card empty-review">${handled} auto-handled candidates are hidden from this approval list.</div>`
+      : "";
     panel.innerHTML = note + actionable.map((item) => candidateCard(item.candidate, item.index)).join("");
+    if (state.candidate) {
+      const target = Array.from(panel.querySelectorAll(".review-card[data-candidate-id]"))
+        .find((card) => card.dataset.candidateId === state.candidate);
+      if (target) {
+        target.classList.add("review-target");
+        target.scrollIntoView({ block: "start" });
+      }
+    }
   }
 
   function renderSocial() {
@@ -226,7 +241,10 @@
       document.querySelector(".review-shell").prepend(notice);
     }
     if (state.ref) {
-      notice.innerHTML = `<strong>Reviewing branch data:</strong> ${escapeHtml(state.ref)} <a href="review.html">Switch to live data</a>`;
+      const candidateText = state.candidate
+        ? ` · <strong>Candidate:</strong> ${escapeHtml(state.candidate)}`
+        : "";
+      notice.innerHTML = `<strong>Reviewing branch data:</strong> ${escapeHtml(state.ref)}${candidateText} <a href="review.html">Switch to live data</a>`;
       notice.hidden = false;
     } else {
       notice.innerHTML = "<strong>Reviewing live data.</strong> Open the ingestion PR review link to inspect branch candidates before merge.";

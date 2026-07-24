@@ -74,9 +74,17 @@ jobs:
             $parts += $candidate.event.time
             return [string](($parts | Where-Object { $_ }) -join " ")
           }
+          function Get-CandidateReviewUrl($candidate) {
+            $candidateId = [string]$candidate.id
+            if (-not $candidateId) { return $reviewUrl }
+            return "$reviewUrl&candidate=$([uri]::EscapeDataString($candidateId))"
+          }
           function Format-CandidateList($items, [int]$limit = 25) {
             $rows = @($items | Select-Object -First $limit | ForEach-Object {
-              $title = (Get-CandidateTitle $_) -replace '\|', '/'
+              $titleText = (Get-CandidateTitle $_) -replace '\|', '/'
+              $titleText = $titleText -replace '\[', '\[' -replace '\]', '\]'
+              $candidateUrl = Get-CandidateReviewUrl $_
+              $title = "[$titleText]($candidateUrl)"
               $when = (Get-CandidateWhen $_) -replace '\|', '/'
               $place = [string]((@($_.event.town, $_.event.venue) | Where-Object { $_ }) -join " / ")
               $place = $place -replace '\|', '/'
@@ -155,11 +163,22 @@ jobs:
             $posterStructuredRows | Where-Object { @($_.duplicateMatches).Count -gt 0 }
             $posterReport.results | Where-Object { $_.duplicateRisk -eq "high" }
           )
+          $titleCandidates = @($candidates | Where-Object { $_.status -in @("new","needs-review") })
+          if ($titleCandidates.Count -eq 0) {
+            $titleCandidates = @($candidates | Where-Object { $_.reviewMode -eq "auto-approved" })
+          }
+          $titlePreview = [string](@($titleCandidates | Select-Object -First 2 | ForEach-Object {
+            $title = (Get-CandidateTitle $_) -replace '[\r\n]+', ' '
+            if ($title.Length -gt 48) { $title = $title.Substring(0, 47) + "…" }
+            $title
+          }) -join ", ")
+          $titleSuffix = if ($titlePreview) { " — $titlePreview" } else { "" }
           $body = @"
           Automated event ingestion run.
 
-          Protected review dashboard for this PR branch:
-          $reviewUrl
+          **[$needsReview events need approval — open the review queue]($reviewUrl)**
+
+          Each event name below links directly to its detailed candidate page.
 
           Files to review in this PR:
           - site/data/pending-events.json
@@ -210,12 +229,13 @@ jobs:
           "auto_rejected=$autoRejected" >> $env:GITHUB_OUTPUT
           "auto_duplicates=$autoDuplicates" >> $env:GITHUB_OUTPUT
           "duplicates=$duplicates" >> $env:GITHUB_OUTPUT
+          "title_suffix=$titleSuffix" >> $env:GITHUB_OUTPUT
 
       - name: Create pull request
         uses: peter-evans/create-pull-request@v8
         with:
           branch: automation/event-ingestion
-          title: "Event ingestion: ${{ steps.summary.outputs.auto_approved }} auto-approved, ${{ steps.summary.outputs.needs_review }} need review"
+          title: "Event ingestion: ${{ steps.summary.outputs.auto_approved }} auto-approved, ${{ steps.summary.outputs.needs_review }} need review${{ steps.summary.outputs.title_suffix }}"
           commit-message: "Update event candidates and auto-approved events"
           body-path: ${{ runner.temp }}/pr-body.md
           labels: event-ingestion

@@ -1475,6 +1475,20 @@
         "sl": "Turnir v malem nogometu v Račišću od 26.7. do 2.8. Sistem 6+1, futsal pravila, prijavnina 100 EUR. Informacije: Pelin +385 99 245 0480 ali Ivo +385 95 890 2414.",
         "fr": "Tournoi de futsal a Račišće du 26 juillet au 2 aout. Systeme 6+1, regles futsal, inscription 100 EUR. Informations : Pelin +385 99 245 0480 ou Ivo +385 95 890 2414."
       },
+      "registrationFee": {
+        "amount": 100,
+        "currency": "EUR"
+      },
+      "contactPhones": [
+        {
+          "name": "Pelin",
+          "phone": "+385 99 245 0480"
+        },
+        {
+          "name": "Ivo",
+          "phone": "+385 95 890 2414"
+        }
+      ],
       "source": "2026 Events/racisce-malonogometni-turnir-2026.jpeg",
       "updatedAt": "2026-07-25"
     },
@@ -1581,6 +1595,7 @@
         "sl": "Večer lokalnih okusov v čast Vlaškega pršuta (značilnega lokalnega pršuta), sira in vina. Priporočena rezervacija (+385 92 145 1199), a dobrodošli ste tudi brez nje, če je miza na voljo.",
         "fr": "Une soirée aux saveurs locales célébrant le Vlaški pršut (un jambon cru local typique), le fromage et le vin. Réservation recommandée (+385 92 145 1199), mais les visiteurs sans réservation sont aussi bienvenus si une table est disponible."
       },
+      "reservationPhone": "+385 92 145 1199",
       "source": "2026 Events/742480682_122111178783315720_7349343465846962909_n.jpg",
       "de": "Ein Abend nach unserem Geschmack: Pršut (Prosciutto), Käse und Wein! (Restoran Mediteran)",
       "it": "Una serata al nostro gusto: Pršut (prosciutto), formaggio e vino! (Restoran Mediteran)",
@@ -1608,6 +1623,13 @@
         "sl": "Drugi večer pršuta, sira in vina v Restoranu Mediteran v Račišću, z glasbo Psiha in Keve. Rezervacije: +385 92 145 1199.",
         "fr": "Deuxième soirée pršut, fromage et vin au Restoran Mediteran à Račišće, avec musique live par Psiho et Keva. Réservations : +385 92 145 1199."
       },
+      "reservationPhone": "+385 92 145 1199",
+      "performers": [
+        {
+          "type": "PerformingGroup",
+          "name": "Psiho i Keva"
+        }
+      ],
       "source": "2026 Events/mediteran-prsut-sir-vino-2.jpeg",
       "de": "Zweiter Abend mit Pršut, Käse und Wein — Psiho und Keva",
       "it": "Seconda serata prosciutto, formaggio e vino — Psiho e Keva",
@@ -2902,6 +2924,16 @@
       ],
       "hr": "Koncert: Bruno Rački & Grupa Valovi (ulaz slobodan)",
       "en": "Concert: Bruno Rački & Grupa Valovi (free entry)",
+      "performers": [
+        {
+          "type": "Person",
+          "name": "Bruno Rački"
+        },
+        {
+          "type": "PerformingGroup",
+          "name": "Grupa Valovi"
+        }
+      ],
       "de": "Konzert: Bruno Rački & Grupa Valovi (Eintritt frei)",
       "it": "Concerto: Bruno Rački & Grupa Valovi (ingresso libero)",
       "sl": "Koncert: Bruno Rački & Grupa Valovi (prost vstop)",
@@ -3023,6 +3055,12 @@
       ],
       "hr": "Koncert klape \"Kaše\"",
       "en": "Concert by klapa \"Kaše\"",
+      "performers": [
+        {
+          "type": "PerformingGroup",
+          "name": "Klapa Kaše"
+        }
+      ],
       "de": "Konzert der Klapa „Kaše“",
       "it": "Concerto della klapa \"Kaše\"",
       "sl": "Koncert klape \"Kaše\"",
@@ -3048,6 +3086,24 @@
         "sl": "Koncert na trajektu Jadrolinije z Markom Toljo, Ivo Ajduković, Mariom Pavlićem in Ante Gelo Bandom z gosti.",
         "fr": "Concert sur le ferry Jadrolinija avec Marko Tolja, Iva Ajduković, Mario Pavlić et Ante Gelo Band avec invites."
       },
+      "performers": [
+        {
+          "type": "Person",
+          "name": "Marko Tolja"
+        },
+        {
+          "type": "Person",
+          "name": "Iva Ajduković"
+        },
+        {
+          "type": "Person",
+          "name": "Mario Pavlić"
+        },
+        {
+          "type": "PerformingGroup",
+          "name": "Ante Gelo Band"
+        }
+      ],
       "de": "Trag u beskraju (Gedenken an Oliver Dragojević) — Konzert auf der Fähre",
       "it": "Trag u beskraju (commemorazione di Oliver Dragojević) — concerto sul traghetto",
       "sl": "Trag u beskraju (spomin na Oliverja Dragojevića) — koncert na trajektu",
@@ -3158,6 +3214,14 @@
         "it": "Parte del programma Trag u beskraju 2026 a Vela Luka, dedicato a Oliver Dragojević. Controllare il manifesto del programma per artisti e dettagli finali.",
         "sl": "Del programa Trag u beskraju 2026 v Veli Luki, posvećenega Oliverju Dragojeviću. Za nastopajoce in končne podrobnosti preverite programski plakat.",
         "fr": "Une partie du programme Trag u beskraju 2026 a Vela Luka, dedie a Oliver Dragojević. Consultez l affiche du programme pour les artistes et les derniers details."
+      },
+      "broadcast": {
+        "en": "Live on HRT, with the concert continuing after the broadcast",
+        "hr": "Izravno na HRT-u, uz nastavak koncerta nakon prijenosa",
+        "de": "Live im HRT; das Konzert wird nach der Übertragung fortgesetzt",
+        "it": "In diretta su HRT; il concerto prosegue dopo la trasmissione",
+        "sl": "V živo na HRT; koncert se nadaljuje po prenosu",
+        "fr": "En direct sur HRT, puis le concert continue après la diffusion"
       },
       "updatedAt": "2026-07-25"
     },
@@ -3600,6 +3664,33 @@
         "sl": "Koncert na prostem na Plokati v Blatu. Vstop od 20:30, koncert ob 21:30, nato DJ after party. Stoječi prostor.",
         "fr": "Concert en plein air sur la Plokata à Blato. Entrée à partir de 20h30, concert à 21h30, suivi d'une DJ after party. Espace debout."
       },
+      "doorsTime": "20:30",
+      "format": {
+        "en": "Open-air concert, standing area",
+        "hr": "Koncert na otvorenom, parter za stajanje",
+        "de": "Open-Air-Konzert, Stehplatzbereich",
+        "it": "Concerto all'aperto, area in piedi",
+        "sl": "Koncert na prostem, stojišča",
+        "fr": "Concert en plein air, espace debout"
+      },
+      "afterParty": {
+        "en": "DJ after-party after the concert",
+        "hr": "DJ after party nakon koncerta",
+        "de": "DJ-Afterparty nach dem Konzert",
+        "it": "DJ after party dopo il concerto",
+        "sl": "DJ after party po koncertu",
+        "fr": "DJ after-party après le concert"
+      },
+      "performers": [
+        {
+          "type": "Person",
+          "name": "Vesna Pisarović"
+        },
+        {
+          "type": "Person",
+          "name": "Hari Rončević"
+        }
+      ],
       "source": "2026 Events/vesna-pisarovic-hari-roncevic-blato.jpeg",
       "de": "Konzert: Vesna Pisarović und Hari Rončević",
       "it": "Concerto: Vesna Pisarović e Hari Rončević",
@@ -4111,6 +4202,12 @@
       ],
       "hr": "Koncert mandolinskog orkestra i ženske vokalne skupine KUD-a Metković",
       "en": "Concert — Metković mandolin orchestra & women's vocal ensemble",
+      "performers": [
+        {
+          "type": "PerformingGroup",
+          "name": "KUD Metković mandolin orchestra and women's vocal ensemble"
+        }
+      ],
       "de": "Konzert — Mandolinenorchester und Frauenvokalensemble aus Metković",
       "it": "Concerto — orchestra di mandolini e gruppo vocale femminile di Metković",
       "sl": "Koncert — mandolinski orkester in ženska vokalna skupina iz Metkovića",
@@ -4509,6 +4606,12 @@
       ],
       "hr": "Koncert klape Ragusa",
       "en": "Concert by klapa Ragusa",
+      "performers": [
+        {
+          "type": "PerformingGroup",
+          "name": "Klapa Ragusa"
+        }
+      ],
       "de": "Konzert der Klapa Ragusa",
       "it": "Concerto della klapa Ragusa",
       "sl": "Koncert klape Ragusa",
@@ -4560,6 +4663,12 @@
       ],
       "hr": "Klapa Kaše u Vignju (ulaz slobodan)",
       "en": "Klapa Kaše in Viganj (free entry)",
+      "performers": [
+        {
+          "type": "PerformingGroup",
+          "name": "Klapa Kaše"
+        }
+      ],
       "de": "Klapa Kaše in Viganj (Eintritt frei)",
       "it": "Klapa Kaše a Viganj (ingresso libero)",
       "sl": "Klapa Kaše v Vignju (vstop prost)",
@@ -4701,6 +4810,12 @@
       ],
       "hr": "Koncert: E.T. (Electro Team)",
       "en": "Concert: E.T. (Electro Team)",
+      "performers": [
+        {
+          "type": "PerformingGroup",
+          "name": "E.T. (Electro Team)"
+        }
+      ],
       "de": "Konzert: E.T. (Electro Team)",
       "it": "Concerto: E.T. (Electro Team)",
       "sl": "Koncert: E.T. (Electro Team)",
@@ -4718,6 +4833,12 @@
       ],
       "hr": "Koncert: Hladno Pivo (ulaz besplatan)",
       "en": "Concert: Hladno Pivo (free entry)",
+      "performers": [
+        {
+          "type": "PerformingGroup",
+          "name": "Hladno Pivo"
+        }
+      ],
       "de": "Konzert: Hladno Pivo (Eintritt frei)",
       "it": "Concerto: Hladno Pivo (ingresso libero)",
       "sl": "Koncert: Hladno Pivo (prost vstop)",
@@ -4872,6 +4993,12 @@
       ],
       "hr": "Koncert: Vatra",
       "en": "Concert: Vatra",
+      "performers": [
+        {
+          "type": "PerformingGroup",
+          "name": "Vatra"
+        }
+      ],
       "de": "Konzert: Vatra",
       "it": "Concerto: Vatra",
       "sl": "Koncert: Vatra",
@@ -4923,6 +5050,12 @@
       ],
       "hr": "Koncert klape Smokvica",
       "en": "Concert by klapa Smokvica",
+      "performers": [
+        {
+          "type": "PerformingGroup",
+          "name": "Klapa Smokvica"
+        }
+      ],
       "de": "Konzert der Klapa Smokvica",
       "it": "Concerto della klapa Smokvica",
       "sl": "Koncert klape Smokvica",
@@ -5064,6 +5197,12 @@
       ],
       "hr": "Koncert: Magazin",
       "en": "Concert: Magazin",
+      "performers": [
+        {
+          "type": "PerformingGroup",
+          "name": "Magazin"
+        }
+      ],
       "de": "Konzert: Magazin",
       "it": "Concerto: Magazin",
       "sl": "Koncert: Magazin",
@@ -5183,6 +5322,12 @@
       ],
       "hr": "Klapa Kaše u Vignju (ulaz slobodan)",
       "en": "Klapa Kaše in Viganj (free entry)",
+      "performers": [
+        {
+          "type": "PerformingGroup",
+          "name": "Klapa Kaše"
+        }
+      ],
       "de": "Klapa Kaše in Viganj (Eintritt frei)",
       "it": "Klapa Kaše a Viganj (ingresso libero)",
       "sl": "Klapa Kaše v Vignju (prost vstop)",
@@ -5329,6 +5474,7 @@
         "sl": "Plačljiv klubski večer v Blue Clubu Korčula. Rezervacije miz: +385 99 6420 147.",
         "fr": "Soirée club payante au Blue Club Korčula. Réservation de tables : +385 99 6420 147."
       },
+      "reservationPhone": "+385 99 6420 147",
       "ticketUrl": "https://core-event.co/en/events/taking-the-trash-out-korcula-529c/",
       "source": "https://core-event.co/en/events/taking-the-trash-out-korcula-529c/",
       "de": "Taking The Trash Out @ Blue Club Korčula",
@@ -5447,6 +5593,14 @@
         "it": "Grande club all'aperto (capienza di circa 1.500 persone) a pochi km dalla Città Vecchia; la stagione comprende il Korkyralis Summer Festival con DJ internazionali. Line-up della settimana su Facebook/Instagram.",
         "sl": "Velik klub na prostem (kapaciteta pribl. 1.500) nekaj km od starega mestnega jedra; v okviru sezone tudi Korkyralis Summer Festival z mednarodnimi DJ-i. Trenutni razpored na Facebooku/Instagramu.",
         "fr": "Grande boîte en plein air (capacité d'environ 1 500 personnes) à quelques km de la vieille ville ; la saison comprend le Korkyralis Summer Festival avec des DJ internationaux. Programme de la semaine sur Facebook/Instagram."
+      },
+      "transport": {
+        "en": "Free shuttle from Korčula Town; check the current pickup details with the venue",
+        "hr": "Besplatan prijevoz iz grada Korčule; aktualno mjesto polaska provjerite kod kluba",
+        "de": "Kostenloser Shuttle aus Korčula-Stadt; aktuelle Abfahrtsdetails beim Club prüfen",
+        "it": "Navetta gratuita dalla città di Korčula; verificare con il club il punto di partenza aggiornato",
+        "sl": "Brezplačen prevoz iz mesta Korčula; aktualno mesto odhoda preverite pri klubu",
+        "fr": "Navette gratuite depuis la ville de Korčula ; vérifiez le point de départ actuel auprès du club"
       },
       "facebook": "https://www.facebook.com/thejungleclub1/",
       "source": "https://www.facebook.com/thejungleclub1/",

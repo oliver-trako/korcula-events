@@ -1056,9 +1056,22 @@
       return { allDay: true, startYMD: startDate, endYMD: endDate };
     }
     const startHM = pad2(time.h) + pad2(time.min) + "00";
-    let endH = time.h + 2;
-    const endHM = pad2(endH % 24) + pad2(time.min) + "00";
-    const endDate = (e.endDate || e.date).replace(/-/g, "");
+    const explicitEnd = parseStartTime(e.endTime);
+    const duration = Number(e.durationMinutes) > 0 ? Number(e.durationMinutes) : 120;
+    const startMinutes = time.h * 60 + time.min;
+    const endMinutes = explicitEnd ? explicitEnd.h * 60 + explicitEnd.min : startMinutes + duration;
+    const endHM = pad2(Math.floor((endMinutes % 1440) / 60)) + pad2(endMinutes % 60) + "00";
+    let endDateValue = e.endDate || e.date;
+    if (!e.endDate && endMinutes <= startMinutes) {
+      const d = parseISO(e.date);
+      d.setDate(d.getDate() + 1);
+      endDateValue = d.getFullYear() + "-" + pad2(d.getMonth() + 1) + "-" + pad2(d.getDate());
+    } else if (!e.endDate && endMinutes >= 1440) {
+      const d = parseISO(e.date);
+      d.setDate(d.getDate() + Math.floor(endMinutes / 1440));
+      endDateValue = d.getFullYear() + "-" + pad2(d.getMonth() + 1) + "-" + pad2(d.getDate());
+    }
+    const endDate = endDateValue.replace(/-/g, "");
     return { allDay: false, startYMD: startDate, startHM, endYMD: endDate, endHM };
   }
 
@@ -1176,7 +1189,57 @@
         seen.add(href);
         return true;
       })
-      .map(([key, label]) => ({ href: e[key], label }));
+      .map(([key, label]) => ({
+        href: /^https?:\/\//i.test(e[key]) || e[key].startsWith("/") ? e[key] : "/" + e[key].replace(/^\.?\//, ""),
+        label
+      }));
+  }
+
+  function localizedField(value) {
+    if (!value) return "";
+    if (typeof value === "string") return value;
+    return value[state.lang] || value.en || value.hr || "";
+  }
+
+  function isFreeAdmission(e) {
+    const text = (e.hr || "") + " " + (e.en || "");
+    return /\b(?:ulaz|entry|admission)\b[^.;)]{0,24}\b(?:besplatan|slobodan|free)\b|\bfree entry\b/i.test(text);
+  }
+
+  function eventAdmissionPrice(e) {
+    const text = (e.hr || "") + " " + (e.en || "");
+    const match = text.match(/\b(?:ulaz|entry|admission)\b[^0-9€]{0,16}(\d+(?:[.,]\d+)?)\s*€/i);
+    return match ? "€" + match[1].replace(",", ".") : "";
+  }
+
+  function practicalFacts(e) {
+    const T = t();
+    const facts = [];
+    if (e.doorsTime) facts.push([T.doorsLabel, e.doorsTime]);
+    if (e.endTime) facts.push([T.endLabel, e.endTime]);
+    if (Number(e.durationMinutes) > 0) facts.push([T.durationLabel, e.durationMinutes + " " + T.minutesLabel]);
+
+    const offerPrices = [...new Set((e.offers || [])
+      .filter((offer) => Number.isFinite(Number(offer.price)) && offer.priceCurrency)
+      .map((offer) => Number(offer.price) + " " + offer.priceCurrency))];
+    const admissionPrice = eventAdmissionPrice(e);
+    if (isFreeAdmission(e)) facts.push([T.admissionLabel, T.free]);
+    else if (offerPrices.length) facts.push([T.admissionLabel, offerPrices.join(" / ")]);
+    else if (admissionPrice) facts.push([T.admissionLabel, admissionPrice]);
+    else if (e.ticketUrl) facts.push([T.admissionLabel, T.ticketDetailsLabel]);
+
+    if (e.reservationPhone) facts.push([T.reservationsLabel, e.reservationPhone]);
+    if (e.registrationFee && e.registrationFee.amount && e.registrationFee.currency) {
+      facts.push([T.registrationLabel, e.registrationFee.amount + " " + e.registrationFee.currency]);
+    }
+    if (e.contactPhones && e.contactPhones.length) {
+      facts.push([T.contactLabel, e.contactPhones.map((contact) => [contact.name, contact.phone].filter(Boolean).join(" ")).join(" · ")]);
+    }
+    if (e.transport) facts.push([T.transportLabel, localizedField(e.transport)]);
+    if (e.broadcast) facts.push([T.broadcastLabel, localizedField(e.broadcast)]);
+    if (e.format) facts.push([T.formatLabel, localizedField(e.format)]);
+    if (e.afterParty) facts.push([T.afterPartyLabel, localizedField(e.afterParty)]);
+    return facts.filter((fact) => fact[0] && fact[1]);
   }
 
   // ---------- Modal ----------
@@ -1191,6 +1254,9 @@
     html += "<div class='modal-row'><strong>" + T.dateLabel + "</strong> " + fmtDate(e.date) + (e.endDate ? " – " + fmtDate(e.endDate) : "") + (e.time ? " · " + e.time : "") + "</div>";
     html += "<div class='modal-row'><strong>" + T.placeLabel + "</strong> <a class='maps-link' href='" + mapsUrl(e) + "' target='_blank' rel='noopener'>" + townName(e.town) + (e.venue ? ", " + e.venue : "") + " ↗</a></div>";
     html += "<div class='event-cats'>" + e.cats.map((c) => "<span class='cat-pill'>" + (T.catLabels[c]||c) + "</span>").join("") + "</div>";
+    practicalFacts(e).forEach((fact) => {
+      html += "<div class='modal-row'><strong>" + fact[0] + "</strong> " + fact[1] + "</div>";
+    });
     if (e.desc) {
       const d = e.desc[state.lang] || translateEventText(e.desc.en || e.desc.hr || "", state.lang);
       if (d) html += "<p class='modal-desc'>" + d + "</p>";

@@ -632,12 +632,78 @@ function descFor(event, lang = "en") {
   return stripHtml(event.desc[lang] ? direct : translateEventText(direct, lang));
 }
 
+function metaDescription(value, maxLength = 155) {
+  const text = stripHtml(value).replace(/\s+/g, " ").trim();
+  if (text.length <= maxLength) return text;
+  const candidate = text.slice(0, maxLength + 1);
+  const sentenceEnd = Math.max(candidate.lastIndexOf(". "), candidate.lastIndexOf("! "), candidate.lastIndexOf("? "));
+  if (sentenceEnd >= Math.floor(maxLength * 0.65)) return candidate.slice(0, sentenceEnd + 1);
+  const wordEnd = candidate.lastIndexOf(" ");
+  return `${candidate.slice(0, wordEnd > 0 ? wordEnd : maxLength).trim()}…`;
+}
+
 function categoryLabel(cat, lang = "en") {
   return appI18n[lang]?.catLabels?.[cat] || catLabels[cat] || cat;
 }
 
 function eventHasSource(event) {
   return Boolean(event.source || event.website || event.facebook || event.instagram || event.ticketUrl);
+}
+
+function resourceUrl(value) {
+  if (!value) return "";
+  if (/^https?:\/\//i.test(value) || value.startsWith("/")) return value;
+  return `/${value.replace(/^\.?\//, "")}`;
+}
+
+function localizedField(value, lang = "en") {
+  if (!value) return "";
+  if (typeof value === "string") return value;
+  return value[lang] || value.en || value.hr || "";
+}
+
+function isFreeAdmission(event) {
+  const text = `${event.hr || ""} ${event.en || ""}`;
+  return /\b(?:ulaz|entry|admission)\b[^.;)]{0,24}\b(?:besplatan|slobodan|free)\b|\bfree entry\b/i.test(text);
+}
+
+function eventAdmissionPrice(event) {
+  const text = `${event.hr || ""} ${event.en || ""}`;
+  const match = text.match(/\b(?:ulaz|entry|admission)\b[^0-9€]{0,16}(\d+(?:[.,]\d+)?)\s*€/i);
+  return match ? `€${match[1].replace(",", ".")}` : "";
+}
+
+function eventPracticalFacts(event, lang = "en") {
+  const ui = seoI18n[lang];
+  const facts = [];
+  if (event.doorsTime) facts.push([ui.doors, event.doorsTime]);
+  if (event.endTime) facts.push([ui.ends, event.endTime]);
+  if (Number(event.durationMinutes) > 0) facts.push([ui.duration, `${event.durationMinutes} ${ui.minutes}`]);
+
+  const offerPrices = [...new Set((event.offers || [])
+    .filter((offer) => Number.isFinite(Number(offer.price)) && offer.priceCurrency)
+    .map((offer) => `${Number(offer.price)} ${offer.priceCurrency}`))];
+  const admissionPrice = eventAdmissionPrice(event);
+  if (isFreeAdmission(event)) facts.push([ui.admission, ui.freeAdmission]);
+  else if (offerPrices.length) facts.push([ui.admission, offerPrices.join(" / ")]);
+  else if (admissionPrice) facts.push([ui.admission, admissionPrice]);
+  else if (event.ticketUrl) facts.push([ui.admission, ui.ticketDetails]);
+
+  if (event.reservationPhone) facts.push([ui.reservations, event.reservationPhone]);
+  if (event.registrationFee?.amount && event.registrationFee?.currency) {
+    facts.push([ui.registration, `${event.registrationFee.amount} ${event.registrationFee.currency}`]);
+  }
+  if (event.contactPhones?.length) {
+    facts.push([ui.contact, event.contactPhones.map((contact) => [contact.name, contact.phone].filter(Boolean).join(" ")).join(" · ")]);
+  }
+  const transport = localizedField(event.transport, lang);
+  if (transport) facts.push([ui.transport, transport]);
+  const broadcast = localizedField(event.broadcast, lang);
+  if (broadcast) facts.push([ui.broadcast, broadcast]);
+  const format = localizedField(event.format, lang);
+  if (format) facts.push([ui.format, format]);
+  if (event.afterParty) facts.push([ui.afterParty, localizedField(event.afterParty, lang) || ui.yes]);
+  return facts.filter(([, value]) => value);
 }
 
 function eventIsPast(event) {
@@ -1297,7 +1363,8 @@ function compactEventFacts(event, towns, lang = "en") {
     [ui.organizer, event.organizer?.name],
     [ui.performer, event.performers?.map((item) => item.name).filter(Boolean).join(", ")],
     [ui.sourceStatus, event.verify ? ui.verify : eventHasSource(event) ? ui.sourceAvailable : ui.sourceMissing],
-    [ui.updated, event.updatedAt]
+    [ui.updated, event.updatedAt],
+    ...eventPracticalFacts(event, lang)
   ].filter(([, value]) => value);
   return `<dl class="seo-detail-list">${facts.map(([label, value]) => `<div><dt>${esc(label)}</dt><dd>${esc(value)}</dd></div>`).join("")}</dl>`;
 }
@@ -1376,7 +1443,11 @@ function eventSchema(event, towns, images = eventImageUrls(event), lang = "en") 
   const endDate = eventEndDateTime(event);
   if (endDate) schema.endDate = endDate;
   if (event.previousStartDate) schema.previousStartDate = event.previousStartDate;
-  if (/besplatan|slobodan|free/i.test(`${event.hr || ""} ${event.en || ""}`)) schema.isAccessibleForFree = true;
+  if (isFreeAdmission(event)) schema.isAccessibleForFree = true;
+  if (event.doorsTime && /^\d{1,2}:\d{2}$/.test(event.doorsTime)) {
+    schema.doorTime = `${event.date}T${event.doorsTime}:00+02:00`;
+  }
+  if (Number(event.durationMinutes) > 0) schema.duration = `PT${Number(event.durationMinutes)}M`;
   const offers = (event.offers || []).map((offer) => ({
     "@type": "Offer",
     ...(offer.name ? { name: offer.name } : {}),
@@ -1634,11 +1705,11 @@ async function buildSeoPages(data) {
     const seoOverride = eventSeoOverrides[event.id] || {};
     const description = seoOverride.description || descFor(event, "en") || `${title} on ${event.date} in ${town}, Korčula, Croatia.`;
     const sourceLinks = [
-      ["Website", event.website],
-      ["Tickets", event.ticketUrl],
-      ["Facebook", event.facebook],
-      ["Instagram", event.instagram],
-      ["Source", event.source]
+      ["Website", resourceUrl(event.website)],
+      ["Tickets", resourceUrl(event.ticketUrl)],
+      ["Facebook", resourceUrl(event.facebook)],
+      ["Instagram", resourceUrl(event.instagram)],
+      ["Source", resourceUrl(event.source)]
     ].filter(([, href]) => href);
     const relatedByTown = upcomingEvents.filter((item) => item.id !== event.id && item.town === event.town).slice(0, 6);
     const relatedByCategory = upcomingEvents.filter((item) => item.id !== event.id && (item.cats || []).some((cat) => (event.cats || []).includes(cat))).slice(0, 6);
@@ -1657,7 +1728,7 @@ async function buildSeoPages(data) {
     ].join("");
     await writePage(eventPath(event), pageShell({
       title: seoOverride.title || `${datedTitle} | Korčula Events 2026`,
-      description: description.slice(0, 155),
+      description: metaDescription(description),
       canonical: url,
       image: flyer || defaultShareImage,
       type: "article",
@@ -2014,11 +2085,11 @@ async function buildSeoPages(data) {
       const town = townName(towns, event.town, lang);
       const description = localizedEventDescription(event, towns, lang);
       const sourceLinks = [
-        [ui.website, event.website],
-        [ui.tickets, event.ticketUrl],
-        ["Facebook", event.facebook],
-        ["Instagram", event.instagram],
-        [ui.source, event.source]
+        [ui.website, resourceUrl(event.website)],
+        [ui.tickets, resourceUrl(event.ticketUrl)],
+        ["Facebook", resourceUrl(event.facebook)],
+        ["Instagram", resourceUrl(event.instagram)],
+        [ui.source, resourceUrl(event.source)]
       ].filter(([, href]) => href);
       const relatedByTown = upcomingEvents.filter((item) => item.id !== event.id && item.town === event.town).slice(0, 6);
       const relatedByCategory = upcomingEvents.filter((item) => item.id !== event.id && (item.cats || []).some((cat) => (event.cats || []).includes(cat))).slice(0, 6);
@@ -2038,7 +2109,7 @@ async function buildSeoPages(data) {
       await writePage(eventPath(event, lang), pageShell({
         lang,
         title: `${datedTitle} | Korčula Events 2026`,
-        description: description.slice(0, 155),
+        description: metaDescription(description),
         canonical: url,
         image,
         type: "article",

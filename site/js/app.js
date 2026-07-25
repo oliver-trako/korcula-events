@@ -1457,6 +1457,15 @@
     });
 
     $("#suggestFab").addEventListener("click", openSuggest);
+    const syncSuggestFab = () => {
+      $("#suggestFab").classList.toggle(
+        "is-compact",
+        window.matchMedia("(max-width: 480px)").matches && window.scrollY > 320
+      );
+    };
+    window.addEventListener("scroll", syncSuggestFab, { passive: true });
+    window.addEventListener("resize", syncSuggestFab);
+    syncSuggestFab();
     $("#suggestClose").addEventListener("click", closeSuggest);
     $("#suggestBackdrop").addEventListener("click", closeSuggest);
     $("#suggestForm").addEventListener("submit", onSuggestSubmit);

@@ -12,7 +12,7 @@ const buildDate = new Intl.DateTimeFormat("en-CA", {
   month: "2-digit",
   day: "2-digit"
 }).format(new Date());
-const assetVersion = "20260717-2";
+const assetVersion = "20260725-1";
 const defaultShareImage = `${siteUrl}/generated_images/019f4238-0d22-7c61-a5de-d8d8a9751fdf/ig_08cb38e27fc1cd4c016a4e6b76535c8191b68b7bca395d86af.png`;
 const seoI18n = JSON.parse(await readFile(path.join(root, "site", "data", "seo-i18n.json"), "utf8"));
 const appI18nSource = await readFile(path.join(root, "site", "js", "i18n.js"), "utf8");
@@ -28,7 +28,13 @@ const langMeta = {
     openCalendar: "Otvori interaktivni kalendar",
     places: "Mjesta",
     categories: "Kategorije",
-    source: "Izvor"
+    source: "Izvor",
+    summaryCount: "događanja",
+    summaryActivities: "Koncerti, fešte, kultura, sport i noćni život.",
+    summaryIsland: "Diljem otoka",
+    summaryPlaces: "Grad Korčula, sela, Vela Luka, Lumbarda i obližnji Orebić.",
+    summarySources: "Ažurirani izvori",
+    summarySourceText: "Službeni programi, plakati, organizatori i informacije zajednice."
   },
   en: {
     name: "English",
@@ -39,7 +45,13 @@ const langMeta = {
     openCalendar: "Open interactive calendar",
     places: "Places",
     categories: "Categories",
-    source: "Source"
+    source: "Source",
+    summaryCount: "events",
+    summaryActivities: "Concerts, feasts, culture, sports and nightlife.",
+    summaryIsland: "Island wide",
+    summaryPlaces: "Korčula Town, villages, Vela Luka, Lumbarda and nearby Orebić.",
+    summarySources: "Updated sources",
+    summarySourceText: "Official programmes, posters, venues and community leads."
   },
   de: {
     name: "Deutsch",
@@ -50,7 +62,13 @@ const langMeta = {
     openCalendar: "Interaktiven Kalender öffnen",
     places: "Orte",
     categories: "Kategorien",
-    source: "Quelle"
+    source: "Quelle",
+    summaryCount: "Veranstaltungen",
+    summaryActivities: "Konzerte, Feste, Kultur, Sport und Nachtleben.",
+    summaryIsland: "Auf der ganzen Insel",
+    summaryPlaces: "Korčula-Stadt, Dörfer, Vela Luka, Lumbarda und das nahe Orebić.",
+    summarySources: "Aktuelle Quellen",
+    summarySourceText: "Offizielle Programme, Plakate, Veranstaltungsorte und Hinweise aus der Gemeinde."
   },
   it: {
     name: "Italiano",
@@ -61,7 +79,13 @@ const langMeta = {
     openCalendar: "Apri il calendario interattivo",
     places: "Località",
     categories: "Categorie",
-    source: "Fonte"
+    source: "Fonte",
+    summaryCount: "eventi",
+    summaryActivities: "Concerti, feste, cultura, sport e vita notturna.",
+    summaryIsland: "In tutta l'isola",
+    summaryPlaces: "Città di Curzola, borghi, Vallegrande, Lombarda e la vicina Orebić.",
+    summarySources: "Fonti aggiornate",
+    summarySourceText: "Programmi ufficiali, locandine, luoghi e segnalazioni della comunità."
   },
   sl: {
     name: "Slovenščina",
@@ -72,7 +96,13 @@ const langMeta = {
     openCalendar: "Odpri interaktivni koledar",
     places: "Kraji",
     categories: "Kategorije",
-    source: "Vir"
+    source: "Vir",
+    summaryCount: "dogodkov",
+    summaryActivities: "Koncerti, praznovanja, kultura, šport in nočno življenje.",
+    summaryIsland: "Po vsem otoku",
+    summaryPlaces: "Mesto Korčula, vasi, Vela Luka, Lumbarda in bližnji Orebić.",
+    summarySources: "Posodobljeni viri",
+    summarySourceText: "Uradni programi, plakati, prizorišča in obvestila skupnosti."
   },
   fr: {
     name: "Français",
@@ -83,7 +113,13 @@ const langMeta = {
     openCalendar: "Ouvrir le calendrier interactif",
     places: "Lieux",
     categories: "Catégories",
-    source: "Source"
+    source: "Source",
+    summaryCount: "événements",
+    summaryActivities: "Concerts, fêtes, culture, sport et vie nocturne.",
+    summaryIsland: "Dans toute l'île",
+    summaryPlaces: "Ville de Korčula, villages, Vela Luka, Lumbarda et Orebić à proximité.",
+    summarySources: "Sources actualisées",
+    summarySourceText: "Programmes officiels, affiches, lieux et informations locales."
   }
 };
 
@@ -1198,6 +1234,7 @@ ${alternates}
 .seo-page{max-width:900px;margin:0 auto;padding:28px 16px 48px}
 .seo-hero{background:#fff;border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:18px;box-shadow:var(--shadow)}
 .seo-page h1{font-family:var(--font-display);color:var(--sea-deep);font-size:clamp(2rem,5vw,3.5rem);line-height:1;margin:0 0 12px}
+.seo-event-layout h1{font-size:clamp(1.75rem,4vw,2.8rem);line-height:1.06}
 .seo-page h2{font-size:1.1rem;color:var(--sea-deep);margin:28px 0 12px}
 .seo-page p{color:var(--ink-soft);line-height:1.6}
 .seo-lede{font-size:1.03rem;max-width:68ch}
@@ -1221,8 +1258,8 @@ ${alternates}
 .seo-pill-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
 .seo-pill{background:var(--sand);border:1px solid var(--border);border-radius:999px;padding:6px 10px;color:var(--sea-deep);font-weight:800;font-size:.78rem}
 .seo-event-layout{display:grid;grid-template-columns:minmax(0,1fr) 220px;gap:18px;align-items:start}
-.seo-poster{background:#fff;border:1px solid var(--border);border-radius:12px;padding:10px;box-shadow:var(--shadow)}
-.seo-poster img{display:block;width:100%;border-radius:8px;object-fit:cover}
+.seo-poster{align-self:start;background:#fff;border:1px solid var(--border);border-radius:12px;padding:10px;box-shadow:var(--shadow)}
+.seo-poster img{display:block;width:100%;height:auto;aspect-ratio:16/9;border-radius:8px;object-fit:cover}
 .seo-action-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
 .seo-action{display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--border);border-radius:8px;padding:9px 11px;color:var(--sea-deeper);background:#fff;font:inherit;font-weight:800;text-decoration:none;font-size:.82rem;cursor:pointer}
 .seo-action.primary{background:var(--sea-deep);border-color:var(--sea-deep);color:#fff}
@@ -1235,7 +1272,7 @@ ${alternates}
 .seo-small{font-size:.82rem}
 .seo-footer{max-width:960px;margin:0 auto 24px;padding:0 16px}
 @media(max-width:760px){.seo-event-layout{grid-template-columns:1fr}}
-@media(max-width:640px){.seo-header-inner{align-items:flex-start;flex-direction:column}.seo-grid,.seo-two-col{grid-template-columns:1fr}.seo-top-nav{gap:9px}.seo-detail-list div{grid-template-columns:1fr}}
+@media(max-width:640px){.seo-header-inner{align-items:flex-start;flex-direction:column}.seo-grid,.seo-two-col{grid-template-columns:1fr}.seo-top-nav{gap:9px}.seo-detail-list div{grid-template-columns:1fr}.seo-event-layout h1{font-size:clamp(1.7rem,8vw,2.15rem)}}
 </style>
 ${schemaHtml}
 </head>
@@ -1345,10 +1382,36 @@ ${body}
 </html>`;
 }
 
+const dateLocales = {
+  hr: "hr-HR",
+  en: "en-GB",
+  de: "de-DE",
+  it: "it-IT",
+  sl: "sl-SI",
+  fr: "fr-FR"
+};
+
+function friendlyDate(iso, lang = "en") {
+  if (!iso) return "";
+  const date = new Date(`${iso}T00:00:00Z`);
+  if (Number.isNaN(date.getTime())) return iso;
+  return new Intl.DateTimeFormat(dateLocales[lang] || dateLocales.en, {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    timeZone: "UTC"
+  }).format(date);
+}
+
+function friendlyDateRange(event, lang = "en") {
+  const start = friendlyDate(event.date, lang);
+  return event.endDate ? `${start} – ${friendlyDate(event.endDate, lang)}` : start;
+}
+
 function eventList(events, towns, lang = "en", limit = events.length) {
   return `<ul class="seo-event-list">${events.slice(0, limit).map((event) => {
     const title = titleFor(event, lang);
-    const meta = [event.date + (event.endDate ? ` to ${event.endDate}` : ""), event.time, townName(towns, event.town, lang), event.venue].filter(Boolean).join(" · ");
+    const meta = [friendlyDateRange(event, lang), event.time, townName(towns, event.town, lang), event.venue].filter(Boolean).join(" · ");
     return `<li><a href="${esc(eventUrl(event, lang))}">${esc(title)}</a><span class="seo-meta">${esc(meta)}</span></li>`;
   }).join("\n")}</ul>`;
 }
@@ -1356,7 +1419,7 @@ function eventList(events, towns, lang = "en", limit = events.length) {
 function compactEventFacts(event, towns, lang = "en") {
   const ui = seoI18n[lang];
   const facts = [
-    [ui.date, `${event.date}${event.endDate ? ` – ${event.endDate}` : ""}`],
+    [ui.date, friendlyDateRange(event, lang)],
     [ui.time, event.time],
     [ui.place, townName(towns, event.town, lang)],
     [ui.venue, event.venue],
@@ -1517,9 +1580,9 @@ async function buildSeoPages(data) {
         <h1>${esc(meta.title)}</h1>
         <p class="seo-lede">${esc(meta.intro)}</p>
         <div class="seo-grid">
-          <div class="seo-card"><strong>${events.length} events</strong><span>Concerts, feasts, culture, sports and nightlife.</span></div>
-          <div class="seo-card"><strong>Island wide</strong><span>Korčula Town, villages, Vela Luka, Lumbarda and nearby Orebić.</span></div>
-          <div class="seo-card"><strong>Updated sources</strong><span>Official programmes, posters, venues and community leads.</span></div>
+          <div class="seo-card"><strong>${events.length} ${esc(meta.summaryCount)}</strong><span>${esc(meta.summaryActivities)}</span></div>
+          <div class="seo-card"><strong>${esc(meta.summaryIsland)}</strong><span>${esc(meta.summaryPlaces)}</span></div>
+          <div class="seo-card"><strong>${esc(meta.summarySources)}</strong><span>${esc(meta.summarySourceText)}</span></div>
         </div>
       </section>
       <nav class="seo-nav">
@@ -1700,7 +1763,7 @@ async function buildSeoPages(data) {
     const url = eventUrl(event);
     urls.add(url);
     const title = titleFor(event, "en");
-    const datedTitle = event.seriesId ? `${title} — ${event.date}` : title;
+    const datedTitle = event.seriesId ? `${title} — ${friendlyDate(event.date, "en")}` : title;
     const town = townName(towns, event.town, "en");
     const seoOverride = eventSeoOverrides[event.id] || {};
     const description = seoOverride.description || descFor(event, "en") || `${title} on ${event.date} in ${town}, Korčula, Croatia.`;
@@ -1741,7 +1804,7 @@ async function buildSeoPages(data) {
               <p class="seo-lede">${esc(description)}</p>
               ${event.seriesId ? `<p><a href="${esc(eventUrl(baseEvents.find((item) => item.id === event.seriesId)))}">View the full ${esc(event.seriesTitle)} performance series</a></p>` : ""}
               <div class="seo-grid">
-                <div class="seo-card"><strong>Date</strong><span>${esc(event.date)}${event.endDate ? ` to ${esc(event.endDate)}` : ""}${event.time ? ` · ${esc(event.time)}` : ""}</span></div>
+                <div class="seo-card"><strong>Date</strong><span>${esc(friendlyDateRange(event, "en"))}${event.time ? ` · ${esc(event.time)}` : ""}</span></div>
                 <div class="seo-card"><strong>Place</strong><span>${esc(town)}${event.venue ? ` · ${esc(event.venue)}` : ""}</span></div>
                 <div class="seo-card"><strong>Category</strong><span>${esc((event.cats || []).map((cat) => catLabels[cat] || cat).join(", "))}</span></div>
               </div>
@@ -2081,7 +2144,7 @@ async function buildSeoPages(data) {
     for (const event of events) {
       const url = eventUrl(event, lang);
       const title = titleFor(event, lang);
-      const datedTitle = event.seriesId ? `${title} — ${event.date}` : title;
+      const datedTitle = event.seriesId ? `${title} — ${friendlyDate(event.date, lang)}` : title;
       const town = townName(towns, event.town, lang);
       const description = localizedEventDescription(event, towns, lang);
       const sourceLinks = [
@@ -2123,7 +2186,7 @@ async function buildSeoPages(data) {
                 <p class="seo-lede">${esc(description)}</p>
                 ${parent ? `<p><a href="${esc(eventUrl(parent, lang))}">${esc(ui.performances)}</a></p>` : ""}
                 <div class="seo-grid">
-                  <div class="seo-card"><strong>${esc(ui.date)}</strong><span>${esc(event.date)}${event.endDate ? ` – ${esc(event.endDate)}` : ""}${event.time ? ` · ${esc(event.time)}` : ""}</span></div>
+                  <div class="seo-card"><strong>${esc(ui.date)}</strong><span>${esc(friendlyDateRange(event, lang))}${event.time ? ` · ${esc(event.time)}` : ""}</span></div>
                   <div class="seo-card"><strong>${esc(ui.place)}</strong><span>${esc(town)}${event.venue ? ` · ${esc(event.venue)}` : ""}</span></div>
                   <div class="seo-card"><strong>${esc(ui.category)}</strong><span>${esc((event.cats || []).map((cat) => categoryLabel(cat, lang)).join(", "))}</span></div>
                 </div>

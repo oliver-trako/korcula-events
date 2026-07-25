@@ -313,6 +313,10 @@ const eventSeoOverrides = {
     title: "Boogie Jungle Korčula 2026 — Events, DJs and Free Shuttle",
     description: "Boogie Jungle Korčula 2026: open-air club events, international DJs, Korkyralis Summer Festival and a free shuttle from Korčula Town."
   },
+  "nl-sandra-afrika-jungle": {
+    title: "Sandra Afrika at The Jungle Korčula — 27 July 2026",
+    description: "Sandra Afrika performs at The Jungle club Korčula on 27 July 2026 at 22:00. Early Bird tickets are €15 through Entrio."
+  },
   "nl-doslocos": {
     title: "Dos Locos Korčula 2026 — DJ Nights and Club Events",
     description: "Dos Locos Korčula 2026: recurring DJ nights near the bus station. Check the latest schedule and related nightlife events."
@@ -903,7 +907,8 @@ const flyers = {
   vesnaHariBlato: "vesna-pisarovic-hari-roncevic-blato.jpeg",
   tragUBeskraju: "trag-u-beskraju-2026-program.jpeg",
   zenskiBuce: "racisce-zenski-turnir-buce-2026.jpeg",
-  racisceFutsal: "racisce-malonogometni-turnir-2026.jpeg"
+  racisceFutsal: "racisce-malonogometni-turnir-2026.jpeg",
+  sandraAfrika: "sandra-afrika-the-jungle-korcula-2026.jpg"
 };
 const noFlyerIds = new Set(["kt-brodogradnja","kt-kulkviz","kt-moreska-season","kt-svtodor","kt-swordfest","kt-korkyra-baroque","kt-markopolo-gala","kt-winefest"]);
 
@@ -952,6 +957,7 @@ function getFlyer(event) {
   if (id === "racisce-vecer-prsuta") return flyerUrl(flyers.vecerPrsuta);
   if (id.startsWith("racisce-")) return flyerUrl(flyers.litoURaciscu);
   if (id === "cara-vuco") return flyerUrl(flyers.sinisaVuco);
+  if (id === "nl-sandra-afrika-jungle") return flyerUrl(flyers.sandraAfrika);
   if (id.startsWith("rc-")) return flyerUrl(flyers.dicoHomo);
   return null;
 }

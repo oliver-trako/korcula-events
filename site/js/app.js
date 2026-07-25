@@ -257,7 +257,8 @@
     vesnaHariBlato: "vesna-pisarovic-hari-roncevic-blato.jpeg",
     tragUBeskraju: "trag-u-beskraju-2026-program.jpeg",
     zenskiBuce: "racisce-zenski-turnir-buce-2026.jpeg",
-    racisceFutsal: "racisce-malonogometni-turnir-2026.jpeg"
+    racisceFutsal: "racisce-malonogometni-turnir-2026.jpeg",
+    sandraAfrika: "sandra-afrika-the-jungle-korcula-2026.jpg"
   };
   const NO_FLYER_IDS = new Set(["kt-brodogradnja","kt-kulkviz","kt-moreska-season","kt-svtodor","kt-swordfest","kt-korkyra-baroque","kt-markopolo-gala","kt-winefest"]);
 
@@ -292,6 +293,7 @@
     if (id === "racisce-vecer-prsuta") return flyerUrl(FLYERS.vecerPrsuta);
     if (id.startsWith("racisce-")) return flyerUrl(FLYERS.litoURaciscu);
     if (id === "cara-vuco") return flyerUrl(FLYERS.sinisaVuco);
+    if (id === "nl-sandra-afrika-jungle") return flyerUrl(FLYERS.sandraAfrika);
     if (id.startsWith("rc-")) return flyerUrl(FLYERS.dicoHomo);
     return null;
   }

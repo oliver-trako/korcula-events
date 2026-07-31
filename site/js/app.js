@@ -261,7 +261,8 @@
     sandraAfrika: "sandra-afrika-the-jungle-korcula-2026.jpg",
     slusaonicaOlivera: "slusaonica-olivera-mediteran-racisce-2026.jpg",
     marendaDivljac: "mediteran-marenda-divljac-njoki.jpeg",
-    magazinBlato: "magazin-blato-plokata.jpeg"
+    magazinBlato: "magazin-blato-plokata.jpeg",
+    futsalFinale: "racisce-malonogometni-finale-2026.jpeg"
   };
   const NO_FLYER_IDS = new Set(["kt-brodogradnja","kt-kulkviz","kt-moreska-season","kt-svtodor","kt-swordfest","kt-korkyra-baroque","kt-markopolo-gala","kt-winefest"]);
 
@@ -292,6 +293,7 @@
     if (id.startsWith("smk-")) return flyerUrl(FLYERS.smokviskoLito);
     if (id.startsWith("pst-")) return flyerUrl(FLYERS.litoUPostrani);
     if (id === "racisce-zenski-buce") return flyerUrl(FLYERS.zenskiBuce);
+    if (id === "racisce-malonogometni-turnir-finale") return flyerUrl(FLYERS.futsalFinale);
     if (id === "racisce-malonogometni-turnir-2026") return flyerUrl(FLYERS.racisceFutsal);
     if (id === "racisce-slusaonica-oliver") return flyerUrl(FLYERS.slusaonicaOlivera);
     if (id === "racisce-vecer-prsuta-2") return flyerUrl(FLYERS.vecerPrsuta2);

@@ -754,6 +754,10 @@ function eventIsPast(event) {
   return String(event.endDate || event.date) < buildDate;
 }
 
+function eventBelongsInSitemap(event) {
+  return !eventIsPast(event);
+}
+
 function localizedEventDescription(event, towns, lang = "en") {
   const direct = descFor(event, lang);
   if (direct) return direct;
@@ -1773,7 +1777,7 @@ async function buildSeoPages(data) {
   await writeAllEventImages(events, towns);
   for (const event of events) {
     const url = eventUrl(event);
-    urls.add(url);
+    if (eventBelongsInSitemap(event)) urls.add(url);
     const title = titleFor(event, "en");
     const datedTitle = event.seriesId ? `${title} — ${friendlyDate(event.date, "en")}` : title;
     const town = townName(towns, event.town, "en");
@@ -2180,7 +2184,7 @@ async function buildSeoPages(data) {
         ...((event.cats || []).map((cat) => `<a class="seo-pill" href="${esc(categoryUrl(cat, lang))}">${esc(categoryLabel(cat, lang))}</a>`)),
         `<a class="seo-pill" href="${esc(placeUrl(event.town, lang))}">${esc(town)}</a>`
       ].join("");
-      urls.add(url);
+      if (eventBelongsInSitemap(event)) urls.add(url);
       await writePage(eventPath(event, lang), pageShell({
         lang,
         title: `${datedTitle} | Korčula Events 2026`,

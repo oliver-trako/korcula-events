@@ -259,7 +259,9 @@
     zenskiBuce: "racisce-zenski-turnir-buce-2026.jpeg",
     racisceFutsal: "racisce-malonogometni-turnir-2026.jpeg",
     sandraAfrika: "sandra-afrika-the-jungle-korcula-2026.jpg",
-    slusaonicaOlivera: "slusaonica-olivera-mediteran-racisce-2026.jpg"
+    slusaonicaOlivera: "slusaonica-olivera-mediteran-racisce-2026.jpg",
+    marendaDivljac: "mediteran-marenda-divljac-njoki.jpeg",
+    magazinBlato: "magazin-blato-plokata.jpeg"
   };
   const NO_FLYER_IDS = new Set(["kt-brodogradnja","kt-kulkviz","kt-moreska-season","kt-svtodor","kt-swordfest","kt-korkyra-baroque","kt-markopolo-gala","kt-winefest"]);
 
@@ -285,6 +287,7 @@
     if (id.startsWith("vl-oliver")) return flyerUrl(FLYERS.tragUBeskraju);
     if (id.startsWith("vl-")) return flyerUrl(FLYERS.luskoLito);
     if (id === "blato-vesna-pisarovic-hari-roncevic") return flyerUrl(FLYERS.vesnaHariBlato);
+    if (id === "blato-magazin") return flyerUrl(FLYERS.magazinBlato);
     if (id.startsWith("blato-")) return flyerUrl(FLYERS.blatskoLjeto);
     if (id.startsWith("smk-")) return flyerUrl(FLYERS.smokviskoLito);
     if (id.startsWith("pst-")) return flyerUrl(FLYERS.litoUPostrani);
@@ -293,6 +296,7 @@
     if (id === "racisce-slusaonica-oliver") return flyerUrl(FLYERS.slusaonicaOlivera);
     if (id === "racisce-vecer-prsuta-2") return flyerUrl(FLYERS.vecerPrsuta2);
     if (id === "racisce-vecer-prsuta") return flyerUrl(FLYERS.vecerPrsuta);
+    if (id === "racisce-marenda-divljac-njoki") return flyerUrl(FLYERS.marendaDivljac);
     if (id.startsWith("racisce-")) return flyerUrl(FLYERS.litoURaciscu);
     if (id === "cara-vuco") return flyerUrl(FLYERS.sinisaVuco);
     if (id === "nl-sandra-afrika-jungle") return flyerUrl(FLYERS.sandraAfrika);

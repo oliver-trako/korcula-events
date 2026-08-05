@@ -262,7 +262,16 @@
     slusaonicaOlivera: "slusaonica-olivera-mediteran-racisce-2026.jpg",
     marendaDivljac: "mediteran-marenda-divljac-njoki.jpeg",
     magazinBlato: "magazin-blato-plokata.jpeg",
-    futsalFinale: "racisce-malonogometni-finale-2026.jpeg"
+    futsalFinale: "racisce-malonogometni-finale-2026.jpeg",
+    kolovozRaciscuKalendar: "kolovoz-u-raciscu-kalendar-2026.jpeg",
+    pupnatDanMjesta: "pupnat-danmjesta-05082026.jpeg",
+    folkloreEveningBlato: "kumpanjija-blato-folklore-evening.jpeg",
+    zmajVeterani: "bsk-zmaj-blato-100-godina-veterani.jpeg",
+    zmajPetarGraso: "bsk-zmaj-blato-100-godina-petar-graso.jpeg",
+    sylviaBatistic: "sylvia-batistic-unutarnji-krajolici.jpeg",
+    zrnovskaMakarunada: "zrnovska-makarunada-2026.jpeg",
+    knezaRibarska: "kneska-ribarska-vecer-2026.jpeg",
+    marendaBakalar: "mediteran-marenda-bakalar-crveno.jpeg"
   };
   const NO_FLYER_IDS = new Set(["kt-brodogradnja","kt-kulkviz","kt-moreska-season","kt-svtodor","kt-swordfest","kt-korkyra-baroque","kt-markopolo-gala","kt-winefest"]);
 
@@ -289,6 +298,9 @@
     if (id.startsWith("vl-")) return flyerUrl(FLYERS.luskoLito);
     if (id === "blato-vesna-pisarovic-hari-roncevic") return flyerUrl(FLYERS.vesnaHariBlato);
     if (id === "blato-magazin") return flyerUrl(FLYERS.magazinBlato);
+    if (id === "blato-zlinje-veterani") return flyerUrl(FLYERS.zmajVeterani);
+    if (id === "blato-petar-graso-domenica") return flyerUrl(FLYERS.zmajPetarGraso);
+    if (id === "blato-folklore-evening") return flyerUrl(FLYERS.folkloreEveningBlato);
     if (id.startsWith("blato-")) return flyerUrl(FLYERS.blatskoLjeto);
     if (id.startsWith("smk-")) return flyerUrl(FLYERS.smokviskoLito);
     if (id.startsWith("pst-")) return flyerUrl(FLYERS.litoUPostrani);
@@ -299,10 +311,16 @@
     if (id === "racisce-vecer-prsuta-2") return flyerUrl(FLYERS.vecerPrsuta2);
     if (id === "racisce-vecer-prsuta") return flyerUrl(FLYERS.vecerPrsuta);
     if (id === "racisce-marenda-divljac-njoki") return flyerUrl(FLYERS.marendaDivljac);
+    if (id === "racisce-marenda-bakalar") return flyerUrl(FLYERS.marendaBakalar);
+    if (id === "racisce-zukovica-zbornik" || id === "racisce-igre-racica" || id === "racisce-kronike") return flyerUrl(FLYERS.kolovozRaciscuKalendar);
     if (id.startsWith("racisce-")) return flyerUrl(FLYERS.litoURaciscu);
     if (id === "cara-vuco") return flyerUrl(FLYERS.sinisaVuco);
     if (id === "nl-sandra-afrika-jungle") return flyerUrl(FLYERS.sandraAfrika);
     if (id.startsWith("rc-")) return flyerUrl(FLYERS.dicoHomo);
+    if (id === "pupnat-danmjesta") return flyerUrl(FLYERS.pupnatDanMjesta);
+    if (id === "kneze-ribarska-vecer") return flyerUrl(FLYERS.knezaRibarska);
+    if (id === "lumbarda-sylvia-batistic") return flyerUrl(FLYERS.sylviaBatistic);
+    if (id === "zrnovo-makarunada") return flyerUrl(FLYERS.zrnovskaMakarunada);
     return null;
   }
 

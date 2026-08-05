@@ -272,7 +272,12 @@
     zrnovskaMakarunada: "zrnovska-makarunada-2026.jpeg",
     knezaRibarska: "kneska-ribarska-vecer-2026.jpeg",
     marendaBakalar: "mediteran-marenda-bakalar-crveno.jpeg",
-    zukovicaPredavanje: "racisce-spilja-zukovica-predavanje.jpeg"
+    zukovicaPredavanje: "racisce-spilja-zukovica-predavanje.jpeg",
+    velaLukaFolkloreAug: "vela-luka-folklore-evenings-august.jpeg",
+    korculaAroundAugust: "korcula-around-august-calendar.jpeg",
+    dancingQueenAbba: "dancing-queen-abba-tribute-korcula.jpeg",
+    waterPoloChampionship: "korcula-water-polo-championship-2026.jpeg",
+    korculaUpcomingAugust: "korcula-upcoming-events-august-calendar.jpeg"
   };
   const NO_FLYER_IDS = new Set(["kt-brodogradnja","kt-kulkviz","kt-moreska-season","kt-svtodor","kt-swordfest","kt-korkyra-baroque","kt-markopolo-gala","kt-winefest"]);
 
@@ -281,6 +286,9 @@
   function getFlyer(e) {
     const id = e.id;
     if (id.startsWith("kt-fermata")) return flyerUrl(FLYERS.fermata);
+    if (id === "kt-dancing-queen-abba") return flyerUrl(FLYERS.dancingQueenAbba);
+    if (id === "kt-water-polo-championship") return flyerUrl(FLYERS.waterPoloChampionship);
+    if (id === "kt-dino-dvornik-tribute") return flyerUrl(FLYERS.korculaUpcomingAugust);
     if (id.startsWith("kt-") && !NO_FLYER_IDS.has(id)) {
       const month = e.date.slice(5, 7), day = parseInt(e.date.slice(8, 10), 10);
       if (month === "07") return flyerUrl(day <= 14 ? FLYERS.kulturnoSrpanj1 : FLYERS.kulturnoSrpanj2);
@@ -296,6 +304,7 @@
     if (id === "vl-racki") return flyerUrl(FLYERS.brunoRacki);
     if (id === "vl-chess-mala") return flyerUrl(FLYERS.malaVelaLukaSah);
     if (id.startsWith("vl-oliver")) return flyerUrl(FLYERS.tragUBeskraju);
+    if (id.startsWith("vl-folk-")) return flyerUrl(FLYERS.velaLukaFolkloreAug);
     if (id.startsWith("vl-")) return flyerUrl(FLYERS.luskoLito);
     if (id === "blato-vesna-pisarovic-hari-roncevic") return flyerUrl(FLYERS.vesnaHariBlato);
     if (id === "blato-magazin") return flyerUrl(FLYERS.magazinBlato);
@@ -323,6 +332,7 @@
     if (id === "kneze-ribarska-vecer") return flyerUrl(FLYERS.knezaRibarska);
     if (id === "lumbarda-sylvia-batistic") return flyerUrl(FLYERS.sylviaBatistic);
     if (id === "zrnovo-makarunada") return flyerUrl(FLYERS.zrnovskaMakarunada);
+    if (id === "zrnovo-folklore-noc") return flyerUrl(FLYERS.korculaAroundAugust);
     return null;
   }
 

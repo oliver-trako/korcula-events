@@ -271,7 +271,8 @@
     sylviaBatistic: "sylvia-batistic-unutarnji-krajolici.jpeg",
     zrnovskaMakarunada: "zrnovska-makarunada-2026.jpeg",
     knezaRibarska: "kneska-ribarska-vecer-2026.jpeg",
-    marendaBakalar: "mediteran-marenda-bakalar-crveno.jpeg"
+    marendaBakalar: "mediteran-marenda-bakalar-crveno.jpeg",
+    zukovicaPredavanje: "racisce-spilja-zukovica-predavanje.jpeg"
   };
   const NO_FLYER_IDS = new Set(["kt-brodogradnja","kt-kulkviz","kt-moreska-season","kt-svtodor","kt-swordfest","kt-korkyra-baroque","kt-markopolo-gala","kt-winefest"]);
 
@@ -312,7 +313,8 @@
     if (id === "racisce-vecer-prsuta") return flyerUrl(FLYERS.vecerPrsuta);
     if (id === "racisce-marenda-divljac-njoki") return flyerUrl(FLYERS.marendaDivljac);
     if (id === "racisce-marenda-bakalar") return flyerUrl(FLYERS.marendaBakalar);
-    if (id === "racisce-zukovica-zbornik" || id === "racisce-igre-racica" || id === "racisce-kronike") return flyerUrl(FLYERS.kolovozRaciscuKalendar);
+    if (id === "racisce-zukovica-zbornik") return flyerUrl(FLYERS.zukovicaPredavanje);
+    if (id === "racisce-igre-racica" || id === "racisce-kronike") return flyerUrl(FLYERS.kolovozRaciscuKalendar);
     if (id.startsWith("racisce-")) return flyerUrl(FLYERS.litoURaciscu);
     if (id === "cara-vuco") return flyerUrl(FLYERS.sinisaVuco);
     if (id === "nl-sandra-afrika-jungle") return flyerUrl(FLYERS.sandraAfrika);

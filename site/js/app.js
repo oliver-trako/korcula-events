@@ -279,7 +279,7 @@
     waterPoloChampionship: "korcula-water-polo-championship-2026.jpeg",
     korculaUpcomingAugust: "korcula-upcoming-events-august-calendar.jpeg"
   };
-  const NO_FLYER_IDS = new Set(["kt-brodogradnja","kt-kulkviz","kt-moreska-season","kt-svtodor","kt-swordfest","kt-korkyra-baroque","kt-markopolo-gala","kt-winefest"]);
+  const NO_FLYER_IDS = new Set(["kt-brodogradnja","kt-kulkviz","kt-moreska-season","kt-svtodor","kt-swordfest","kt-korkyra-baroque","kt-markopolo-gala","kt-winefest","kt-hajduk-istra","kt-hajduk-zalgiris","kt-hajduk-gorica","kt-hajduk-osijek"]);
 
   function flyerUrl(name) { return FLYER_BASE + encodeURIComponent(name).replace(/%2F/g, "/"); }
 

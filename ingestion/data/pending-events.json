@@ -1,0 +1,10 @@
+{
+  "meta": {
+    "generated": "2026-07-09",
+    "updated": "2026-08-09",
+    "purpose": "Candidate events that did not clear the auto-publish bar (see ingestion-policy.json) and are awaiting human review via the 'event-review' GitHub Issue. Auto-published candidates never appear here -- they go straight into site/data/events.json.",
+    "statuses": ["needs-review", "approved", "rejected", "duplicate"],
+    "candidateFields": "id, sourceId, sourceUrl, discoveredAt, extractionMethod ('ai'), event{}, verifierConfidence (0-1), verifierConcerns[], blockingReasons[], reviewedAt, reviewedBy"
+  },
+  "candidates": []
+}

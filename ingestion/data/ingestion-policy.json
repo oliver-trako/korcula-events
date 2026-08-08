@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "generated": "2026-07-09",
+    "updated": "2026-08-09",
+    "purpose": "Rules for deciding which discovered event candidates can be auto-published and which require human review.",
+    "principle": "AI extraction + an independent AI verifier pass is the trust mechanism, not source type. Objective fact checks (missing fields, past dates, duplicates) are a hard floor no confidence score can override. Anything that doesn't clear both goes to a GitHub Issue for human review, not a silently-updated PR."
+  },
+  "hardFloor": {
+    "requiredEventFields": [
+      "date",
+      "town",
+      "venue",
+      "cats",
+      "hr",
+      "en"
+    ],
+    "blockedIfDateAmbiguous": true,
+    "blockedIfDuplicateId": true,
+    "blockedIfFuzzyDuplicate": true,
+    "fuzzyDuplicateScoreThreshold": 0.62,
+    "autoRejectPastEvents": true
+  },
+  "aiVerification": {
+    "enabled": true,
+    "autoPublishConfidenceThreshold": 0.9,
+    "notes": "Auto-publish requires: passes hardFloor AND verify.mjs's independent confidence >= autoPublishConfidenceThreshold. Source type is no longer a gate by default -- see sourceOverrides for exceptions learned over time."
+  },
+  "sourceOverrides": {
+    "alwaysReview": [],
+    "notes": "Source ids listed here always route to human review regardless of verifier confidence -- an escape hatch for sources that have proven unreliable, without having to touch decide.mjs."
+  },
+  "legacy": {
+    "note": "The fields below described the pre-AI heuristic pipeline's source-type gating. No longer read by decide.mjs; kept for reference only.",
+    "allowedSourceTypes": ["official-board", "official-event-page", "cultural-organiser", "ticketing-platform"],
+    "reviewRequiredSourceTypes": ["social-group", "community-association", "community-board", "village-lead", "sports-lead", "venue-lead", "wine-lead", "guide-site", "poster-folder", "hotel-entertainment"]
+  }
+}

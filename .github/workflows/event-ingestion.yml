@@ -3,240 +3,72 @@ name: Event ingestion
 on:
   workflow_dispatch:
     inputs:
-      priority:
-        description: Source priority to check
+      shadow:
+        description: Shadow mode (extract/verify/decide but don't publish or open issues)
+        type: boolean
         required: false
-        default: high
-      limit:
-        description: Maximum source URL entries to process, 0 for unlimited
-        required: false
-        default: "0"
+        default: false
   schedule:
-    - cron: "17 5 * * *"
+    - cron: "17 5 * * *" # daily: event ingestion
+    - cron: "0 6 1 * *"  # monthly (1st): source discovery
 
 permissions:
   contents: write
-  pull-requests: write
+  issues: write
 
 jobs:
   ingest:
+    if: github.event.schedule == '17 5 * * *' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
         uses: actions/checkout@v5
 
-      - name: Install OCR dependency
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y tesseract-ocr tesseract-ocr-hrv
-
       - name: Run ingestion pipeline
-        shell: pwsh
+        env:
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          $priority = "${{ github.event.inputs.priority }}"
-          if (-not $priority) { $priority = "high" }
-          $limit = "${{ github.event.inputs.limit }}"
-          if (-not $limit) { $limit = "0" }
-          ./scripts/run-ingestion-pipeline.ps1 -Priority $priority -Limit ([int]$limit)
+          if [ "${{ github.event.inputs.shadow }}" = "true" ]; then
+            node ingestion/run-ingest.mjs --shadow
+          else
+            node ingestion/run-ingest.mjs
+          fi
 
-      - name: Build social source report
-        shell: pwsh
+      - name: Commit any published events
         run: |
-          $priority = "${{ github.event.inputs.priority }}"
-          if (-not $priority) { $priority = "high" }
-          ./scripts/build-social-source-report.ps1 -Priority $priority -IncludeSearchLeads
+          git config user.name "korcula-events-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add site/data/events.json ingestion/data/pending-events.json ingestion/data/run-log/
+          if ! git diff --cached --quiet; then
+            git commit -m "Automated event ingestion: $(date -u +%Y-%m-%d)"
+            git push
+          else
+            echo "Nothing to commit this run."
+          fi
 
-      - name: Run poster OCR
-        shell: pwsh
-        run: ./scripts/ocr-posters.ps1 -CreateCandidates
+  discover-sources:
+    if: github.event.schedule == '0 6 1 * *'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v5
 
-      - name: Summarize ingestion results
-        id: summary
-        shell: pwsh
+      - name: Run source discovery
+        env:
+          BING_SEARCH_API_KEY: ${{ secrets.BING_SEARCH_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node ingestion/run-discover-sources.mjs
+
+      - name: Commit discovered sources
         run: |
-          $branchName = "automation/event-ingestion"
-          $reviewUrl = "https://korcula-events.com/review.html?ref=$([uri]::EscapeDataString($branchName))"
-          $pending = Get-Content -Raw site/data/pending-events.json | ConvertFrom-Json
-          $sourceReport = Get-Content -Raw site/data/source-check-report.json | ConvertFrom-Json
-          $socialReport = Get-Content -Raw site/data/social-source-report.json | ConvertFrom-Json
-          $posterReport = Get-Content -Raw site/data/poster-ocr-report.json | ConvertFrom-Json
-          $candidates = @($pending.candidates)
-          function Get-CandidateTitle($candidate) {
-            if ($candidate.event) {
-              return [string](@($candidate.event.en, $candidate.event.hr, $candidate.event.id) | Where-Object { $_ } | Select-Object -First 1)
-            }
-            return [string](@($candidate.sourceName, $candidate.id) | Where-Object { $_ } | Select-Object -First 1)
-          }
-          function Get-CandidateWhen($candidate) {
-            if (-not $candidate.event) { return "" }
-            $parts = @($candidate.event.date)
-            if ($candidate.event.endDate) { $parts += "to $($candidate.event.endDate)" }
-            $parts += $candidate.event.time
-            return [string](($parts | Where-Object { $_ }) -join " ")
-          }
-          function Get-CandidateReviewUrl($candidate) {
-            $candidateId = [string]$candidate.id
-            if (-not $candidateId) { return $reviewUrl }
-            return "$reviewUrl&candidate=$([uri]::EscapeDataString($candidateId))"
-          }
-          function Format-CandidateList($items, [int]$limit = 25) {
-            $rows = @($items | Select-Object -First $limit | ForEach-Object {
-              $titleText = (Get-CandidateTitle $_) -replace '\|', '/'
-              $titleText = $titleText -replace '\[', '\[' -replace '\]', '\]'
-              $candidateUrl = Get-CandidateReviewUrl $_
-              $title = "[$titleText]($candidateUrl)"
-              $when = (Get-CandidateWhen $_) -replace '\|', '/'
-              $place = [string]((@($_.event.town, $_.event.venue) | Where-Object { $_ }) -join " / ")
-              $place = $place -replace '\|', '/'
-              $source = [string](@($_.sourceName, $_.sourceId) | Where-Object { $_ } | Select-Object -First 1)
-              $source = $source -replace '\|', '/'
-              $match = ""
-              if ($_.duplicateMatches -and @($_.duplicateMatches).Count -gt 0) {
-                $best = @($_.duplicateMatches)[0]
-                $match = "$($best.eventId) ($($best.score))" -replace '\|', '/'
-              }
-              "| $title | $when | $place | $source | $match |"
-            })
-            if ($rows.Count -eq 0) { return "_None._" }
-            $header = "| Event | When | Place | Source | Duplicate match |`n|---|---|---|---|---|"
-            $more = if (@($items).Count -gt $limit) { "`n`n_And $(@($items).Count - $limit) more._" } else { "" }
-            return $header + "`n" + ($rows -join "`n") + $more
-          }
-          function Format-PosterMatchList($items, [int]$limit = 25) {
-            $rows = @($items | Select-Object -First $limit | ForEach-Object {
-              $match = @($_.eventMatches + $_.duplicateMatches) | Where-Object { $_ } | Select-Object -First 1
-              $image = [string]$_.imagePath -replace '\|', '/'
-              if ($_.event) {
-                $signals = [string](@(
-                  $(if ($_.event.town) { "town: $($_.event.town)" }),
-                  $(if ($_.event.cats) { "cats: $(@($_.event.cats) -join ', ')" }),
-                  $(if ($_.event.date) { "date: $($_.event.date)" }),
-                  $(if ($_.event.endDate) { "to: $($_.event.endDate)" }),
-                  $(if ($_.event.time) { "time: $($_.event.time)" }),
-                  $(if ($_.event.en) { "event: $($_.event.en)" })
-                ) | Where-Object { $_ }) -join "; "
-              } else {
-                $signals = [string](@(
-                  $(if ($_.town) { "town: $($_.town)" }),
-                  $(if ($_.categories) { "cats: $(@($_.categories) -join ', ')" }),
-                  $(if ($_.dateValues) { "dates: $(@($_.dateValues) -join ', ')" }),
-                  $(if ($_.timeHints) { "times: $(@($_.timeHints) -join ', ')" })
-                ) | Where-Object { $_ }) -join "; "
-              }
-              $signals = $signals -replace '\|', '/'
-              $matchText = if ($match) { "$($match.eventId) ($($match.score)) $($match.title)" } else { "" }
-              $matchText = $matchText -replace '\|', '/'
-              "| $image | $($_.reviewStatus) | $signals | $matchText |"
-            })
-            if ($rows.Count -eq 0) { return "_None._" }
-            $header = "| Poster | Review status | Extracted signals | Existing match |`n|---|---|---|---|"
-            $more = if (@($items).Count -gt $limit) { "`n`n_And $(@($items).Count - $limit) more._" } else { "" }
-            return $header + "`n" + ($rows -join "`n") + $more
-          }
-          $needsReview = @($candidates | Where-Object { $_.status -in @("new","needs-review") }).Count
-          $autoApproved = @($candidates | Where-Object { $_.reviewMode -eq "auto-approved" }).Count
-          $autoRejected = @($candidates | Where-Object { $_.reviewMode -eq "auto-rejected" }).Count
-          $autoDuplicates = @($candidates | Where-Object { $_.reviewMode -eq "auto-duplicate" }).Count
-          $structured = @($candidates | Where-Object { $_.event }).Count
-          $duplicates = @($candidates | Where-Object { $_.duplicateRisk -eq "high" }).Count
-          $sourceErrors = @($sourceReport.rows | Where-Object { $_.status -eq "error" }).Count
-          $socialLeads = @($socialReport.rows).Count
-          $posterStructuredRows = @($posterReport.results | ForEach-Object {
-            $imagePath = $_.imagePath
-            @($_.structuredEvents) | ForEach-Object {
-              [pscustomobject]@{
-                imagePath = $imagePath
-                reviewStatus = $_.reviewStatus
-                event = $_.event
-                duplicateMatches = @($_.duplicateMatches)
-                eventMatches = @()
-              }
-            }
-          })
-          $posterCandidates = @($posterReport.results | Where-Object { $_.candidateId }).Count + @($posterStructuredRows).Count
-          $posterMatches = @($posterReport.results | Where-Object { $_.duplicateRisk -eq "high" }).Count + @($posterStructuredRows | Where-Object { @($_.duplicateMatches).Count -gt 0 }).Count
-          $approvedList = Format-CandidateList -items @($candidates | Where-Object { $_.reviewMode -eq "auto-approved" })
-          $duplicateList = Format-CandidateList -items @($candidates | Where-Object { $_.reviewMode -eq "auto-duplicate" })
-          $rejectedList = Format-CandidateList -items @($candidates | Where-Object { $_.reviewMode -eq "auto-rejected" })
-          $reviewList = Format-CandidateList -items @($candidates | Where-Object { $_.status -in @("new","needs-review") })
-          $posterMatchList = Format-PosterMatchList -items @(
-            $posterStructuredRows | Where-Object { @($_.duplicateMatches).Count -gt 0 }
-            $posterReport.results | Where-Object { $_.duplicateRisk -eq "high" }
-          )
-          $titleCandidates = @($candidates | Where-Object { $_.status -in @("new","needs-review") })
-          if ($titleCandidates.Count -eq 0) {
-            $titleCandidates = @($candidates | Where-Object { $_.reviewMode -eq "auto-approved" })
-          }
-          $titlePreview = [string](@($titleCandidates | Select-Object -First 2 | ForEach-Object {
-            $title = (Get-CandidateTitle $_) -replace '[\r\n]+', ' '
-            if ($title.Length -gt 48) { $title = $title.Substring(0, 47) + "…" }
-            $title
-          }) -join ", ")
-          $titleSuffix = if ($titlePreview) { " — $titlePreview" } else { "" }
-          $body = @"
-          Automated event ingestion run.
-
-          **[$needsReview events need approval — open the review queue]($reviewUrl)**
-
-          Each event name below links directly to its detailed candidate page.
-
-          Files to review in this PR:
-          - site/data/pending-events.json
-          - site/data/events.json
-          - site/data/source-check-report.json
-          - site/data/social-source-report.json
-          - site/data/poster-ocr-report.json
-
-          Summary:
-          - Needs review: $needsReview
-          - Auto-approved: $autoApproved
-          - Auto-rejected stale events: $autoRejected
-          - Auto-marked duplicates: $autoDuplicates
-          - Structured candidates: $structured
-          - Possible duplicates flagged: $duplicates
-          - Source errors: $sourceErrors
-          - Social leads in watchlist: $socialLeads
-          - Poster OCR candidates: $posterCandidates
-          - Poster OCR matched existing events: $posterMatches
-
-          Auto-approved structured candidates may have been merged into events.json.
-          Low-confidence social, OCR, duplicate-risk, and search candidates remain in pending-events.json for review.
-          Social pages/groups are listed in social-source-report.json for manual review unless API access is configured.
-
-          ## Auto-approved / imported
-
-          $approvedList
-
-          ## Auto-marked duplicates
-
-          $duplicateList
-
-          ## Auto-rejected stale events
-
-          $rejectedList
-
-          ## Poster OCR matched existing events
-
-          $posterMatchList
-
-          ## Needs human review
-
-          $reviewList
-          "@
-          $body | Set-Content -Path "$env:RUNNER_TEMP/pr-body.md" -Encoding UTF8
-          "needs_review=$needsReview" >> $env:GITHUB_OUTPUT
-          "auto_approved=$autoApproved" >> $env:GITHUB_OUTPUT
-          "auto_rejected=$autoRejected" >> $env:GITHUB_OUTPUT
-          "auto_duplicates=$autoDuplicates" >> $env:GITHUB_OUTPUT
-          "duplicates=$duplicates" >> $env:GITHUB_OUTPUT
-          "title_suffix=$titleSuffix" >> $env:GITHUB_OUTPUT
-
-      - name: Create pull request
-        uses: peter-evans/create-pull-request@v8
-        with:
-          branch: automation/event-ingestion
-          title: "Event ingestion: ${{ steps.summary.outputs.auto_approved }} auto-approved, ${{ steps.summary.outputs.needs_review }} need review${{ steps.summary.outputs.title_suffix }}"
-          commit-message: "Update event candidates and auto-approved events"
-          body-path: ${{ runner.temp }}/pr-body.md
-          labels: event-ingestion
-          assignees: oliver-trako
+          git config user.name "korcula-events-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add ingestion/data/discovered-sources.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Automated source discovery: $(date -u +%Y-%m-%d)"
+            git push
+          else
+            echo "Nothing to commit this run."
+          fi

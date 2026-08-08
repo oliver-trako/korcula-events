@@ -7,7 +7,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { discoverNewSources, bingSearch } from "./lib/discover-sources.mjs";
+import { discoverNewSources, googleSearch } from "./lib/discover-sources.mjs";
 import { openSourceReviewIssue } from "./lib/github-issue.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -21,9 +21,10 @@ async function writeJson(filePath, data) {
 }
 
 async function run() {
-  const bingApiKey = process.env.BING_SEARCH_API_KEY;
-  if (!bingApiKey) {
-    console.log("BING_SEARCH_API_KEY is not set -- skipping source discovery this run.");
+  const googleApiKey = process.env.GOOGLE_SEARCH_API_KEY;
+  const googleSearchEngineId = process.env.GOOGLE_SEARCH_ENGINE_ID;
+  if (!googleApiKey || !googleSearchEngineId) {
+    console.log("GOOGLE_SEARCH_API_KEY/GOOGLE_SEARCH_ENGINE_ID are not set -- skipping source discovery this run.");
     return;
   }
 
@@ -33,7 +34,7 @@ async function run() {
 
   const alreadyDiscovered = new Set(discoveredDoc.candidates.map((c) => c.url));
   const found = await discoverNewSources(sources, {
-    searchImpl: (query) => bingSearch(query, { apiKey: bingApiKey })
+    searchImpl: (query) => googleSearch(query, { apiKey: googleApiKey, searchEngineId: googleSearchEngineId })
   });
   const newOnes = found.filter((c) => !alreadyDiscovered.has(c.url)).map((c) => ({ ...c, status: "candidate", discoveredAt: new Date().toISOString() }));
 

@@ -5,18 +5,19 @@
  *
  * `searchImpl(query) -> Promise<{title, url, snippet}[]>` is injected rather than hardcoded to
  * one search provider, matching the DI pattern used throughout this codebase (retrieval.mjs's
- * fetchImpl, ai-client.mjs's fetchImpl). The default implementation below calls Bing's Web
- * Search API, which needs a `BING_SEARCH_API_KEY` -- a new credential, separate from the
- * Cloudflare Workers AI one used for extraction/verification.
+ * fetchImpl, ai-client.mjs's fetchImpl). The default implementation below calls Google's Custom
+ * Search JSON API, which needs `GOOGLE_SEARCH_API_KEY` and `GOOGLE_SEARCH_ENGINE_ID` -- new
+ * credentials, separate from the Cloudflare Workers AI ones used for extraction/verification.
+ * Free tier: 100 queries/day, comfortably enough for one monthly run of a handful of queries.
  */
 
-export async function bingSearch(query, { apiKey, fetchImpl = fetch } = {}) {
-  if (!apiKey) throw new Error("bingSearch requires an API key (BING_SEARCH_API_KEY)");
-  const url = `https://api.bing.microsoft.com/v7.0/search?q=${encodeURIComponent(query)}&count=10&mkt=hr-HR`;
-  const response = await fetchImpl(url, { headers: { "Ocp-Apim-Subscription-Key": apiKey } });
-  if (!response.ok) throw new Error(`bing-search-http-error:${response.status}`);
+export async function googleSearch(query, { apiKey, searchEngineId, fetchImpl = fetch } = {}) {
+  if (!apiKey || !searchEngineId) throw new Error("googleSearch requires apiKey and searchEngineId (GOOGLE_SEARCH_API_KEY / GOOGLE_SEARCH_ENGINE_ID)");
+  const url = `https://www.googleapis.com/customsearch/v1?key=${encodeURIComponent(apiKey)}&cx=${encodeURIComponent(searchEngineId)}&num=10&q=${encodeURIComponent(query)}`;
+  const response = await fetchImpl(url);
+  if (!response.ok) throw new Error(`google-search-http-error:${response.status}`);
   const body = await response.json();
-  return (body.webPages?.value || []).map((r) => ({ title: r.name, url: r.url, snippet: r.snippet }));
+  return (body.items || []).map((r) => ({ title: r.title, url: r.link, snippet: r.snippet }));
 }
 
 const DEFAULT_QUERIES = [

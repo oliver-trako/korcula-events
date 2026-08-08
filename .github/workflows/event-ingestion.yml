@@ -57,8 +57,7 @@ jobs:
 
       - name: Run source discovery
         env:
-          GOOGLE_SEARCH_API_KEY: ${{ secrets.GOOGLE_SEARCH_API_KEY }}
-          GOOGLE_SEARCH_ENGINE_ID: ${{ secrets.GOOGLE_SEARCH_ENGINE_ID }}
+          BING_SEARCH_API_KEY: ${{ secrets.BING_SEARCH_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node ingestion/run-discover-sources.mjs
 

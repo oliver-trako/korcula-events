@@ -38,14 +38,35 @@ function formatCandidate(item) {
   return lines.join("\n");
 }
 
+// GitHub caps an issue body at 65536 characters. Leave real margin below that rather than
+// cutting it fine -- a run with many low-confidence candidates (every source gets checked,
+// most candidates on a first real run will land here while thresholds are still untuned) can
+// otherwise produce a body GitHub outright rejects, which previously took the whole run down
+// with it (see ingestion/data/run-log/ for the incident this was fixed after).
+const MAX_BODY_CHARS = 55_000;
+
 export function buildIssueBody(reviewItems, { runDate }) {
   const header = [
     `Automated event ingestion run — ${runDate}.`,
     "",
     `**${reviewItems.length} candidate(s) need a decision.** For each: add it to \`site/data/events.json\` if it's good (or ask me to), then close this issue.`,
     ""
-  ];
-  return header.join("\n") + reviewItems.map(formatCandidate).join("\n\n---\n\n");
+  ].join("\n");
+
+  const blocks = reviewItems.map(formatCandidate);
+  let body = header;
+  let included = 0;
+  for (const block of blocks) {
+    const next = body + (included === 0 ? "" : "\n\n---\n\n") + block;
+    if (next.length > MAX_BODY_CHARS) break;
+    body = next;
+    included += 1;
+  }
+
+  if (included < reviewItems.length) {
+    body += `\n\n---\n\n_And ${reviewItems.length - included} more candidate(s) -- too many to list here without exceeding GitHub's issue-body size limit. Full list, including these, is in \`ingestion/data/pending-events.json\` on \`main\`._`;
+  }
+  return body;
 }
 
 /**

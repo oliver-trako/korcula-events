@@ -166,9 +166,10 @@ async function run({ shadow }) {
       event.updatedAt = log.runDate;
       eventsDoc.events.push(event);
     }
-    eventsDoc.events.sort((a, b) => (a.date + a.time).localeCompare(b.date + b.time) || a.id.localeCompare(b.id));
+    eventsDoc.events.sort((a, b) => (a.date + (a.time || "")).localeCompare(b.date + (b.time || "")) || a.id.localeCompare(b.id));
     await writeJson(EVENTS_PATH, eventsDoc);
-    console.log(`Published ${allPublished.length} event(s) to site/data/events.json.`);
+    console.log(`Published ${allPublished.length} event(s) to site/data/events.json:`);
+    for (const { candidate } of allPublished) console.log(`  - ${candidate.id}: ${candidate.en} (${candidate.date}, ${candidate.town})`);
   }
 
   if (allReview.length) {
@@ -191,8 +192,19 @@ async function run({ shadow }) {
     const repo = process.env.GITHUB_REPOSITORY?.split("/")[1];
     const token = process.env.GITHUB_TOKEN;
     if (owner && repo && token) {
-      const issue = await openReviewIssue(allReview, { owner, repo, token, runDate: log.runDate });
-      console.log(`Opened review issue: ${issue?.url}`);
+      // Deliberately caught, not allowed to throw out of run(): the notification is a
+      // convenience on top of already-correct, already-written files (events.json,
+      // pending-events.json above) -- a GitHub API hiccup here must never discard real,
+      // already-decided work the way it did in the incident this comment replaces (see
+      // ingestion/data/run-log/ for that run: a >65536-char issue body threw, which skipped
+      // the workflow's commit step entirely and silently lost a correctly-published event).
+      try {
+        const issue = await openReviewIssue(allReview, { owner, repo, token, runDate: log.runDate });
+        console.log(`Opened review issue: ${issue?.url}`);
+      } catch (error) {
+        log.errors.push({ stage: "open-review-issue", error: error.message });
+        console.error(`Failed to open review issue (candidates are still saved in pending-events.json): ${error.message}`);
+      }
     } else {
       console.log(`${allReview.length} candidate(s) need review, but GITHUB_REPOSITORY/GITHUB_TOKEN are not set -- skipped opening an issue.`);
     }

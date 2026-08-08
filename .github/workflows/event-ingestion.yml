@@ -37,6 +37,13 @@ jobs:
           fi
 
       - name: Commit any published events
+        # Runs even if the ingestion step failed: it can fail *after* already publishing
+        # events and writing pending-events.json (e.g. a downstream notification error), and
+        # by default a failed step skips every step after it -- which previously discarded a
+        # correctly-published event because an unrelated GitHub Issue call failed. The job's
+        # overall status still reflects the ingestion step's outcome; this just stops
+        # already-correct file writes from being thrown away along with it.
+        if: always()
         run: |
           git config user.name "korcula-events-bot"
           git config user.email "actions@users.noreply.github.com"
@@ -62,6 +69,7 @@ jobs:
         run: node ingestion/run-discover-sources.mjs
 
       - name: Commit discovered sources
+        if: always()
         run: |
           git config user.name "korcula-events-bot"
           git config user.email "actions@users.noreply.github.com"

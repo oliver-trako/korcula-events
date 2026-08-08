@@ -50,7 +50,24 @@ jobs:
           git add site/data/events.json ingestion/data/pending-events.json ingestion/data/run-log/
           if ! git diff --cached --quiet; then
             git commit -m "Automated event ingestion: $(date -u +%Y-%m-%d)"
-            git push
+            # main can move between checkout and here (e.g. someone pushing by hand while this
+            # runs, or the daily and manually-dispatched runs overlapping) -- a plain `git push`
+            # then just fails outright as a non-fast-forward. Rebase onto the latest main and
+            # retry a few times before giving up; these files are bot-managed and rarely edited
+            # concurrently by a human, so a real conflict here should be rare.
+            for attempt in 1 2 3 4 5; do
+              if git push; then
+                break
+              fi
+              echo "Push rejected (attempt $attempt) -- fetching and rebasing onto latest main."
+              git fetch origin main
+              if ! git rebase origin/main; then
+                echo "Rebase conflict -- not resolvable automatically. Leaving the commit local; rerun the workflow after resolving on main."
+                git rebase --abort
+                exit 1
+              fi
+              sleep $((attempt * 5))
+            done
           else
             echo "Nothing to commit this run."
           fi
@@ -76,7 +93,19 @@ jobs:
           git add ingestion/data/discovered-sources.json
           if ! git diff --cached --quiet; then
             git commit -m "Automated source discovery: $(date -u +%Y-%m-%d)"
-            git push
+            for attempt in 1 2 3 4 5; do
+              if git push; then
+                break
+              fi
+              echo "Push rejected (attempt $attempt) -- fetching and rebasing onto latest main."
+              git fetch origin main
+              if ! git rebase origin/main; then
+                echo "Rebase conflict -- not resolvable automatically. Leaving the commit local; rerun the workflow after resolving on main."
+                git rebase --abort
+                exit 1
+              fi
+              sleep $((attempt * 5))
+            done
           else
             echo "Nothing to commit this run."
           fi

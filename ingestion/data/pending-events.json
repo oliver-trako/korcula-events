@@ -3,8 +3,177 @@
     "generated": "2026-07-09",
     "updated": "2026-08-09",
     "purpose": "Candidate events that did not clear the auto-publish bar (see ingestion-policy.json) and are awaiting human review via the 'event-review' GitHub Issue. Auto-published candidates never appear here -- they go straight into site/data/events.json.",
-    "statuses": ["needs-review", "approved", "rejected", "duplicate"],
+    "statuses": [
+      "needs-review",
+      "approved",
+      "rejected",
+      "duplicate"
+    ],
     "candidateFields": "id, sourceId, sourceUrl, discoveredAt, extractionMethod ('ai'), event{}, verifierConfidence (0-1), verifierConcerns[], blockingReasons[], reviewedAt, reviewedBy"
   },
-  "candidates": []
+  "candidates": [
+    {
+      "id": "ai-moreska-2026-08-17-moreska-monday-21-00-summer-cinema-few-tickets-left-buy-tick",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/",
+      "discoveredAt": "2026-08-08T23:31:22.791Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Moreška ponedjeljak · 21:00 · Summer Cinema Few tickets left Buy Tickets → (ticket link: /tickets?date=2026-08-17)",
+        "en": "Moreška Monday · 21:00 · Summer Cinema Few tickets left Buy Tickets → (ticket link: /tickets?date=2026-08-17)",
+        "date": "2026-08-17",
+        "endDate": "2026-08-17",
+        "town": "korcula",
+        "venue": "Summer Cinema",
+        "cats": [
+          "kids"
+        ],
+        "desc": {
+          "en": "Moreška Monday · 21:00 · Summer Cinema Few tickets left Buy Tickets → (ticket link: /tickets?date=2026-08-17)"
+        },
+        "source": "https://moreska.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2026-08-17-moreska-monday-21-00-summer-cinema-few-tickets-left-buy-tick"
+      },
+      "verifierConfidence": 0.2,
+      "verifierConcerns": [
+        "The extracted event listing appears to be a snippet of a larger webpage. It's possible that the title, date, and venue were misread or don't actually appear together on the page near each other.",
+        "The event listing is presented in a way that suggests it's a call to action, but it's actually a listing on a webpage. This could be a common failure mode for web scraping algorithms.",
+        "The title and description of the event appear to be identical. This could be an indication that the extraction algorithm was not able to properly parse the webpage's content.",
+        "The 'date' field in the extracted event listing is in the format '2026-08-17', which suggests that it's a machine-readable date. However, the 'endDate' field is also '2026-08-17', which could indicate that the event has already happened or is a recurring event.",
+        "The 'town' field in the extracted event listing is 'korcula', which is a proper noun. However, it's not clear if this is the correct spelling or if it was misread from the webpage.",
+        "The 'cats' field in the extracted event listing contains a single value, 'kids'. However, it's not clear if this is the correct category or if it was misread from the webpage.",
+        "The 'description' field in the extracted event listing is identical to the title and appears to be a call to action. This could be an indication that the extraction algorithm was not able to properly parse the webpage's content.",
+        "The webpage contains a section titled '2026 Season Performances' which lists multiple events, including the extracted event listing. This could be an indication that the extracted event listing is not a standalone event, but rather part of a larger series of events.",
+        "The webpage contains a section titled 'View All Performances' which suggests that the events listed on the page are not exhaustive. This could be an indication that the extracted event listing is not a complete or accurate representation of the event.",
+        "The webpage contains a section titled 'Through the ages' which appears to be a historical overview of the Moreška dance. This could be an indication that the extracted event listing is not a primary source of information, but rather a secondary or tertiary source.",
+        "The webpage contains a section titled 'Four ensembles, one society' which appears to be a description of the HGD Sveta Cecilija organization. This could be an indication that the extracted event listing is not a standalone event, but rather part of a larger organization or series of events.",
+        "The webpage contains a section titled 'Private Experiences' which appears to be a description of private events or performances. This could be an indication that the extracted event listing is not a public event, but rather a private or exclusive event.",
+        "The webpage contains a section titled 'The Moreška Experience' which appears to be a description of an educational or interactive experience. This could be an indication that the extracted event listing is not a traditional event, but rather a unique or specialized experience.",
+        "The webpage contains a section titled 'We'd love to hear from you' which appears to be a contact form or inquiry page. This could be an indication that the extracted event listing is not a primary source of information, but rather a secondary or tertiary source.",
+        "The webpage contains a section titled 'Guardians of the Steel Dance' which appears to be a slogan or motto for the HGD Sveta Cecilija organization. This could be an indication that the extracted event listing is not a standalone event, but rather part of a larger organization or series of events."
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.2"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2026-08-20-moreska-thursday-21-00-summer-cinema-available-buy-tickets-t",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/",
+      "discoveredAt": "2026-08-08T23:31:22.791Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Moreška četvrtak · 21:00 · Summer Cinema Available Buy Tickets → (ticket link: /tickets?date=2026-08-20)",
+        "en": "Moreška Thursday · 21:00 · Summer Cinema Available Buy Tickets → (ticket link: /tickets?date=2026-08-20)",
+        "date": "2026-08-20",
+        "endDate": "2026-08-20",
+        "town": "korcula",
+        "venue": "Summer Cinema",
+        "cats": [
+          "kids"
+        ],
+        "desc": {
+          "en": "Moreška Thursday · 21:00 · Summer Cinema Available Buy Tickets → (ticket link: /tickets?date=2026-08-20)"
+        },
+        "source": "https://moreska.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2026-08-20-moreska-thursday-21-00-summer-cinema-available-buy-tickets-t"
+      },
+      "verifierConfidence": 0.3,
+      "verifierConcerns": [
+        "The extracted date '2026-08-20' is present on the page but it is in a list of future performances. The page context is the current season, and the event may have already happened or not yet occurred.",
+        "The title and description appear to be a direct copy from the list of future performances. However, the title and description are also present in the main text of the page, which suggests that they may be generic or a template.",
+        "The venue 'Summer Cinema' is mentioned in the extracted data, but it is not explicitly stated as the venue for this specific event. The page mentions 'Summer Cinema' as a possible venue, but it does not confirm that it is the venue for this specific event.",
+        "The extracted data mentions that the event is a 'kids' event', but the page does not explicitly mention this. The page does mention that the event is suitable for adults and children under 14, but it does not specifically categorize it as a 'kids' event.",
+        "The extracted ticket link '/tickets?date=2026-08-20' is present on the page, but it is not explicitly linked to this specific event. The page contains multiple ticket links, and it is unclear which one corresponds to this event.",
+        "The page contains a 'Buy Tickets' button, but it is not explicitly linked to this specific event. The button is present in the main navigation menu, and it is unclear whether it corresponds to this event or not."
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.3"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2026-08-31-moreska-monday-21-00-summer-cinema-available-buy-tickets-tic",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/",
+      "discoveredAt": "2026-08-08T23:31:22.791Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Moreška ponedjeljak · 21:00 · Summer Cinema Available Buy Tickets → (ticket link: /tickets?date=2026-08-31)",
+        "en": "Moreška Monday · 21:00 · Summer Cinema Available Buy Tickets → (ticket link: /tickets?date=2026-08-31)",
+        "date": "2026-08-31",
+        "endDate": "2026-08-31",
+        "town": "korcula",
+        "venue": "Summer Cinema",
+        "cats": [
+          "kids"
+        ],
+        "desc": {
+          "en": "Moreška Monday · 21:00 · Summer Cinema Available Buy Tickets → (ticket link: /tickets?date=2026-08-31)"
+        },
+        "source": "https://moreska.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2026-08-31-moreska-monday-21-00-summer-cinema-available-buy-tickets-tic"
+      },
+      "verifierConfidence": 0.3,
+      "verifierConcerns": [
+        "The extracted candidate contains a date of 2026-08-31, but the webpage contains a performance with the same date and details (Moreška Monday · 21:00 · Summer Cinema Available Buy Tickets →) under the '2026 Season Performances' section. This suggests that the extracted candidate might be a duplicate or a re-extraction of the same event. However, the webpage does not explicitly state that the event has already occurred, so this is a low-confidence concern.",
+        "The extracted candidate contains a description that is a duplicate of the event title, which might indicate that the webpage does not provide a meaningful event description. This is a low-confidence concern.",
+        "The webpage contains a '2026 Season Performances' section that lists multiple events, but the extracted candidate only contains information about one event. This might indicate that the webpage is not providing a comprehensive list of events, or that the extraction process is incomplete. This is a low-confidence concern.",
+        "The webpage contains a 'Through the ages' section that provides a historical context for the Moreška dance, but the extracted candidate does not contain any information about the dance's history. This might indicate that the webpage is not providing a complete or accurate representation of the event. This is a low-confidence concern.",
+        "The webpage contains a 'We'd love to hear from you' section that provides contact information, but the extracted candidate does not contain any information about how to contact the event organizers. This might indicate that the webpage is not providing a complete or accurate representation of the event. This is a low-confidence concern.",
+        "The webpage contains a 'Cookie Policy' and a 'Refund Policy' section, but the extracted candidate does not contain any information about these policies. This might indicate that the webpage is not providing a complete or accurate representation of the event. This is a low-confidence concern.",
+        "The webpage contains a 'Developed by' section that provides information about the webpage's developer, but the extracted candidate does not contain any information about the developer. This might indicate that the webpage is not providing a complete or accurate representation of the event. This is a low-confidence concern.",
+        "The webpage contains a 'Privacy Policy' section that provides information about how the webpage collects and uses user data, but the extracted candidate does not contain any information about this policy. This might indicate that the webpage is not providing a complete or accurate representation of the event. This is a low-confidence concern."
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.3"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2026-09-02-moreska-wednesday-21-00-summer-cinema-available-buy-tickets-",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/",
+      "discoveredAt": "2026-08-08T23:31:22.791Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Moreška srijeda · 21:00 · Summer Cinema Available Buy Tickets → (ticket link: /tickets?date=2026-09-02)",
+        "en": "Moreška Wednesday · 21:00 · Summer Cinema Available Buy Tickets → (ticket link: /tickets?date=2026-09-02)",
+        "date": "2026-09-02",
+        "endDate": "2026-09-02",
+        "town": "korcula",
+        "venue": "Summer Cinema",
+        "cats": [
+          "kids"
+        ],
+        "desc": {
+          "en": "Moreška Wednesday · 21:00 · Summer Cinema Available Buy Tickets → (ticket link: /tickets?date=2026-09-02)"
+        },
+        "source": "https://moreska.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2026-09-02-moreska-wednesday-21-00-summer-cinema-available-buy-tickets-"
+      },
+      "verifierConfidence": 0.4,
+      "verifierConcerns": [
+        "The extracted event appears to be a navigation link with the text 'Buy Tickets' which is present on the source page multiple times. This suggests that the extraction may be incorrect.",
+        "The title and description fields contain the same text, which is likely a copy of the event title. This may indicate that the extraction did not correctly identify the event title.",
+        "The extracted event date '2026-09-02' appears to be a future date, but the source page contains a list of upcoming events. It is possible that the extraction is correct, but it would be good to verify that the event is not already scheduled to occur.",
+        "The extracted event 'Moreška Wednesday' appears to be a recurring event, but the source page contains a list of specific upcoming events. It would be good to verify that the extracted event is indeed a recurring event and not a one-time occurrence.",
+        "The extracted venue 'Summer Cinema' is mentioned on the source page, but it is not clear if it is the only venue for the event. It would be good to verify that the extracted venue is correct.",
+        "The extracted category 'kids' does not appear to be mentioned on the source page. It would be good to verify that the extracted category is correct."
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.4"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    }
+  ]
 }

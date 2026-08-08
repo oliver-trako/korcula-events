@@ -174,16 +174,46 @@ async function run({ shadow }) {
   async function postRunLog() {
     if (!(owner && repo && token)) {
       console.log("GITHUB_REPOSITORY/GITHUB_TOKEN not set -- skipped posting the run-log comment.");
-      return;
+      return null;
     }
     try {
       const trackingIssue = await findOrCreateRunLogIssue({ owner, repo, token });
       await postRunLogComment(trackingIssue.number, log, { owner, repo, token });
       console.log(`Posted run log to ${trackingIssue.url}`);
+      return trackingIssue.url;
     } catch (error) {
       log.errors.push({ stage: "post-run-log", error: error.message });
       console.error(`Failed to post run-log comment: ${error.message}`);
+      return null;
     }
+  }
+
+  // GitHub Actions renders whatever markdown gets appended to $GITHUB_STEP_SUMMARY directly on
+  // the run's own page -- useful alongside (not instead of) the issue-comment email, since it's
+  // the first thing visible when you open a run without digging through raw log output.
+  async function writeStepSummary(runLog, trackingIssueUrl) {
+    const summaryPath = process.env.GITHUB_STEP_SUMMARY;
+    if (!summaryPath) return;
+    const { totals, published, errors } = runLog;
+    const lines = [
+      `## Event ingestion — ${runLog.runDate}${runLog.shadow ? " (shadow)" : ""}`,
+      "",
+      `| Published | Needs review | AI calls | Errors |`,
+      `|---|---|---|---|`,
+      `| ${totals.published} | ${totals.review} | ${totals.aiCalls} | ${errors.length} |`,
+      ""
+    ];
+    if (trackingIssueUrl) lines.push(`**[Full run log →](${trackingIssueUrl})**`, "");
+    if (owner && repo) lines.push(`[Pending candidates (raw)](https://github.com/${owner}/${repo}/blob/main/ingestion/data/pending-events.json)`, "");
+    if (published?.length) {
+      lines.push("**Published:**");
+      for (const p of published) lines.push(`- ${p.en} (${p.date}, ${p.town})`);
+      lines.push("");
+    }
+    if (errors.length) {
+      lines.push(`**Errors:** ${errors.length} -- see the run log linked above for detail.`);
+    }
+    await fs.appendFile(summaryPath, lines.join("\n") + "\n");
   }
 
   if (shadow) {
@@ -191,7 +221,8 @@ async function run({ shadow }) {
     await fs.mkdir(logDir, { recursive: true });
     await fs.writeFile(path.join(logDir, `${log.runDate}-shadow.json`), JSON.stringify(log, null, 2) + "\n");
     console.log(`[shadow] ${allPublished.length} would publish, ${allReview.length} would need review. See ingestion/data/run-log/${log.runDate}-shadow.json`);
-    await postRunLog();
+    const trackingIssueUrl = await postRunLog();
+    await writeStepSummary(log, trackingIssueUrl);
     return;
   }
 
@@ -245,7 +276,8 @@ async function run({ shadow }) {
   const logDir = path.join(DATA_DIR, "run-log");
   await fs.mkdir(logDir, { recursive: true });
   await fs.writeFile(path.join(logDir, `${log.runDate}.json`), JSON.stringify(log, null, 2) + "\n");
-  await postRunLog();
+  const trackingIssueUrl = await postRunLog();
+  await writeStepSummary(log, trackingIssueUrl);
 }
 
 const shadow = process.argv.includes("--shadow");

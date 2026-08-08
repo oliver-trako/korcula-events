@@ -98,6 +98,90 @@ export async function openReviewIssue(reviewItems, { owner, repo, token, runDate
   return { number: issue.number, url: issue.html_url };
 }
 
+const RUN_LOG_LABEL = "ingestion-run-log";
+
+/**
+ * Every run's full log (published events, review/duplicate/error counts, per-source
+ * breakdown, errors) as a verbose comment on a single persistent tracking issue --
+ * one issue in the list, a comment per run. GitHub emails a comment to anyone subscribed
+ * to the issue (its assignee included) with the comment body inline, which is the actual
+ * mechanism behind "put a verbose log in the email GitHub sends me": GitHub's own
+ * workflow-run notification email is a fixed template with no room for custom content,
+ * but an issue-comment notification email is not.
+ */
+export async function findOrCreateRunLogIssue({ owner, repo, token, fetchImpl = fetch } = {}) {
+  if (!owner || !repo || !token) throw new GitHubApiError("missing owner/repo/token");
+  const headers = { authorization: `Bearer ${token}`, accept: "application/vnd.github+json", "content-type": "application/json" };
+
+  const searchUrl = `https://api.github.com/repos/${owner}/${repo}/issues?state=open&labels=${encodeURIComponent(RUN_LOG_LABEL)}&per_page=1`;
+  const searchResponse = await fetchImpl(searchUrl, { headers });
+  if (!searchResponse.ok) throw new GitHubApiError(`http-error:${searchResponse.status}`);
+  const existing = await searchResponse.json();
+  if (existing.length) return { number: existing[0].number, url: existing[0].html_url };
+
+  const createResponse = await fetchImpl(`https://api.github.com/repos/${owner}/${repo}/issues`, {
+    method: "POST",
+    headers,
+    body: JSON.stringify({
+      title: "Event ingestion run log",
+      body: "Every ingestion run posts a comment below with its full log (published events, candidates, errors). Keep this issue open -- new comments are what deliver the verbose email; closing and reopening it is fine, deleting it just means a new one gets created next run.",
+      labels: [RUN_LOG_LABEL],
+      assignees: [owner]
+    })
+  });
+  if (!createResponse.ok) throw new GitHubApiError(`http-error:${createResponse.status}`);
+  const issue = await createResponse.json();
+  return { number: issue.number, url: issue.html_url };
+}
+
+function buildRunLogCommentBody(log) {
+  const lines = [
+    `**Run: ${log.runDate}${log.shadow ? " (shadow mode -- nothing published or opened)" : ""}**`,
+    "",
+    `- Published: ${log.totals.published}`,
+    `- Needs review: ${log.totals.review}`,
+    `- AI calls: ${log.totals.aiCalls}`,
+    `- Errors: ${log.errors.length}`,
+    ""
+  ];
+
+  if (log.published?.length) {
+    lines.push("**Published:**");
+    for (const p of log.published) lines.push(`- ${p.id}: ${p.en} (${p.date}, ${p.town})`);
+    lines.push("");
+  }
+
+  lines.push("**Per-source:**");
+  for (const s of log.sources) {
+    if (s.published || s.review) lines.push(`- ${s.sourceId} (${s.url}): ${s.published} published, ${s.review} review`);
+  }
+  lines.push("");
+
+  if (log.errors.length) {
+    lines.push("**Errors:**");
+    for (const e of log.errors) lines.push(`- [${e.stage}] ${e.sourceId || ""} ${e.url || ""}: ${e.error}`);
+  }
+
+  const body = lines.join("\n");
+  return body.length > MAX_BODY_CHARS ? body.slice(0, MAX_BODY_CHARS) + "\n\n_(truncated, see ingestion/data/run-log/ on main for the full log)_" : body;
+}
+
+export async function postRunLogComment(issueNumber, log, { owner, repo, token, fetchImpl = fetch } = {}) {
+  if (!owner || !repo || !token) throw new GitHubApiError("missing owner/repo/token");
+  const body = buildRunLogCommentBody(log);
+  const response = await fetchImpl(`https://api.github.com/repos/${owner}/${repo}/issues/${issueNumber}/comments`, {
+    method: "POST",
+    headers: { authorization: `Bearer ${token}`, accept: "application/vnd.github+json", "content-type": "application/json" },
+    body: JSON.stringify({ body })
+  });
+  if (!response.ok) {
+    const text = await response.text().catch(() => "");
+    throw new GitHubApiError(`http-error:${response.status}:${text.slice(0, 300)}`);
+  }
+  const comment = await response.json();
+  return { id: comment.id, url: comment.html_url };
+}
+
 /**
  * @param {object[]} sourceCandidates - [{ id, name, type, url, notes }]
  */

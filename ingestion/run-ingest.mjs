@@ -18,7 +18,7 @@ import { extractEventsFromHtml, TOWNS, CATS } from "./lib/extract.mjs";
 import { verifyCandidate } from "./lib/verify.mjs";
 import { decideCandidate } from "./lib/decide.mjs";
 import { withRetry } from "./lib/backoff.mjs";
-import { openReviewIssue } from "./lib/github-issue.mjs";
+import { openReviewIssue, findOrCreateRunLogIssue, postRunLogComment } from "./lib/github-issue.mjs";
 import { htmlToPlainText } from "./lib/html-text.mjs";
 import { normalizeText } from "./lib/normalize.mjs";
 
@@ -50,6 +50,16 @@ function generateCandidateId(sourceId, candidate) {
   return `ai-${sourceId}-${candidate.date}-${slugify(candidate.en || candidate.hr)}`;
 }
 
+// A same-site www<->apex redirect (e.g. adriaticpearlkorcula.com -> www.adriaticpearlkorcula.com)
+// is extremely common and completely harmless, but retrieval.mjs's redirect-hop allowlist
+// check is (deliberately) exact-hostname-only -- so without this, real sources fail with
+// "host-not-allowlisted" the moment they redirect to their own www/apex variant. Allowing both
+// forms of the *same* registrable domain preserves the actual SSRF protection (still restricted
+// to this one known domain family, not arbitrary hosts) while tolerating that redirect.
+function hostnameVariants(hostname) {
+  return hostname.startsWith("www.") ? [hostname, hostname.slice(4)] : [hostname, `www.${hostname}`];
+}
+
 async function processUrlEntry(source, urlEntry, ctx) {
   const { retrievalClient, aiClient, existingEvents, policy, log } = ctx;
   const hostname = new URL(urlEntry.url).hostname;
@@ -57,7 +67,7 @@ async function processUrlEntry(source, urlEntry, ctx) {
   let fetched;
   try {
     fetched = await withRetry(
-      () => retrievalClient.fetchResource(urlEntry.url, { ...RETRIEVAL_CONFIG, allowedHosts: [hostname] }),
+      () => retrievalClient.fetchResource(urlEntry.url, { ...RETRIEVAL_CONFIG, allowedHosts: hostnameVariants(hostname) }),
       { shouldRetry: (err) => err.name !== "RetrievalBlockedError" || err.reason?.startsWith("timeout") }
     );
   } catch (error) {
@@ -151,12 +161,37 @@ async function run({ shadow }) {
 
   log.totals = { published: allPublished.length, review: allReview.length, aiCalls: usageLog.length };
   log.aiUsage = usageLog;
+  log.published = allPublished.map(({ candidate }) => ({ id: candidate.id, en: candidate.en, date: candidate.date, town: candidate.town }));
+
+  const owner = process.env.GITHUB_REPOSITORY_OWNER;
+  const repo = process.env.GITHUB_REPOSITORY?.split("/")[1];
+  const token = process.env.GITHUB_TOKEN;
+
+  // Always posted, shadow or live, whether or not anything needs review -- this is what
+  // answers "can I get a verbose log in the email GitHub sends me": GitHub's own workflow
+  // status email is a fixed template with no room for custom content, but a comment on an
+  // issue you're subscribed to arrives as its own email with the full comment body inline.
+  async function postRunLog() {
+    if (!(owner && repo && token)) {
+      console.log("GITHUB_REPOSITORY/GITHUB_TOKEN not set -- skipped posting the run-log comment.");
+      return;
+    }
+    try {
+      const trackingIssue = await findOrCreateRunLogIssue({ owner, repo, token });
+      await postRunLogComment(trackingIssue.number, log, { owner, repo, token });
+      console.log(`Posted run log to ${trackingIssue.url}`);
+    } catch (error) {
+      log.errors.push({ stage: "post-run-log", error: error.message });
+      console.error(`Failed to post run-log comment: ${error.message}`);
+    }
+  }
 
   if (shadow) {
     const logDir = path.join(DATA_DIR, "run-log");
     await fs.mkdir(logDir, { recursive: true });
     await fs.writeFile(path.join(logDir, `${log.runDate}-shadow.json`), JSON.stringify(log, null, 2) + "\n");
     console.log(`[shadow] ${allPublished.length} would publish, ${allReview.length} would need review. See ingestion/data/run-log/${log.runDate}-shadow.json`);
+    await postRunLog();
     return;
   }
 
@@ -188,9 +223,6 @@ async function run({ shadow }) {
     })));
     await writeJson(pendingPath, pendingDoc);
 
-    const owner = process.env.GITHUB_REPOSITORY_OWNER;
-    const repo = process.env.GITHUB_REPOSITORY?.split("/")[1];
-    const token = process.env.GITHUB_TOKEN;
     if (owner && repo && token) {
       // Deliberately caught, not allowed to throw out of run(): the notification is a
       // convenience on top of already-correct, already-written files (events.json,
@@ -213,6 +245,7 @@ async function run({ shadow }) {
   const logDir = path.join(DATA_DIR, "run-log");
   await fs.mkdir(logDir, { recursive: true });
   await fs.writeFile(path.join(logDir, `${log.runDate}.json`), JSON.stringify(log, null, 2) + "\n");
+  await postRunLog();
 }
 
 const shadow = process.argv.includes("--shadow");

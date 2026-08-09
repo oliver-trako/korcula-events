@@ -17,7 +17,7 @@ import { createWorkersAiClient } from "./lib/ai-client.mjs";
 import { extractEventsFromHtml, TOWNS, CATS } from "./lib/extract.mjs";
 import { verifyCandidate } from "./lib/verify.mjs";
 import { decideCandidate } from "./lib/decide.mjs";
-import { withRetry } from "./lib/backoff.mjs";
+import { withRetry, sleep } from "./lib/backoff.mjs";
 import { openReviewIssue, findOrCreateRunLogIssue, postRunLogComment } from "./lib/github-issue.mjs";
 import { htmlToPlainText } from "./lib/html-text.mjs";
 import { normalizeText } from "./lib/normalize.mjs";
@@ -34,6 +34,32 @@ const RETRIEVAL_CONFIG = {
   maxRedirects: 5,
   acceptedContentTypes: ["text/html", "application/xhtml+xml"]
 };
+
+// A run that hit persistent 429s from Cloudflare Workers AI (2026-08-09) showed every single
+// call failing, including the very first -- a sign the account's per-minute (or daily) budget
+// was already tight, not that this pipeline was bursting requests. Two independent mitigations:
+// a minimum spacing between calls so we never hammer the API back-to-back regardless of retries,
+// and much more patient retries specifically for AI calls (5 attempts, longer backoff, and
+// honoring Cloudflare's own Retry-After header via ai-client.mjs's error.retryAfterMs when present).
+const MIN_MS_BETWEEN_AI_CALLS = 1500;
+const AI_RETRY = { maxAttempts: 5, baseDelayMs: 3000, maxDelayMs: 60_000, jitterRatio: 0.2 };
+const AI_RETRY_OPTIONS = {
+  retry: AI_RETRY,
+  shouldRetry: (err) => err.name === "ModelCallError" && !err.reason?.startsWith("api-error"),
+  retryAfterMs: (err) => err.retryAfterMs
+};
+
+// Wraps completeJson so calls are spaced at least MIN_MS_BETWEEN_AI_CALLS apart, independent of
+// retry backoff -- cheap insurance against rate limits even when every individual call succeeds.
+function throttle(fn, minIntervalMs) {
+  let nextAvailableAt = 0;
+  return async (...args) => {
+    const wait = nextAvailableAt - Date.now();
+    if (wait > 0) await sleep(wait);
+    nextAvailableAt = Date.now() + minIntervalMs;
+    return fn(...args);
+  };
+}
 
 // retrieval.mjs sends no headers unless given some, which means no User-Agent at all -- Node's
 // https.request doesn't set a default one. That's an obvious "not a browser" tell that trips
@@ -102,7 +128,7 @@ async function processUrlEntry(source, urlEntry, ctx) {
         pageUrl: urlEntry.url,
         evidenceHash: fetched.contentHash
       }),
-      { shouldRetry: (err) => err.name === "ModelCallError" && !err.reason?.startsWith("api-error") }
+      AI_RETRY_OPTIONS
     );
   } catch (error) {
     log.errors.push({ sourceId: source.id, url: urlEntry.url, stage: "extract", error: error.message });
@@ -119,7 +145,7 @@ async function processUrlEntry(source, urlEntry, ctx) {
     try {
       verifierResult = await withRetry(
         () => verifyCandidate(candidate, pageText, { completeJson: aiClient.completeJson, evidenceHash: fetched.contentHash }),
-        { shouldRetry: (err) => err.name === "ModelCallError" && !err.reason?.startsWith("api-error") }
+        AI_RETRY_OPTIONS
       );
     } catch (error) {
       log.errors.push({ sourceId: source.id, url: urlEntry.url, stage: "verify", candidateId: candidate.id, error: error.message });
@@ -153,11 +179,12 @@ async function run({ shadow }) {
 
   const retrievalClient = createSafeRetrievalClient();
   const usageLog = [];
-  const aiClient = createWorkersAiClient({
+  const rawAiClient = createWorkersAiClient({
     accountId: cfAccountId,
     apiToken: cfApiToken,
     onUsage: (entry) => usageLog.push(entry)
   });
+  const aiClient = { completeJson: throttle(rawAiClient.completeJson, MIN_MS_BETWEEN_AI_CALLS) };
 
   const log = { runDate: new Date().toISOString().slice(0, 10), shadow, sources: [], errors: [] };
   const allPublished = [];

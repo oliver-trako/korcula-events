@@ -49,7 +49,17 @@ export function createWorkersAiClient({ accountId, apiToken, model = DEFAULT_MOD
 
     if (!response.ok) {
       onUsage?.({ model, evidenceHash, promptChars, success: false, status: response.status });
-      throw new ModelCallError(`http-error:${response.status}`);
+      const error = new ModelCallError(`http-error:${response.status}`);
+      error.status = response.status;
+      // Cloudflare sends a Retry-After header on 429s stating how long to wait before its
+      // rate-limit window clears -- honor that exact wait instead of guessing with our own
+      // backoff, which is either wasted (too long) or futile (too short) relative to theirs.
+      const retryAfterHeader = response.headers?.get?.("retry-after");
+      const retryAfterSeconds = Number(retryAfterHeader);
+      if (Number.isFinite(retryAfterSeconds) && retryAfterSeconds > 0) {
+        error.retryAfterMs = retryAfterSeconds * 1000;
+      }
+      throw error;
     }
 
     const body = await response.json();

@@ -15,7 +15,7 @@ export function computeBackoffDelay(attempt, retry, randomValue = 0.5) {
 
 const DEFAULT_RETRY = { maxAttempts: 3, baseDelayMs: 1000, maxDelayMs: 15000, jitterRatio: 0.2 };
 
-function sleep(ms) {
+export function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
@@ -24,15 +24,21 @@ function sleep(ms) {
  * lets a caller skip retrying errors that will never succeed (e.g. a 4xx from the AI API, or
  * a RetrievalBlockedError from retrieval.mjs) — retrying those just burns quota for no
  * benefit. Defaults to retrying everything.
+ *
+ * `retryAfterMs(error)` lets a caller honor a server-stated wait (e.g. a 429's `Retry-After`
+ * header, surfaced by ai-client.mjs as `error.retryAfterMs`) instead of guessing with
+ * exponential backoff -- the server knows its own rate-limit window, we don't.
  */
-export async function withRetry(fn, { retry = DEFAULT_RETRY, shouldRetry = () => true, onRetry } = {}) {
+export async function withRetry(fn, { retry = DEFAULT_RETRY, shouldRetry = () => true, retryAfterMs, onRetry } = {}) {
   let lastError;
   for (let attempt = 1; ; attempt += 1) {
     try {
       return await fn(attempt);
     } catch (error) {
       lastError = error;
-      const delay = shouldRetry(error, attempt) ? computeBackoffDelay(attempt, retry) : null;
+      if (!shouldRetry(error, attempt)) throw error;
+      const serverDelay = retryAfterMs?.(error);
+      const delay = typeof serverDelay === "number" ? serverDelay : computeBackoffDelay(attempt, retry);
       if (delay === null) throw error;
       onRetry?.({ attempt, delay, error });
       await sleep(delay);

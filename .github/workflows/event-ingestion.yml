@@ -9,7 +9,10 @@ on:
         required: false
         default: false
   schedule:
-    - cron: "17 5 * * *" # daily: event ingestion
+    # Daily "17 5 * * *" event-ingestion cron disabled 2026-08-10 -- the pipeline is still
+    # getting rate-limited by Cloudflare Workers AI (see ingestion/data/run-log/2026-08-09.json),
+    # so an unattended daily run just burns quota for nothing. Trigger it manually via
+    # workflow_dispatch until a run comes back clean, then re-add the cron line above.
     - cron: "0 6 1 * *"  # monthly (1st): source discovery
 
 permissions:
@@ -18,7 +21,8 @@ permissions:
 
 jobs:
   ingest:
-    if: github.event.schedule == '17 5 * * *' || github.event_name == 'workflow_dispatch'
+    # Cron-triggered runs are disabled above; this now only fires on a manual dispatch.
+    if: github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository

@@ -1,0 +1,774 @@
+{
+  "runDate": "2026-08-09",
+  "shadow": false,
+  "sources": [
+    {
+      "sourceId": "visit-korcula",
+      "url": "https://visitkorcula.eu/en/events/",
+      "published": 0,
+      "review": 0
+    },
+    {
+      "sourceId": "visit-korcula-racisce",
+      "url": "https://visitkorcula.eu/en/events/summer-in-racisce/",
+      "published": 0,
+      "review": 0
+    },
+    {
+      "sourceId": "centar-kulture-korcula",
+      "url": "https://kulturakorcula.hr/kino-najave/",
+      "published": 0,
+      "review": 0
+    },
+    {
+      "sourceId": "visit-lumbarda",
+      "url": "https://www.visitlumbarda.eu/",
+      "published": 0,
+      "review": 0
+    },
+    {
+      "sourceId": "tz-vela-luka",
+      "url": "https://tzvelaluka.hr/",
+      "published": 0,
+      "review": 0
+    },
+    {
+      "sourceId": "tz-blato",
+      "url": "https://tzo-blato.hr/en/",
+      "published": 0,
+      "review": 0
+    },
+    {
+      "sourceId": "visit-orebic",
+      "url": "https://visitorebic-croatia.hr/",
+      "published": 0,
+      "review": 0
+    },
+    {
+      "sourceId": "moreska",
+      "url": "https://moreska.eu/",
+      "published": 0,
+      "review": 0
+    },
+    {
+      "sourceId": "moreska",
+      "url": "https://moreska.eu/tickets",
+      "published": 0,
+      "review": 0
+    },
+    {
+      "sourceId": "blue-korcula",
+      "url": "https://bluekorcula.com/club",
+      "published": 0,
+      "review": 0
+    },
+    {
+      "sourceId": "blue-korcula",
+      "url": "https://core-event.co/en/search?query=Kor%C4%8Dula",
+      "published": 0,
+      "review": 0
+    },
+    {
+      "sourceId": "la-banya",
+      "url": "https://labanya.hr",
+      "published": 0,
+      "review": 0
+    },
+    {
+      "sourceId": "core-event-korcula",
+      "url": "https://core-event.co/en/search?query=Kor%C4%8Dula",
+      "published": 0,
+      "review": 0
+    },
+    {
+      "sourceId": "core-event-korcula",
+      "url": "https://core-event.co/en/search?query=Korcula",
+      "published": 0,
+      "review": 0
+    },
+    {
+      "sourceId": "adriatic-pearl-weekly-events",
+      "url": "https://adriaticpearlkorcula.com/weeklyevents",
+      "published": 0,
+      "review": 0
+    },
+    {
+      "sourceId": "korculainfo-guides",
+      "url": "https://www.korculainfo.com/zrnovo/",
+      "published": 0,
+      "review": 0
+    },
+    {
+      "sourceId": "korculainfo-guides",
+      "url": "https://www.korculainfo.com/pupnat/",
+      "published": 0,
+      "review": 0
+    },
+    {
+      "sourceId": "korculainfo-guides",
+      "url": "https://www.korculainfo.com/cara/",
+      "published": 0,
+      "review": 0
+    },
+    {
+      "sourceId": "zrnovo-local-sources",
+      "url": "https://www.zrnovo.com/",
+      "published": 0,
+      "review": 0
+    },
+    {
+      "sourceId": "cara-zavalatica-local-sources",
+      "url": "https://www.korculainfo.com/cara/",
+      "published": 0,
+      "review": 0
+    },
+    {
+      "sourceId": "smokvica-brna-expanded",
+      "url": "https://visitsmokvicabrna.com/",
+      "published": 0,
+      "review": 0
+    },
+    {
+      "sourceId": "aminess-korcula-entertainment",
+      "url": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+      "published": 0,
+      "review": 0
+    },
+    {
+      "sourceId": "hajduk-split-fixtures",
+      "url": "https://hajduk.hr/utakmice",
+      "published": 0,
+      "review": 0
+    },
+    {
+      "sourceId": "hajduk-split-fixtures",
+      "url": "https://www.sofascore.com/football/team/hnk-hajduk-split/2036",
+      "published": 0,
+      "review": 0
+    }
+  ],
+  "errors": [
+    {
+      "sourceId": "visit-korcula",
+      "url": "https://visitkorcula.eu/en/events/",
+      "stage": "extract",
+      "error": "Model call failed: http-error:429"
+    },
+    {
+      "sourceId": "visit-korcula-racisce",
+      "url": "https://visitkorcula.eu/en/events/summer-in-racisce/",
+      "stage": "extract",
+      "error": "Model call failed: http-error:429"
+    },
+    {
+      "sourceId": "centar-kulture-korcula",
+      "url": "https://kulturakorcula.hr/kino-najave/",
+      "stage": "extract",
+      "error": "Model call failed: http-error:429"
+    },
+    {
+      "sourceId": "visit-lumbarda",
+      "url": "https://www.visitlumbarda.eu/",
+      "stage": "extract",
+      "error": "Model call failed: http-error:429"
+    },
+    {
+      "sourceId": "tz-vela-luka",
+      "url": "https://tzvelaluka.hr/",
+      "stage": "extract",
+      "error": "Model call failed: http-error:429"
+    },
+    {
+      "sourceId": "tz-blato",
+      "url": "https://tzo-blato.hr/en/",
+      "stage": "extract",
+      "error": "Model call failed: http-error:429"
+    },
+    {
+      "sourceId": "moreska",
+      "url": "https://moreska.eu/",
+      "stage": "extract",
+      "error": "Model call failed: http-error:429"
+    },
+    {
+      "sourceId": "moreska",
+      "url": "https://moreska.eu/tickets",
+      "stage": "extract",
+      "error": "Model call failed: http-error:429"
+    },
+    {
+      "sourceId": "blue-korcula",
+      "url": "https://bluekorcula.com/club",
+      "stage": "extract",
+      "error": "Model call failed: http-error:429"
+    },
+    {
+      "sourceId": "blue-korcula",
+      "url": "https://core-event.co/en/search?query=Kor%C4%8Dula",
+      "stage": "fetch",
+      "error": "Safe retrieval blocked: http-error:403"
+    },
+    {
+      "sourceId": "la-banya",
+      "url": "https://labanya.hr",
+      "stage": "extract",
+      "error": "Model call failed: http-error:429"
+    },
+    {
+      "sourceId": "core-event-korcula",
+      "url": "https://core-event.co/en/search?query=Kor%C4%8Dula",
+      "stage": "fetch",
+      "error": "Safe retrieval blocked: http-error:403"
+    },
+    {
+      "sourceId": "core-event-korcula",
+      "url": "https://core-event.co/en/search?query=Korcula",
+      "stage": "fetch",
+      "error": "Safe retrieval blocked: http-error:403"
+    },
+    {
+      "sourceId": "adriatic-pearl-weekly-events",
+      "url": "https://adriaticpearlkorcula.com/weeklyevents",
+      "stage": "fetch",
+      "error": "Safe retrieval blocked: http-error:404"
+    },
+    {
+      "sourceId": "korculainfo-guides",
+      "url": "https://www.korculainfo.com/zrnovo/",
+      "stage": "extract",
+      "error": "Model call failed: http-error:429"
+    },
+    {
+      "sourceId": "korculainfo-guides",
+      "url": "https://www.korculainfo.com/pupnat/",
+      "stage": "extract",
+      "error": "Model call failed: http-error:429"
+    },
+    {
+      "sourceId": "korculainfo-guides",
+      "url": "https://www.korculainfo.com/cara/",
+      "stage": "extract",
+      "error": "Model call failed: http-error:429"
+    },
+    {
+      "sourceId": "zrnovo-local-sources",
+      "url": "https://www.zrnovo.com/",
+      "stage": "extract",
+      "error": "Model call failed: http-error:429"
+    },
+    {
+      "sourceId": "cara-zavalatica-local-sources",
+      "url": "https://www.korculainfo.com/cara/",
+      "stage": "extract",
+      "error": "Model call failed: http-error:429"
+    },
+    {
+      "sourceId": "smokvica-brna-expanded",
+      "url": "https://visitsmokvicabrna.com/",
+      "stage": "extract",
+      "error": "Model call failed: http-error:429"
+    },
+    {
+      "sourceId": "aminess-korcula-entertainment",
+      "url": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+      "stage": "extract",
+      "error": "Model call failed: http-error:429"
+    },
+    {
+      "sourceId": "hajduk-split-fixtures",
+      "url": "https://hajduk.hr/utakmice",
+      "stage": "fetch",
+      "error": "Safe retrieval blocked: http-error:403"
+    },
+    {
+      "sourceId": "hajduk-split-fixtures",
+      "url": "https://www.sofascore.com/football/team/hnk-hajduk-split/2036",
+      "stage": "fetch",
+      "error": "Safe retrieval blocked: http-error:403"
+    }
+  ],
+  "totals": {
+    "published": 0,
+    "review": 0,
+    "aiCalls": 68
+  },
+  "aiUsage": [
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:87301a82aa69dc6671daf2b13f1e9387671109555c1c7b2cfe4271be5218cc4c",
+      "promptChars": 5620,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:87301a82aa69dc6671daf2b13f1e9387671109555c1c7b2cfe4271be5218cc4c",
+      "promptChars": 5620,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:87301a82aa69dc6671daf2b13f1e9387671109555c1c7b2cfe4271be5218cc4c",
+      "promptChars": 5620,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:87301a82aa69dc6671daf2b13f1e9387671109555c1c7b2cfe4271be5218cc4c",
+      "promptChars": 5620,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:c2eb02a7574c44009415f26ce435309152f107207cd5b55cd829151b1bfbcd80",
+      "promptChars": 6085,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:c2eb02a7574c44009415f26ce435309152f107207cd5b55cd829151b1bfbcd80",
+      "promptChars": 6085,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:c2eb02a7574c44009415f26ce435309152f107207cd5b55cd829151b1bfbcd80",
+      "promptChars": 6085,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:c2eb02a7574c44009415f26ce435309152f107207cd5b55cd829151b1bfbcd80",
+      "promptChars": 6085,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:e74a262f00d903f3cbc19ebca722a2ceb0f13318bd03d9546de203f3f97245f1",
+      "promptChars": 11869,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:e74a262f00d903f3cbc19ebca722a2ceb0f13318bd03d9546de203f3f97245f1",
+      "promptChars": 11869,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:e74a262f00d903f3cbc19ebca722a2ceb0f13318bd03d9546de203f3f97245f1",
+      "promptChars": 11869,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:e74a262f00d903f3cbc19ebca722a2ceb0f13318bd03d9546de203f3f97245f1",
+      "promptChars": 11869,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:ab2a98b1947f890b6d94679fc7753178de7d35a249d7429211f2a2d364839b49",
+      "promptChars": 11214,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:ab2a98b1947f890b6d94679fc7753178de7d35a249d7429211f2a2d364839b49",
+      "promptChars": 11214,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:ab2a98b1947f890b6d94679fc7753178de7d35a249d7429211f2a2d364839b49",
+      "promptChars": 11214,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:ab2a98b1947f890b6d94679fc7753178de7d35a249d7429211f2a2d364839b49",
+      "promptChars": 11214,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:8d8919b17598f942806e5cedb4a022140effdd4faf847b65784d2adaf93c3590",
+      "promptChars": 8557,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:8d8919b17598f942806e5cedb4a022140effdd4faf847b65784d2adaf93c3590",
+      "promptChars": 8557,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:8d8919b17598f942806e5cedb4a022140effdd4faf847b65784d2adaf93c3590",
+      "promptChars": 8557,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:8d8919b17598f942806e5cedb4a022140effdd4faf847b65784d2adaf93c3590",
+      "promptChars": 8557,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:e44a7edf1b9f7817cdc2d640bab264338dda55a1dbf378664ecef9034b443503",
+      "promptChars": 8606,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:e44a7edf1b9f7817cdc2d640bab264338dda55a1dbf378664ecef9034b443503",
+      "promptChars": 8606,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:e44a7edf1b9f7817cdc2d640bab264338dda55a1dbf378664ecef9034b443503",
+      "promptChars": 8606,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:e44a7edf1b9f7817cdc2d640bab264338dda55a1dbf378664ecef9034b443503",
+      "promptChars": 8606,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:df0e12af5afdb5fc450636d875b4b870ed75151980a7ad6ef4a31672c7030de7",
+      "promptChars": 9964,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:df0e12af5afdb5fc450636d875b4b870ed75151980a7ad6ef4a31672c7030de7",
+      "promptChars": 9964,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:df0e12af5afdb5fc450636d875b4b870ed75151980a7ad6ef4a31672c7030de7",
+      "promptChars": 9964,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:df0e12af5afdb5fc450636d875b4b870ed75151980a7ad6ef4a31672c7030de7",
+      "promptChars": 9964,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:0b8e122ba6f141635d16450e2491cc17b230e8e74b46dbb7bff783de24caaf74",
+      "promptChars": 7188,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:0b8e122ba6f141635d16450e2491cc17b230e8e74b46dbb7bff783de24caaf74",
+      "promptChars": 7188,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:0b8e122ba6f141635d16450e2491cc17b230e8e74b46dbb7bff783de24caaf74",
+      "promptChars": 7188,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:0b8e122ba6f141635d16450e2491cc17b230e8e74b46dbb7bff783de24caaf74",
+      "promptChars": 7188,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:5d04a450bcd15f6d2e6faa9caa4ad99a83a6f8600fe0d7672b67eb78d84568c0",
+      "promptChars": 6494,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:5d04a450bcd15f6d2e6faa9caa4ad99a83a6f8600fe0d7672b67eb78d84568c0",
+      "promptChars": 6494,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:5d04a450bcd15f6d2e6faa9caa4ad99a83a6f8600fe0d7672b67eb78d84568c0",
+      "promptChars": 6494,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:5d04a450bcd15f6d2e6faa9caa4ad99a83a6f8600fe0d7672b67eb78d84568c0",
+      "promptChars": 6494,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:c880d9add037be8edc22106c884fef8a69677f8569452c0e829740b7dba4acb2",
+      "promptChars": 9075,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:c880d9add037be8edc22106c884fef8a69677f8569452c0e829740b7dba4acb2",
+      "promptChars": 9075,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:c880d9add037be8edc22106c884fef8a69677f8569452c0e829740b7dba4acb2",
+      "promptChars": 9075,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:c880d9add037be8edc22106c884fef8a69677f8569452c0e829740b7dba4acb2",
+      "promptChars": 9075,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:abc4dccf24df2a77d57207e46e42f54f17acf80691c90b1a5c52768e53665bcc",
+      "promptChars": 14757,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:abc4dccf24df2a77d57207e46e42f54f17acf80691c90b1a5c52768e53665bcc",
+      "promptChars": 14757,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:abc4dccf24df2a77d57207e46e42f54f17acf80691c90b1a5c52768e53665bcc",
+      "promptChars": 14757,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:abc4dccf24df2a77d57207e46e42f54f17acf80691c90b1a5c52768e53665bcc",
+      "promptChars": 14757,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:9bd01c8273feec4ed3cf03e9c916567e13d0a972c36ee75b4712f2ed5797c60c",
+      "promptChars": 13200,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:9bd01c8273feec4ed3cf03e9c916567e13d0a972c36ee75b4712f2ed5797c60c",
+      "promptChars": 13200,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:9bd01c8273feec4ed3cf03e9c916567e13d0a972c36ee75b4712f2ed5797c60c",
+      "promptChars": 13200,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:9bd01c8273feec4ed3cf03e9c916567e13d0a972c36ee75b4712f2ed5797c60c",
+      "promptChars": 13200,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:6ceb38c83a124c6391e772f7d0439062f2fc496e9f1113fe34cf4f6ba95577cc",
+      "promptChars": 14225,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:6ceb38c83a124c6391e772f7d0439062f2fc496e9f1113fe34cf4f6ba95577cc",
+      "promptChars": 14225,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:6ceb38c83a124c6391e772f7d0439062f2fc496e9f1113fe34cf4f6ba95577cc",
+      "promptChars": 14225,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:6ceb38c83a124c6391e772f7d0439062f2fc496e9f1113fe34cf4f6ba95577cc",
+      "promptChars": 14225,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:8d99da633486f93b34ff2cf4a127cc5f73a8c65257c793880ea1041513bd5604",
+      "promptChars": 5212,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:8d99da633486f93b34ff2cf4a127cc5f73a8c65257c793880ea1041513bd5604",
+      "promptChars": 5212,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:8d99da633486f93b34ff2cf4a127cc5f73a8c65257c793880ea1041513bd5604",
+      "promptChars": 5212,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:8d99da633486f93b34ff2cf4a127cc5f73a8c65257c793880ea1041513bd5604",
+      "promptChars": 5212,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:6ceb38c83a124c6391e772f7d0439062f2fc496e9f1113fe34cf4f6ba95577cc",
+      "promptChars": 14225,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:6ceb38c83a124c6391e772f7d0439062f2fc496e9f1113fe34cf4f6ba95577cc",
+      "promptChars": 14225,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:6ceb38c83a124c6391e772f7d0439062f2fc496e9f1113fe34cf4f6ba95577cc",
+      "promptChars": 14225,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:6ceb38c83a124c6391e772f7d0439062f2fc496e9f1113fe34cf4f6ba95577cc",
+      "promptChars": 14225,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:17243c3c4b237325342b36076cb2fd88a63c6136a24ef56974a17e26af89f360",
+      "promptChars": 6533,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:17243c3c4b237325342b36076cb2fd88a63c6136a24ef56974a17e26af89f360",
+      "promptChars": 6533,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:17243c3c4b237325342b36076cb2fd88a63c6136a24ef56974a17e26af89f360",
+      "promptChars": 6533,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:17243c3c4b237325342b36076cb2fd88a63c6136a24ef56974a17e26af89f360",
+      "promptChars": 6533,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:0a9eab862729719a4f0e9fd0dba00efeff6a7ba0d1b21f8589cd0c7ed918be4b",
+      "promptChars": 14190,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:0a9eab862729719a4f0e9fd0dba00efeff6a7ba0d1b21f8589cd0c7ed918be4b",
+      "promptChars": 14190,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:0a9eab862729719a4f0e9fd0dba00efeff6a7ba0d1b21f8589cd0c7ed918be4b",
+      "promptChars": 14190,
+      "success": false,
+      "status": 429
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:0a9eab862729719a4f0e9fd0dba00efeff6a7ba0d1b21f8589cd0c7ed918be4b",
+      "promptChars": 14190,
+      "success": false,
+      "status": 429
+    }
+  ],
+  "published": []
+}

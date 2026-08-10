@@ -84,6 +84,17 @@ function systemPrompt() {
     "Never invent a missing fact. If a field isn't stated or unambiguously implied on the page, omit that field entirely rather than guess.",
     `The 'town' field must be one of exactly these ids: ${townList}. Pick the town the event is physically held in, not the site's general region.`,
 
+    // Real production miss: a page titled "Žrnovo -- Korčula Island", entirely about Žrnovo and
+    // its hamlets, produced candidates tagged town: "lumbarda" -- a town that appears nowhere at
+    // all in the page's text. A small model asked to pick from a fixed list under time pressure
+    // can guess a plausible-sounding id instead of admitting uncertainty; say explicitly that the
+    // page's own subject is the anchor, not a free guess.
+    "A page is usually clearly about one specific town, stated in its own title or heading (e.g. " +
+    "a page titled 'Žrnovo -- Korčula Island' is about the town zrnovo). Use that page's own town " +
+    "for events on it unless a specific listing's own text clearly states a different one -- " +
+    "never pick a town id just because it's a plausible-sounding guess; it must actually appear " +
+    "in the page's text or title.",
+
     // Added after a real run: ticketing widgets often render one compact line per date, e.g.
     // "Monday · 21:00 · Summer Cinema Few tickets left Buy Tickets →". Without this rule the
     // model folded the whole line into the title (weekday + time + status + CTA all included),
@@ -92,9 +103,20 @@ function systemPrompt() {
     "Ticketing widgets commonly list one line per date in a repeating format like " +
     "'<Weekday> · <Time> · <Show name> <Status> Buy Tickets →'. When you see this pattern: " +
     "the title is only <Show name> -- the same clean title on every date this show repeats. " +
-    "Weekday and time go in the time/date fields, never the title. Booking-widget status text " +
-    "('Few tickets left', 'Available', 'Sold out') and call-to-action text ('Buy Tickets', " +
-    "any arrow/button label) are not part of the title and must never appear in it.",
+    "Weekday and time go in the time/date fields, never the title or venue. Booking-widget " +
+    "status text ('Few tickets left', 'Available', 'Sold out', or the Croatian 'Malo preostalih', " +
+    "'Dostupno', 'Rasprodano') and call-to-action text ('Buy Tickets', 'Kupi ulaznice', any " +
+    "arrow/button label) are not part of the title or venue and must never appear in either.",
+
+    // Real production miss: a page with no stated venue for a specific listing had the model
+    // fall back to the organizing tourist board's own office address, printed in the page's
+    // footer/contact section -- and because venue is a required field, it couldn't just omit
+    // the event the way it can with an optional field. That wrong address then auto-published.
+    "Never use the page's own contact address, footer address, or an organizing tourist board's " +
+    "own office address as an event's venue -- that is the organization's mailing address, not " +
+    "where the event happens. If this specific listing genuinely doesn't state a venue, use just " +
+    "the town's own name (e.g. 'Korčula') as the venue rather than inventing or borrowing an " +
+    "address from elsewhere on the page.",
     "The same rule applies to the venue field: it must be the venue's own name/address, never " +
     "date, time, or booking-status text.",
 

@@ -117,8 +117,6 @@ function systemPrompt() {
     "where the event happens. If this specific listing genuinely doesn't state a venue, use just " +
     "the town's own name (e.g. 'Korčula') as the venue rather than inventing or borrowing an " +
     "address from elsewhere on the page.",
-    "The same rule applies to the venue field: it must be the venue's own name/address, never " +
-    "date, time, or booking-status text.",
 
     // Category guidance for the two values most likely to be confused against each other or
     // against generic fallbacks, based on real miscategorization we've seen (a traditional

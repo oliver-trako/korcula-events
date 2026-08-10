@@ -232,12 +232,12 @@ export async function extractEventsFromHtml(html, { completeJson, pageUrl, evide
 
   return plausible
     .map((e) => ({
-      hr: e.hr.trim(),
-      en: e.en.trim(),
-      de: e.de.trim(),
-      it: e.it.trim(),
-      sl: e.sl.trim(),
-      fr: e.fr.trim(),
+      hr: resolveLang(e, "hr"),
+      en: resolveLang(e, "en"),
+      de: resolveLang(e, "de"),
+      it: resolveLang(e, "it"),
+      sl: resolveLang(e, "sl"),
+      fr: resolveLang(e, "fr"),
       date: e.date,
       ...(e.endDate ? { endDate: e.endDate } : {}),
       ...(e.time ? { time: e.time } : {}),
@@ -252,6 +252,16 @@ export async function extractEventsFromHtml(html, { completeJson, pageUrl, evide
 }
 
 const LANGS = ["en", "hr", "de", "it", "sl", "fr"];
+
+// A specific language left blank falls back to whichever language the model did fill in,
+// preferring en/hr (the two most reliably-filled fields) over the other four -- an untranslated
+// fallback in the wrong language is a real, visible imperfection, but a strictly better outcome
+// than discarding an entire otherwise-correct, real event over one blank field.
+function resolveLang(e, lang) {
+  const own = e[lang]?.trim();
+  if (own) return own;
+  return e.en?.trim() || e.hr?.trim() || e.de?.trim() || e.it?.trim() || e.sl?.trim() || e.fr?.trim() || "";
+}
 
 // Only keep desc if it has real content in at least English and Croatian (the two languages
 // required everywhere else in this schema) -- a desc object with some languages present and
@@ -270,7 +280,13 @@ function nonEmptyDesc(desc) {
 // something but our own filter discarded it" indistinguishable from the run log alone.
 function implausibilityReason(e) {
   if (!e || typeof e !== "object") return "not-an-object";
-  for (const lang of LANGS) if (typeof e[lang] !== "string" || !e[lang].trim()) return `missing-lang:${lang}`;
+  // Real production data (2026-08-10): requiring all 6 languages non-empty discarded 101
+  // otherwise-good candidates in one run -- the model reliably gets hr/en right but drops one of
+  // the other 4 often enough that "all 6 or nothing" was throwing away the overwhelming majority
+  // of real events found. hr/en are the only two that actually gate rejection now; any of the
+  // other 4 left blank gets backfilled from whichever language did come through (see the mapper
+  // below) instead of sinking the whole candidate.
+  if (!e.hr?.trim() && !e.en?.trim()) return "missing-title";
   if (typeof e.venue !== "string" || !e.venue.trim()) return "missing-venue";
   if (!/^\d{4}-\d{2}-\d{2}$/.test(e.date || "")) return `bad-date:${e.date}`;
   if (!TOWNS.some((t) => t.id === e.town)) return `bad-town:${e.town}`;

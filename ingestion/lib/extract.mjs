@@ -54,7 +54,10 @@ function extractionSchema() {
               time: { type: "string", description: "24-hour HH:MM if a specific start time is given, otherwise omit -- do not write 'evening' or 'TBC'." },
               town: { type: "string", enum: TOWNS.map((t) => t.id) },
               venue: { type: "string", description: "The specific venue name/address, not just the town." },
-              cats: { type: "array", items: { type: "string", enum: CATS }, minItems: 1, uniqueItems: true },
+              // `uniqueItems` was tried here and made every single call fail with 400 (2026-08-10
+              // run) -- Cloudflare's strict json_schema mode evidently doesn't support that
+              // keyword. Dedupe is instead handled defensively after the fact, in the mapper below.
+              cats: { type: "array", items: { type: "string", enum: CATS }, minItems: 1 },
               desc: {
                 type: "object",
                 additionalProperties: false,

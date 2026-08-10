@@ -48,8 +48,12 @@ export function createWorkersAiClient({ accountId, apiToken, model = DEFAULT_MOD
     }
 
     if (!response.ok) {
-      onUsage?.({ model, evidenceHash, promptChars, success: false, status: response.status });
-      const error = new ModelCallError(`http-error:${response.status}`);
+      // Capture the body on failure too -- a bare status code (e.g. 400) tells us nothing about
+      // *why* Cloudflare rejected the request (bad schema keyword, malformed messages, etc.),
+      // and guessing at the cause from status code alone wastes a debugging round-trip every time.
+      const bodyText = await response.text().catch(() => "");
+      onUsage?.({ model, evidenceHash, promptChars, success: false, status: response.status, body: bodyText.slice(0, 500) });
+      const error = new ModelCallError(`http-error:${response.status}${bodyText ? `:${bodyText.slice(0, 300)}` : ""}`);
       error.status = response.status;
       // Cloudflare sends a Retry-After header on 429s stating how long to wait before its
       // rate-limit window clears -- honor that exact wait instead of guessing with our own

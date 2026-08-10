@@ -138,6 +138,17 @@ function systemPrompt() {
     "premješteno, or the English equivalents), do not extract it as an upcoming event at its " +
     "original date -- skip it entirely rather than publish stale information.",
 
+    // Real production miss: a page listed "Moreška Sword Dance 2026" as "29.04.2026 -
+    // 14.10.2026" (a season's start/end) alongside two more season-long programs, and
+    // extraction returned zero events for the whole page -- almost certainly because a
+    // multi-month range was misread as "no specific date" and dropped, when the schema already
+    // has exactly the right fields (date + endDate) for it.
+    "A listing written as a date range ('29.04.2026 - 14.10.2026', '29.06. - 24.08.2026', or " +
+    "similar) states this event's own start and end date -- extract it using the `date` field " +
+    "for the start and `endDate` for the end, the same as any other multi-day event. A season " +
+    "or program spanning months is a specific, real date range, not an absence of one; never " +
+    "omit it just because it's long.",
+
     // Schema requires a `date` for every emitted event, which can push a model toward inventing
     // a plausible-looking one for a genuinely date-less recurring promo blurb rather than
     // correctly omitting the whole event. Say so explicitly.

@@ -174,6 +174,720 @@
       ],
       "duplicateMatches": [],
       "status": "needs-review"
+    },
+    {
+      "id": "ai-centar-kulture-korcula-2026-08-04-the-odyssey-is-an-upcoming-epic-film-by-director-christopher",
+      "sourceId": "centar-kulture-korcula",
+      "sourceUrl": "https://kulturakorcula.hr/kino-najave/",
+      "discoveredAt": "2026-08-10T03:22:51.888Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "The Odyssey je nadolazeći epski film redatelja Christopher Nolan temeljen na Homerovom epu Odiseja.",
+        "en": "The Odyssey is an upcoming epic film by director Christopher Nolan based on Homer's epic poem Odyssey.",
+        "de": "The Odyssey je nadolazeći epski film redatelja Christopher Nolan temeljen na Homerovom epu Odiseja.",
+        "it": "The Odyssey è un film epico futuro costruito dal regista Christopher Nolan basato sull'epopea di Omero Odissea.",
+        "sl": "The Odyssey je nadaljevanje epičnega filma režiserja Christophera Nolana, ki temelji na Homerjevi epu Odiseja.",
+        "fr": "The Odyssey est un film épique futur en construction par le réalisateur Christopher Nolan basé sur l'épopée d'Homer Odyssey.",
+        "date": "2026-08-04",
+        "endDate": "2026-08-04",
+        "time": "Utorak, 4.8., 21:00",
+        "town": "korcula",
+        "venue": "Centar za kulturu Korčula",
+        "cats": [
+          "film"
+        ],
+        "source": "https://kulturakorcula.hr/kino-najave/",
+        "extractionMethod": "ai",
+        "id": "ai-centar-kulture-korcula-2026-08-04-the-odyssey-is-an-upcoming-epic-film-by-director-christopher"
+      },
+      "verifierConfidence": 0.5,
+      "verifierConcerns": [
+        "The title contains a call-to-action ('je nadolazeći') which could be a translation issue or an embellishment. The source page text does not explicitly state that the film is 'upcoming'.",
+        "The category 'film' is likely correct, but it's worth noting that the source page text does not explicitly state that the event is a film. It could be a lecture or a screening of some kind.",
+        "The date '2026-08-04' is mentioned in the extracted candidate, but it's not explicitly stated on the source page text. The date is mentioned in the context of the 'Koncert klasične glazbe / ENDeM kvartet – saksofon' event, which takes place on a different date.",
+        "The time 'Utorak, 4.8., 21:00' is mentioned in the extracted candidate, but it's not explicitly stated on the source page text. However, the source page text does mention a similar event with the same time and venue.",
+        "The venue 'Centar za kulturu Korčula' is mentioned in the extracted candidate, but it's not explicitly stated on the source page text. However, the source page text does mention a similar event with the same venue.",
+        "The town 'korcula' is mentioned in the extracted candidate, but it's not explicitly stated on the source page text. However, the source page text does mention the town of Korčula in the context of the 'Centar za kulturu Korčula' event."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.5"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-centar-kulture-korcula-2026-08-11-immediately-after-the-world-blockbuster-success-of-the-summe",
+      "sourceId": "centar-kulture-korcula",
+      "sourceUrl": "https://kulturakorcula.hr/kino-najave/",
+      "discoveredAt": "2026-08-10T03:22:51.889Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Netom nakon svjetskog blockbuster uspjeha najsmješnije komedije ljeta 2024.,Despicable Me 4, Illumination proširuje svoj radosni animirani svemir novim razularenim poglavljem, s potpuno novim likovima, u najvećoj globalnoj animiranoj franšizi u...",
+        "en": "Immediately after the world blockbuster success of the summer 2024 comedy, Despicable Me 4, Illumination expands its cheerful animated universe with a new colorful chapter, with entirely new characters, in the largest global animated franchise...",
+        "de": "Netom nakon svjetskog blockbuster uspjeha najsmješnije komedije ljeta 2024.,Despicable Me 4, Illumination proširuje svoj radosni animirani svemir novim razularenim poglavljem, s potpuno novim likovima, u najvećoj globalnoj animiranoj franšizi u...",
+        "it": "Subito dopo il successo del blockbuster mondiale della commedia estiva 2024, Despicable Me 4, Illumination espande il suo universo animato gioioso con un nuovo capitolo colorato, con personaggi interamente nuovi, nella più grande franchise animata mondiale...",
+        "sl": "Zahajil je svetovni uspeh najsmehovalnejše komedije poletja 2024., Despicable Me 4, Illumination razširi svoj radosten animirani svet s novim barvnim poglavjem, s popolnoma novimi liki, v največji globalni animirani franšizi v...",
+        "fr": "Immédiatement après le succès du blockbuster mondial de la comédie d'été 2024, Despicable Me 4, Illumination étend son univers animé joyeux avec un nouveau chapitre coloré, avec des personnages entièrement nouveaux, dans la plus grande franchise animée mondiale...",
+        "date": "2026-08-11",
+        "endDate": "2026-08-11",
+        "time": "Utorak, 11.8., 20:00",
+        "town": "korcula",
+        "venue": "Centar za kulturu Korčula",
+        "cats": [
+          "film"
+        ],
+        "source": "https://kulturakorcula.hr/kino-najave/",
+        "extractionMethod": "ai",
+        "id": "ai-centar-kulture-korcula-2026-08-11-immediately-after-the-world-blockbuster-success-of-the-summe"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The extracted candidate's date is 2026-08-11, but the source page lists multiple events happening on 11.8. (which I assume is 11th August), and the extracted candidate's time is 20:00, which matches one of the events on the source page. However, there is another event on the source page with the same date and time, but it's a classical music concert, not an animated film. This makes me unsure about the extracted candidate's title and category."
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-centar-kulture-korcula-2026-08-18-orjen-ri-anovic-solo-guitar-and-hrvoje-sudar-rhythm-guitar-f",
+      "sourceId": "centar-kulture-korcula",
+      "sourceUrl": "https://kulturakorcula.hr/kino-najave/",
+      "discoveredAt": "2026-08-10T03:22:51.889Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Orjen Riđanović (solo gitara) i Hrvoje Sudar (ritam gitara) čine Oridano Duet, sastav koji kroz autentičan zvuk spaja mediteranski senzibilitet s naslijeđem gypsy jazza i inspiracijom Djanga Reinhardta, jednog od pionira europske jazz gitare. S više...",
+        "en": "Orjen Riđanović (solo guitar) and Hrvoje Sudar (rhythm guitar) form Oridano Duo, an ensemble that through authentic sound combines Mediterranean sensitivity with the legacy of gypsy jazz and the inspiration of Django Reinhardt, one of the pioneers of European jazz guitar. With more...",
+        "de": "Orjen Riđanović (solo gitara) i Hrvoje Sudar (ritam gitara) čine Oridano Duet, sastav koji kroz autentičan zvuk spaja mediteranski senzibilitet s naslijeđem gypsy jazza i inspiracijom Djanga Reinhardta, jednog od pionira europske jazz gitare. S više...",
+        "it": "Orjen Riđanović (chitarra solista) e Hrvoje Sudar (chitarra ritmica) formano Oridano Duo, un ensemble che attraverso il suono autentico combina la sensibilità mediterranea con il legame del jazz gypsy e l'ispirazione di Django Reinhardt, uno dei pionieri della chitarra jazz europea. Con più...",
+        "sl": "Orjen Riđanović (solo kitara) in Hrvoje Sudar (ritmična kitara) tvorita Oridano Duo, zasedbo, ki skozi avtentičen zvok združuje mediteransko občutljivost s nasledstvom gipske jazze in inspiracijo Djanga Reinhardta, enega od pionirjev evropske jazza kitare. Z več...",
+        "fr": "Orjen Riđanović (guitare solo) et Hrvoje Sudar (guitare rythmique) forment Oridano Duo, un ensemble qui par son son authentique combine la sensibilité méditerranéenne avec le legs du jazz gypsy et l'inspiration de Django Reinhardt, l'un des pionniers de la guitare jazz européenne. Avec plus...",
+        "date": "2026-08-18",
+        "endDate": "2026-08-18",
+        "time": "Utorak, 18.8., 21:00",
+        "town": "korcula",
+        "venue": "Atrij Gradske vijećnice Korčula",
+        "cats": [
+          "film"
+        ],
+        "source": "https://kulturakorcula.hr/kino-najave/",
+        "extractionMethod": "ai",
+        "id": "ai-centar-kulture-korcula-2026-08-18-orjen-ri-anovic-solo-guitar-and-hrvoje-sudar-rhythm-guitar-f"
+      },
+      "verifierConfidence": 0.7,
+      "verifierConcerns": [
+        "The extracted candidate's category is 'film', but the page text describes it as a 'koncert' (concert) of classical music. This suggests that the category may be incorrect."
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.7"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-centar-kulture-korcula-2026-08-21-per-teitalia-2025-1-h-40-min-a-raw-and-intimate-story-of-lov",
+      "sourceId": "centar-kulture-korcula",
+      "sourceUrl": "https://kulturakorcula.hr/kino-najave/",
+      "discoveredAt": "2026-08-10T03:22:51.889Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Per teItalija | 2025. | 1 h 40 min Dirljiva i intimna priča o ljubavi, sjećanju i odnosu oca i sina. Paolo polako počinje gubiti dijelove svojega sjećanja, no odlučuje se usredotočiti na ono što je najvažnije – vrijeme provedeno sa svojim sinom...",
+        "en": "Per teItalia | 2025. | 1 h 40 min A raw and intimate story of love, memory and the relationship between a father and son. Paolo slowly begins to lose parts of his memory, but decides to focus on what is most important – time spent with his son...",
+        "de": "Per teItalija | 2025. | 1 h 40 min Dirljiva i intimna priča o ljubavi, sjećanju i odnosu oca i sina. Paolo polako počinje gubiti dijelove svojega sjećanja, no odlučuje se usredotočiti na ono što je najvažnije – vrijeme provedeno sa svojim sinom...",
+        "it": "Per teItalija | 2025. | 1 h 40 min Un' storia cruda e intima di amore, memoria e rapporto tra padre e figlio. Paolo comincia lentamente a perdere parti della sua memoria, ma decide di concentrarsi su ciò che è più importante – il tempo trascorso con suo figlio...",
+        "sl": "Per teItalija | 2025. | 1 h 40 min Kruha in intimna zgodba o ljubezni, spominu in odnosu med očetom in sinom. Paolo počne počasi izgubljati dele svoje spomina, a se odloči usmeriti se na to, kar je najpomembnejše – čas preživetega s svojim sinom...",
+        "fr": "Per teItalija | 2025. | 1 h 40 min Une histoire crue et intime de l'amour, de la mémoire et de la relation entre un père et un fils. Paolo commence lentement à perdre des parties de sa mémoire, mais décide de se concentrer sur ce qui est le plus important – le temps passé avec son fils...",
+        "date": "2026-08-21",
+        "endDate": "2026-08-21",
+        "time": "Petak, 21.8., 21:00",
+        "town": "korcula",
+        "venue": "Ljetno kino Korčula",
+        "cats": [
+          "film"
+        ],
+        "source": "https://kulturakorcula.hr/kino-najave/",
+        "extractionMethod": "ai",
+        "id": "ai-centar-kulture-korcula-2026-08-21-per-teitalia-2025-1-h-40-min-a-raw-and-intimate-story-of-lov"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "Uncertainty about the date of the event, as the extracted date (2026-08-21) is after the current year (2024), but the page text does not provide a clear indication of the current year. However, upon closer inspection, the page text does mention that some of the events are taking place in 2026, which suggests that the extracted date might be correct. Nonetheless, the uncertainty remains.",
+        "The title and description of the event seem to match the text on the page, but the description is a direct quote from the page, which might indicate that it was copied verbatim. This could be a concern if the page text is not entirely trustworthy.",
+        "The venue and town are mentioned as Ljetno kino Korčula and Korčula, respectively, which seems to match the page text. However, the page text also mentions that some events are taking place at the Centar za kulturu Korčula, which could be a different venue.",
+        "The category is listed as 'film', which seems to match the page text, but it is not entirely clear if the page text is consistently categorizing events as 'film' or if it is using other categories as well."
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-centar-kulture-korcula-2026-08-25-koke-is-a-feature-film-debut-by-director-igor-jelinovic-a-fa",
+      "sourceId": "centar-kulture-korcula",
+      "sourceUrl": "https://kulturakorcula.hr/kino-najave/",
+      "discoveredAt": "2026-08-10T03:22:51.889Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Koke je dugometražni prvijenac redatelja Igora Jelinovića, obiteljska drama o odnosima dviju sestara, obiteljskim vezama i nasljeđu koje otvara stare sukobe. Tonina vodi uspješnu računovodstvenu tvrtku i brine o cijeloj obitelji, dok njezina mlađa...",
+        "en": "Koke is a feature film debut by director Igor Jelinović, a family drama about the relationships of two sisters, family ties and inheritance that opens old conflicts. Tonina runs a successful accounting company and takes care of the whole family, while her younger...",
+        "de": "Koke je dugometražni prvijenac redatelja Igora Jelinovića, obiteljska drama o odnosima dviju sestara, obiteljskim vezama i nasljeđu koje otvara stare sukobe. Tonina vodi uspješnu računovodstvenu tvrtku i brine o cijeloj obitelji, dok njezina mlađa...",
+        "it": "Koke è un film di debutto di lungometraggio del regista Igor Jelinović, una drammatica famiglia sulle relazioni tra due sorelle, i legami familiari e l'eredità che aprono vecchi conflitti. Tonina dirige un'azienda di contabilità di successo e si prende cura della famiglia intera, mentre sua sorella minore...",
+        "sl": "Koke je prvoten film dolgo metraja režiserja Igorja Jelinovića, družinska drama o odnosih med dvema sestrami, družinskih vezah in nasledstvu, ki odpira stare spore. Tonina vodita uspešno računovodstveno podjetje in se oskrbi za celotno družino, medtem ko mlajša...",
+        "fr": "Koke est un film de long métrage de réalisateur Igor Jelinović, une drame de famille sur les relations de deux sœurs, les liens familiaux et l'héritage qui ouvre de vieux conflits. Tonina dirige une entreprise comptable réussie et prend soin de la famille entière, tandis que sa sœur cadette...",
+        "date": "2026-08-25",
+        "endDate": "2026-08-25",
+        "time": "Utorak, 25.8., 21:00",
+        "town": "korcula",
+        "venue": "Atrij Gradske vijećnice Korčula",
+        "cats": [
+          "film"
+        ],
+        "source": "https://kulturakorcula.hr/kino-najave/",
+        "extractionMethod": "ai",
+        "id": "ai-centar-kulture-korcula-2026-08-25-koke-is-a-feature-film-debut-by-director-igor-jelinovic-a-fa"
+      },
+      "verifierConfidence": 0.3,
+      "verifierConcerns": [
+        "The extracted candidate's title field contains booking-status text ('Ulaznice...') instead of just the event title.",
+        "The extracted candidate's title field contains a description of the event ('Uživajte u večeri posvećenoj ljepoti klasične glazbe...') instead of just the event title.",
+        "The extracted candidate's venue field is actually a common venue for multiple events on the page, but it's not clear if this specific event actually took place there.",
+        "The extracted candidate's date field is not explicitly mentioned near the event listing, it's only implied by the other events' dates.",
+        "The extracted candidate's category field doesn't match what the page actually describes. The category 'film' is not explicitly mentioned near the event listing, it's only implied by the other events' categories."
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.3"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-centar-kulture-korcula-2026-08-28-in-the-unknownto-a-land-unknown-mahdi-fleifelunited-kingdom-",
+      "sourceId": "centar-kulture-korcula",
+      "sourceUrl": "https://kulturakorcula.hr/kino-najave/",
+      "discoveredAt": "2026-08-10T03:22:51.889Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "U nepoznatoTo a Land Unknown Mahdi FleifelUjedinjeno Kraljevstvo, Palestina, Francuska / 105′ / 2024. Mladići Chatila i Reda su izbjeglice iz Palestine koji trenutačno žive u Ateni na samom rubu društva, štedeći novac za lažne putovnice kako...",
+        "en": "In the UnknownTo a Land Unknown Mahdi FleifelUnited Kingdom, Palestine, France / 105′ / 2024. Young men Chatila and Reda are refugees from Palestine who currently live in Athens on the edge of society, saving money for fake passports to...",
+        "de": "U nepoznatoTo a Land Unknown Mahdi FleifelUjedinjeno Kraljevstvo, Palestina, Francuska / 105′ / 2024. Mladići Chatila i Reda su izbjeglice iz Palestine koji trenutačno žive u Ateni na samom rubu društva, štedeći novac za lažne putovnice kako...",
+        "it": "In the UnknownTo a Land Unknown Mahdi FleifelRegno Unito, Palestina, Francia / 105′ / 2024. Giovani uomini Chatila e Reda sono rifugiati dalla Palestina che attualmente vivono ad Atene ai margini della società, risparmiando denaro per false carte di identità per...",
+        "sl": "V nepoznaniTo a Land Unknown Mahdi FleifelVelika Britanija, Palestina, Francija / 105′ / 2024. Mladi Chatila in Reda sta begunci iz Palestine, ki trenutno živita v Atenci na robu družbe, zbirajo denar za lažne potniške liste da bi lahko...",
+        "fr": "Dans le InconnuTo a Land Unknown Mahdi FleifelRoyaume-Uni, Palestine, France / 105′ / 2024. Jeunes hommes Chatila et Reda sont des réfugiés de Palestine qui vivent actuellement à Athènes à la marge de la société, en épargnant de l'argent pour des passeports fausses afin de...",
+        "date": "2026-08-28",
+        "endDate": "2026-08-28",
+        "time": "Petak, 28.8, 21:00",
+        "town": "lumbarda",
+        "venue": "Ljetno kino Korčula",
+        "cats": [
+          "film"
+        ],
+        "source": "https://kulturakorcula.hr/kino-najave/",
+        "extractionMethod": "ai",
+        "id": "ai-centar-kulture-korcula-2026-08-28-in-the-unknownto-a-land-unknown-mahdi-fleifelunited-kingdom-"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The title field contains a call-to-action ('Uživajte u večeri posvećenoj ljepoti klasične glazbe...') instead of just the event title.",
+        "The date field '2026-08-28' appears to be a future date, but the page context suggests that the events listed are already scheduled to occur. This may indicate that the date field is incorrect.",
+        "The time field 'Petak, 28.8, 21:00' appears to be inconsistent with the format used for other events on the page (e.g., 'Utorak, 4.8., 21:00').",
+        "The venue field 'Ljetno kino Korčula' appears to be consistent with the page context, but it's worth noting that the page lists multiple events at this venue.",
+        "The category field 'film' appears to be consistent with the page context, but it's worth noting that the page lists events from multiple categories (e.g., 'Animirani', 'FILM', 'Akcija', etc.)."
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-centar-kulture-korcula-2026-08-30-spider-man-new-eraabove-12-years-oldgenre-actionrelease-date",
+      "sourceId": "centar-kulture-korcula",
+      "sourceUrl": "https://kulturakorcula.hr/kino-najave/",
+      "discoveredAt": "2026-08-10T03:22:51.889Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Spider-Man: Novo dobaIznad 12 godinaŽanr: AkcijskiPočetak prikazivanja: 30.07.2026.Nakon rekordnog globalnog uspjeha filma Spider-Man: Put bez povratka, Spider-Man: Novo doba označava potpuno novo poglavlje za Petera Parkera i Spider-Mana. Prošle su...",
+        "en": "Spider-Man: New EraAbove 12 years oldGenre: ActionRelease date: 30.07.2026.After the record-breaking global success of the film Spider-Man: No Way Home, Spider-Man: New Era marks a completely new chapter for Peter Parker and Spider-Man. Past...",
+        "de": "Spider-Man: Novo dobaIznad 12 godinaŽanr: AkcijskiPočetak prikazivanja: 30.07.2026.Nakon rekordnog globalnog uspjeha filma Spider-Man: Put bez povratka, Spider-Man: Novo doba označava potpuno novo poglavlje za Petera Parkera i Spider-Mana. Prošle su...",
+        "it": "Spider-Man: Nuova EraSopra i 12 anni di etàGenere: AzioneData di uscita: 30.07.2026.Dopo il successo mondiale record del film Spider-Man: Senza ritorno, Spider-Man: Nuova Era segna un capitolo completamente nuovo per Peter Parker e Spider-Man. Passato...",
+        "sl": "Spider-Man: Novo dobaZgornje 12 letŽanr: AkcijaDatum izida: 30.07.2026.Začetek Spider-Mana: Novo doba označuje novo poglavje za Peterja Parkerja in Spider-Mana. Prejšnje...",
+        "fr": "Spider-Man: Nouvelle èreAu-dessus de 12 ansGenre: ActionDate de sortie : 30.07.2026.Après le succès mondial record du film Spider-Man: Sans retour, Spider-Man: Nouvelle ère marque un chapitre complètement nouveau pour Peter Parker et Spider-Man. Passé...",
+        "date": "2026-08-30",
+        "endDate": "2026-08-30",
+        "time": "Četvrtak, 30.7., 21:00",
+        "town": "korcula",
+        "venue": "Kino",
+        "cats": [
+          "film"
+        ],
+        "source": "https://kulturakorcula.hr/kino-najave/",
+        "extractionMethod": "ai",
+        "id": "ai-centar-kulture-korcula-2026-08-30-spider-man-new-eraabove-12-years-oldgenre-actionrelease-date"
+      },
+      "verifierConfidence": 0.5,
+      "verifierConcerns": [
+        "The title field contains booking-status text ('Iznad 12 godinaŽanr: AkcijskiPočetak prikazivanja: 30.07.2026.') instead of just the event title.",
+        "The date field ('2026-08-30') does not match the date mentioned in the source page text ('30.07.2026') for this specific event.",
+        "The time field ('Četvrtak, 30.7., 21:00') matches the time mentioned in the source page text for this specific event.",
+        "The venue field ('Kino') matches the venue mentioned in the source page text for this specific event.",
+        "The town field ('korčula') matches the town mentioned in the source page text for this specific event.",
+        "The category field ('film') matches the category mentioned in the source page text for this specific event."
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.5"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-centar-kulture-korcula-2026-07-31-david-gleesonljetno-kino-korcula-sundayslos-domingos-alauda-",
+      "sourceId": "centar-kulture-korcula",
+      "sourceUrl": "https://kulturakorcula.hr/kino-najave/",
+      "discoveredAt": "2026-08-10T03:22:51.889Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "David GleesonLjetno kino Korčula NedjeljeLos domingos Alauda Ruiz de AzúaŠpanjolska, Francuska / 115′ / 2025. 17-godišnja Ainara nalazi se na raskrižju života kada treba odlučiti koju sveučilišnu karijeru odabrati. Iako je to ono što njezina...",
+        "en": "David GleesonLjetno kino Korčula SundaysLos domingos Alauda Ruiz de AzúaSpain, France / 115′ / 2025. 17-year-old Ainara is at a crossroads in her life when she needs to decide which university career to choose. Although this is what her parents...",
+        "de": "David GleesonLjetno kino Korčula NedjeljeLos domingos Alauda Ruiz de AzúaŠpanjolska, Francuska / 115′ / 2025. 17-godišnja Ainara nalazi se na raskrižju života kada treba odlučiti koju sveučilišnu karijeru odabrati. Iako je to ono što njezina...",
+        "it": "David GleesonLjetno kino Korčula DomenicaLos domingos Alauda Ruiz de AzúaSpagna, Francia / 115′ / 2025. 17enne Ainara si trova a un bivio della vita quando deve decidere quale carriera universitaria scegliere. Anche se è questo che i suoi genitori...",
+        "sl": "David GleesonLjetno kino Korčula NedeljeLos domingos Alauda Ruiz de AzúaŠpanija, Francija / 115′ / 2025. 17-letna Ainara se nahaja na prehodu življenja, kojo se mora odločiti za kakšno univerzitetno poklicno pot. Čeprav je to to, kar joj starši...",
+        "fr": "David GleesonLjetno kino Korčula DimancheLos domingos Alauda Ruiz de AzúaEspagne, France / 115′ / 2025. 17 ans Ainara est à un carrefour de sa vie quand elle doit décider quelle carrière universitaire choisir. Bien que c'est ce que ses parents...",
+        "date": "2026-07-31",
+        "endDate": "2026-07-31",
+        "time": "Petak, 31.7., 21:00",
+        "town": "korcula",
+        "venue": "Ljetno kino Korčula",
+        "cats": [
+          "film"
+        ],
+        "source": "https://kulturakorcula.hr/kino-najave/",
+        "extractionMethod": "ai",
+        "id": "ai-centar-kulture-korcula-2026-07-31-david-gleesonljetno-kino-korcula-sundayslos-domingos-alauda-"
+      },
+      "verifierConfidence": 0.2,
+      "verifierConcerns": [
+        "The title field contains a reference to the venue ('Ljetno kino Korčula Nedjelje') which is not just the event name. This suggests that the title may be embellished or not accurately represent the event name.",
+        "The date field ('2026-07-31') appears to be a specific date, but it is not clear if this is the only date for this event. The source page text suggests that the event is part of a series of screenings ('Ljetno kino Korčula / ulaznica- 4€'), which may indicate that there are multiple dates for this event.",
+        "The time field ('Petak, 31.7., 21:00') appears to be correct, but it is not clear if this is the only time for this event. The source page text suggests that the event is a screening, which may indicate that there are multiple times for this event.",
+        "The venue field ('Ljetno kino Korčula') appears to be correct, but it is not clear if this is the only venue for this event. The source page text suggests that the event is part of a series of screenings at this venue, which may indicate that there are multiple venues for this event.",
+        "The town field ('korcula') appears to be correct, but it is not clear if this is the only town associated with this event. The source page text suggests that the event is taking place in Korčula, which may indicate that there are multiple towns associated with this event.",
+        "The category field ('film') appears to be correct, but it is not clear if this is the only category for this event. The source page text suggests that the event is a screening, which may indicate that there are multiple categories for this event.",
+        "The confidence level for this event is low due to the concerns listed above."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.2"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-centar-kulture-korcula-2026-07-23-from-the-writer-of-action-hits-london-has-fallen-and-pepperm",
+      "sourceId": "centar-kulture-korcula",
+      "sourceUrl": "https://kulturakorcula.hr/kino-najave/",
+      "discoveredAt": "2026-08-10T03:22:51.889Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Od scenarista akcijskih hitova „London Has Fallen“ i „Peppermint“ stiže eksplozivni triler osvete u kojem Alan Ritchson kreće u rat protiv kriminalnog podzemlja koje mu je uništilo život. John Miller bivši je rendžer koji je tijekom života prošao...",
+        "en": "From the writer of action hits „London Has Fallen“ and „Peppermint“ comes an explosive revenge thriller where Alan Ritchson goes to war against the criminal underworld that destroyed his life. John Miller is a former ranger who has spent his life...",
+        "de": "Od scenarista akcijskih hitova „London Has Fallen“ i „Peppermint“ stiže eksplozivni triler osvete u kojem Alan Ritchson kreće u rat protiv kriminalnog podzemlja koje mu je uništilo život. John Miller bivši je rendžer koji je tijekom života prošao...",
+        "it": "Dallo sceneggiatore di azione dei blockbuster „London Has Fallen“ e „Peppermint“ arriva un thriller di vendetta esplosivo dove Alan Ritchson va alla guerra contro l'underworld criminale che ha distrutto la sua vita. John Miller è un ex ranger che ha passato la sua vita...",
+        "sl": "Od scenarista akcijskih hitov „London Has Fallen“ in „Peppermint“ prihaja eksplozivni triler osvete, v katerem Alan Ritchson začne vojno proti kriminalnemu podzemlju, ki mu je uničilo življenje. John Miller je bivši ranger, ki je preživel celo življenje...",
+        "fr": "Du scénariste d'action des blockbusters „London Has Fallen“ et „Peppermint“ vient un thriller de revanche explosive où Alan Ritchson va à la guerre contre l'underworld criminel qui a détruit sa vie. John Miller est un ancien ranger qui a passé sa vie...",
+        "date": "2026-07-23",
+        "endDate": "2026-07-23",
+        "time": "Četvrtak, 23.7., 21:00",
+        "town": "korcula",
+        "venue": "Kino",
+        "cats": [
+          "film"
+        ],
+        "source": "https://kulturakorcula.hr/kino-najave/",
+        "extractionMethod": "ai",
+        "id": "ai-centar-kulture-korcula-2026-07-23-from-the-writer-of-action-hits-london-has-fallen-and-pepperm"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The title field contains booking-status text ('Ulaznice se mogu kupiti...') instead of just the event title.",
+        "The date field '2026-07-23' seems to be supported by the text, but the page lists multiple events for the same day. It's unclear if this specific event's date/time/venue is accurately represented.",
+        "The time field '21:00' seems to be supported by the text, but the page lists multiple events with the same time. It's unclear if this specific event's time is accurately represented.",
+        "The venue field 'Kino' seems to be supported by the text, but the page lists multiple events with the same venue. It's unclear if this specific event's venue is accurately represented.",
+        "The town field 'korcula' seems to be supported by the text, but the page lists multiple events with the same town. It's unclear if this specific event's town is accurately represented.",
+        "The category field 'film' seems to be supported by the text, but the page lists multiple events with the same category. It's unclear if this specific event's category is accurately represented."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-centar-kulture-korcula-2026-07-21-endem-quartet-saxophonemarko-gerbus-deni-pjanic-nereo-arbula",
+      "sourceId": "centar-kulture-korcula",
+      "sourceUrl": "https://kulturakorcula.hr/kino-najave/",
+      "discoveredAt": "2026-08-10T03:22:51.889Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "ENDeM kvartet – saksofonMarko Gerbus, Deni Pjanić, Nereo, Arbula, Erna Čizmič Rebić",
+        "en": "ENDeM quartet – saxophoneMarko Gerbus, Deni Pjanić, Nereo, Arbula, Erna Čizmič Rebić",
+        "de": "ENDeM kvartet – saksofonMarko Gerbus, Deni Pjanić, Nereo, Arbula, Erna Čizmič Rebić",
+        "it": "ENDeM quartetto – sassofonoMarko Gerbus, Deni Pjanić, Nereo, Arbula, Erna Čizmič Rebić",
+        "sl": "ENDeM kvartet – saksofonMarko Gerbus, Deni Pjanić, Nereo, Arbula, Erna Čizmič Rebić",
+        "fr": "ENDeM quatuor – saxophoneMarko Gerbus, Deni Pjanić, Nereo, Arbula, Erna Čizmič Rebić",
+        "date": "2026-07-21",
+        "endDate": "2026-07-21",
+        "time": "Utorak, 21.7.,21:00",
+        "town": "korcula",
+        "venue": "Katedrala sv. Marka",
+        "cats": [
+          "film"
+        ],
+        "source": "https://kulturakorcula.hr/kino-najave/",
+        "extractionMethod": "ai",
+        "id": "ai-centar-kulture-korcula-2026-07-21-endem-quartet-saxophonemarko-gerbus-deni-pjanic-nereo-arbula"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The extracted candidate's title contains a description of the event ('saksofonMarko Gerbus, Deni Pjanić, Nereo, Arbula, Erna Čizmič Rebić') that is actually part of the description of the event on the page, not the title. The actual title is 'ENDeM kvartet – saksofon'.",
+        "The extracted candidate's venue is 'Katedrala sv. Marka' which is actually mentioned in another event listing on the same page, suggesting that it might be a generic venue name rather than a specific one for this event. The actual venue is indeed 'Katedrala sv. Marka', but this is mentioned in the context of another event.",
+        "The extracted candidate's category is 'film', but the event is actually a concert. The correct category should be 'koncert'."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-centar-kulture-korcula-2026-07-20-bijelo-se-pere-na-devedeset-belo-se-pere-na-devetdeset-direc",
+      "sourceId": "centar-kulture-korcula",
+      "sourceUrl": "https://kulturakorcula.hr/kino-najave/",
+      "discoveredAt": "2026-08-10T03:22:51.889Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "BIJELO SE PERE NA DEVEDESET(Belo se pere na devetdeset)Režija: Marko NaberšnikUloge: Lea Cok, Anica Dobra, Jurij Zrnec, Vladimir TintorŽanr: dramaZemlja porijekla: Slovenija, Hrvatska Festivali i nagradeTri zlatne role Društva slovenskih filmskih...",
+        "en": "BIJELO SE PERE NA DEVEDESET(Belo se pere na devetdeset)Direction: Marko NaberšnikActors: Lea Cok, Anica Dobra, Jurij Zrnec, Vladimir TintorGenre: DramaCountry of origin: Slovenia, Croatia Awards and festivalsThree golden roles of the Society of Slovenian Film...",
+        "de": "BIJELO SE PERE NA DEVEDESET(Belo se pere na devetdeset)Režija: Marko NaberšnikUloge: Lea Cok, Anica Dobra, Jurij Zrnec, Vladimir TintorŽanr: dramaZemlja porijekla: Slovenija, Hrvatska Festivali i nagradeTri zlatne role Društva slovenskih filmskih...",
+        "it": "BIJELO SE PERE NA DEVEDESET(Belo se pere na devetdeset)Regia: Marko NaberšnikAttori: Lea Cok, Anica Dobra, Jurij Zrnec, Vladimir TintorGenere: DrammaPaese di origine: Slovenia, Croazia Festivali e premiTre ruoli d'oro della Società dei film sloveni...",
+        "sl": "BIJELO SE PERE NA DEVEDESET(Belo se pere na devetdeset)Režija: Marko NaberšnikIgralci: Lea Cok, Anica Dobra, Jurij Zrnec, Vladimir TintorŽanr: dramaDržava izvora: Slovenija, Hrvaška Festivali in nagradeTri zlatne vloge Društva slovenskih filmskih...",
+        "fr": "BIJELO SE PERE NA DEVEDESET(Belo se pere na devetdeset)Réalisation : Marko NaberšnikActeurs : Lea Cok, Anica Dobra, Jurij Zrnec, Vladimir TintorGenre : DramePays d'origine : Slovénie, Croatie Festivals et récompensesTrois rôles d'or de la Société des films slovènes...",
+        "date": "2026-07-20",
+        "endDate": "2026-07-20",
+        "time": "Ponedjeljak, 20.7., 21:00",
+        "town": "korcula",
+        "venue": "Kino",
+        "cats": [
+          "film"
+        ],
+        "source": "https://kulturakorcula.hr/kino-najave/",
+        "extractionMethod": "ai",
+        "id": "ai-centar-kulture-korcula-2026-07-20-bijelo-se-pere-na-devedeset-belo-se-pere-na-devetdeset-direc"
+      },
+      "verifierConfidence": 0.7,
+      "verifierConcerns": [
+        "The extracted candidate's date '2026-07-20' appears to be supported by the text next to it, but it's worth noting that there are multiple events listed on the same date. This could indicate that the source page is a calendar or a list of upcoming events, which might affect the confidence in the extracted data.",
+        "The venue 'Kino' is mentioned multiple times on the page, but it's not clear if it's a specific venue or a generic term for a movie theater. This lack of specificity could be a concern, but it's not a definite error.",
+        "The category 'film' is mentioned in the extracted candidate, but the page text also mentions 'koncert' (concert), 'Drama', 'Akcija' (action), and other categories. This could indicate that the source page is a broad event calendar, which might affect the confidence in the extracted data.",
+        "The extracted candidate's title 'BIJELO SE PERE NA DEVEDESET(Belo se pere na devetdeset)' appears to be supported by the text next to it, but it's worth noting that the title is a bit long and might be truncated or incorrectly formatted. This could be a concern, but it's not a definite error.",
+        "There is no clear indication of the source page's context or the relevance of the extracted candidate to the page's content. This lack of context could affect the confidence in the extracted data."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.7"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-centar-kulture-korcula-2026-07-19-country-hr-it-ro-gr-fr-si-year-length-2025-137-drama-histori",
+      "sourceId": "centar-kulture-korcula",
+      "sourceUrl": "https://kulturakorcula.hr/kino-najave/",
+      "discoveredAt": "2026-08-10T03:22:51.889Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "DRŽAVA: HR, IT, RO, GR, FR, SI GODINA/TRAJANJE: 2025. • 137′ drama, povijesni InfoSCENARIJ: Hana JušićFOTOGRAFIJA: Jana PlećašMONTAŽA: Jan KlemscheSCENOGRAFIJA: Laura BoniKOSTIMOGRAFIJA: Katarina PilićOBLIKOVANJE ZVUKA: Marius LeftăracheORIGINALNA...",
+        "en": "COUNTRY: HR, IT, RO, GR, FR, SI YEAR/LENGTH: 2025. • 137′ drama, historical InfoSCENARIO: Hana JušićPHOTOGRAPHY: Jana PlećašEDITING: Jan KlemscheSCENOGRAPHY: Laura BoniCOSTUME DESIGN: Katarina PilićSOUND DESIGN: Marius LeftăracheORIGINAL TITLE...",
+        "de": "DRŽAVA: HR, IT, RO, GR, FR, SI GODINA/TRAJANJE: 2025. • 137′ drama, povijesni InfoSCENARIJ: Hana JušićFOTOGRAFIJA: Jana PlećašMONTAŽA: Jan KlemscheSCENOGRAFIJA: Laura BoniKOSTIMOGRAFIJA: Katarina PilićOBLIKOVANJE ZVUKA: Marius LeftăracheORIGINALNA...",
+        "it": "PAESE: HR, IT, RO, GR, FR, SI ANNO/LUNGHEZZA: 2025. • 137′ dramma, storico InfoSCENARIO: Hana JušićFOTOGRAFIA: Jana PlećašMONTAGGIO: Jan KlemscheSCENOGRAFIA: Laura BoniPROGETTO COSTUMI: Katarina PilićPROGETTO SOUNDS: Marius LeftăracheTitolo originale...",
+        "sl": "DRŽAVA: HR, IT, RO, GR, FR, SI LETO/DOLŽINA: 2025. • 137′ drama, zgodovinski InfoSCENARIJ: Hana JušićFOTOGRAFIJA: Jana PlećašMONTAŽA: Jan KlemscheSCENOGRAFIJA: Laura BoniKOSTIMOGRAFIJA: Katarina PilićOBLIKOVANJE ZVUKA: Marius LeftăracheORIGINALNA...",
+        "fr": "PAYS: HR, IT, RO, GR, FR, SI ANNÉE/ Durée: 2025. • 137′ drame, historique InfoSCÉNARIO: Hana JušićPHOTOGRAPHIE: Jana PlećašMONTAGE: Jan KlemscheSCÉNOGRAPHIE: Laura BoniCONCEPTION DE COSTUME: Katarina PilićCONCEPTION SONS: Marius LeftăracheTitre original...",
+        "date": "2026-07-19",
+        "endDate": "2026-07-19",
+        "time": "Nedjelja, 19.7., 21:00",
+        "town": "korcula",
+        "venue": "Kino",
+        "cats": [
+          "film"
+        ],
+        "source": "https://kulturakorcula.hr/kino-najave/",
+        "extractionMethod": "ai",
+        "id": "ai-centar-kulture-korcula-2026-07-19-country-hr-it-ro-gr-fr-si-year-length-2025-137-drama-histori"
+      },
+      "verifierConfidence": 0.4,
+      "verifierConcerns": [
+        "The 'date' field is '2026-07-19' but the event description says 'petak, 24.7., 21:00' which is a different date. The 'endDate' field is also '2026-07-19' but the event description does not mention an end date.",
+        "The 'time' field is 'Nedjelja, 19.7., 21:00' which is a different date than the 'date' field. It seems like the 'time' field is actually the date of the event, and the 'date' field is incorrect.",
+        "The 'town' field is 'korcula' which is correct, but the event description mentions 'Ljetno kino Korčula' which is a specific location within Korčula.",
+        "The 'venue' field is 'Kino' which is correct, but the event description mentions 'Ljetno kino Korčula' which is a specific location within Korčula.",
+        "The 'category' field is 'film' which is correct, but the event description mentions 'Drama' which is a more specific category."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.4"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-centar-kulture-korcula-2026-07-24-ljetno-kino-korcula-ticket-4-david-gleesonljetno-kino-korcul",
+      "sourceId": "centar-kulture-korcula",
+      "sourceUrl": "https://kulturakorcula.hr/kino-najave/",
+      "discoveredAt": "2026-08-10T03:22:51.889Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Ljetno kino Korčula / ulaznica- 4€ David GleesonLjetno kino KorčulaIrska / 90′ / 2026.Earl Clancy, vlasnik kina u malom irskom gradu, jedan se petak navečer suočava s nizom problema koje pokušava riješiti paralelno s održavanjem filmske...",
+        "en": "Ljetno kino Korčula / ticket- 4€ David GleesonLjetno kino KorčulaIreland / 90′ / 2026.Earl Clancy, the owner of a small cinema in an Irish town, is faced with a series of problems that he tries to solve simultaneously with the maintenance of the film...",
+        "de": "Ljetno kino Korčula / ulaznica- 4€ David GleesonLjetno kino KorčulaIrska / 90′ / 2026.Earl Clancy, vlasnik kina u malom irskom gradu, jedan se petak navečer suočava s nizom problema koje pokušava riješiti paralelno s održavanjem filmske...",
+        "it": "Ljetno kino Korčula / biglietto- 4€ David GleesonLjetno kino KorčulaIrlanda / 90′ / 2026.Earl Clancy, il proprietario di un piccolo cinema in una piccola città irlandese, è di fronte a una serie di problemi che cerca di risolvere simultaneamente con la manutenzione del film...",
+        "sl": "Ljetno kino Korčula / vstopnina- 4€ David GleesonLjetno kino KorčulaIrska / 90′ / 2026.Earl Clancy, lastnik malih filmskih dvoran v irski mestu, se v petek navečer sooči s vrsto težav, ki jih skuša rešiti vzporedno z vzdrževanjem filmske...",
+        "fr": "Ljetno kino Korčula / billet- 4€ David GleesonLjetno kino KorčulaIrlande / 90′ / 2026.Earl Clancy, le propriétaire d'un petit cinéma dans une petite ville irlandaise, est confronté à une série de problèmes qu'il essaie de résoudre simultanément avec la maintenance du film...",
+        "date": "2026-07-24",
+        "endDate": "2026-07-24",
+        "time": "Petak, 24.7., 21:00",
+        "town": "korcula",
+        "venue": "Ljetno kino Korčula",
+        "cats": [
+          "film"
+        ],
+        "source": "https://kulturakorcula.hr/kino-najave/",
+        "extractionMethod": "ai",
+        "id": "ai-centar-kulture-korcula-2026-07-24-ljetno-kino-korcula-ticket-4-david-gleesonljetno-kino-korcul"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The extracted date (2026-07-24) is very close to the date of another event (2026-07-31) listed on the same page. This suggests that the page may be a calendar or a list of upcoming events, and the extracted date may not be the only date listed for this event.",
+        "The extracted title and description seem to be a direct quote from the page, but the surrounding text suggests that the event is part of a series of films shown at the Ljetno kino Korčula. This may indicate that the title and description are not specific to this event, but rather a general description of the film and the cinema.",
+        "The extracted category (film) seems to be accurate, but the page also lists other categories such as drama, action, and concert. This suggests that the page may be a general event calendar, and the extracted category may not be the only one applicable to this event.",
+        "The extracted venue (Ljetno kino Korčula) is listed multiple times on the page, and the surrounding text suggests that it is a cinema. This suggests that the extracted venue is accurate, but the page may not provide enough information to confirm this."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.8"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-centar-kulture-korcula-2026-07-16-korcula-and-me-inviting-you-to-an-inspiring-lecture-and-open",
+      "sourceId": "centar-kulture-korcula",
+      "sourceUrl": "https://kulturakorcula.hr/kino-najave/",
+      "discoveredAt": "2026-08-10T03:22:51.889Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Korčula i ja / Korčula and Me Pozivamo vas na inspirativno predavanje i otvorenu diskusiju o gradu, kulturi, urbanitetu i budućnosti Korčule. Davisi Boontharm i Darko Radović podijelit će svoja razmišljanja o odnosu između grada i njegovih...",
+        "en": "Korčula and Me Inviting you to an inspiring lecture and open discussion about the city, culture, urbanism and the future of Korčula. Davisi Boontharm and Darko Radović will share their thoughts on the relationship between the city and its...",
+        "de": "Korčula i ja / Korčula and Me Pozivamo vas na inspirativno predavanje i otvorenu diskusiju o gradu, kulturi, urbanitetu i budućnosti Korčule. Davisi Boontharm i Darko Radović podijelit će svoja razmišljanja o odnosu između grada i njegovih...",
+        "it": "Korčula and Me Invitiamo a una conferenza ispiratrice e a una discussione aperta sulla città, la cultura, l'urbanistica e il futuro di Korčula. Davisi Boontharm e Darko Radović condivideranno i loro pensieri sulla relazione tra la città e le sue...",
+        "sl": "Korčula in jaz / Korčula and Me Pozivamo vas na inspirativno predavanje in odprto razpravo o mestu, kulturi, urbanizmu in prihodnosti Korčule. Davisi Boontharm in Darko Radović bosta podelili svoja razmišljanja o odnosu med mestom in njegove...",
+        "fr": "Korčula and Me Invitez-vous à une conférence inspirante et à une discussion ouverte sur la ville, la culture, l'urbanisme et l'avenir de Korčula. Davisi Boontharm et Darko Radović partageront leurs pensées sur la relation entre la ville et ses...",
+        "date": "2026-07-16",
+        "endDate": "2026-07-16",
+        "time": "Četvrtak, 16.7., 21:00",
+        "town": "korcula",
+        "venue": "Kino",
+        "cats": [
+          "film"
+        ],
+        "source": "https://kulturakorcula.hr/kino-najave/",
+        "extractionMethod": "ai",
+        "id": "ai-centar-kulture-korcula-2026-07-16-korcula-and-me-inviting-you-to-an-inspiring-lecture-and-open"
+      },
+      "verifierConfidence": 0.7,
+      "verifierConcerns": [
+        "The title and description of the event seem to match the text on the page, but it's a bit too perfect. The text on the page is an administrator's announcement, and the language is quite formal. It's possible that the title and description were copied verbatim from the page, but it's also possible that they were added by the extraction process.",
+        "The date and time of the event are clearly stated on the page, but it's worth noting that the page also contains other events with different dates and times. It's possible that the extraction process assumed that this event was the most relevant one, but it's also possible that it missed other relevant information.",
+        "The venue is listed as 'Kino', but it's worth noting that the page also contains other events with different venues. It's possible that the extraction process assumed that 'Kino' was the default venue, but it's also possible that it missed other relevant information.",
+        "The category is listed as 'film', but it's worth noting that the page also contains other events with different categories. It's possible that the extraction process assumed that 'film' was the default category, but it's also possible that it missed other relevant information.",
+        "The page contains a copyright notice and a design credit, which suggests that the page is a static HTML page rather than a dynamic one. This could indicate that the extraction process was able to extract the information from the page, but it's also possible that the page was designed to be easily scrapable.",
+        "The page contains a list of other events, which suggests that the extraction process may have missed other relevant information. It's possible that the extraction process was able to extract the information for this event, but it's also possible that it missed other relevant information."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.7"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-lumbarda-2026-07-17-exhibition-at-3volta-simon-beer",
+      "sourceId": "visit-lumbarda",
+      "sourceUrl": "https://www.visitlumbarda.eu/",
+      "discoveredAt": "2026-08-10T03:22:51.889Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Izložba u 3VOLTA – Simon Beer",
+        "en": "Exhibition at 3VOLTA - Simon Beer",
+        "de": "Izložba u 3VOLTA – Simon Beer",
+        "it": "Mostra a 3VOLTA - Simon Beer",
+        "sl": "Računalniško razstavljanje v 3VOLTA – Simon Beer",
+        "fr": "Exposition à 3VOLTA – Simon Beer",
+        "date": "2026-07-17",
+        "endDate": "2026-07-17",
+        "time": "17. srpnja 2026.",
+        "town": "lumbarda",
+        "venue": "3VOLTA",
+        "cats": [
+          "kids",
+          "folklore",
+          "kids"
+        ],
+        "source": "https://www.visitlumbarda.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-lumbarda-2026-07-17-exhibition-at-3volta-simon-beer"
+      },
+      "verifierConfidence": 0.4,
+      "verifierConcerns": [
+        "The title contains 'Exhibition at' which seems to be a translation or additional information, not part of the original title.",
+        "The date '2026-07-17' seems to be extracted from a separate date field, but the actual date is mentioned in the text as '17. srpnja 2026.' which is the same day but in a different format.",
+        "The time '17. srpnja 2026.' is actually a date, not a time. The actual time is not mentioned in the provided text.",
+        "The venue '3VOLTA' is correct, but the town 'Lumbarda' is mentioned in the text as the location, not as part of the venue name.",
+        "The category 'kids' seems to be incorrect, as the text describes the event as an 'Izložba' (exhibition), not a 'kids' event. The category 'folklore' is also mentioned in the text, but it's not clear if it's the main category or not."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.4"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-lumbarda-2026-07-16-new",
+      "sourceId": "visit-lumbarda",
+      "sourceUrl": "https://www.visitlumbarda.eu/",
+      "discoveredAt": "2026-08-10T03:22:51.889Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Novosti",
+        "en": "New",
+        "de": "Neue",
+        "it": "Nuovo",
+        "sl": "Novice",
+        "fr": "Nouveau",
+        "date": "2026-07-16",
+        "endDate": "2026-07-16",
+        "time": "16. srpnja 2026.",
+        "town": "lumbarda",
+        "venue": "Novosti",
+        "cats": [
+          "kids",
+          "folklore",
+          "kids"
+        ],
+        "source": "https://www.visitlumbarda.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-lumbarda-2026-07-16-new"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The title 'Novosti' and 'New' seem to be the same, but it's unclear if this is the actual title of the event or just a generic label for news or announcements on the page. The event description does mention 'Novosti' as a category, but it's not clear if this is the title of the event or just a category for news articles.",
+        "The date '2026-07-16' is mentioned in the extracted candidate, but there is another event listed on the page with the same date, which suggests that the page may be listing multiple events for the same date. However, the time '16. srpnja 2026.' for this event seems to be a match, as it is listed as a separate event on the page.",
+        "The venue 'Novosti' seems to be a category or a label, rather than the actual venue of the event. The page does mention 'Turistička zajednica Općine Lumbarda' as the organizer, which suggests that the event may be taking place in Lumbarda, but the exact venue is not clear.",
+        "The category 'kids' seems to be a mismatch, as the event description does not mention anything related to kids. The category 'folklore' seems to be a better match, but it's not clear if this is the correct category for the event.",
+        "The extracted candidate mentions 'kids' as a category, but the page does not mention anything related to kids in the event description. This suggests that the category may be incorrect or that the event may not be related to kids."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-lumbarda-2026-07-15-events",
+      "sourceId": "visit-lumbarda",
+      "sourceUrl": "https://www.visitlumbarda.eu/",
+      "discoveredAt": "2026-08-10T03:22:51.889Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Događanja",
+        "en": "Events",
+        "de": "Događanja",
+        "it": "Eventi",
+        "sl": "Dogodki",
+        "fr": "Événements",
+        "date": "2026-07-15",
+        "endDate": "2026-07-15",
+        "time": "15. srpnja 2026.",
+        "town": "lumbarda",
+        "venue": "Događanja",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://www.visitlumbarda.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-lumbarda-2026-07-15-events"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The category 'folklore' doesn't seem to match the description of the event, which appears to be a festival or a cultural event. The page describes 'Lumbarajske užance' (Lumbarajske delights) as a series of events and activities that showcase the local culture, including music, dance, and traditional crafts.",
+        "The title 'Događanja' and 'Events' seems to be a generic term for a section on the page, rather than a specific event title. It's possible that the extraction missed a more specific event title further down the page.",
+        "The date '2026-07-15' and '15. srpnja 2026.' seems to be correct, but it's worth noting that there are other events listed on the page with different dates, which could suggest that this event is part of a recurring series or a festival.",
+        "The venue 'Događanja' seems to be a generic term for a section on the page, rather than a specific venue. It's possible that the extraction missed a more specific venue name further down the page.",
+        "The town 'lumbarda' seems to be correct, but it's worth noting that the page describes Lumbarda as a town on the island of Korčula, which could suggest that the event is taking place on the island rather than in the town itself.",
+        "The description of the event seems to be missing from the extracted candidate, which could suggest that the extraction missed a more detailed description of the event further down the page."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-lumbarda-2026-07-10-greece-festival-2026",
+      "sourceId": "visit-lumbarda",
+      "sourceUrl": "https://www.visitlumbarda.eu/",
+      "discoveredAt": "2026-08-10T03:22:51.889Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Festivali grka 2026.",
+        "en": "Greece Festival 2026.",
+        "de": "Festivali grka 2026.",
+        "it": "Festival della Grecia 2026.",
+        "sl": "Festival grške 2026.",
+        "fr": "Festival de Grèce 2026.",
+        "date": "2026-07-10",
+        "endDate": "2026-07-10",
+        "time": "10. srpnja 2026.",
+        "town": "lumbarda",
+        "venue": "Festivali grka",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.visitlumbarda.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-lumbarda-2026-07-10-greece-festival-2026"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The 'time' field contains a date ('10. srpnja 2026.') instead of a time, which is unusual. It's possible that the time is not specified or that the date is being misinterpreted as a time.",
+        "The 'cats' field contains the category 'kids', but the page text does not explicitly mention 'kids' as a category for the event. The category 'kids' could be inferred from the context, but it's not a direct match.",
+        "The 'title_hr' field contains 'Festivali grka 2026.', which is a translation of the title. However, the page text contains the title 'Festivali grka 2026.' in a different context, which could indicate that it's not a direct translation of the title.",
+        "The 'town' field contains 'lumbarda', which is a possible match for the page text, but the page text also contains 'Lumbarda' which is a proper noun and could be the correct town name.",
+        "The 'venue' field contains 'Festivali grka', which is a possible match for the page text, but the page text also contains 'Lumbarda' which is a possible venue name.",
+        "There are multiple events listed on the page, and the 'date' field does not specify which event is being referred to. This could lead to confusion and incorrect information."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
     }
   ]
 }

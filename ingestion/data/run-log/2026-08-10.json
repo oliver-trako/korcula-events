@@ -6,7 +6,7 @@
       "sourceId": "visit-korcula",
       "url": "https://visitkorcula.eu/en/events/",
       "published": 0,
-      "review": 3
+      "review": 0
     },
     {
       "sourceId": "visit-korcula-racisce",
@@ -18,7 +18,7 @@
       "sourceId": "centar-kulture-korcula",
       "url": "https://kulturakorcula.hr/kino-najave/",
       "published": 0,
-      "review": 17
+      "review": 0
     },
     {
       "sourceId": "visit-lumbarda",
@@ -36,7 +36,7 @@
       "sourceId": "tz-blato",
       "url": "https://tzo-blato.hr/en/",
       "published": 0,
-      "review": 6
+      "review": 0
     },
     {
       "sourceId": "visit-orebic",
@@ -126,13 +126,13 @@
       "sourceId": "smokvica-brna-expanded",
       "url": "https://visitsmokvicabrna.com/",
       "published": 0,
-      "review": 1
+      "review": 0
     },
     {
       "sourceId": "aminess-korcula-entertainment",
       "url": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
       "published": 0,
-      "review": 8
+      "review": 0
     },
     {
       "sourceId": "hajduk-split-fixtures",
@@ -149,10 +149,70 @@
   ],
   "errors": [
     {
+      "sourceId": "visit-korcula",
+      "url": "https://visitkorcula.eu/en/events/",
+      "stage": "extract",
+      "error": "Model call failed: http-error:429:{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (34c42ff6-804c-4ae5-b686-808eb859bc70)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "sourceId": "visit-korcula-racisce",
+      "url": "https://visitkorcula.eu/en/events/summer-in-racisce/",
+      "stage": "extract",
+      "error": "Model call failed: http-error:429:{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (cd8774d3-4dfb-4554-97a9-d999c54b8a7b)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "sourceId": "centar-kulture-korcula",
+      "url": "https://kulturakorcula.hr/kino-najave/",
+      "stage": "extract",
+      "error": "Model call failed: http-error:429:{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (3f370615-e472-4fa7-83fa-c1e77ff43ab5)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "sourceId": "visit-lumbarda",
+      "url": "https://www.visitlumbarda.eu/",
+      "stage": "extract",
+      "error": "Model call failed: http-error:429:{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (266cf43b-f339-474e-b4c4-b2124d975064)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "sourceId": "tz-vela-luka",
+      "url": "https://tzvelaluka.hr/",
+      "stage": "extract",
+      "error": "Model call failed: http-error:429:{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (da18e325-85f5-4741-a04e-9fa3b72f902d)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "sourceId": "tz-blato",
+      "url": "https://tzo-blato.hr/en/",
+      "stage": "extract",
+      "error": "Model call failed: http-error:429:{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (c6530354-a87b-4645-a002-c3ae5ef03d5c)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "sourceId": "moreska",
+      "url": "https://moreska.eu/",
+      "stage": "extract",
+      "error": "Model call failed: http-error:429:{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (17e86d73-e0e7-417b-a726-b33e03926c36)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "sourceId": "moreska",
+      "url": "https://moreska.eu/tickets",
+      "stage": "extract",
+      "error": "Model call failed: http-error:429:{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (aebad8af-b241-41fb-ae54-c8725c393b7c)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "sourceId": "blue-korcula",
+      "url": "https://bluekorcula.com/club",
+      "stage": "extract",
+      "error": "Model call failed: http-error:429:{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (4482cfda-7b3e-42be-8c3a-893375ab007f)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
       "sourceId": "blue-korcula",
       "url": "https://core-event.co/en/search?query=Kor%C4%8Dula",
       "stage": "fetch",
       "error": "Safe retrieval blocked: http-error:403"
+    },
+    {
+      "sourceId": "la-banya",
+      "url": "https://labanya.hr",
+      "stage": "extract",
+      "error": "Model call failed: http-error:429:{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (29629b21-ee6c-4d5e-9e91-fa99895e87bd)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
     },
     {
       "sourceId": "core-event-korcula",
@@ -173,6 +233,48 @@
       "error": "Safe retrieval blocked: http-error:404"
     },
     {
+      "sourceId": "korculainfo-guides",
+      "url": "https://www.korculainfo.com/zrnovo/",
+      "stage": "extract",
+      "error": "Model call failed: http-error:429:{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (1d33480f-f954-44f6-a2f5-78d41e9f25f1)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "sourceId": "korculainfo-guides",
+      "url": "https://www.korculainfo.com/pupnat/",
+      "stage": "extract",
+      "error": "Model call failed: http-error:429:{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (02ec2a81-8b3d-40e5-b2c7-4d1429eb4901)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "sourceId": "korculainfo-guides",
+      "url": "https://www.korculainfo.com/cara/",
+      "stage": "extract",
+      "error": "Model call failed: http-error:429:{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (aa3d79e5-4261-457a-b8ba-ad181aab9d00)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "sourceId": "zrnovo-local-sources",
+      "url": "https://www.zrnovo.com/",
+      "stage": "extract",
+      "error": "Model call failed: http-error:429:{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (e87efcca-9a83-42de-9e95-4e86da5fec46)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "sourceId": "cara-zavalatica-local-sources",
+      "url": "https://www.korculainfo.com/cara/",
+      "stage": "extract",
+      "error": "Model call failed: http-error:429:{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (bd4253ba-a754-4def-ab77-f7a54e239c1f)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "sourceId": "smokvica-brna-expanded",
+      "url": "https://visitsmokvicabrna.com/",
+      "stage": "extract",
+      "error": "Model call failed: http-error:429:{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (5cc37c21-306e-497f-943f-abaff6b30269)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "sourceId": "aminess-korcula-entertainment",
+      "url": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+      "stage": "extract",
+      "error": "Model call failed: http-error:429:{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (c71b2b06-a565-4700-9c58-5175836ef2d9)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
       "sourceId": "hajduk-split-fixtures",
       "url": "https://hajduk.hr/utakmice",
       "stage": "fetch",
@@ -185,2095 +287,828 @@
       "error": "Safe retrieval blocked: http-error:403"
     }
   ],
-  "rejectedCandidates": [
-    {
-      "sourceId": "visit-korcula-racisce",
-      "url": "https://visitkorcula.eu/en/events/summer-in-racisce/",
-      "reason": "bad-date:11.8.2025",
-      "candidate": {
-        "cats": [
-          "kids"
-        ],
-        "date": "11.8.2025",
-        "de": "Sport games in Račišće",
-        "en": "Sport games in Račišće",
-        "endDate": "16.8.2025",
-        "fr": "Igre Račića",
-        "hr": "Igre Račića",
-        "it": "Igre Račića",
-        "sl": "Igre Račića",
-        "time": "",
-        "town": "racisce",
-        "venue": "Račišće"
-      }
-    },
-    {
-      "sourceId": "visit-korcula-racisce",
-      "url": "https://visitkorcula.eu/en/events/summer-in-racisce/",
-      "reason": "bad-date:13.8.2025",
-      "candidate": {
-        "cats": [
-          "kids"
-        ],
-        "date": "13.8.2025",
-        "de": "Cinema & Pancakes",
-        "en": "Cinema & Pancakes",
-        "fr": "Cinema & Pancakes",
-        "hr": "Cinema & Pancakes",
-        "it": "Cinema & Pancakes",
-        "sl": "Cinema & Pancakes",
-        "time": "",
-        "town": "racisce",
-        "venue": "Račišće"
-      }
-    },
-    {
-      "sourceId": "visit-korcula-racisce",
-      "url": "https://visitkorcula.eu/en/events/summer-in-racisce/",
-      "reason": "bad-date:15.8.2025",
-      "candidate": {
-        "cats": [
-          "kids"
-        ],
-        "date": "15.8.2025",
-        "de": "Račišće Cronicles",
-        "en": "Račišće Cronicles",
-        "fr": "Račiška kronika",
-        "hr": "Račiška kronika",
-        "it": "Račiška kronika",
-        "sl": "Račiška kronika",
-        "time": "",
-        "town": "racisce",
-        "venue": "Račišće"
-      }
-    },
-    {
-      "sourceId": "visit-korcula-racisce",
-      "url": "https://visitkorcula.eu/en/events/summer-in-racisce/",
-      "reason": "bad-date:16.8.2025",
-      "candidate": {
-        "cats": [
-          "kids"
-        ],
-        "date": "16.8.2025",
-        "de": "Evening at the Pumpurela",
-        "en": "Evening at the Pumpurela",
-        "fr": "Noć Pumpurele",
-        "hr": "Noć Pumpurele",
-        "it": "Noć Pumpurele",
-        "sl": "Noć Pumpurele",
-        "time": "",
-        "town": "racisce",
-        "venue": "Račišće"
-      }
-    },
-    {
-      "sourceId": "visit-korcula-racisce",
-      "url": "https://visitkorcula.eu/en/events/summer-in-racisce/",
-      "reason": "bad-date:02.07.2026 - 27.08.2026",
-      "candidate": {
-        "cats": [
-          "kids"
-        ],
-        "date": "02.07.2026 - 27.08.2026",
-        "de": "Drama Workshops for Children",
-        "en": "Drama Workshops for Children",
-        "fr": "Ateliers de théâtre pour enfants",
-        "hr": "Dramski radionici za djecu",
-        "it": "Laboratori di teatro per bambini",
-        "sl": "Dramski radionici za otroke",
-        "time": "",
-        "town": "racisce",
-        "venue": "Račišće"
-      }
-    },
-    {
-      "sourceId": "visit-korcula-racisce",
-      "url": "https://visitkorcula.eu/en/events/summer-in-racisce/",
-      "reason": "bad-date:02.07.2026 - 27.08.2026",
-      "candidate": {
-        "cats": [
-          "kids"
-        ],
-        "date": "02.07.2026 - 27.08.2026",
-        "de": "Art Workshops for Children",
-        "en": "Art Workshops for Children",
-        "fr": "Ateliers d'art pour enfants",
-        "hr": "Umetnička radionica za djecu",
-        "it": "Laboratori d'arte per bambini",
-        "sl": "Umetniška radionica za otroke",
-        "time": "",
-        "town": "racisce",
-        "venue": "Račišće"
-      }
-    },
-    {
-      "sourceId": "visit-korcula-racisce",
-      "url": "https://visitkorcula.eu/en/events/summer-in-racisce/",
-      "reason": "bad-date:08.07.2026 - 26.08.2026",
-      "candidate": {
-        "cats": [
-          "kids"
-        ],
-        "date": "08.07.2026 - 26.08.2026",
-        "de": "Summer KUL Quiz",
-        "en": "Summer KUL Quiz",
-        "fr": "Quiz KUL de l'été",
-        "hr": "Ljetni KUL kviz",
-        "it": "Quiz KUL estivo",
-        "sl": "Ljetni KUL kviz",
-        "time": "",
-        "town": "racisce",
-        "venue": "Račišće"
-      }
-    },
-    {
-      "sourceId": "visit-korcula-racisce",
-      "url": "https://visitkorcula.eu/en/events/summer-in-racisce/",
-      "reason": "bad-date:29.04.2026 - 14.10.2026",
-      "candidate": {
-        "cats": [
-          "kids"
-        ],
-        "date": "29.04.2026 - 14.10.2026",
-        "de": "Moreška Sword Dance 2026",
-        "en": "Moreška Sword Dance 2026",
-        "fr": "Danse d'épée Moreška 2026",
-        "hr": "Moreška Mačko Ples 2026",
-        "it": "Moreška Sword Dance 2026",
-        "sl": "Moreška Mačko Ples 2026",
-        "time": "",
-        "town": "korcula",
-        "venue": "Korčula"
-      }
-    },
-    {
-      "sourceId": "visit-korcula-racisce",
-      "url": "https://visitkorcula.eu/en/events/summer-in-racisce/",
-      "reason": "bad-date:29.06.2026 - 24.08.2026",
-      "candidate": {
-        "cats": [
-          "kids"
-        ],
-        "date": "29.06.2026 - 24.08.2026",
-        "de": "Robotics & Programming Workshops",
-        "en": "Robotics & Programming Workshops",
-        "fr": "Ateliers de robotique et de programmation",
-        "hr": "Radionice o robotici i programiranju",
-        "it": "Laboratori di robotica e programmazione",
-        "sl": "Radionice o robotiki in programiranju",
-        "time": "",
-        "town": "korcula",
-        "venue": "Korčula"
-      }
-    },
-    {
-      "sourceId": "visit-korcula-racisce",
-      "url": "https://visitkorcula.eu/en/events/summer-in-racisce/",
-      "reason": "bad-date:30.06.2026 - 28.08.2026",
-      "candidate": {
-        "cats": [
-          "kids"
-        ],
-        "date": "30.06.2026 - 28.08.2026",
-        "de": "Chess School for Children",
-        "en": "Chess School for Children",
-        "fr": "École d'échecs pour enfants",
-        "hr": "Škola šaha za djecu",
-        "it": "Scuola di scacchi per bambini",
-        "sl": "Šola šaha za otroke",
-        "time": "",
-        "town": "korcula",
-        "venue": "Korčula"
-      }
-    },
-    {
-      "sourceId": "visit-lumbarda",
-      "url": "https://www.visitlumbarda.eu/",
-      "reason": "bad-date:17. srpnja 2026.",
-      "candidate": {
-        "cats": [
-          "folklore"
-        ],
-        "date": "17. srpnja 2026.",
-        "de": "Izložba u 3VOLTA – Simon Beer",
-        "en": "Exhibition at 3VOLTA - Simon Beer",
-        "endDate": "",
-        "fr": "",
-        "hr": "Izložba u 3VOLTA – Simon Beer",
-        "it": "",
-        "sl": "",
-        "time": "",
-        "town": "lumbarda",
-        "venue": "Lumbarda"
-      }
-    },
-    {
-      "sourceId": "visit-lumbarda",
-      "url": "https://www.visitlumbarda.eu/",
-      "reason": "bad-date:16. srpnja 2026.",
-      "candidate": {
-        "cats": [
-          "folklore"
-        ],
-        "date": "16. srpnja 2026.",
-        "de": "New",
-        "en": "News",
-        "endDate": "",
-        "fr": "Nouvelles",
-        "hr": "Novosti",
-        "it": "Notizie",
-        "sl": "",
-        "time": "",
-        "town": "lumbarda",
-        "venue": "Lumbarda"
-      }
-    },
-    {
-      "sourceId": "visit-lumbarda",
-      "url": "https://www.visitlumbarda.eu/",
-      "reason": "bad-date:15. srpnja 2026.",
-      "candidate": {
-        "cats": [
-          "folklore"
-        ],
-        "date": "15. srpnja 2026.",
-        "de": "Događanja",
-        "en": "Events",
-        "endDate": "",
-        "fr": "Événements",
-        "hr": "Događanja",
-        "it": "Eventi",
-        "sl": "",
-        "time": "",
-        "town": "lumbarda",
-        "venue": "Lumbarda"
-      }
-    },
-    {
-      "sourceId": "visit-lumbarda",
-      "url": "https://www.visitlumbarda.eu/",
-      "reason": "bad-date:10. srpnja 2026.",
-      "candidate": {
-        "cats": [
-          "folklore"
-        ],
-        "date": "10. srpnja 2026.",
-        "de": "Pogledajte sve vijesti",
-        "en": "See all news",
-        "endDate": "",
-        "fr": "Voir toutes les nouvelles",
-        "hr": "Pogledajte sve vijesti",
-        "it": "Vedi tutte le notizie",
-        "sl": "",
-        "time": "",
-        "town": "lumbarda",
-        "venue": "Lumbarda"
-      }
-    },
-    {
-      "sourceId": "tz-vela-luka",
-      "url": "https://tzvelaluka.hr/",
-      "reason": "bad-date:08/08/26",
-      "candidate": {
-        "cats": [
-          "kids"
-        ],
-        "date": "08/08/26",
-        "de": "Večer pod zvijezdama u Veloj Luci",
-        "en": "",
-        "endDate": "",
-        "fr": "",
-        "hr": "Večer pod zvijezdama u Veloj Luci",
-        "it": "",
-        "sl": "",
-        "time": "Večer",
-        "town": "vela-luka",
-        "venue": "Vela Luka"
-      }
-    },
-    {
-      "sourceId": "tz-vela-luka",
-      "url": "https://tzvelaluka.hr/",
-      "reason": "bad-date:08/07/26",
-      "candidate": {
-        "cats": [
-          "kids"
-        ],
-        "date": "08/07/26",
-        "de": "TURISTIČKI REZULTATI NA PODRUČJU OPĆINE VELA LUKA",
-        "en": "",
-        "endDate": "",
-        "fr": "",
-        "hr": "TURISTIČKI REZULTATI NA PODRUČJU OPĆINE VELA LUKA",
-        "it": "",
-        "sl": "",
-        "time": "",
-        "town": "vela-luka",
-        "venue": "Vela Luka"
-      }
-    },
-    {
-      "sourceId": "tz-vela-luka",
-      "url": "https://tzvelaluka.hr/",
-      "reason": "bad-date:08/07/26",
-      "candidate": {
-        "cats": [
-          "kids"
-        ],
-        "date": "08/07/26",
-        "de": "Dugogodišnjim gostima uručeni prigodni pokloni u znak zahvalnosti",
-        "en": "",
-        "endDate": "",
-        "fr": "",
-        "hr": "Dugogodišnjim gostima uručeni prigodni pokloni u znak zahvalnosti",
-        "it": "",
-        "sl": "",
-        "time": "",
-        "town": "vela-luka",
-        "venue": "Vela Luka"
-      }
-    },
-    {
-      "sourceId": "tz-blato",
-      "url": "https://tzo-blato.hr/en/",
-      "reason": "bad-date:2026-07-8",
-      "candidate": {
-        "cats": [
-          "folklore"
-        ],
-        "date": "2026-07-8",
-        "de": "Blato Wine & Dine, Wednesday 08.07.",
-        "en": "Blato Wine & Dine, Wednesday 08.07.",
-        "endDate": "",
-        "fr": "",
-        "hr": "srijeda 08.07.",
-        "it": "",
-        "sl": "",
-        "time": "Wednesday, 08.07.",
-        "town": "blato",
-        "venue": "Blato"
-      }
-    },
-    {
-      "sourceId": "tz-blato",
-      "url": "https://tzo-blato.hr/en/",
-      "reason": "bad-date:2026-03-4",
-      "candidate": {
-        "cats": [
-          "kids"
-        ],
-        "date": "2026-03-4",
-        "de": "Panel povodom Dana žena, Wednesday, 04.03. u 19:30",
-        "en": "Panel on International Women's Day, Wednesday, 04.03. at 19:30",
-        "endDate": "",
-        "fr": "",
-        "hr": "Zadovoljstvo nam je pozvati vas na zanimljiv panel koji smo pripremili povodom Dana žena u Blatu.",
-        "it": "",
-        "sl": "",
-        "time": "Wednesday, 04.03. at 19:30",
-        "town": "blato",
-        "venue": "Blato"
-      }
-    },
-    {
-      "sourceId": "tz-blato",
-      "url": "https://tzo-blato.hr/en/",
-      "reason": "bad-date:2026-08-3",
-      "candidate": {
-        "cats": [
-          "kids"
-        ],
-        "date": "2026-08-3",
-        "de": "Održano drugo ovogodišnje primanje za dugogodišnje goste",
-        "en": "Second annual reception for long-time guests",
-        "endDate": "",
-        "fr": "",
-        "hr": "Održano drugo ovogodišnje primanje za dugogodišnje goste",
-        "it": "",
-        "sl": "",
-        "time": "Monday, 03 August 2026",
-        "town": "blato",
-        "venue": "Blato"
-      }
-    },
-    {
-      "sourceId": "tz-blato",
-      "url": "https://tzo-blato.hr/en/",
-      "reason": "bad-date:2026-04-7",
-      "candidate": {
-        "cats": [
-          "kids"
-        ],
-        "date": "2026-04-7",
-        "de": "Temeljem Programa rada za 2026.godinu, Turistička zajednica Općine Blato objavljuje Javni poziv",
-        "en": "Based on the Work Program for 2026, the Blato Tourist Board publishes a Public Call",
-        "endDate": "",
-        "fr": "",
-        "hr": "Temeljem Programa rada za 2026.godinu, Turistička zajednica Općine Blato objavljuje Javni poziv",
-        "it": "",
-        "sl": "",
-        "time": "Tuesday, 07 April 2026",
-        "town": "blato",
-        "venue": "Blato"
-      }
-    },
-    {
-      "sourceId": "visit-orebic",
-      "url": "https://visitorebic-croatia.hr/",
-      "reason": "bad-date:10 Aug 2026",
-      "candidate": {
-        "cats": [
-          "kids"
-        ],
-        "date": "10 Aug 2026",
-        "de": "Local Fest in Trstenik / Concert by Diktatori",
-        "en": "Local Fest in Trstenik / Concert by Diktatori",
-        "endDate": "",
-        "fr": "Local Fest in Trstenik / Concert by Diktatori",
-        "hr": "Local Fest in Trstenik / Koncert Diktatora",
-        "it": "Local Fest in Trstenik / Concerto dei Diktatori",
-        "sl": "Local Fest in Trstenik / Koncert Diktatora",
-        "time": "",
-        "town": "kneze",
-        "venue": "Trstenik"
-      }
-    },
-    {
-      "sourceId": "visit-orebic",
-      "url": "https://visitorebic-croatia.hr/",
-      "reason": "bad-date:10 Aug 2026",
-      "candidate": {
-        "cats": [
-          "kids"
-        ],
-        "date": "10 Aug 2026",
-        "de": "Guided tour through Orebić / “Living history”",
-        "en": "Guided tour through Orebić / “Living history”",
-        "endDate": "",
-        "fr": "Guided tour through Orebić / “Living history”",
-        "hr": "Vodički tura kroz Orebić / “Živi istorijat”",
-        "it": "Guided tour through Orebić / “Living history”",
-        "sl": "Vodički tura kroz Orebić / “Živi istorijat”",
-        "time": "20:00",
-        "town": "kneze",
-        "venue": "Start in front of the Orebić Municipality building"
-      }
-    },
-    {
-      "sourceId": "visit-orebic",
-      "url": "https://visitorebic-croatia.hr/",
-      "reason": "bad-date:10 Aug 2026",
-      "candidate": {
-        "cats": [
-          "kids"
-        ],
-        "date": "10 Aug 2026",
-        "de": "Fest of St. Lovro in Kućište",
-        "en": "Fest of St. Lovro in Kućište",
-        "endDate": "",
-        "fr": "Fest of St. Lovro in Kućište",
-        "hr": "Fest sv. Lovre u Kućištu",
-        "it": "Fest of St. Lovro in Kućište",
-        "sl": "Fest sv. Lovre v Kućištu",
-        "time": "20:00",
-        "town": "kneze",
-        "venue": "Kuciste"
-      }
-    },
-    {
-      "sourceId": "visit-orebic",
-      "url": "https://visitorebic-croatia.hr/",
-      "reason": "bad-date:11 Aug 2026",
-      "candidate": {
-        "cats": [
-          "kids"
-        ],
-        "date": "11 Aug 2026",
-        "de": "Arm Wrestling Show",
-        "en": "Arm Wrestling Show",
-        "endDate": "",
-        "fr": "Arm Wrestling Show",
-        "hr": "Arm wrestling show",
-        "it": "Arm Wrestling Show",
-        "sl": "Arm wrestling show",
-        "time": "20:00",
-        "town": "kneze",
-        "venue": "Mimbelli Square, Orebić"
-      }
-    },
-    {
-      "sourceId": "visit-orebic",
-      "url": "https://visitorebic-croatia.hr/",
-      "reason": "bad-date:12 Aug 2026",
-      "candidate": {
-        "cats": [
-          "kids"
-        ],
-        "date": "12 Aug 2026",
-        "de": "Taste Pelješac / Fishermen’s Night",
-        "en": "Taste Pelješac / Fishermen’s Night",
-        "endDate": "",
-        "fr": "Taste Pelješac / Fishermen’s Night",
-        "hr": "Okusite Pelješac / Ribarska noć",
-        "it": "Taste Pelješac / Fishermen’s Night",
-        "sl": "Okusite Pelješac / Ribarska noč",
-        "time": "20:00",
-        "town": "kneze",
-        "venue": "Orebić, Harbour"
-      }
-    },
-    {
-      "sourceId": "moreska",
-      "url": "https://moreska.eu/",
-      "reason": "missing-title",
-      "candidate": {
-        "cats": [
-          "folklore"
-        ],
-        "date": "2026-08-17",
-        "de": "",
-        "en": "",
-        "endDate": "",
-        "fr": "",
-        "hr": "",
-        "it": "",
-        "sl": "",
-        "time": "21:00",
-        "town": "korcula",
-        "venue": "Ljetno kino"
-      }
-    },
-    {
-      "sourceId": "moreska",
-      "url": "https://moreska.eu/",
-      "reason": "missing-title",
-      "candidate": {
-        "cats": [
-          "folklore"
-        ],
-        "date": "2026-08-20",
-        "de": "",
-        "en": "",
-        "endDate": "",
-        "fr": "",
-        "hr": "",
-        "it": "",
-        "sl": "",
-        "time": "21:00",
-        "town": "korcula",
-        "venue": "Ljetno kino"
-      }
-    },
-    {
-      "sourceId": "moreska",
-      "url": "https://moreska.eu/",
-      "reason": "missing-title",
-      "candidate": {
-        "cats": [
-          "folklore"
-        ],
-        "date": "2026-08-31",
-        "de": "",
-        "en": "",
-        "endDate": "",
-        "fr": "",
-        "hr": "",
-        "it": "",
-        "sl": "",
-        "time": "21:00",
-        "town": "korcula",
-        "venue": "Ljetno kino"
-      }
-    },
-    {
-      "sourceId": "moreska",
-      "url": "https://moreska.eu/",
-      "reason": "missing-title",
-      "candidate": {
-        "cats": [
-          "folklore"
-        ],
-        "date": "2026-09-02",
-        "de": "",
-        "en": "",
-        "endDate": "",
-        "fr": "",
-        "hr": "",
-        "it": "",
-        "sl": "",
-        "time": "21:00",
-        "town": "korcula",
-        "venue": "Ljetno kino"
-      }
-    },
-    {
-      "sourceId": "moreska",
-      "url": "https://moreska.eu/tickets",
-      "reason": "bad-date:17. KOL 2026",
-      "candidate": {
-        "cats": [
-          "folklore"
-        ],
-        "date": "17. KOL 2026",
-        "de": "Moreška",
-        "en": "Moreška",
-        "endDate": "",
-        "fr": "",
-        "hr": "",
-        "it": "",
-        "sl": "",
-        "time": "ponedjeljak · 21:00",
-        "town": "korcula",
-        "venue": "Ljetno kino, Korčula"
-      }
-    },
-    {
-      "sourceId": "moreska",
-      "url": "https://moreska.eu/tickets",
-      "reason": "bad-date:20. KOL 2026",
-      "candidate": {
-        "cats": [
-          "folklore"
-        ],
-        "date": "20. KOL 2026",
-        "de": "Moreška",
-        "en": "Moreška",
-        "endDate": "",
-        "fr": "",
-        "hr": "",
-        "it": "",
-        "sl": "",
-        "time": "četvrtak · 21:00",
-        "town": "korcula",
-        "venue": "Ljetno kino, Korčula"
-      }
-    },
-    {
-      "sourceId": "moreska",
-      "url": "https://moreska.eu/tickets",
-      "reason": "bad-date:31. KOL 2026",
-      "candidate": {
-        "cats": [
-          "folklore"
-        ],
-        "date": "31. KOL 2026",
-        "de": "Moreška",
-        "en": "Moreška",
-        "endDate": "",
-        "fr": "",
-        "hr": "",
-        "it": "",
-        "sl": "",
-        "time": "ponedjeljak · 21:00",
-        "town": "korcula",
-        "venue": "Ljetno kino, Korčula"
-      }
-    },
-    {
-      "sourceId": "moreska",
-      "url": "https://moreska.eu/tickets",
-      "reason": "bad-date:2. RUJ 2026",
-      "candidate": {
-        "cats": [
-          "folklore"
-        ],
-        "date": "2. RUJ 2026",
-        "de": "Moreška",
-        "en": "Moreška",
-        "endDate": "",
-        "fr": "",
-        "hr": "",
-        "it": "",
-        "sl": "",
-        "time": "srijeda · 21:00",
-        "town": "korcula",
-        "venue": "Ljetno kino, Korčula"
-      }
-    },
-    {
-      "sourceId": "moreska",
-      "url": "https://moreska.eu/tickets",
-      "reason": "bad-date:14. RUJ 2026",
-      "candidate": {
-        "cats": [
-          "folklore"
-        ],
-        "date": "14. RUJ 2026",
-        "de": "Moreška",
-        "en": "Moreška",
-        "endDate": "",
-        "fr": "",
-        "hr": "",
-        "it": "",
-        "sl": "",
-        "time": "ponedjeljak · 21:00",
-        "town": "korcula",
-        "venue": "Ljetno kino, Korčula"
-      }
-    },
-    {
-      "sourceId": "moreska",
-      "url": "https://moreska.eu/tickets",
-      "reason": "bad-date:16. RUJ 2026",
-      "candidate": {
-        "cats": [
-          "folklore"
-        ],
-        "date": "16. RUJ 2026",
-        "de": "Moreška",
-        "en": "Moreška",
-        "endDate": "",
-        "fr": "",
-        "hr": "",
-        "it": "",
-        "sl": "",
-        "time": "srijeda · 21:00",
-        "town": "korcula",
-        "venue": "Ljetno kino, Korčula"
-      }
-    },
-    {
-      "sourceId": "moreska",
-      "url": "https://moreska.eu/tickets",
-      "reason": "bad-date:28. RUJ 2026",
-      "candidate": {
-        "cats": [
-          "folklore"
-        ],
-        "date": "28. RUJ 2026",
-        "de": "Moreška",
-        "en": "Moreška",
-        "endDate": "",
-        "fr": "",
-        "hr": "",
-        "it": "",
-        "sl": "",
-        "time": "ponedjeljak · 21:00",
-        "town": "korcula",
-        "venue": "Ljetno kino, Korčula"
-      }
-    },
-    {
-      "sourceId": "moreska",
-      "url": "https://moreska.eu/tickets",
-      "reason": "bad-date:30. RUJ 2026",
-      "candidate": {
-        "cats": [
-          "folklore"
-        ],
-        "date": "30. RUJ 2026",
-        "de": "Moreška",
-        "en": "Moreška",
-        "endDate": "",
-        "fr": "",
-        "hr": "",
-        "it": "",
-        "sl": "",
-        "time": "srijeda · 21:00",
-        "town": "korcula",
-        "venue": "Ljetno kino, Korčula"
-      }
-    },
-    {
-      "sourceId": "moreska",
-      "url": "https://moreska.eu/tickets",
-      "reason": "bad-date:12. LIS 2026",
-      "candidate": {
-        "cats": [
-          "folklore"
-        ],
-        "date": "12. LIS 2026",
-        "de": "Moreška",
-        "en": "Moreška",
-        "endDate": "",
-        "fr": "",
-        "hr": "",
-        "it": "",
-        "sl": "",
-        "time": "ponedjeljak · 21:00",
-        "town": "korcula",
-        "venue": "Ljetno kino, Korčula"
-      }
-    },
-    {
-      "sourceId": "moreska",
-      "url": "https://moreska.eu/tickets",
-      "reason": "bad-date:14. LIS 2026",
-      "candidate": {
-        "cats": [
-          "folklore"
-        ],
-        "date": "14. LIS 2026",
-        "de": "Moreška",
-        "en": "Moreška",
-        "endDate": "",
-        "fr": "",
-        "hr": "",
-        "it": "",
-        "sl": "",
-        "time": "srijeda · 21:00",
-        "town": "korcula",
-        "venue": "Ljetno kino, Korčula"
-      }
-    },
-    {
-      "sourceId": "blue-korcula",
-      "url": "https://bluekorcula.com/club",
-      "reason": "bad-date:",
-      "candidate": {
-        "cats": [
-          "nightlife"
-        ],
-        "date": "",
-        "de": "",
-        "en": "Nightlife Vibes",
-        "endDate": "",
-        "fr": "",
-        "hr": "Noćni život",
-        "it": "",
-        "sl": "",
-        "time": "",
-        "town": "korcula",
-        "venue": "Blue Club"
-      }
-    },
-    {
-      "sourceId": "la-banya",
-      "url": "https://labanya.hr",
-      "reason": "bad-date:28.01.2026",
-      "candidate": {
-        "cats": [
-          "kids"
-        ],
-        "date": "28.01.2026",
-        "de": "Discover History and Art in One Afternoon",
-        "en": "Discover History and Art in One Afternoon",
-        "endDate": "",
-        "fr": "",
-        "hr": "Otkrij povijest i umjetnost u jednom popodnevu",
-        "it": "",
-        "sl": "",
-        "time": "JAN",
-        "town": "korcula",
-        "venue": "Korčula old town"
-      }
-    },
-    {
-      "sourceId": "la-banya",
-      "url": "https://labanya.hr",
-      "reason": "bad-date:28.01.2026",
-      "candidate": {
-        "cats": [
-          "kids"
-        ],
-        "date": "28.01.2026",
-        "de": "Tradition, Flavor, and Premium Quality",
-        "en": "Tradition, Flavor, and Premium Quality",
-        "endDate": "",
-        "fr": "",
-        "hr": "Tradicija, ukus i visoka kvaliteta",
-        "it": "",
-        "sl": "",
-        "time": "JAN",
-        "town": "korcula",
-        "venue": "Korčula olive groves"
-      }
-    },
-    {
-      "sourceId": "la-banya",
-      "url": "https://labanya.hr",
-      "reason": "bad-date:28.01.2026",
-      "candidate": {
-        "cats": [
-          "kids"
-        ],
-        "date": "28.01.2026",
-        "de": "Discover Authentic Handicrafts",
-        "en": "Discover Authentic Handicrafts",
-        "endDate": "",
-        "fr": "",
-        "hr": "Otkrij autentične umjetničke radove",
-        "it": "",
-        "sl": "",
-        "time": "JAN",
-        "town": "korcula",
-        "venue": "Korčula old town"
-      }
-    },
-    {
-      "sourceId": "la-banya",
-      "url": "https://labanya.hr",
-      "reason": "bad-date:19.01.2026",
-      "candidate": {
-        "cats": [
-          "kids"
-        ],
-        "date": "19.01.2026",
-        "de": "Tasting the Tradition and Quality of Korčula Island",
-        "en": "Tasting the Tradition and Quality of Korčula Island",
-        "endDate": "",
-        "fr": "",
-        "hr": "Otkrivanje tradicije i kvalitete otoka Korčule",
-        "it": "",
-        "sl": "",
-        "time": "JAN",
-        "town": "korcula",
-        "venue": "Korčula"
-      }
-    },
-    {
-      "sourceId": "korculainfo-guides",
-      "url": "https://www.korculainfo.com/zrnovo/",
-      "reason": "bad-date:16 August",
-      "candidate": {
-        "cats": [
-          "kids"
-        ],
-        "date": "16 August",
-        "de": "Žrnovo’s traditional sword dance, performed on the feast of Sveti Rok (16 August) on the Piazza Pod Kostil in Postrana. The Moštra has been performed here since the 17th century and is one of the island’s most authentic folk traditions. The feast day is accompanied by a large village celebration in the square.",
-        "en": "Žrnovo’s traditional sword dance, performed on the feast of St Rok (16 August) on the Piazza Pod Kostil in Postrana. The Moštra has been performed here since the 17th century and is one of the island’s most authentic folk traditions. The feast day is accompanied by a large village celebration in the square.",
-        "endDate": "16 August",
-        "fr": "",
-        "hr": "",
-        "it": "",
-        "sl": "",
-        "town": "postrana",
-        "venue": "Postrana (Piazza Pod Kostil)"
-      }
-    },
-    {
-      "sourceId": "korculainfo-guides",
-      "url": "https://www.korculainfo.com/zrnovo/",
-      "reason": "bad-date:Feast of Sveti Martin",
-      "candidate": {
-        "cats": [
-          "folklore"
-        ],
-        "date": "Feast of Sveti Martin",
-        "de": "The feast of the village’s patron saint, celebrated at the Sveti Martin church in Kampus.",
-        "en": "The feast of the village’s patron saint, celebrated at the Sveti Martin church in Kampus.",
-        "endDate": "",
-        "fr": "",
-        "hr": "",
-        "it": "",
-        "sl": "",
-        "town": "kneze",
-        "venue": "Kampus (Sveti Martin church)"
-      }
-    },
-    {
-      "sourceId": "korculainfo-guides",
-      "url": "https://www.korculainfo.com/zrnovo/",
-      "reason": "bad-date:autumn",
-      "candidate": {
-        "cats": [
-          "folklore"
-        ],
-        "date": "autumn",
-        "de": "autumn grape harvest and winemaking is a village tradition still practised in Žrnovo.",
-        "en": "autumn grape harvest and winemaking is a village tradition still practised in Žrnovo.",
-        "endDate": "",
-        "fr": "",
-        "hr": "",
-        "it": "",
-        "sl": "",
-        "town": "kneze",
-        "venue": "Žrnovo"
-      }
-    },
-    {
-      "sourceId": "korculainfo-guides",
-      "url": "https://www.korculainfo.com/pupnat/",
-      "reason": "bad-date:5 August",
-      "candidate": {
-        "cats": [
-          "folklore"
-        ],
-        "date": "5 August",
-        "de": "Slavlju se održava u crkvi Gospa od Sniga.",
-        "en": "The village's main feast day, celebrated at the parish church with a religious service followed by entertainment and cultural programmes.",
-        "endDate": "5 August",
-        "fr": "La fête principale du village, célébrée dans l'église de Gospa od Sniga avec un service religieux suivi de divertissements et de programmes culturels.",
-        "hr": "Glavni blagdan u Pupnatu, slavlju se održava u crkvi Gospa od Sniga.",
-        "it": "La principale festa del villaggio, celebrata nella chiesa di Gospa od Sniga con un servizio religioso seguito da spettacoli e programmi culturali.",
-        "sl": "Glavni praznik v Pupnatu, se je slavlju održalo v cerkvi Gospa od Sniga.",
-        "time": "08:00",
-        "town": "pupnat",
-        "venue": "Pupnat"
-      }
-    },
-    {
-      "sourceId": "korculainfo-guides",
-      "url": "https://www.korculainfo.com/pupnat/",
-      "reason": "bad-date:24 August",
-      "candidate": {
-        "cats": [
-          "folklore"
-        ],
-        "date": "24 August",
-        "de": "Slavlju se održava u crkvi Gospa od Sniga.",
-        "en": "A second important feast day for the village, marking the local blessed figure associated with Pupnat.",
-        "endDate": "24 August",
-        "fr": "Une deuxième fête importante pour le village, marquant la figure béni locale associée à Pupnat.",
-        "hr": "Drugi važni blagdan u Pupnatu, koji označava lokalno blagoslovljenog lika povezanog s Pupnatom.",
-        "it": "Una seconda importante festa per il villaggio, che segna la figura benedetta locale associata a Pupnat.",
-        "sl": "Drugi pomembni praznik v Pupnatu, ki označuje lokalno blagoslovljenega lika povezanega z Pupnatom.",
-        "time": "08:00",
-        "town": "pupnat",
-        "venue": "Pupnat"
-      }
-    },
-    {
-      "sourceId": "korculainfo-guides",
-      "url": "https://www.korculainfo.com/pupnat/",
-      "reason": "bad-date:summer",
-      "candidate": {
-        "cats": [
-          "folklore"
-        ],
-        "date": "summer",
-        "de": "Nastupa na ljetnom festivalu u Pupnatu.",
-        "en": "Performed in summer, the Kumpanija is a chain sword dance with roots going back centuries, and is listed as an item of UNESCO intangible cultural heritage.",
-        "endDate": "summer",
-        "fr": "Exécuté en été, le Kumpanija est une danse de sabres en chaîne avec des racines remontant à des siècles, et est classé comme un bien culturel immatériel de l'UNESCO.",
-        "hr": "Održava se u ljetnim mjesecima, Kumpanija je lancući borbeni ples koji potječe stoljećima unatrag, a je i upisana kao UNESCO-ov nepokretni kulturni dobit.",
-        "it": "Eseguito in estate, il Kumpanija è una danza di spade in catena con radici che risalgono a secoli fa, e è classificato come bene culturale immateriale dell'UNESCO.",
-        "sl": "Se održuje v poletnih mesecih, Kumpanija je verižni borbeni ples, ki se je uporabljal že stoletja in je vpisan kot nepremični kulturni spomenik UNESCO-ja.",
-        "time": "08:00",
-        "town": "pupnat",
-        "venue": "Pupnat"
-      }
-    },
-    {
-      "sourceId": "korculainfo-guides",
-      "url": "https://www.korculainfo.com/cara/",
-      "reason": "bad-date:25.07.2024",
-      "candidate": {
-        "cats": [
-          "kids"
-        ],
-        "date": "25.07.2024",
-        "de": "Sveti Jakov pilgrimage — the major religious event of the year in Čara, centred on the church of Gospa od Carskog Polja in the field below the village. A traditional procession draws villagers and visitors from across the island.",
-        "en": "Sveti Jakov pilgrimage — the major religious event of the year in Čara, centred on the church of Gospa od Carskog Polja in the field below the village. A traditional procession draws villagers and visitors from across the island.",
-        "endDate": "25.07.2024",
-        "fr": "",
-        "hr": "",
-        "it": "",
-        "sl": "",
-        "town": "cara",
-        "venue": "Gospa od Carskog Polja, field below the village"
-      }
-    },
-    {
-      "sourceId": "korculainfo-guides",
-      "url": "https://www.korculainfo.com/cara/",
-      "reason": "bad-date:summer 2024",
-      "candidate": {
-        "cats": [
-          "folklore"
-        ],
-        "date": "summer 2024",
-        "de": "Kumpanija — Čara is one of the five villages on Korčula Island that preserves the Kumpanija sword dance, a chain sword dance of great antiquity performed in summer and listed as UNESCO intangible cultural heritage.",
-        "en": "Kumpanija — Čara is one of the five villages on Korčula Island that preserves the Kumpanija sword dance, a chain sword dance of great antiquity performed in summer and listed as UNESCO intangible cultural heritage.",
-        "endDate": "autumn 2024",
-        "fr": "",
-        "hr": "",
-        "it": "",
-        "sl": "",
-        "town": "cara",
-        "venue": "Čara"
-      }
-    },
-    {
-      "sourceId": "korculainfo-guides",
-      "url": "https://www.korculainfo.com/cara/",
-      "reason": "bad-date:summer 2024",
-      "candidate": {
-        "cats": [
-          "kids"
-        ],
-        "date": "summer 2024",
-        "de": "Walk through Carsko Polje — a walk through the vineyards and olive groves of the field below the village, passing the old church of Gospa od Carskog Polja and the wine cellar, is one of the most pleasant short walks on the island.",
-        "en": "Walk through Carsko Polje — a walk through the vineyards and olive groves of the field below the village, passing the old church of Gospa od Carskog Polja and the wine cellar, is one of the most pleasant short walks on the island.",
-        "endDate": "autumn 2024",
-        "fr": "",
-        "hr": "",
-        "it": "",
-        "sl": "",
-        "town": "cara",
-        "venue": "Carsko Polje"
-      }
-    },
-    {
-      "sourceId": "korculainfo-guides",
-      "url": "https://www.korculainfo.com/cara/",
-      "reason": "bad-date:summer 2024",
-      "candidate": {
-        "cats": [
-          "kids"
-        ],
-        "date": "summer 2024",
-        "de": "Španić Kastel — the fortified house at the village entrance offers views over the whole valley and out to sea. Worth a look from the outside, even if not open to visitors.",
-        "en": "Španić Kastel — the fortified house at the village entrance offers views over the whole valley and out to sea. Worth a look from the outside, even if not open to visitors.",
-        "endDate": "autumn 2024",
-        "fr": "",
-        "hr": "",
-        "it": "",
-        "sl": "",
-        "town": "cara",
-        "venue": "Španić Kastel"
-      }
-    },
-    {
-      "sourceId": "korculainfo-guides",
-      "url": "https://www.korculainfo.com/cara/",
-      "reason": "bad-date:summer 2024",
-      "candidate": {
-        "cats": [
-          "kids"
-        ],
-        "date": "summer 2024",
-        "de": "Drive or cycle to the southern coast — the road from Čara down to Zavalatica and Žitna passes through the vineyards of Carsko Polje with fine views. A good short excursion by bicycle or scooter.",
-        "en": "Drive or cycle to the southern coast — the road from Čara down to Zavalatica and Žitna passes through the vineyards of Carsko Polje with fine views. A good short excursion by bicycle or scooter.",
-        "endDate": "autumn 2024",
-        "fr": "",
-        "hr": "",
-        "it": "",
-        "sl": "",
-        "town": "cara",
-        "venue": "Zavalatica and Žitna"
-      }
-    },
-    {
-      "sourceId": "korculainfo-guides",
-      "url": "https://www.korculainfo.com/cara/",
-      "reason": "bad-date:summer 2024",
-      "candidate": {
-        "cats": [
-          "kids"
-        ],
-        "date": "summer 2024",
-        "de": "Walking — Čara is well positioned for walking east to Pupnat or west to Smokvica along the island road and old paths through the hills.",
-        "en": "Walking — Čara is well positioned for walking east to Pupnat or west to Smokvica along the island road and old paths through the hills.",
-        "endDate": "autumn 2024",
-        "fr": "",
-        "hr": "",
-        "it": "",
-        "sl": "",
-        "town": "cara",
-        "venue": "Pupnat or Smokvica"
-      }
-    },
-    {
-      "sourceId": "cara-zavalatica-local-sources",
-      "url": "https://www.korculainfo.com/cara/",
-      "reason": "bad-date:25.7.2024",
-      "candidate": {
-        "cats": [
-          "folklore"
-        ],
-        "date": "25.7.2024",
-        "de": "Sveti Jakov pilgrimage",
-        "en": "Sveti Jakov pilgrimage",
-        "endDate": "25.7.2024",
-        "fr": "Pilgrimage de Saint Jacques",
-        "hr": "Sveti Jakovovo pješačko putovanje",
-        "it": "Pellegrinaggio di San Giacomo",
-        "sl": "Pelegrinacija sv. Jakoba",
-        "time": "",
-        "town": "cara",
-        "venue": "the church of Gospa od Carskog Polja in the field below the village"
-      }
-    },
-    {
-      "sourceId": "cara-zavalatica-local-sources",
-      "url": "https://www.korculainfo.com/cara/",
-      "reason": "bad-date:2024",
-      "candidate": {
-        "cats": [
-          "folklore"
-        ],
-        "date": "2024",
-        "de": "Kumpanija",
-        "en": "Kumpanija",
-        "endDate": "2024",
-        "fr": "Kumpanija",
-        "hr": "Kumpanija",
-        "it": "Kumpanija",
-        "sl": "Kumpanija",
-        "time": "",
-        "town": "cara",
-        "venue": "Čara is one of the five villages on Korčula Island that preserves the Kumpanija sword dance"
-      }
-    },
-    {
-      "sourceId": "cara-zavalatica-local-sources",
-      "url": "https://www.korculainfo.com/cara/",
-      "reason": "bad-date:September and early October",
-      "candidate": {
-        "cats": [
-          "kids"
-        ],
-        "date": "September and early October",
-        "de": "Harvest season",
-        "en": "Harvest season",
-        "endDate": "early October",
-        "fr": "Saison de la récolte",
-        "hr": "Dočeka",
-        "it": "Stagione della raccolta",
-        "sl": "Sezona zbiranja",
-        "time": "",
-        "town": "cara",
-        "venue": "Carsko Polje in September and early October"
-      }
-    }
-  ],
+  "rejectedCandidates": [],
   "totals": {
     "published": 0,
-    "review": 35,
-    "aiCalls": 56
+    "review": 0,
+    "aiCalls": 102
   },
   "aiUsage": [
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
       "evidenceHash": "sha256:3d68f3daaa0441ad1a54f0ed38a267766739b1697f33aa58b8ad318a43b9fc45",
-      "promptChars": 7518,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 1950,
-        "completion_tokens": 434,
-        "total_tokens": 2384,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 23.163833618164062
-      }
+      "promptChars": 7978,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (6504c186-77a1-4f0a-a0b9-48c5c45e5fde)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
       "evidenceHash": "sha256:3d68f3daaa0441ad1a54f0ed38a267766739b1697f33aa58b8ad318a43b9fc45",
-      "promptChars": 3814,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 1015,
-        "completion_tokens": 226,
-        "total_tokens": 1241,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 12.060469627380371
-      }
+      "promptChars": 7978,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (d1409d11-6a27-4305-89a3-bed3859e2082)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
       "evidenceHash": "sha256:3d68f3daaa0441ad1a54f0ed38a267766739b1697f33aa58b8ad318a43b9fc45",
-      "promptChars": 3833,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 1014,
-        "completion_tokens": 223,
-        "total_tokens": 1237,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 11.95174789428711
-      }
+      "promptChars": 7978,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (54e306ac-2a5b-4dbd-b5e2-fbf2e4434601)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
       "evidenceHash": "sha256:3d68f3daaa0441ad1a54f0ed38a267766739b1697f33aa58b8ad318a43b9fc45",
-      "promptChars": 3809,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 1010,
-        "completion_tokens": 256,
-        "total_tokens": 1266,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 13.08591079711914
-      }
+      "promptChars": 7978,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (2ccabff0-5d09-47c1-834b-d651ac5d218d)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:3d68f3daaa0441ad1a54f0ed38a267766739b1697f33aa58b8ad318a43b9fc45",
+      "promptChars": 7978,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (c0d3eaa3-5a91-4924-b151-47c8492b22ed)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:3d68f3daaa0441ad1a54f0ed38a267766739b1697f33aa58b8ad318a43b9fc45",
+      "promptChars": 7978,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (34c42ff6-804c-4ae5-b686-808eb859bc70)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
       "evidenceHash": "sha256:80ba1cb6a4a40f8cf6c141562bcc4e86a2b0249595e992fd892a6edabfaa67a5",
-      "promptChars": 7983,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 2157,
-        "completion_tokens": 1359,
-        "total_tokens": 3516,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 56.26911544799805
-      }
+      "promptChars": 8443,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (c42a46ad-7d2e-4abc-a75c-89c7072821de)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:80ba1cb6a4a40f8cf6c141562bcc4e86a2b0249595e992fd892a6edabfaa67a5",
+      "promptChars": 8443,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (6be474c4-9fe1-4dd1-9b64-d2fa182c3439)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:80ba1cb6a4a40f8cf6c141562bcc4e86a2b0249595e992fd892a6edabfaa67a5",
+      "promptChars": 8443,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (86bfd89e-1668-4daa-98eb-a697c601277a)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:80ba1cb6a4a40f8cf6c141562bcc4e86a2b0249595e992fd892a6edabfaa67a5",
+      "promptChars": 8443,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (bb3b31f4-21bc-406e-b2c9-18bf242b84bf)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:80ba1cb6a4a40f8cf6c141562bcc4e86a2b0249595e992fd892a6edabfaa67a5",
+      "promptChars": 8443,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (0ea82995-946c-43d8-92f6-e869179ae805)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:80ba1cb6a4a40f8cf6c141562bcc4e86a2b0249595e992fd892a6edabfaa67a5",
+      "promptChars": 8443,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (cd8774d3-4dfb-4554-97a9-d999c54b8a7b)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
       "evidenceHash": "sha256:e74a262f00d903f3cbc19ebca722a2ceb0f13318bd03d9546de203f3f97245f1",
-      "promptChars": 13767,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 4540,
-        "completion_tokens": 8000,
-        "total_tokens": 12540,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 297.6408996582031
-      }
+      "promptChars": 14227,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (197b79a4-2f15-46b8-a9b3-4537eaf98add)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
       "evidenceHash": "sha256:e74a262f00d903f3cbc19ebca722a2ceb0f13318bd03d9546de203f3f97245f1",
-      "promptChars": 13767,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 4540,
-        "completion_tokens": 8000,
-        "total_tokens": 12540,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 297.6408996582031
-      }
+      "promptChars": 14227,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (fcc269e4-6899-4877-b086-e37ae78284e4)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
       "evidenceHash": "sha256:e74a262f00d903f3cbc19ebca722a2ceb0f13318bd03d9546de203f3f97245f1",
-      "promptChars": 10245,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 3644,
-        "completion_tokens": 307,
-        "total_tokens": 3951,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 25.71246337890625
-      }
+      "promptChars": 14227,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (9ace5662-a620-4706-8c0a-b5440df69d3b)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
       "evidenceHash": "sha256:e74a262f00d903f3cbc19ebca722a2ceb0f13318bd03d9546de203f3f97245f1",
-      "promptChars": 10351,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 3682,
-        "completion_tokens": 347,
-        "total_tokens": 4029,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 27.263683319091797
-      }
+      "promptChars": 14227,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (803d04ee-0b23-45a9-931d-50551b5ce394)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
       "evidenceHash": "sha256:e74a262f00d903f3cbc19ebca722a2ceb0f13318bd03d9546de203f3f97245f1",
-      "promptChars": 10261,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 3673,
-        "completion_tokens": 299,
-        "total_tokens": 3972,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 25.552959442138672
-      }
+      "promptChars": 14227,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (3780560e-23f7-4e43-99d7-78eb6e08b2aa)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
       "evidenceHash": "sha256:e74a262f00d903f3cbc19ebca722a2ceb0f13318bd03d9546de203f3f97245f1",
-      "promptChars": 10549,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 3729,
-        "completion_tokens": 325,
-        "total_tokens": 4054,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 26.690162658691406
-      }
+      "promptChars": 14227,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (3f370615-e472-4fa7-83fa-c1e77ff43ab5)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:e74a262f00d903f3cbc19ebca722a2ceb0f13318bd03d9546de203f3f97245f1",
-      "promptChars": 10438,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 3708,
-        "completion_tokens": 441,
-        "total_tokens": 4149,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 30.648340225219727
-      }
+      "evidenceHash": "sha256:66f6ee2b07994f008f421d148ae9b0c47b0fa75257bc18ddd80835d7a935dae2",
+      "promptChars": 13572,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (04e9c0c6-0e1f-40ff-9c6b-b048040f4da0)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:e74a262f00d903f3cbc19ebca722a2ceb0f13318bd03d9546de203f3f97245f1",
-      "promptChars": 10566,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 3752,
-        "completion_tokens": 169,
-        "total_tokens": 3921,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 21.345508575439453
-      }
+      "evidenceHash": "sha256:66f6ee2b07994f008f421d148ae9b0c47b0fa75257bc18ddd80835d7a935dae2",
+      "promptChars": 13572,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (3409a725-7051-4ef9-b030-b00cf0ef99fd)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:e74a262f00d903f3cbc19ebca722a2ceb0f13318bd03d9546de203f3f97245f1",
-      "promptChars": 10275,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 3679,
-        "completion_tokens": 281,
-        "total_tokens": 3960,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 24.950050354003906
-      }
+      "evidenceHash": "sha256:66f6ee2b07994f008f421d148ae9b0c47b0fa75257bc18ddd80835d7a935dae2",
+      "promptChars": 13572,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (381ed4b5-4022-4683-9a05-deed81d1d5ad)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:e74a262f00d903f3cbc19ebca722a2ceb0f13318bd03d9546de203f3f97245f1",
-      "promptChars": 10544,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 3761,
-        "completion_tokens": 316,
-        "total_tokens": 4077,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 26.50814437866211
-      }
+      "evidenceHash": "sha256:66f6ee2b07994f008f421d148ae9b0c47b0fa75257bc18ddd80835d7a935dae2",
+      "promptChars": 13572,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (2ff12fa9-3d94-441a-9803-28db8bbd382c)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:e74a262f00d903f3cbc19ebca722a2ceb0f13318bd03d9546de203f3f97245f1",
-      "promptChars": 10289,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 3673,
-        "completion_tokens": 448,
-        "total_tokens": 4121,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 30.74826431274414
-      }
+      "evidenceHash": "sha256:66f6ee2b07994f008f421d148ae9b0c47b0fa75257bc18ddd80835d7a935dae2",
+      "promptChars": 13572,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (fb446cf7-a74c-48ff-a070-8005a18b682b)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:e74a262f00d903f3cbc19ebca722a2ceb0f13318bd03d9546de203f3f97245f1",
-      "promptChars": 10311,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 3671,
-        "completion_tokens": 296,
-        "total_tokens": 3967,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 25.44011878967285
-      }
-    },
-    {
-      "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:e74a262f00d903f3cbc19ebca722a2ceb0f13318bd03d9546de203f3f97245f1",
-      "promptChars": 10561,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 3751,
-        "completion_tokens": 250,
-        "total_tokens": 4001,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 24.16568374633789
-      }
-    },
-    {
-      "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:e74a262f00d903f3cbc19ebca722a2ceb0f13318bd03d9546de203f3f97245f1",
-      "promptChars": 10499,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 3736,
-        "completion_tokens": 224,
-        "total_tokens": 3960,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 23.197341918945312
-      }
-    },
-    {
-      "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:e74a262f00d903f3cbc19ebca722a2ceb0f13318bd03d9546de203f3f97245f1",
-      "promptChars": 10471,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 3738,
-        "completion_tokens": 423,
-        "total_tokens": 4161,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 30.144275665283203
-      }
-    },
-    {
-      "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:e74a262f00d903f3cbc19ebca722a2ceb0f13318bd03d9546de203f3f97245f1",
-      "promptChars": 10252,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 3664,
-        "completion_tokens": 415,
-        "total_tokens": 4079,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 29.56056022644043
-      }
-    },
-    {
-      "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:e74a262f00d903f3cbc19ebca722a2ceb0f13318bd03d9546de203f3f97245f1",
-      "promptChars": 10555,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 3774,
-        "completion_tokens": 117,
-        "total_tokens": 3891,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 19.622989654541016
-      }
-    },
-    {
-      "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:e74a262f00d903f3cbc19ebca722a2ceb0f13318bd03d9546de203f3f97245f1",
-      "promptChars": 10516,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 3792,
-        "completion_tokens": 224,
-        "total_tokens": 4016,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 23.427982330322266
-      }
-    },
-    {
-      "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:e74a262f00d903f3cbc19ebca722a2ceb0f13318bd03d9546de203f3f97245f1",
-      "promptChars": 10303,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 3673,
-        "completion_tokens": 219,
-        "total_tokens": 3892,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 22.763532638549805
-      }
-    },
-    {
-      "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:12c24d96ce741d35260ba8b477fbdafe0125433b2f1bc98b3a3405a042d74f55",
-      "promptChars": 13112,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 4112,
-        "completion_tokens": 481,
-        "total_tokens": 4593,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 33.70695495605469
-      }
+      "evidenceHash": "sha256:66f6ee2b07994f008f421d148ae9b0c47b0fa75257bc18ddd80835d7a935dae2",
+      "promptChars": 13572,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (266cf43b-f339-474e-b4c4-b2124d975064)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
       "evidenceHash": "sha256:97d82ff50d7080f87217c2b30b7383e37de10a53a6b7b6841a1d16fc2ba37b0e",
-      "promptChars": 10455,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 3350,
-        "completion_tokens": 419,
-        "total_tokens": 3769,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 28.406803131103516
-      }
+      "promptChars": 10915,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (1b6da5bc-f50b-4b59-aecc-88e05b7edc52)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:b8f2af5edd5363e16c412d22fa020a09e2bbe906a75068504c3bdc6d0a7a96e8",
-      "promptChars": 10504,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 3067,
-        "completion_tokens": 1532,
-        "total_tokens": 4599,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 66.04914093017578
-      }
+      "evidenceHash": "sha256:97d82ff50d7080f87217c2b30b7383e37de10a53a6b7b6841a1d16fc2ba37b0e",
+      "promptChars": 10915,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (239ff03c-bb36-4857-8d96-c111536fe3a8)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:b8f2af5edd5363e16c412d22fa020a09e2bbe906a75068504c3bdc6d0a7a96e8",
-      "promptChars": 6926,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 2161,
-        "completion_tokens": 243,
-        "total_tokens": 2404,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 17.373096466064453
-      }
+      "evidenceHash": "sha256:97d82ff50d7080f87217c2b30b7383e37de10a53a6b7b6841a1d16fc2ba37b0e",
+      "promptChars": 10915,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (d3591e0e-dc93-485c-9d85-5e489ce32900)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:b8f2af5edd5363e16c412d22fa020a09e2bbe906a75068504c3bdc6d0a7a96e8",
-      "promptChars": 6903,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 2151,
-        "completion_tokens": 283,
-        "total_tokens": 2434,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 18.726621627807617
-      }
+      "evidenceHash": "sha256:97d82ff50d7080f87217c2b30b7383e37de10a53a6b7b6841a1d16fc2ba37b0e",
+      "promptChars": 10915,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (3ec213e5-c2d2-403e-80d5-68176efa6cfd)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:b8f2af5edd5363e16c412d22fa020a09e2bbe906a75068504c3bdc6d0a7a96e8",
-      "promptChars": 6918,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 2155,
-        "completion_tokens": 249,
-        "total_tokens": 2404,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 17.55759048461914
-      }
+      "evidenceHash": "sha256:97d82ff50d7080f87217c2b30b7383e37de10a53a6b7b6841a1d16fc2ba37b0e",
+      "promptChars": 10915,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (c58e9e9a-ce5a-4bb2-a2ef-fb174de423e9)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:b8f2af5edd5363e16c412d22fa020a09e2bbe906a75068504c3bdc6d0a7a96e8",
-      "promptChars": 6868,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 2150,
-        "completion_tokens": 269,
-        "total_tokens": 2419,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 18.23435401916504
-      }
+      "evidenceHash": "sha256:97d82ff50d7080f87217c2b30b7383e37de10a53a6b7b6841a1d16fc2ba37b0e",
+      "promptChars": 10915,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (da18e325-85f5-4741-a04e-9fa3b72f902d)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:b8f2af5edd5363e16c412d22fa020a09e2bbe906a75068504c3bdc6d0a7a96e8",
-      "promptChars": 6874,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 2145,
-        "completion_tokens": 360,
-        "total_tokens": 2505,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 21.386734008789062
-      }
+      "evidenceHash": "sha256:818dafd027226cefafa789e95b31b557bca44dd6316346a3b8257a7e57bf4a00",
+      "promptChars": 10964,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (71464c9f-b2c5-4492-bd8e-fb2d0c400b1e)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:b8f2af5edd5363e16c412d22fa020a09e2bbe906a75068504c3bdc6d0a7a96e8",
-      "promptChars": 6872,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 2145,
-        "completion_tokens": 234,
-        "total_tokens": 2379,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 16.993389129638672
-      }
+      "evidenceHash": "sha256:818dafd027226cefafa789e95b31b557bca44dd6316346a3b8257a7e57bf4a00",
+      "promptChars": 10964,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (7cefca1f-4b6c-4a62-b7bb-01540cf93e61)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:9943eb3ebc045e25bf4fdb1a6f316d742c2d629b25fbb0cf39fc57f51febc25e",
-      "promptChars": 15880,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 4345,
-        "completion_tokens": 829,
-        "total_tokens": 5174,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 46.80058288574219
-      }
+      "evidenceHash": "sha256:818dafd027226cefafa789e95b31b557bca44dd6316346a3b8257a7e57bf4a00",
+      "promptChars": 10964,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (d62e8338-20ba-4491-9921-00472b9d04a4)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:818dafd027226cefafa789e95b31b557bca44dd6316346a3b8257a7e57bf4a00",
+      "promptChars": 10964,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (c8f07d14-acbb-4e3e-941a-87da73cda6f9)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:818dafd027226cefafa789e95b31b557bca44dd6316346a3b8257a7e57bf4a00",
+      "promptChars": 10964,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (9f04964a-58a6-424a-b550-36409f5a5780)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:818dafd027226cefafa789e95b31b557bca44dd6316346a3b8257a7e57bf4a00",
+      "promptChars": 10964,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (c6530354-a87b-4645-a002-c3ae5ef03d5c)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
       "evidenceHash": "sha256:df0e12af5afdb5fc450636d875b4b870ed75151980a7ad6ef4a31672c7030de7",
-      "promptChars": 11862,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 3868,
-        "completion_tokens": 391,
-        "total_tokens": 4259,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 29.563919067382812
-      }
+      "promptChars": 12322,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (730cd42a-a4b4-472a-a0c5-af908483089a)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:cf2012acc283db3ac4b33a620a088e9dfe6b1bfb2ec18c7a6b548c80ad2ff429",
-      "promptChars": 9086,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 2904,
-        "completion_tokens": 1109,
-        "total_tokens": 4013,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 50.62872314453125
-      }
+      "evidenceHash": "sha256:df0e12af5afdb5fc450636d875b4b870ed75151980a7ad6ef4a31672c7030de7",
+      "promptChars": 12322,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (ea582fcd-b820-46db-876c-b40b7a900c0a)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:df0e12af5afdb5fc450636d875b4b870ed75151980a7ad6ef4a31672c7030de7",
+      "promptChars": 12322,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (314a1242-846a-4419-8604-5e30cfa41765)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:df0e12af5afdb5fc450636d875b4b870ed75151980a7ad6ef4a31672c7030de7",
+      "promptChars": 12322,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (732ecfb0-418f-46dd-ac5d-733e8ce50a04)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:df0e12af5afdb5fc450636d875b4b870ed75151980a7ad6ef4a31672c7030de7",
+      "promptChars": 12322,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (7060b6f6-7b99-4f51-9163-ce82f3de7281)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:df0e12af5afdb5fc450636d875b4b870ed75151980a7ad6ef4a31672c7030de7",
+      "promptChars": 12322,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (17e86d73-e0e7-417b-a726-b33e03926c36)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:27813bad1320c6937716fe74b0e0157063206d7f813bbf80d37286d7ebb078b0",
+      "promptChars": 9546,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (37a22d93-2385-42e2-9242-1d135324ee4c)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:27813bad1320c6937716fe74b0e0157063206d7f813bbf80d37286d7ebb078b0",
+      "promptChars": 9546,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (efa3d4f7-b28e-405b-8fbc-a27c453b6b9e)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:27813bad1320c6937716fe74b0e0157063206d7f813bbf80d37286d7ebb078b0",
+      "promptChars": 9546,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (c6a8c14a-5dd0-4278-bb0c-bae27d8dd24f)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:27813bad1320c6937716fe74b0e0157063206d7f813bbf80d37286d7ebb078b0",
+      "promptChars": 9546,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (d18f26f1-15aa-42e8-95dd-60a2310cf022)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:27813bad1320c6937716fe74b0e0157063206d7f813bbf80d37286d7ebb078b0",
+      "promptChars": 9546,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (ea4c026a-e00e-43c7-b27d-e52dba7d0323)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:27813bad1320c6937716fe74b0e0157063206d7f813bbf80d37286d7ebb078b0",
+      "promptChars": 9546,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (aebad8af-b241-41fb-ae54-c8725c393b7c)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
       "evidenceHash": "sha256:5d04a450bcd15f6d2e6faa9caa4ad99a83a6f8600fe0d7672b67eb78d84568c0",
-      "promptChars": 8392,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 2227,
-        "completion_tokens": 8000,
-        "total_tokens": 10227,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 288.1146545410156
-      }
+      "promptChars": 8852,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (8d44db84-8697-4c40-be4b-e12f6983a38f)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
       "evidenceHash": "sha256:5d04a450bcd15f6d2e6faa9caa4ad99a83a6f8600fe0d7672b67eb78d84568c0",
-      "promptChars": 8392,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 2227,
-        "completion_tokens": 101,
-        "total_tokens": 2328,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 12.69368839263916
-      }
+      "promptChars": 8852,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (a4615107-16c1-426a-95eb-c088a71751b7)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:f7a2a374fbd65140a26a787d9da12faa2ba219307c3b29ed40cb872fd02a0ebd",
-      "promptChars": 10785,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 2662,
-        "completion_tokens": 507,
-        "total_tokens": 3169,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 28.6416015625
-      }
+      "evidenceHash": "sha256:5d04a450bcd15f6d2e6faa9caa4ad99a83a6f8600fe0d7672b67eb78d84568c0",
+      "promptChars": 8852,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (e26483b6-fe13-4b7d-bcd9-5ab027b6f48b)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:5d04a450bcd15f6d2e6faa9caa4ad99a83a6f8600fe0d7672b67eb78d84568c0",
+      "promptChars": 8852,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (f63034aa-5de8-4c63-9aea-88bdaecdc574)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:5d04a450bcd15f6d2e6faa9caa4ad99a83a6f8600fe0d7672b67eb78d84568c0",
+      "promptChars": 8852,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (3b0fa49d-b575-4ea1-b579-e9729d683ca5)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:5d04a450bcd15f6d2e6faa9caa4ad99a83a6f8600fe0d7672b67eb78d84568c0",
+      "promptChars": 8852,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (4482cfda-7b3e-42be-8c3a-893375ab007f)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:1d7ec2c26112a7db1da56a4b7e97cef1f3b5785e09e58fbc9779623767a5fcdf",
+      "promptChars": 11420,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (8d3248d9-a599-4e58-8442-708d51eea243)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:1d7ec2c26112a7db1da56a4b7e97cef1f3b5785e09e58fbc9779623767a5fcdf",
+      "promptChars": 11420,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (ea5d6c48-f8cf-430b-bd93-df03665c8d60)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:1d7ec2c26112a7db1da56a4b7e97cef1f3b5785e09e58fbc9779623767a5fcdf",
+      "promptChars": 11420,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (7a42a7fa-ee3a-48c0-962c-46c0e6a20675)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:1d7ec2c26112a7db1da56a4b7e97cef1f3b5785e09e58fbc9779623767a5fcdf",
+      "promptChars": 11420,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (5c0cd747-8941-4a96-a31b-8925c861d032)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:1d7ec2c26112a7db1da56a4b7e97cef1f3b5785e09e58fbc9779623767a5fcdf",
+      "promptChars": 11420,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (107fbe35-84af-4c69-8748-4a6b4962d0d1)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:1d7ec2c26112a7db1da56a4b7e97cef1f3b5785e09e58fbc9779623767a5fcdf",
+      "promptChars": 11420,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (29629b21-ee6c-4d5e-9e91-fa99895e87bd)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
       "evidenceHash": "sha256:abc4dccf24df2a77d57207e46e42f54f17acf80691c90b1a5c52768e53665bcc",
-      "promptChars": 16655,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 4768,
-        "completion_tokens": 506,
-        "total_tokens": 5274,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 37.280426025390625
-      }
+      "promptChars": 17115,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (3614ca44-5186-4f97-a224-2c9a2bc8c3ce)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:abc4dccf24df2a77d57207e46e42f54f17acf80691c90b1a5c52768e53665bcc",
+      "promptChars": 17115,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (f3f9a57d-33b1-40c3-910e-b308947db690)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:abc4dccf24df2a77d57207e46e42f54f17acf80691c90b1a5c52768e53665bcc",
+      "promptChars": 17115,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (2e1ae738-51ce-4542-8592-275da1da184b)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:abc4dccf24df2a77d57207e46e42f54f17acf80691c90b1a5c52768e53665bcc",
+      "promptChars": 17115,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (ded31d6e-b780-4c21-9413-f11d4d317564)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:abc4dccf24df2a77d57207e46e42f54f17acf80691c90b1a5c52768e53665bcc",
+      "promptChars": 17115,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (b8023956-6523-48c6-9416-4715713a741e)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:abc4dccf24df2a77d57207e46e42f54f17acf80691c90b1a5c52768e53665bcc",
+      "promptChars": 17115,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (1d33480f-f954-44f6-a2f5-78d41e9f25f1)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
       "evidenceHash": "sha256:9bd01c8273feec4ed3cf03e9c916567e13d0a972c36ee75b4712f2ed5797c60c",
-      "promptChars": 15098,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 4193,
-        "completion_tokens": 894,
-        "total_tokens": 5087,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 48.44096755981445
-      }
+      "promptChars": 15558,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (0d7280ae-ff38-469c-a82d-8cc538fead24)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:9bd01c8273feec4ed3cf03e9c916567e13d0a972c36ee75b4712f2ed5797c60c",
+      "promptChars": 15558,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (d14c4ecd-add6-4a49-a6ca-a8188569d1a8)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:9bd01c8273feec4ed3cf03e9c916567e13d0a972c36ee75b4712f2ed5797c60c",
+      "promptChars": 15558,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (6cc43332-9ce9-4c13-96ee-e6c0fd9ba1e6)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:9bd01c8273feec4ed3cf03e9c916567e13d0a972c36ee75b4712f2ed5797c60c",
+      "promptChars": 15558,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (23e048cf-3486-4c65-85f8-5c50d37b2789)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:9bd01c8273feec4ed3cf03e9c916567e13d0a972c36ee75b4712f2ed5797c60c",
+      "promptChars": 15558,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (312937b8-0905-4c3d-b255-9e9bc1de7260)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:9bd01c8273feec4ed3cf03e9c916567e13d0a972c36ee75b4712f2ed5797c60c",
+      "promptChars": 15558,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (02ec2a81-8b3d-40e5-b2c7-4d1429eb4901)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
       "evidenceHash": "sha256:6ceb38c83a124c6391e772f7d0439062f2fc496e9f1113fe34cf4f6ba95577cc",
-      "promptChars": 16123,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 4455,
-        "completion_tokens": 1082,
-        "total_tokens": 5537,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 56.0751838684082
-      }
+      "promptChars": 16583,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (08c88458-0fcc-4be2-822f-52d8c244cfab)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:6ceb38c83a124c6391e772f7d0439062f2fc496e9f1113fe34cf4f6ba95577cc",
+      "promptChars": 16583,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (f1780db1-a21a-434b-8674-3c9943ac6362)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:6ceb38c83a124c6391e772f7d0439062f2fc496e9f1113fe34cf4f6ba95577cc",
+      "promptChars": 16583,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (d503cdde-3894-4f88-82ac-d682e816c84c)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:6ceb38c83a124c6391e772f7d0439062f2fc496e9f1113fe34cf4f6ba95577cc",
+      "promptChars": 16583,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (c9e15c13-b78b-4328-b785-d0cb2cdd97d3)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:6ceb38c83a124c6391e772f7d0439062f2fc496e9f1113fe34cf4f6ba95577cc",
+      "promptChars": 16583,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (7d5cd89d-34c9-4bee-bbb9-374c4c3dc0df)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:6ceb38c83a124c6391e772f7d0439062f2fc496e9f1113fe34cf4f6ba95577cc",
+      "promptChars": 16583,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (aa3d79e5-4261-457a-b8ba-ad181aab9d00)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
       "evidenceHash": "sha256:8d99da633486f93b34ff2cf4a127cc5f73a8c65257c793880ea1041513bd5604",
-      "promptChars": 7110,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 1755,
-        "completion_tokens": 9,
-        "total_tokens": 1764,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 7.541886806488037
-      }
+      "promptChars": 7570,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (562fc064-7875-42ac-ab88-2ec192358412)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:8d99da633486f93b34ff2cf4a127cc5f73a8c65257c793880ea1041513bd5604",
+      "promptChars": 7570,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (e0687b12-e857-44fa-ae26-6f7d72e3193d)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:8d99da633486f93b34ff2cf4a127cc5f73a8c65257c793880ea1041513bd5604",
+      "promptChars": 7570,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (36d4a019-8594-4002-a0db-d4b8c7603a0b)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:8d99da633486f93b34ff2cf4a127cc5f73a8c65257c793880ea1041513bd5604",
+      "promptChars": 7570,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (2de224a8-4cdb-46fe-a41b-c5ee7a63a8cc)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:8d99da633486f93b34ff2cf4a127cc5f73a8c65257c793880ea1041513bd5604",
+      "promptChars": 7570,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (4b4c6ea4-e6d0-4f32-b45c-b92a6c2f6ca5)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:8d99da633486f93b34ff2cf4a127cc5f73a8c65257c793880ea1041513bd5604",
+      "promptChars": 7570,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (e87efcca-9a83-42de-9e95-4e86da5fec46)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
       "evidenceHash": "sha256:6ceb38c83a124c6391e772f7d0439062f2fc496e9f1113fe34cf4f6ba95577cc",
-      "promptChars": 16123,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 4455,
-        "completion_tokens": 8000,
-        "total_tokens": 12455,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 297.29083251953125
-      }
+      "promptChars": 16583,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (33c0932a-ccf4-47a1-81f6-bf5e12b01a5e)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
       "evidenceHash": "sha256:6ceb38c83a124c6391e772f7d0439062f2fc496e9f1113fe34cf4f6ba95577cc",
-      "promptChars": 16123,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 4455,
-        "completion_tokens": 479,
-        "total_tokens": 4934,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 35.04988098144531
-      }
+      "promptChars": 16583,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (3382e6c3-e5bc-4449-8848-b3b5cfea6151)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:72248234c157160234f3b8189ce0daf3803cfa08ad9ea077cf439f405ba60b3d",
-      "promptChars": 8431,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 2337,
-        "completion_tokens": 140,
-        "total_tokens": 2477,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 14.506576538085938
-      }
+      "evidenceHash": "sha256:6ceb38c83a124c6391e772f7d0439062f2fc496e9f1113fe34cf4f6ba95577cc",
+      "promptChars": 16583,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (e814d7cd-25a3-4278-bd84-c08ee4167d81)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:72248234c157160234f3b8189ce0daf3803cfa08ad9ea077cf439f405ba60b3d",
-      "promptChars": 4725,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 1403,
-        "completion_tokens": 319,
-        "total_tokens": 1722,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 16.901180267333984
-      }
+      "evidenceHash": "sha256:6ceb38c83a124c6391e772f7d0439062f2fc496e9f1113fe34cf4f6ba95577cc",
+      "promptChars": 16583,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (f9d8242b-7dc1-4056-b901-712bf901d5cb)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:6807d11f3610984e9774b8beb2b936202202b3b547131a65d1eef81cb9680a04",
-      "promptChars": 16088,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 4112,
-        "completion_tokens": 1426,
-        "total_tokens": 5538,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 66.65704345703125
-      }
+      "evidenceHash": "sha256:6ceb38c83a124c6391e772f7d0439062f2fc496e9f1113fe34cf4f6ba95577cc",
+      "promptChars": 16583,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (ce02028e-a0c8-47c6-a62b-d9ed201d839d)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:6807d11f3610984e9774b8beb2b936202202b3b547131a65d1eef81cb9680a04",
-      "promptChars": 12500,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 3190,
-        "completion_tokens": 305,
-        "total_tokens": 3495,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 23.772899627685547
-      }
+      "evidenceHash": "sha256:6ceb38c83a124c6391e772f7d0439062f2fc496e9f1113fe34cf4f6ba95577cc",
+      "promptChars": 16583,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (bd4253ba-a754-4def-ab77-f7a54e239c1f)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:6807d11f3610984e9774b8beb2b936202202b3b547131a65d1eef81cb9680a04",
-      "promptChars": 13036,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 3296,
-        "completion_tokens": 322,
-        "total_tokens": 3618,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 24.802221298217773
-      }
+      "evidenceHash": "sha256:fa1bac9a2d66af2f320aa295a0665f9b46c644dc9dae0994b5193eecd300ac2b",
+      "promptChars": 8891,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (41943f9b-9467-426c-8619-bc20e2c40021)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:6807d11f3610984e9774b8beb2b936202202b3b547131a65d1eef81cb9680a04",
-      "promptChars": 12816,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 3266,
-        "completion_tokens": 243,
-        "total_tokens": 3509,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 21.92410659790039
-      }
+      "evidenceHash": "sha256:fa1bac9a2d66af2f320aa295a0665f9b46c644dc9dae0994b5193eecd300ac2b",
+      "promptChars": 8891,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (0a6ae4a4-4e54-4ebf-a439-d31778315c29)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:6807d11f3610984e9774b8beb2b936202202b3b547131a65d1eef81cb9680a04",
-      "promptChars": 12512,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 3200,
-        "completion_tokens": 272,
-        "total_tokens": 3472,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 22.663448333740234
-      }
+      "evidenceHash": "sha256:fa1bac9a2d66af2f320aa295a0665f9b46c644dc9dae0994b5193eecd300ac2b",
+      "promptChars": 8891,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (631f5c18-91a7-4c79-a4ec-f689f030e060)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:6807d11f3610984e9774b8beb2b936202202b3b547131a65d1eef81cb9680a04",
-      "promptChars": 12432,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 3178,
-        "completion_tokens": 393,
-        "total_tokens": 3571,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 26.791847229003906
-      }
+      "evidenceHash": "sha256:fa1bac9a2d66af2f320aa295a0665f9b46c644dc9dae0994b5193eecd300ac2b",
+      "promptChars": 8891,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (1b7dc5c7-3556-4f69-91e3-8f26de70b4a7)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:6807d11f3610984e9774b8beb2b936202202b3b547131a65d1eef81cb9680a04",
-      "promptChars": 12854,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 3280,
-        "completion_tokens": 230,
-        "total_tokens": 3510,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 21.528484344482422
-      }
+      "evidenceHash": "sha256:fa1bac9a2d66af2f320aa295a0665f9b46c644dc9dae0994b5193eecd300ac2b",
+      "promptChars": 8891,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (00434de3-c778-49b5-b048-ce5a77682871)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:6807d11f3610984e9774b8beb2b936202202b3b547131a65d1eef81cb9680a04",
-      "promptChars": 12902,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 3282,
-        "completion_tokens": 239,
-        "total_tokens": 3521,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 21.85053253173828
-      }
+      "evidenceHash": "sha256:fa1bac9a2d66af2f320aa295a0665f9b46c644dc9dae0994b5193eecd300ac2b",
+      "promptChars": 8891,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (5cc37c21-306e-497f-943f-abaff6b30269)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:6807d11f3610984e9774b8beb2b936202202b3b547131a65d1eef81cb9680a04",
-      "promptChars": 12640,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 3220,
-        "completion_tokens": 299,
-        "total_tokens": 3519,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 23.6872501373291
-      }
+      "evidenceHash": "sha256:c26ce986876b3c1c32160aaacc6722d66b4ae47566b3f6d4ab0ecc529eca3bab",
+      "promptChars": 16548,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (3baec932-5dcc-497a-a55f-dea1d88f1dd3)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:c26ce986876b3c1c32160aaacc6722d66b4ae47566b3f6d4ab0ecc529eca3bab",
+      "promptChars": 16548,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (e8fa089f-0c1e-45f2-8ba2-68cd5bc8e3b4)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:c26ce986876b3c1c32160aaacc6722d66b4ae47566b3f6d4ab0ecc529eca3bab",
+      "promptChars": 16548,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (35349cf0-fb76-4206-8ff8-1678302729db)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:c26ce986876b3c1c32160aaacc6722d66b4ae47566b3f6d4ab0ecc529eca3bab",
+      "promptChars": 16548,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (b3b754d2-fbf1-400e-ab25-2c06e7506051)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:c26ce986876b3c1c32160aaacc6722d66b4ae47566b3f6d4ab0ecc529eca3bab",
+      "promptChars": 16548,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (504349dc-158b-47e5-a58b-3034352eff69)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:c26ce986876b3c1c32160aaacc6722d66b4ae47566b3f6d4ab0ecc529eca3bab",
+      "promptChars": 16548,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (c71b2b06-a565-4700-9c58-5175836ef2d9)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
     }
   ],
   "published": []

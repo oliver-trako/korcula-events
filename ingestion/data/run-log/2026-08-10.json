@@ -5,8 +5,8 @@
     {
       "sourceId": "visit-korcula",
       "url": "https://visitkorcula.eu/en/events/",
-      "published": 0,
-      "review": 0
+      "published": 1,
+      "review": 2
     },
     {
       "sourceId": "visit-korcula-racisce",
@@ -18,7 +18,7 @@
       "sourceId": "centar-kulture-korcula",
       "url": "https://kulturakorcula.hr/kino-najave/",
       "published": 0,
-      "review": 0
+      "review": 20
     },
     {
       "sourceId": "visit-lumbarda",
@@ -48,7 +48,7 @@
       "sourceId": "moreska",
       "url": "https://moreska.eu/",
       "published": 0,
-      "review": 0
+      "review": 4
     },
     {
       "sourceId": "moreska",
@@ -96,7 +96,7 @@
       "sourceId": "korculainfo-guides",
       "url": "https://www.korculainfo.com/zrnovo/",
       "published": 0,
-      "review": 0
+      "review": 3
     },
     {
       "sourceId": "korculainfo-guides",
@@ -120,7 +120,7 @@
       "sourceId": "cara-zavalatica-local-sources",
       "url": "https://www.korculainfo.com/cara/",
       "published": 0,
-      "review": 0
+      "review": 8
     },
     {
       "sourceId": "smokvica-brna-expanded",
@@ -149,76 +149,10 @@
   ],
   "errors": [
     {
-      "sourceId": "visit-korcula",
-      "url": "https://visitkorcula.eu/en/events/",
-      "stage": "extract",
-      "error": "Model call failed: http-error:400"
-    },
-    {
-      "sourceId": "visit-korcula-racisce",
-      "url": "https://visitkorcula.eu/en/events/summer-in-racisce/",
-      "stage": "extract",
-      "error": "Model call failed: http-error:400"
-    },
-    {
-      "sourceId": "centar-kulture-korcula",
-      "url": "https://kulturakorcula.hr/kino-najave/",
-      "stage": "extract",
-      "error": "Model call failed: http-error:400"
-    },
-    {
-      "sourceId": "visit-lumbarda",
-      "url": "https://www.visitlumbarda.eu/",
-      "stage": "extract",
-      "error": "Model call failed: http-error:400"
-    },
-    {
-      "sourceId": "tz-vela-luka",
-      "url": "https://tzvelaluka.hr/",
-      "stage": "extract",
-      "error": "Model call failed: http-error:400"
-    },
-    {
-      "sourceId": "tz-blato",
-      "url": "https://tzo-blato.hr/en/",
-      "stage": "extract",
-      "error": "Model call failed: http-error:400"
-    },
-    {
-      "sourceId": "visit-orebic",
-      "url": "https://visitorebic-croatia.hr/",
-      "stage": "fetch",
-      "error": "Safe retrieval blocked: timeout"
-    },
-    {
-      "sourceId": "moreska",
-      "url": "https://moreska.eu/",
-      "stage": "extract",
-      "error": "Model call failed: http-error:400"
-    },
-    {
-      "sourceId": "moreska",
-      "url": "https://moreska.eu/tickets",
-      "stage": "extract",
-      "error": "Model call failed: http-error:400"
-    },
-    {
-      "sourceId": "blue-korcula",
-      "url": "https://bluekorcula.com/club",
-      "stage": "extract",
-      "error": "Model call failed: http-error:400"
-    },
-    {
       "sourceId": "blue-korcula",
       "url": "https://core-event.co/en/search?query=Kor%C4%8Dula",
       "stage": "fetch",
       "error": "Safe retrieval blocked: http-error:403"
-    },
-    {
-      "sourceId": "la-banya",
-      "url": "https://labanya.hr",
-      "stage": "extract",
-      "error": "Model call failed: http-error:400"
     },
     {
       "sourceId": "core-event-korcula",
@@ -239,48 +173,6 @@
       "error": "Safe retrieval blocked: http-error:404"
     },
     {
-      "sourceId": "korculainfo-guides",
-      "url": "https://www.korculainfo.com/zrnovo/",
-      "stage": "extract",
-      "error": "Model call failed: http-error:400"
-    },
-    {
-      "sourceId": "korculainfo-guides",
-      "url": "https://www.korculainfo.com/pupnat/",
-      "stage": "extract",
-      "error": "Model call failed: http-error:400"
-    },
-    {
-      "sourceId": "korculainfo-guides",
-      "url": "https://www.korculainfo.com/cara/",
-      "stage": "extract",
-      "error": "Model call failed: http-error:400"
-    },
-    {
-      "sourceId": "zrnovo-local-sources",
-      "url": "https://www.zrnovo.com/",
-      "stage": "extract",
-      "error": "Model call failed: http-error:400"
-    },
-    {
-      "sourceId": "cara-zavalatica-local-sources",
-      "url": "https://www.korculainfo.com/cara/",
-      "stage": "extract",
-      "error": "Model call failed: http-error:400"
-    },
-    {
-      "sourceId": "smokvica-brna-expanded",
-      "url": "https://visitsmokvicabrna.com/",
-      "stage": "extract",
-      "error": "Model call failed: http-error:400"
-    },
-    {
-      "sourceId": "aminess-korcula-entertainment",
-      "url": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
-      "stage": "extract",
-      "error": "Model call failed: http-error:400"
-    },
-    {
       "sourceId": "hajduk-split-fixtures",
       "url": "https://hajduk.hr/utakmice",
       "stage": "fetch",
@@ -294,725 +186,888 @@
     }
   ],
   "totals": {
-    "published": 0,
-    "review": 0,
-    "aiCalls": 102
+    "published": 1,
+    "review": 37,
+    "aiCalls": 58
   },
   "aiUsage": [
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
       "evidenceHash": "sha256:3d68f3daaa0441ad1a54f0ed38a267766739b1697f33aa58b8ad318a43b9fc45",
       "promptChars": 6753,
-      "success": false,
-      "status": 400
+      "success": true,
+      "usage": {
+        "prompt_tokens": 1766,
+        "completion_tokens": 501,
+        "total_tokens": 2267,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 24.74216079711914
+      }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
       "evidenceHash": "sha256:3d68f3daaa0441ad1a54f0ed38a267766739b1697f33aa58b8ad318a43b9fc45",
-      "promptChars": 6753,
-      "success": false,
-      "status": 400
+      "promptChars": 3889,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 1039,
+        "completion_tokens": 316,
+        "total_tokens": 1355,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 15.297419548034668
+      }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
       "evidenceHash": "sha256:3d68f3daaa0441ad1a54f0ed38a267766739b1697f33aa58b8ad318a43b9fc45",
-      "promptChars": 6753,
-      "success": false,
-      "status": 400
+      "promptChars": 3855,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 1028,
+        "completion_tokens": 14,
+        "total_tokens": 1042,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 4.722031593322754
+      }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
       "evidenceHash": "sha256:3d68f3daaa0441ad1a54f0ed38a267766739b1697f33aa58b8ad318a43b9fc45",
-      "promptChars": 6753,
-      "success": false,
-      "status": 400
-    },
-    {
-      "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:3d68f3daaa0441ad1a54f0ed38a267766739b1697f33aa58b8ad318a43b9fc45",
-      "promptChars": 6753,
-      "success": false,
-      "status": 400
-    },
-    {
-      "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:3d68f3daaa0441ad1a54f0ed38a267766739b1697f33aa58b8ad318a43b9fc45",
-      "promptChars": 6753,
-      "success": false,
-      "status": 400
+      "promptChars": 3879,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 1032,
+        "completion_tokens": 341,
+        "total_tokens": 1373,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 16.14028549194336
+      }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
       "evidenceHash": "sha256:80ba1cb6a4a40f8cf6c141562bcc4e86a2b0249595e992fd892a6edabfaa67a5",
       "promptChars": 7218,
-      "success": false,
-      "status": 400
+      "success": true,
+      "usage": {
+        "prompt_tokens": 1973,
+        "completion_tokens": 1247,
+        "total_tokens": 3220,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 51.606101989746094
+      }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:80ba1cb6a4a40f8cf6c141562bcc4e86a2b0249595e992fd892a6edabfaa67a5",
-      "promptChars": 7218,
-      "success": false,
-      "status": 400
+      "evidenceHash": "sha256:e74a262f00d903f3cbc19ebca722a2ceb0f13318bd03d9546de203f3f97245f1",
+      "promptChars": 13002,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 4356,
+        "completion_tokens": 2442,
+        "total_tokens": 6798,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 103.08769226074219
+      }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:80ba1cb6a4a40f8cf6c141562bcc4e86a2b0249595e992fd892a6edabfaa67a5",
-      "promptChars": 7218,
-      "success": false,
-      "status": 400
+      "evidenceHash": "sha256:e74a262f00d903f3cbc19ebca722a2ceb0f13318bd03d9546de203f3f97245f1",
+      "promptChars": 10087,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3611,
+        "completion_tokens": 83,
+        "total_tokens": 3694,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 17.766159057617188
+      }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:80ba1cb6a4a40f8cf6c141562bcc4e86a2b0249595e992fd892a6edabfaa67a5",
-      "promptChars": 7218,
-      "success": false,
-      "status": 400
+      "evidenceHash": "sha256:e74a262f00d903f3cbc19ebca722a2ceb0f13318bd03d9546de203f3f97245f1",
+      "promptChars": 10033,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3596,
+        "completion_tokens": 406,
+        "total_tokens": 4002,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 28.966686248779297
+      }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:80ba1cb6a4a40f8cf6c141562bcc4e86a2b0249595e992fd892a6edabfaa67a5",
-      "promptChars": 7218,
-      "success": false,
-      "status": 400
+      "evidenceHash": "sha256:e74a262f00d903f3cbc19ebca722a2ceb0f13318bd03d9546de203f3f97245f1",
+      "promptChars": 10041,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3594,
+        "completion_tokens": 521,
+        "total_tokens": 4115,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 32.9682502746582
+      }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:80ba1cb6a4a40f8cf6c141562bcc4e86a2b0249595e992fd892a6edabfaa67a5",
-      "promptChars": 7218,
-      "success": false,
-      "status": 400
+      "evidenceHash": "sha256:e74a262f00d903f3cbc19ebca722a2ceb0f13318bd03d9546de203f3f97245f1",
+      "promptChars": 10041,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3594,
+        "completion_tokens": 512,
+        "total_tokens": 4106,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 32.654441833496094
+      }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:bd591c21e9a10c8247c62a97a7ddb450d94894c903c5e185eff7cec7921a4f2e",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
+      "evidenceHash": "sha256:e74a262f00d903f3cbc19ebca722a2ceb0f13318bd03d9546de203f3f97245f1",
+      "promptChars": 10047,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3598,
+        "completion_tokens": 958,
+        "total_tokens": 4556,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 48.22196578979492
+      }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:bd591c21e9a10c8247c62a97a7ddb450d94894c903c5e185eff7cec7921a4f2e",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
+      "evidenceHash": "sha256:e74a262f00d903f3cbc19ebca722a2ceb0f13318bd03d9546de203f3f97245f1",
+      "promptChars": 10036,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3594,
+        "completion_tokens": 284,
+        "total_tokens": 3878,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 24.704574584960938
+      }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:bd591c21e9a10c8247c62a97a7ddb450d94894c903c5e185eff7cec7921a4f2e",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
+      "evidenceHash": "sha256:e74a262f00d903f3cbc19ebca722a2ceb0f13318bd03d9546de203f3f97245f1",
+      "promptChars": 10026,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3594,
+        "completion_tokens": 330,
+        "total_tokens": 3924,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 26.308494567871094
+      }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:bd591c21e9a10c8247c62a97a7ddb450d94894c903c5e185eff7cec7921a4f2e",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
+      "evidenceHash": "sha256:e74a262f00d903f3cbc19ebca722a2ceb0f13318bd03d9546de203f3f97245f1",
+      "promptChars": 10044,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3597,
+        "completion_tokens": 372,
+        "total_tokens": 3969,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 27.785301208496094
+      }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:bd591c21e9a10c8247c62a97a7ddb450d94894c903c5e185eff7cec7921a4f2e",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
+      "evidenceHash": "sha256:e74a262f00d903f3cbc19ebca722a2ceb0f13318bd03d9546de203f3f97245f1",
+      "promptChars": 10026,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3594,
+        "completion_tokens": 212,
+        "total_tokens": 3806,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 22.194091796875
+      }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:bd591c21e9a10c8247c62a97a7ddb450d94894c903c5e185eff7cec7921a4f2e",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
+      "evidenceHash": "sha256:e74a262f00d903f3cbc19ebca722a2ceb0f13318bd03d9546de203f3f97245f1",
+      "promptChars": 10041,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3594,
+        "completion_tokens": 388,
+        "total_tokens": 3982,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 28.330829620361328
+      }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:0d1047aa51107c05645b43a64c7527d85a87207a61056c06234b28060c2e49dd",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
+      "evidenceHash": "sha256:e74a262f00d903f3cbc19ebca722a2ceb0f13318bd03d9546de203f3f97245f1",
+      "promptChars": 10044,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3597,
+        "completion_tokens": 451,
+        "total_tokens": 4048,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 30.539857864379883
+      }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:0d1047aa51107c05645b43a64c7527d85a87207a61056c06234b28060c2e49dd",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
+      "evidenceHash": "sha256:e74a262f00d903f3cbc19ebca722a2ceb0f13318bd03d9546de203f3f97245f1",
+      "promptChars": 10036,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3594,
+        "completion_tokens": 582,
+        "total_tokens": 4176,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 35.09518814086914
+      }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:0d1047aa51107c05645b43a64c7527d85a87207a61056c06234b28060c2e49dd",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
+      "evidenceHash": "sha256:e74a262f00d903f3cbc19ebca722a2ceb0f13318bd03d9546de203f3f97245f1",
+      "promptChars": 10026,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3594,
+        "completion_tokens": 341,
+        "total_tokens": 3935,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 26.692041397094727
+      }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:0d1047aa51107c05645b43a64c7527d85a87207a61056c06234b28060c2e49dd",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
+      "evidenceHash": "sha256:e74a262f00d903f3cbc19ebca722a2ceb0f13318bd03d9546de203f3f97245f1",
+      "promptChars": 10040,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3595,
+        "completion_tokens": 274,
+        "total_tokens": 3869,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 24.360015869140625
+      }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:0d1047aa51107c05645b43a64c7527d85a87207a61056c06234b28060c2e49dd",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
+      "evidenceHash": "sha256:e74a262f00d903f3cbc19ebca722a2ceb0f13318bd03d9546de203f3f97245f1",
+      "promptChars": 10028,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3592,
+        "completion_tokens": 249,
+        "total_tokens": 3841,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 23.475963592529297
+      }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:0d1047aa51107c05645b43a64c7527d85a87207a61056c06234b28060c2e49dd",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
+      "evidenceHash": "sha256:e74a262f00d903f3cbc19ebca722a2ceb0f13318bd03d9546de203f3f97245f1",
+      "promptChars": 10028,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3592,
+        "completion_tokens": 394,
+        "total_tokens": 3986,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 28.53179931640625
+      }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:00f5826baac7f9fb2efd97c8a6209efa30ce71ce7ecfa4a91d0e51e751627117",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
+      "evidenceHash": "sha256:e74a262f00d903f3cbc19ebca722a2ceb0f13318bd03d9546de203f3f97245f1",
+      "promptChars": 10034,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3594,
+        "completion_tokens": 545,
+        "total_tokens": 4139,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 33.805076599121094
+      }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:00f5826baac7f9fb2efd97c8a6209efa30ce71ce7ecfa4a91d0e51e751627117",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
+      "evidenceHash": "sha256:e74a262f00d903f3cbc19ebca722a2ceb0f13318bd03d9546de203f3f97245f1",
+      "promptChars": 10034,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3594,
+        "completion_tokens": 179,
+        "total_tokens": 3773,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 21.043453216552734
+      }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:00f5826baac7f9fb2efd97c8a6209efa30ce71ce7ecfa4a91d0e51e751627117",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
+      "evidenceHash": "sha256:e74a262f00d903f3cbc19ebca722a2ceb0f13318bd03d9546de203f3f97245f1",
+      "promptChars": 10036,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3594,
+        "completion_tokens": 250,
+        "total_tokens": 3844,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 23.51906967163086
+      }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:00f5826baac7f9fb2efd97c8a6209efa30ce71ce7ecfa4a91d0e51e751627117",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
+      "evidenceHash": "sha256:e74a262f00d903f3cbc19ebca722a2ceb0f13318bd03d9546de203f3f97245f1",
+      "promptChars": 10042,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3594,
+        "completion_tokens": 227,
+        "total_tokens": 3821,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 22.71710968017578
+      }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:00f5826baac7f9fb2efd97c8a6209efa30ce71ce7ecfa4a91d0e51e751627117",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
+      "evidenceHash": "sha256:9f82e6e595d696ce346ef8329a7b852f8eaa8640e458798260119731b39a2c54",
+      "promptChars": 12347,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3928,
+        "completion_tokens": 444,
+        "total_tokens": 4372,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 31.659027099609375
+      }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:00f5826baac7f9fb2efd97c8a6209efa30ce71ce7ecfa4a91d0e51e751627117",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
+      "evidenceHash": "sha256:68675bcaf94b4b6f2adb1ab0089a7c5655783f3f44a8f84012910efc4374523d",
+      "promptChars": 9690,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3166,
+        "completion_tokens": 218,
+        "total_tokens": 3384,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 20.640554428100586
+      }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:5f46b040cd665876f68a00fd34d5d52bbc4a49f576fbe9007d88afd13579bfe7",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
+      "evidenceHash": "sha256:430c76c4debd8db76a448e1c4581651c9004d2d44dd8ad83873ca15ac24fa808",
+      "promptChars": 9739,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 2883,
+        "completion_tokens": 956,
+        "total_tokens": 3839,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 45.207454681396484
+      }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:5f46b040cd665876f68a00fd34d5d52bbc4a49f576fbe9007d88afd13579bfe7",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
-    },
-    {
-      "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:5f46b040cd665876f68a00fd34d5d52bbc4a49f576fbe9007d88afd13579bfe7",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
-    },
-    {
-      "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:5f46b040cd665876f68a00fd34d5d52bbc4a49f576fbe9007d88afd13579bfe7",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
-    },
-    {
-      "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:5f46b040cd665876f68a00fd34d5d52bbc4a49f576fbe9007d88afd13579bfe7",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
-    },
-    {
-      "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:5f46b040cd665876f68a00fd34d5d52bbc4a49f576fbe9007d88afd13579bfe7",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
+      "evidenceHash": "sha256:2a26a15b29209f3fc86799aa3138f5898c7384ff352f720c9163d266a6c2d157",
+      "promptChars": 15113,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 4161,
+        "completion_tokens": 600,
+        "total_tokens": 4761,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 38.05803298950195
+      }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
       "evidenceHash": "sha256:df0e12af5afdb5fc450636d875b4b870ed75151980a7ad6ef4a31672c7030de7",
       "promptChars": 11097,
-      "success": false,
-      "status": 400
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3684,
+        "completion_tokens": 530,
+        "total_tokens": 4214,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 33.652732849121094
+      }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
       "evidenceHash": "sha256:df0e12af5afdb5fc450636d875b4b870ed75151980a7ad6ef4a31672c7030de7",
-      "promptChars": 11097,
-      "success": false,
-      "status": 400
+      "promptChars": 8198,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 2943,
+        "completion_tokens": 557,
+        "total_tokens": 3500,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 31.542308807373047
+      }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
       "evidenceHash": "sha256:df0e12af5afdb5fc450636d875b4b870ed75151980a7ad6ef4a31672c7030de7",
-      "promptChars": 11097,
-      "success": false,
-      "status": 400
+      "promptChars": 8154,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 2925,
+        "completion_tokens": 320,
+        "total_tokens": 3245,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 23.204498291015625
+      }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
       "evidenceHash": "sha256:df0e12af5afdb5fc450636d875b4b870ed75151980a7ad6ef4a31672c7030de7",
-      "promptChars": 11097,
-      "success": false,
-      "status": 400
+      "promptChars": 8154,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 2925,
+        "completion_tokens": 188,
+        "total_tokens": 3113,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 18.601945877075195
+      }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
       "evidenceHash": "sha256:df0e12af5afdb5fc450636d875b4b870ed75151980a7ad6ef4a31672c7030de7",
-      "promptChars": 11097,
-      "success": false,
-      "status": 400
+      "promptChars": 8154,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 2925,
+        "completion_tokens": 976,
+        "total_tokens": 3901,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 46.07779312133789
+      }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:df0e12af5afdb5fc450636d875b4b870ed75151980a7ad6ef4a31672c7030de7",
-      "promptChars": 11097,
-      "success": false,
-      "status": 400
-    },
-    {
-      "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:8d48df5b4923dc8fe0546bbb726e314acb41846715e28fc477da0d3a00de0a18",
+      "evidenceHash": "sha256:9be12b426c74f1b9a923bd4d67d5be9c0fc1afb845b1ba378e151e6a78fa915c",
       "promptChars": 8321,
-      "success": false,
-      "status": 400
+      "success": true,
+      "usage": {
+        "prompt_tokens": 2720,
+        "completion_tokens": 703,
+        "total_tokens": 3423,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 35.71457290649414
+      }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:8d48df5b4923dc8fe0546bbb726e314acb41846715e28fc477da0d3a00de0a18",
-      "promptChars": 8321,
-      "success": false,
-      "status": 400
+      "evidenceHash": "sha256:5d04a450bcd15f6d2e6faa9caa4ad99a83a6f8600fe0d7672b67eb78d84568c0",
+      "promptChars": 7627,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 2043,
+        "completion_tokens": 161,
+        "total_tokens": 2204,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 14.027942657470703
+      }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:8d48df5b4923dc8fe0546bbb726e314acb41846715e28fc477da0d3a00de0a18",
-      "promptChars": 8321,
-      "success": false,
-      "status": 400
+      "evidenceHash": "sha256:cac646705ea9959e5defc96d440b3a4e3f97ceed09e5863a96ca9f1868c5dfe7",
+      "promptChars": 10072,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 2486,
+        "completion_tokens": 576,
+        "total_tokens": 3062,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 30.322612762451172
+      }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:8d48df5b4923dc8fe0546bbb726e314acb41846715e28fc477da0d3a00de0a18",
-      "promptChars": 8321,
-      "success": false,
-      "status": 400
+      "evidenceHash": "sha256:abc4dccf24df2a77d57207e46e42f54f17acf80691c90b1a5c52768e53665bcc",
+      "promptChars": 15890,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 4584,
+        "completion_tokens": 8000,
+        "total_tokens": 12584,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 297.8221130371094
+      }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:8d48df5b4923dc8fe0546bbb726e314acb41846715e28fc477da0d3a00de0a18",
-      "promptChars": 8321,
-      "success": false,
-      "status": 400
+      "evidenceHash": "sha256:abc4dccf24df2a77d57207e46e42f54f17acf80691c90b1a5c52768e53665bcc",
+      "promptChars": 15890,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 4584,
+        "completion_tokens": 888,
+        "total_tokens": 5472,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 49.84211730957031
+      }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:8d48df5b4923dc8fe0546bbb726e314acb41846715e28fc477da0d3a00de0a18",
-      "promptChars": 8321,
-      "success": false,
-      "status": 400
+      "evidenceHash": "sha256:abc4dccf24df2a77d57207e46e42f54f17acf80691c90b1a5c52768e53665bcc",
+      "promptChars": 13169,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3902,
+        "completion_tokens": 378,
+        "total_tokens": 4280,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 29.250667572021484
+      }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:f1694d422049f8683bf5d99c52d354bd43511c5962e00bfff5900d5837b6e728",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
+      "evidenceHash": "sha256:abc4dccf24df2a77d57207e46e42f54f17acf80691c90b1a5c52768e53665bcc",
+      "promptChars": 13132,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3882,
+        "completion_tokens": 288,
+        "total_tokens": 4170,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 26.030193328857422
+      }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:f1694d422049f8683bf5d99c52d354bd43511c5962e00bfff5900d5837b6e728",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
+      "evidenceHash": "sha256:abc4dccf24df2a77d57207e46e42f54f17acf80691c90b1a5c52768e53665bcc",
+      "promptChars": 13118,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3882,
+        "completion_tokens": 340,
+        "total_tokens": 4222,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 27.843318939208984
+      }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:f1694d422049f8683bf5d99c52d354bd43511c5962e00bfff5900d5837b6e728",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
+      "evidenceHash": "sha256:9bd01c8273feec4ed3cf03e9c916567e13d0a972c36ee75b4712f2ed5797c60c",
+      "promptChars": 14333,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 4009,
+        "completion_tokens": 359,
+        "total_tokens": 4368,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 29.028865814208984
+      }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:f1694d422049f8683bf5d99c52d354bd43511c5962e00bfff5900d5837b6e728",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
+      "evidenceHash": "sha256:6ceb38c83a124c6391e772f7d0439062f2fc496e9f1113fe34cf4f6ba95577cc",
+      "promptChars": 15358,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 4271,
+        "completion_tokens": 560,
+        "total_tokens": 4831,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 37.116363525390625
+      }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:f1694d422049f8683bf5d99c52d354bd43511c5962e00bfff5900d5837b6e728",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
+      "evidenceHash": "sha256:8d99da633486f93b34ff2cf4a127cc5f73a8c65257c793880ea1041513bd5604",
+      "promptChars": 6345,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 1571,
+        "completion_tokens": 8,
+        "total_tokens": 1579,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 6.749203681945801
+      }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:f1694d422049f8683bf5d99c52d354bd43511c5962e00bfff5900d5837b6e728",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
+      "evidenceHash": "sha256:6ceb38c83a124c6391e772f7d0439062f2fc496e9f1113fe34cf4f6ba95577cc",
+      "promptChars": 15358,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 4271,
+        "completion_tokens": 2655,
+        "total_tokens": 6926,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 110.16445922851562
+      }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:82fafbb6349fc8aa534f8cc7a3e9cb66928c1404e78f97e4deb61b5380b77d8b",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
+      "evidenceHash": "sha256:6ceb38c83a124c6391e772f7d0439062f2fc496e9f1113fe34cf4f6ba95577cc",
+      "promptChars": 12503,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3534,
+        "completion_tokens": 82,
+        "total_tokens": 3616,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 17.414159774780273
+      }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:82fafbb6349fc8aa534f8cc7a3e9cb66928c1404e78f97e4deb61b5380b77d8b",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
+      "evidenceHash": "sha256:6ceb38c83a124c6391e772f7d0439062f2fc496e9f1113fe34cf4f6ba95577cc",
+      "promptChars": 12438,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3520,
+        "completion_tokens": 101,
+        "total_tokens": 3621,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 18.01898956298828
+      }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:82fafbb6349fc8aa534f8cc7a3e9cb66928c1404e78f97e4deb61b5380b77d8b",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
+      "evidenceHash": "sha256:6ceb38c83a124c6391e772f7d0439062f2fc496e9f1113fe34cf4f6ba95577cc",
+      "promptChars": 12695,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3585,
+        "completion_tokens": 475,
+        "total_tokens": 4060,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 31.32726287841797
+      }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:82fafbb6349fc8aa534f8cc7a3e9cb66928c1404e78f97e4deb61b5380b77d8b",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
+      "evidenceHash": "sha256:6ceb38c83a124c6391e772f7d0439062f2fc496e9f1113fe34cf4f6ba95577cc",
+      "promptChars": 12691,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3584,
+        "completion_tokens": 513,
+        "total_tokens": 4097,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 32.64812469482422
+      }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:82fafbb6349fc8aa534f8cc7a3e9cb66928c1404e78f97e4deb61b5380b77d8b",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
+      "evidenceHash": "sha256:6ceb38c83a124c6391e772f7d0439062f2fc496e9f1113fe34cf4f6ba95577cc",
+      "promptChars": 12797,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3629,
+        "completion_tokens": 67,
+        "total_tokens": 3696,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 17.282405853271484
+      }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:82fafbb6349fc8aa534f8cc7a3e9cb66928c1404e78f97e4deb61b5380b77d8b",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
+      "evidenceHash": "sha256:6ceb38c83a124c6391e772f7d0439062f2fc496e9f1113fe34cf4f6ba95577cc",
+      "promptChars": 12679,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3593,
+        "completion_tokens": 393,
+        "total_tokens": 3986,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 28.501049041748047
+      }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:33e2a32d23e4b6ddf8b46687434b4b8541aaf6cb4d8c14deebbcd5e8c8eb6686",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
+      "evidenceHash": "sha256:6ceb38c83a124c6391e772f7d0439062f2fc496e9f1113fe34cf4f6ba95577cc",
+      "promptChars": 12650,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3584,
+        "completion_tokens": 170,
+        "total_tokens": 3754,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 20.688457489013672
+      }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:33e2a32d23e4b6ddf8b46687434b4b8541aaf6cb4d8c14deebbcd5e8c8eb6686",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
+      "evidenceHash": "sha256:6ceb38c83a124c6391e772f7d0439062f2fc496e9f1113fe34cf4f6ba95577cc",
+      "promptChars": 12643,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3580,
+        "completion_tokens": 356,
+        "total_tokens": 3936,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 27.157398223876953
+      }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:33e2a32d23e4b6ddf8b46687434b4b8541aaf6cb4d8c14deebbcd5e8c8eb6686",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
+      "evidenceHash": "sha256:55851ded8c27fdf43cd6d789dc8b4f0fdc1f9064b7d46465905c54611aec2dea",
+      "promptChars": 7666,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 2153,
+        "completion_tokens": 272,
+        "total_tokens": 2425,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 18.351314544677734
+      }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:33e2a32d23e4b6ddf8b46687434b4b8541aaf6cb4d8c14deebbcd5e8c8eb6686",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
-    },
-    {
-      "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:33e2a32d23e4b6ddf8b46687434b4b8541aaf6cb4d8c14deebbcd5e8c8eb6686",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
-    },
-    {
-      "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:33e2a32d23e4b6ddf8b46687434b4b8541aaf6cb4d8c14deebbcd5e8c8eb6686",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
-    },
-    {
-      "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:5c0cab0e5607d850ce3cc39935fcf64a895f597df36380bc26a1af29d315bf79",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
-    },
-    {
-      "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:5c0cab0e5607d850ce3cc39935fcf64a895f597df36380bc26a1af29d315bf79",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
-    },
-    {
-      "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:5c0cab0e5607d850ce3cc39935fcf64a895f597df36380bc26a1af29d315bf79",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
-    },
-    {
-      "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:5c0cab0e5607d850ce3cc39935fcf64a895f597df36380bc26a1af29d315bf79",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
-    },
-    {
-      "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:5c0cab0e5607d850ce3cc39935fcf64a895f597df36380bc26a1af29d315bf79",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
-    },
-    {
-      "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:5c0cab0e5607d850ce3cc39935fcf64a895f597df36380bc26a1af29d315bf79",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
-    },
-    {
-      "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:27726278bf89ecaa7effffe1ae1637ff17773f2bfff81ed2fcca88f8999635c3",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
-    },
-    {
-      "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:27726278bf89ecaa7effffe1ae1637ff17773f2bfff81ed2fcca88f8999635c3",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
-    },
-    {
-      "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:27726278bf89ecaa7effffe1ae1637ff17773f2bfff81ed2fcca88f8999635c3",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
-    },
-    {
-      "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:27726278bf89ecaa7effffe1ae1637ff17773f2bfff81ed2fcca88f8999635c3",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
-    },
-    {
-      "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:27726278bf89ecaa7effffe1ae1637ff17773f2bfff81ed2fcca88f8999635c3",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
-    },
-    {
-      "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:27726278bf89ecaa7effffe1ae1637ff17773f2bfff81ed2fcca88f8999635c3",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
-    },
-    {
-      "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:42d4f848f78dfbabe8e4b1f181010d61109b9c06a185014b0083c0d16411b42a",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
-    },
-    {
-      "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:42d4f848f78dfbabe8e4b1f181010d61109b9c06a185014b0083c0d16411b42a",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
-    },
-    {
-      "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:42d4f848f78dfbabe8e4b1f181010d61109b9c06a185014b0083c0d16411b42a",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
-    },
-    {
-      "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:42d4f848f78dfbabe8e4b1f181010d61109b9c06a185014b0083c0d16411b42a",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
-    },
-    {
-      "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:42d4f848f78dfbabe8e4b1f181010d61109b9c06a185014b0083c0d16411b42a",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
-    },
-    {
-      "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:42d4f848f78dfbabe8e4b1f181010d61109b9c06a185014b0083c0d16411b42a",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
-    },
-    {
-      "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:64a7312518a5a4105b46ff243a8c00b217d77479710e0c8ca2df813b792b0516",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
-    },
-    {
-      "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:64a7312518a5a4105b46ff243a8c00b217d77479710e0c8ca2df813b792b0516",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
-    },
-    {
-      "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:64a7312518a5a4105b46ff243a8c00b217d77479710e0c8ca2df813b792b0516",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
-    },
-    {
-      "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:64a7312518a5a4105b46ff243a8c00b217d77479710e0c8ca2df813b792b0516",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
-    },
-    {
-      "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:64a7312518a5a4105b46ff243a8c00b217d77479710e0c8ca2df813b792b0516",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
-    },
-    {
-      "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:64a7312518a5a4105b46ff243a8c00b217d77479710e0c8ca2df813b792b0516",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
-    },
-    {
-      "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:f0431a918ffb28d624f14fed2a67668e6d22f955cf73ccc0153c6253a89ee882",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
-    },
-    {
-      "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:f0431a918ffb28d624f14fed2a67668e6d22f955cf73ccc0153c6253a89ee882",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
-    },
-    {
-      "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:f0431a918ffb28d624f14fed2a67668e6d22f955cf73ccc0153c6253a89ee882",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
-    },
-    {
-      "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:f0431a918ffb28d624f14fed2a67668e6d22f955cf73ccc0153c6253a89ee882",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
-    },
-    {
-      "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:f0431a918ffb28d624f14fed2a67668e6d22f955cf73ccc0153c6253a89ee882",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
-    },
-    {
-      "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:f0431a918ffb28d624f14fed2a67668e6d22f955cf73ccc0153c6253a89ee882",
-      "promptChars": 5178,
-      "success": false,
-      "status": 400
-    },
-    {
-      "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:91505f739106ba2a17c2b24f57b3e6d47e96e158c811ca78d2f38cd4d2bb04e4",
+      "evidenceHash": "sha256:99c5b64ce947d808a83f97e46ca22073e737299d4fbfa70eceee03e184927800",
       "promptChars": 15323,
-      "success": false,
-      "status": 400
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3928,
+        "completion_tokens": 8000,
+        "total_tokens": 11928,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 295.1203308105469
+      }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:91505f739106ba2a17c2b24f57b3e6d47e96e158c811ca78d2f38cd4d2bb04e4",
+      "evidenceHash": "sha256:99c5b64ce947d808a83f97e46ca22073e737299d4fbfa70eceee03e184927800",
       "promptChars": 15323,
-      "success": false,
-      "status": 400
-    },
-    {
-      "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:91505f739106ba2a17c2b24f57b3e6d47e96e158c811ca78d2f38cd4d2bb04e4",
-      "promptChars": 15323,
-      "success": false,
-      "status": 400
-    },
-    {
-      "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:91505f739106ba2a17c2b24f57b3e6d47e96e158c811ca78d2f38cd4d2bb04e4",
-      "promptChars": 15323,
-      "success": false,
-      "status": 400
-    },
-    {
-      "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:91505f739106ba2a17c2b24f57b3e6d47e96e158c811ca78d2f38cd4d2bb04e4",
-      "promptChars": 15323,
-      "success": false,
-      "status": 400
-    },
-    {
-      "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:91505f739106ba2a17c2b24f57b3e6d47e96e158c811ca78d2f38cd4d2bb04e4",
-      "promptChars": 15323,
-      "success": false,
-      "status": 400
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3928,
+        "completion_tokens": 973,
+        "total_tokens": 4901,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 50.10410690307617
+      }
     }
   ],
-  "published": []
+  "published": [
+    {
+      "id": "ai-visit-korcula-2026-06-30-chess-school-for-children",
+      "en": "Chess School for Children.",
+      "date": "2026-06-30",
+      "town": "korcula"
+    }
+  ]
 }

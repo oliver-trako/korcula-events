@@ -277,7 +277,8 @@
     korculaAroundAugust: "korcula-around-august-calendar.jpeg",
     dancingQueenAbba: "dancing-queen-abba-tribute-korcula.jpeg",
     waterPoloChampionship: "korcula-water-polo-championship-2026.jpeg",
-    korculaUpcomingAugust: "korcula-upcoming-events-august-calendar.jpeg"
+    korculaUpcomingAugust: "korcula-upcoming-events-august-calendar.jpeg",
+    ljetoUKnjiznici: "728439557_1484342147071700_1265131594923239365_n.jpg"
   };
   const NO_FLYER_IDS = new Set(["kt-brodogradnja","kt-kulkviz","kt-moreska-season","kt-svtodor","kt-swordfest","kt-korkyra-baroque","kt-markopolo-gala","kt-winefest","kt-hajduk-istra","kt-hajduk-zalgiris","kt-hajduk-gorica","kt-hajduk-osijek"]);
 
@@ -289,6 +290,7 @@
     if (id === "kt-dancing-queen-abba") return flyerUrl(FLYERS.dancingQueenAbba);
     if (id === "kt-water-polo-championship") return flyerUrl(FLYERS.waterPoloChampionship);
     if (id === "kt-dino-dvornik-tribute") return flyerUrl(FLYERS.korculaUpcomingAugust);
+    if (id === "kt-ljeto-u-knjiznici") return flyerUrl(FLYERS.ljetoUKnjiznici);
     if (id.startsWith("kt-") && !NO_FLYER_IDS.has(id)) {
       const month = e.date.slice(5, 7), day = parseInt(e.date.slice(8, 10), 10);
       if (month === "07") return flyerUrl(day <= 14 ? FLYERS.kulturnoSrpanj1 : FLYERS.kulturnoSrpanj2);

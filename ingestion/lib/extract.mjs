@@ -210,7 +210,7 @@ function systemPrompt() {
  * site's real field names, town ids, and category vocabulary -- so no separate mapping layer
  * is needed between what the model returns and what site/data/events.json expects.
  */
-export async function extractEventsFromHtml(html, { completeJson, pageUrl, evidenceHash } = {}) {
+export async function extractEventsFromHtml(html, { completeJson, pageUrl, evidenceHash, onRejected } = {}) {
   if (typeof completeJson !== "function") throw new Error("extractEventsFromHtml requires a completeJson function");
   const pageText = htmlToPlainText(html);
   if (!pageText.trim()) return [];
@@ -223,8 +223,14 @@ export async function extractEventsFromHtml(html, { completeJson, pageUrl, evide
   const result = await completeJson(messages, extractionSchema(), evidenceHash);
   const events = Array.isArray(result?.events) ? result.events : [];
 
-  return events
-    .filter((e) => isPlausibleExtraction(e))
+  const plausible = [];
+  for (const e of events) {
+    const reason = implausibilityReason(e);
+    if (reason) onRejected?.({ candidate: e, reason });
+    else plausible.push(e);
+  }
+
+  return plausible
     .map((e) => ({
       hr: e.hr.trim(),
       en: e.en.trim(),
@@ -258,12 +264,16 @@ function nonEmptyDesc(desc) {
   return result;
 }
 
-function isPlausibleExtraction(e) {
-  if (!e || typeof e !== "object") return false;
-  for (const lang of LANGS) if (typeof e[lang] !== "string" || !e[lang].trim()) return false;
-  if (typeof e.venue !== "string" || !e.venue.trim()) return false;
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(e.date || "")) return false;
-  if (!TOWNS.some((t) => t.id === e.town)) return false;
-  if (!Array.isArray(e.cats) || e.cats.length === 0 || !e.cats.every((c) => CATS.includes(c))) return false;
-  return true;
+// Returns a rejection reason string, or null if the candidate is plausible -- a reason lets
+// callers log *why* a model-proposed candidate was silently dropped instead of only ever seeing
+// the final filtered count, which previously made "the model found nothing" and "the model found
+// something but our own filter discarded it" indistinguishable from the run log alone.
+function implausibilityReason(e) {
+  if (!e || typeof e !== "object") return "not-an-object";
+  for (const lang of LANGS) if (typeof e[lang] !== "string" || !e[lang].trim()) return `missing-lang:${lang}`;
+  if (typeof e.venue !== "string" || !e.venue.trim()) return "missing-venue";
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(e.date || "")) return `bad-date:${e.date}`;
+  if (!TOWNS.some((t) => t.id === e.town)) return `bad-town:${e.town}`;
+  if (!Array.isArray(e.cats) || e.cats.length === 0 || !e.cats.every((c) => CATS.includes(c))) return `bad-cats:${JSON.stringify(e.cats)}`;
+  return null;
 }

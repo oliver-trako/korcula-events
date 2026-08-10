@@ -126,7 +126,11 @@ async function processUrlEntry(source, urlEntry, ctx) {
       () => extractEventsFromHtml(fetched.body, {
         completeJson: aiClient.completeJson,
         pageUrl: urlEntry.url,
-        evidenceHash: fetched.contentHash
+        evidenceHash: fetched.contentHash,
+        // Visibility into candidates the model proposed but our own post-filter discarded --
+        // without this, "the model found nothing" and "the model found something we then
+        // silently dropped" were indistinguishable from the run log alone.
+        onRejected: ({ candidate, reason }) => log.rejectedCandidates.push({ sourceId: source.id, url: urlEntry.url, reason, candidate })
       }),
       AI_RETRY_OPTIONS
     );
@@ -186,7 +190,7 @@ async function run({ shadow }) {
   });
   const aiClient = { completeJson: throttle(rawAiClient.completeJson, MIN_MS_BETWEEN_AI_CALLS) };
 
-  const log = { runDate: new Date().toISOString().slice(0, 10), shadow, sources: [], errors: [] };
+  const log = { runDate: new Date().toISOString().slice(0, 10), shadow, sources: [], errors: [], rejectedCandidates: [] };
   const allPublished = [];
   const allReview = [];
 

@@ -2622,6 +2622,150 @@
       ],
       "duplicateMatches": [],
       "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-korcula-2026-04-29-moreska-sword-dance-2026",
+      "sourceId": "visit-korcula",
+      "sourceUrl": "https://visitkorcula.eu/en/events/",
+      "discoveredAt": "2026-08-10T07:32:24.892Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Moreška Mačka 2026",
+        "en": "Moreška Sword Dance 2026",
+        "de": "Moreška Sword Dance 2026",
+        "it": "Moreška Sword Dance 2026",
+        "sl": "Moreška Mačka 2026",
+        "fr": "Moreška Sword Dance 2026",
+        "date": "2026-04-29",
+        "endDate": "2026-10-14",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://visitkorcula.eu/en/events/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-korcula-2026-04-29-moreska-sword-dance-2026"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The 'title_en' field is a direct translation of the 'title_hr' field, which might suggest that the translation is not independent. This could be a concern if the page actually contains a different English title, but in this case, it's not enough to lower confidence.",
+        "The 'date' field is '2026-04-29', which appears to be the start date of the event. However, the 'endDate' field is '2026-10-14', which is a long period of time. This could be a concern if the page actually indicates that the event is a one-time occurrence, but in this case, it seems plausible that the event is recurring.",
+        "The 'venue' field is 'Korčula', which is a town. However, the 'town' field is also 'korcula', which is a different representation of the same town. This could be a concern if the page actually contains a different town name, but in this case, it's not enough to lower confidence.",
+        "The 'cats' field contains the category 'folklore', which seems plausible given the context of the page. However, the page does not explicitly mention the category 'folklore', which could be a concern if the page actually contains a different category.",
+        "The page does not contain any explicit information about the event's title, date, or venue. However, the event listing does appear on the page, which suggests that the extraction is likely to be correct. Nevertheless, the lack of explicit information could be a concern if the page actually contains conflicting information."
+      ],
+      "blockingReasons": [
+        "fuzzy-duplicate",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [
+        {
+          "eventId": "kt-moreska-season",
+          "title": "Moreška — historic sword dance",
+          "date": "2026-04-29",
+          "time": "21:00",
+          "venue": "Summer Cinema, Korčula",
+          "score": 0.912,
+          "reasons": [
+            "same date",
+            "same town",
+            "overlapping category",
+            "similar venue",
+            "similar title"
+          ]
+        },
+        {
+          "eventId": "kt-swordfest",
+          "title": "Korčula Island Sword Dance Festival",
+          "date": "2026-08-30",
+          "time": "varies",
+          "venue": "Grad Korčula i okolna sela",
+          "score": 0.705,
+          "reasons": [
+            "date within existing range",
+            "same town",
+            "overlapping category",
+            "similar venue",
+            "similar title"
+          ]
+        }
+      ],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-korcula-2026-06-29-robotics-programming-workshops",
+      "sourceId": "visit-korcula",
+      "sourceUrl": "https://visitkorcula.eu/en/events/",
+      "discoveredAt": "2026-08-10T07:32:24.892Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Radionice iz robotike i programiranja",
+        "en": "Robotics & Programming Workshops",
+        "de": "Robotics & Programming Workshops",
+        "it": "Robotics & Programming Workshops",
+        "sl": "Radionice iz robotike in programiranja",
+        "fr": "Robotics & Programming Workshops",
+        "date": "2026-06-29",
+        "endDate": "2026-08-24",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitkorcula.eu/en/events/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-korcula-2026-06-29-robotics-programming-workshops"
+      },
+      "verifierConfidence": 0.4,
+      "verifierConcerns": [
+        "The date '2026-06-29' appears to be out of sequence with the surrounding dates '29.04.2026 - 14.10.2026' and '29.06.2026 - 24.08.2026'. The date '30.06.2026 - 28.08.2026' is also suspiciously close to the extracted date. I'm lowering confidence because this specific date isn't clearly supported by the surrounding text.",
+        "The 'endDate' '2026-08-24' seems to be inconsistent with the provided 'date' '2026-06-29'. I'm lowering confidence because the provided date range doesn't appear to be clearly supported by the surrounding text.",
+        "The venue 'Korčula' appears to be the name of the island, not the specific venue of the event. I'm lowering confidence because the provided venue doesn't appear to be clearly supported by the surrounding text.",
+        "The town 'korcula' appears to be the same as the island 'Korčula'. I'm lowering confidence because the provided town doesn't appear to be clearly supported by the surrounding text.",
+        "The category 'kids' seems inconsistent with the title 'Robotics & Programming Workshops'. I'm lowering confidence because the provided category doesn't appear to be clearly supported by the surrounding text."
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.4"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-korcula-2026-06-30-chess-school-for-children",
+      "sourceId": "visit-korcula",
+      "sourceUrl": "https://visitkorcula.eu/en/events/",
+      "discoveredAt": "2026-08-10T07:32:24.892Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Škola šaha za djecu",
+        "en": "Chess School for Children",
+        "de": "Chess School for Children",
+        "it": "Chess School for Children",
+        "sl": "Šola šaha za otroke",
+        "fr": "Chess School for Children",
+        "date": "2026-06-30",
+        "endDate": "2026-08-28",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitkorcula.eu/en/events/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-korcula-2026-06-30-chess-school-for-children"
+      },
+      "verifierConfidence": 0.5,
+      "verifierConcerns": [
+        "The date '2026-06-30' for the event 'Škola šaha za djecu' (Chess School for Children) is listed near the dates for 'Robotics & Programming Workshops' which are '30.06.2026 - 28.08.2026'. This suggests that the date for 'Chess School for Children' might be '30.06.2026 - 28.08.2026' instead, which is a possible error.",
+        "The venue 'Korčula' is listed near a section with the heading 'ACI marina Korčula', which is a specific location on the island. It is possible that the event is actually held at 'ACI marina Korčula' instead of just 'Korčula'."
+      ],
+      "blockingReasons": [
+        "duplicate-id",
+        "verifier-confidence-below-threshold:0.5"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
     }
   ]
 }

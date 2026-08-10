@@ -188,352 +188,322 @@
   "totals": {
     "published": 0,
     "review": 3,
-    "aiCalls": 23
+    "aiCalls": 21
   },
   "aiUsage": [
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
       "evidenceHash": "sha256:3d68f3daaa0441ad1a54f0ed38a267766739b1697f33aa58b8ad318a43b9fc45",
-      "promptChars": 7643,
+      "promptChars": 7518,
       "success": true,
       "usage": {
-        "prompt_tokens": 1979,
-        "completion_tokens": 389,
-        "total_tokens": 2368,
+        "prompt_tokens": 1950,
+        "completion_tokens": 421,
+        "total_tokens": 2371,
         "prompt_tokens_details": {
           "cached_tokens": 0
         },
-        "neurons": 21.714218139648438
+        "neurons": 22.710552215576172
       }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
       "evidenceHash": "sha256:3d68f3daaa0441ad1a54f0ed38a267766739b1697f33aa58b8ad318a43b9fc45",
-      "promptChars": 3817,
+      "promptChars": 3811,
       "success": true,
       "usage": {
         "prompt_tokens": 1013,
-        "completion_tokens": 384,
-        "total_tokens": 1397,
+        "completion_tokens": 346,
+        "total_tokens": 1359,
         "prompt_tokens_details": {
           "cached_tokens": 0
         },
-        "neurons": 17.561349868774414
+        "neurons": 16.236371994018555
       }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
       "evidenceHash": "sha256:3d68f3daaa0441ad1a54f0ed38a267766739b1697f33aa58b8ad318a43b9fc45",
-      "promptChars": 3829,
+      "promptChars": 3834,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 1014,
+        "completion_tokens": 304,
+        "total_tokens": 1318,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 14.776041030883789
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:3d68f3daaa0441ad1a54f0ed38a267766739b1697f33aa58b8ad318a43b9fc45",
+      "promptChars": 3809,
       "success": true,
       "usage": {
         "prompt_tokens": 1010,
-        "completion_tokens": 266,
-        "total_tokens": 1276,
+        "completion_tokens": 185,
+        "total_tokens": 1195,
         "prompt_tokens_details": {
           "cached_tokens": 0
         },
-        "neurons": 13.434589385986328
-      }
-    },
-    {
-      "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:3d68f3daaa0441ad1a54f0ed38a267766739b1697f33aa58b8ad318a43b9fc45",
-      "promptChars": 3815,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 1006,
-        "completion_tokens": 271,
-        "total_tokens": 1277,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 13.592453956604004
+        "neurons": 10.610296249389648
       }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
       "evidenceHash": "sha256:80ba1cb6a4a40f8cf6c141562bcc4e86a2b0249595e992fd892a6edabfaa67a5",
-      "promptChars": 8108,
+      "promptChars": 7983,
       "success": true,
       "usage": {
-        "prompt_tokens": 2186,
-        "completion_tokens": 1336,
-        "total_tokens": 3522,
+        "prompt_tokens": 2157,
+        "completion_tokens": 2329,
+        "total_tokens": 4486,
         "prompt_tokens_details": {
           "cached_tokens": 0
         },
-        "neurons": 55.58659362792969
+        "neurons": 90.09090423583984
       }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:e74a262f00d903f3cbc19ebca722a2ceb0f13318bd03d9546de203f3f97245f1",
-      "promptChars": 13892,
+      "evidenceHash": "sha256:777dda5b7106abdec6cb2ca88a67455808f96c0fbf132ae275779d8a3bd14475",
+      "promptChars": 5943,
       "success": true,
       "usage": {
-        "prompt_tokens": 4569,
-        "completion_tokens": 8000,
-        "total_tokens": 12569,
+        "prompt_tokens": 1444,
+        "completion_tokens": 7,
+        "total_tokens": 1451,
         "prompt_tokens_details": {
           "cached_tokens": 0
         },
-        "neurons": 297.7603454589844
+        "neurons": 6.191278457641602
       }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:e74a262f00d903f3cbc19ebca722a2ceb0f13318bd03d9546de203f3f97245f1",
-      "promptChars": 13892,
+      "evidenceHash": "sha256:d52adda5b1027bc21f92146dc9a11af227ffc6c25a46d8167483a71a8f7361ec",
+      "promptChars": 5943,
       "success": true,
       "usage": {
-        "prompt_tokens": 4569,
-        "completion_tokens": 5455,
-        "total_tokens": 10024,
+        "prompt_tokens": 1444,
+        "completion_tokens": 7,
+        "total_tokens": 1451,
         "prompt_tokens_details": {
           "cached_tokens": 0
         },
-        "neurons": 209.02169799804688
+        "neurons": 6.191278457641602
       }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:cac3e73a12f7aea14e3fdad149c88e419bca71a1ad93a6e0e6be023c3e1be9c3",
-      "promptChars": 13237,
+      "evidenceHash": "sha256:12e7a9a42b96d8011d830cf8c00d6ca63f6662c7e2ba26e328d514d953a08691",
+      "promptChars": 5943,
       "success": true,
       "usage": {
-        "prompt_tokens": 4141,
-        "completion_tokens": 406,
-        "total_tokens": 4547,
+        "prompt_tokens": 1444,
+        "completion_tokens": 7,
+        "total_tokens": 1451,
         "prompt_tokens_details": {
           "cached_tokens": 0
         },
-        "neurons": 31.2113037109375
+        "neurons": 6.191278457641602
       }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:5818e5a8cea2f48a9d3a5d1f2ee2f9e13492c198a9df53cfd603e85e2dd1f503",
-      "promptChars": 10580,
+      "evidenceHash": "sha256:c789721bce13ef49905d79fce052b7e456a533c60aa32384ca888e16812f884f",
+      "promptChars": 5943,
       "success": true,
       "usage": {
-        "prompt_tokens": 3379,
-        "completion_tokens": 468,
-        "total_tokens": 3847,
+        "prompt_tokens": 1444,
+        "completion_tokens": 7,
+        "total_tokens": 1451,
         "prompt_tokens_details": {
           "cached_tokens": 0
         },
-        "neurons": 30.234766006469727
+        "neurons": 6.191278457641602
       }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:27cd97889773fdfa5fbc5c40c69313bfde547c778cc633916c2e3dde36072d1d",
-      "promptChars": 10629,
+      "evidenceHash": "sha256:9943eb3ebc045e25bf4fdb1a6f316d742c2d629b25fbb0cf39fc57f51febc25e",
+      "promptChars": 15880,
       "success": true,
       "usage": {
-        "prompt_tokens": 3096,
-        "completion_tokens": 1552,
-        "total_tokens": 4648,
+        "prompt_tokens": 4345,
+        "completion_tokens": 463,
+        "total_tokens": 4808,
         "prompt_tokens_details": {
           "cached_tokens": 0
         },
-        "neurons": 66.86593627929688
-      }
-    },
-    {
-      "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:df0e12af5afdb5fc450636d875b4b870ed75151980a7ad6ef4a31672c7030de7",
-      "promptChars": 11987,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 3897,
-        "completion_tokens": 8000,
-        "total_tokens": 11897,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 294.99267578125
+        "neurons": 34.03895568847656
       }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
       "evidenceHash": "sha256:df0e12af5afdb5fc450636d875b4b870ed75151980a7ad6ef4a31672c7030de7",
-      "promptChars": 11987,
+      "promptChars": 11862,
       "success": true,
       "usage": {
-        "prompt_tokens": 3897,
-        "completion_tokens": 456,
-        "total_tokens": 4353,
+        "prompt_tokens": 3868,
+        "completion_tokens": 538,
+        "total_tokens": 4406,
         "prompt_tokens_details": {
           "cached_tokens": 0
         },
-        "neurons": 31.949766159057617
+        "neurons": 34.68948745727539
       }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:327b4c8d6f740903eb6e91bde048fd2c9b850ee616cd2710b894fc0a953e3603",
-      "promptChars": 9211,
+      "evidenceHash": "sha256:b4d1720c0af61e01fc50e029b734f3bcc5cc16e35c80f84e268a363462a389f3",
+      "promptChars": 9086,
       "success": true,
       "usage": {
-        "prompt_tokens": 2933,
-        "completion_tokens": 706,
-        "total_tokens": 3639,
+        "prompt_tokens": 2904,
+        "completion_tokens": 1106,
+        "total_tokens": 4010,
         "prompt_tokens_details": {
           "cached_tokens": 0
         },
-        "neurons": 36.69643020629883
+        "neurons": 50.52412033081055
       }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:5d04a450bcd15f6d2e6faa9caa4ad99a83a6f8600fe0d7672b67eb78d84568c0",
-      "promptChars": 8517,
+      "evidenceHash": "sha256:60b7d7f5dbe6a89823844dd608c713c99c25b6256e1030d4e6341c36445647ac",
+      "promptChars": 5943,
       "success": true,
       "usage": {
-        "prompt_tokens": 2256,
-        "completion_tokens": 4505,
-        "total_tokens": 6761,
+        "prompt_tokens": 1444,
+        "completion_tokens": 7,
+        "total_tokens": 1451,
         "prompt_tokens_details": {
           "cached_tokens": 0
         },
-        "neurons": 166.37103271484375
+        "neurons": 6.191278457641602
       }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:f7458a85fd45636bdd2b1bb69dc941357ee89b254b1519dfff8db98f369389dc",
-      "promptChars": 10946,
+      "evidenceHash": "sha256:6f7d431bdfcfb80d6a4bb9d2231f8091e246993cfcc8f19e99720ba6313ad704",
+      "promptChars": 5943,
       "success": true,
       "usage": {
-        "prompt_tokens": 2706,
-        "completion_tokens": 802,
-        "total_tokens": 3508,
+        "prompt_tokens": 1444,
+        "completion_tokens": 7,
+        "total_tokens": 1451,
         "prompt_tokens_details": {
           "cached_tokens": 0
         },
-        "neurons": 39.10882568359375
+        "neurons": 6.191278457641602
       }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:abc4dccf24df2a77d57207e46e42f54f17acf80691c90b1a5c52768e53665bcc",
-      "promptChars": 16780,
+      "evidenceHash": "sha256:7d6b9a02c6126e20a4a2d34815be03474f2ad598bfcb16af04a7e017c3d6f02b",
+      "promptChars": 5943,
       "success": true,
       "usage": {
-        "prompt_tokens": 4797,
-        "completion_tokens": 311,
-        "total_tokens": 5108,
+        "prompt_tokens": 1444,
+        "completion_tokens": 7,
+        "total_tokens": 1451,
         "prompt_tokens_details": {
           "cached_tokens": 0
         },
-        "neurons": 30.600635528564453
+        "neurons": 6.191278457641602
       }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:9bd01c8273feec4ed3cf03e9c916567e13d0a972c36ee75b4712f2ed5797c60c",
-      "promptChars": 15223,
+      "evidenceHash": "sha256:d7c3dfee72dbdba51f14d62a27773ba38e0fa684892e24d7749aa9f09f4efe2e",
+      "promptChars": 5943,
       "success": true,
       "usage": {
-        "prompt_tokens": 4222,
-        "completion_tokens": 451,
-        "total_tokens": 4673,
+        "prompt_tokens": 1444,
+        "completion_tokens": 7,
+        "total_tokens": 1451,
         "prompt_tokens_details": {
           "cached_tokens": 0
         },
-        "neurons": 33.11396026611328
+        "neurons": 6.191278457641602
       }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:6ceb38c83a124c6391e772f7d0439062f2fc496e9f1113fe34cf4f6ba95577cc",
-      "promptChars": 16248,
+      "evidenceHash": "sha256:c2f9975d1cacdd4a2e769d7c1615875f06f696a8ac0e99811af6d0e0dbc550e9",
+      "promptChars": 5943,
       "success": true,
       "usage": {
-        "prompt_tokens": 4484,
-        "completion_tokens": 581,
-        "total_tokens": 5065,
+        "prompt_tokens": 1444,
+        "completion_tokens": 7,
+        "total_tokens": 1451,
         "prompt_tokens_details": {
           "cached_tokens": 0
         },
-        "neurons": 38.72583770751953
+        "neurons": 6.191278457641602
       }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:8d99da633486f93b34ff2cf4a127cc5f73a8c65257c793880ea1041513bd5604",
-      "promptChars": 7235,
+      "evidenceHash": "sha256:432adb5e8105f73c0ca18e85d952fa502d3c86fcd472a455f978e79f5344977d",
+      "promptChars": 5943,
       "success": true,
       "usage": {
-        "prompt_tokens": 1784,
-        "completion_tokens": 9,
-        "total_tokens": 1793,
+        "prompt_tokens": 1444,
+        "completion_tokens": 7,
+        "total_tokens": 1451,
         "prompt_tokens_details": {
           "cached_tokens": 0
         },
-        "neurons": 7.661325454711914
+        "neurons": 6.191278457641602
       }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:6ceb38c83a124c6391e772f7d0439062f2fc496e9f1113fe34cf4f6ba95577cc",
-      "promptChars": 16248,
+      "evidenceHash": "sha256:aa845ad9599c72a9cd5468bddcfc5d63088b60896b03ec9552357ec8d4a5f755",
+      "promptChars": 5943,
       "success": true,
       "usage": {
-        "prompt_tokens": 4484,
-        "completion_tokens": 8000,
-        "total_tokens": 12484,
+        "prompt_tokens": 1444,
+        "completion_tokens": 7,
+        "total_tokens": 1451,
         "prompt_tokens_details": {
           "cached_tokens": 0
         },
-        "neurons": 297.4102478027344
+        "neurons": 6.191278457641602
       }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:6ceb38c83a124c6391e772f7d0439062f2fc496e9f1113fe34cf4f6ba95577cc",
-      "promptChars": 16248,
+      "evidenceHash": "sha256:b30344a8497dd8303c88b5961e284571774705192f809c62f3b8ffca8f9b90f2",
+      "promptChars": 5943,
       "success": true,
       "usage": {
-        "prompt_tokens": 4484,
-        "completion_tokens": 988,
-        "total_tokens": 5472,
+        "prompt_tokens": 1444,
+        "completion_tokens": 7,
+        "total_tokens": 1451,
         "prompt_tokens_details": {
           "cached_tokens": 0
         },
-        "neurons": 52.91704559326172
+        "neurons": 6.191278457641602
       }
     },
     {
       "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:44b1efa4a7a768ecde50761966ec80643f7291ec6bb5a90ccb81e0fc29c30b91",
-      "promptChars": 8556,
+      "evidenceHash": "sha256:b9dacebc5e4cd2aabb7cfe5e5d695373bb349303caee1b0fab7ee107cc218ed9",
+      "promptChars": 16088,
       "success": true,
       "usage": {
-        "prompt_tokens": 2366,
-        "completion_tokens": 141,
-        "total_tokens": 2507,
+        "prompt_tokens": 4112,
+        "completion_tokens": 910,
+        "total_tokens": 5022,
         "prompt_tokens_details": {
           "cached_tokens": 0
         },
-        "neurons": 14.660881996154785
-      }
-    },
-    {
-      "model": "@cf/meta/llama-3.1-8b-instruct",
-      "evidenceHash": "sha256:442df5f80be79fc031885d50bc061f019a72946f718b0dc833b589f1718e6c00",
-      "promptChars": 16213,
-      "success": true,
-      "usage": {
-        "prompt_tokens": 4141,
-        "completion_tokens": 1630,
-        "total_tokens": 5771,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "neurons": 73.8895263671875
+        "neurons": 48.665252685546875
       }
     }
   ],

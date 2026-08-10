@@ -49,8 +49,8 @@ function extractionSchema() {
               it: { type: "string", description: `Your own faithful Italian translation of the title. ${TITLE_RULE}` },
               sl: { type: "string", description: `Your own faithful Slovenian translation of the title. ${TITLE_RULE}` },
               fr: { type: "string", description: `Your own faithful French translation of the title. ${TITLE_RULE}` },
-              date: { type: "string", description: "YYYY-MM-DD. Never guess a year, month, or day that isn't stated or unambiguously implied on the page." },
-              endDate: { type: "string", description: "YYYY-MM-DD, only for a multi-day event/exhibition/tournament with a stated end date." },
+              date: { type: "string", description: "Strict ISO YYYY-MM-DD -- always convert from whatever format the page uses (e.g. '11.8.2025' -> '2025-08-11'). Never copy the page's own raw date text into this field. Never guess a year, month, or day that isn't stated or unambiguously implied on the page." },
+              endDate: { type: "string", description: "Strict ISO YYYY-MM-DD, only for a multi-day event/exhibition/tournament/season with a stated end date. If the page states a range like '29.04.2026 - 14.10.2026', that is date='2026-04-29' and endDate='2026-10-14' -- never put the whole range string into date." },
               time: { type: "string", description: "24-hour HH:MM if a specific start time is given, otherwise omit -- do not write 'evening' or 'TBC'." },
               town: { type: "string", enum: TOWNS.map((t) => t.id) },
               venue: { type: "string", description: "The specific venue name/address, not just the town." },
@@ -146,6 +146,13 @@ function systemPrompt() {
     "doubt any individual date; only doubt a date if the date/time/venue for that specific row " +
     "isn't actually supported by the text near it.",
 
+    // Real production output: dates like "11.8.2025" were copied verbatim into the date field
+    // instead of being converted, even though the schema field says YYYY-MM-DD -- a small model
+    // doesn't reliably infer "convert this" from the target format alone; say it as its own step.
+    "Croatian pages write dates as 'D.M.YYYY', 'D.M.', or 'DD.MM.' -- always convert these into " +
+    "strict ISO YYYY-MM-DD for the date/endDate fields ('11.8.2025' becomes '2025-08-11'). Never " +
+    "copy the page's own day.month.year formatting directly into date or endDate.",
+
     // Croatian listings very commonly omit the year (e.g. "15.-20.8." or "petak, 21:00") because
     // it's implied by the page/season context. The original "never invent a missing fact" rule
     // was ambiguous about this -- it should not cause the model to drop a real date just because
@@ -170,7 +177,9 @@ function systemPrompt() {
     "similar) states this event's own start and end date -- extract it using the `date` field " +
     "for the start and `endDate` for the end, the same as any other multi-day event. A season " +
     "or program spanning months is a specific, real date range, not an absence of one; never " +
-    "omit it just because it's long.",
+    "omit it just because it's long. Convert BOTH into strict ISO YYYY-MM-DD: '29.04.2026 - " +
+    "14.10.2026' becomes date='2026-04-29', endDate='2026-10-14' -- never put the range string " +
+    "itself, in the page's own format, into the date field.",
 
     // Schema requires a `date` for every emitted event, which can push a model toward inventing
     // a plausible-looking one for a genuinely date-less recurring promo blurb rather than

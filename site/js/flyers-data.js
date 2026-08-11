@@ -63,7 +63,10 @@ const FLYERS = {
   marendaTripice: "mediteran-marenda-tripice.jpeg",
   indiraForzaJungle: "jungle-indira-forza-2026.jpeg",
   zrnovskaMakarunadaEn: "zrnovska-makarunada-2026-en.jpeg",
-  muskiBuceFinaleRaspored: "racisce-muski-buce-finale-raspored.jpeg"
+  muskiBuceFinaleRaspored: "racisce-muski-buce-finale-raspored.jpeg",
+  arhitekturaKo1525: "korcula-arhitektura-ko15-25-izlozba.jpeg",
+  kinoMalciCudovista0811: "kino-malci-cudovista-11082026.jpeg",
+  lutkeCvrcakIMrav0810: "lutke-cvrcak-i-mrav-10082026.jpeg"
 };
 
 const NO_FLYER_IDS = new Set(["kt-brodogradnja","kt-kulkviz","kt-moreska-season","kt-svtodor","kt-swordfest","kt-korkyra-baroque","kt-markopolo-gala","kt-winefest","kt-hajduk-istra","kt-hajduk-zalgiris","kt-hajduk-gorica","kt-hajduk-osijek"]);
@@ -91,6 +94,9 @@ function resolveFlyerFilename(id, date) {
   if (id === "kt-water-polo-championship") return FLYERS.waterPoloChampionship;
   if (id === "kt-dino-dvornik-tribute") return FLYERS.korculaUpcomingAugust;
   if (id === "kt-ljeto-u-knjiznici") return FLYERS.ljetoUKnjiznici;
+  if (id === "kt-arch-ko1525") return FLYERS.arhitekturaKo1525;
+  if (id === "kt-kino-0811") return FLYERS.kinoMalciCudovista0811;
+  if (id === "kt-lutke-0810") return FLYERS.lutkeCvrcakIMrav0810;
   if (id === "smk-jadranova") return FLYERS.jadranovaNocDivljeJagode;
   if (id === "racisce-buce-slavljenicka-vecera") return FLYERS.raciscelBuceSlavljenickaVecera;
   if (id === "racisce-marenda-tripice") return FLYERS.marendaTripice;

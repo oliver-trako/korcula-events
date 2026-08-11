@@ -59,7 +59,10 @@ const FLYERS = {
   ljetoUKnjiznici: "728439557_1484342147071700_1265131594923239365_n.jpg",
   jadranovaNocDivljeJagode: "jadranova-noc-divlje-jagode-2026.jpeg",
   jadranovaNocDivljeJagodeInfo: "jadranova-noc-divlje-jagode-info-2026.jpeg",
-  raciscelBuceSlavljenickaVecera: "racisce-buce-slavljenicka-vecera-2026.jpeg"
+  raciscelBuceSlavljenickaVecera: "racisce-buce-slavljenicka-vecera-2026.jpeg",
+  marendaTripice: "mediteran-marenda-tripice.jpeg",
+  indiraForzaJungle: "jungle-indira-forza-2026.jpeg",
+  zrnovskaMakarunadaEn: "zrnovska-makarunada-2026-en.jpeg"
 };
 
 const NO_FLYER_IDS = new Set(["kt-brodogradnja","kt-kulkviz","kt-moreska-season","kt-svtodor","kt-swordfest","kt-korkyra-baroque","kt-markopolo-gala","kt-winefest","kt-hajduk-istra","kt-hajduk-zalgiris","kt-hajduk-gorica","kt-hajduk-osijek"]);
@@ -68,7 +71,8 @@ const NO_FLYER_IDS = new Set(["kt-brodogradnja","kt-kulkviz","kt-moreska-season"
 // separate ticket-info graphic). Keys are event ids, values are FLYERS keys in display
 // order. Anything not listed here falls back to resolveFlyerFilename()'s single result.
 const MULTI_FLYERS = {
-  "smk-jadranova": ["jadranovaNocDivljeJagode", "jadranovaNocDivljeJagodeInfo"]
+  "smk-jadranova": ["jadranovaNocDivljeJagode", "jadranovaNocDivljeJagodeInfo"],
+  "zrnovo-makarunada": ["zrnovskaMakarunada", "zrnovskaMakarunadaEn"]
 };
 
 // Always returns an array (possibly empty) -- the plural counterpart to resolveFlyerFilename,
@@ -87,6 +91,8 @@ function resolveFlyerFilename(id, date) {
   if (id === "kt-ljeto-u-knjiznici") return FLYERS.ljetoUKnjiznici;
   if (id === "smk-jadranova") return FLYERS.jadranovaNocDivljeJagode;
   if (id === "racisce-buce-slavljenicka-vecera") return FLYERS.raciscelBuceSlavljenickaVecera;
+  if (id === "racisce-marenda-tripice") return FLYERS.marendaTripice;
+  if (id === "nl-indira-forza-jungle") return FLYERS.indiraForzaJungle;
   if (id.startsWith("kt-") && !NO_FLYER_IDS.has(id)) {
     const month = date.slice(5, 7), day = parseInt(date.slice(8, 10), 10);
     if (month === "07") return day <= 14 ? FLYERS.kulturnoSrpanj1 : FLYERS.kulturnoSrpanj2;

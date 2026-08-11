@@ -23,7 +23,7 @@ const appI18n = Function(`${appI18nSource}\nreturn I18N;`)();
 // classic <script>). Both used to be hand-duplicated in this file and had already drifted out
 // of sync (this file was missing ~19 newer flyer mappings app.js had).
 const flyersSource = await readFile(path.join(root, "site", "js", "flyers-data.js"), "utf8");
-const { FLYERS, NO_FLYER_IDS: SHARED_NO_FLYER_IDS, resolveFlyerFilename } = Function(`${flyersSource}\nreturn { FLYERS, NO_FLYER_IDS, resolveFlyerFilename };`)();
+const { FLYERS, NO_FLYER_IDS: SHARED_NO_FLYER_IDS, resolveFlyerFilename, resolveFlyerFilenames } = Function(`${flyersSource}\nreturn { FLYERS, NO_FLYER_IDS, resolveFlyerFilename, resolveFlyerFilenames };`)();
 const eventTranslationsSource = await readFile(path.join(root, "site", "js", "event-translations-data.js"), "utf8");
 const { translateEventText } = Function(`${eventTranslationsSource}\nreturn { translateEventText };`)();
 
@@ -643,6 +643,21 @@ function getFlyer(event) {
   return filename ? flyerUrl(filename) : null;
 }
 
+function getFlyers(event) {
+  if (event.seriesId && SHARED_NO_FLYER_IDS.has(event.seriesId)) return [];
+  return resolveFlyerFilenames(event.id, event.date).map(flyerUrl);
+}
+
+
+// Extra raw poster photos beyond the primary (auto-generated composite) image, rendered as
+// small linked thumbnails under the main hero image -- see MULTI_FLYERS in flyers-data.js.
+function extraPosterThumbs(event) {
+  const extras = getFlyers(event).slice(1);
+  if (!extras.length) return "";
+  return `<div class="seo-poster-extra">${extras.map((src) =>
+    `<a href="${esc(src)}"><img src="${esc(src)}" alt="" loading="lazy"></a>`
+  ).join("")}</div>`;
+}
 
 function eventImageUrls(event) {
   const base = `/assets/event-images/${slugify(event.id)}`;
@@ -962,6 +977,8 @@ ${alternates}
 .seo-event-layout{display:grid;grid-template-columns:minmax(0,1fr) 220px;gap:18px;align-items:start}
 .seo-poster{align-self:start;background:#fff;border:1px solid var(--border);border-radius:12px;padding:10px;box-shadow:var(--shadow)}
 .seo-poster img{display:block;width:100%;height:auto;aspect-ratio:16/9;border-radius:8px;object-fit:cover}
+.seo-poster-extra{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
+.seo-poster-extra img{width:72px;height:72px;border-radius:6px;object-fit:cover;border:1px solid var(--border)}
 .seo-action-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
 .seo-action{display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--border);border-radius:8px;padding:9px 11px;color:var(--sea-deeper);background:#fff;font:inherit;font-weight:800;text-decoration:none;font-size:.82rem;cursor:pointer}
 .seo-action.primary{background:var(--sea-deep);border-color:var(--sea-deep);color:#fff}
@@ -1521,7 +1538,7 @@ async function buildSeoPages(data) {
                 <button class="seo-action" type="button" data-copy-url="${esc(url)}">Copy link / Instagram</button>
               </div>
             </div>
-            <aside class="seo-poster"><a href="${esc(flyer)}"><img src="${esc(flyer)}" alt="${esc(datedTitle)} event image" width="1920" height="1080" fetchpriority="high"></a></aside>
+            <aside class="seo-poster"><a href="${esc(flyer)}"><img src="${esc(flyer)}" alt="${esc(datedTitle)} event image" width="1920" height="1080" fetchpriority="high"></a>${extraPosterThumbs(event)}</aside>
           </div>
           <div class="seo-pill-row">${pills}</div>
           ${guideLinks.length ? `<nav class="seo-nav" aria-label="Related Korčula event guides">${guideLinks.map(([label, href]) => `<a href="${esc(href)}">${esc(label)}</a>`).join("")}</nav>` : ""}
@@ -1901,7 +1918,7 @@ async function buildSeoPages(data) {
                   <button class="seo-action" type="button" data-copy-url="${esc(url)}">${esc(appUi.copyLink)}</button>
                 </div>
               </div>
-              <aside class="seo-poster"><a href="${esc(image)}"><img src="${esc(image)}" alt="${esc(datedTitle)}" width="1920" height="1080" fetchpriority="high"></a></aside>
+              <aside class="seo-poster"><a href="${esc(image)}"><img src="${esc(image)}" alt="${esc(datedTitle)}" width="1920" height="1080" fetchpriority="high"></a>${extraPosterThumbs(event)}</aside>
             </div>
             <div class="seo-pill-row">${pills}</div>
             ${guideLinks.length ? `<nav class="seo-nav">${guideLinks.map(([label, href]) => `<a href="${esc(href)}">${esc(label)}</a>`).join("")}</nav>` : ""}

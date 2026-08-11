@@ -249,6 +249,10 @@
     return filename ? flyerUrl(filename) : null;
   }
 
+  function getFlyers(e) {
+    return resolveFlyerFilenames(e.id, e.date).map(flyerUrl);
+  }
+
   let lastFocusedEl = null;
   let galleryItems = [];
   let galleryIndex = -1;
@@ -258,13 +262,13 @@
     $("#galleryNext").hidden = !visible;
   }
 
-  function openFlyer(url, ev, gallery, index) {
+  function openFlyer(url, ev, gallery, index, altText) {
     if (ev) ev.stopPropagation();
     lastFocusedEl = document.activeElement;
     galleryItems = gallery || [];
     galleryIndex = Number.isInteger(index) ? index : -1;
     $("#flyerImg").src = url;
-    $("#flyerImg").alt = galleryItems.length ? "Račišće photo" : "Event flyer";
+    $("#flyerImg").alt = altText || (galleryItems.length ? "Račišće photo" : "Event flyer");
     setGalleryNavVisible(galleryItems.length > 1);
     $("#flyerModal").hidden = false;
     document.body.style.overflow = "hidden";
@@ -589,15 +593,15 @@
     card.appendChild(badge);
     card.appendChild(body);
 
-    const flyer = getFlyer(e);
-    if (flyer) {
+    const flyers = getFlyers(e);
+    if (flyers.length) {
       const flyerBtn = document.createElement("button");
       flyerBtn.type = "button";
       flyerBtn.className = "event-flyer-btn";
       flyerBtn.textContent = T.viewFlyer;
       flyerBtn.addEventListener("click", (ev) => {
         ev.stopPropagation();
-        openFlyer(flyer, ev);
+        openFlyer(flyers[0], ev, flyers.length > 1 ? flyers : undefined, flyers.length > 1 ? 0 : undefined, "Event flyer");
       });
       card.appendChild(flyerBtn);
     }
@@ -955,12 +959,12 @@
       body.querySelector(".modal-body").appendChild(linkRow);
     }
 
-    const flyer = getFlyer(e);
-    if (flyer) {
+    const flyers = getFlyers(e);
+    if (flyers.length) {
       const flyerBtn = document.createElement("button");
       flyerBtn.className = "modal-flyer-btn";
-      flyerBtn.textContent = T.viewFlyer;
-      flyerBtn.onclick = () => openFlyer(flyer);
+      flyerBtn.textContent = flyers.length > 1 ? `${T.viewFlyer} (${flyers.length})` : T.viewFlyer;
+      flyerBtn.onclick = () => openFlyer(flyers[0], null, flyers.length > 1 ? flyers : undefined, flyers.length > 1 ? 0 : undefined, "Event flyer");
       body.querySelector(".modal-body").appendChild(flyerBtn);
     }
 

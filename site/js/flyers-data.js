@@ -56,10 +56,28 @@ const FLYERS = {
   dancingQueenAbba: "dancing-queen-abba-tribute-korcula.jpeg",
   waterPoloChampionship: "korcula-water-polo-championship-2026.jpeg",
   korculaUpcomingAugust: "korcula-upcoming-events-august-calendar.jpeg",
-  ljetoUKnjiznici: "728439557_1484342147071700_1265131594923239365_n.jpg"
+  ljetoUKnjiznici: "728439557_1484342147071700_1265131594923239365_n.jpg",
+  jadranovaNocDivljeJagode: "jadranova-noc-divlje-jagode-2026.jpeg",
+  jadranovaNocDivljeJagodeInfo: "jadranova-noc-divlje-jagode-info-2026.jpeg",
+  raciscelBuceSlavljenickaVecera: "racisce-buce-slavljenicka-vecera-2026.jpeg"
 };
 
 const NO_FLYER_IDS = new Set(["kt-brodogradnja","kt-kulkviz","kt-moreska-season","kt-svtodor","kt-swordfest","kt-korkyra-baroque","kt-markopolo-gala","kt-winefest","kt-hajduk-istra","kt-hajduk-zalgiris","kt-hajduk-gorica","kt-hajduk-osijek"]);
+
+// Events with more than one poster/photo worth showing (e.g. a main poster plus a
+// separate ticket-info graphic). Keys are event ids, values are FLYERS keys in display
+// order. Anything not listed here falls back to resolveFlyerFilename()'s single result.
+const MULTI_FLYERS = {
+  "smk-jadranova": ["jadranovaNocDivljeJagode", "jadranovaNocDivljeJagodeInfo"]
+};
+
+// Always returns an array (possibly empty) -- the plural counterpart to resolveFlyerFilename,
+// used wherever a gallery of every poster for an event (not just the primary one) is wanted.
+function resolveFlyerFilenames(id, date) {
+  if (MULTI_FLYERS[id]) return MULTI_FLYERS[id].map((key) => FLYERS[key]).filter(Boolean);
+  const single = resolveFlyerFilename(id, date);
+  return single ? [single] : [];
+}
 
 function resolveFlyerFilename(id, date) {
   if (id.startsWith("kt-fermata")) return FLYERS.fermata;
@@ -67,6 +85,8 @@ function resolveFlyerFilename(id, date) {
   if (id === "kt-water-polo-championship") return FLYERS.waterPoloChampionship;
   if (id === "kt-dino-dvornik-tribute") return FLYERS.korculaUpcomingAugust;
   if (id === "kt-ljeto-u-knjiznici") return FLYERS.ljetoUKnjiznici;
+  if (id === "smk-jadranova") return FLYERS.jadranovaNocDivljeJagode;
+  if (id === "racisce-buce-slavljenicka-vecera") return FLYERS.raciscelBuceSlavljenickaVecera;
   if (id.startsWith("kt-") && !NO_FLYER_IDS.has(id)) {
     const month = date.slice(5, 7), day = parseInt(date.slice(8, 10), 10);
     if (month === "07") return day <= 14 ? FLYERS.kulturnoSrpanj1 : FLYERS.kulturnoSrpanj2;

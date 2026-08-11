@@ -62,7 +62,8 @@ const FLYERS = {
   raciscelBuceSlavljenickaVecera: "racisce-buce-slavljenicka-vecera-2026.jpeg",
   marendaTripice: "mediteran-marenda-tripice.jpeg",
   indiraForzaJungle: "jungle-indira-forza-2026.jpeg",
-  zrnovskaMakarunadaEn: "zrnovska-makarunada-2026-en.jpeg"
+  zrnovskaMakarunadaEn: "zrnovska-makarunada-2026-en.jpeg",
+  muskiBuceFinaleRaspored: "racisce-muski-buce-finale-raspored.jpeg"
 };
 
 const NO_FLYER_IDS = new Set(["kt-brodogradnja","kt-kulkviz","kt-moreska-season","kt-svtodor","kt-swordfest","kt-korkyra-baroque","kt-markopolo-gala","kt-winefest","kt-hajduk-istra","kt-hajduk-zalgiris","kt-hajduk-gorica","kt-hajduk-osijek"]);
@@ -72,7 +73,8 @@ const NO_FLYER_IDS = new Set(["kt-brodogradnja","kt-kulkviz","kt-moreska-season"
 // order. Anything not listed here falls back to resolveFlyerFilename()'s single result.
 const MULTI_FLYERS = {
   "smk-jadranova": ["jadranovaNocDivljeJagode", "jadranovaNocDivljeJagodeInfo"],
-  "zrnovo-makarunada": ["zrnovskaMakarunada", "zrnovskaMakarunadaEn"]
+  "zrnovo-makarunada": ["zrnovskaMakarunada", "zrnovskaMakarunadaEn"],
+  "racisce-muski-buce": ["litoURaciscu", "muskiBuceFinaleRaspored"]
 };
 
 // Always returns an array (possibly empty) -- the plural counterpart to resolveFlyerFilename,

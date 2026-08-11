@@ -34,6 +34,14 @@
 
   const $ = (sel, root) => (root || document).querySelector(sel);
   const $$ = (sel, root) => Array.from((root || document).querySelectorAll(sel));
+
+  // Event fields (title, venue, description, and other practical-facts text) are AI-extracted
+  // from arbitrary third-party pages -- never trust them as safe HTML. Every place below that
+  // builds markup via string concatenation instead of textContent must escape through this.
+  const HTML_ESCAPES = { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" };
+  function escapeHtml(value) {
+    return String(value ?? "").replace(/[&<>"']/g, (ch) => HTML_ESCAPES[ch]);
+  }
   const setText = (sel, text) => {
     const node = $(sel);
     if (node) node.textContent = text;
@@ -230,112 +238,15 @@
 
   // ---------- Flyer lookup ----------
   // Points at the original poster photos (kept in the "2026 Events" folder, one level above /site/).
+  // FLYERS/NO_FLYER_IDS/resolveFlyerFilename come from flyers-data.js (loaded before this script
+  // in index.html) -- the single shared source of truth also used by scripts/build-site.mjs.
   const FLYER_BASE = "../2026 Events/";
-  const FLYERS = {
-    hkdNapredak: "711533429_10238862739681621_7132440665447619987_n.jpg",
-    brunoRacki: "726622978_1324662396311754_1196331273202483318_n.jpg",
-    fermata: "729089446_1330560095917082_5424991246713228614_n.jpg",
-    malaVelaLukaSah: "733810265_1004139169178619_7406030034854469969_n.jpg",
-    sinisaVuco: "739965778_3184088421782240_727211797039421734_n.jpg",
-    praviPrijatelj: "741439623_1623547135830221_2514987522212171195_n.jpg",
-    ekoKlik: "726427451_1622113932189830_4644658454319049907_n.jfif",
-    blatskoLjeto: "728951558_2842843536074422_8664357824117296469_n.jfif",
-    kulturnoAvgust1: "729080791_2365533420921531_4732103117572546297_n.jfif",
-    kulturnoSrpanj1: "729089537_2052799258997320_7966040970482679038_n.jfif",
-    kulturnoAvgust2: "729953708_1801545614355331_6875222987793021677_n.jfif",
-    kulturnoSrpanj2: "730584727_2758199641242412_4857147205496412772_n.jfif",
-    nogometNaPlazi: "731808257_2355501548310712_7501183823000969035_n.jfif",
-    hakunaMatata: "741209865_1350510197149943_3713384124144151341_n.jfif",
-    lumbarajskeUzance: "WhatsApp Image 2026-07-08 at 22.58.52.jpeg",
-    smokviskoLito: "WhatsApp Image 2026-07-08 at 23.01.19.jpeg",
-    litoUPostrani: "WhatsApp Image 2026-07-08 at 23.01.33.jpeg",
-    dicoHomo: "WhatsApp Image 2026-07-08 at 23.01.40.jpeg",
-    luskoLito: "WhatsApp Image 2026-07-08 at 23.01.50.jpeg",
-    litoURaciscu: "lito-u-raciscu.jpeg",
-    vecerPrsuta: "742480682_122111178783315720_7349343465846962909_n.jpg",
-    vecerPrsuta2: "mediteran-prsut-sir-vino-2.jpeg",
-    vesnaHariBlato: "vesna-pisarovic-hari-roncevic-blato.jpeg",
-    tragUBeskraju: "trag-u-beskraju-2026-program.jpeg",
-    zenskiBuce: "racisce-zenski-turnir-buce-2026.jpeg",
-    racisceFutsal: "racisce-malonogometni-turnir-2026.jpeg",
-    sandraAfrika: "sandra-afrika-the-jungle-korcula-2026.jpg",
-    slusaonicaOlivera: "slusaonica-olivera-mediteran-racisce-2026.jpg",
-    marendaDivljac: "mediteran-marenda-divljac-njoki.jpeg",
-    magazinBlato: "magazin-blato-plokata.jpeg",
-    futsalFinale: "racisce-malonogometni-finale-2026.jpeg",
-    kolovozRaciscuKalendar: "kolovoz-u-raciscu-kalendar-2026.jpeg",
-    pupnatDanMjesta: "pupnat-danmjesta-05082026.jpeg",
-    folkloreEveningBlato: "kumpanjija-blato-folklore-evening.jpeg",
-    zmajVeterani: "bsk-zmaj-blato-100-godina-veterani.jpeg",
-    zmajPetarGraso: "bsk-zmaj-blato-100-godina-petar-graso.jpeg",
-    sylviaBatistic: "sylvia-batistic-unutarnji-krajolici.jpeg",
-    zrnovskaMakarunada: "zrnovska-makarunada-2026.jpeg",
-    knezaRibarska: "kneska-ribarska-vecer-2026.jpeg",
-    marendaBakalar: "mediteran-marenda-bakalar-crveno.jpeg",
-    zukovicaPredavanje: "racisce-spilja-zukovica-predavanje.jpeg",
-    velaLukaFolkloreAug: "vela-luka-folklore-evenings-august.jpeg",
-    korculaAroundAugust: "korcula-around-august-calendar.jpeg",
-    dancingQueenAbba: "dancing-queen-abba-tribute-korcula.jpeg",
-    waterPoloChampionship: "korcula-water-polo-championship-2026.jpeg",
-    korculaUpcomingAugust: "korcula-upcoming-events-august-calendar.jpeg",
-    ljetoUKnjiznici: "728439557_1484342147071700_1265131594923239365_n.jpg"
-  };
-  const NO_FLYER_IDS = new Set(["kt-brodogradnja","kt-kulkviz","kt-moreska-season","kt-svtodor","kt-swordfest","kt-korkyra-baroque","kt-markopolo-gala","kt-winefest","kt-hajduk-istra","kt-hajduk-zalgiris","kt-hajduk-gorica","kt-hajduk-osijek"]);
 
   function flyerUrl(name) { return FLYER_BASE + encodeURIComponent(name).replace(/%2F/g, "/"); }
 
   function getFlyer(e) {
-    const id = e.id;
-    if (id.startsWith("kt-fermata")) return flyerUrl(FLYERS.fermata);
-    if (id === "kt-dancing-queen-abba") return flyerUrl(FLYERS.dancingQueenAbba);
-    if (id === "kt-water-polo-championship") return flyerUrl(FLYERS.waterPoloChampionship);
-    if (id === "kt-dino-dvornik-tribute") return flyerUrl(FLYERS.korculaUpcomingAugust);
-    if (id === "kt-ljeto-u-knjiznici") return flyerUrl(FLYERS.ljetoUKnjiznici);
-    if (id.startsWith("kt-") && !NO_FLYER_IDS.has(id)) {
-      const month = e.date.slice(5, 7), day = parseInt(e.date.slice(8, 10), 10);
-      if (month === "07") return flyerUrl(day <= 14 ? FLYERS.kulturnoSrpanj1 : FLYERS.kulturnoSrpanj2);
-      if (month === "08") return flyerUrl(day <= 12 ? FLYERS.kulturnoAvgust1 : FLYERS.kulturnoAvgust2);
-      return null;
-    }
-    if (id === "lb-lutke-ekoklik") return flyerUrl(FLYERS.ekoKlik);
-    if (id === "lb-lutke-prijatelj" || id === "lb-lutke-0820") return flyerUrl(FLYERS.praviPrijatelj);
-    if (id === "lb-nogomet") return flyerUrl(FLYERS.nogometNaPlazi);
-    if (id === "lb-hakuna") return flyerUrl(FLYERS.hakunaMatata);
-    if (id.startsWith("lb-")) return flyerUrl(FLYERS.lumbarajskeUzance);
-    if (id === "vl-napredak") return flyerUrl(FLYERS.hkdNapredak);
-    if (id === "vl-racki") return flyerUrl(FLYERS.brunoRacki);
-    if (id === "vl-chess-mala") return flyerUrl(FLYERS.malaVelaLukaSah);
-    if (id.startsWith("vl-oliver")) return flyerUrl(FLYERS.tragUBeskraju);
-    if (id.startsWith("vl-folk-")) return flyerUrl(FLYERS.velaLukaFolkloreAug);
-    if (id.startsWith("vl-")) return flyerUrl(FLYERS.luskoLito);
-    if (id === "blato-vesna-pisarovic-hari-roncevic") return flyerUrl(FLYERS.vesnaHariBlato);
-    if (id === "blato-magazin") return flyerUrl(FLYERS.magazinBlato);
-    if (id === "blato-zlinje-veterani") return flyerUrl(FLYERS.zmajVeterani);
-    if (id === "blato-petar-graso-domenica") return flyerUrl(FLYERS.zmajPetarGraso);
-    if (id === "blato-folklore-evening") return flyerUrl(FLYERS.folkloreEveningBlato);
-    if (id.startsWith("blato-")) return flyerUrl(FLYERS.blatskoLjeto);
-    if (id.startsWith("smk-")) return flyerUrl(FLYERS.smokviskoLito);
-    if (id.startsWith("pst-")) return flyerUrl(FLYERS.litoUPostrani);
-    if (id === "racisce-zenski-buce") return flyerUrl(FLYERS.zenskiBuce);
-    if (id === "racisce-malonogometni-turnir-finale") return flyerUrl(FLYERS.futsalFinale);
-    if (id === "racisce-malonogometni-turnir-2026") return flyerUrl(FLYERS.racisceFutsal);
-    if (id === "racisce-slusaonica-oliver") return flyerUrl(FLYERS.slusaonicaOlivera);
-    if (id === "racisce-vecer-prsuta-2") return flyerUrl(FLYERS.vecerPrsuta2);
-    if (id === "racisce-vecer-prsuta") return flyerUrl(FLYERS.vecerPrsuta);
-    if (id === "racisce-marenda-divljac-njoki") return flyerUrl(FLYERS.marendaDivljac);
-    if (id === "racisce-marenda-bakalar") return flyerUrl(FLYERS.marendaBakalar);
-    if (id === "racisce-zukovica-zbornik") return flyerUrl(FLYERS.zukovicaPredavanje);
-    if (id === "racisce-igre-racica" || id === "racisce-kronike") return flyerUrl(FLYERS.kolovozRaciscuKalendar);
-    if (id.startsWith("racisce-")) return flyerUrl(FLYERS.litoURaciscu);
-    if (id === "cara-vuco") return flyerUrl(FLYERS.sinisaVuco);
-    if (id === "nl-sandra-afrika-jungle") return flyerUrl(FLYERS.sandraAfrika);
-    if (id.startsWith("rc-")) return flyerUrl(FLYERS.dicoHomo);
-    if (id === "pupnat-danmjesta") return flyerUrl(FLYERS.pupnatDanMjesta);
-    if (id === "kneze-ribarska-vecer") return flyerUrl(FLYERS.knezaRibarska);
-    if (id === "lumbarda-sylvia-batistic") return flyerUrl(FLYERS.sylviaBatistic);
-    if (id === "zrnovo-makarunada") return flyerUrl(FLYERS.zrnovskaMakarunada);
-    if (id === "zrnovo-folklore-noc") return flyerUrl(FLYERS.korculaAroundAugust);
-    return null;
+    const filename = resolveFlyerFilename(e.id, e.date);
+    return filename ? flyerUrl(filename) : null;
   }
 
   let lastFocusedEl = null;
@@ -442,293 +353,9 @@
     return time.length <= 10 ? time : "•";
   }
 
-  const eventTranslationRules = {
-    de: [
-      ["\"Kids, Let's Play!\" — Croatian Red Cross children's day camp", "\"Kinder, lasst uns spielen!\" — Tagescamp des Kroatischen Roten Kreuzes"],
-      ["Beach games with Lumpar", "Strandspiele mit Lumpar"],
-      ["Blue Bar / Blue Club — rotating DJ nights", "Blue Bar / Blue Club — wechselnde DJ-Abende"],
-      ["La Banya — weekly \"Disco Aperitivo Monday\" and live jazz evenings", "La Banya — wöchentlicher \"Disco Aperitivo Monday\" und Live-Jazz-Abende"],
-      ["Konoba Casablanca — waterfront bar that turns into a club after midnight", "Konoba Casablanca — Bar an der Uferpromenade, die nach Mitternacht zum Club wird"],
-      ["Korčula Island", "Insel Korčula"],
-      ["Korčula's Wooden Shipbuilding", "Korčulas Holzschiffbau"],
-      ["Summer in", "Sommer in"],
-      ["Summer Festival", "Sommerfestival"],
-      ["historic sword dance", "historischer Schwerttanz"],
-      ["traditional sword dance", "traditioneller Schwerttanz"],
-      ["Sword Dance Festival", "Schwerttanzfestival"],
-      ["Wine Festival", "Weinfestival"],
-      ["Wine Night", "Weinabend"],
-      ["Food & Wine", "Essen & Wein"],
-      ["Food and wine", "Essen und Wein"],
-      ["Classical concert", "Klassisches Konzert"],
-      ["Concert:", "Konzert:"],
-      ["Concert —", "Konzert —"],
-      ["Cinema:", "Kino:"],
-      ["Mediterranean Cinema:", "Kino Mediteran:"],
-      ["Mediterranean Kino:", "Kino Mediteran:"],
-      ["Exhibition:", "Ausstellung:"],
-      ["Painting exhibition:", "Gemäldeausstellung:"],
-      ["Exhibition of", "Ausstellung von"],
-      ["paintings & sketches", "Gemälde und Skizzen"],
-      ["By the Sea", "Am Meer"],
-      ["Lecture:", "Vortrag:"],
-      ["Book presentation:", "Buchvorstellung:"],
-      ["Puppet show:", "Puppentheater:"],
-      ["Children's theatre:", "Kindertheater:"],
-      ["Children's play", "Kindertheaterstück"],
-      ["Theatre play:", "Theaterstück:"],
-      ["Comedy play", "Komödie"],
-      ["Stand-up comedy:", "Stand-up-Comedy:"],
-      ["Sensory screening:", "Sensorische Vorführung:"],
-      ["workshop for children", "Workshop für Kinder"],
-      ["workshop", "Workshop"],
-      ["for children", "für Kinder"],
-      ["children's", "Kinder-"],
-      ["kids", "Kinder"],
-      ["tournament", "Turnier"],
-      ["football tournament", "Fußballturnier"],
-      ["bocce tournament", "Boule-Turnier"],
-      ["chess tournament", "Schachturnier"],
-      ["charity football match", "Benefiz-Fußballspiel"],
-      ["Folklore Evening", "Folkloreabend"],
-      ["Folklore evening", "Folkloreabend"],
-      ["Local village feast", "Lokales Dorffest"],
-      ["Village Day", "Dorftag"],
-      ["Feast Day", "Festtag"],
-      ["Feast of", "Fest des"],
-      ["nightlife programme", "Abendprogramm"],
-      ["regular DJ nights", "regelmäßige DJ-Abende"],
-      ["near-nightly DJ sets", "DJ-Sets fast jeden Abend"],
-      ["open-air club", "Open-Air-Club"],
-      ["live music", "Livemusik"],
-      ["free entry", "freier Eintritt"],
-      ["comedy", "Komödie"],
-      ["synced", "synchronisiert"],
-      ["weekly", "wöchentlich"],
-      ["evening", "Abend"],
-      ["traditional gastronomic event", "traditionelles Gastronomie-Fest"],
-      ["Tastes & Scents of the Homeland", "Geschmäcker und Düfte der Heimat"],
-      ["Days of", "Tage von"],
-      ["Night of", "Nacht der"],
-      ["Festival of", "Festival der"]
-    ],
-    it: [
-      ["\"Kids, Let's Play!\" — Croatian Red Cross children's day camp", "\"Bambini, giochiamo!\" — centro diurno della Croce Rossa croata"],
-      ["Beach games with Lumpar", "Giochi in spiaggia con Lumpar"],
-      ["Blue Bar / Blue Club — rotating DJ nights", "Blue Bar / Blue Club — serate DJ a rotazione"],
-      ["La Banya — weekly \"Disco Aperitivo Monday\" and live jazz evenings", "La Banya — \"Disco Aperitivo Monday\" settimanale e serate jazz dal vivo"],
-      ["Konoba Casablanca — waterfront bar that turns into a club after midnight", "Konoba Casablanca — bar sul lungomare che dopo mezzanotte diventa club"],
-      ["Korčula Island", "Isola di Korčula"],
-      ["Korčula's Wooden Shipbuilding", "Costruzione navale in legno di Korčula"],
-      ["Summer in", "Estate a"],
-      ["Summer Festival", "Festival estivo"],
-      ["historic sword dance", "danza storica delle spade"],
-      ["traditional sword dance", "danza tradizionale delle spade"],
-      ["Sword Dance Festival", "Festival delle danze con le spade"],
-      ["Wine Festival", "Festival del vino"],
-      ["Wine Night", "Serata del vino"],
-      ["Food & Wine", "Cibo e vino"],
-      ["Food and wine", "Cibo e vino"],
-      ["Classical concert", "Concerto di musica classica"],
-      ["Concert:", "Concerto:"],
-      ["Concert —", "Concerto —"],
-      ["Cinema:", "Cinema:"],
-      ["Mediterranean Cinema:", "Cinema Mediterraneo:"],
-      ["Mediterranean Cinema:", "Cinema Mediterraneo:"],
-      ["Exhibition:", "Mostra:"],
-      ["Painting exhibition:", "Mostra di pittura:"],
-      ["Exhibition of", "Mostra di"],
-      ["paintings & sketches", "dipinti e schizzi"],
-      ["By the Sea", "Sul mare"],
-      ["Lecture:", "Conferenza:"],
-      ["Book presentation:", "Presentazione del libro:"],
-      ["Puppet show:", "Spettacolo di burattini:"],
-      ["Children's theatre:", "Teatro per bambini:"],
-      ["Children's play", "Spettacolo per bambini"],
-      ["Theatre play:", "Spettacolo teatrale:"],
-      ["Comedy play", "Commedia"],
-      ["Stand-up comedy:", "Cabaret:"],
-      ["Sensory screening:", "Proiezione sensoriale:"],
-      ["workshop for children", "laboratorio per bambini"],
-      ["workshop", "laboratorio"],
-      ["for children", "per bambini"],
-      ["children's", "per bambini"],
-      ["kids", "bambini"],
-      ["tournament", "torneo"],
-      ["football tournament", "torneo di calcio"],
-      ["bocce tournament", "torneo di bocce"],
-      ["chess tournament", "torneo di scacchi"],
-      ["charity football match", "partita di calcio benefica"],
-      ["Folklore Evening", "Serata folkloristica"],
-      ["Folklore evening", "Serata folkloristica"],
-      ["Local village feast", "Festa locale del paese"],
-      ["Village Day", "Giornata del paese"],
-      ["Feast Day", "Festa patronale"],
-      ["Feast of", "Festa di"],
-      ["nightlife programme", "programma serale"],
-      ["regular DJ nights", "serate DJ regolari"],
-      ["near-nightly DJ sets", "DJ set quasi ogni sera"],
-      ["open-air club", "club all'aperto"],
-      ["live music", "musica dal vivo"],
-      ["free entry", "ingresso libero"],
-      ["comedy", "commedia"],
-      ["synced", "doppiato"],
-      ["weekly", "settimanale"],
-      ["evening", "sera"],
-      ["traditional gastronomic event", "evento gastronomico tradizionale"],
-      ["Tastes & Scents of the Homeland", "Sapori e profumi della patria"],
-      ["Days of", "Giornate di"],
-      ["Night of", "Notte di"],
-      ["Festival of", "Festival di"]
-    ],
-    sl: [
-      ["\"Kids, Let's Play!\" — Croatian Red Cross children's day camp", "\"Otroci, pojdimo se igrat!\" — dnevni tabor Hrvaškega Rdečega križa"],
-      ["Beach games with Lumpar", "Igre na plaži z Lumparjem"],
-      ["Blue Bar / Blue Club — rotating DJ nights", "Blue Bar / Blue Club — izmenični DJ večeri"],
-      ["La Banya — weekly \"Disco Aperitivo Monday\" and live jazz evenings", "La Banya — tedenski \"Disco Aperitivo Monday\" in večeri jazza v živo"],
-      ["Konoba Casablanca — waterfront bar that turns into a club after midnight", "Konoba Casablanca — bar ob obali, ki se po polnoči spremeni v klub"],
-      ["Korčula Island", "Otok Korčula"],
-      ["Korčula's Wooden Shipbuilding", "Korčulanska lesena ladjedelništvo"],
-      ["Summer in", "Poletje v"],
-      ["Summer Festival", "Poletni festival"],
-      ["historic sword dance", "zgodovinski ples z meči"],
-      ["traditional sword dance", "tradicionalni ples z meči"],
-      ["Sword Dance Festival", "Festival plesov z meči"],
-      ["Wine Festival", "Vinski festival"],
-      ["Wine Night", "Vinski večer"],
-      ["Food & Wine", "Hrana in vino"],
-      ["Food and wine", "Hrana in vino"],
-      ["Classical concert", "Koncert klasične glasbe"],
-      ["Concert:", "Koncert:"],
-      ["Concert —", "Koncert —"],
-      ["Cinema:", "Kino:"],
-      ["Mediterranean Cinema:", "Kino Mediteran:"],
-      ["Mediterranean Kino:", "Kino Mediteran:"],
-      ["Exhibition:", "Razstava:"],
-      ["Painting exhibition:", "Razstava slik:"],
-      ["Exhibition of", "Razstava"],
-      ["paintings & sketches", "slik in skic"],
-      ["By the Sea", "Ob morju"],
-      ["Lecture:", "Predavanje:"],
-      ["Book presentation:", "Predstavitev knjige:"],
-      ["Puppet show:", "Lutkovna predstava:"],
-      ["Children's theatre:", "Otroška gledališka predstava:"],
-      ["Children's play", "Otroška predstava"],
-      ["Theatre play:", "Gledališka predstava:"],
-      ["Comedy play", "Komedija"],
-      ["Stand-up comedy:", "Stand-up komedija:"],
-      ["Sensory screening:", "Senzorna projekcija:"],
-      ["workshop for children", "delavnica za otroke"],
-      ["workshop", "delavnica"],
-      ["for children", "za otroke"],
-      ["children's", "otroški"],
-      ["kids", "otroci"],
-      ["tournament", "turnir"],
-      ["football tournament", "nogometni turnir"],
-      ["bocce tournament", "turnir v balinanju"],
-      ["chess tournament", "šahovski turnir"],
-      ["charity football match", "dobrodelna nogometna tekma"],
-      ["Folklore Evening", "Folklorni večer"],
-      ["Folklore evening", "Folklorni večer"],
-      ["Local village feast", "Lokalna vaška fešta"],
-      ["Village Day", "Dan kraja"],
-      ["Feast Day", "Praznik"],
-      ["Feast of", "Praznik"],
-      ["nightlife programme", "večerni program"],
-      ["regular DJ nights", "redni DJ večeri"],
-      ["near-nightly DJ sets", "DJ seti skoraj vsak večer"],
-      ["open-air club", "klub na prostem"],
-      ["live music", "glasba v živo"],
-      ["free entry", "prost vstop"],
-      ["comedy", "komedija"],
-      ["synced", "sinhronizirano"],
-      ["weekly", "tedensko"],
-      ["evening", "večer"],
-      ["traditional gastronomic event", "tradicionalna gastronomska prireditev"],
-      ["Tastes & Scents of the Homeland", "Okusi in vonji domačega kraja"],
-      ["Days of", "Dnevi"],
-      ["Night of", "Noč"],
-      ["Festival of", "Festival"]
-    ],
-    fr: [
-      ["\"Kids, Let's Play!\" — Croatian Red Cross children's day camp", "\"Les enfants, allons jouer !\" — camp de jour de la Croix-Rouge croate"],
-      ["Beach games with Lumpar", "Jeux de plage avec Lumpar"],
-      ["Blue Bar / Blue Club — rotating DJ nights", "Blue Bar / Blue Club — soirées DJ tournantes"],
-      ["La Banya — weekly \"Disco Aperitivo Monday\" and live jazz evenings", "La Banya — \"Disco Aperitivo Monday\" hebdomadaire et soirées jazz live"],
-      ["Konoba Casablanca — waterfront bar that turns into a club after midnight", "Konoba Casablanca — bar du front de mer qui devient club après minuit"],
-      ["Korčula Island", "Île de Korčula"],
-      ["Korčula's Wooden Shipbuilding", "Construction navale en bois de Korčula"],
-      ["Summer in", "Été à"],
-      ["Summer Festival", "Festival d'été"],
-      ["historic sword dance", "danse historique des épées"],
-      ["traditional sword dance", "danse traditionnelle des épées"],
-      ["Sword Dance Festival", "Festival des danses aux épées"],
-      ["Wine Festival", "Festival du vin"],
-      ["Wine Night", "Soirée du vin"],
-      ["Food & Wine", "Gastronomie et vin"],
-      ["Food and wine", "Gastronomie et vin"],
-      ["Classical concert", "Concert de musique classique"],
-      ["Concert:", "Concert :"],
-      ["Concert —", "Concert —"],
-      ["Cinema:", "Cinéma :"],
-      ["Mediterranean Cinema:", "Cinéma méditerranéen :"],
-      ["Mediterranean Cinéma :", "Cinéma méditerranéen :"],
-      ["Exhibition:", "Exposition :"],
-      ["Painting exhibition:", "Exposition de peinture :"],
-      ["Exhibition of", "Exposition de"],
-      ["paintings & sketches", "peintures et croquis"],
-      ["By the Sea", "Au bord de la mer"],
-      ["Lecture:", "Conférence :"],
-      ["Book presentation:", "Présentation du livre :"],
-      ["Puppet show:", "Spectacle de marionnettes :"],
-      ["Children's theatre:", "Théâtre pour enfants :"],
-      ["Children's play", "Spectacle pour enfants"],
-      ["Theatre play:", "Pièce de théâtre :"],
-      ["Comedy play", "Comédie"],
-      ["Stand-up comedy:", "Stand-up :"],
-      ["Sensory screening:", "Projection sensorielle :"],
-      ["workshop for children", "atelier pour enfants"],
-      ["workshop", "atelier"],
-      ["for children", "pour enfants"],
-      ["children's", "pour enfants"],
-      ["kids", "enfants"],
-      ["tournament", "tournoi"],
-      ["football tournament", "tournoi de football"],
-      ["bocce tournament", "tournoi de pétanque"],
-      ["chess tournament", "tournoi d'échecs"],
-      ["charity football match", "match de football caritatif"],
-      ["Folklore Evening", "Soirée folklorique"],
-      ["Folklore evening", "Soirée folklorique"],
-      ["Local village feast", "Fête locale du village"],
-      ["Village Day", "Journée du village"],
-      ["Feast Day", "Fête patronale"],
-      ["Feast of", "Fête de"],
-      ["nightlife programme", "programme de soirée"],
-      ["regular DJ nights", "soirées DJ régulières"],
-      ["near-nightly DJ sets", "DJ sets presque tous les soirs"],
-      ["open-air club", "club en plein air"],
-      ["live music", "musique live"],
-      ["free entry", "entrée libre"],
-      ["comedy", "comédie"],
-      ["synced", "doublé"],
-      ["weekly", "hebdomadaire"],
-      ["evening", "soirée"],
-      ["traditional gastronomic event", "événement gastronomique traditionnel"],
-      ["Tastes & Scents of the Homeland", "Saveurs et parfums du terroir"],
-      ["Days of", "Journées de"],
-      ["Night of", "Nuit de"],
-      ["Festival of", "Festival de"]
-    ]
-  };
-
-  function translateEventText(text, lang) {
-    if (!text || lang === "en" || lang === "hr" || !eventTranslationRules[lang]) return text || "";
-    let out = text;
-    eventTranslationRules[lang].forEach(([from, to]) => {
-      out = out.split(from).join(to);
-    });
-    return out;
-  }
+  // EVENT_TRANSLATION_RULES / translateEventText() come from event-translations-data.js (loaded
+  // before this script in index.html) -- the single shared source of truth also used by
+  // scripts/build-site.mjs. This used to duplicate that content (~280 lines).
 
   function eventTitle(e) {
     if (state.lang === "hr") return e.hr || e.en || "";
@@ -928,7 +555,7 @@
 
     const meta = document.createElement("div");
     meta.className = "event-meta";
-    meta.innerHTML = '<span class="town-tag">' + townName(e.town) + "</span>" + (e.venue ? "<span>" + e.venue + "</span>" : "");
+    meta.innerHTML = '<span class="town-tag">' + escapeHtml(townName(e.town)) + "</span>" + (e.venue ? "<span>" + escapeHtml(e.venue) + "</span>" : "");
     body.appendChild(meta);
 
     const cats = document.createElement("div");
@@ -1292,22 +919,22 @@
     state.activeEventId = e.id;
     const primaryTitle = eventTitle(e);
     let html = "<div class='modal-body'>";
-    html += "<h2>" + primaryTitle + "</h2>";
-    html += "<div class='modal-row'><strong>" + T.dateLabel + "</strong> " + fmtDate(e.date) + (e.endDate ? " – " + fmtDate(e.endDate) : "") + (e.time ? " · " + e.time : "") + "</div>";
-    html += "<div class='modal-row'><strong>" + T.placeLabel + "</strong> <a class='maps-link' href='" + mapsUrl(e) + "' target='_blank' rel='noopener'>" + townName(e.town) + (e.venue ? ", " + e.venue : "") + " ↗</a></div>";
-    html += "<div class='event-cats'>" + e.cats.map((c) => "<span class='cat-pill'>" + (T.catLabels[c]||c) + "</span>").join("") + "</div>";
+    html += "<h2>" + escapeHtml(primaryTitle) + "</h2>";
+    html += "<div class='modal-row'><strong>" + escapeHtml(T.dateLabel) + "</strong> " + escapeHtml(fmtDate(e.date)) + (e.endDate ? " – " + escapeHtml(fmtDate(e.endDate)) : "") + (e.time ? " · " + escapeHtml(e.time) : "") + "</div>";
+    html += "<div class='modal-row'><strong>" + escapeHtml(T.placeLabel) + "</strong> <a class='maps-link' href='" + escapeHtml(mapsUrl(e)) + "' target='_blank' rel='noopener'>" + escapeHtml(townName(e.town)) + (e.venue ? ", " + escapeHtml(e.venue) : "") + " ↗</a></div>";
+    html += "<div class='event-cats'>" + e.cats.map((c) => "<span class='cat-pill'>" + escapeHtml(T.catLabels[c]||c) + "</span>").join("") + "</div>";
     practicalFacts(e).forEach((fact) => {
-      html += "<div class='modal-row'><strong>" + fact[0] + "</strong> " + fact[1] + "</div>";
+      html += "<div class='modal-row'><strong>" + escapeHtml(fact[0]) + "</strong> " + escapeHtml(fact[1]) + "</div>";
     });
     if (e.desc) {
       const d = e.desc[state.lang] || translateEventText(e.desc.en || e.desc.hr || "", state.lang);
-      if (d) html += "<p class='modal-desc'>" + d + "</p>";
+      if (d) html += "<p class='modal-desc'>" + escapeHtml(d) + "</p>";
     }
-    if (e.verify) html += "<div class='verify-note'>⚠ " + T.verifyNote + "</div>";
+    if (e.verify) html += "<div class='verify-note'>⚠ " + escapeHtml(T.verifyNote) + "</div>";
     if (isFerryRelevant(e) && state.ferry) {
       const ferryText = state.ferry[state.lang] || state.ferry.en || "";
       const ferrySource = state.ferry.source || "https://www.jadrolinija.hr/";
-      html += "<div class='ferry-info event-ferry-info'><strong>" + T.ferryInfoTitle + "</strong><p>" + ferryText + "</p><a href='" + ferrySource + "' target='_blank' rel='noopener'>" + (T.ferryScheduleLink || T.sourceLabel) + " ↗</a></div>";
+      html += "<div class='ferry-info event-ferry-info'><strong>" + escapeHtml(T.ferryInfoTitle) + "</strong><p>" + escapeHtml(ferryText) + "</p><a href='" + escapeHtml(ferrySource) + "' target='_blank' rel='noopener'>" + escapeHtml(T.ferryScheduleLink || T.sourceLabel) + " ↗</a></div>";
     }
     html += "</div>";
     body.innerHTML = html;

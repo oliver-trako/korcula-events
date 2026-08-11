@@ -1,0 +1,115 @@
+// Single source of truth for event-id -> poster-filename mapping, used by both the interactive
+// client (site/js/app.js, loaded as a classic script) and the static-site generator
+// (scripts/build-site.mjs, which loads this file's source and evaluates it the same way it
+// already does for i18n.js -- see build-site.mjs's `appI18n` loading for the identical pattern).
+// This used to be hand-duplicated in both files and had already drifted out of sync (build-site.mjs
+// was missing ~19 newer mappings app.js had), so static event pages were silently missing images
+// the interactive calendar showed. Keep this the only place a new poster gets registered.
+//
+// Returns just the filename (from FLYERS), or null -- callers apply their own base path via their
+// own flyerUrl(name), since app.js and build-site.mjs serve the "2026 Events" folder from
+// different relative paths.
+const FLYERS = {
+  hkdNapredak: "711533429_10238862739681621_7132440665447619987_n.jpg",
+  brunoRacki: "726622978_1324662396311754_1196331273202483318_n.jpg",
+  fermata: "729089446_1330560095917082_5424991246713228614_n.jpg",
+  malaVelaLukaSah: "733810265_1004139169178619_7406030034854469969_n.jpg",
+  sinisaVuco: "739965778_3184088421782240_727211797039421734_n.jpg",
+  praviPrijatelj: "741439623_1623547135830221_2514987522212171195_n.jpg",
+  ekoKlik: "726427451_1622113932189830_4644658454319049907_n.jfif",
+  blatskoLjeto: "728951558_2842843536074422_8664357824117296469_n.jfif",
+  kulturnoAvgust1: "729080791_2365533420921531_4732103117572546297_n.jfif",
+  kulturnoSrpanj1: "729089537_2052799258997320_7966040970482679038_n.jfif",
+  kulturnoAvgust2: "729953708_1801545614355331_6875222987793021677_n.jfif",
+  kulturnoSrpanj2: "730584727_2758199641242412_4857147205496412772_n.jfif",
+  nogometNaPlazi: "731808257_2355501548310712_7501183823000969035_n.jfif",
+  hakunaMatata: "741209865_1350510197149943_3713384124144151341_n.jfif",
+  lumbarajskeUzance: "WhatsApp Image 2026-07-08 at 22.58.52.jpeg",
+  smokviskoLito: "WhatsApp Image 2026-07-08 at 23.01.19.jpeg",
+  litoUPostrani: "WhatsApp Image 2026-07-08 at 23.01.33.jpeg",
+  dicoHomo: "WhatsApp Image 2026-07-08 at 23.01.40.jpeg",
+  luskoLito: "WhatsApp Image 2026-07-08 at 23.01.50.jpeg",
+  litoURaciscu: "lito-u-raciscu.jpeg",
+  vecerPrsuta: "742480682_122111178783315720_7349343465846962909_n.jpg",
+  vecerPrsuta2: "mediteran-prsut-sir-vino-2.jpeg",
+  vesnaHariBlato: "vesna-pisarovic-hari-roncevic-blato.jpeg",
+  tragUBeskraju: "trag-u-beskraju-2026-program.jpeg",
+  zenskiBuce: "racisce-zenski-turnir-buce-2026.jpeg",
+  racisceFutsal: "racisce-malonogometni-turnir-2026.jpeg",
+  sandraAfrika: "sandra-afrika-the-jungle-korcula-2026.jpg",
+  slusaonicaOlivera: "slusaonica-olivera-mediteran-racisce-2026.jpg",
+  marendaDivljac: "mediteran-marenda-divljac-njoki.jpeg",
+  magazinBlato: "magazin-blato-plokata.jpeg",
+  futsalFinale: "racisce-malonogometni-finale-2026.jpeg",
+  kolovozRaciscuKalendar: "kolovoz-u-raciscu-kalendar-2026.jpeg",
+  pupnatDanMjesta: "pupnat-danmjesta-05082026.jpeg",
+  folkloreEveningBlato: "kumpanjija-blato-folklore-evening.jpeg",
+  zmajVeterani: "bsk-zmaj-blato-100-godina-veterani.jpeg",
+  zmajPetarGraso: "bsk-zmaj-blato-100-godina-petar-graso.jpeg",
+  sylviaBatistic: "sylvia-batistic-unutarnji-krajolici.jpeg",
+  zrnovskaMakarunada: "zrnovska-makarunada-2026.jpeg",
+  knezaRibarska: "kneska-ribarska-vecer-2026.jpeg",
+  marendaBakalar: "mediteran-marenda-bakalar-crveno.jpeg",
+  zukovicaPredavanje: "racisce-spilja-zukovica-predavanje.jpeg",
+  velaLukaFolkloreAug: "vela-luka-folklore-evenings-august.jpeg",
+  korculaAroundAugust: "korcula-around-august-calendar.jpeg",
+  dancingQueenAbba: "dancing-queen-abba-tribute-korcula.jpeg",
+  waterPoloChampionship: "korcula-water-polo-championship-2026.jpeg",
+  korculaUpcomingAugust: "korcula-upcoming-events-august-calendar.jpeg",
+  ljetoUKnjiznici: "728439557_1484342147071700_1265131594923239365_n.jpg"
+};
+
+const NO_FLYER_IDS = new Set(["kt-brodogradnja","kt-kulkviz","kt-moreska-season","kt-svtodor","kt-swordfest","kt-korkyra-baroque","kt-markopolo-gala","kt-winefest","kt-hajduk-istra","kt-hajduk-zalgiris","kt-hajduk-gorica","kt-hajduk-osijek"]);
+
+function resolveFlyerFilename(id, date) {
+  if (id.startsWith("kt-fermata")) return FLYERS.fermata;
+  if (id === "kt-dancing-queen-abba") return FLYERS.dancingQueenAbba;
+  if (id === "kt-water-polo-championship") return FLYERS.waterPoloChampionship;
+  if (id === "kt-dino-dvornik-tribute") return FLYERS.korculaUpcomingAugust;
+  if (id === "kt-ljeto-u-knjiznici") return FLYERS.ljetoUKnjiznici;
+  if (id.startsWith("kt-") && !NO_FLYER_IDS.has(id)) {
+    const month = date.slice(5, 7), day = parseInt(date.slice(8, 10), 10);
+    if (month === "07") return day <= 14 ? FLYERS.kulturnoSrpanj1 : FLYERS.kulturnoSrpanj2;
+    if (month === "08") return day <= 12 ? FLYERS.kulturnoAvgust1 : FLYERS.kulturnoAvgust2;
+    return null;
+  }
+  if (id === "lb-lutke-ekoklik") return FLYERS.ekoKlik;
+  if (id === "lb-lutke-prijatelj" || id === "lb-lutke-0820") return FLYERS.praviPrijatelj;
+  if (id === "lb-nogomet") return FLYERS.nogometNaPlazi;
+  if (id === "lb-hakuna") return FLYERS.hakunaMatata;
+  if (id.startsWith("lb-")) return FLYERS.lumbarajskeUzance;
+  if (id === "vl-napredak") return FLYERS.hkdNapredak;
+  if (id === "vl-racki") return FLYERS.brunoRacki;
+  if (id === "vl-chess-mala") return FLYERS.malaVelaLukaSah;
+  if (id.startsWith("vl-oliver")) return FLYERS.tragUBeskraju;
+  if (id.startsWith("vl-folk-")) return FLYERS.velaLukaFolkloreAug;
+  if (id.startsWith("vl-")) return FLYERS.luskoLito;
+  if (id === "blato-vesna-pisarovic-hari-roncevic") return FLYERS.vesnaHariBlato;
+  if (id === "blato-magazin") return FLYERS.magazinBlato;
+  if (id === "blato-zlinje-veterani") return FLYERS.zmajVeterani;
+  if (id === "blato-petar-graso-domenica") return FLYERS.zmajPetarGraso;
+  if (id === "blato-folklore-evening") return FLYERS.folkloreEveningBlato;
+  if (id.startsWith("blato-")) return FLYERS.blatskoLjeto;
+  if (id.startsWith("smk-")) return FLYERS.smokviskoLito;
+  if (id.startsWith("pst-")) return FLYERS.litoUPostrani;
+  if (id === "racisce-zenski-buce") return FLYERS.zenskiBuce;
+  if (id === "racisce-malonogometni-turnir-finale") return FLYERS.futsalFinale;
+  if (id === "racisce-malonogometni-turnir-2026") return FLYERS.racisceFutsal;
+  if (id === "racisce-slusaonica-oliver") return FLYERS.slusaonicaOlivera;
+  if (id === "racisce-vecer-prsuta-2") return FLYERS.vecerPrsuta2;
+  if (id === "racisce-vecer-prsuta") return FLYERS.vecerPrsuta;
+  if (id === "racisce-marenda-divljac-njoki") return FLYERS.marendaDivljac;
+  if (id === "racisce-marenda-bakalar") return FLYERS.marendaBakalar;
+  if (id === "racisce-zukovica-zbornik") return FLYERS.zukovicaPredavanje;
+  if (id === "racisce-igre-racica" || id === "racisce-kronike") return FLYERS.kolovozRaciscuKalendar;
+  if (id.startsWith("racisce-")) return FLYERS.litoURaciscu;
+  if (id === "cara-vuco") return FLYERS.sinisaVuco;
+  if (id === "nl-sandra-afrika-jungle") return FLYERS.sandraAfrika;
+  if (id.startsWith("rc-")) return FLYERS.dicoHomo;
+  if (id === "pupnat-danmjesta") return FLYERS.pupnatDanMjesta;
+  if (id === "kneze-ribarska-vecer") return FLYERS.knezaRibarska;
+  if (id === "lumbarda-sylvia-batistic") return FLYERS.sylviaBatistic;
+  if (id === "zrnovo-makarunada") return FLYERS.zrnovskaMakarunada;
+  if (id === "zrnovo-folklore-noc") return FLYERS.korculaAroundAugust;
+  return null;
+}

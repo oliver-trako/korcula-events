@@ -33,8 +33,13 @@ jobs:
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
           CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Passed via env + $VAR below rather than interpolated directly into the shell script --
+          # not currently exploitable (this input is typed `boolean`, so GitHub restricts its
+          # value to literal true/false), but consistent with how the secrets above are handled,
+          # and stays safe if this input's type is ever loosened to free text.
+          SHADOW_MODE: ${{ github.event.inputs.shadow }}
         run: |
-          if [ "${{ github.event.inputs.shadow }}" = "true" ]; then
+          if [ "$SHADOW_MODE" = "true" ]; then
             node ingestion/run-ingest.mjs --shadow
           else
             node ingestion/run-ingest.mjs

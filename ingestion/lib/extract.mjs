@@ -202,6 +202,15 @@ function systemPrompt() {
     "doesn't state it. If a specific field genuinely isn't stated within this listing's own text, " +
     "omit that field rather than borrow it from a neighboring listing.",
 
+    // Real production output on a cinema calendar: the title field got a genre label ('Akcija',
+    // 'Animirani' -- Action, Animated) with the film's plot synopsis dumped after it, instead of
+    // the film's own proper name. Genre labels are what the category field is for, not the title.
+    "A genre or format label ('Akcija'/Action, 'Drama', 'Animirani'/Animated, 'Komedija'/Comedy, " +
+    "'Dokumentarac'/Documentary, and similar) is never the title -- it belongs in cats, if at all. " +
+    "The title is always the specific proper name of the film, show, or event itself. If a genre " +
+    "label appears right next to a listing but the actual proper name isn't clearly stated " +
+    "anywhere in that listing's own text, omit the event rather than use the genre label as its title.",
+
     // Real production output extracted page section headers ('Novosti'/News, 'Događanja'/Events)
     // as if they were event titles, with the section header itself standing in for venue too.
     "Section headers, navigation labels, and category labels (e.g. 'News', 'Events', " +
@@ -240,24 +249,32 @@ export async function extractEventsFromHtml(html, { completeJson, pageUrl, evide
   }
 
   return plausible
-    .map((e) => ({
-      hr: resolveLang(e, "hr"),
-      en: resolveLang(e, "en"),
-      de: resolveLang(e, "de"),
-      it: resolveLang(e, "it"),
-      sl: resolveLang(e, "sl"),
-      fr: resolveLang(e, "fr"),
-      date: e.date,
-      ...(e.endDate ? { endDate: e.endDate } : {}),
-      ...(e.time ? { time: e.time } : {}),
-      town: e.town,
-      venue: e.venue.trim(),
-      cats: [...new Set(e.cats)],
-      ...(nonEmptyDesc(e.desc) ? { desc: nonEmptyDesc(e.desc) } : {}),
-      ...(e.ticketUrl ? { ticketUrl: e.ticketUrl.trim() } : {}),
-      source: pageUrl,
-      extractionMethod: "ai"
-    }));
+    .map((e) => {
+      // Languages the model left genuinely blank -- resolveLang below fills them with a same-
+      // language stand-in so nothing ships empty, but that's a reused string, not a real
+      // translation. Surfacing which ones were blank lets run-ingest.mjs generate a real
+      // translation for exactly those, replacing the stand-in.
+      const missingLangs = LANGS.filter((l) => !e[l]?.trim());
+      return {
+        hr: resolveLang(e, "hr"),
+        en: resolveLang(e, "en"),
+        de: resolveLang(e, "de"),
+        it: resolveLang(e, "it"),
+        sl: resolveLang(e, "sl"),
+        fr: resolveLang(e, "fr"),
+        date: e.date,
+        ...(e.endDate ? { endDate: e.endDate } : {}),
+        ...(e.time ? { time: e.time } : {}),
+        town: e.town,
+        venue: e.venue.trim(),
+        cats: [...new Set(e.cats)],
+        ...(nonEmptyDesc(e.desc) ? { desc: nonEmptyDesc(e.desc) } : {}),
+        ...(e.ticketUrl ? { ticketUrl: e.ticketUrl.trim() } : {}),
+        source: pageUrl,
+        extractionMethod: "ai",
+        ...(missingLangs.length ? { _missingLangs: missingLangs } : {})
+      };
+    });
 }
 
 const LANGS = ["en", "hr", "de", "it", "sl", "fr"];

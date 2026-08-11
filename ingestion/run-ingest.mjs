@@ -16,6 +16,7 @@ import { createSafeRetrievalClient } from "./lib/retrieval.mjs";
 import { createWorkersAiClient } from "./lib/ai-client.mjs";
 import { extractEventsFromHtml, TOWNS, CATS } from "./lib/extract.mjs";
 import { verifyCandidate } from "./lib/verify.mjs";
+import { translateMissingLangs } from "./lib/translate.mjs";
 import { decideCandidate } from "./lib/decide.mjs";
 import { withRetry, sleep } from "./lib/backoff.mjs";
 import { openReviewIssue, findOrCreateRunLogIssue, postRunLogComment } from "./lib/github-issue.mjs";
@@ -144,6 +145,21 @@ async function processUrlEntry(source, urlEntry, ctx) {
 
   for (const candidate of extracted) {
     candidate.id = generateCandidateId(source.id, candidate);
+
+    if (candidate._missingLangs?.length) {
+      try {
+        const filled = await withRetry(
+          () => translateMissingLangs(candidate, candidate._missingLangs, { completeJson: aiClient.completeJson, evidenceHash: fetched.contentHash }),
+          AI_RETRY_OPTIONS
+        );
+        Object.assign(candidate, filled);
+      } catch (error) {
+        // Not fatal -- extract.mjs's resolveLang already put a same-language stand-in in place,
+        // so a failed translation just means that stand-in ships instead of a real translation.
+        log.errors.push({ sourceId: source.id, url: urlEntry.url, stage: "translate", candidateId: candidate.id, error: error.message });
+      }
+      delete candidate._missingLangs;
+    }
 
     let verifierResult;
     try {

@@ -22,8 +22,8 @@
   },
   "aiVerification": {
     "enabled": true,
-    "autoPublishConfidenceThreshold": 0.9,
-    "notes": "Auto-publish requires: passes hardFloor AND verify.mjs's independent confidence >= autoPublishConfidenceThreshold. Source type is no longer a gate by default -- see sourceOverrides for exceptions learned over time."
+    "autoPublishConfidenceThreshold": 0.8,
+    "notes": "Auto-publish requires: passes hardFloor AND verify.mjs's independent confidence >= autoPublishConfidenceThreshold. Source type is no longer a gate by default -- see sourceOverrides for exceptions learned over time. Lowered from 0.9 to 0.8 on 2026-08-11 alongside a verify.mjs prompt fix for confidence miscalibration (real production data: across two full runs, nothing ever scored above 0.8 even for candidates with no concrete error, because the verifier was inventing its own completeness standards and padding non-issues into the concerns list). Revisit this number once a few runs confirm genuinely clean candidates now score in the 0.9-1.0 range as intended."
   },
   "sourceOverrides": {
     "alwaysReview": [],

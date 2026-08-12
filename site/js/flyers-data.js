@@ -67,7 +67,11 @@ const FLYERS = {
   arhitekturaKo1525: "korcula-arhitektura-ko15-25-izlozba.jpeg",
   kinoMalciCudovista0811: "kino-malci-cudovista-11082026.jpeg",
   lutkeCvrcakIMrav0810: "lutke-cvrcak-i-mrav-10082026.jpeg",
-  alanHrzicaSmokvica: "alan-hrzica-smokvica-2026.jpeg"
+  alanHrzicaSmokvica: "alan-hrzica-smokvica-2026.jpeg",
+  zrnovoPostranaVelaGospaSvRoko: "zrnovo-postrana-vela-gospa-sv-roko-2026.jpeg",
+  zrnovoPostranaTotemBend: "zrnovo-postrana-totem-bend-2026.jpeg",
+  raciscePumpureleRaspored: "racisce-noc-pumpurele-raspored-2026.jpeg",
+  raciscePumpureleRasporedV2: "racisce-noc-pumpurele-raspored-2026-v2.jpeg"
 };
 
 const NO_FLYER_IDS = new Set(["kt-brodogradnja","kt-kulkviz","kt-moreska-season","kt-svtodor","kt-swordfest","kt-korkyra-baroque","kt-markopolo-gala","kt-winefest","kt-hajduk-istra","kt-hajduk-zalgiris","kt-hajduk-gorica","kt-hajduk-osijek"]);
@@ -78,7 +82,9 @@ const NO_FLYER_IDS = new Set(["kt-brodogradnja","kt-kulkviz","kt-moreska-season"
 const MULTI_FLYERS = {
   "smk-jadranova": ["jadranovaNocDivljeJagode", "jadranovaNocDivljeJagodeInfo"],
   "zrnovo-makarunada": ["zrnovskaMakarunada", "zrnovskaMakarunadaEn"],
-  "racisce-muski-buce": ["litoURaciscu", "muskiBuceFinaleRaspored"]
+  "racisce-muski-buce": ["litoURaciscu", "muskiBuceFinaleRaspored"],
+  "pst-danmjesta": ["zrnovoPostranaVelaGospaSvRoko", "zrnovoPostranaTotemBend"],
+  "racisce-noc-pumpurele": ["litoURaciscu", "raciscePumpureleRaspored", "raciscePumpureleRasporedV2"]
 };
 
 // Always returns an array (possibly empty) -- the plural counterpart to resolveFlyerFilename,
@@ -103,6 +109,7 @@ function resolveFlyerFilename(id, date) {
   if (id === "racisce-buce-slavljenicka-vecera") return FLYERS.raciscelBuceSlavljenickaVecera;
   if (id === "racisce-marenda-tripice") return FLYERS.marendaTripice;
   if (id === "nl-indira-forza-jungle") return FLYERS.indiraForzaJungle;
+  if (id === "pst-danmjesta" || id === "pst-svroko") return FLYERS.zrnovoPostranaVelaGospaSvRoko;
   if (id.startsWith("kt-") && !NO_FLYER_IDS.has(id)) {
     const month = date.slice(5, 7), day = parseInt(date.slice(8, 10), 10);
     if (month === "07") return day <= 14 ? FLYERS.kulturnoSrpanj1 : FLYERS.kulturnoSrpanj2;

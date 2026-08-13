@@ -71,7 +71,11 @@ const FLYERS = {
   zrnovoPostranaVelaGospaSvRoko: "zrnovo-postrana-vela-gospa-sv-roko-2026.jpeg",
   zrnovoPostranaTotemBend: "zrnovo-postrana-totem-bend-2026.jpeg",
   raciscePumpureleRaspored: "racisce-noc-pumpurele-raspored-2026.jpeg",
-  raciscePumpureleRasporedV2: "racisce-noc-pumpurele-raspored-2026-v2.jpeg"
+  raciscePumpureleRasporedV2: "racisce-noc-pumpurele-raspored-2026-v2.jpeg",
+  velaLukaAudicija: "vela-luka-audicija-standup-2026.jpeg",
+  jungleConnectLive: "jungle-connect-live-2026.jpeg",
+  jungleDaraBubamara: "jungle-dara-bubamara-2026.jpeg",
+  blatoSmotraFolkloreLxiii: "blato-smotra-folklora-lxiii-2026.jpeg"
 };
 
 const NO_FLYER_IDS = new Set(["kt-brodogradnja","kt-kulkviz","kt-moreska-season","kt-svtodor","kt-swordfest","kt-korkyra-baroque","kt-markopolo-gala","kt-winefest","kt-hajduk-istra","kt-hajduk-zalgiris","kt-hajduk-gorica","kt-hajduk-osijek"]);
@@ -110,6 +114,10 @@ function resolveFlyerFilename(id, date) {
   if (id === "racisce-marenda-tripice") return FLYERS.marendaTripice;
   if (id === "nl-indira-forza-jungle") return FLYERS.indiraForzaJungle;
   if (id === "pst-danmjesta" || id === "pst-svroko") return FLYERS.zrnovoPostranaVelaGospaSvRoko;
+  if (id === "vl-audicija-standup") return FLYERS.velaLukaAudicija;
+  if (id === "nl-connect-jungle") return FLYERS.jungleConnectLive;
+  if (id === "nl-dara-bubamara-jungle") return FLYERS.jungleDaraBubamara;
+  if (id === "blato-smotra-folklora-lxiii") return FLYERS.blatoSmotraFolkloreLxiii;
   if (id.startsWith("kt-") && !NO_FLYER_IDS.has(id)) {
     const month = date.slice(5, 7), day = parseInt(date.slice(8, 10), 10);
     if (month === "07") return day <= 14 ? FLYERS.kulturnoSrpanj1 : FLYERS.kulturnoSrpanj2;

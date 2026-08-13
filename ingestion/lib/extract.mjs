@@ -268,7 +268,18 @@ export async function extractEventsFromHtml(html, { completeJson, pageUrl, evide
       // language stand-in so nothing ships empty, but that's a reused string, not a real
       // translation. Surfacing which ones were blank lets run-ingest.mjs generate a real
       // translation for exactly those, replacing the stand-in.
-      const missingLangs = LANGS.filter((l) => !e[l]?.trim());
+      // Real production data: the model sometimes fills a non-English language field with the
+      // English text verbatim instead of translating it (three Racisce workshop candidates on
+      // 2026-08-13 shipped with de/it/sl/fr all literally "Art Workshops for Children"). That
+      // field is non-empty, so the original `!e[l]?.trim()` check never flagged it as needing a
+      // real translation. A genuine translation into any of these languages essentially never
+      // comes out byte-identical to the English source, so treat that as missing too.
+      const englishText = e.en?.trim();
+      const missingLangs = LANGS.filter((l) => {
+        const value = e[l]?.trim();
+        if (!value) return true;
+        return l !== "en" && englishText && value === englishText;
+      });
       return {
         hr: resolveLang(e, "hr"),
         en: resolveLang(e, "en"),
@@ -327,6 +338,18 @@ function implausibilityReason(e) {
   // other 4 left blank gets backfilled from whichever language did come through (see the mapper
   // below) instead of sinking the whole candidate.
   if (!e.hr?.trim() && !e.en?.trim()) return "missing-title";
+  // Mechanical backstop for the title/synopsis-bleed pattern (see the system-prompt rule above):
+  // relying on the model to always follow that instruction proved insufficient in practice --
+  // 2026-08-13 production data still shipped a live title of "To a Land Unknown Mahdi
+  // FleifelUnited Kingdom, Palestine, France / 105′ / 2024." despite the rule. Every real title
+  // already on the site is well under this length (longest observed: 119 chars, a concert title
+  // listing three performers by name) -- a bled-in synopsis/metadata blob is reliably far longer,
+  // so length is a cheap, high-precision, model-independent check that doesn't depend on the
+  // model recognizing its own mistake.
+  const TITLE_LENGTH_LIMIT = 160;
+  if ((e.hr?.length || 0) > TITLE_LENGTH_LIMIT || (e.en?.length || 0) > TITLE_LENGTH_LIMIT) {
+    return `title-too-long:${Math.max(e.hr?.length || 0, e.en?.length || 0)}`;
+  }
   if (typeof e.venue !== "string" || !e.venue.trim()) return "missing-venue";
   if (!/^\d{4}-\d{2}-\d{2}$/.test(e.date || "")) return `bad-date:${e.date}`;
   if (!TOWNS.some((t) => t.id === e.town)) return `bad-town:${e.town}`;

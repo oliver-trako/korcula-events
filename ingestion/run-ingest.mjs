@@ -18,6 +18,7 @@ import { extractEventsFromHtml, TOWNS, CATS } from "./lib/extract.mjs";
 import { verifyCandidate } from "./lib/verify.mjs";
 import { translateMissingLangs } from "./lib/translate.mjs";
 import { decideCandidate } from "./lib/decide.mjs";
+import { findFuzzyDuplicates } from "./lib/duplicate-check.mjs";
 import { withRetry, sleep } from "./lib/backoff.mjs";
 import { openReviewIssue, findOrCreateRunLogIssue, postRunLogComment } from "./lib/github-issue.mjs";
 import { htmlToPlainText } from "./lib/html-text.mjs";
@@ -302,37 +303,53 @@ async function run({ shadow }) {
   }
 
   if (allReview.length) {
-    pendingDoc.candidates.push(...allReview.map((r) => ({
-      id: r.candidate.id,
-      sourceId: r.sourceId,
-      sourceUrl: r.sourceUrl,
-      discoveredAt: new Date().toISOString(),
-      extractionMethod: "ai",
-      event: r.candidate,
-      verifierConfidence: r.verifierResult.confidence,
-      verifierConcerns: r.verifierResult.concerns,
-      blockingReasons: r.blockingReasons,
-      duplicateMatches: r.duplicateMatches,
-      status: "needs-review"
-    })));
-    await writeJson(pendingPath, pendingDoc);
+    // Real production incident: the same handful of unresolved candidates (the same source
+    // page, re-fetched run after run) got appended to pending-events.json and re-issued as a
+    // brand-new GitHub Issue on every single run -- pending-events.json grew unbounded and the
+    // review-issue list became exactly the silent, ever-growing backlog this whole review
+    // system was built to avoid. A candidate that fuzzy-matches one already sitting in
+    // pending-events.json with status "needs-review" is not new information; skip it instead
+    // of re-queuing and re-notifying for something a human hasn't had a chance to act on yet.
+    const alreadyPending = pendingDoc.candidates.filter((c) => c.status === "needs-review").map((c) => c.event);
+    const freshReview = allReview.filter((r) => findFuzzyDuplicates(r.candidate, alreadyPending).length === 0);
+    const skippedAsAlreadyPending = allReview.length - freshReview.length;
+    if (skippedAsAlreadyPending) {
+      console.log(`${skippedAsAlreadyPending} candidate(s) skipped -- already sitting in pending-events.json awaiting review.`);
+    }
 
-    if (owner && repo && token) {
-      // Deliberately caught, not allowed to throw out of run(): the notification is a
-      // convenience on top of already-correct, already-written files (events.json,
-      // pending-events.json above) -- a GitHub API hiccup here must never discard real,
-      // already-decided work the way it did in the incident this comment replaces (see
-      // ingestion/data/run-log/ for that run: a >65536-char issue body threw, which skipped
-      // the workflow's commit step entirely and silently lost a correctly-published event).
-      try {
-        const issue = await openReviewIssue(allReview, { owner, repo, token, runDate: log.runDate });
-        console.log(`Opened review issue: ${issue?.url}`);
-      } catch (error) {
-        log.errors.push({ stage: "open-review-issue", error: error.message });
-        console.error(`Failed to open review issue (candidates are still saved in pending-events.json): ${error.message}`);
+    if (freshReview.length) {
+      pendingDoc.candidates.push(...freshReview.map((r) => ({
+        id: r.candidate.id,
+        sourceId: r.sourceId,
+        sourceUrl: r.sourceUrl,
+        discoveredAt: new Date().toISOString(),
+        extractionMethod: "ai",
+        event: r.candidate,
+        verifierConfidence: r.verifierResult.confidence,
+        verifierConcerns: r.verifierResult.concerns,
+        blockingReasons: r.blockingReasons,
+        duplicateMatches: r.duplicateMatches,
+        status: "needs-review"
+      })));
+      await writeJson(pendingPath, pendingDoc);
+
+      if (owner && repo && token) {
+        // Deliberately caught, not allowed to throw out of run(): the notification is a
+        // convenience on top of already-correct, already-written files (events.json,
+        // pending-events.json above) -- a GitHub API hiccup here must never discard real,
+        // already-decided work the way it did in the incident this comment replaces (see
+        // ingestion/data/run-log/ for that run: a >65536-char issue body threw, which skipped
+        // the workflow's commit step entirely and silently lost a correctly-published event).
+        try {
+          const issue = await openReviewIssue(freshReview, { owner, repo, token, runDate: log.runDate });
+          console.log(`Opened review issue: ${issue?.url}`);
+        } catch (error) {
+          log.errors.push({ stage: "open-review-issue", error: error.message });
+          console.error(`Failed to open review issue (candidates are still saved in pending-events.json): ${error.message}`);
+        }
+      } else {
+        console.log(`${freshReview.length} candidate(s) need review, but GITHUB_REPOSITORY/GITHUB_TOKEN are not set -- skipped opening an issue.`);
       }
-    } else {
-      console.log(`${allReview.length} candidate(s) need review, but GITHUB_REPOSITORY/GITHUB_TOKEN are not set -- skipped opening an issue.`);
     }
   }
 

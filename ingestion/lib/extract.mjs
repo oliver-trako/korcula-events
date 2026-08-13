@@ -211,6 +211,20 @@ function systemPrompt() {
     "label appears right next to a listing but the actual proper name isn't clearly stated " +
     "anywhere in that listing's own text, omit the event rather than use the genre label as its title.",
 
+    // Real production output on a cinema calendar (kulturakorcula.hr film listings): the title
+    // field became "FILM / Per te. Italy | 2025 | 1h 40 min A poignant and intimate story about
+    // love, memory, and the relationship between father and son..." -- a category prefix, the
+    // actual short film title, runtime/country/year metadata, and the full marketing synopsis
+    // all concatenated into one field, instead of just "Per te".
+    "A film or show listing's card commonly stacks several distinct pieces of text right next to " +
+    "each other: a category prefix (e.g. 'FILM'), the title itself, metadata like country/year/" +
+    "runtime (e.g. 'Italy | 2025 | 1h 40 min'), and a full synopsis paragraph. Never concatenate " +
+    "any of these into the title -- the title is only the work's own proper name, normally just a " +
+    "few words. A category prefix belongs in cats, if at all, never in the title. Runtime/country/" +
+    "year metadata does not belong in any field -- omit it. A synopsis paragraph may inform desc " +
+    "(still only 1-2 sentences, faithfully shortened, never the full marketing paragraph verbatim), " +
+    "but must never appear in the title, even partially.",
+
     // Real production output extracted page section headers ('Novosti'/News, 'Događanja'/Events)
     // as if they were event titles, with the section header itself standing in for venue too.
     "Section headers, navigation labels, and category labels (e.g. 'News', 'Events', " +

@@ -78,7 +78,7 @@ const FLYERS = {
   blatoSmotraFolkloreLxiii: "blato-smotra-folklora-lxiii-2026.jpeg"
 };
 
-const NO_FLYER_IDS = new Set(["kt-brodogradnja","kt-kulkviz","kt-moreska-season","kt-svtodor","kt-swordfest","kt-korkyra-baroque","kt-markopolo-gala","kt-winefest","kt-hajduk-istra","kt-hajduk-zalgiris","kt-hajduk-gorica","kt-hajduk-osijek"]);
+const NO_FLYER_IDS = new Set(["kt-brodogradnja","kt-kulkviz","kt-moreska-season","kt-svtodor","kt-swordfest","kt-korkyra-baroque","kt-markopolo-gala","kt-winefest","kt-hajduk-istra","kt-hajduk-zalgiris","kt-hajduk-gorica","kt-hajduk-osijek","kt-hajduk-lokomotiva"]);
 
 // Events with more than one poster/photo worth showing (e.g. a main poster plus a
 // separate ticket-info graphic). Keys are event ids, values are FLYERS keys in display

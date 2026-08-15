@@ -75,10 +75,16 @@ const FLYERS = {
   velaLukaAudicija: "vela-luka-audicija-standup-2026.jpeg",
   jungleConnectLive: "jungle-connect-live-2026.jpeg",
   jungleDaraBubamara: "jungle-dara-bubamara-2026.jpeg",
-  blatoSmotraFolkloreLxiii: "blato-smotra-folklora-lxiii-2026.jpeg"
+  blatoSmotraFolkloreLxiii: "blato-smotra-folklora-lxiii-2026.jpeg",
+  standupSkiljo0817: "kt-standup-skiljo-0817-2026.jpeg",
+  koncertLimicNeli0825: "kt-koncert-limic-neli-0825-2026.jpeg",
+  kulkvizPoster: "kt-kulkviz-poster-2026.jpeg",
+  dramaLjudskosti0829: "kt-drama-ljudskosti-0829-2026.jpeg",
+  kinoDjecakDupin20824: "kt-kino-djecak-dupin2-0824-2026.jpeg",
+  dramaTrudnica0819: "kt-drama-trudnica-0819-2026.jpeg"
 };
 
-const NO_FLYER_IDS = new Set(["kt-brodogradnja","kt-kulkviz","kt-moreska-season","kt-svtodor","kt-swordfest","kt-korkyra-baroque","kt-markopolo-gala","kt-winefest","kt-hajduk-istra","kt-hajduk-zalgiris","kt-hajduk-gorica","kt-hajduk-osijek","kt-hajduk-lokomotiva"]);
+const NO_FLYER_IDS = new Set(["kt-brodogradnja","kt-moreska-season","kt-svtodor","kt-swordfest","kt-korkyra-baroque","kt-markopolo-gala","kt-winefest","kt-hajduk-istra","kt-hajduk-zalgiris","kt-hajduk-gorica","kt-hajduk-osijek","kt-hajduk-lokomotiva"]);
 
 // Events with more than one poster/photo worth showing (e.g. a main poster plus a
 // separate ticket-info graphic). Keys are event ids, values are FLYERS keys in display
@@ -108,6 +114,12 @@ function resolveFlyerFilename(id, date) {
   if (id === "kt-arch-ko1525") return FLYERS.arhitekturaKo1525;
   if (id === "kt-kino-0811") return FLYERS.kinoMalciCudovista0811;
   if (id === "kt-lutke-0810") return FLYERS.lutkeCvrcakIMrav0810;
+  if (id === "kt-standup-0817") return FLYERS.standupSkiljo0817;
+  if (id === "kt-koncert-0825") return FLYERS.koncertLimicNeli0825;
+  if (id === "kt-kulkviz") return FLYERS.kulkvizPoster;
+  if (id === "kt-drama-0829") return FLYERS.dramaLjudskosti0829;
+  if (id === "kt-kino-0824") return FLYERS.kinoDjecakDupin20824;
+  if (id === "kt-drama-0819") return FLYERS.dramaTrudnica0819;
   if (id === "smk-jadranova") return FLYERS.jadranovaNocDivljeJagode;
   if (id === "smk-duhovni") return FLYERS.alanHrzicaSmokvica;
   if (id === "racisce-buce-slavljenicka-vecera") return FLYERS.raciscelBuceSlavljenickaVecera;

@@ -225,6 +225,20 @@ function systemPrompt() {
     "(still only 1-2 sentences, faithfully shortened, never the full marketing paragraph verbatim), " +
     "but must never appear in the title, even partially.",
 
+    // Real production output (moreska.eu, 2026-08-15): the title field became "If it rains,
+    // performances will be moved to the Center for Culture, Korčula." -- a weather-contingency
+    // caveat sentence, not the name of any event. A second candidate the same run used
+    // "Performance of Moreška in its traditional form." as its title -- a plain description of
+    // what the page already names elsewhere, not the name itself.
+    "A full sentence describing a contingency, caveat, or logistics note (e.g. what happens if it " +
+    "rains, a rescheduling policy, an accessibility note) is never a title, even when it's the only " +
+    "text near a date on the page -- if the listing's actual name isn't stated nearby, omit the " +
+    "event rather than use the caveat sentence as its title. Likewise, a generic sentence merely " +
+    "describing what a listed event is (e.g. 'Performance of X in its traditional form.') is not a " +
+    "substitute for that event's own proper name. A title is a short name, essentially never a full " +
+    "grammatical sentence -- if the only candidate text is a complete sentence ending in a period, " +
+    "look harder on the page for the actual name before using it; strip any trailing period regardless.",
+
     // Real production output extracted page section headers ('Novosti'/News, 'Događanja'/Events)
     // as if they were event titles, with the section header itself standing in for venue too.
     "Section headers, navigation labels, and category labels (e.g. 'News', 'Events', " +

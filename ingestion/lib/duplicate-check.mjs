@@ -26,11 +26,22 @@ export function findFuzzyDuplicates(candidateEvent, existingEvents) {
     const sameDate = existing.date === candidateEvent.date;
     const existingEnd = existing.endDate || existing.date;
     const rangeOverlap = existing.date <= candidateEnd && candidateEvent.date <= existingEnd;
-    if (!sameDate && !rangeOverlap) continue;
+    // Real production data (2026-08-15): a season-long entry like kt-moreska-season carries
+    // its own curated `occurrences` list of exact per-date showtimes, but the range-only check
+    // above only ever gave a partial score for a candidate landing on one of those dates --
+    // never enough alone to block, since the candidate's own AI-written title ("Performance of
+    // Moreška in its traditional form.") shares little vocabulary with the season entry's title.
+    // Two individual-performance duplicates auto-published as a result. An exact hit against a
+    // curated occurrences list is much stronger evidence than range overlap plus fuzzy title
+    // similarity -- treat it as equivalent to sameDate rather than requiring title agreement too.
+    const occurrenceMatch = Array.isArray(existing.occurrences)
+      && existing.occurrences.some((o) => o.date === candidateEvent.date);
+    if (!sameDate && !rangeOverlap && !occurrenceMatch) continue;
 
     let score = 0;
     const reasons = [];
-    if (sameDate) { score += 0.30; reasons.push("same date"); }
+    if (occurrenceMatch) { score += 0.45; reasons.push("matches a listed occurrence date"); }
+    else if (sameDate) { score += 0.30; reasons.push("same date"); }
     else if (rangeOverlap) { score += 0.18; reasons.push("date within existing range"); }
 
     if (candidateTown && existing.town && existing.town === candidateTown) {
@@ -70,6 +81,7 @@ export function findFuzzyDuplicates(candidateEvent, existingEvents) {
     score = Math.round(Math.min(1, score) * 1000) / 1000;
 
     const isLikelyDuplicate =
+      occurrenceMatch ||
       (sameDate && strongTitle && (venueMatch || sameTime || existing.town === candidateTown || titleScore >= 0.70)) ||
       (sameDate && venueMatch && sameTime) ||
       (rangeOverlap && !sameDate && strongTitle && (venueMatch || existing.town === candidateTown));

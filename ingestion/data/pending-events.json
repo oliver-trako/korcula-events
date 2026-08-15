@@ -2839,6 +2839,138 @@
       ],
       "duplicateMatches": [],
       "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-korcula-racisce-2026-07-08-summer-kul-quiz",
+      "sourceId": "visit-korcula-racisce",
+      "sourceUrl": "https://visitkorcula.eu/en/events/summer-in-racisce/",
+      "discoveredAt": "2026-08-15T11:11:36.950Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Ljetni KUL kviz",
+        "en": "Summer KUL Quiz",
+        "de": "Sommer-KUL-Quiz",
+        "it": "Quiz estivo KUL",
+        "sl": "Ljeto KUL kviz",
+        "fr": "Quiz de l'été KUL",
+        "date": "2026-07-08",
+        "endDate": "2026-08-26",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitkorcula.eu/en/events/summer-in-racisce/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-korcula-racisce-2026-07-08-summer-kul-quiz"
+      },
+      "verifierConfidence": 0.7,
+      "verifierConcerns": [
+        "The source page text does not appear to have a clear, standalone event listing for 'Summer KUL Quiz' on July 8th. The event is mentioned in a list of other events for the summer, but it does not have its own dedicated section or date listed prominently.",
+        "The date '2026-07-08' for the event 'Summer KUL Quiz' is not explicitly mentioned in the source page text. The text only mentions the event's dates as '08.07.2026 - 26.08.2026', which could be interpreted as a range of dates rather than a specific date.",
+        "The town field 'korcula' is well-supported by the source page text, as it is mentioned in the page's title and repeatedly throughout the page's content.",
+        "The venue field 'Korčula' is well-supported by the source page text, as it is mentioned in the page's title and repeatedly throughout the page's content.",
+        "The category field 'kids' is not explicitly mentioned in the source page text, but it is implied by the mention of 'Drama Workshops for Children', 'Art Workshops for Children', and 'Chess School for Children' in the list of events.",
+        "The 'endDate' field '2026-08-26' is not explicitly mentioned in the source page text. The text only mentions the event's dates as '08.07.2026 - 26.08.2026', which could be interpreted as a range of dates rather than a specific end date."
+      ],
+      "blockingReasons": [
+        "duplicate-id",
+        "verifier-confidence-below-threshold:0.7"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2026-08-17-performance-of-moreska-in-its-traditional-form",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/",
+      "discoveredAt": "2026-08-15T11:11:36.950Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Izvodi Moreška u njenoj tradicionalnoj formi.",
+        "en": "Performance of Moreška in its traditional form.",
+        "de": "Izvedba Moreške u svojoj tradicionalnoj formi.",
+        "it": "Esecuzione di Moreška nella sua forma tradizionale.",
+        "sl": "Izvedba Moreška v tradicionalni obliki.",
+        "fr": "Exécution de Moreška dans sa forme traditionnelle.",
+        "date": "2026-08-17",
+        "time": "21:00",
+        "town": "korcula",
+        "venue": "Ljetno kino Korčula, Korčula, Hrvatska",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://moreska.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2026-08-17-performance-of-moreska-in-its-traditional-form"
+      },
+      "verifierConfidence": 0.7,
+      "verifierConcerns": [
+        "The date '2026-08-17' is mentioned in the text as part of the season calendar, but the corresponding time '21:00' and venue 'Ljetno kino Korčula, Korčula, Hrvatska' are not explicitly stated next to it. Instead, they are mentioned separately in the same section of the page. This could indicate that the extraction is relying on implicit assumptions rather than explicit text.",
+        "The title 'Performance of Moreška in its traditional form.' is not directly mentioned in the source page text. The closest match is 'Moreška Korčula - Sword Dance Tickets' which is a title of the page, but it's not the same as the extracted title.",
+        "The category 'folklore' is not explicitly mentioned in the source page text. The page does mention 'Moreška' which is a traditional folk dance, but the category is not explicitly stated."
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.7"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2026-08-20-performance-of-moreska-in-its-traditional-form",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/",
+      "discoveredAt": "2026-08-15T11:11:36.950Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Predstava Moreške u njenoj tradicionalnoj formi.",
+        "en": "Performance of Moreška in its traditional form.",
+        "de": "Izvedba Moreške u svojoj tradicionalnoj formi.",
+        "it": "Spettacolo della Moreška nella sua forma tradizionale.",
+        "sl": "Predstavitev Moreške v tradicionalni obliki.",
+        "fr": "Présentation de la Moreška dans sa forme traditionnelle.",
+        "date": "2026-08-20",
+        "time": "21:00",
+        "town": "korcula",
+        "venue": "Ljetno kino Korčula, Korčula, Hrvatska",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://moreska.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2026-08-20-performance-of-moreska-in-its-traditional-form"
+      },
+      "verifierConfidence": 0.4,
+      "verifierConcerns": [
+        "The extracted candidate mentions the title as 'Performance of Moreška in its traditional form.', but the source page does not explicitly mention this phrase. Instead, it mentions 'Predstava Moreške u njenoj tradicionalnoj formi.' in the Croatian section, which is a direct translation of the phrase. This could be a mistranslation or a misunderstanding of the source page's content.",
+        "The extracted candidate mentions the date as '2026-08-20', but the source page lists multiple dates for the same event, including '20 KOL 2026 Moreška četvrtak · 21:00 · Ljetno kino Dostupno Kupi ulaznice → (ticket link: /tickets?date=2026-08-20)'. This suggests that the extracted candidate may have only extracted a single date from the source page, rather than considering the multiple dates listed.",
+        "The extracted candidate mentions the venue as 'Ljetno kino Korčula, Korčula, Hrvatska', but the source page lists multiple venues for the same event, including 'Ljetno kino' and 'Centar za kulturu Korčula'. This could be a misunderstanding of the source page's content, or a failure to consider the multiple venues listed.",
+        "The extracted candidate mentions the category as 'folklore', but the source page does not explicitly mention this category. Instead, it mentions 'Moreška' as a type of traditional dance, which is related to folklore but not explicitly stated.",
+        "The extracted candidate mentions the time as '21:00', but the source page lists multiple times for the same event, including '21:00' and '21:00'. This could be a misunderstanding of the source page's content, or a failure to consider the multiple times listed.",
+        "The extracted candidate mentions the town as 'korcula', but the source page lists the town as 'Korčula, Hrvatska'. This could be a mistranslation or a misunderstanding of the source page's content.",
+        "The extracted candidate mentions the event as a single performance, but the source page lists multiple performances for the same event, including '17 KOL 2026 Moreška ponedjeljak · 21:00 · Ljetno kino Malo preostalih Kupi ulaznice → (ticket link: /tickets?date=2026-08-17)'. This could be a misunderstanding of the source page's content, or a failure to consider the multiple performances listed."
+      ],
+      "blockingReasons": [
+        "fuzzy-duplicate",
+        "verifier-confidence-below-threshold:0.4"
+      ],
+      "duplicateMatches": [
+        {
+          "eventId": "kt-kino-0820",
+          "title": "Cinema: Ice Cream Man (15+)",
+          "date": "2026-08-20",
+          "time": "21:00",
+          "venue": "Ljetno kino",
+          "score": 0.72,
+          "reasons": [
+            "same date",
+            "same town",
+            "same time",
+            "similar venue"
+          ]
+        }
+      ],
+      "status": "needs-review"
     }
   ]
 }

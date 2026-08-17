@@ -2063,6 +2063,24 @@ await replaceInFile(path.join(dist, "index.html"), [
 ]);
 
 const data = JSON.parse(await readFile(path.join(root, "site", "data", "events.json"), "utf8"));
+
+// Real production incident (2026-08-16): a hand-added, more detailed "pst-svroko" event was
+// pushed straight into events.json without checking an older, thinner stub with the same id
+// was already there -- both silently coexisted for days (one showing a real time, the other
+// "tbc"), since nothing anywhere actually enforced id uniqueness. Fail the build loudly rather
+// than ship a second silent duplicate the same way.
+{
+  const seenIds = new Map();
+  const dupes = [];
+  for (const event of data.events) {
+    if (seenIds.has(event.id)) dupes.push(event.id);
+    seenIds.set(event.id, true);
+  }
+  if (dupes.length) {
+    throw new Error(`Duplicate event id(s) in site/data/events.json: ${[...new Set(dupes)].join(", ")}`);
+  }
+}
+
 const urlCount = await buildSeoPages(data);
 
 console.log(`Built site to dist/ with ${urlCount} sitemap URLs.`);

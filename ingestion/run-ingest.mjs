@@ -21,6 +21,7 @@ import { decideCandidate } from "./lib/decide.mjs";
 import { findFuzzyDuplicates } from "./lib/duplicate-check.mjs";
 import { withRetry, sleep } from "./lib/backoff.mjs";
 import { openReviewIssue, findOrCreateRunLogIssue, postRunLogComment } from "./lib/github-issue.mjs";
+import { checkRobotsTxt } from "./lib/robots.mjs";
 import { htmlToPlainText } from "./lib/html-text.mjs";
 import { normalizeText } from "./lib/normalize.mjs";
 
@@ -100,9 +101,26 @@ function hostnameVariants(hostname) {
   return hostname.startsWith("www.") ? [hostname, hostname.slice(4)] : [hostname, `www.${hostname}`];
 }
 
+// Per-host "don't fetch again before this timestamp", so a good-citizen minimum gap applies
+// between requests to the *same* site regardless of how sources.json orders/interleaves URLs --
+// a site's own robots.txt Crawl-delay (if present and longer) takes priority over the default.
+const hostNextFetchAt = new Map();
+const DEFAULT_MIN_MS_BETWEEN_HOST_FETCHES = 2000;
+
 async function processUrlEntry(source, urlEntry, ctx) {
   const { retrievalClient, aiClient, existingEvents, policy, log } = ctx;
   const hostname = new URL(urlEntry.url).hostname;
+
+  const robotsCheck = await checkRobotsTxt(retrievalClient.fetchResource, urlEntry.url, RETRIEVAL_CONFIG, REQUEST_HEADERS);
+  if (!robotsCheck.allowed) {
+    log.sources.push({ sourceId: source.id, url: urlEntry.url, skippedByRobotsTxt: true, published: 0, review: 0 });
+    return { published: [], review: [] };
+  }
+
+  const minGapMs = Math.max(DEFAULT_MIN_MS_BETWEEN_HOST_FETCHES, robotsCheck.crawlDelayMs || 0);
+  const waitMs = (hostNextFetchAt.get(hostname) || 0) - Date.now();
+  if (waitMs > 0) await sleep(waitMs);
+  hostNextFetchAt.set(hostname, Date.now() + minGapMs);
 
   let fetched;
   try {

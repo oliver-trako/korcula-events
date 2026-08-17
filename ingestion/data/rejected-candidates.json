@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "purpose": "Candidate ids manually confirmed as wrong/redundant and removed from site/data/events.json -- checked by decide.mjs alongside live events so a candidate deleted here doesn't just get silently re-extracted and re-published on the next run. Deterministic candidate ids mean the same real bug re-produces the exact same id every time, so this list is effective without needing content fingerprinting.",
+    "howToAdd": "Add the candidate's own id (not the live event id, though for auto-published candidates they're the same) plus a one-line reason when you remove a bad auto-published entry."
+  },
+  "ids": [
+    { "id": "ai-visit-korcula-racisce-2026-04-29-moreska-sword-dance-2026", "reason": "duplicate of kt-moreska-season, wrong town (racisce instead of korcula)" },
+    { "id": "ai-visit-korcula-racisce-2026-06-29-robotics-programming-workshops", "reason": "duplicate of kt-ljeto-u-knjiznici's description" },
+    { "id": "ai-visit-korcula-2026-06-30-chess-school-for-children", "reason": "duplicate of kt-ljeto-u-knjiznici's description" },
+    { "id": "ai-visit-korcula-racisce-2026-07-02-art-workshops-for-children", "reason": "duplicate of kt-ljeto-u-knjiznici's description" },
+    { "id": "ai-visit-korcula-racisce-2026-07-02-drama-workshops-for-children", "reason": "duplicate of kt-ljeto-u-knjiznici's description" },
+    { "id": "ai-visit-korcula-racisce-2026-07-08-summer-kul-quiz", "reason": "duplicate of kt-kulkviz" },
+    { "id": "ai-tz-vela-luka-2026-08-10-luska-lita-schedule", "reason": "a schedule/roundup announcement post, not a standalone event" },
+    { "id": "ai-moreska-2026-10-28-korcula", "reason": "title is just the town name -- no real title was ever extracted" },
+    { "id": "ai-moreska-2026-08-31-performance-of-moreska-in-its-traditional-form", "reason": "duplicate of a kt-moreska-season occurrence date" },
+    { "id": "ai-moreska-2026-09-02-performance-of-moreska-in-its-traditional-form", "reason": "duplicate of a kt-moreska-season occurrence date" },
+    { "id": "ai-moreska-2026-09-17-if-it-rains-performances-will-be-moved-to-the-center-for-cul", "reason": "title is a weather-contingency caveat sentence, not an event name" }
+  ]
+}

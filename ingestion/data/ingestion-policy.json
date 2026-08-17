@@ -26,8 +26,8 @@
     "notes": "Auto-publish requires: passes hardFloor AND verify.mjs's independent confidence >= autoPublishConfidenceThreshold. Source type is no longer a gate by default -- see sourceOverrides for exceptions learned over time. Lowered from 0.9 to 0.8 on 2026-08-11 alongside a verify.mjs prompt fix for confidence miscalibration (real production data: across two full runs, nothing ever scored above 0.8 even for candidates with no concrete error, because the verifier was inventing its own completeness standards and padding non-issues into the concerns list). Revisit this number once a few runs confirm genuinely clean candidates now score in the 0.9-1.0 range as intended."
   },
   "sourceOverrides": {
-    "alwaysReview": [],
-    "notes": "Source ids listed here always route to human review regardless of verifier confidence -- an escape hatch for sources that have proven unreliable, without having to touch decide.mjs."
+    "alwaysReview": ["visit-korcula-racisce"],
+    "notes": "Source ids listed here always route to human review regardless of verifier confidence -- an escape hatch for sources that have proven unreliable, without having to touch decide.mjs. visit-korcula-racisce added 2026-08-16: across 3 separate runs its 'Other events' section (Moreska, chess/robotics/art/drama workshops, KUL quiz -- all really Korcula-town programs already covered by kt-moreska-season and kt-ljeto-u-knjiznici) kept getting extracted as new Racisce-town events with high enough confidence to auto-publish. Revisit once the extraction prompt fixes for this page have proven out over a few review-only runs."
   },
   "legacy": {
     "note": "The fields below described the pre-AI heuristic pipeline's source-type gating. No longer read by decide.mjs; kept for reference only.",

@@ -191,6 +191,14 @@ async function run({ shadow }) {
   const eventsDoc = await readJson(EVENTS_PATH);
   const pendingPath = path.join(DATA_DIR, "pending-events.json");
   const pendingDoc = await readJson(pendingPath);
+  // Real production incident (2026-08-16): a candidate manually confirmed wrong and deleted
+  // from events.json got re-extracted with the same deterministic id and auto-published again
+  // on the very next run, since decide.mjs's duplicate-id check only ever looked at events
+  // currently live -- deleting one taught the pipeline nothing. Folding this permanent rejection
+  // list's ids in as bare id-only stubs lets that same existing duplicate-id check catch them
+  // for free, with no change to decide.mjs itself.
+  const rejectedDoc = await readJson(path.join(DATA_DIR, "rejected-candidates.json"));
+  const rejectedStubs = (rejectedDoc.ids || []).map((r) => ({ id: r.id }));
 
   const cfAccountId = process.env.CF_ACCOUNT_ID;
   const cfApiToken = process.env.CF_API_TOKEN;
@@ -215,7 +223,7 @@ async function run({ shadow }) {
     const fetchableUrls = (source.urls || []).filter((u) => FETCHABLE_SCRAPE_MODES.has(u.scrapeMode));
     for (const urlEntry of fetchableUrls) {
       const { published, review } = await processUrlEntry(source, urlEntry, {
-        retrievalClient, aiClient, existingEvents: eventsDoc.events, policy, log
+        retrievalClient, aiClient, existingEvents: [...eventsDoc.events, ...rejectedStubs], policy, log
       });
       allPublished.push(...published);
       allReview.push(...review);

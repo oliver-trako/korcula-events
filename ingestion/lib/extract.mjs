@@ -239,6 +239,27 @@ function systemPrompt() {
     "grammatical sentence -- if the only candidate text is a complete sentence ending in a period, " +
     "look harder on the page for the actual name before using it; strip any trailing period regardless.",
 
+    // Real production output (visitkorcula.eu/en/events/summer-in-racisce/, three separate runs
+    // 2026-08-13/15/16): a page's 'Other events' section listed Moreska, chess/robotics/art/drama
+    // workshops, and a KUL quiz -- all genuinely Korcula-town programs already covered elsewhere
+    // (the town library's summer program, the Moreska season entry) -- but each kept getting
+    // extracted as a brand-new Racisce-town event, because the page's own heading is about Racisce.
+    "A page about one town commonly has a separate 'Other events' / 'Also happening' / 'Related " +
+    "events' section listing broader, island-wide, or different-town programs alongside its own " +
+    "local ones -- these do not inherit the page's main town just because they're listed there. If " +
+    "a listing under such a secondary section doesn't itself state a specific town or venue, treat " +
+    "its town as unstated rather than defaulting to the page's own town, and be extra cautious that " +
+    "it isn't a generic recurring program (a library summer program, a seasonal folklore show) " +
+    "already well-known and likely covered elsewhere -- when in doubt, omit rather than duplicate.",
+
+    // Real production output (tzvelaluka.hr, 2026-08-16): "Raspored događanja Luškog lita"
+    // ("Schedule of Luško Summer events") -- a roundup post announcing an upcoming program of
+    // events -- got extracted and published as if it were one specific event.
+    "A post whose own title is itself a schedule, timetable, or program announcement (Croatian " +
+    "'raspored', or an English 'schedule of events' / 'upcoming events' roundup) is an index of " +
+    "other events, not an event itself -- never extract it as one; extract the individual dated " +
+    "items it lists instead, each under its own real name, if they're stated clearly enough to do so.",
+
     // Real production output extracted page section headers ('Novosti'/News, 'Događanja'/Events)
     // as if they were event titles, with the section header itself standing in for venue too.
     "Section headers, navigation labels, and category labels (e.g. 'News', 'Events', " +
@@ -363,6 +384,21 @@ function implausibilityReason(e) {
   const TITLE_LENGTH_LIMIT = 160;
   if ((e.hr?.length || 0) > TITLE_LENGTH_LIMIT || (e.en?.length || 0) > TITLE_LENGTH_LIMIT) {
     return `title-too-long:${Math.max(e.hr?.length || 0, e.en?.length || 0)}`;
+  }
+  // Mechanical backstop, real production data (2026-08-16): a candidate shipped live with both
+  // hr and en title fields literally just "Korčula" -- the town's own name, not any event's name.
+  // A genuine event title being byte-identical to a town's own display name is implausible enough
+  // to reject outright rather than trust the model recognized its own extraction came up empty.
+  const townNames = new Set(TOWNS.flatMap((t) => [t.hr, t.en]).map((n) => n.trim().toLowerCase()));
+  if (townNames.has((e.hr || "").trim().toLowerCase()) || townNames.has((e.en || "").trim().toLowerCase())) {
+    return `title-is-just-a-town-name:${e.hr || e.en}`;
+  }
+  // Mechanical backstop, real production data (2026-08-16): "Raspored događanja Luškog lita"
+  // ("Schedule of Luško Summer events") got extracted and published as if it were one event --
+  // it's a roundup/index post announcing an upcoming program, not a specific listing. Croatian
+  // sources reliably use "raspored" (schedule/timetable) for exactly this pattern.
+  if (/^raspored\b/i.test((e.hr || "").trim()) || /\bschedule\b/i.test((e.en || "").trim())) {
+    return `title-is-a-schedule-roundup:${e.hr || e.en}`;
   }
   if (typeof e.venue !== "string" || !e.venue.trim()) return "missing-venue";
   if (!/^\d{4}-\d{2}-\d{2}$/.test(e.date || "")) return `bad-date:${e.date}`;

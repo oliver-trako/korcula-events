@@ -76,6 +76,7 @@ const FLYERS = {
   jungleConnectLive: "jungle-connect-live-2026.jpeg",
   jungleDaraBubamara: "jungle-dara-bubamara-2026.jpeg",
   blatoSmotraFolkloreLxiii: "blato-smotra-folklora-lxiii-2026.jpeg",
+  mediteranRucak0819: "mediteran-rucak-19082026.jpeg",
   standupSkiljo0817: "kt-standup-skiljo-0817-2026.jpeg",
   koncertLimicNeli0825: "kt-koncert-limic-neli-0825-2026.jpeg",
   kulkvizPoster: "kt-kulkviz-poster-2026.jpeg",
@@ -124,6 +125,7 @@ function resolveFlyerFilename(id, date) {
   if (id === "smk-duhovni") return FLYERS.alanHrzicaSmokvica;
   if (id === "racisce-buce-slavljenicka-vecera") return FLYERS.raciscelBuceSlavljenickaVecera;
   if (id === "racisce-marenda-tripice") return FLYERS.marendaTripice;
+  if (id === "racisce-rucak-mediteranu-0819") return FLYERS.mediteranRucak0819;
   if (id === "nl-indira-forza-jungle") return FLYERS.indiraForzaJungle;
   if (id === "pst-danmjesta" || id === "pst-svroko") return FLYERS.zrnovoPostranaVelaGospaSvRoko;
   if (id === "vl-audicija-standup") return FLYERS.velaLukaAudicija;

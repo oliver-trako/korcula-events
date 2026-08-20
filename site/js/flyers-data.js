@@ -77,6 +77,9 @@ const FLYERS = {
   jungleDaraBubamara: "jungle-dara-bubamara-2026.jpeg",
   blatoSmotraFolkloreLxiii: "blato-smotra-folklora-lxiii-2026.jpeg",
   mediteranRucak0819: "mediteran-rucak-19082026.jpeg",
+  raciscelMaloLjetnoKino0821: "racisce-malo-ljetno-kino-21082026.jpeg",
+  mediteranHajdukRakow0821: "mediteran-hajduk-rakow-21082026.jpeg",
+  zavalaticaRibarskaVecer: "zavalatica-ribarska-vecer-22082026.jpeg",
   standupSkiljo0817: "kt-standup-skiljo-0817-2026.jpeg",
   koncertLimicNeli0825: "kt-koncert-limic-neli-0825-2026.jpeg",
   kulkvizPoster: "kt-kulkviz-poster-2026.jpeg",
@@ -126,6 +129,9 @@ function resolveFlyerFilename(id, date) {
   if (id === "racisce-buce-slavljenicka-vecera") return FLYERS.raciscelBuceSlavljenickaVecera;
   if (id === "racisce-marenda-tripice") return FLYERS.marendaTripice;
   if (id === "racisce-rucak-mediteranu-0819") return FLYERS.mediteranRucak0819;
+  if (id === "racisce-malo-ljetno-kino-0821") return FLYERS.raciscelMaloLjetnoKino0821;
+  if (id === "racisce-hajduk-rakow") return FLYERS.mediteranHajdukRakow0821;
+  if (id === "zavalatica-ribarska-vecer") return FLYERS.zavalaticaRibarskaVecer;
   if (id === "nl-indira-forza-jungle") return FLYERS.indiraForzaJungle;
   if (id === "pst-danmjesta" || id === "pst-svroko") return FLYERS.zrnovoPostranaVelaGospaSvRoko;
   if (id === "vl-audicija-standup") return FLYERS.velaLukaAudicija;

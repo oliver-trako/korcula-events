@@ -78,10 +78,26 @@ export function findFuzzyDuplicates(candidateEvent, existingEvents) {
       if (strongTitle) reasons.push("similar title");
     }
 
+    // Real production data (2026-08-16/19): "Chess School for Children" re-extracted from
+    // visitkorcula.eu with three different exact wordings across three runs, each producing a
+    // different id and near-zero title-token overlap against kt-ljeto-u-knjiznici's own title
+    // ("Summer at the Library") -- so it kept clearing the duplicate check despite that event's
+    // own description explicitly naming "a mini chess school" as one of its listed activities.
+    // A candidate whose title tokens substantially recur inside an existing event's *description*
+    // is strong duplicate evidence independent of how differently the two titles read.
+    const existingDescText = existing.desc ? `${existing.desc.hr || ""} ${existing.desc.en || ""}` : "";
+    const descTokens = tokenize(existingDescText);
+    const significantCandidateTokens = [...candidateTokens].filter((t) => t.length >= 4);
+    const descMentionCount = significantCandidateTokens.filter((t) => descTokens.has(t)).length;
+    const descMention = significantCandidateTokens.length >= 2 && descMentionCount >= 2
+      && descMentionCount / significantCandidateTokens.length >= 0.5;
+    if (descMention) { score += 0.35; reasons.push("candidate title tokens mentioned in an existing event's own description"); }
+
     score = Math.round(Math.min(1, score) * 1000) / 1000;
 
     const isLikelyDuplicate =
       occurrenceMatch ||
+      descMention ||
       (sameDate && strongTitle && (venueMatch || sameTime || existing.town === candidateTown || titleScore >= 0.70)) ||
       (sameDate && venueMatch && sameTime) ||
       (rangeOverlap && !sameDate && strongTitle && (venueMatch || existing.town === candidateTown));

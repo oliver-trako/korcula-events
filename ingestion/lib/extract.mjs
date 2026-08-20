@@ -393,11 +393,15 @@ function implausibilityReason(e) {
   if (townNames.has((e.hr || "").trim().toLowerCase()) || townNames.has((e.en || "").trim().toLowerCase())) {
     return `title-is-just-a-town-name:${e.hr || e.en}`;
   }
-  // Mechanical backstop, real production data (2026-08-16): "Raspored događanja Luškog lita"
-  // ("Schedule of Luško Summer events") got extracted and published as if it were one event --
-  // it's a roundup/index post announcing an upcoming program, not a specific listing. Croatian
-  // sources reliably use "raspored" (schedule/timetable) for exactly this pattern.
-  if (/^raspored\b/i.test((e.hr || "").trim()) || /\bschedule\b/i.test((e.en || "").trim())) {
+  // Mechanical backstop, real production data (2026-08-16 and 2026-08-19): "Raspored događanja
+  // Luškog lita" ("Schedule of Luško Summer events") and later "Program Luškog lita 17.8 - 23.8."
+  // -- the same roundup/index post re-extracted with different wording each time -- got published
+  // as if either were one event. Broadened past just "raspored" to also catch "program" (equally
+  // common for this pattern) and, independent of wording entirely, a title containing its own
+  // D.M-D.M date-range -- a specific event's title never states a date range about itself.
+  const titleText = `${e.hr || ""} ${e.en || ""}`;
+  if (/^(raspored|program)\b/i.test((e.hr || "").trim()) || /\bschedule\b/i.test((e.en || "").trim())
+    || /\d{1,2}\.\d{1,2}\.?\s*[-–]\s*\d{1,2}\.\d{1,2}\.?/.test(titleText)) {
     return `title-is-a-schedule-roundup:${e.hr || e.en}`;
   }
   if (typeof e.venue !== "string" || !e.venue.trim()) return "missing-venue";

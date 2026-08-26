@@ -85,10 +85,11 @@ const FLYERS = {
   kulkvizPoster: "kt-kulkviz-poster-2026.jpeg",
   dramaLjudskosti0829: "kt-drama-ljudskosti-0829-2026.jpeg",
   kinoDjecakDupin20824: "kt-kino-djecak-dupin2-0824-2026.jpeg",
-  dramaTrudnica0819: "kt-drama-trudnica-0819-2026.jpeg"
+  dramaTrudnica0819: "kt-drama-trudnica-0819-2026.jpeg",
+  mediteranDalmatinskaNoc0828: "mediteran-dalmatinska-noc-28082026.jpeg"
 };
 
-const NO_FLYER_IDS = new Set(["kt-brodogradnja","kt-moreska-season","kt-svtodor","kt-swordfest","kt-korkyra-baroque","kt-markopolo-gala","kt-winefest","kt-hajduk-istra","kt-hajduk-zalgiris","kt-hajduk-gorica","kt-hajduk-osijek","kt-hajduk-lokomotiva"]);
+const NO_FLYER_IDS = new Set(["kt-brodogradnja","kt-moreska-season","kt-svtodor","kt-swordfest","kt-korkyra-baroque","kt-markopolo-gala","kt-winefest","kt-hajduk-istra","kt-hajduk-zalgiris","kt-hajduk-gorica","kt-hajduk-osijek","kt-hajduk-lokomotiva","kt-hajduk-rakow-uzvrat","kt-hajduk-rudes","kt-hajduk-slaven","kt-hajduk-rijeka"]);
 
 // Events with more than one poster/photo worth showing (e.g. a main poster plus a
 // separate ticket-info graphic). Keys are event ids, values are FLYERS keys in display
@@ -132,6 +133,7 @@ function resolveFlyerFilename(id, date) {
   if (id === "racisce-malo-ljetno-kino-0821") return FLYERS.raciscelMaloLjetnoKino0821;
   if (id === "racisce-hajduk-rakow") return FLYERS.mediteranHajdukRakow0820;
   if (id === "zavalatica-ribarska-vecer") return FLYERS.zavalaticaRibarskaVecer;
+  if (id === "racisce-dalmatinska-noc") return FLYERS.mediteranDalmatinskaNoc0828;
   if (id === "nl-indira-forza-jungle") return FLYERS.indiraForzaJungle;
   if (id === "pst-danmjesta" || id === "pst-svroko") return FLYERS.zrnovoPostranaVelaGospaSvRoko;
   if (id === "vl-audicija-standup") return FLYERS.velaLukaAudicija;

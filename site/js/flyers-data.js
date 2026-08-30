@@ -86,10 +86,20 @@ const FLYERS = {
   dramaLjudskosti0829: "kt-drama-ljudskosti-0829-2026.jpeg",
   kinoDjecakDupin20824: "kt-kino-djecak-dupin2-0824-2026.jpeg",
   dramaTrudnica0819: "kt-drama-trudnica-0819-2026.jpeg",
-  mediteranDalmatinskaNoc0828: "mediteran-dalmatinska-noc-28082026.jpeg"
+  mediteranDalmatinskaNoc0828: "mediteran-dalmatinska-noc-28082026.jpeg",
+  korkyraBaroqueProgram: "kt-korkyra-baroque-program-2026.jpeg",
+  markopoloGala0906: "kt-markopolo-gala-2026.jpeg",
+  swordfestProgram: "kt-swordfest-program-2026.jpeg",
+  pupnatViteskiFestival0903: "pupnat-viteski-festival-0903.jpeg",
+  festaOdUja0903: "vl-festa-od-uja-0903.jpeg",
+  daniMaslinovogUljaProgram: "vl-dani-maslinovog-ulja-program-2026.jpeg",
+  brodetijada0905: "smk-brodetijada-2026.jpeg",
+  lumbardaFolkloreEveningsWed: "lb-folklorne-veceri-2026.jpeg",
+  zrnovoTurnirBucamaZene0904: "zrnovo-turnir-bucama-zene-0904.jpeg",
+  zrnovoMalaGospaNapuhanci0905: "zrnovo-mala-gospa-napuhanci-0905.jpeg"
 };
 
-const NO_FLYER_IDS = new Set(["kt-brodogradnja","kt-moreska-season","kt-svtodor","kt-swordfest","kt-korkyra-baroque","kt-markopolo-gala","kt-winefest","kt-hajduk-istra","kt-hajduk-zalgiris","kt-hajduk-gorica","kt-hajduk-osijek","kt-hajduk-lokomotiva","kt-hajduk-rakow-uzvrat","kt-hajduk-rudes","kt-hajduk-slaven","kt-hajduk-rijeka"]);
+const NO_FLYER_IDS = new Set(["kt-brodogradnja","kt-moreska-season","kt-svtodor","kt-winefest","kt-hajduk-istra","kt-hajduk-zalgiris","kt-hajduk-gorica","kt-hajduk-osijek","kt-hajduk-lokomotiva","kt-hajduk-rakow-uzvrat","kt-hajduk-rudes","kt-hajduk-slaven","kt-hajduk-rijeka"]);
 
 // Events with more than one poster/photo worth showing (e.g. a main poster plus a
 // separate ticket-info graphic). Keys are event ids, values are FLYERS keys in display
@@ -99,7 +109,9 @@ const MULTI_FLYERS = {
   "zrnovo-makarunada": ["zrnovskaMakarunada", "zrnovskaMakarunadaEn"],
   "racisce-muski-buce": ["litoURaciscu", "muskiBuceFinaleRaspored"],
   "pst-danmjesta": ["zrnovoPostranaVelaGospaSvRoko", "zrnovoPostranaTotemBend"],
-  "racisce-noc-pumpurele": ["litoURaciscu", "raciscePumpureleRaspored", "raciscePumpureleRasporedV2"]
+  "racisce-noc-pumpurele": ["litoURaciscu", "raciscePumpureleRaspored", "raciscePumpureleRasporedV2"],
+  "kt-swordfest": ["swordfestProgram", "pupnatViteskiFestival0903"],
+  "vl-olive-1": ["festaOdUja0903", "daniMaslinovogUljaProgram"]
 };
 
 // Always returns an array (possibly empty) -- the plural counterpart to resolveFlyerFilename,
@@ -134,6 +146,13 @@ function resolveFlyerFilename(id, date) {
   if (id === "racisce-hajduk-rakow") return FLYERS.mediteranHajdukRakow0820;
   if (id === "zavalatica-ribarska-vecer") return FLYERS.zavalaticaRibarskaVecer;
   if (id === "racisce-dalmatinska-noc") return FLYERS.mediteranDalmatinskaNoc0828;
+  if (id === "kt-korkyra-baroque") return FLYERS.korkyraBaroqueProgram;
+  if (id === "kt-markopolo-gala") return FLYERS.markopoloGala0906;
+  if (id === "kt-swordfest") return FLYERS.swordfestProgram;
+  if (id === "smk-brodetijada") return FLYERS.brodetijada0905;
+  if (id === "lb-folklorne-veceri") return FLYERS.lumbardaFolkloreEveningsWed;
+  if (id === "zrnovo-turnir-bucama-zene") return FLYERS.zrnovoTurnirBucamaZene0904;
+  if (id === "zrnovo-mala-gospa-napuhanci") return FLYERS.zrnovoMalaGospaNapuhanci0905;
   if (id === "nl-indira-forza-jungle") return FLYERS.indiraForzaJungle;
   if (id === "pst-danmjesta" || id === "pst-svroko") return FLYERS.zrnovoPostranaVelaGospaSvRoko;
   if (id === "vl-audicija-standup") return FLYERS.velaLukaAudicija;
@@ -154,6 +173,7 @@ function resolveFlyerFilename(id, date) {
   if (id === "vl-napredak") return FLYERS.hkdNapredak;
   if (id === "vl-racki") return FLYERS.brunoRacki;
   if (id === "vl-chess-mala") return FLYERS.malaVelaLukaSah;
+  if (id === "vl-olive-1") return FLYERS.festaOdUja0903;
   if (id.startsWith("vl-oliver")) return FLYERS.tragUBeskraju;
   if (id.startsWith("vl-folk-")) return FLYERS.velaLukaFolkloreAug;
   if (id.startsWith("vl-")) return FLYERS.luskoLito;

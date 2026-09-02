@@ -87,6 +87,7 @@ const FLYERS = {
   kinoDjecakDupin20824: "kt-kino-djecak-dupin2-0824-2026.jpeg",
   dramaTrudnica0819: "kt-drama-trudnica-0819-2026.jpeg",
   mediteranDalmatinskaNoc0828: "mediteran-dalmatinska-noc-28082026.jpeg",
+  mediteranAdioLito0905: "mediteran-adio-lito-0905.jpeg",
   korkyraBaroqueProgram: "kt-korkyra-baroque-program-2026.jpeg",
   markopoloGala0906: "kt-markopolo-gala-2026.jpeg",
   swordfestProgram: "kt-swordfest-program-2026.jpeg",
@@ -146,6 +147,7 @@ function resolveFlyerFilename(id, date) {
   if (id === "racisce-hajduk-rakow") return FLYERS.mediteranHajdukRakow0820;
   if (id === "zavalatica-ribarska-vecer") return FLYERS.zavalaticaRibarskaVecer;
   if (id === "racisce-dalmatinska-noc") return FLYERS.mediteranDalmatinskaNoc0828;
+  if (id === "racisce-adio-lito") return FLYERS.mediteranAdioLito0905;
   if (id === "kt-korkyra-baroque") return FLYERS.korkyraBaroqueProgram;
   if (id === "kt-markopolo-gala") return FLYERS.markopoloGala0906;
   if (id === "kt-swordfest") return FLYERS.swordfestProgram;

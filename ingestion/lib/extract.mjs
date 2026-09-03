@@ -76,13 +76,30 @@ function extractionSchema() {
   };
 }
 
-function systemPrompt() {
+function systemPrompt(expectedTown) {
   const townList = TOWNS.map((t) => `${t.id} (${t.hr} / ${t.en})`).join(", ");
+  const expectedTownMeta = expectedTown && TOWNS.find((t) => t.id === expectedTown);
   return [
     "You extract event listings from the plain text of a Croatian tourism/venue webpage about the island of Korčula.",
     "Only extract events that are genuinely happening -- ignore navigation menus, cookie notices, generic taglines, and past/expired listings.",
     "Never invent a missing fact. If a field isn't stated or unambiguously implied on the page, omit that field entirely rather than guess.",
     `The 'town' field must be one of exactly these ids: ${townList}. Pick the town the event is physically held in, not the site's general region.`,
+
+    // Real production data: visit-orebic's own configured source town ("orebic") was never
+    // actually told to the model -- extraction ran with no town context beyond whatever the
+    // page's own text happened to make obvious, and repeatedly defaulted to "korcula" instead
+    // (2026-08-28 wine night at Kućište, 2026-08-31 Orebić guided tour, 2026-09-05 a Korkyra
+    // Baroque concert in Viganj -- all Pelješac/Orebić content mistagged korcula). This source
+    // is registered in sources.json specifically because it's an Orebić-town site; say so
+    // explicitly as a strong prior, while still letting a listing's own clearly-stated different
+    // town/venue override it -- an "Other events" section can genuinely list island-wide content.
+    ...(expectedTownMeta
+      ? [`This specific page is from a source registered for the town ${expectedTownMeta.id} ` +
+        `(${expectedTownMeta.hr} / ${expectedTownMeta.en}) -- use that town for any listing that ` +
+        "doesn't itself clearly state a different specific town or venue located elsewhere. Do not " +
+        "default to a different, more prominent town (e.g. korcula) just because it's the island's " +
+        "biggest -- only pick a different town when this listing's own text actually names one."]
+      : []),
 
     // Real production miss: a page titled "Žrnovo -- Korčula Island", entirely about Žrnovo and
     // its hamlets, produced candidates tagged town: "lumbarda" -- a town that appears nowhere at
@@ -277,13 +294,13 @@ function systemPrompt() {
  * site's real field names, town ids, and category vocabulary -- so no separate mapping layer
  * is needed between what the model returns and what site/data/events.json expects.
  */
-export async function extractEventsFromHtml(html, { completeJson, pageUrl, evidenceHash, onRejected } = {}) {
+export async function extractEventsFromHtml(html, { completeJson, pageUrl, evidenceHash, onRejected, expectedTown } = {}) {
   if (typeof completeJson !== "function") throw new Error("extractEventsFromHtml requires a completeJson function");
   const pageText = htmlToPlainText(html);
   if (!pageText.trim()) return [];
 
   const messages = [
-    { role: "system", content: systemPrompt() },
+    { role: "system", content: systemPrompt(expectedTown) },
     { role: "user", content: `<page-content>\n${pageText}\n</page-content>` }
   ];
 
@@ -403,6 +420,20 @@ function implausibilityReason(e) {
   if (/^(raspored|program)\b/i.test((e.hr || "").trim()) || /\bschedule\b/i.test((e.en || "").trim())
     || /\d{1,2}\.\d{1,2}\.?\s*[-–]\s*\d{1,2}\.\d{1,2}\.?/.test(titleText)) {
     return `title-is-a-schedule-roundup:${e.hr || e.en}`;
+  }
+  // Mechanical backstop, real production data (2026-08-27 and 2026-09-01, Blue Club Korčula):
+  // "Reserve your table and join the vibe." then, a re-extraction of the same page five weeks
+  // later, "Join the vibe and reserve your table at Blue Club." -- the venue's own marketing
+  // call-to-action line, reworded but structurally identical both times, published as an event
+  // name across 8 different dates total. Both wordings are an imperative sentence addressed
+  // to the reader (verb-first, ending in a period/exclamation) rather than a proper name --
+  // catch the shape rather than either specific wording, since it already recurred once with
+  // different phrasing and would likely do so again.
+  const ctaVerbs = "reserve|join|book|come|visit|discover|experience|celebrate|enjoy|don.t miss|" +
+    "pridruž\\w*|rezervir\\w*|dođ\\w*|posjet\\w*|otkrij\\w*|doživ\\w*|proslav\\w*|uživaj\\w*";
+  const ctaRegex = new RegExp(`^(${ctaVerbs})\\b.*[.!]$`, "i");
+  if (ctaRegex.test((e.hr || "").trim()) || ctaRegex.test((e.en || "").trim())) {
+    return `title-is-a-marketing-cta:${e.hr || e.en}`;
   }
   if (typeof e.venue !== "string" || !e.venue.trim()) return "missing-venue";
   if (!/^\d{4}-\d{2}-\d{2}$/.test(e.date || "")) return `bad-date:${e.date}`;

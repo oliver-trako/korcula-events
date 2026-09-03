@@ -150,7 +150,11 @@ async function processUrlEntry(source, urlEntry, ctx) {
         // Visibility into candidates the model proposed but our own post-filter discarded --
         // without this, "the model found nothing" and "the model found something we then
         // silently dropped" were indistinguishable from the run log alone.
-        onRejected: ({ candidate, reason }) => log.rejectedCandidates.push({ sourceId: source.id, url: urlEntry.url, reason, candidate })
+        onRejected: ({ candidate, reason }) => log.rejectedCandidates.push({ sourceId: source.id, url: urlEntry.url, reason, candidate }),
+        // sources.json already records which town each source is registered for -- this was
+        // being silently dropped on the floor instead of reaching the model, which is the root
+        // cause of visit-orebic's repeated town: "korcula" mistagging (see extract.mjs's prompt).
+        expectedTown: source.town
       }),
       AI_RETRY_OPTIONS
     );

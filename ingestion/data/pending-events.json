@@ -9393,6 +9393,363 @@
       ],
       "duplicateMatches": [],
       "status": "needs-review"
+    },
+    {
+      "id": "ai-centar-kulture-korcula-2026-08-21-djecak-dupin-2",
+      "sourceId": "centar-kulture-korcula",
+      "sourceUrl": "https://kulturakorcula.hr/kino-najave/",
+      "discoveredAt": "2026-09-10T09:47:55.867Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Dječak dupin 2",
+        "en": "The Little Mermaid 2",
+        "de": "The Little Mermaid 2",
+        "it": "La Sirenetta 2",
+        "sl": "Mala morska princesa 2",
+        "fr": "La Petite Sirène 2",
+        "date": "2026-08-21",
+        "time": "20:00",
+        "town": "korcula",
+        "venue": "Centar za kulturu Korčula",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://kulturakorcula.hr/kino-najave/",
+        "extractionMethod": "ai",
+        "id": "ai-centar-kulture-korcula-2026-08-21-djecak-dupin-2"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The extracted candidate's date (2026-08-21) seems to be supported by the source page text, specifically the entry 'LJETO U MREŽI / Dječak dupin 2 / Ponedjeljak, 24.8., 20:00 / Centar za kulturu Korčula'. However, the time (20:00) seems to be supported only for the 24th, not the 21st. This discrepancy in time might indicate a potential error in the extracted candidate's time field.",
+        "The extracted candidate's venue (Centar za kulturu Korčula) seems to be supported by the source page text, specifically the entry 'LJETO U MREŽI / Dječak dupin 2 / Ponedjeljak, 24.8., 20:00 / Centar za kulturu Korčula'. However, it's worth noting that the same venue is also mentioned in other entries, which might indicate that the page lists multiple events at the same venue.",
+        "The extracted candidate's town (korcula) seems to be supported by the source page text, specifically the entry 'LJETO U MREŽI / Dječak dupin 2 / Ponedjeljak, 24.8., 20:00 / Centar za kulturu Korčula'. However, it's worth noting that the town is not explicitly mentioned in the source page text, but rather can be inferred from the venue's name.",
+        "The extracted candidate's category (kids) seems to be supported by the source page text, specifically the entry 'LJETO U MREŽI / Dječak dupin 2 / Ponedjeljak, 24.8., 20:00 / Centar za kulturu Korčula', which mentions 'dječje filmske klasike' (children's film classics). However, it's worth noting that the category is not explicitly mentioned in the source page text, but rather can be inferred from the event's description.",
+        "The extracted candidate's title (Dječak dupin 2 / The Little Mermaid 2) seems to be supported by the source page text, specifically the entry 'LJETO U MREŽI / Dječak dupin 2 / Ponedjeljak, 24.8., 20:00 / Centar za kulturu Korčula'. However, it's worth noting that the title is not explicitly mentioned in the source page text, but rather can be inferred from the event's description."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-tz-vela-luka-2026-09-04-the-okusi-i-mirisi-vele-luke-walk-is-part-of-the-korcula-oli",
+      "sourceId": "tz-vela-luka",
+      "sourceUrl": "https://tzvelaluka.hr/",
+      "discoveredAt": "2026-09-10T09:47:55.867Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Šetnja 'Okusi i mirisi Vele Luke' je dio Dani Korčulanskog maslinovog ulja, koji će se održati u Veloj Luci.",
+        "en": "The 'Okusi i mirisi Vele Luke' walk is part of the Korčula Olive Oil Days, which will take place in Vela Luka.",
+        "de": "Šetnja 'Okusi i mirisi Vele Luke' je dio Dani Korčulanskog maslinovog ulja, koji će se održati u Veloj Luci.",
+        "it": "La passeggiata 'Okusi i mirisi Vele Luke' fa parte dei Giorni dell'olio d'oliva di Korčula, che si terranno a Vela Luka.",
+        "sl": "Šetnja 'Okusi i mirisi Vele Luke' je del Korčulanskega dneva maslinovega olja, ki bo potekal v Veli Luci.",
+        "fr": "La marche 'Okusi i mirisi Vele Luke' fait partie des Journées de l'huile d'olive de Korčula, qui se tiendront à Vela Luka.",
+        "date": "2026-09-04",
+        "endDate": "2026-09-04",
+        "time": "Unknown",
+        "town": "korcula",
+        "venue": "Vela Luka",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://tzvelaluka.hr/",
+        "extractionMethod": "ai",
+        "id": "ai-tz-vela-luka-2026-09-04-the-okusi-i-mirisi-vele-luke-walk-is-part-of-the-korcula-oli"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The title is well-supported, as it appears in the source page text. However, it's worth noting that the title is a direct quote from the source page, and the extraction may have simply copied the text as is. A more robust extraction might have rephrased the title to make it more concise or grammatically correct.",
+        "The date is well-supported, as it appears in the source page text. However, it's worth noting that the date is listed as part of a series of upcoming events, and it's not clear whether this is a one-time event or a recurring event.",
+        "The time is unknown, which is well-supported by the source page text. However, it's worth noting that the source page does not provide a specific time for the event, which may indicate that the event is not well-defined or that the information is not available.",
+        "The venue is well-supported, as it appears in the source page text. However, it's worth noting that the venue is listed as a generic location, and it's not clear whether this is a specific venue or a general area.",
+        "The town is well-supported, as it appears in the source page text. However, it's worth noting that the town is listed as a generic location, and it's not clear whether this is a specific town or a general area.",
+        "The category is 'kids', which is not well-supported by the source page text. The source page text does not mention the category 'kids' in relation to the event. It's possible that the category was incorrectly extracted or that the event is not actually intended for kids.",
+        "The source page text appears to be a generic tourism website for the town of Vela Luka, and it does not provide a clear indication of the event's purpose or target audience. This may indicate that the event is not well-defined or that the information is not available."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-tz-blato-2026-06-29-34-blato-summer",
+      "sourceId": "tz-blato",
+      "sourceUrl": "https://tzo-blato.hr/en/",
+      "discoveredAt": "2026-09-10T09:47:55.867Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "34. BLATSKO LJETO",
+        "en": "34. Blato Summer",
+        "de": "34. Blatsko Ljeto",
+        "it": "34° Estate di tavola",
+        "sl": "34. Plesno leto",
+        "fr": "Été de la table (34ème)",
+        "date": "2026-06-29",
+        "endDate": "2026-08-31",
+        "time": "Monday",
+        "town": "blato",
+        "venue": "Blato",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://tzo-blato.hr/en/",
+        "extractionMethod": "ai",
+        "id": "ai-tz-blato-2026-06-29-34-blato-summer"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The date field in the candidate is '2026-06-29', but the corresponding event text on the page is 'Monday, 29 June 2026', which matches the candidate's date. However, the 'endDate' field in the candidate is '2026-08-31', which is not explicitly mentioned in the event text. The page does mention 'Okusi i mirisi zavičaja / Blato Wine & Dine 26.08.2026.' and 'Okusi i mirisi zavičaja / Blato Wine & Dine 12.08.2026.', which suggests that the event may extend beyond the specified end date. Therefore, the 'endDate' field may be incorrect or incomplete.",
+        "The time field in the candidate is 'Monday', which matches the corresponding event text on the page. However, the event text also specifies the day of the month ('29 June 2026'), which is not explicitly mentioned in the candidate. The candidate's time field should be more specific, but it is currently just a day of the week.",
+        "The venue field in the candidate is 'Blato', which matches the corresponding event text on the page. However, the event text also mentions 'Turistička zajednica Općine Blato' (Blato Tourist Board), which could be considered as the actual venue. The candidate's venue field is too simplistic and does not capture the full context.",
+        "The town field in the candidate is 'blato', which matches the corresponding event text on the page. However, the event text also mentions 'Blato' as a part of the full name of the town, which is not explicitly mentioned in the candidate. The candidate's town field should be more specific and include the full name of the town.",
+        "The category field in the candidate is 'kids', which does not match the corresponding event text on the page. The event text mentions '34. BLATSKO LJETO' as a summer festival, which does not necessarily imply a focus on children. The candidate's category field is likely incorrect or incomplete.",
+        "The title field in the candidate is '34. Blato Summer', which matches the corresponding event text on the page. However, the event text also mentions '34. BLATSKO LJETO', which is the full title in Croatian. The candidate's title field is too simplistic and does not capture the full context."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-tz-blato-2026-09-02-vas-domacin-local-host",
+      "sourceId": "tz-blato",
+      "sourceUrl": "https://tzo-blato.hr/en/",
+      "discoveredAt": "2026-09-10T09:47:55.867Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Vaš domaćin - Local Host",
+        "en": "Vaš domaćin - Local Host",
+        "de": "Ihr Gastgeber - Local Host",
+        "it": "Il vostro ospite locale - Local Host",
+        "sl": "Vaš gostitelj - Local Host",
+        "fr": "Votre hôte local - Local Host",
+        "date": "2026-09-02",
+        "endDate": "2026-09-02",
+        "town": "blato",
+        "venue": "Blato",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://tzo-blato.hr/en/",
+        "extractionMethod": "ai",
+        "id": "ai-tz-blato-2026-09-02-vas-domacin-local-host"
+      },
+      "verifierConfidence": 0.4,
+      "verifierConcerns": [
+        "The title field contains the text 'Vaš domaćin - Local Host' which appears to be a call-to-action or booking-status text, rather than just the event name. It's not clear if this is the actual title of the event, or if it's a promotional phrase.",
+        "The date field states '2026-09-02', but there is no explicit mention of this date in the surrounding text. The closest mention of a date is 'Wednesday, 02 September 2026' which refers to a different event.",
+        "The venue field states 'Blato', but the surrounding text does mention 'Blato Tourist Board' and 'Trg Dr. Franje Tuđmana 4' which could be the actual venue. However, it's not clear if this is the same Blato referred to in the extracted candidate.",
+        "The category field states 'folklore', but the surrounding text does not explicitly mention folklore. It does mention 'Dalmatian folk singing' but it's not clear if this is the same category.",
+        "The extracted candidate is listed under the section 'Događanja' (Events) but the surrounding text does not explicitly mention the event 'Vaš domaćin - Local Host'."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.4"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2024-06-01-kumpanija-one-of-the-five-villages-on-korcula-island-that-pr",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/cara/",
+      "discoveredAt": "2026-09-10T09:47:55.867Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Kumpanija - jedno od pet sela na otoku Korčuli koje čuva kumpaniju.",
+        "en": "Kumpanija - one of the five villages on Korčula Island that preserves the Kumpanija sword dance.",
+        "de": "Kumpanija - ein traditionelles Schwerttanzfestival.",
+        "it": "Kumpanija - uno dei cinque villaggi dell'isola di Korčula che conserva la danza di spada Kumpanija.",
+        "sl": "Kumpanija - eno od pet vasi na otoku Korčuli, ki čuva kumpanijo.",
+        "fr": "Kumpanija - un des cinq villages de l'île de Korčula qui préserve la danse de l'épée Kumpanija.",
+        "date": "2024-06-01",
+        "endDate": "2024-09-30",
+        "time": "summer",
+        "town": "cara",
+        "venue": "Čara village",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://www.korculainfo.com/cara/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2024-06-01-kumpanija-one-of-the-five-villages-on-korcula-island-that-pr"
+      },
+      "verifierConfidence": 0.7,
+      "verifierConcerns": [
+        "The title field contains a description ('one of the five villages on Korčula Island that preserves the Kumpanija sword dance') rather than just the event name. This is not necessarily an error, but it may indicate that the extraction was not as precise as it could have been.",
+        "The date field ('2024-06-01') appears to be a specific date, but it is not clear whether this is the date of the Kumpanija event or some other event mentioned on the page. The page text does mention that the Kumpanija sword dance is performed in summer, which suggests that the event may be ongoing rather than a one-time occurrence.",
+        "The venue field ('Čara village') appears to be correct, but it is not clear whether this is the specific village where the Kumpanija event will take place or whether it is a more general location. The page text does mention that Čara is one of the five villages on Korčula Island that preserves the Kumpanija sword dance, which suggests that the event may be held in multiple locations.",
+        "The category field ('folklore') appears to be correct, but it is not clear whether this is the only category that applies to the Kumpanija event. The page text does mention that the Kumpanija sword dance is a chain sword dance of great antiquity, which suggests that it may also be of historical or cultural significance."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.7"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-aminess-korcula-entertainment-2024-04-15-keelboat-sailing-trips-morning-afternoon-or-sunset",
+      "sourceId": "aminess-korcula-entertainment",
+      "sourceUrl": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+      "discoveredAt": "2026-09-10T09:47:55.867Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Izkušajte dan, koji će vam omogućiti eksploraciju Korčulskog arhipelaga i Pelješačkog kanala ili poplatevajte zalazak sunca.",
+        "en": "Keelboat Sailing Trips - Morning, Afternoon or Sunset",
+        "de": "Experience a day exploring Korčula archipelago and Pelješac channel or sail into the sunset.",
+        "it": "Experience a day exploring Korčula archipelago and Pelješac channel or sail into the sunset.",
+        "sl": "Izkušajte dan, ki bo vam omogočil eksploracijo Korčulskega arhipela in Pelješačkega kanala ali poplatevajte zalazek sonca.",
+        "fr": "Experience a day exploring Korčula archipelago and Pelješac channel or sail into the sunset.",
+        "date": "2024-04-15",
+        "endDate": "2024-04-15",
+        "time": "03:00h",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+        "extractionMethod": "ai",
+        "id": "ai-aminess-korcula-entertainment-2024-04-15-keelboat-sailing-trips-morning-afternoon-or-sunset"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The date field '2024-04-15' is mentioned as the date for multiple events, but the source text does not explicitly state that the extracted candidate's event is taking place on this date. The source text lists multiple events with the same date, which makes it unclear which event is being referred to in the extracted candidate."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-aminess-korcula-entertainment-2024-04-15-full-or-half-day-private-sailing-adventure",
+      "sourceId": "aminess-korcula-entertainment",
+      "sourceUrl": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+      "discoveredAt": "2026-09-10T09:47:55.867Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Izkušajte dan, koji će vam omogućiti eksploraciju dragulje Adrijata.",
+        "en": "Full or Half Day Private Sailing Adventure",
+        "de": "Experience a day exploring the gems of the Adriatic.",
+        "it": "Experience a day exploring the gems of the Adriatic.",
+        "sl": "Izkušajte dan, ki bo vam omogočil eksploracijo dragulje Adrijata.",
+        "fr": "Experience a day exploring the gems of the Adriatic.",
+        "date": "2024-04-15",
+        "endDate": "2024-04-15",
+        "time": "04:00h",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+        "extractionMethod": "ai",
+        "id": "ai-aminess-korcula-entertainment-2024-04-15-full-or-half-day-private-sailing-adventure"
+      },
+      "verifierConfidence": 0.2,
+      "verifierConcerns": [
+        "The 'event' is actually a listing of multiple activities and tours, and the extracted candidate appears to be a generic title for one of these activities.",
+        "The 'date' field appears to be a time, not a date, and the extracted candidate does not specify a date for the event.",
+        "The 'venue' field appears to be the name of the hotel, not the location of the event, and the extracted candidate does not specify the location of the event.",
+        "The 'town' field appears to be the name of the island, not the town, and the extracted candidate does not specify the town.",
+        "The 'category' field appears to be 'kids', but the extracted candidate does not specify that the event is suitable for children.",
+        "The extracted candidate does not specify the duration of the event, and the source page text mentions both 'half day' and 'full day' options.",
+        "The extracted candidate does not specify the price of the event, and the source page text mentions prices ranging from €75 to €600."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.2"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-aminess-korcula-entertainment-2024-04-15-korcula-buggy-safari-tour",
+      "sourceId": "aminess-korcula-entertainment",
+      "sourceUrl": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+      "discoveredAt": "2026-09-10T09:47:55.867Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Izkušajte najbolje od Korčulskog okoliša na ovom uzbudljivom terenskom avanturi. To je savršeno zabavno izleta, primjeren za sve uzraste.",
+        "en": "Korcula Buggy Safari Tour",
+        "de": "Experience the very best of Korcula's surrounding area on this exhilarating off-road adventure. This is a perfect fun-filled excursion suitable for all ages.",
+        "it": "Experience the very best of Korcula's surrounding area on this exhilarating off-road adventure. This is a perfect fun-filled excursion suitable for all ages.",
+        "sl": "Izkušajte najbolje od Korčulskega okoliša na tej uzbudljivi terenski avanturi. To je savršen zabaven izlet, primern za vse starosti.",
+        "fr": "Experience the very best of Korcula's surrounding area on this exhilarating off-road adventure. This is a perfect fun-filled excursion suitable for all ages.",
+        "date": "2024-04-15",
+        "endDate": "2024-04-15",
+        "time": "04:00h",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+        "extractionMethod": "ai",
+        "id": "ai-aminess-korcula-entertainment-2024-04-15-korcula-buggy-safari-tour"
+      },
+      "verifierConfidence": 0.95,
+      "verifierConcerns": [
+        "The title 'Korcula Buggy Safari Tour' appears to be correct according to the source page text.",
+        "The date '2024-04-15' appears to be correct according to the source page text.",
+        "The time '04:00h' appears to be correct according to the source page text.",
+        "The venue 'Korčula' appears to be correct according to the source page text.",
+        "The town 'korcula' appears to be correct according to the source page text.",
+        "The category 'kids' appears to be correct according to the source page text, but the page also mentions other categories such as 'sailing', 'beauty & gym', and 'sports & activities'."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-aminess-korcula-entertainment-2024-04-15-dubrovnik-city-day-tour",
+      "sourceId": "aminess-korcula-entertainment",
+      "sourceUrl": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+      "discoveredAt": "2026-09-10T09:47:55.867Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Izkušajte Dubrovnik, grad s popisa svjetske baštine UNESCO, obkrožen s moćnim zidinama i utvrdama, koje su dominirale ovom regijom stoljećima.",
+        "en": "Dubrovnik City Day Tour",
+        "de": "Explore Dubrovnik, the town from the list of UNESCO world heritage, encircled with mighty walls and fortresses that have dominated the region for centuries.",
+        "it": "Explore Dubrovnik, the town from the list of UNESCO world heritage, encircled with mighty walls and fortresses that have dominated the region for centuries.",
+        "sl": "Izkušajte Dubrovnik, grad s popisa svetovne dediščine UNESCO, obkrožen s močnimi zidovi in utrdbami, ki so dominirale to regijo stoletja.",
+        "fr": "Explore Dubrovnik, the town from the list of UNESCO world heritage, encircled with mighty walls and fortresses that have dominated the region for centuries.",
+        "date": "2024-04-15",
+        "endDate": "2024-04-15",
+        "time": "11:00h",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+        "extractionMethod": "ai",
+        "id": "ai-aminess-korcula-entertainment-2024-04-15-dubrovnik-city-day-tour"
+      },
+      "verifierConfidence": 0.5,
+      "verifierConcerns": [
+        "The title 'Dubrovnik City Day Tour' seems to match the text on the page, but the description provided in the extracted candidate does not match the text on the page. The extracted candidate's description mentions 'grad s popisa svjetske baštine UNESCO' which translates to 'a city on the UNESCO World Heritage list', but the page text does not contain this description. The page text does contain the title 'Dubrovnik City Day Tour' and a description that mentions 'the town from the list of UNESCO world heritage', but it does not match the extracted candidate's description. This discrepancy suggests that the extracted candidate's description may be incorrect or misleading.",
+        "The date '2024-04-15' seems to match the text on the page, but the page text contains multiple dates for different tours, including '04:00h', '07:00h', and '11:00h'. The extracted candidate's date does not match any of these dates, and it is not clear which tour it corresponds to. This discrepancy suggests that the extracted candidate's date may be incorrect or ambiguous.",
+        "The time '11:00h' seems to match the text on the page, but the page text contains multiple times for different tours, including '04:00h', '07:00h', and '11:00h'. The extracted candidate's time does not match any of these times, and it is not clear which tour it corresponds to. This discrepancy suggests that the extracted candidate's time may be incorrect or ambiguous.",
+        "The venue 'Korčula' seems to match the text on the page, but the page text contains multiple locations, including 'Korčula', 'Dubrovnik', and 'Pelješac channel'. The extracted candidate's venue does not match any of these locations, and it is not clear which tour it corresponds to. This discrepancy suggests that the extracted candidate's venue may be incorrect or ambiguous.",
+        "The town 'Korčula' seems to match the text on the page, but the page text contains multiple locations, including 'Korčula', 'Dubrovnik', and 'Pelješac channel'. The extracted candidate's town does not match any of these locations, and it is not clear which tour it corresponds to. This discrepancy suggests that the extracted candidate's town may be incorrect or ambiguous.",
+        "The category 'kids' seems to match the text on the page, but the page text does not contain any information about kids. The page text does contain information about various tours and activities, but it does not match the extracted candidate's category. This discrepancy suggests that the extracted candidate's category may be incorrect or misleading."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.5"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
     }
   ]
 }

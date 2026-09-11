@@ -9750,6 +9750,432 @@
       ],
       "duplicateMatches": [],
       "status": "needs-review"
+    },
+    {
+      "id": "ai-centar-kulture-korcula-2026-07-19-hana-jusic",
+      "sourceId": "centar-kulture-korcula",
+      "sourceUrl": "https://kulturakorcula.hr/kino-najave/",
+      "discoveredAt": "2026-09-11T09:46:18.861Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Hana Jušić",
+        "en": "Hana Jušić",
+        "de": "Hana Jušić",
+        "it": "Hana Jušić",
+        "sl": "Hana Jušić",
+        "fr": "Hana Jušić",
+        "date": "2026-07-19",
+        "endDate": "2026-07-19",
+        "time": "21:00",
+        "town": "korcula",
+        "venue": "Kino Mediteran",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://kulturakorcula.hr/kino-najave/",
+        "extractionMethod": "ai",
+        "id": "ai-centar-kulture-korcula-2026-07-19-hana-jusic"
+      },
+      "verifierConfidence": 0.5,
+      "verifierConcerns": [
+        "The source page text appears to list multiple events, but the extracted candidate only contains information for one event. It is unclear which event this is or how the fields were chosen.",
+        "The title field appears to be the name of a person (Hana Jušić) rather than an event title. This may not be an error, but it is unusual and could be a source of confusion.",
+        "The date field is '2026-07-19', but the source page text lists several events with dates in July, including 'Petak, 31.7., 21:00' which appears to be the same date as the extracted candidate's date.",
+        "The time field is '21:00', but the source page text lists several events with different times, including '20:00' and '21:00'. It is unclear why this specific time was chosen.",
+        "The venue field is 'Kino Mediteran', but the source page text lists several events with different venues, including 'Atrij Gradske vijećnice Korčula' and 'Katedrala Sv. Marka'. It is unclear why this specific venue was chosen.",
+        "The category field is 'kids', but the source page text does not appear to list any events in this category. It is unclear why this specific category was chosen.",
+        "The extracted candidate appears to be a single event, but the source page text lists several events with the same date and time. It is unclear how the fields were chosen or why this specific event was chosen."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.5"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-lumbarda-2026-08-25-lumbarda-classic-2026-lumbarajska-vecer-za-pamcenje-klasicno",
+      "sourceId": "visit-lumbarda",
+      "sourceUrl": "https://www.visitlumbarda.eu/",
+      "discoveredAt": "2026-09-11T09:46:18.861Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "LUMBARDA KLASIK 2026. – LUMBARAJSKA VEČER ZA PAMĆENJE, KLASIČNO…",
+        "en": "LUMBARDA CLASSIC 2026. – LUMBARAJSKA VEČER ZA PAMĆENJE, KLASIČNO…",
+        "de": "LUMBARDA KLASIK 2026. – LUMBARAJSKA VEČER ZA PAMĆENJE, KLASIČNO…",
+        "it": "CLASSICA DI LUMBARDA 2026. – SERATA DI LUMBARA IN MEMORIA, CLASSICA…",
+        "sl": "LUMBARDA KLASIKA 2026. – LUMBARŠKA VEČER ZA POMENITVENOST, KLASIKA…",
+        "fr": "CLASSIQUE DE LUMBARDA 2026. – SOIRÉE DE LUMBARA EN MÉMOIRE, CLASSIQUE…",
+        "date": "2026-08-25",
+        "endDate": "2026-08-25",
+        "town": "lumbarda",
+        "venue": "Lumbarda",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://www.visitlumbarda.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-lumbarda-2026-08-25-lumbarda-classic-2026-lumbarajska-vecer-za-pamcenje-klasicno"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The title field contains a description of the event ('LUMBARAJSKA VEČER ZA PAMĆENJE, KLASIČNO…') which doesn't appear to be a separate title. It's possible that this was extracted from a paragraph or section heading, not a standalone title.",
+        "The date field ('2026-08-25') seems to be well-supported by the text ('25. kolovoza 2026.')",
+        "The venue field ('Lumbarda') appears to be well-supported by the text ('Lumbarda...').",
+        "The town field ('lumbarda') appears to be well-supported by the text ('Lumbarda').",
+        "The category field ('folklore') appears to be well-supported by the text ('Lumbarajska psefizma', 'Lumbarajske užance')."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-lumbarda-2026-07-17-trebate-vodica-za-lumbardu-ili-korculu-ovo-su-ljudi-koje-tre",
+      "sourceId": "visit-lumbarda",
+      "sourceUrl": "https://www.visitlumbarda.eu/",
+      "discoveredAt": "2026-09-11T09:46:18.861Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Trebate li vodiča za Lumbardu ili Korčulu? Ovo su ljudi koje trebate…",
+        "en": "Trebate vodiča za Lumbardu ili Korčulu? Ovo su ljudi koje trebate…",
+        "de": "Brauchen Sie einen Reiseführer für Lumbardy oder Korčula? Das sind die Leute, die Sie brauchen…",
+        "it": "Avete bisogno di un guide di viaggio per Lumbardy o Corcyre? Ecco le persone che dovete…",
+        "sl": "Ali potrebujete vodnika za Lumbardo ali Korčulo? Oto so ljudje, ki jih morate…",
+        "fr": "Avez-vous besoin d'un guide de voyage pour Lumbardy ou Corcyre ? Voici les gens que vous devez…",
+        "date": "2026-07-17",
+        "endDate": "2026-07-17",
+        "town": "lumbarda",
+        "venue": "Lumbarda",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://www.visitlumbarda.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-lumbarda-2026-07-17-trebate-vodica-za-lumbardu-ili-korculu-ovo-su-ljudi-koje-tre"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The date of the event 'Trebate vodiča za Lumbardu ili Korčulu?' is stated as '2026-07-17', but the text near it in the source page mentions '17. srpnja 2026.' which is the same date. This field appears to be well-supported.",
+        "The title of the event 'Trebate vodiča za Lumbardu ili Korčulu?' is stated as it appears in the source page, which is a good sign. However, the title field contains the question 'Trebate vodiča za Lumbardu ili Korčulu?' which is actually a question in the source page, not a statement of the event name. This is not necessarily a problem, but it's worth noting.",
+        "The venue 'Lumbarda' is stated as it appears in the source page, which is a good sign. However, the venue field also contains the phrase 'Lumbarda, gdje se nalazimo, što sve nudimo?' which is a sentence from the source page, not just the event venue. This is not necessarily a problem, but it's worth noting.",
+        "The category 'folklore' is stated as it appears in the source page, which is a good sign. However, the category field does not appear to be well-supported by the text near it in the source page, which mentions 'Lumbarajske užance' which is a category of events, but not 'folklore'. This is a concern.",
+        "The town 'lumbarda' is stated as it appears in the source page, which is a good sign. However, the town field does not appear to be well-supported by the text near it in the source page, which mentions 'Lumbarda' which is the same town, but not 'lumbarda'. This is a concern.",
+        "The date '2026-07-17' is stated as the end date of the event, but the text near it in the source page does not mention an end date. This is a concern.",
+        "The time of the event is not mentioned in the source page, which is a concern."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-tz-blato-2026-09-02-wednesday-02-september-2026",
+      "sourceId": "tz-blato",
+      "sourceUrl": "https://tzo-blato.hr/en/",
+      "discoveredAt": "2026-09-11T09:46:18.861Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Wednesday, 02 September 2026",
+        "en": "Wednesday, 02 September 2026",
+        "de": "Mittwoch, 02 September 2026",
+        "it": "Mercoledì 02 settembre 2026",
+        "sl": "Sreda, 02 september 2026",
+        "fr": "Mercredi, 02 septembre 2026",
+        "date": "2026-09-02",
+        "town": "blato",
+        "venue": "Blato",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://tzo-blato.hr/en/",
+        "extractionMethod": "ai",
+        "id": "ai-tz-blato-2026-09-02-wednesday-02-september-2026"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The title field appears to be a date in the format 'Wednesday, 02 September 2026' which is also present in the source text. However, the title field does not appear to be a description of the event, but rather a date. This suggests that the extraction may be incorrect and the title field should be a description of the event, not a date.",
+        "The venue 'Blato' is mentioned in the source text as a location, but it is not clear if it is the specific venue for this event. The source text mentions 'Blato Cultural center' and 'Kopila' as possible venues, but it is not clear if they are related to this event.",
+        "The category 'folklore' does not appear to be supported by the source text. The source text mentions 'Dalmatian folk singing' as a possible event, but it is not clear if it is related to this event.",
+        "The date '2026-09-02' appears to be supported by the source text, but it is not clear if it is the correct date for this event. The source text mentions 'Wednesday, 02 September 2026' as a possible date, but it is not clear if it is the correct date for this event."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-orebic-2026-09-16-taste-peljesac",
+      "sourceId": "visit-orebic",
+      "sourceUrl": "https://visitorebic-croatia.hr/",
+      "discoveredAt": "2026-09-11T09:46:18.861Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Okusite Pelješac",
+        "en": "Taste Pelješac",
+        "de": "Probieren Sie Pelješac",
+        "it": "Assapora Pelješac",
+        "sl": "Okusi Pelješac",
+        "fr": "Découvrez Pelješac",
+        "date": "2026-09-16",
+        "time": "19:00",
+        "town": "orebic",
+        "venue": "Mimbelli Square, Orebić",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://visitorebic-croatia.hr/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-orebic-2026-09-16-taste-peljesac"
+      },
+      "verifierConfidence": 1,
+      "verifierConcerns": [],
+      "blockingReasons": [
+        "duplicate-id"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-orebic-2026-09-21-guided-tour-through-orebic-living-history",
+      "sourceId": "visit-orebic",
+      "sourceUrl": "https://visitorebic-croatia.hr/",
+      "discoveredAt": "2026-09-11T09:46:18.861Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Vodički tura kroz Orebić / “Živi istorijat”",
+        "en": "Guided tour through Orebić / “Living history”",
+        "de": "Führertour durch Orebić / 'Lebendige Geschichte'",
+        "it": "Visita guidata a Orebić / 'Storia viva'",
+        "sl": "Potovalna vodja skozi Orebić / 'Živa zgodovina'",
+        "fr": "Visite guidée de Orebić / 'Histoire vivante'",
+        "date": "2026-09-21",
+        "time": "18:00",
+        "town": "orebic",
+        "venue": "Start in front of the Orebić Municipality building",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitorebic-croatia.hr/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-orebic-2026-09-21-guided-tour-through-orebic-living-history"
+      },
+      "verifierConfidence": 0.7,
+      "verifierConcerns": [
+        "The extracted candidate lists a 'Guided tour through Orebić / “Living history”' event for September 21, 2026. However, the source page lists the same event for September 21 and again for September 21, which could indicate that the date is correct but the event is recurring. Nevertheless, I would like to see more context to confirm that the date is indeed correct. It's possible that the date is a placeholder or that the event has already occurred.",
+        "The venue listed as 'Start in front of the Orebić Municipality building' appears to be correct, as it matches the source page. However, I would like to see more context to confirm that this is indeed the correct venue for the event.",
+        "The category listed as 'kids' appears to be incorrect, as the source page does not mention kids in relation to the event. I would like to see more context to confirm that this is indeed the correct category for the event.",
+        "The source page contains a large amount of unrelated text, including a cookie notice and a privacy policy. However, this is not a concern, as every real page has sections unrelated to any one event. The concern is whether the specific fields (title, date, time, venue, town, category) are factually well-supported by the text near this listing.",
+        "The source page lists multiple dates for the same recurring show (a season calendar), which is normal. However, this does not affect my confidence in the specific fields of the extracted candidate."
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.7"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2023-08-16-feast-of-sveti-rok",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/zrnovo/",
+      "discoveredAt": "2026-09-11T09:46:18.861Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Sveti Rok",
+        "en": "Feast of Sveti Rok",
+        "de": "Heiliger Rocco",
+        "it": "San Rocco",
+        "sl": "Sveti Rok",
+        "fr": "Saint Roch",
+        "date": "2023-08-16",
+        "time": "16 August",
+        "town": "lumbarda",
+        "venue": "Postrana, Piazza Pod Kostil",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://www.korculainfo.com/zrnovo/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2023-08-16-feast-of-sveti-rok"
+      },
+      "verifierConfidence": 0.4,
+      "verifierConcerns": [
+        "The title field contains 'Feast of Sveti Rok', which is a description of the event, not the name of the event itself. The actual name of the event is 'Sveti Rok'.",
+        "The date field states '2023-08-16', but the source text does not explicitly mention this date. It only mentions '16 August' as the date of the feast, which could be any year. The specific date '2023-08-16' should be verified against the source text.",
+        "The time field states '16 August', which is a date, not a time. The actual time of the event is not specified in the source text.",
+        "The venue field states 'Postrana, Piazza Pod Kostil', which is a correct location, but it is not explicitly mentioned in the source text as the venue of the event. The source text only mentions 'Postrana' as the location of the Church of Sveti Rok.",
+        "The town field states 'lumbarda', which is not mentioned in the source text as the town where the event takes place. The source text only mentions 'Žrnovo' as the village where the event takes place.",
+        "The category field states 'folklore', which is a correct category for the event, but it is not explicitly mentioned in the source text as the category of the event. The source text only mentions the event as a traditional sword dance."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.4"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2023-08-16-mostra",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/zrnovo/",
+      "discoveredAt": "2026-09-11T09:46:18.861Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Moštra",
+        "en": "Moštra",
+        "de": "Ausstellung",
+        "it": "Mostra",
+        "sl": "Moštra",
+        "fr": "Exposition",
+        "date": "2023-08-16",
+        "town": "lumbarda",
+        "venue": "Postrana, Piazza Pod Kostil",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://www.korculainfo.com/zrnovo/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2023-08-16-mostra"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The title 'Moštra' appears to be a specific event name, but it's also used as a noun in the source text to describe a traditional sword dance. This might indicate that the title is not a complete or accurate representation of the event.",
+        "The date '2023-08-16' appears to be a specific date, but it's also mentioned in the source text as the feast day of Sveti Rok, which is celebrated on the same date. This might indicate that the date is not a unique event date, but rather a recurring event date.",
+        "The venue 'Postrana, Piazza Pod Kostil' appears to be a specific location, but it's also mentioned in the source text as the location of the Moštra sword dance. This might indicate that the venue is not a unique location, but rather a recurring event location.",
+        "The category 'folklore' appears to be a general category, but it's not clear if it accurately represents the specific event described in the source text.",
+        "The source text mentions multiple events, including the Moštra sword dance, the Feast of Sveti Martin, and wine making. It's not clear if the extracted candidate is referring to one of these events or something else entirely.",
+        "The extracted candidate does not mention the town 'Korčula', which is mentioned in the source text as the location of the village Žrnovo. This might indicate that the town field is not accurately represented."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2023-08-16-feast-of-sveti-martin",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/zrnovo/",
+      "discoveredAt": "2026-09-11T09:46:18.861Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Sveti Martin",
+        "en": "Feast of Sveti Martin",
+        "de": "Heiliger Martin",
+        "it": "San Martino",
+        "sl": "Sveti Martin",
+        "fr": "Saint Martin",
+        "date": "2023-08-16",
+        "town": "lumbarda",
+        "venue": "Kampus, Sveti Martin church",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://www.korculainfo.com/zrnovo/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2023-08-16-feast-of-sveti-martin"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The date field '2023-08-16' seems to be supported by the 'Events' section of the page, specifically the 'Feast of Sveti Rok (16 August)' entry, which matches the date in the source text. However, this is not a direct match, as the event is actually the 'Feast of Sveti Martin', not Sveti Rok. The 'Feast of Sveti Martin' is mentioned as a separate event in the 'Events' section, but its date is not explicitly stated in the source text. This raises a concern about the accuracy of the date field.",
+        "The title field 'Feast of Sveti Martin' seems to be supported by the 'Events' section of the page, specifically the 'Feast of Sveti Martin' entry. However, the source text does not explicitly mention the 'Feast of Sveti Martin' as a separate event. Instead, it mentions the 'Feast of Sveti Rok' and the 'Feast of Sveti Martin' in the same section, suggesting that they may be related or even the same event. This raises a concern about the accuracy of the title field.",
+        "The venue field 'Kampus, Sveti Martin church' seems to be supported by the source text, specifically the 'Kampus' section. However, the source text does not explicitly mention the 'Sveti Martin church' as a separate entity. Instead, it mentions the 'Sveti Martin church' as part of the 'Kampus' hamlet. This raises a concern about the accuracy of the venue field.",
+        "The town field 'lumbarda' seems to be supported by the source text, specifically the 'Žrnovo' section. However, the source text does not explicitly mention the town of 'lumbarda'. Instead, it mentions the village of 'Žrnovo', which is located on the Korčula Island. This raises a concern about the accuracy of the town field.",
+        "The category field 'folklore' seems to be supported by the source text, specifically the 'Events' section. However, the source text does not explicitly mention the category 'folklore'. Instead, it mentions the 'Feast of Sveti Rok' and the 'Feast of Sveti Martin' as events that are related to the village's cultural heritage. This raises a concern about the accuracy of the category field."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2023-08-24-blessed-marko-of-pupnat",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/pupnat/",
+      "discoveredAt": "2026-09-11T09:46:18.861Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Blaženik Marko Pupnatski",
+        "en": "Blessed Marko of Pupnat",
+        "de": "Žrtve Blaženog Marka Pupnatskog",
+        "it": "Blesso Marco Pupnatski",
+        "sl": "Blazeni Marko Pupnatski",
+        "fr": "Blessé Marko Pupnatski",
+        "date": "2023-08-24",
+        "time": "All day",
+        "town": "pupnat",
+        "venue": "Pupnat",
+        "cats": [
+          "folklore"
+        ],
+        "desc": {
+          "en": "The feast day of Blessed Marko of Pupnat is a second important day for the village, marking the local blessed figure associated with Pupnat.",
+          "hr": "Blagdan Blaženog Marka Pupnatskog je drugi važan blagdan u Pupnatu, koji označava lokalnog blaženika povezanog s Pupnatom."
+        },
+        "source": "https://www.korculainfo.com/pupnat/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2023-08-24-blessed-marko-of-pupnat"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The category 'folklore' might not be the best fit for this event, as it is actually a feast day and a cultural celebration. The page describes it as 'a second important feast day for the village, marking the local blessed figure associated with Pupnat.' A more accurate category might be 'cultural event' or 'feast day'.",
+        "The time field is listed as 'All day', which might not be entirely accurate. The page does not mention any specific time for the event, but it does mention that it is a feast day that is celebrated at the parish church with a religious service followed by entertainment and cultural programmes. This could imply that the event takes place at some point during the day, but the exact time is not specified."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2023-06-01-kumpanija",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/pupnat/",
+      "discoveredAt": "2026-09-11T09:46:18.861Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Kompavnijska",
+        "en": "Kumpanija",
+        "de": "Žrtve Kumpanije",
+        "it": "Compagnia",
+        "sl": "Kompacija",
+        "fr": "Compagnie",
+        "date": "2023-06-01",
+        "time": "Summer",
+        "town": "pupnat",
+        "venue": "Pupnat",
+        "cats": [
+          "folklore"
+        ],
+        "desc": {
+          "en": "Pupnat is one of the five villages on Korčula Island that preserves the traditional Kumpanija sword dance. Performed in summer, the Kumpanija is a chain sword dance with roots going back centuries, and is listed as an item of UNESCO intangible cultural heritage.",
+          "hr": "Pupnat je jedno od pet sela na otoku Korčuli koje čuva tradicionalni Kumpanija mačevac. Izveden u ljeto, Kumpanija je mačevac u lancu koji vodi korijene stoljećima unatrag, a spominje se kao dio nepokretnog kulturnog dobra UNESCO-a."
+        },
+        "source": "https://www.korculainfo.com/pupnat/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2023-06-01-kumpanija"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The extracted candidate mentions a Kumpanija event on 2023-06-01, but the source page text does not provide any information about a specific event on this date. However, it does mention that the Kumpanija sword dance is performed in summer, which is consistent with the extracted candidate's 'Summer' time field.",
+        "The extracted candidate mentions Pupnat as the venue, but the source page text does not explicitly mention Pupnat as a venue for events. However, it does mention Pupnat as a village and the source of the Kumpanija sword dance.",
+        "The extracted candidate mentions folklore as the category, but the source page text does not explicitly mention folklore as a category. However, it does mention that the Kumpanija sword dance is a traditional chain sword dance with roots going back centuries, which is consistent with the extracted candidate's folklore category.",
+        "The extracted candidate mentions that the Kumpanija sword dance is listed as an item of UNESCO intangible cultural heritage, which is consistent with the source page text. However, the source page text does not provide any information about the date or time of the Kumpanija event."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
     }
   ]
 }

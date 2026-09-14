@@ -119,7 +119,7 @@ const FLYERS = {
   zrnovoMalaGospaNapuhanci0905: "zrnovo-mala-gospa-napuhanci-0905.jpeg"
 };
 
-const NO_FLYER_IDS = new Set(["kt-brodogradnja","kt-moreska-season","kt-svtodor","kt-winefest","kt-hajduk-istra","kt-hajduk-zalgiris","kt-hajduk-gorica","kt-hajduk-osijek","kt-hajduk-lokomotiva","kt-hajduk-rakow-uzvrat","kt-hajduk-rudes","kt-hajduk-slaven","kt-hajduk-rijeka"]);
+const NO_FLYER_IDS = new Set(["kt-brodogradnja","kt-moreska-season","kt-svtodor","kt-winefest","kt-hajduk-istra","kt-hajduk-zalgiris","kt-hajduk-gorica","kt-hajduk-osijek","kt-hajduk-lokomotiva","kt-hajduk-rakow-uzvrat","kt-hajduk-rudes","kt-hajduk-slaven","kt-hajduk-rijeka","kt-hajduk-dinamo","kt-hajduk-varazdin","kt-hajduk-istra2"]);
 
 // Events with more than one poster/photo worth showing (e.g. a main poster plus a
 // separate ticket-info graphic). Keys are event ids, values are FLYERS keys in display

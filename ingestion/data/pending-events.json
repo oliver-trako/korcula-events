@@ -10943,6 +10943,370 @@
       ],
       "duplicateMatches": [],
       "status": "needs-review"
+    },
+    {
+      "id": "ai-centar-kulture-korcula-2026-07-16-the-odyssey-is-an-upcoming-epic-film-directed-by-christopher",
+      "sourceId": "centar-kulture-korcula",
+      "sourceUrl": "https://kulturakorcula.hr/kino-najave/",
+      "discoveredAt": "2026-09-14T10:44:10.766Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "The Odyssey je nadolazeći epski film redatelja Christopher Nolan temeljen na Homerovom epu Odiseja.",
+        "en": "The Odyssey is an upcoming epic film directed by Christopher Nolan based on Homer's epic poem The Odyssey.",
+        "de": "The Odyssey je nadolazeći epski film redatelja Christopher Nolan temeljen na Homerovom epu Odiseja.",
+        "it": "L'Odissea è l'imminente film epico del regista Christopher Nolan basato sull'epopea di Omero, l'Odissea.",
+        "sl": "Odiseja je nadaljujoči epski film režiserja Christopher Nolan, ki temelji na Homerjevi epu Odiseja.",
+        "fr": "L'Odyssée est un film épique imminent du réalisateur Christopher Nolan basé sur l'épopée d'Homère, l'Odyssée.",
+        "date": "2026-07-16",
+        "time": "21:00",
+        "town": "korcula",
+        "venue": "Kino",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://kulturakorcula.hr/kino-najave/",
+        "extractionMethod": "ai",
+        "id": "ai-centar-kulture-korcula-2026-07-16-the-odyssey-is-an-upcoming-epic-film-directed-by-christopher"
+      },
+      "verifierConfidence": 0.7,
+      "verifierConcerns": [
+        "The title field contains a call-to-action text ('nadolazeći') which is not the actual title of the event. The actual title is 'The Odyssey' which appears later on the page.",
+        "The date field ('2026-07-16') appears to be incorrect. The page text mentions that the film is scheduled to arrive in cinemas on 17. srpnja 2026, which suggests that the event date is actually 17.7.2026, not 16.7.2026.",
+        "The time field ('21:00') is correct, but it is not explicitly mentioned on the page. However, it is mentioned in the context of other events, so it is likely to be correct."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.7"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-tz-blato-2026-09-02-vo-ena-quad-panoramska-tura-guided-panoramic-quad-tour",
+      "sourceId": "tz-blato",
+      "sourceUrl": "https://tzo-blato.hr/en/",
+      "discoveredAt": "2026-09-14T10:44:10.766Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Vođena quad panoramska tura",
+        "en": "Vođena quad panoramska tura/Guided panoramic quad tour",
+        "de": "Führungsgestützte Panoramafahrt mit Quad",
+        "it": "Visita panoramica guidata in quad",
+        "sl": "Vodena panoramska turistična vožnja z kvarom",
+        "fr": "Visite panoramique guidée en quad",
+        "date": "2026-09-02",
+        "town": "blato",
+        "venue": "Blato",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://tzo-blato.hr/en/",
+        "extractionMethod": "ai",
+        "id": "ai-tz-blato-2026-09-02-vo-ena-quad-panoramska-tura-guided-panoramic-quad-tour"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The title 'Vođena quad panoramska tura/Guided panoramic quad tour' seems to be a direct copy from the source page's text, rather than a parsed title. This might indicate that the title field was not properly extracted.",
+        "The date '2026-09-02' appears to be the same date as another event listed on the page, 'Vođena quad panoramska tura/Guided panoramic quad tour 09.09.2026.' This could indicate that the date field was not properly parsed, or that the source page has a formatting issue.",
+        "The venue 'Blato' is listed as the town and venue, but it's not clear if this is a specific venue or a general location. The source page does mention a 'Trg Dr. Franje Tuđmana 4' address, which could be a specific venue, but it's not clear if this is related to the event.",
+        "The category 'kids' seems to be a generic category, rather than a specific category related to the event. The source page does mention 'B2B' as a category, which could be more relevant to the event.",
+        "There is no clear indication of the event's time, and the source page does mention a 'Friday, 11 September 2026' date for a different event. This could indicate that the time field was not properly extracted or that the source page has a formatting issue.",
+        "The source page does mention a 'Blato Wine Experience' event, which could be related to the 'Okusi i mirisi zavičaja/Blato Wine & Dine' event. This could indicate that the event listed is not a unique event, but rather a part of a larger event or series of events."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-tz-blato-2026-08-25-primanje-za-nase-dugogodisnje-goste-i-njihove-domacine",
+      "sourceId": "tz-blato",
+      "sourceUrl": "https://tzo-blato.hr/en/",
+      "discoveredAt": "2026-09-14T10:44:10.766Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Prisustvo našim dugogodišnjim gostima i njihovim domaćinima",
+        "en": "Primanje za naše dugogodišnje goste i njihove domaćine",
+        "de": "Einladung für unsere langjährigen Gäste und ihre Gastgeber",
+        "it": "Invito ai nostri ospiti di lungo corso e ai loro padroni di casa",
+        "sl": "Vabite za naše dolgoletne goste in njihove domačine",
+        "fr": "Invitation pour nos hôtes réguliers et leurs hôtes",
+        "date": "2026-08-25",
+        "town": "blato",
+        "venue": "Blato",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://tzo-blato.hr/en/",
+        "extractionMethod": "ai",
+        "id": "ai-tz-blato-2026-08-25-primanje-za-nase-dugogodisnje-goste-i-njihove-domacine"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The title field appears to be a direct translation from the Croatian page, but it's not entirely clear if the English title is a direct translation or an interpretation. This might indicate that the title field is not well-supported by the source text.",
+        "The date field is '2026-08-25', but there is a nearby event listed as 'Okusi i mirisi zavičaja/Blato Wine & Dine 26.08.2026.' which suggests that the date field might be incorrect. It's possible that the event is actually happening on the 26th, not the 25th.",
+        "The venue field is 'Blato', but the source text lists multiple locations in Blato, such as 'Trg Dr. Franje Tuđmana 4' which seems to be a specific address. It's not clear if 'Blato' is the correct venue or if it's a more general location.",
+        "The category field is 'kids', but the source text does not mention anything about kids or children. It's not clear if this category is well-supported by the source text.",
+        "The source page appears to be a tourist information website, and the event listing seems to be a generic announcement. It's not clear if this event is a specific, one-time occurrence or a recurring event."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-blue-korcula-2023-08-01-nightlife-vibes",
+      "sourceId": "blue-korcula",
+      "sourceUrl": "https://bluekorcula.com/club",
+      "discoveredAt": "2026-09-14T10:44:10.766Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Noći u Korčuli",
+        "en": "Nightlife Vibes",
+        "de": "Nächte auf Korčula",
+        "it": "Notti a Korčula",
+        "sl": "Noči na Korčuli",
+        "fr": "Nuits à Korčula",
+        "date": "2023-08-01",
+        "time": "23:00",
+        "town": "korcula",
+        "venue": "Blue Club",
+        "cats": [
+          "nightlife"
+        ],
+        "desc": {
+          "en": "Our top-notch DJs curate an eclectic mix of music that caters to diverse tastes, ensuring everyone finds their rhythm on the dance floor.",
+          "hr": "Naša vješta DJ ekipa kreće električnu atmosferu na plesno područje, uz raznoliku muziku koja odgovara različitim ukusima."
+        },
+        "source": "https://bluekorcula.com/club",
+        "extractionMethod": "ai",
+        "id": "ai-blue-korcula-2023-08-01-nightlife-vibes"
+      },
+      "verifierConfidence": 0.5,
+      "verifierConcerns": [
+        "The title 'Nightlife Vibes' is not explicitly stated in the source page text. The phrase 'Nightlife Vibes' appears in the 'Upcoming Events' section, but it's not clear if it's a title or a description. The source page text does mention 'As the sun sets... the energy at Blue Bar transforms into an electrifying nightlife experience at Blue Club', which could be a more accurate title.",
+        "The date '2023-08-01' is not explicitly stated in the source page text. The page mentions 'Upcoming Events' but does not provide a specific date for the 'Nightlife Vibes' event.",
+        "The time '23:00' is mentioned in the source page text as part of the working hours for the 'Club' section, but it's not clear if it's the specific time for the 'Nightlife Vibes' event.",
+        "The venue 'Blue Club' is mentioned multiple times in the source page text, so it's accurate.",
+        "The town 'Korčula' is mentioned in the source page text as part of the address, so it's accurate.",
+        "The category 'nightlife' is not explicitly stated in the source page text, but it's a reasonable inference based on the content."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.5"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-blue-korcula-2023-08-02-nightlife-vibes",
+      "sourceId": "blue-korcula",
+      "sourceUrl": "https://bluekorcula.com/club",
+      "discoveredAt": "2026-09-14T10:44:10.766Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Noći u Korčuli",
+        "en": "Nightlife Vibes",
+        "de": "Nächte in Korčula",
+        "it": "Notti a Corculla",
+        "sl": "Noci v Korčuli",
+        "fr": "Nuits à Korčula",
+        "date": "2023-08-02",
+        "time": "23:00",
+        "town": "korcula",
+        "venue": "Blue Club",
+        "cats": [
+          "nightlife"
+        ],
+        "desc": {
+          "en": "Our top-notch DJs curate an eclectic mix of music that caters to diverse tastes, ensuring everyone finds their rhythm on the dance floor.",
+          "hr": "Naša vješta DJ ekipa kreće električnu atmosferu na plesno područje, uz raznoliku muziku koja odgovara različitim ukusima."
+        },
+        "source": "https://bluekorcula.com/club",
+        "extractionMethod": "ai",
+        "id": "ai-blue-korcula-2023-08-02-nightlife-vibes"
+      },
+      "verifierConfidence": 0.4,
+      "verifierConcerns": [
+        "The title 'Nightlife Vibes' does not appear in the source page text. The closest match is 'Nove vibracije' (New Vibrations) in the footer, but it's unclear if this is the actual title of the event or a different section. The source page does mention 'Night Club' and 'Lounge Bar' but these seem to be general sections rather than specific event titles.",
+        "The date '2023-08-02' appears to be correct, but it's not explicitly stated in the source page text. Instead, the page mentions 'Upcoming Events' and a list of dates and times for reservations, but it's unclear if these dates are related to the event 'Noći u Korčuli' or not.",
+        "The time '23:00' is mentioned in the source page text under the 'Working hours' section, but it's unclear if this is the specific time for the event 'Noći u Korčuli' or a general closing time for the club.",
+        "The venue 'Blue Club' is mentioned in the source page text, but it's unclear if this is the specific venue for the event 'Noći u Korčuli' or a general name for the club.",
+        "The town 'korcula' is mentioned in the source page text, but it's unclear if this is the specific town for the event 'Noći u Korčuli' or a general reference to the island.",
+        "The category 'nightlife' is mentioned in the source page text, but it's unclear if this is the specific category for the event 'Noći u Korčuli' or a general description of the club's activities."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.4"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-blue-korcula-2023-08-03-nightlife-vibes",
+      "sourceId": "blue-korcula",
+      "sourceUrl": "https://bluekorcula.com/club",
+      "discoveredAt": "2026-09-14T10:44:10.766Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Noći u Korčuli",
+        "en": "Nightlife Vibes",
+        "de": "Nächte auf Korčula",
+        "it": "Notti a Korčula",
+        "sl": "Noči na Korčuli",
+        "fr": "Nuits à Korčula",
+        "date": "2023-08-03",
+        "time": "23:00",
+        "town": "korcula",
+        "venue": "Blue Club",
+        "cats": [
+          "nightlife"
+        ],
+        "desc": {
+          "en": "Our top-notch DJs curate an eclectic mix of music that caters to diverse tastes, ensuring everyone finds their rhythm on the dance floor.",
+          "hr": "Naša vješta DJ ekipa kreće električnu atmosferu na plesno područje, uz raznoliku muziku koja odgovara različitim ukusima."
+        },
+        "source": "https://bluekorcula.com/club",
+        "extractionMethod": "ai",
+        "id": "ai-blue-korcula-2023-08-03-nightlife-vibes"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The title 'Nightlife Vibes' does not appear on the source page text, while 'Noći u Korčuli' is mentioned. This suggests that the English title might be an incorrect translation or embellishment.",
+        "The date '2023-08-03' is not explicitly mentioned on the source page text. However, the working hours for the club are listed as 'Club: 23:00 – 05:00', which could imply that the event occurs on a specific date, but it's not clear if it's the same date mentioned in the candidate.",
+        "The time '23:00' is mentioned in the source page text as the working hours for the club, but it's not clear if it's the specific time for the event mentioned in the candidate.",
+        "The venue 'Blue Club' is mentioned in the source page text, but the address 'Obala korčulanskih brodograditelja 9, 20260 Korčula, Croatia' is not explicitly linked to the event.",
+        "The town 'korcula' is mentioned in the source page text, but it's not clear if it's the specific town for the event mentioned in the candidate.",
+        "The category 'nightlife' is not explicitly mentioned on the source page text, but the event description does mention 'nightlife experience'."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-cara-zavalatica-local-sources-2024-08-01-kumpanija-sword-dance-performance-by-the-villagers-of-cara",
+      "sourceId": "cara-zavalatica-local-sources",
+      "sourceUrl": "https://www.korculainfo.com/cara/",
+      "discoveredAt": "2026-09-14T10:44:10.766Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Kumpanija, mačevačka plesna predstava stanovnika Čare.",
+        "en": "Kumpanija sword dance performance by the villagers of Čara.",
+        "de": "Kumpanija, ein Tanzstück mit Messern der Bewohner von Čare.",
+        "it": "Spettacolo di Kumpanija, danza di spada eseguita dai villaggi di Čara.",
+        "sl": "Kumpanija, mačevački plesni nastop prebivalcev Čare.",
+        "fr": "Performance du Kumpanija, danse d'épée par les villageois de Čara.",
+        "date": "2024-08-01",
+        "endDate": "2024-08-31",
+        "town": "cara",
+        "venue": "Čara village",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.korculainfo.com/cara/",
+        "extractionMethod": "ai",
+        "id": "ai-cara-zavalatica-local-sources-2024-08-01-kumpanija-sword-dance-performance-by-the-villagers-of-cara"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The extracted candidate mentions a 'Kumpanija sword dance performance by the villagers of Čara', but the source page only mentions that Čara is one of the five villages on Korčula Island that preserves the Kumpanija sword dance. There is no mention of a specific performance on a specific date. This could be a generic notice with no real date.",
+        "The title of the extracted candidate mentions 'sword dance performance by the villagers of Čara', but the source page text only mentions 'Kumpanija — Čara is one of the five villages on Korčula Island that preserves the Kumpanija sword dance'. The description in the extracted candidate seems to be an embellishment beyond what the source page text actually says.",
+        "The venue 'Čara village' is mentioned in the extracted candidate, but the source page text only mentions 'Čara' as a village. The extracted candidate seems to have added the word 'village' which is not present in the source page text.",
+        "The category 'kids' is mentioned in the extracted candidate, but the source page text does not mention anything about the Kumpanija sword dance being suitable for kids. This could be an incorrect categorization."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-cara-zavalatica-local-sources-2024-09-01-wine-production-at-the-cooperative-cellar-in-carsko-polje",
+      "sourceId": "cara-zavalatica-local-sources",
+      "sourceUrl": "https://www.korculainfo.com/cara/",
+      "discoveredAt": "2026-09-14T10:44:10.766Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Proizvodnja vina u združenom vinariju u Carskom Polju.",
+        "en": "Wine production at the cooperative cellar in Carsko Polje.",
+        "de": "Weinproduktion in einer gemeinsamen Weingut in Carski Petrovac",
+        "it": "Produzione di vino nella cantina cooperativa di Carsko Polje.",
+        "sl": "Proizvodnja vina v združenem vinogradi v Carskem Polju.",
+        "fr": "Production de vin à la cave coopérative de Carsko Polje.",
+        "date": "2024-09-01",
+        "endDate": "2024-10-31",
+        "town": "cara",
+        "venue": "Cooperative wine cellar in Carsko Polje",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.korculainfo.com/cara/",
+        "extractionMethod": "ai",
+        "id": "ai-cara-zavalatica-local-sources-2024-09-01-wine-production-at-the-cooperative-cellar-in-carsko-polje"
+      },
+      "verifierConfidence": 0.5,
+      "verifierConcerns": [
+        "The title field contains a phrase that appears to be a direct quote from the source page, but it's not clear if it's the actual title of the event or a description of the event.",
+        "The date field is '2024-09-01', but the source page mentions the harvest season in September and early October, which could imply that the event is a recurring event and not a specific one-day event.",
+        "The venue field is 'Cooperative wine cellar in Carsko Polje', but the source page mentions the cooperative wine cellar in Carsko Polje, but also mentions the village of Čara, which could imply that the event is actually taking place in the village of Čara, not just the wine cellar.",
+        "The town field is 'cara', but the source page mentions the village of Čara, which could imply that the correct spelling is 'Čara' rather than 'cara'.",
+        "The category field is 'kids', but the source page does not mention anything about the event being suitable for children.",
+        "The extracted candidate mentions 'kids' as a category, but there's no indication in the source page that the event is related to children or is a family-friendly event.",
+        "The source page mentions the Kumpanija sword dance, which is a traditional event on the island, but it's not clear if the event listed in the extracted candidate is actually related to this dance.",
+        "The extracted candidate mentions 'wine production at the cooperative cellar', but the source page mentions the harvest season and the cooperative wine cellar, but it's not clear if the event is specifically about wine production or if it's a more general event related to the harvest season.",
+        "The source page mentions the village of Čara, but the extracted candidate mentions the town 'cara', which could imply that the correct spelling is 'Čara' rather than 'cara'.",
+        "The extracted candidate mentions the venue as 'Cooperative wine cellar in Carsko Polje', but the source page mentions the village of Čara and the cooperative wine cellar in Carsko Polje, which could imply that the event is actually taking place in the village of Čara, not just the wine cellar.",
+        "The source page mentions the Kumpanija sword dance, which is a traditional event on the island, but it's not clear if the event listed in the extracted candidate is actually related to this dance."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.5"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-aminess-korcula-entertainment-2024-04-15-korcula-boat-adventure-tour",
+      "sourceId": "aminess-korcula-entertainment",
+      "sourceUrl": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+      "discoveredAt": "2026-09-14T10:44:10.766Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Plovićemo uz obalu, preko čestih plaža, u potrazi za tišinim uvalama, zaboravljenim otocima i pričama koje su izbele iz vodiča.",
+        "en": "Korcula Boat Adventure Tour",
+        "de": "We sail past the crowded spots in search of quieter coves, forgotten islands, and stories the guidebooks missed.",
+        "it": "Navighiamo lungo la costa, attraverso le spiagge affollate, alla ricerca di baie più tranquille, isole dimenticate e storie che sono sfuggite ai guide.",
+        "sl": "Plovimo po obali, preko čestih plaž, v iskanju tišin uval, zaboravljenih otokov in zgodb, ki so izbele iz vodikov.",
+        "fr": "Nous naviguons à travers les plages bondées à la recherche de baies plus calmes, d'îles oubliées et de récits qui ont échappé aux guides.",
+        "date": "2024-04-15",
+        "endDate": "2024-04-20",
+        "time": "07:00h",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+        "extractionMethod": "ai",
+        "id": "ai-aminess-korcula-entertainment-2024-04-15-korcula-boat-adventure-tour"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The category 'kids' does not match what the page actually describes. The page describes the event as a 'boat adventure tour' and does not mention kids specifically. The category should be changed to something like 'sailing' or 'water activities'."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
     }
   ]
 }

@@ -88,6 +88,25 @@ const FLYERS = {
   dramaTrudnica0819: "kt-drama-trudnica-0819-2026.jpeg",
   mediteranDalmatinskaNoc0828: "mediteran-dalmatinska-noc-28082026.jpeg",
   mediteranAdioLito0905: "mediteran-adio-lito-0905.jpeg",
+  pupnatZenskiBuce0920: "pupnat-zenski-buce-0920.jpeg",
+  dinoDvornikTribute0822: "kt-dino-dvornik-tribute-0822.jpeg",
+  pupnatKlapaKostil0822: "pupnat-klapa-kostil-0822.jpeg",
+  vlInMemoriamBorovina0822: "vl-in-memoriam-borovina-0822.jpeg",
+  vlDaniVeleSpile0816: "vl-dani-vele-spile-0816.jpeg",
+  vlLjubavnici0821: "vl-ljubavnici-0821.jpeg",
+  smkKoncertMalocicaDvori0823: "smk-koncert-malocica-dvori-0823.jpeg",
+  smkRockBikeParty: "smk-rock-bike-party-2026.jpeg",
+  lbLovackaVecer0825: "lb-lovacka-vecer-0825.jpeg",
+  vlStandupHazim0828: "vl-standup-hazim-0828.jpeg",
+  vlRibarskaEkoEtno0829: "vl-ribarska-eko-etno-0829.jpeg",
+  smkSlatkoSmokva0904: "smk-slatko-smokva-0904.jpeg",
+  ktPozdravLjetu0919: "kt-pozdrav-ljetu-0919.jpeg",
+  ktIzilaBiStogo0912: "kt-izila-bi-stogo-0912.jpeg",
+  ktLumiart0912: "kt-lumiart-0912.jpeg",
+  blatoWineExperienceProgramHr: "blato-wine-experience-program-hr.jpeg",
+  blatoWineExperienceProgramEn: "blato-wine-experience-program-en.jpeg",
+  zrnovoTurnirMalaGospaFutsal0910: "zrnovo-turnir-mala-gospa-futsal-0910.jpeg",
+  raciscelMarendaTripiceCevapi0912: "racisce-marenda-tripice-cevapi-0912.jpeg",
   korkyraBaroqueProgram: "kt-korkyra-baroque-program-2026.jpeg",
   markopoloGala0906: "kt-markopolo-gala-2026.jpeg",
   swordfestProgram: "kt-swordfest-program-2026.jpeg",
@@ -112,7 +131,8 @@ const MULTI_FLYERS = {
   "pst-danmjesta": ["zrnovoPostranaVelaGospaSvRoko", "zrnovoPostranaTotemBend"],
   "racisce-noc-pumpurele": ["litoURaciscu", "raciscePumpureleRaspored", "raciscePumpureleRasporedV2"],
   "kt-swordfest": ["swordfestProgram", "pupnatViteskiFestival0903"],
-  "vl-olive-1": ["festaOdUja0903", "daniMaslinovogUljaProgram"]
+  "vl-olive-1": ["festaOdUja0903", "daniMaslinovogUljaProgram"],
+  "ai-tz-blato-2026-09-23-bastinske-eno-gastro-ture": ["blatoWineExperienceProgramHr", "blatoWineExperienceProgramEn"]
 };
 
 // Always returns an array (possibly empty) -- the plural counterpart to resolveFlyerFilename,
@@ -127,7 +147,10 @@ function resolveFlyerFilename(id, date) {
   if (id.startsWith("kt-fermata")) return FLYERS.fermata;
   if (id === "kt-dancing-queen-abba") return FLYERS.dancingQueenAbba;
   if (id === "kt-water-polo-championship") return FLYERS.waterPoloChampionship;
-  if (id === "kt-dino-dvornik-tribute") return FLYERS.korculaUpcomingAugust;
+  if (id === "kt-dino-dvornik-tribute") return FLYERS.dinoDvornikTribute0822;
+  if (id === "kt-pozdrav-ljetu") return FLYERS.ktPozdravLjetu0919;
+  if (id === "kt-izila-bi-stogo") return FLYERS.ktIzilaBiStogo0912;
+  if (id === "kt-lumiart") return FLYERS.ktLumiart0912;
   if (id === "kt-ljeto-u-knjiznici") return FLYERS.ljetoUKnjiznici;
   if (id === "kt-arch-ko1525") return FLYERS.arhitekturaKo1525;
   if (id === "kt-kino-0811") return FLYERS.kinoMalciCudovista0811;
@@ -140,6 +163,10 @@ function resolveFlyerFilename(id, date) {
   if (id === "kt-drama-0819") return FLYERS.dramaTrudnica0819;
   if (id === "smk-jadranova") return FLYERS.jadranovaNocDivljeJagode;
   if (id === "smk-duhovni") return FLYERS.alanHrzicaSmokvica;
+  if (id === "smk-klapska") return FLYERS.smkKoncertMalocicaDvori0823;
+  if (id === "smk-moto") return FLYERS.smkRockBikeParty;
+  if (id === "smk-slatko-smokva") return FLYERS.smkSlatkoSmokva0904;
+  if (id === "ai-tz-blato-2026-09-23-bastinske-eno-gastro-ture") return FLYERS.blatoWineExperienceProgramHr;
   if (id === "racisce-buce-slavljenicka-vecera") return FLYERS.raciscelBuceSlavljenickaVecera;
   if (id === "racisce-marenda-tripice") return FLYERS.marendaTripice;
   if (id === "racisce-rucak-mediteranu-0819") return FLYERS.mediteranRucak0819;
@@ -167,6 +194,7 @@ function resolveFlyerFilename(id, date) {
     if (month === "08") return day <= 12 ? FLYERS.kulturnoAvgust1 : FLYERS.kulturnoAvgust2;
     return null;
   }
+  if (id === "lb-lovacka-vecer") return FLYERS.lbLovackaVecer0825;
   if (id === "lb-lutke-ekoklik") return FLYERS.ekoKlik;
   if (id === "lb-lutke-prijatelj" || id === "lb-lutke-0820") return FLYERS.praviPrijatelj;
   if (id === "lb-nogomet") return FLYERS.nogometNaPlazi;
@@ -176,6 +204,11 @@ function resolveFlyerFilename(id, date) {
   if (id === "vl-racki") return FLYERS.brunoRacki;
   if (id === "vl-chess-mala") return FLYERS.malaVelaLukaSah;
   if (id === "vl-olive-1") return FLYERS.festaOdUja0903;
+  if (id === "vl-in-memoriam-borovina") return FLYERS.vlInMemoriamBorovina0822;
+  if (id === "vl-dani-vele-spile") return FLYERS.vlDaniVeleSpile0816;
+  if (id === "vl-ljubavnici") return FLYERS.vlLjubavnici0821;
+  if (id === "vl-standup-hazim") return FLYERS.vlStandupHazim0828;
+  if (id === "vl-ribarska-eko-etno") return FLYERS.vlRibarskaEkoEtno0829;
   if (id.startsWith("vl-oliver")) return FLYERS.tragUBeskraju;
   if (id.startsWith("vl-folk-")) return FLYERS.velaLukaFolkloreAug;
   if (id.startsWith("vl-")) return FLYERS.luskoLito;
@@ -197,11 +230,15 @@ function resolveFlyerFilename(id, date) {
   if (id === "racisce-marenda-bakalar") return FLYERS.marendaBakalar;
   if (id === "racisce-zukovica-zbornik") return FLYERS.zukovicaPredavanje;
   if (id === "racisce-igre-racica" || id === "racisce-kronike") return FLYERS.kolovozRaciscuKalendar;
+  if (id === "racisce-marenda-tripice-cevapi") return FLYERS.raciscelMarendaTripiceCevapi0912;
   if (id.startsWith("racisce-")) return FLYERS.litoURaciscu;
   if (id === "cara-vuco") return FLYERS.sinisaVuco;
   if (id === "nl-sandra-afrika-jungle") return FLYERS.sandraAfrika;
   if (id.startsWith("rc-")) return FLYERS.dicoHomo;
   if (id === "pupnat-danmjesta") return FLYERS.pupnatDanMjesta;
+  if (id === "pupnat-zenski-buce") return FLYERS.pupnatZenskiBuce0920;
+  if (id === "pupnat-koncert-kostil") return FLYERS.pupnatKlapaKostil0822;
+  if (id === "zrnovo-turnir-mala-gospa-futsal") return FLYERS.zrnovoTurnirMalaGospaFutsal0910;
   if (id === "kneze-ribarska-vecer") return FLYERS.knezaRibarska;
   if (id === "lumbarda-sylvia-batistic") return FLYERS.sylviaBatistic;
   if (id === "zrnovo-makarunada") return FLYERS.zrnovskaMakarunada;

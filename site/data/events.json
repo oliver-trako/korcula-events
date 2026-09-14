@@ -907,31 +907,6 @@
       "updatedAt": "2026-07-25"
     },
     {
-      "id": "blato-wine-dine",
-      "date": "2026-06-24",
-      "time": "20:30",
-      "town": "blato",
-      "venue": "Gradski park",
-      "cats": [
-        "food"
-      ],
-      "hr": "Okusi i mirisi zavičaja — Blato Wine & Dine",
-      "en": "Tastes & Scents of the Homeland — Blato Wine & Dine",
-      "desc": {
-        "en": "Island wines, olive oils, honey, gin and cheese tastings with the traditional dish \"mlado s bižom\"; live music.",
-        "hr": "Kušanje otočkih vina, ulja, meda, džina i sireva uz tradicionalno jelo \"mlado s bižom\" i glazbu uživo.",
-        "de": "Verkostung von Inselweinen, Olivenölen, Honig, Gin und Käse mit dem traditionellen Gericht „mlado s bižom“; Livemusik.",
-        "it": "Degustazione di vini dell'isola, oli d'oliva, miele, gin e formaggi con il piatto tradizionale \"mlado s bižom\"; musica dal vivo.",
-        "sl": "Degustacija otoških vin, oljčnih olj, medu, gina in sirov ob tradicionalni jedi \"mlado s bižom\"; živa glasba.",
-        "fr": "Dégustation de vins de l'île, d'huiles d'olive, de miel, de gin et de fromages accompagnée du plat traditionnel « mlado s bižom » ; musique live."
-      },
-      "de": "Geschmäcker und Düfte der Heimat — Blato Wine & Dine",
-      "it": "Sapori e profumi della terra natia — Blato Wine & Dine",
-      "sl": "Okusi in vonji domovine — Blato Wine & Dine",
-      "fr": "Saveurs et parfums du pays natal — Blato Wine & Dine",
-      "updatedAt": "2026-07-25"
-    },
-    {
       "id": "lb-folk-0624",
       "date": "2026-06-24",
       "time": "21:00",
@@ -5725,7 +5700,7 @@
     },
     {
       "id": "zavalatica-ribarska-vecer",
-      "date": "2026-08-22",
+      "date": "2026-08-23",
       "time": "19:00",
       "town": "zavalatica",
       "venue": "Mali mostu, Zavalatica",
@@ -5744,29 +5719,46 @@
         "hr": "Donacijska večer Župe sv. Petra u Čari za obnovu župne kuće (Hodočasničko-pastoralni dom Gospe Čarskog polja). Riba, roštilj, fritule, piće i glazba uživo."
       },
       "source": "2026 Events/zavalatica-ribarska-vecer-22082026.jpeg",
-      "updatedAt": "2026-08-21"
+      "updatedAt": "2026-09-14"
     },
     {
       "id": "kt-dino-dvornik-tribute",
       "date": "2026-08-22",
       "time": "21:00",
       "town": "korcula",
-      "venue": "Plokata, Korčula",
+      "venue": "Ljetno kino, Korčula",
       "cats": [
         "music"
       ],
-      "hr": "Dino Dvornik tribute",
-      "en": "Dino Dvornik Tribute",
+      "hr": "Dino Dvornik Tribute Band",
+      "en": "Dino Dvornik Tribute Band",
       "desc": {
-        "en": "A tribute performance to the late Croatian pop/funk star Dino Dvornik, on the Plokata in Korčula Town.",
-        "hr": "Tribute nastup posvećen pokojnom hrvatskom pop/funk zvijezdi Dini Dvorniku, na Plokati u gradu Korčuli.",
-        "de": "Eine Tribute-Show zu Ehren des verstorbenen kroatischen Pop-/Funk-Stars Dino Dvornik, auf der Plokata in der Stadt Korčula.",
-        "it": "Uno spettacolo tributo dedicato al compianto Dino Dvornik, star pop/funk croata, sulla Plokata nella città di Korčula.",
-        "sl": "Poklonitveni nastop v spomin na pokojno hrvaško pop/funk zvezdo Dina Dvornika, na Plokati v mestu Korčula.",
-        "fr": "Un spectacle hommage à la regrettée star pop/funk croate Dino Dvornik, sur la Plokata dans la ville de Korčula."
+        "en": "A tribute performance to the late Croatian pop/funk star Dino Dvornik, at the Summer Cinema in Korčula Town, with Jaune Melone and DJ Techa. Entry 15 EUR.",
+        "hr": "Tribute nastup posvećen pokojnom hrvatskom pop/funk zvijezdi Dini Dvorniku, u Ljetnom kinu u gradu Korčuli, uz Jaune Melone i DJ Techu. Ulaz 15 EUR."
       },
-      "source": "2026 Events/korcula-upcoming-events-august-calendar.jpeg",
-      "updatedAt": "2026-08-05"
+      "source": "2026 Events/kt-dino-dvornik-tribute-0822.jpeg",
+      "updatedAt": "2026-09-14",
+      "de": "Dino Dvornik Tribute Band",
+      "it": "Dino Dvornik Tribute Band",
+      "sl": "Dino Dvornik Tribute Band",
+      "fr": "Dino Dvornik Tribute Band",
+      "performers": [
+        {
+          "type": "PerformingGroup",
+          "name": "Jaune Melone"
+        },
+        {
+          "type": "PerformingGroup",
+          "name": "DJ Techa"
+        }
+      ],
+      "offers": [
+        {
+          "name": "Ulaznica",
+          "price": 15,
+          "priceCurrency": "EUR"
+        }
+      ]
     },
     {
       "id": "lb-classic",
@@ -5848,19 +5840,49 @@
     {
       "id": "smk-klapska",
       "date": "2026-08-23",
-      "time": "evening",
+      "time": "21:00",
       "town": "smokvica",
       "venue": "Maločića dvori",
       "cats": [
         "music"
       ],
-      "hr": "Klapska večer",
-      "en": "A cappella (klapa) evening",
-      "de": "A-cappella-Abend (Klapa)",
-      "it": "Serata a cappella (klapa)",
-      "sl": "Klapski večer (a cappella)",
-      "fr": "Soirée a cappella (klapa)",
-      "updatedAt": "2026-07-25"
+      "hr": "Koncert u Maločića dvorima — Autorska večer maestra Krešimira Magdića",
+      "en": "Concert at Maločića dvori — An Evening of Maestro Krešimir Magdić's Own Works",
+      "de": "Konzert in Maločića dvori — Autorenabend von Maestro Krešimir Magdić",
+      "it": "Concerto a Maločića dvori — Serata d'autore del maestro Krešimir Magdić",
+      "sl": "Koncert v Maločića dvori — Avtorski večer maestra Krešimirja Magdića",
+      "fr": "Concert à Maločića dvori — Soirée d'auteur du maestro Krešimir Magdić",
+      "updatedAt": "2026-09-14",
+      "desc": {
+        "en": "An evening of maestro Krešimir Magdić's own choral works, performed by MCPZ Don Jakov Salečić, Klapa Smokvica, Klapa Proćulić and the women's klapa Moreška. Tickets 10 EUR.",
+        "hr": "Autorska večer skladbi maestra Krešimira Magdića, izvode MCPZ Don Jakov Salečić, Klapa Smokvica, Klapa Proćulić i Ženska klapa Moreška. Ulaznice 10 EUR."
+      },
+      "performers": [
+        {
+          "type": "PerformingGroup",
+          "name": "MCPZ Don Jakov Salečić"
+        },
+        {
+          "type": "PerformingGroup",
+          "name": "Klapa Smokvica"
+        },
+        {
+          "type": "PerformingGroup",
+          "name": "Klapa Proćulić"
+        },
+        {
+          "type": "PerformingGroup",
+          "name": "Ženska klapa Moreška"
+        }
+      ],
+      "offers": [
+        {
+          "name": "Ulaznica",
+          "price": 10,
+          "priceCurrency": "EUR"
+        }
+      ],
+      "source": "2026 Events/smk-koncert-malocica-dvori-0823.jpeg"
     },
     {
       "id": "kt-kino-0824",
@@ -6132,28 +6154,6 @@
       "updatedAt": "2026-08-27"
     },
     {
-      "hr": "U nepoznato",
-      "en": "To a Land Unknown",
-      "de": "In ein unbekanntes Land",
-      "it": "Verso una terra sconosciuta",
-      "sl": "V neznano dezelo",
-      "fr": "Vers une terre inconnue",
-      "date": "2026-08-28",
-      "time": "21:00",
-      "town": "korcula",
-      "venue": "Centar za kulturu Korčula",
-      "cats": [
-        "film"
-      ],
-      "source": "https://kulturakorcula.hr/kino-najave/",
-      "id": "ai-centar-kulture-korcula-2026-08-28-to-a-land-unknown-mahdi-fleifelunited-kingdom-palestine-fran",
-      "updatedAt": "2026-08-13",
-      "desc": {
-        "en": "Directed by Mahdi Fleifel (UK/Palestine/France, 2024, 105 min). Two young Palestinian refugees, Chatila and Reda, currently living on the margins of society in Athens, save money for fake passports to try to reach a new life in Germany.",
-        "hr": "Redatelj Mahdi Fleifel (UK/Palestina/Francuska, 2024., 105 min). Dvojica mladih palestinskih izbjeglica, Chatila i Reda, koji trenutno žive na rubu društva u Ateni, štede novac za lažne putovnice u pokušaju da dođu do novog života u Njemačkoj."
-      }
-    },
-    {
       "id": "kt-kino-0828",
       "date": "2026-08-28",
       "time": "21:00",
@@ -6172,7 +6172,7 @@
     },
     {
       "id": "smk-moto",
-      "date": "2026-08-28",
+      "date": "2026-08-27",
       "endDate": "2026-08-29",
       "time": "evening",
       "town": "smokvica",
@@ -6180,13 +6180,40 @@
       "cats": [
         "festival"
       ],
-      "hr": "Moto party",
-      "en": "Motorcycle party",
-      "de": "Motorradparty",
-      "it": "Festa in moto",
-      "sl": "Motoristična zabava",
-      "fr": "Fête moto",
-      "updatedAt": "2026-07-25"
+      "hr": "XII. Rock and Bike Party",
+      "en": "12th Rock and Bike Party",
+      "de": "12. Rock and Bike Party",
+      "it": "12° Rock and Bike Party",
+      "sl": "12. Rock and Bike Party",
+      "fr": "12e Rock and Bike Party",
+      "updatedAt": "2026-09-14",
+      "desc": {
+        "en": "Three-day motorcycle rally organized by MC H.Korčula Hrvatska at Banova zemlja, Smokvica -- go-go, moto games, a parade, free camping and risotto. Live bands: 27.8 Indigo Acoustic Band; 28.8 Jaune Melone, Mind Gap; 29.8 Radler Band, Honey Badger.",
+        "hr": "Trodnevni motoristički skup u organizaciji MC H.Korčula Hrvatska na Banovoj zemlji, Smokvica -- go-go, moto igre, moto defile, besplatno kampiranje i rižoto. Bendovi uživo: 27.8. Indigo Acoustic Band; 28.8. Jaune Melone, Mind Gap; 29.8. Radler Band, Honey Badger."
+      },
+      "performers": [
+        {
+          "type": "PerformingGroup",
+          "name": "Indigo Acoustic Band"
+        },
+        {
+          "type": "PerformingGroup",
+          "name": "Jaune Melone"
+        },
+        {
+          "type": "PerformingGroup",
+          "name": "Mind Gap"
+        },
+        {
+          "type": "PerformingGroup",
+          "name": "Radler Band"
+        },
+        {
+          "type": "PerformingGroup",
+          "name": "Honey Badger"
+        }
+      ],
+      "source": "2026 Events/smk-rock-bike-party-2026.jpeg"
     },
     {
       "id": "kt-hajduk-lokomotiva",
@@ -6268,8 +6295,8 @@
       "hr": "Festival viteških mačevalačkih plesova otoka Korčule",
       "en": "Korčula Island Sword Dance Festival",
       "desc": {
-        "en": "Island-wide festival where every village's own sword-dance troupe (Kumpanjija/Moštra) performs in a different village each night. Confirmed 2026 program: 2 Sep Žrnovo (Kumpanija Vela Luka), 3 Sep Pupnat (Moštra Žrnovo), 4 Sep Čara (Kumpanija Pupnat), 7 Sep Vela Luka (Moreška, HGD Sv. Cecilija), 9 Sep Smokvica (Kumpanija Čara), 12 Sep Korčula (children's folklore evening), 13 Sep Korčula (Kumpanija Smokvica).",
-        "hr": "Festival na kojem svako selo svoju mačevalačku družinu (Kumpanjiju/Moštru) izvodi u drugom selu svake večeri. Potvrđeni program 2026: 2.9. Žrnovo (Kumpanija Vela Luka), 3.9. Pupnat (Moštra Žrnovo), 4.9. Čara (Kumpanija Pupnat), 7.9. Vela Luka (Moreška, HGD Sv. Cecilija), 9.9. Smokvica (Kumpanija Čara), 12.9. Korčula (večer dječjeg folklora), 13.9. Korčula (Kumpanija Smokvica).",
+        "en": "Island-wide festival where every village's own sword-dance troupe (Kumpanjija/Moštra) performs in a different village each night. Confirmed 2026 program: 2 Sep Žrnovo (Kumpanija Vela Luka), 3 Sep Pupnat (Moštra Žrnovo), 4 Sep Čara (Kumpanija Pupnat), 7 Sep Vela Luka (Moreška, HGD Sv. Cecilija), 9 Sep Smokvica (Kumpanija Čara), 12 Sep Korčula (children's folklore evening), 13 Sep Korčula (Kumpanija Smokvica). Note: the 2 Sep Žrnovo (Postrana) date was postponed with no new date announced as of mid-September.",
+        "hr": "Festival na kojem svako selo svoju mačevalačku družinu (Kumpanjiju/Moštru) izvodi u drugom selu svake večeri. Potvrđeni program 2026: 2.9. Žrnovo (Kumpanija Vela Luka), 3.9. Pupnat (Moštra Žrnovo), 4.9. Čara (Kumpanija Pupnat), 7.9. Vela Luka (Moreška, HGD Sv. Cecilija), 9.9. Smokvica (Kumpanija Čara), 12.9. Korčula (večer dječjeg folklora), 13.9. Korčula (Kumpanija Smokvica). Napomena: termin 2.9. u Žrnovu (Postrana) je odgođen, novi termin nije objavljen (stanje sredinom rujna).",
         "de": "Inselweites Festival, bei dem die Schwerttanzgruppe (Kumpanjija/Moštra) jedes Dorfes auftritt — darunter die Kumpanjija von Vela Luka in Žrnovo und die Moreška, aufgeführt in Vela Luka.",
         "it": "Festival che coinvolge tutta l'isola, in cui si esibisce la compagnia di danza delle spade (Kumpanjija/Moštra) di ogni villaggio — tra cui la Kumpanjija di Vela Luka a Žrnovo e la Moreška rappresentata a Vela Luka.",
         "sl": "Otoški festival, na katerem nastopijo mečevalske skupine (Kumpanjija/Moštra) iz vsake vasi — vključno s Kumpanjijo iz Vela Luke v Žrnovu in Moreško, ki jo izvedejo v Vela Luki.",
@@ -6281,7 +6308,7 @@
       "it": "Festival delle danze delle spade dell'isola di Korčula",
       "sl": "Festival mečevalskih plesov otoka Korčula",
       "fr": "Festival des danses des épées de l'île de Korčula",
-      "updatedAt": "2026-08-30",
+      "updatedAt": "2026-09-14",
       "verify": false
     },
     {
@@ -7122,22 +7149,27 @@
       "updatedAt": "2026-09-11"
     },
     {
-      "hr": "Baštinske eno-gastro ture",
-      "en": "Wine and Gastronomic Tour",
-      "de": "Wein- und Gastronomietour",
-      "it": "Tappa eno-gastronomica",
-      "sl": "Vinska in gastronomska potovanja",
-      "fr": "Tour en vins et gastronomie",
+      "hr": "Blato Wine Experience — Baštinske eno-gastro ture",
+      "en": "Blato Wine Experience — Heritage Wine &amp; Gastro Tours",
+      "de": "Blato Wine Experience — Wein- und Gastronomie-Erbe-Touren",
+      "it": "Blato Wine Experience — Tour eno-gastronomici del patrimonio",
+      "sl": "Blato Wine Experience — Dediščinske vinsko-gastronomske ture",
+      "fr": "Blato Wine Experience — Circuits œno-gastronomiques patrimoniaux",
       "date": "2026-09-23",
       "endDate": "2026-09-30",
       "town": "blato",
-      "venue": "Blato Wine Experience",
+      "venue": "Blato (okupljanje ispred Turističkog ureda Blato)",
       "cats": [
-        "kids"
+        "food",
+        "festival"
       ],
-      "source": "https://tzo-blato.hr/en/",
+      "source": "2026 Events/blato-wine-experience-program-hr.jpeg",
       "id": "ai-tz-blato-2026-09-23-bastinske-eno-gastro-ture",
-      "updatedAt": "2026-09-12"
+      "updatedAt": "2026-09-14",
+      "desc": {
+        "en": "A week of heritage wine and gastro tours around Blato: 23.9 Bačić Winery, 24.9 OPG Protić Sanja (Sv. Vid viewpoint, utopljenici workshop, lumblija tasting), 25.9 Dainesi Studio (Clay &amp; Wine workshop), 25-27.9 the main Blato Wine Experience (wine quiz, conference, themed events), 28.9 OPG Bosnić (olive oil &amp; lumblija tasting), 29.9 Jovanov Winery, 30.9 Dine Winery. Registration required at Blato Tourist Office; meeting point in front of the office.",
+        "hr": "Tjedan baštinskih eno-gastro tura oko Blata: 23.9. Vinarija Bačić, 24.9. OPG Protić Sanja (vidikovac Sv. Vid, radionica utopljenika, degustacija lumblije), 25.9. Dainesi Studio (Clay & Wine radionica), 25.-27.9. glavni Blato Wine Experience (vinski kviz, konferencija, tematska događanja), 28.9. OPG Bosnić (degustacija maslinova ulja i lumblije), 29.9. Vinarija Jovanov, 30.9. Vinarija Dine. Prijave obavezne u Turističkom uredu Blato; okupljanje ispred ureda."
+      }
     },
     {
       "id": "vl-knjiga3",
@@ -7321,6 +7353,424 @@
       "source": "https://moreska.eu/tickets",
       "id": "ai-moreska-2026-10-14-moreska-with-a-live-brass-band",
       "updatedAt": "2026-08-13"
+    },
+    {
+      "id": "pupnat-zenski-buce",
+      "date": "2026-09-20",
+      "town": "pupnat",
+      "venue": "Bućalište Pupnat",
+      "cats": [
+        "sports"
+      ],
+      "hr": "Ženski turnir u bućama, Pupnat",
+      "en": "Women's Bocce Tournament, Pupnat",
+      "de": "Frauen-Boule-Turnier, Pupnat",
+      "it": "Torneo di bocce femminile, Pupnat",
+      "sl": "Žensko balinanje, Pupnat",
+      "fr": "Tournoi de pétanque féminin, Pupnat",
+      "desc": {
+        "en": "Women's bocce (buće) tournament at the Pupnat boules court, teams of 3. Entry fee 15 EUR per team; registration by 18.09. Organized by MO Pupnat. Contact: Martina Stanišić, 099 472 0394.",
+        "hr": "Turnir u bućama za žene na bućalištu Pupnat, ekipe po 3 žene. Kotizacija 15 eura po ekipi, prijave do 18.09. Organizira MO Pupnat. Kontakt: Martina Stanišić, 099 472 0394."
+      },
+      "source": "2026 Events/pupnat-zenski-buce-0920.jpeg",
+      "updatedAt": "2026-09-14"
+    },
+    {
+      "id": "pupnat-koncert-kostil",
+      "date": "2026-08-22",
+      "time": "20:30",
+      "town": "pupnat",
+      "venue": "Pupnat",
+      "cats": [
+        "folklore",
+        "music"
+      ],
+      "hr": "10 godina Klape Koštil — koncert u Pupnatu",
+      "en": "Klapa Koštil's 10th Anniversary Concert — Pupnat",
+      "de": "10 Jahre Klapa Koštil — Konzert in Pupnat",
+      "it": "10 anni della Klapa Koštil — concerto a Pupnat",
+      "sl": "10 let Klape Koštil — koncert v Pupnatu",
+      "fr": "10 ans de la Klapa Koštil — concert à Pupnat",
+      "desc": {
+        "en": "A cappella concert celebrating Klapa Koštil's 10th anniversary, with guest performers Vokalisti Salone. Free entry.",
+        "hr": "Klapski koncert povodom 10. rođendana Klape Koštil, gosti koncerta Vokalisti Salone. Ulaz besplatan."
+      },
+      "performers": [
+        {
+          "type": "PerformingGroup",
+          "name": "Klapa Koštil"
+        },
+        {
+          "type": "PerformingGroup",
+          "name": "Vokalisti Salone"
+        }
+      ],
+      "source": "2026 Events/pupnat-klapa-kostil-0822.jpeg",
+      "updatedAt": "2026-09-14"
+    },
+    {
+      "id": "vl-in-memoriam-borovina",
+      "date": "2026-08-22",
+      "time": "20:00",
+      "town": "vela-luka",
+      "venue": "Malonogometno igralište, Vela Luka",
+      "cats": [
+        "music"
+      ],
+      "hr": "In Memoriam Frano Borovina Miće — večer rock 'n' rolla",
+      "en": "In Memoriam Frano Borovina Miće — Rock 'n' Roll Evening",
+      "de": "In Memoriam Frano Borovina Miće — Rock-'n'-Roll-Abend",
+      "it": "In Memoriam Frano Borovina Miće — serata rock 'n' roll",
+      "sl": "In Memoriam Frano Borovina Miće — večer rock 'n' rolla",
+      "fr": "In Memoriam Frano Borovina Miće — soirée rock 'n' roll",
+      "desc": {
+        "en": "A rock 'n' roll evening in memory of Frano Borovina Miće, with bands Kolpo Morto, Mind Gap, Jam Session Band and Indigo Band. Free entry; table reservations via Instagram or 071 604 8888.",
+        "hr": "Večer rock 'n' rolla u spomen na Franu Borovinu Miću, sviraju Kolpo Morto, Mind Gap, Jam Session Band i Indigo Band. Ulaz slobodan, rezervacije stolova preko Instagrama ili 071 604 8888."
+      },
+      "performers": [
+        {
+          "type": "PerformingGroup",
+          "name": "Kolpo Morto"
+        },
+        {
+          "type": "PerformingGroup",
+          "name": "Mind Gap"
+        },
+        {
+          "type": "PerformingGroup",
+          "name": "Jam Session Band"
+        },
+        {
+          "type": "PerformingGroup",
+          "name": "Indigo Band"
+        }
+      ],
+      "source": "2026 Events/vl-in-memoriam-borovina-0822.jpeg",
+      "updatedAt": "2026-09-14"
+    },
+    {
+      "id": "vl-dani-vele-spile",
+      "date": "2026-08-16",
+      "endDate": "2026-08-19",
+      "town": "vela-luka",
+      "venue": "Vela spila i Centar za kulturu Vela Luka",
+      "cats": [
+        "exhibition",
+        "literature"
+      ],
+      "hr": "Dani Vele spile",
+      "en": "Days of Vela Spila",
+      "de": "Tage der Vela Spila",
+      "it": "Giornate della Vela Spila",
+      "sl": "Dnevi Vele spile",
+      "fr": "Journées de la Vela Spila",
+      "desc": {
+        "en": "A programme around the Vela Spila archaeological cave: 16.8 a Roman-cuisine workshop with dr. sc. Ivana Ožanić-Roguljić at Srednja škola Vela Luka; 17.8 (21h, CZK atrium) her lecture 'Flavors of Roman Cuisine' with a Roman food tasting; 18.8 free open day at Vela Spila; 19.8 (21h, CZK atrium) dr. sc. Mateja Hulina's lecture 'What was eaten in Vela Spila? Traces of Neolithic diet'. Organized by Centar za kulturu Vela Luka.",
+        "hr": "Program uz arheološko nalazište Vela spila: 16.8. radionica rimske kuhinje s dr. sc. Ivanom Ožanić-Roguljić u Srednjoj školi Vela Luka; 17.8. (21h, atrij CZK) njeno predavanje 'Okusi rimske kuhinje' uz degustaciju rimske hrane; 18.8. dan otvorenih vrata, besplatan ulaz u Velu spilu; 19.8. (21h, atrij CZK) predavanje dr. sc. Mateje Huline 'Što se jelo u Veloj spili? Tragovi prehrane iz neolitika'. Organizira Centar za kulturu Vela Luka."
+      },
+      "source": "2026 Events/vl-dani-vele-spile-0816.jpeg",
+      "updatedAt": "2026-09-14"
+    },
+    {
+      "id": "vl-ljubavnici",
+      "date": "2026-08-21",
+      "time": "21:00",
+      "town": "vela-luka",
+      "venue": "Atrij Centra za kulturu, Vela Luka",
+      "cats": [
+        "theatre"
+      ],
+      "hr": "Ljubavnici — komedija",
+      "en": "Ljubavnici (The Lovers) — Comedy",
+      "de": "Ljubavnici (Die Liebenden) — Komödie",
+      "it": "Ljubavnici (Gli amanti) — commedia",
+      "sl": "Ljubavnici (Ljubimci) — komedija",
+      "fr": "Ljubavnici (Les Amants) — comédie",
+      "desc": {
+        "en": "Comedy by Aku Kušin, with Kristina Lukić, Darko Marušić, Željka Antunović, Drago Roso and Barbara Šestanović. Entry 7 EUR.",
+        "hr": "Komedija Aku Kušina, igraju Kristina Lukić, Darko Marušić, Željka Antunović, Drago Roso i Barbara Šestanović. Ulaz 7 EUR."
+      },
+      "performers": [
+        {
+          "type": "Person",
+          "name": "Kristina Lukić"
+        },
+        {
+          "type": "Person",
+          "name": "Darko Marušić"
+        },
+        {
+          "type": "Person",
+          "name": "Željka Antunović"
+        },
+        {
+          "type": "Person",
+          "name": "Drago Roso"
+        },
+        {
+          "type": "Person",
+          "name": "Barbara Šestanović"
+        }
+      ],
+      "offers": [
+        {
+          "name": "Ulaznica",
+          "price": 7,
+          "priceCurrency": "EUR"
+        }
+      ],
+      "source": "2026 Events/vl-ljubavnici-0821.jpeg",
+      "updatedAt": "2026-09-14"
+    },
+    {
+      "id": "lb-lovacka-vecer",
+      "date": "2026-08-25",
+      "time": "19:30",
+      "town": "lumbarda",
+      "venue": "Centar Lumbarde",
+      "cats": [
+        "food"
+      ],
+      "hr": "Lovačka večer — gulaš i burgeri od divljači",
+      "en": "Hunters' Evening — Game Goulash and Burgers",
+      "de": "Jägerabend — Wildgulasch und Wildburger",
+      "it": "Serata dei cacciatori — gulasch e burger di selvaggina",
+      "sl": "Lovski večer — golaž in burgerji iz divjačine",
+      "fr": "Soirée des chasseurs — goulasch et burgers de gibier",
+      "desc": {
+        "en": "Game goulash and burgers, organized by Lovačka udruga Kamenjarka Korčula and the Lumbarda hunting section Golub.",
+        "hr": "Gulaš i burgeri od divljači, organiziraju Lovačka udruga Kamenjarka Korčula i Lovačka sekcija Golub Lumbarda."
+      },
+      "source": "2026 Events/lb-lovacka-vecer-0825.jpeg",
+      "updatedAt": "2026-09-14"
+    },
+    {
+      "id": "vl-standup-hazim",
+      "date": "2026-08-28",
+      "time": "20:00",
+      "town": "vela-luka",
+      "venue": "Atrij Centra za kulturu, Vela Luka",
+      "cats": [
+        "theatre"
+      ],
+      "hr": "Stand Up Comedy Made in Bosnia — Hazim Mujčinović",
+      "en": "Stand Up Comedy Made in Bosnia — Hazim Mujčinović",
+      "de": "Stand Up Comedy Made in Bosnia — Hazim Mujčinović",
+      "it": "Stand Up Comedy Made in Bosnia — Hazim Mujčinović",
+      "sl": "Stand Up Comedy Made in Bosnia — Hazim Mujčinović",
+      "fr": "Stand Up Comedy Made in Bosnia — Hazim Mujčinović",
+      "desc": {
+        "en": "Stand-up comedy show by Hazim Mujčinović. Tickets at Agencija Atlas, at the door, or on eventim.hr.",
+        "hr": "Stand up nastup Hazima Mujčinovića. Ulaznice u Agenciji Atlas, na ulazu ili na eventim.hr."
+      },
+      "performers": [
+        {
+          "type": "Person",
+          "name": "Hazim Mujčinović"
+        }
+      ],
+      "ticketUrl": "https://eventim.hr",
+      "source": "2026 Events/vl-standup-hazim-0828.jpeg",
+      "updatedAt": "2026-09-14"
+    },
+    {
+      "id": "vl-ribarska-eko-etno",
+      "date": "2026-08-29",
+      "time": "20:00",
+      "town": "vela-luka",
+      "venue": "Vela Luka",
+      "cats": [
+        "food",
+        "festival"
+      ],
+      "hr": "Ribarska eko-etno večer otoka Korčule",
+      "en": "Fishermen's Eco-Ethno Evening of the Island of Korčula",
+      "de": "Fischer-Öko-Ethno-Abend der Insel Korčula",
+      "it": "Serata eco-etnica dei pescatori dell'isola di Korčula",
+      "sl": "Ribiški eko-etno večer otoka Korčule",
+      "fr": "Soirée éco-ethnique des pêcheurs de l'île de Korčula",
+      "desc": {
+        "en": "Presentation and sale of island products (wines, olive oils, delicacies, souvenirs, handicrafts), with performances by Kvartet Portun and FD Kumpanija's children's group Mafrina. Program includes a gastro competition and sack races.",
+        "hr": "Predstavljanje i prodaja otočkih proizvoda (vina, ulja, delicija, suvenira, rukotvorina), uz nastup Kvarteta Portun i dječje skupine Mafrina (FD Kumpanija). U programu gastro natjecanje i skakanje u vrećama."
+      },
+      "performers": [
+        {
+          "type": "PerformingGroup",
+          "name": "Kvartet Portun"
+        },
+        {
+          "type": "PerformingGroup",
+          "name": "FD Kumpanija — Mafrina"
+        }
+      ],
+      "source": "2026 Events/vl-ribarska-eko-etno-0829.jpeg",
+      "updatedAt": "2026-09-14"
+    },
+    {
+      "id": "smk-slatko-smokva",
+      "date": "2026-09-04",
+      "time": "18:30",
+      "town": "smokvica",
+      "venue": "Vela pjaca, Smokvica",
+      "cats": [
+        "food",
+        "festival"
+      ],
+      "hr": "Slatko Smokva Smokvica — festival mediteranske prehrane",
+      "en": "Slatko Smokva Smokvica — Mediterranean Food Festival",
+      "de": "Slatko Smokva Smokvica — Mediterranes Food-Festival",
+      "it": "Slatko Smokva Smokvica — festival della cucina mediterranea",
+      "sl": "Slatko Smokva Smokvica — festival mediteranske hrane",
+      "fr": "Slatko Smokva Smokvica — festival de la cuisine méditerranéenne",
+      "desc": {
+        "en": "Part of European Heritage Days: 18:30 guided walk through Smokvica (from in front of the loggia); 19:30 talks on figs in local culture and history; 20:30 cultural program with fig-dessert tasting (Liga za borbu protiv raka, Smokvica branch).",
+        "hr": "Dio Dana europske baštine: 18:30 vođena šetnja kroz Smokvicu (okupljanje ispred lođe); 19:30 razgovor o smokvi u kulturi i povijesti mjesta; 20:30 kulturni program uz degustaciju slastica sa smokvom (Liga za borbu protiv raka, ogranak Smokvica)."
+      },
+      "source": "2026 Events/smk-slatko-smokva-0904.jpeg",
+      "updatedAt": "2026-09-14"
+    },
+    {
+      "id": "kt-pozdrav-ljetu",
+      "date": "2026-09-19",
+      "time": "20:00",
+      "town": "korcula",
+      "venue": "Atrij gradske vijećnice, Korčula",
+      "cats": [
+        "folklore",
+        "music"
+      ],
+      "hr": "Pozdrav ljetu — klape Koštil, Moreška, Pulena, Rikordo, Sfida",
+      "en": "Farewell to Summer — Klape Koštil, Moreška, Pulena, Rikordo, Sfida",
+      "de": "Abschied vom Sommer — Klapen Koštil, Moreška, Pulena, Rikordo, Sfida",
+      "it": "Addio all'estate — Klape Koštil, Moreška, Pulena, Rikordo, Sfida",
+      "sl": "Slovo od poletja — klape Koštil, Moreška, Pulena, Rikordo, Sfida",
+      "fr": "Adieu à l'été — klape Koštil, Moreška, Pulena, Rikordo, Sfida",
+      "desc": {
+        "en": "An a cappella (klapa) evening in the City Hall atrium marking the end of summer, with five klape: Koštil, Moreška, Pulena, Rikordo and Sfida. Organized by the Korčula Tourist Board.",
+        "hr": "Klapska večer u atriju gradske vijećnice povodom kraja ljeta, nastupa pet klapa: Koštil, Moreška, Pulena, Rikordo i Sfida. Organizira Turistička zajednica Korčula."
+      },
+      "performers": [
+        {
+          "type": "PerformingGroup",
+          "name": "Klapa Koštil"
+        },
+        {
+          "type": "PerformingGroup",
+          "name": "Klapa Moreška"
+        },
+        {
+          "type": "PerformingGroup",
+          "name": "Klapa Pulena"
+        },
+        {
+          "type": "PerformingGroup",
+          "name": "Klapa Rikordo"
+        },
+        {
+          "type": "PerformingGroup",
+          "name": "Klapa Sfida"
+        }
+      ],
+      "source": "2026 Events/kt-pozdrav-ljetu-0919.jpeg",
+      "updatedAt": "2026-09-14"
+    },
+    {
+      "id": "kt-izila-bi-stogo",
+      "date": "2026-09-12",
+      "time": "19:00",
+      "town": "korcula",
+      "venue": "Roco Bar, Korčula",
+      "cats": [
+        "food"
+      ],
+      "hr": "Izila bi štogo! — radionica: prehrana u ciklusu",
+      "en": "Workshop: Nutrition Through the Cycle",
+      "de": "Workshop: Ernährung im Zyklus",
+      "it": "Laboratorio: alimentazione nel ciclo",
+      "sl": "Delavnica: prehrana skozi cikel",
+      "fr": "Atelier : alimentation selon le cycle",
+      "desc": {
+        "en": "A workshop on nutrition through phases of the menstrual cycle, with salad preparation, by Mare i Luce. 30 EUR; reserve via Instagram or 091 886 5494.",
+        "hr": "Radionica o prehrani kroz faze menstrualnog ciklusa, uz pripremu salata, organizira Mare i Luce. 30 EUR, rezervacije preko Instagrama ili 091 886 5494."
+      },
+      "offers": [
+        {
+          "name": "Radionica",
+          "price": 30,
+          "priceCurrency": "EUR"
+        }
+      ],
+      "reservationPhone": "091 886 5494",
+      "source": "2026 Events/kt-izila-bi-stogo-0912.jpeg",
+      "updatedAt": "2026-09-14"
+    },
+    {
+      "id": "kt-lumiart",
+      "date": "2026-09-12",
+      "time": "21:00",
+      "town": "korcula",
+      "venue": "Trg kralja Tomislava, Korčula",
+      "cats": [
+        "festival"
+      ],
+      "hr": "LumiArt — svjetlosni festival",
+      "en": "LumiArt — Light Festival",
+      "de": "LumiArt — Lichtfestival",
+      "it": "LumiArt — festival della luce",
+      "sl": "LumiArt — festival svetlobe",
+      "fr": "LumiArt — festival de lumière",
+      "desc": {
+        "en": "A light-art festival on Trg kralja Tomislava in Korčula town. Organized by the Korčula Tourist Board.",
+        "hr": "Svjetlosni festival na Trgu kralja Tomislava u gradu Korčuli. Organizira Turistička zajednica Korčula."
+      },
+      "source": "2026 Events/kt-lumiart-0912.jpeg",
+      "updatedAt": "2026-09-14"
+    },
+    {
+      "id": "zrnovo-turnir-mala-gospa-futsal",
+      "date": "2026-09-10",
+      "time": "16:30",
+      "town": "zrnovo",
+      "venue": "Žrnovo (na Domu)",
+      "cats": [
+        "sports",
+        "kids"
+      ],
+      "hr": "Turnir Mala Gospa Žrnovo 2026 — malonogometni turnir",
+      "en": "Mala Gospa Žrnovo 2026 — Youth Futsal Tournament",
+      "de": "Mala Gospa Žrnovo 2026 — Jugend-Futsalturnier",
+      "it": "Mala Gospa Žrnovo 2026 — torneo giovanile di calcio a 5",
+      "sl": "Mala Gospa Žrnovo 2026 — mladinski turnir v futsalu",
+      "fr": "Mala Gospa Žrnovo 2026 — tournoi de futsal jeunes",
+      "desc": {
+        "en": "Youth futsal tournament organized by MNK Žrnovo: 2015+ age group (MNK Kneže, MNK Ferijalos, NK Jadran Smokvica, MNK Žrnovo) and 2014+ age group (MNK Kneže, ŠN Orebić, Lumbarda, MNK Žrnovo), plus a girls' match (Žrnovo/Kneže vs MNK Ferijalos).",
+        "hr": "Malonogometni turnir u organizaciji MNK Žrnovo: uzrast 2015+ (MNK Kneže, MNK Ferijalos, NK Jadran Smokvica, MNK Žrnovo) i uzrast 2014+ (MNK Kneže, ŠN Orebić, Lumbarda, MNK Žrnovo), te utakmica za cure (Žrnovo/Kneže — MNK Ferijalos)."
+      },
+      "source": "2026 Events/zrnovo-turnir-mala-gospa-futsal-0910.jpeg",
+      "updatedAt": "2026-09-14"
+    },
+    {
+      "id": "racisce-marenda-tripice-cevapi",
+      "date": "2026-09-12",
+      "time": "11:00",
+      "town": "racisce",
+      "venue": "Restoran Mediteran, Račišće",
+      "cats": [
+        "food"
+      ],
+      "hr": "Marenda: janjeće tripice i sarajevski ćevapi",
+      "en": "Brunch: Lamb Tripe and Sarajevo-Style Ćevapi",
+      "de": "Marenda: Lammkutteln und Sarajevo-Ćevapi",
+      "it": "Marenda: trippa d'agnello e ćevapi alla sarajevese",
+      "sl": "Marenda: jagnječja drobovina in sarajevski čevapčiči",
+      "fr": "Marenda : tripes d'agneau et ćevapi façon Sarajevo",
+      "desc": {
+        "en": "A late-morning marenda at Restoran Mediteran in Račišće, from 11:00 until it runs out: lamb tripe (šiša) and Sarajevo-style ćevapi in somun bread.",
+        "hr": "Marenda u Restoranu Mediteran u Račišću, od 11 sati dok se ne pojede: janjeće tripice (šiša) i sarajevski ćevapi u somunu."
+      },
+      "reservationPhone": "+385 92 145 1199",
+      "source": "2026 Events/racisce-marenda-tripice-cevapi-0912.jpeg",
+      "updatedAt": "2026-09-14"
     }
   ],
   "practicalInfo": {

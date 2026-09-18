@@ -12448,6 +12448,203 @@
       ],
       "duplicateMatches": [],
       "status": "needs-review"
+    },
+    {
+      "id": "ai-centar-kulture-korcula-2026-08-18-ariana-gigliani-philipp-soprano-jurica-jurasic-kapun-bariton",
+      "sourceId": "centar-kulture-korcula",
+      "sourceUrl": "https://kulturakorcula.hr/kino-najave/",
+      "discoveredAt": "2026-09-18T09:55:48.661Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Ariana Gigliani Philipp, sopran, Jurica Jurasić Kapun, bariton, i Ana Dadić, klavir, održat će koncert klasične glazbe u Katedrali sv. Marka.",
+        "en": "Ariana Gigliani Philipp, soprano, Jurica Jurasić Kapun, baritone, and Ana Dadić, piano, will hold a classical music concert in St. Mark's Cathedral.",
+        "de": "Ariana Gigliani Philipp, sopran, Jurica Jurasić Kapun, bariton, i Ana Dadić, klavir, održat će koncert klasične glazbe u Katedrali sv. Marka.",
+        "it": "Ariana Gigliani Philipp, soprano, Jurica Jurasić Kapun, baritono, e Ana Dadić, pianoforte, terranno un concerto di musica classica nella Cattedrale di San Marco.",
+        "sl": "Ariana Gigliani Philipp, sopran, Jurica Jurasić Kapun, bariton, in Ana Dadić, klavir, bosta organizirala koncert klasične glasbe v Katedrali sv. Marka.",
+        "fr": "Ariana Gigliani Philipp, soprano, Jurica Jurasić Kapun, baryton, et Ana Dadić, piano, tiendront un concert de musique classique dans la Cathédrale Saint-Marc.",
+        "date": "2026-08-18",
+        "endDate": "2026-08-18",
+        "time": "21:00",
+        "town": "korcula",
+        "venue": "Katedrala sv. Marka",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://kulturakorcula.hr/kino-najave/",
+        "extractionMethod": "ai",
+        "id": "ai-centar-kulture-korcula-2026-08-18-ariana-gigliani-philipp-soprano-jurica-jurasic-kapun-bariton"
+      },
+      "verifierConfidence": 0.5,
+      "verifierConcerns": [
+        "The title field contains booking-status text ('Ulaz: 5€') instead of just the event name.",
+        "The category field is 'kids' but the event is a classical music concert, not a children's event.",
+        "The date field is '2026-08-18' but the source page text has multiple events listed for different dates, including 'Utorak, 18.8., 21:00' which could be the same event.",
+        "The time field is '21:00' but the source page text has multiple events listed for different times, including 'Utorak, 18.8., 21:00' which could be the same event.",
+        "The venue field is 'Katedrala sv. Marka' but the source page text has multiple events listed for different venues, including 'Atrij Gradske vijećnice Korčula' and 'Katedrala Sv. Marka' which could be the same venue.",
+        "The town field is 'korcula' but the source page text does not explicitly state this, and the venue field could be in a different town."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.5"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-centar-kulture-korcula-2026-07-20-bijelo-se-pere-na-devedeset-is-a-drama-by-marko-nabersnik-se",
+      "sourceId": "centar-kulture-korcula",
+      "sourceUrl": "https://kulturakorcula.hr/kino-najave/",
+      "discoveredAt": "2026-09-18T09:55:48.661Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "BIJELO SE PERE NA DEVEDESET je drama Marka Naberšnika, koji se odvija u Sloveniji.",
+        "en": "BIJELO SE PERE NA DEVEDESET is a drama by Marko Naberšnik, set in Slovenia.",
+        "de": "BIJELO SE PERE NA DEVEDESET je drama Marka Naberšnika, koji se odvija u Sloveniji.",
+        "it": "BIJELO SE PERE NA DEVEDESET è una drammatica di Marko Naberšnik, ambientata in Slovenia.",
+        "sl": "BIJELO SE PERE NA DEVEDESET je drama Marka Naberšnika, ki se odvija v Sloveniji.",
+        "fr": "BIJELO SE PERE NA DEVEDESET est une dramatique de Marko Naberšnik, qui se déroule en Slovénie.",
+        "date": "2026-07-20",
+        "endDate": "2026-07-20",
+        "time": "21:00",
+        "town": "korcula",
+        "venue": "Kino Mediteran",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://kulturakorcula.hr/kino-najave/",
+        "extractionMethod": "ai",
+        "id": "ai-centar-kulture-korcula-2026-07-20-bijelo-se-pere-na-devedeset-is-a-drama-by-marko-nabersnik-se"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The extracted candidate's title field seems to be correct, as it matches the text on the source page ('BIJELO SE PERE NA DEVEDESET' and 'Belo se pere na devetdeset'). However, the title field contains booking-status or call-to-action text ('PULA U GOSTIMA') instead of just the event/venue name. This might be a minor issue, but it's worth noting.",
+        "The extracted candidate's date field ('2026-07-20') matches the text on the source page ('Ponedjeljak, 20.7., 21:00'). However, the source page also mentions other dates for the same event ('Bijelo se pere na devedeset / ponedjeljak, 20.7., 21:00' and 'Bijelo se pere na devedeset / petak, 24.7., 21:00'). This might indicate that the event is recurring, but the extracted candidate's date field is only for one specific date.",
+        "The extracted candidate's venue field ('Kino Mediteran') matches the text on the source page ('KINO MEDITERAN / ...'). However, the source page also mentions other venues for the same event ('Centar za kulturu Korčula' and 'Ljetno kino Korčula'). This might indicate that the event is taking place at multiple venues, but the extracted candidate's venue field is only for one specific venue.",
+        "The extracted candidate's category field ('Drama') seems to be correct, as it matches the text on the source page ('Drama' and 'Žuta pisma'). However, the source page also mentions other categories for the same event ('Animirani' and 'Akcija'). This might indicate that the event is a mix of different genres, but the extracted candidate's category field is only for one specific genre.",
+        "The extracted candidate's town field ('korcula') seems to be correct, as it matches the text on the source page ('Korčula' and 'Korčula and Me'). However, the source page also mentions other towns for the same event ('Korčula' and 'Irska'). This might indicate that the event is taking place in multiple locations, but the extracted candidate's town field is only for one specific location.",
+        "The extracted candidate's time field ('21:00') matches the text on the source page ('21:00'). However, the source page also mentions other times for the same event ('20:00' and '21:00'). This might indicate that the event is taking place at multiple times, but the extracted candidate's time field is only for one specific time."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-tz-blato-2026-09-17-pregled-b2b",
+      "sourceId": "tz-blato",
+      "sourceUrl": "https://tzo-blato.hr/en/",
+      "discoveredAt": "2026-09-18T09:55:48.661Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "PREGLED B2B",
+        "en": "B2B OVERVIEW",
+        "de": "ÜBERBlick B2B",
+        "it": "VISIONE D'INSIEME B2B",
+        "sl": "POGLED B2B",
+        "fr": "VUE D'ENSEMBLE B2B",
+        "date": "2026-09-17",
+        "town": "blato",
+        "venue": "Blato",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://tzo-blato.hr/en/",
+        "extractionMethod": "ai",
+        "id": "ai-tz-blato-2026-09-17-pregled-b2b"
+      },
+      "verifierConfidence": 0.5,
+      "verifierConcerns": [
+        "The title field contains 'PREGLED B2B' which is a Croatian phrase, but the 'title_en' field is 'B2B OVERVIEW'. This discrepancy could indicate that the extraction did not accurately translate the title from the source page's language.",
+        "The 'date' field is '2026-09-17', but the source page contains a section titled 'PREGLED B2B' with the date 'Thursday, 17 September 2026'. This discrepancy could indicate that the extraction did not accurately parse the date from the source page.",
+        "The 'cats' field contains a single category 'kids', but the source page does not mention anything related to 'kids'. The category 'B2B' seems more relevant to the context of the source page.",
+        "The 'venue' field is 'Blato', but the source page contains a section with the title 'PREGLED B2B' and a location listed as 'Trg Dr. Franje Tuđmana 4, Blato'. This discrepancy could indicate that the extraction did not accurately parse the venue from the source page.",
+        "The 'town' field is 'blato', but the source page contains a section with the title 'Blato' and a location listed as 'Blato, Korčula island'. This discrepancy could indicate that the extraction did not accurately parse the town from the source page."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.5"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-cara-zavalatica-local-sources-2024-07-25-the-sveti-jakov-pilgrimage-is-a-major-religious-event-in-car",
+      "sourceId": "cara-zavalatica-local-sources",
+      "sourceUrl": "https://www.korculainfo.com/cara/",
+      "discoveredAt": "2026-09-18T09:55:48.661Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Sveti Jakov procesija je glavno vjersko događanje u Čari, oko koje se okupljaju vjernici iz cijele otočne zajednice.",
+        "en": "The Sveti Jakov pilgrimage is a major religious event in Čara, centered on the church of Gospa od Carskog Polja in the field below the village.",
+        "de": "Die Prozession von Sankt Jakob ist das wichtigste religiöse Ereignis in Čari, an dem sich Gläubige aus der gesamten Inselgemeinschaft versammeln.",
+        "it": "La processione di Sveti Jakov è un evento religioso importante a Čara, centrato sull' chiesa di Gospa od Carskog Polja nel campo sotto il villaggio.",
+        "sl": "Sveti Jakov procesija je glavno versko dogajanje v Čari, okoli katere se zbirajo verniki iz cele otoške skupnosti.",
+        "fr": "La procession de Sveti Jakov est un événement religieux majeur à Čara, centré sur l'église de Gospa od Carskog Polja dans le champ en dessous du village.",
+        "date": "2024-07-25",
+        "endDate": "2024-07-25",
+        "town": "cara",
+        "venue": "Gospa od Carskog Polja in the field below the village",
+        "cats": [
+          "kids",
+          "folklore"
+        ],
+        "source": "https://www.korculainfo.com/cara/",
+        "extractionMethod": "ai",
+        "id": "ai-cara-zavalatica-local-sources-2024-07-25-the-sveti-jakov-pilgrimage-is-a-major-religious-event-in-car"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The title field contains a description of the event, but it doesn't match the title that appears in the source page text. The source page text mentions 'Sveti Jakov pilgrimage' as the major religious event of the year in Čara, but the extracted candidate's title field says 'The Sveti Jakov pilgrimage is a major religious event in Čara...' which includes additional text not present in the source page text.",
+        "The venue field contains the full description of the location, but it doesn't match the venue that appears in the source page text. The source page text mentions 'the church of Gospa od Carskog Polja in the field below the village', but the extracted candidate's venue field says 'Gospa od Carskog Polja in the field below the village' which includes additional text not present in the source page text.",
+        "The date field appears to be correct, but it's worth noting that the source page text mentions that the event occurs every year on 25 July, which could imply that this is a recurring event. However, the extracted candidate's date field only specifies a single date, without indicating that it's a recurring event."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-cara-zavalatica-local-sources-2024-09-01-the-harvest-season-is-a-traditional-event-in-cara-with-the-g",
+      "sourceId": "cara-zavalatica-local-sources",
+      "sourceUrl": "https://www.korculainfo.com/cara/",
+      "discoveredAt": "2026-09-18T09:55:48.661Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Sazona žetva je tradicionalno događanje u Čari, s žetvom grožđa u Carskom Polju u rujnu i početku listopada.",
+        "en": "The harvest season is a traditional event in Čara, with the grape harvest in Carsko Polje in September and early October.",
+        "de": "Die Erntefeiern sind traditionell ein Ereignis in Čari, mit der Weinlese im Karsfeld im September und Anfang Oktober.",
+        "it": "La stagione della raccolta è un evento tradizionale a Čara, con la raccolta delle uve a Carsko Polje a settembre e inizio ottobre.",
+        "sl": "Žetevna sezona je tradicionalno dogajanje v Čari, s žetvijo grozdov v Carskem polju v septembru in začetku oktobra.",
+        "fr": "La saison des récoltes est un événement traditionnel à Čara, avec la récolte des raisins à Carsko Polje en septembre et début octobre.",
+        "date": "2024-09-01",
+        "endDate": "2024-10-31",
+        "town": "cara",
+        "venue": "Carsko Polje",
+        "cats": [
+          "kids",
+          "folklore"
+        ],
+        "source": "https://www.korculainfo.com/cara/",
+        "extractionMethod": "ai",
+        "id": "ai-cara-zavalatica-local-sources-2024-09-01-the-harvest-season-is-a-traditional-event-in-cara-with-the-g"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The extracted candidate's title and description seem to be accurate summaries of the source page's text, but they are not direct quotes. However, this is not a significant concern as the information appears to be accurate and the summaries are clear.",
+        "The venue 'Carsko Polje' is mentioned multiple times on the source page, but it's not clear if it's the only possible venue for the 'harvest season' event. However, the source page does mention 'Carsko Polje' as the location for the grape harvest in September and early October, which supports the extracted candidate's venue field.",
+        "The town field contains 'cara', which seems to be a typo or a misspelling of the correct town name 'Čara'. This is a significant concern as it may indicate that the extracted candidate's fields are not well-supported by the source page's text.",
+        "The category field contains 'kids' and 'folklore', which do not seem to be supported by the source page's text. The source page does mention 'Kumpanija' (a traditional sword dance) and 'harvest season' (a grape harvest event), but it does not mention 'kids' or 'folklore' as categories.",
+        "The date field contains '2024-09-01' and the end date field contains '2024-10-31', which do not seem to be supported by the source page's text. The source page mentions the grape harvest in September and early October, but it does not provide specific dates."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
     }
   ]
 }

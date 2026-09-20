@@ -13159,6 +13159,613 @@
       ],
       "duplicateMatches": [],
       "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-korcula-2026-09-07-wi-fi-galerija-siva",
+      "sourceId": "visit-korcula",
+      "sourceUrl": "https://visitkorcula.eu/en/events/",
+      "discoveredAt": "2026-09-20T09:56:49.744Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Wi-Fi galerija siva)",
+        "en": "Wi-Fi grey gallery",
+        "de": "Wi-Fi-Galerie grau",
+        "it": "Galleria Wi-Fi grigia",
+        "sl": "Wi-Fi galerija siva",
+        "fr": "Galerie Wi-Fi grise",
+        "date": "2026-09-07",
+        "endDate": "2026-10-31",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "music"
+        ],
+        "source": "https://visitkorcula.eu/en/events/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-korcula-2026-09-07-wi-fi-galerija-siva"
+      },
+      "verifierConfidence": 0.7,
+      "verifierConcerns": [
+        "The title 'Wi-Fi galerija siva)' in the source page text seems to be a part of a larger phrase ('Wi-Fi galerija siva) (zona') that includes a parenthetical note '(zona)'. This could imply that the title field may have been truncated or that the parenthetical note is part of the title. However, the extracted candidate's title is 'Wi-Fi grey gallery' which does not include the parenthetical note. This discrepancy may indicate an error in the extraction process.",
+        "The source page text does not explicitly mention the category 'music'. The extracted candidate's category is 'music' but the source page text only mentions cultural heritage events, which may imply a different category.",
+        "The extracted candidate's date '2026-09-07' is not explicitly mentioned in the source page text. The source page text mentions '07.09.2026' as a date, but it is not clear if this is the exact date of the event. The extracted candidate's end date '2026-10-31' is also not explicitly mentioned in the source page text, but it is mentioned as '31.10.2026'."
+      ],
+      "blockingReasons": [
+        "fuzzy-duplicate",
+        "verifier-confidence-below-threshold:0.7"
+      ],
+      "duplicateMatches": [
+        {
+          "eventId": "ai-visit-korcula-2026-09-07-wi-fi-galerija-siva-zona",
+          "title": "Wi-Fi grey gallery (zone)",
+          "date": "2026-09-07",
+          "venue": "Korčula",
+          "score": 0.883,
+          "reasons": [
+            "same date",
+            "same town",
+            "same venue",
+            "similar title"
+          ]
+        }
+      ],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-lumbarda-2026-09-10-dani-lumbarajske-pesefizme-2026",
+      "sourceId": "visit-lumbarda",
+      "sourceUrl": "https://www.visitlumbarda.eu/",
+      "discoveredAt": "2026-09-20T09:56:49.744Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Dani lumbarajske pesefizme 2026.",
+        "en": "Dani lumbarajske pesefizme 2026.",
+        "de": "Dani lumbarajske pesefizme 2026.",
+        "it": "Giornate di fisiologia dei piedi della Lombardia 2026.",
+        "sl": "Dnevi lombardskega pedifizike 2026.",
+        "fr": "Journées de physiologie des pieds de Lombardie 2026.",
+        "date": "2026-09-10",
+        "endDate": "2026-10-14",
+        "town": "lumbarda",
+        "venue": "Dani lumbarajske pesefizme 2026.",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://www.visitlumbarda.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-lumbarda-2026-09-10-dani-lumbarajske-pesefizme-2026"
+      },
+      "verifierConfidence": 0.3,
+      "verifierConcerns": [
+        "The title field contains the same text in both languages, but the source page text only contains Croatian text. The English title field should be removed or set to null.",
+        "The 'venue' field contains the same text as the title field, which is not a valid venue. The venue field should be set to null or removed.",
+        "The 'cats' field is set to ['folklore'], but the source page text does not contain the word 'folklore'. The category field should be set to null or removed.",
+        "The 'endDate' field is set to 2026-10-14, but the source page text only mentions the start date as 10. rujna 2026. (September 10, 2026). The end date field should be set to null or removed."
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.3"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-orebic-2026-09-23-neno-borovina-concert-presentation-of-the-song-about-orebic-",
+      "sourceId": "visit-orebic",
+      "sourceUrl": "https://visitorebic-croatia.hr/",
+      "discoveredAt": "2026-09-20T09:56:49.744Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Koncert Neno Borovine / Predstava pjesme o Orebiću i njegovim kapetanima",
+        "en": "Neno Borovina Concert / Presentation of the Song about Orebić and Its Captains",
+        "de": "Konzert von Neno Borovina / Aufführung eines Liedes über Orebić und seine Kapitäne",
+        "it": "Concerto di Neno Borovina / Rappresentazione di una canzone su Orebić e i suoi capitani",
+        "sl": "Koncert Neno Borovine / Predstavitev pesmi o Orebiću in njegovih kapetanov",
+        "fr": "Concert de Neno Borovina / Mise en scène d'une chanson sur Orebić et ses capitaines",
+        "date": "2026-09-23",
+        "endDate": "2026-09-23",
+        "time": "19:30",
+        "town": "orebic",
+        "venue": "in front of the Parish church in Orebić",
+        "cats": [
+          "music"
+        ],
+        "source": "https://visitorebic-croatia.hr/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-orebic-2026-09-23-neno-borovina-concert-presentation-of-the-song-about-orebic-"
+      },
+      "verifierConfidence": 0.7,
+      "verifierConcerns": [
+        "The title field contains a phrase ('Presentation of the Song about Orebić and Its Captains') that does not appear in the source page text as a standalone title. Instead, it appears as a part of the description of the event. This could be a sign that the title was embellished or not accurately extracted from the page.",
+        "The venue field contains the phrase 'in front of the Parish church in Orebić', which is present in the source page text. However, the source page also mentions 'Church of Our Lady of the Annunciation (seaside promenade)' as the venue for a different event, and 'Start in front of the Orebić Municipality building' as the starting point for a guided tour. This could indicate that the page has multiple venues for different events, and the extracted venue might not be accurate for this specific event.",
+        "The category field is set to 'music', but the source page text does not explicitly mention music as a category for this event. Instead, the event is described as a 'concert' and 'presentation of the song', which could suggest a different category."
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.7"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2023-11-01-wine-making",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/zrnovo/",
+      "discoveredAt": "2026-09-20T09:56:49.744Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Proizvodnja vina",
+        "en": "Wine making",
+        "de": "Weinherstellung",
+        "it": "Produzione del vino",
+        "sl": "Proizvodnja vina",
+        "fr": "Fabrication de vin",
+        "date": "2023-11-01",
+        "endDate": "2024-10-31",
+        "time": "autumn grape harvest and winemaking",
+        "town": "lumbarda",
+        "venue": "Žrnovo",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://www.korculainfo.com/zrnovo/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2023-11-01-wine-making"
+      },
+      "verifierConfidence": 0.5,
+      "verifierConcerns": [
+        "The title field contains 'Wine making' but the source page lists 'Wine making' as an event under the 'Events' section, which is not necessarily the title of the village or the current event being described.",
+        "The date field is stated as '2023-11-01', but the source page does not explicitly mention this date in relation to the wine making event. The date '2023-11-01' appears in the source page's 'Events' section, but it is not clear if this date is associated with the wine making event or another event.",
+        "The 'endDate' field is stated as '2024-10-31', but the source page does not provide any information about the end date of the wine making event. The source page lists the wine making event as a 'village tradition still practised in Žrnovo', but it does not provide a specific end date.",
+        "The 'cats' field is stated as 'folklore', but the source page describes the wine making event as a 'village tradition' rather than a folklore event. The source page does mention folklore in relation to the Moštra sword dance, but it does not explicitly associate the wine making event with folklore.",
+        "The 'town' field is stated as 'lumbarda', but the source page describes Žrnovo as a village on Korčula Island. It does not mention Lumbarda as a town or a location associated with the wine making event.",
+        "The 'venue' field is stated as 'Žrnovo', which is correct. However, the source page does not explicitly mention Žrnovo as the venue for the wine making event. Žrnovo is described as a village with multiple hamlets, but it is not clear if the wine making event takes place in all of these hamlets or just one of them."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.5"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2023-11-01-wine-making",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/zrnovo/",
+      "discoveredAt": "2026-09-20T09:56:49.744Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Proizvodnja vina",
+        "en": "Wine making",
+        "de": "Weinherstellung",
+        "it": "Produzione di vino",
+        "sl": "Proizvodnja vina",
+        "fr": "Fabrication de vin",
+        "date": "2023-11-01",
+        "endDate": "2024-10-31",
+        "time": "autumn grape harvest and winemaking",
+        "town": "lumbarda",
+        "venue": "Žrnovo",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.korculainfo.com/zrnovo/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2023-11-01-wine-making"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The extracted date '2023-11-01' is not supported by the text near this listing. The only date mentioned in the Events section is '16 August', which is the date of the Moštra sword dance, and another date '16 August' is mentioned in the context of the feast of St Rok. There is no mention of '2023-11-01' or 'autumn grape harvest and winemaking' in the Events section, which suggests that the extracted date and time might be incorrect or not directly related to the event described in the Events section.",
+        "The extracted title 'Wine making' seems to be accurate, but it's worth noting that the text in the Events section mentions 'Wine making — autumn grape harvest and winemaking is a village tradition still practised in Žrnovo.' The extracted title doesn't mention the specific tradition or the village's name, which might be a minor issue.",
+        "The extracted venue 'Žrnovo' is not entirely accurate. The text in the Events section mentions 'Žrnovo's traditional sword dance, performed on the feast of Sveti Rok (16 August) on the Piazza Pod Kostil in Postrana.' This suggests that the event is taking place in Postrana, which is a hamlet within Žrnovo, rather than Žrnovo itself.",
+        "The extracted category 'kids' is not supported by the text near this listing. The only category mentioned in the text is 'folk traditions', which doesn't seem to match the extracted category 'kids'."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2023-11-01-wine-making",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/zrnovo/",
+      "discoveredAt": "2026-09-20T09:56:49.744Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Proizvodnja vina",
+        "en": "Wine making",
+        "de": "Weinherstellung",
+        "it": "Produzione del vino",
+        "sl": "Proizvodnja vina",
+        "fr": "Fabrication de vin",
+        "date": "2023-11-01",
+        "endDate": "2024-10-31",
+        "time": "autumn grape harvest and winemaking",
+        "town": "lumbarda",
+        "venue": "Žrnovo",
+        "cats": [
+          "kids",
+          "folklore"
+        ],
+        "source": "https://www.korculainfo.com/zrnovo/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2023-11-01-wine-making"
+      },
+      "verifierConfidence": 0.5,
+      "verifierConcerns": [
+        "The title 'Wine making' is a generic description found in the 'Events' section of the page, but it's not clear if this specific event is the one described. The page text mentions 'Wine making — autumn grape harvest and winemaking is a village tradition still practised in Žrnovo.' This could be a recurring event, but the page text doesn't provide enough information to confirm that this specific event is the one described.",
+        "The date '2023-11-01' is not explicitly mentioned in the page text. The page text mentions 'Wine making — autumn grape harvest and winemaking is a village tradition still practised in Žrnovo.' This could be a recurring event, but the page text doesn't provide enough information to confirm that this specific event is the one described.",
+        "The venue 'Žrnovo' is mentioned in the page text, but it's not clear if this is the specific venue for this event. The page text mentions 'Žrnovo village itself is inland, but the coast below and around it has several good swimming spots.' This could be referring to a different location.",
+        "The town 'Lumbarda' is not mentioned in the page text. The page text mentions 'Žrnovo village itself is inland, but the coast below and around it has several good swimming spots.' This could be referring to a different location.",
+        "The category 'kids' is not explicitly mentioned in the page text. The page text mentions 'Žrnovo’s traditional sword dance, performed on the feast of Sveti Rok (16 August) on the Piazza Pod Kostil in Postrana.' This could be a different event.",
+        "The category 'folklore' is mentioned in the page text, but it's not clear if this is the specific category for this event. The page text mentions 'Žrnovo’s traditional sword dance, performed on the feast of Sveti Rok (16 August) on the Piazza Pod Kostil in Postrana.' This could be a different event."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.5"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2023-11-01-wine-making",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/zrnovo/",
+      "discoveredAt": "2026-09-20T09:56:49.744Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Proizvodnja vina",
+        "en": "Wine making",
+        "de": "Weinherstellung",
+        "it": "Produzione di vino",
+        "sl": "Proizvodnja vina",
+        "fr": "Fabrication de vin",
+        "date": "2023-11-01",
+        "endDate": "2024-10-31",
+        "time": "autumn grape harvest and winemaking",
+        "town": "lumbarda",
+        "venue": "Žrnovo",
+        "cats": [
+          "kids",
+          "folklore"
+        ],
+        "source": "https://www.korculainfo.com/zrnovo/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2023-11-01-wine-making"
+      },
+      "verifierConfidence": 0.2,
+      "verifierConcerns": [
+        "The 'event' field contains booking-status text ('Wine making — autumn grape harvest and winemaking is a village tradition still practised in Žrnovo. See the video of winemaking in Žrnovo.') instead of just the event name. This makes the 'title' field ('Wine making') potentially misleading.",
+        "The 'cats' field contains categories ('kids', 'folklore') that don't match the page's description of the event. The event is described as a 'village tradition still practised in Žrnovo' which doesn't necessarily imply it's for kids or folklore.",
+        "The 'date' field ('2023-11-01') is likely incorrect, as the page text mentions 'autumn grape harvest and winemaking', which typically occurs in the fall season, not on a specific date. The page text also mentions the event as a 'village tradition still practised in Žrnovo', which suggests it's a recurring event, not a one-time event on a specific date.",
+        "The 'endDate' field ('2024-10-31') is likely incorrect, as the page text doesn't provide any information about the event's duration or end date."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.2"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2023-11-01-wine-making",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/zrnovo/",
+      "discoveredAt": "2026-09-20T09:56:49.744Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Proizvodnja vina",
+        "en": "Wine making",
+        "de": "Weinherstellung",
+        "it": "Produzione del vino",
+        "sl": "Proizvodnja vina",
+        "fr": "Fabrication de vin",
+        "date": "2023-11-01",
+        "endDate": "2024-10-31",
+        "time": "autumn grape harvest and winemaking",
+        "town": "lumbarda",
+        "venue": "Žrnovo",
+        "cats": [
+          "kids",
+          "folklore"
+        ],
+        "source": "https://www.korculainfo.com/zrnovo/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2023-11-01-wine-making"
+      },
+      "verifierConfidence": 0.3,
+      "verifierConcerns": [
+        "The title 'Wine making' is a description of the event, but it is not the title of the event itself. The actual title of the event is not explicitly stated on the page, but it is mentioned in the text as 'autumn grape harvest and winemaking'.",
+        "The date '2023-11-01' is mentioned in the text, but it is not clear if it is the date of the event or a different date. The text does mention 'autumn grape harvest and winemaking', which is a recurring event, but it does not specify the exact date.",
+        "The venue 'Žrnovo' is mentioned in the text, but it is not clear if it is the specific venue for this event or a general reference to the village. The text does mention 'Žrnovo' as a location, but it does not specify the exact venue for the event.",
+        "The town 'Lumbarda' is not mentioned in the text. The text does mention 'Korčula Island' and 'Žrnovo', but it does not mention 'Lumbarda'.",
+        "The category 'kids' is not mentioned in the text. The text does mention 'folklore' as a category, but it does not mention 'kids'."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.3"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2023-11-01-wine-making",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/zrnovo/",
+      "discoveredAt": "2026-09-20T09:56:49.744Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Proizvodnja vina",
+        "en": "Wine making",
+        "de": "Weinherstellung",
+        "it": "Produzione del vino",
+        "sl": "Proizvodnja vina",
+        "fr": "Fabrication de vin",
+        "date": "2023-11-01",
+        "endDate": "2024-10-31",
+        "time": "autumn grape harvest and winemaking",
+        "town": "lumbarda",
+        "venue": "Žrnovo",
+        "cats": [
+          "kids",
+          "folklore"
+        ],
+        "source": "https://www.korculainfo.com/zrnovo/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2023-11-01-wine-making"
+      },
+      "verifierConfidence": 0.4,
+      "verifierConcerns": [
+        "The title 'Wine making' seems to be a generic description of the event, rather than a specific event title. The source page text mentions 'Wine making — autumn grape harvest and winemaking is a village tradition still practised in Žrnovo.' This suggests that the title might be a paraphrased version of the source text, rather than a direct quote.",
+        "The date '2023-11-01' is not explicitly mentioned in the source page text. The text does mention 'autumn grape harvest and winemaking', which implies that the event occurs during the autumn season, but it does not provide a specific date.",
+        "The venue 'Žrnovo' is not explicitly mentioned in the source page text as the location of the event. The text does mention Žrnovo as the village where the winemaking tradition is practiced, but it does not explicitly state that the event will take place in Žrnovo.",
+        "The category 'kids' seems to be unrelated to the event description. The source page text does not mention children or any activities related to kids.",
+        "The category 'folklore' seems to be related to the event description, as the source page text mentions 'Žrnovo’s traditional sword dance, performed on the feast of Sveti Rok (16 August) on the Piazza Pod Kostil in Postrana.' This suggests that the event is related to folklore and traditional practices.",
+        "The time 'autumn grape harvest and winemaking' is not a specific time, but rather a description of the event. The source page text does not provide a specific time for the event.",
+        "The town 'lumbarda' is not mentioned in the source page text. The text does mention Korčula Island and Žrnovo as the locations, but it does not mention Lumbarda."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.4"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-aminess-korcula-entertainment-2024-04-16-keelboat-sailing-trips-morning-afternoon-or-sunset",
+      "sourceId": "aminess-korcula-entertainment",
+      "sourceUrl": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+      "discoveredAt": "2026-09-20T09:56:49.744Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Iskustvo dana istraživanja Korčulskog arhipelaga i Pelješačkog kanala ili plovidbe u zalazu sunca.",
+        "en": "Keelboat Sailing Trips - Morning, Afternoon or Sunset",
+        "de": "Experience a day exploring Korčula archipelago and Pelješac channel or sail into the sunset.",
+        "it": "Experience a day exploring Korčula archipelago and Pelješac channel or sail into the sunset.",
+        "sl": "Izkušnja dneva raziskovanja Korčulskih otokov in Pelješačkega kanala ali plovidbe v zalazu sonca.",
+        "fr": "Experience a day exploring Korčula archipelago and Pelješac channel or sail into the sunset.",
+        "date": "2024-04-16",
+        "endDate": "2024-04-20",
+        "time": "03:00h",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+        "extractionMethod": "ai",
+        "id": "ai-aminess-korcula-entertainment-2024-04-16-keelboat-sailing-trips-morning-afternoon-or-sunset"
+      },
+      "verifierConfidence": 0.5,
+      "verifierConcerns": [
+        "The 'Keelboat Sailing Trips - Morning, Afternoon or Sunset' listing appears to be a marketing blurb for an activity offered by the hotel, rather than a standalone event listing. This is because it is part of a section labeled 'You might also like...' and is not presented as a separate, independent event.",
+        "The time for the 'Keelboat Sailing Trips - Morning, Afternoon or Sunset' event is listed as '03:00h', but this is not a standard time format. The surrounding text does not provide a clear explanation of what this time format means, so it is unclear whether this is a correct representation of the event's start time.",
+        "The date for the 'Keelboat Sailing Trips - Morning, Afternoon or Sunset' event is listed as '2024-04-16', but this date is not explicitly mentioned in the surrounding text. The text does mention that the event is available 'From €300', but this does not provide a clear indication of the event's date.",
+        "The 'Keelboat Sailing Trips - Morning, Afternoon or Sunset' event is listed as occurring in 'Korčula', but this is not explicitly mentioned in the surrounding text. The text does mention that the event is available in 'Korčula', but this is in the context of a hotel listing, rather than a standalone event listing.",
+        "The category for the 'Keelboat Sailing Trips - Morning, Afternoon or Sunset' event is listed as 'kids', but this does not appear to be a correct representation of the event's category. The surrounding text does mention that the event is suitable for 'all ages', but this does not necessarily imply that it is a children's event."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.5"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-aminess-korcula-entertainment-2024-04-16-full-or-half-day-private-sailing-adventure",
+      "sourceId": "aminess-korcula-entertainment",
+      "sourceUrl": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+      "discoveredAt": "2026-09-20T09:56:49.744Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Iskustvo dana istraživanja dragocjenosti Jadrana.",
+        "en": "Full or Half Day Private Sailing Adventure",
+        "de": "Experience a day exploring the gems of the Adriatic.",
+        "it": "Experience a day exploring the gems of the Adriatic.",
+        "sl": "Izkušnja dneva raziskovanja dragocjenosti Jadrana.",
+        "fr": "Experience a day exploring the gems of the Adriatic.",
+        "date": "2024-04-16",
+        "endDate": "2024-04-20",
+        "time": "04:00h",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+        "extractionMethod": "ai",
+        "id": "ai-aminess-korcula-entertainment-2024-04-16-full-or-half-day-private-sailing-adventure"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The candidate's title 'Full or Half Day Private Sailing Adventure' matches a specific event on the page, but the page also lists other events with similar titles ('Keelboat Sailing Trips', 'Full or Half Day Private Sailing Adventure') and it's not clear which one this candidate specifically refers to. The date and time fields are also present in other events on the page.",
+        "The 'date' field is present in other events on the page, but the 'endDate' field is only present in this candidate and the 'time' field is also present in other events on the page.",
+        "The 'cats' field contains 'kids', but the page does not explicitly mention that the sailing adventure is suitable for kids. It only mentions that the experience is 'perfect for all ages'.",
+        "The page contains a lot of unrelated content, such as hotel information, amenities, and activities, which may be confusing when trying to extract specific event information.",
+        "The 'venue' field contains 'Korčula', which is also present in other events on the page, and it's not clear if this is a specific location or a general area.",
+        "The page does not explicitly mention the duration of the sailing adventure, but the title 'Full or Half Day Private Sailing Adventure' suggests that it could be either a full or half-day event. The price is also not explicitly mentioned, but the page lists prices for other events."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-aminess-korcula-entertainment-2024-04-17-korcula-buggy-safari-tour",
+      "sourceId": "aminess-korcula-entertainment",
+      "sourceUrl": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+      "discoveredAt": "2026-09-20T09:56:49.744Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Iskustvo najboljih dijelova Korčulskog okoliša na ovom iznenađujućem terenskom avanturi. To je savršeno zabavno izleta ugodan za sve uzraste.",
+        "en": "Korcula Buggy Safari Tour",
+        "de": "Experience the very best of Korcula's surrounding area on this exhilarating off-road adventure. This is a perfect fun-filled excursion suitable for all ages.",
+        "it": "Experience the very best of Korcula's surrounding area on this exhilarating off-road adventure. This is a perfect fun-filled excursion suitable for all ages.",
+        "sl": "Izkušnja najboljih delov Korčulskih okolišev na tej iznenađujoči terenski avanturi. To je savršen zabaven izlet ugoden za vse starosti.",
+        "fr": "Experience the very best of Korcula's surrounding area on this exhilarating off-road adventure. This is a perfect fun-filled excursion suitable for all ages.",
+        "date": "2024-04-17",
+        "endDate": "2024-04-21",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+        "extractionMethod": "ai",
+        "id": "ai-aminess-korcula-entertainment-2024-04-17-korcula-buggy-safari-tour"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The title field contains a booking-status or call-to-action text ('Experience the very best of Korcula's surrounding area') instead of just the event title. It should be 'Korcula Buggy Safari Tour' without the extra description.",
+        "The date field is well-supported by the source text, but the time field seems to be missing from the source text. The source page lists the event as '04:00h', but it's not clear if this is the start time or the duration of the event. We should lower confidence in the time field until this is clarified.",
+        "The venue field is well-supported by the source text, but the town field seems to be missing from the source text. The source page lists the event as taking place in 'Korčula', but it's not clear if this is the town or the island. We should lower confidence in the town field until this is clarified.",
+        "The category field seems to be missing from the source text. The source page lists the event as a 'Korcula Buggy Safari Tour', but it's not clear if this is a kids-friendly event or not. We should lower confidence in the category field until this is clarified."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-aminess-korcula-entertainment-2024-04-17-dubrovnik-city-day-tour",
+      "sourceId": "aminess-korcula-entertainment",
+      "sourceUrl": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+      "discoveredAt": "2026-09-20T09:56:49.744Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Istražite Dubrovnik, grad s popisa UNESCO svjetske baštine, opasan s impresivnim zidinama i utvrdama koje su dominirale regijom stoljećima.",
+        "en": "Dubrovnik City Day Tour",
+        "de": "Explore Dubrovnik, the town from the list of UNESCO world heritage, encircled with mighty walls and fortresses that have dominated the region for centuries.",
+        "it": "Explore Dubrovnik, the town from the list of UNESCO world heritage, encircled with mighty walls and fortresses that have dominated the region for centuries.",
+        "sl": "Izkažite se Dubrovnik, mesto s seznamom svetovne dediščine UNESCO, obkroženo z impresivnimi zidovi in utrdbami, ki so prevladovale regijo stoletja.",
+        "fr": "Explore Dubrovnik, the town from the list of UNESCO world heritage, encircled with mighty walls and fortresses that have dominated the region for centuries.",
+        "date": "2024-04-17",
+        "endDate": "2024-04-21",
+        "time": "11:00h",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+        "extractionMethod": "ai",
+        "id": "ai-aminess-korcula-entertainment-2024-04-17-dubrovnik-city-day-tour"
+      },
+      "verifierConfidence": 0.4,
+      "verifierConcerns": [
+        "The category 'kids' does not match the page's description of the events. The page lists a variety of activities and tours, but none of them are specifically described as being suitable for children. The category should be revised to better match the page's content.",
+        "The title 'Dubrovnik City Day Tour' does not match the page's own text. The page lists a variety of tours and activities, but the specific tour described in the extracted candidate's title is not mentioned in the page's text. The title should be revised to accurately reflect the page's content.",
+        "The date '2024-04-17' is listed as a date for the 'Dubrovnik City Day Tour', but the page does not provide a clear indication that this tour is scheduled to take place on this specific date. The page lists a variety of tours and activities, but the specific dates for each tour are not clearly indicated. The date should be revised to accurately reflect the page's content.",
+        "The venue 'Korčula' is listed as the location for the 'Dubrovnik City Day Tour', but the page does not provide a clear indication that this tour takes place in Korčula. The page lists a variety of tours and activities that take place in Korčula, but the specific tour described in the extracted candidate's title is not mentioned in the page's text. The venue should be revised to accurately reflect the page's content.",
+        "The extracted candidate's title contains a phrase ('grad s popisa UNESCO svjetske baštine') that does not appear in the page's own text. This phrase should be removed from the title to accurately reflect the page's content.",
+        "The extracted candidate's title contains a phrase ('opasan s impresivnim zidinama i utvrdama koje su dominirale regijom stoljećima') that does not appear in the page's own text. This phrase should be removed from the title to accurately reflect the page's content."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.4"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-aminess-korcula-entertainment-2024-04-19-keelboat-sailing-trips-morning-afternoon-or-sunset",
+      "sourceId": "aminess-korcula-entertainment",
+      "sourceUrl": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+      "discoveredAt": "2026-09-20T09:56:49.744Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Iskustvo dana istraživanja Korčulskog arhipelaga i Pelješačkog kanala ili plovidbe u zalazu sunca.",
+        "en": "Keelboat Sailing Trips - Morning, Afternoon or Sunset",
+        "de": "Experience a day exploring Korčula archipelago and Pelješac channel or sail into the sunset.",
+        "it": "Experience a day exploring Korčula archipelago and Pelješac channel or sail into the sunset.",
+        "sl": "Izkušnja dneva raziskovanja Korčulskih otokov in Pelješačkega kanala ali plovidbe v zalazu sonca.",
+        "fr": "Experience a day exploring Korčula archipelago and Pelješac channel or sail into the sunset.",
+        "date": "2024-04-19",
+        "endDate": "2024-04-23",
+        "time": "03:00h",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+        "extractionMethod": "ai",
+        "id": "ai-aminess-korcula-entertainment-2024-04-19-keelboat-sailing-trips-morning-afternoon-or-sunset"
+      },
+      "verifierConfidence": 1,
+      "verifierConcerns": [],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-aminess-korcula-entertainment-2024-04-19-full-or-half-day-private-sailing-adventure",
+      "sourceId": "aminess-korcula-entertainment",
+      "sourceUrl": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+      "discoveredAt": "2026-09-20T09:56:49.744Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Iskustvo dana istraživanja dragocjenosti Jadrana.",
+        "en": "Full or Half Day Private Sailing Adventure",
+        "de": "Experience a day exploring the gems of the Adriatic.",
+        "it": "Experience a day exploring the gems of the Adriatic.",
+        "sl": "Izkušnja dneva raziskovanja dragocjenosti Jadrana.",
+        "fr": "Experience a day exploring the gems of the Adriatic.",
+        "date": "2024-04-19",
+        "endDate": "2024-04-23",
+        "time": "04:00h",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+        "extractionMethod": "ai",
+        "id": "ai-aminess-korcula-entertainment-2024-04-19-full-or-half-day-private-sailing-adventure"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The extracted-candidate's category is 'kids', but the source-page-text does not contain any indication that the Full or Half Day Private Sailing Adventure is specifically designed for children. The category may be incorrect.",
+        "The extracted-candidate's time is '04:00h', which is mentioned multiple times in the source-page-text for different activities, including the Full or Half Day Private Sailing Adventure. However, the time for this specific activity is not explicitly stated in the source-page-text, so it is unclear whether the time is correct.",
+        "The extracted-candidate's title is 'Full or Half Day Private Sailing Adventure', which is present in the source-page-text. However, the title is not the only mention of this activity in the source-page-text, and it is not explicitly stated as the title of the activity. Therefore, it is unclear whether the title is correct.",
+        "The extracted-candidate's venue is 'Korčula', which is mentioned multiple times in the source-page-text as a location. However, the venue for the Full or Half Day Private Sailing Adventure is not explicitly stated in the source-page-text, so it is unclear whether the venue is correct.",
+        "The extracted-candidate's date is '2024-04-19', which is not present in the source-page-text. The source-page-text does mention multiple activities with different dates, but the date for the Full or Half Day Private Sailing Adventure is not explicitly stated. Therefore, it is unclear whether the date is correct.",
+        "The extracted-candidate's endDate is '2024-04-23', which is not present in the source-page-text. The source-page-text does mention multiple activities with different dates, but the endDate for the Full or Half Day Private Sailing Adventure is not explicitly stated. Therefore, it is unclear whether the endDate is correct.",
+        "The extracted-candidate's fields do not contain any information about the cost or price of the Full or Half Day Private Sailing Adventure, which is mentioned in the source-page-text as 'From €600'. This information is not present in the extracted-candidate's fields, so it is unclear whether the cost is correct.",
+        "The extracted-candidate's fields do not contain any information about the duration of the Full or Half Day Private Sailing Adventure, which is mentioned in the source-page-text as 'Full or Half Day'. This information is not present in the extracted-candidate's fields, so it is unclear whether the duration is correct."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
     }
   ]
 }

@@ -13766,6 +13766,155 @@
       ],
       "duplicateMatches": [],
       "status": "needs-review"
+    },
+    {
+      "id": "ai-tz-blato-2026-09-23-bastinske-eno-gastro-ture",
+      "sourceId": "tz-blato",
+      "sourceUrl": "https://tzo-blato.hr/en/",
+      "discoveredAt": "2026-09-21T10:45:34.747Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Baštinske eno-gastro ture",
+        "en": "Wine and Gastronomy Tour of the Construction Site",
+        "de": "Baustellen-Wein- und Gastronomietour",
+        "it": "Tour enogastronomico del cantiere",
+        "sl": "Baštinska vinska in gastronomska tura",
+        "fr": "Visite de chantier de vin et gastronomie",
+        "date": "2026-09-23",
+        "endDate": "2026-09-30",
+        "town": "blato",
+        "venue": "Blato",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://tzo-blato.hr/en/",
+        "extractionMethod": "ai",
+        "id": "ai-tz-blato-2026-09-23-bastinske-eno-gastro-ture"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The title field contains a phrase that appears to be a description of the event rather than the actual title. The source page text lists the event as 'BLATO WINE EXPERIENCE - stručna i tematska vinska događanja Baštinske eno-gastro ture' which seems to be the actual title. The extracted candidate's title field should be updated to match this.",
+        "The category field is listed as 'folklore', but the source page text does not appear to describe the event as folklore. The event appears to be related to wine and gastronomy, and the category field should be updated to match this.",
+        "The extracted candidate's date field is '2026-09-23', but the source page text lists the event as occurring from '23. - 30.09. 2026', which includes the entire date range. The extracted candidate's date field should be updated to match this.",
+        "The extracted candidate's venue field is 'Blato', but the source page text lists the venue as 'Trg Dr. Franje Tuđmana 4', which appears to be the actual address of the event. The extracted candidate's venue field should be updated to match this."
+      ],
+      "blockingReasons": [
+        "duplicate-id",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2024-11-11-zrnovo-s-traditional-wine-making-festival-takes-place-in-aut",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/zrnovo/",
+      "discoveredAt": "2026-09-21T10:45:34.747Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Žrnovov tradicionalni festival proizvodnje vina održava se u jesen.",
+        "en": "Žrnovo's traditional wine-making festival takes place in autumn.",
+        "de": "Žrnovos traditionelles Weinfest findet im Herbst statt.",
+        "it": "Il festival tradizionale della vinificazione di Žrnovo si tiene in autunno.",
+        "sl": "Žrnovov tradicionalni festival proizvodnje vina se odvija jeseni.",
+        "fr": "Le festival traditionnel de la vinification de Žrnovo a lieu en automne.",
+        "date": "2024-11-11",
+        "endDate": "2024-11-11",
+        "time": "afternoon",
+        "town": "lumbarda",
+        "venue": "Žrnovo",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://www.korculainfo.com/zrnovo/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2024-11-11-zrnovo-s-traditional-wine-making-festival-takes-place-in-aut"
+      },
+      "verifierConfidence": 0.5,
+      "verifierConcerns": [
+        "The 'event' title is not a direct quote from the source page, but rather a translation of the title in the extracted-candidate's 'title_hr' field. This could indicate that the translation is not entirely accurate or that the source page's title is not explicitly mentioned.",
+        "The 'date' field is supported by the text, which mentions the 'Feast of Sveti Rok' on '16 August' and 'autumn grape harvest and winemaking' without a specific date. However, the 'date' field in the extracted-candidate is '2024-11-11', which seems to be an arbitrary date. The source page does not mention a specific date for the wine-making festival.",
+        "The 'venue' field is supported by the text, which mentions 'Žrnovo' as the location of the village. However, the 'venue' field in the extracted-candidate includes 'Žrnovo', which is the name of the village, but also 'Žrnovov tradicionalni festival proizvodnje vina', which seems to be a description of the event rather than the venue.",
+        "The 'town' field is supported by the text, which mentions 'Žrnovo' as the location of the village. However, the 'town' field in the extracted-candidate is 'lumbarda', which is not mentioned in the source page.",
+        "The 'category' field is supported by the text, which mentions 'folklore' in the context of the 'Moštra' sword dance. However, the 'category' field in the extracted-candidate includes 'folklore', but also 'Žrnovo's traditional wine-making festival', which seems to be a description of the event rather than the category.",
+        "The 'time' field is supported by the text, which mentions 'afternoon' in the context of the wine-making festival. However, the 'time' field in the extracted-candidate is 'afternoon', which seems to be an arbitrary choice rather than a direct quote from the source page."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "ambiguous-time",
+        "verifier-confidence-below-threshold:0.5"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2023-08-05-gospa-od-sniga-our-lady-of-the-snows",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/pupnat/",
+      "discoveredAt": "2026-09-21T10:45:34.747Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Gospa od Snijega",
+        "en": "Gospa od Sniga — Our Lady of the Snows",
+        "de": "Pupnat's main feast day, celebrated at the parish church with a religious service followed by entertainment and cultural programmes.",
+        "it": "Nostra Signora delle Nevi",
+        "sl": "Gospa na Snežniku",
+        "fr": "Notre-Dame des Neiges",
+        "date": "2023-08-05",
+        "town": "smokvica",
+        "venue": "Pupnat village",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://www.korculainfo.com/pupnat/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2023-08-05-gospa-od-sniga-our-lady-of-the-snows"
+      },
+      "verifierConfidence": 1,
+      "verifierConcerns": [],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2024-09-01-wine-production",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/cara/",
+      "discoveredAt": "2026-09-21T10:45:34.747Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Proizvodnja vina",
+        "en": "Wine production",
+        "de": "Weinproduktion",
+        "it": "Produzione di vino",
+        "sl": "Proizvodnja vina",
+        "fr": "Production de vin",
+        "date": "2024-09-01",
+        "endDate": "2024-10-15",
+        "time": "September and October",
+        "town": "cara",
+        "venue": "Cooperative wine cellar in Carsko Polje",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.korculainfo.com/cara/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2024-09-01-wine-production"
+      },
+      "verifierConfidence": 0.7,
+      "verifierConcerns": [
+        "The extracted candidate lists the venue as 'Cooperative wine cellar in Carsko Polje', but the source page text describes the venue as being 'in Carsko Polje below the village' and the cooperative wine cellar is specifically mentioned as being 'in Carsko Polje'. It is not clear if the 'Cooperative wine cellar' is a part of the 'Carsko Polje' venue or a separate entity. This ambiguity lowers the confidence in the extracted venue field.",
+        "The extracted candidate lists the town as 'cara', but the source page text consistently spells it as 'Čara'. This discrepancy lowers the confidence in the extracted town field.",
+        "The extracted candidate lists the category as 'kids', but the source page text does not mention anything related to children or kids. The category seems to be unrelated to the actual content of the page, which lowers the confidence in the extracted category field."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.7"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
     }
   ]
 }

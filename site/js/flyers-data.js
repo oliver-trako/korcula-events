@@ -205,7 +205,7 @@ function resolveFlyerFilename(id, date) {
     return null;
   }
   if (id === "lb-lovacka-vecer") return FLYERS.lbLovackaVecer0825;
-  if (id === "lb-psefizma") return FLYERS.lbDaniPsefizmeProgram;
+  if (id.startsWith("lb-psefizma-")) return FLYERS.lbDaniPsefizmeProgram;
   if (id === "lb-svrhalita") return FLYERS.lbSkopcevinaParty0926;
   if (id === "lb-lutke-ekoklik") return FLYERS.ekoKlik;
   if (id === "lb-lutke-prijatelj" || id === "lb-lutke-0820") return FLYERS.praviPrijatelj;

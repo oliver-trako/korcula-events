@@ -446,21 +446,33 @@ main { max-width:900px; min-height:760px; margin: 0 auto; padding: 14px 16px 0; 
 /* A single visible rule between the two language columns -- with align-items:start and equal
    1fr columns, this is what actually makes the two sides read as a deliberate symmetric pair
    instead of two independently-wrapping blocks of unequal length side by side. */
-.community-appeal p:first-child {
+.community-appeal-col:first-child {
   border-right:1px solid #e8cfa3; padding-right:24px;
 }
 .community-appeal p {
-  margin:0; font-size:.86rem; line-height:1.5; color:var(--ink);
+  margin:0 0 8px; font-size:.86rem; line-height:1.5; color:var(--ink);
 }
 .community-appeal strong { color:var(--sea-deep); }
-.community-appeal a { color:var(--sea-deeper); font-weight:800; text-decoration:underline; white-space:nowrap; }
-.community-appeal code {
-  background:#fff; border:1px solid #e8cfa3; border-radius:6px; padding:1px 6px; font-size:.82rem;
-  white-space:nowrap;
+.community-appeal a { color:var(--sea-deeper); font-weight:800; text-decoration:underline; }
+.community-appeal .appeal-more { white-space:nowrap; }
+/* The donation details (recipient/IBAN/reference), verbatim as printed in the source article --
+   given its own labeled block rather than folded into a sentence, since a bank transfer needs
+   these copied correctly and a user flagged the IBAN as easy to miss when it was inline prose. */
+.appeal-donation {
+  margin:0 0 8px; display:flex; flex-wrap:wrap; gap:6px 16px; align-items:baseline;
+}
+.appeal-donation > div { display:flex; align-items:baseline; gap:6px; }
+.appeal-donation dt {
+  font-size:.72rem; text-transform:uppercase; letter-spacing:.03em; color:var(--ink-soft); font-weight:700;
+}
+.appeal-donation dd { margin:0; font-size:.86rem; font-weight:700; color:var(--ink); }
+.appeal-donation code {
+  background:#fff; border:1.5px solid var(--sea-deep); border-radius:6px; padding:3px 8px;
+  font-size:.92rem; font-weight:800; color:var(--sea-deep); white-space:nowrap; letter-spacing:.02em;
 }
 @media (max-width:760px) {
   .community-appeal-inner { grid-template-columns:1fr; row-gap:12px; }
-  .community-appeal p:first-child {
+  .community-appeal-col:first-child {
     border-right:none; padding-right:0; border-bottom:1px solid #e8cfa3; padding-bottom:12px;
   }
 }

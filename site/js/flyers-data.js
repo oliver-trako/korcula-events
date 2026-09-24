@@ -138,7 +138,12 @@ const MULTI_FLYERS = {
   "racisce-noc-pumpurele": ["litoURaciscu", "raciscePumpureleRaspored", "raciscePumpureleRasporedV2"],
   "kt-swordfest": ["swordfestProgram", "pupnatViteskiFestival0903"],
   "vl-olive-1": ["festaOdUja0903", "daniMaslinovogUljaProgram"],
-  "ai-tz-blato-2026-09-23-bastinske-eno-gastro-ture": ["blatoWineExperienceProgramHr", "blatoWineExperienceProgramEn", "blatoWineExperienceEnoGastroProgram", "blatoWineExperienceMainProgramEn"]
+  "blato-tura-vinarija-bacic": ["blatoWineExperienceEnoGastroProgram", "blatoWineExperienceProgramHr"],
+  "blato-tura-opg-protic": ["blatoWineExperienceEnoGastroProgram", "blatoWineExperienceProgramHr"],
+  "blato-clay-and-wine": ["blatoWineExperienceEnoGastroProgram", "blatoWineExperienceProgramHr"],
+  "blato-tura-opg-bosnic": ["blatoWineExperienceEnoGastroProgram", "blatoWineExperienceProgramHr"],
+  "blato-tura-vinarija-jovanov": ["blatoWineExperienceEnoGastroProgram", "blatoWineExperienceProgramHr"],
+  "blato-tura-vinarija-dine": ["blatoWineExperienceEnoGastroProgram", "blatoWineExperienceProgramHr"]
 };
 
 // Always returns an array (possibly empty) -- the plural counterpart to resolveFlyerFilename,
@@ -213,7 +218,7 @@ function resolveFlyerFilename(id, date) {
   if (id === "vl-chess-mala") return FLYERS.malaVelaLukaSah;
   if (id === "vl-olive-1") return FLYERS.festaOdUja0903;
   if (id === "vl-in-memoriam-borovina") return FLYERS.vlInMemoriamBorovina0822;
-  if (id === "vl-dani-vele-spile") return FLYERS.vlDaniVeleSpile0816;
+  if (id.startsWith("vl-vele-spile-")) return FLYERS.vlDaniVeleSpile0816;
   if (id === "vl-ljubavnici") return FLYERS.vlLjubavnici0821;
   if (id === "vl-standup-hazim") return FLYERS.vlStandupHazim0828;
   if (id === "vl-ribarska-eko-etno") return FLYERS.vlRibarskaEkoEtno0829;
@@ -226,6 +231,7 @@ function resolveFlyerFilename(id, date) {
   if (id === "blato-zlinje-veterani") return FLYERS.zmajVeterani;
   if (id === "blato-petar-graso-domenica") return FLYERS.zmajPetarGraso;
   if (id === "blato-folklore-evening") return FLYERS.folkloreEveningBlato;
+  if (id.startsWith("blato-tura-") || id === "blato-clay-and-wine") return FLYERS.blatoWineExperienceEnoGastroProgram;
   if (id === "blato-eno-gastro-kviz") return FLYERS.blatoEnoGastroKviz0925;
   if (id === "blato-vinska-konferencija" || id === "blato-svjetski-dan-turizma") return FLYERS.blatoWineExperienceMainProgramEn;
   if (id.startsWith("blato-")) return FLYERS.blatskoLjeto;

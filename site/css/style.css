@@ -437,16 +437,32 @@ main { max-width:900px; min-height:760px; margin: 0 auto; padding: 14px 16px 0; 
 .footer-note { font-size:.86rem; color:rgba(255,255,255,.78); margin:8px 0 0; max-width:54ch; }
 
 .community-appeal {
-  background:#fdf4e9; border-bottom:1px solid #e8cfa3; padding:10px 16px;
+  background:#fdf4e9; border-bottom:1px solid #e8cfa3; padding:14px 16px;
 }
 .community-appeal-inner {
-  max-width:1080px; margin:0 auto; display:flex; align-items:center; gap:12px; flex-wrap:wrap;
+  max-width:1080px; margin:0 auto;
+  display:grid; grid-template-columns:1fr 1fr; column-gap:24px; align-items:start;
 }
-.community-appeal p { margin:0; font-size:.86rem; line-height:1.5; color:var(--ink); flex:1 1 320px; }
+/* A single visible rule between the two language columns -- with align-items:start and equal
+   1fr columns, this is what actually makes the two sides read as a deliberate symmetric pair
+   instead of two independently-wrapping blocks of unequal length side by side. */
+.community-appeal p:first-child {
+  border-right:1px solid #e8cfa3; padding-right:24px;
+}
+.community-appeal p {
+  margin:0; font-size:.86rem; line-height:1.5; color:var(--ink);
+}
 .community-appeal strong { color:var(--sea-deep); }
-.community-appeal a { color:var(--sea-deeper); font-weight:800; text-decoration:underline; }
+.community-appeal a { color:var(--sea-deeper); font-weight:800; text-decoration:underline; white-space:nowrap; }
 .community-appeal code {
   background:#fff; border:1px solid #e8cfa3; border-radius:6px; padding:1px 6px; font-size:.82rem;
+  white-space:nowrap;
+}
+@media (max-width:760px) {
+  .community-appeal-inner { grid-template-columns:1fr; row-gap:12px; }
+  .community-appeal p:first-child {
+    border-right:none; padding-right:0; border-bottom:1px solid #e8cfa3; padding-bottom:12px;
+  }
 }
 
 .cookie-notice {

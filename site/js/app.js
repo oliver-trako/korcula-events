@@ -343,10 +343,16 @@
       evening: { hr:"Večer", en:"Evening", de:"Abend", it:"Sera", sl:"Večer", fr:"Soir" },
       late: { hr:"Kasno", en:"Late", de:"Spät", it:"Tardi", sl:"Pozno", fr:"Tard" },
       varies: { hr:"Razno", en:"Varies", de:"Variiert", it:"Varia", sl:"Različno", fr:"Variable" },
-      tbc: { hr:"TBC", en:"TBC", de:"TBC", it:"TBC", sl:"TBC", fr:"TBC" }
+      tbc: { hr:"TBC", en:"TBC", de:"TBC", it:"TBC", sl:"TBC", fr:"TBC" },
+      // Real production issue (2026-09-24): a missing time rendered as a bare "•" on the calendar
+      // card, with no way to tell "genuinely no confirmed time" from a data gap -- user-reported,
+      // and explicitly: no calendar entry should ever show a bare dot. Every missing-time case now
+      // gets a real, legible label instead: a multi-day date range says "Multi-day", anything else
+      // says "TBC" (time to be confirmed) -- never invent an actual time to avoid this.
+      multiday: { hr:"Više dana", en:"Multi-day", de:"Mehrtägig", it:"Più giorni", sl:"Več dni", fr:"Plusieurs jours" }
     };
     const pick = (key) => labels[key][state.lang] || labels[key].en;
-    if (!time) return "•";
+    if (!time) return e.endDate && e.endDate !== e.date ? pick("multiday") : pick("tbc");
     if (/^\d/.test(time)) return time;
     if (lower.includes("after midnight") || lower.includes("midnight")) return pick("late");
     if (lower.includes("morning")) return pick("morning");
@@ -354,7 +360,7 @@
     if (lower.includes("evening")) return pick("evening");
     if (lower.includes("varies")) return pick("varies");
     if (lower.includes("tbc")) return pick("tbc");
-    return time.length <= 10 ? time : "•";
+    return time.length <= 10 ? time : pick("varies");
   }
 
   // EVENT_TRANSLATION_RULES / translateEventText() come from event-translations-data.js (loaded

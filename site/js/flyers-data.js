@@ -136,7 +136,7 @@ const MULTI_FLYERS = {
   "racisce-muski-buce": ["litoURaciscu", "muskiBuceFinaleRaspored"],
   "pst-danmjesta": ["zrnovoPostranaVelaGospaSvRoko", "zrnovoPostranaTotemBend"],
   "racisce-noc-pumpurele": ["litoURaciscu", "raciscePumpureleRaspored", "raciscePumpureleRasporedV2"],
-  "kt-swordfest": ["swordfestProgram", "pupnatViteskiFestival0903"],
+  "pupnat-swordfest-mostra": ["pupnatViteskiFestival0903", "swordfestProgram"],
   "vl-olive-1": ["festaOdUja0903", "daniMaslinovogUljaProgram"],
   "blato-tura-vinarija-bacic": ["blatoWineExperienceEnoGastroProgram", "blatoWineExperienceProgramHr"],
   "blato-tura-opg-protic": ["blatoWineExperienceEnoGastroProgram", "blatoWineExperienceProgramHr"],
@@ -175,9 +175,8 @@ function resolveFlyerFilename(id, date) {
   if (id === "smk-jadranova") return FLYERS.jadranovaNocDivljeJagode;
   if (id === "smk-duhovni") return FLYERS.alanHrzicaSmokvica;
   if (id === "smk-klapska") return FLYERS.smkKoncertMalocicaDvori0823;
-  if (id === "smk-moto") return FLYERS.smkRockBikeParty;
+  if (id.startsWith("smk-rockbike-")) return FLYERS.smkRockBikeParty;
   if (id === "smk-slatko-smokva") return FLYERS.smkSlatkoSmokva0904;
-  if (id === "ai-tz-blato-2026-09-23-bastinske-eno-gastro-ture") return FLYERS.blatoWineExperienceProgramHr;
   if (id === "racisce-buce-slavljenicka-vecera") return FLYERS.raciscelBuceSlavljenickaVecera;
   if (id === "racisce-marenda-tripice") return FLYERS.marendaTripice;
   if (id === "racisce-rucak-mediteranu-0819") return FLYERS.mediteranRucak0819;
@@ -186,9 +185,9 @@ function resolveFlyerFilename(id, date) {
   if (id === "zavalatica-ribarska-vecer") return FLYERS.zavalaticaRibarskaVecer;
   if (id === "racisce-dalmatinska-noc") return FLYERS.mediteranDalmatinskaNoc0828;
   if (id === "racisce-adio-lito") return FLYERS.mediteranAdioLito0905;
-  if (id === "kt-korkyra-baroque") return FLYERS.korkyraBaroqueProgram;
+  if (id.includes("baroque")) return FLYERS.korkyraBaroqueProgram;
   if (id === "kt-markopolo-gala") return FLYERS.markopoloGala0906;
-  if (id === "kt-swordfest") return FLYERS.swordfestProgram;
+  if (id.includes("swordfest")) return FLYERS.swordfestProgram;
   if (id === "smk-brodetijada") return FLYERS.brodetijada0905;
   if (id === "lb-folklorne-veceri") return FLYERS.lumbardaFolkloreEveningsWed;
   if (id === "zrnovo-turnir-bucama-zene") return FLYERS.zrnovoTurnirBucamaZene0904;

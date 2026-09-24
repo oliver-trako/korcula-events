@@ -14695,6 +14695,281 @@
       ],
       "duplicateMatches": [],
       "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-korcula-2026-09-07-wi-fi-galerija-siva-zona",
+      "sourceId": "visit-korcula",
+      "sourceUrl": "https://visitkorcula.eu/en/events/",
+      "discoveredAt": "2026-09-24T10:13:04.969Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Wi-Fi galerija siva) (zona",
+        "en": "Wi-Fi Gallery (Black Zone)",
+        "de": "Wi-Fi Gallery (Schwarze Zone)",
+        "it": "Wi-Fi Galleria (Zona Nera)",
+        "sl": "Wi-Fi galerija (črna zona)",
+        "fr": "Wi-Fi galerie (zone noire)",
+        "date": "2026-09-07",
+        "endDate": "2026-10-31",
+        "town": "korcula",
+        "venue": "korcula",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitkorcula.eu/en/events/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-korcula-2026-09-07-wi-fi-galerija-siva-zona"
+      },
+      "verifierConfidence": 0.5,
+      "verifierConcerns": [
+        "The date '2026-09-07' appears to be correct according to the source page text, but the corresponding event listing is not directly adjacent to the date. The dates are listed in a separate section with a title of 'Events'.",
+        "The title 'Wi-Fi Gallery (Black Zone)' appears to be a translation of the original text, but the source page text only mentions 'Wi-Fi galerija siva) (zona'. It's unclear if the translation is accurate or if the original text was misread.",
+        "The venue 'korcula' appears to be a repeat of the town name, but the source page text only mentions 'korčula' as a town name, not a venue. The event listing appears to be missing a specific venue.",
+        "The category 'kids' does not match the description provided in the source page text. The event description mentions 'Public-space performance/ multimedia sound installations, a film screening, and exhibitions.' which does not suggest an event for kids."
+      ],
+      "blockingReasons": [
+        "duplicate-id",
+        "verifier-confidence-below-threshold:0.5"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-korcula-2026-09-24-public-space-performance-multimedia-sound-installations-a-fi",
+      "sourceId": "visit-korcula",
+      "sourceUrl": "https://visitkorcula.eu/en/events/",
+      "discoveredAt": "2026-09-24T10:13:04.969Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Public-space performance/ multimedia sound installations, a film screening, and exhibitions.",
+        "en": "Public-space performance/ multimedia sound installations, a film screening, and exhibitions.",
+        "de": "Öffentliches Performance/ Multimediasound-Installationen, eine Filmvorführung und Ausstellungen.",
+        "it": "Spettacolo in spazi pubblici / installazioni sonore multimediali, proiezione di film e mostre.",
+        "sl": "Publika-performanca/multimedialne zvokovne instalacije, predvajanje filma in razstave.",
+        "fr": "Performance en espace public / installations sonores multimédia, projection de film et expositions.",
+        "date": "2026-09-24",
+        "town": "korcula",
+        "venue": "korcula",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitkorcula.eu/en/events/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-korcula-2026-09-24-public-space-performance-multimedia-sound-installations-a-fi"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The category 'kids' does not match the description of the event. The event appears to be a public-space performance, multimedia sound installations, a film screening, and exhibitions, which does not seem to be targeted towards children. This discrepancy suggests that the category may be incorrect.",
+        "The date '2026-09-24' is present on the page, but it appears in the same format and wording as the other events listed, which are recurring events spanning multiple dates. This raises the possibility that the date is part of a recurring event, and the specific date '2026-09-24' may not be the only date for this event.",
+        "The title and description of the event appear to be directly copied from the source page, but the title does not match the exact wording of the event description on the page. The event description on the page reads 'Public-space performance/ multimedia sound installations, a film screening, and exhibitions.' which is slightly different from the title 'Public-space performance/ multimedia sound installations, a film screening, and exhibitions.' provided in the extracted candidate. This discrepancy suggests that the title may have been embellished beyond what the page text actually says.",
+        "The venue and town fields are set to 'korcula', which is the same as the title of the page. However, the page text does not explicitly state that the event is taking place in Korčula. Instead, it appears to be a general description of the island. This lack of specificity in the venue and town fields raises concerns about their accuracy.",
+        "The page text contains a list of dates for recurring events, but the specific date '2026-09-24' is not explicitly linked to the event description. This lack of explicit connection between the date and the event description raises concerns about the accuracy of the date field."
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-korcula-racisce-2026-09-24-public-space-performance-multimedia-sound-installations-a-fi",
+      "sourceId": "visit-korcula-racisce",
+      "sourceUrl": "https://visitkorcula.eu/en/events/summer-in-racisce/",
+      "discoveredAt": "2026-09-24T10:13:04.969Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Publicni prostor performansi / medijumske zvukovne instalacije, projekcija filma i izloške.",
+        "en": "Public-space performance/ multimedia sound installations, a film screening, and exhibitions.",
+        "de": "Öffentliche Raumperformance/ Multimedia-Sound-Installationen, eine Filmvorführung und Ausstellungen.",
+        "it": "Spettacolo in spazi pubblici / installazioni sonore multimediali, proiezione di film e mostre.",
+        "sl": "Publikaški prostor performanc / medijumske zvokovne instalacije, filmska predstavitev in razstave.",
+        "fr": "Performance dans l'espace public / installations sonores multimédia, une projection de film et des expositions.",
+        "date": "2026-09-24",
+        "town": "racisce",
+        "venue": "Račišće",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitkorcula.eu/en/events/summer-in-racisce/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-korcula-racisce-2026-09-24-public-space-performance-multimedia-sound-installations-a-fi"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The title is well-supported by the source page text.",
+        "The date is well-supported by the source page text, but it appears on the same line as other dates for the same event. This is not a red flag, as the page lists multiple dates for the same recurring show.",
+        "The venue is well-supported by the source page text.",
+        "The town is well-supported by the source page text.",
+        "The category is 'kids', but the source page text does not describe the event as suitable for children. This is a concern, as the category may not accurately reflect the event's content.",
+        "There is no mention of the event on the page before the extracted candidate, but there are other events listed on the page. This is not a red flag, as the page lists multiple events.",
+        "The event has not already happened relative to the stated page context, as the page is a calendar of upcoming events."
+      ],
+      "blockingReasons": [
+        "source-override-always-review"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-korcula-racisce-2026-09-26-concert-indira-forza",
+      "sourceId": "visit-korcula-racisce",
+      "sourceUrl": "https://visitkorcula.eu/en/events/summer-in-racisce/",
+      "discoveredAt": "2026-09-24T10:13:04.969Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Koncert Indira Forza",
+        "en": "Concert Indira Forza",
+        "de": "Konzert von Indira Forza",
+        "it": "Koncert Indira Forza",
+        "sl": "Koncert Indira Forza",
+        "fr": "Concert d'Indira Forza",
+        "date": "2026-09-26",
+        "town": "racisce",
+        "venue": "Račišće",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://visitkorcula.eu/en/events/summer-in-racisce/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-korcula-racisce-2026-09-26-concert-indira-forza"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The title 'Koncert Indira Forza' is correct, but it's not the only title that appears on the page. The page lists multiple events, and the title 'Concert Indira Forza' appears in the 'Events' section, but it's not explicitly stated as the title of the event on the same line as the date. However, it's mentioned in the same line as the date, so this is not a major concern.",
+        "The date '2026-09-26' is supported by the text, which lists '26.09.2026' as the date for 'Concert Indira Forza'.",
+        "The town 'Račišće' is correct and supported by the text, which lists 'Račišće' as the location for multiple events, including 'Concert Indira Forza'.",
+        "The venue 'Račišće' is correct and supported by the text, which lists 'Račišće' as the location for multiple events, including 'Concert Indira Forza'.",
+        "The category 'folklore' is not explicitly stated on the page. However, the event is described as a 'Concert', which is a type of event that could be related to folklore. But without more context, it's hard to say for sure.",
+        "There is a concern about the category 'folklore' because the page lists multiple events, and the category 'folklore' is not mentioned for any of the other events. This could be an error in the extraction or an omission on the page.",
+        "The event appears to be listed in a section with other events, and the date is mentioned in the same line as the event title. This suggests that the event is indeed listed on the page and that the date is correct."
+      ],
+      "blockingReasons": [
+        "source-override-always-review"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-centar-kulture-korcula-2026-08-25-ljetno-kino-korcula-shows-children-s-classic-films-and-famil",
+      "sourceId": "centar-kulture-korcula",
+      "sourceUrl": "https://kulturakorcula.hr/kino-najave/",
+      "discoveredAt": "2026-09-24T10:13:04.969Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Ljetno kino Korćula prikazuje djeci uspjele klasićne filmove i filmska iskustva za obitelji u kinima po cijeloj Hrvatskoj.",
+        "en": "Ljetno kino Korčula shows children's classic films and family movie experiences in cinemas across Croatia.",
+        "de": "Ljetno kino Korčula prikazuje dječje filmske klasike i obiteljske filmske doživljaje u kinima diljem Hrvatske.",
+        "it": "L' estate del cinema di Korćula mostra film per bambini e esperienze cinematografiche per la famiglia nei cinema di tutta Croazia.",
+        "sl": "Ljetno kino Korćula prikaže otroške klasićne filme in filmska izkustva za družine v kinematografeh po vsej Hrvaški.",
+        "fr": "Ljetno kino Korćula pokazuje klasićne filmove za djecu i filmske iskustve za obitelji u kinima diljem Hrvatske.",
+        "date": "2026-08-25",
+        "time": "21:00",
+        "town": "korcula",
+        "venue": "Centar za kulturu Korčula",
+        "cats": [
+          "kids",
+          "film"
+        ],
+        "source": "https://kulturakorcula.hr/kino-najave/",
+        "extractionMethod": "ai",
+        "id": "ai-centar-kulture-korcula-2026-08-25-ljetno-kino-korcula-shows-children-s-classic-films-and-famil"
+      },
+      "verifierConfidence": 0.3,
+      "verifierConcerns": [
+        "The title field contains a description of the event ('Ljetno kino Korćula shows children's classic films and family movie experiences in cinemas across Croatia.') rather than the actual title of the event.",
+        "The date field ('2026-08-25') appears to be after the dates of other events listed on the page.",
+        "The time field ('21:00') matches the time of other events listed on the page, but the date does not match any other event's date.",
+        "The venue field ('Centar za kulturu Korčula') appears to be the same as another event's venue ('Centar za kulturu Korčula') on the same page.",
+        "The category field ('kids') appears to be a subset of the category 'film', which is listed for other events on the page."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.3"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-tz-vela-luka-2026-09-15-15-barokni-festival-korcula-u-veloj-luci",
+      "sourceId": "tz-vela-luka",
+      "sourceUrl": "https://tzvelaluka.hr/",
+      "discoveredAt": "2026-09-24T10:13:04.969Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "15. Barokni festival Korćula u Veloj Luci",
+        "en": "15th Baroque Festival Korôla in Velika Lucica",
+        "de": "15. Barockfestival Koröla in Velalucija",
+        "it": "15° Festival Barocco Korôla a Velika Luka",
+        "sl": "15. baročni festival Korôla v Veliki Luciji",
+        "fr": "15e Festival Baroque Korôla à Velika Lucica",
+        "date": "2026-09-15",
+        "town": "vela-luka",
+        "venue": "Vela Luka",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://tzvelaluka.hr/",
+        "extractionMethod": "ai",
+        "id": "ai-tz-vela-luka-2026-09-15-15-barokni-festival-korcula-u-veloj-luci"
+      },
+      "verifierConfidence": 0.7,
+      "verifierConcerns": [
+        "The title field contains the phrase '15. Barokni festival Korčula u Veloj Luci', which appears to be a translation of the event title. However, the original Croatian title '15. Barokni festival Korćula u Veloj Luci' appears on the page as a separate event listing. This may indicate that the extracted title is not the actual title of the event, but rather a translation of it. It is unclear whether the event is listed under its original title or under the translated title."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.7"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-aminess-korcula-entertainment-2024-04-01-taste-of-korcula",
+      "sourceId": "aminess-korcula-entertainment",
+      "sourceUrl": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+      "discoveredAt": "2026-09-24T10:13:04.969Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Okus Korčule",
+        "en": "Taste of Korčula",
+        "de": "Geschmack von Korölu",
+        "it": "Sapore di Korčula",
+        "sl": "Okus Korčule",
+        "fr": "Goût de Korčula",
+        "date": "2024-04-01",
+        "endDate": "2024-10-31",
+        "time": "02:00h",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "kids"
+        ],
+        "desc": {
+          "en": "The tour includes a guided city tour with a visitor to the observation deck and a tasting of homemade products from the family farm OPG Anica Bažika.",
+          "hr": "Turistička viza Korčule uključuje vodički tura po gradu, posjet obližnjem pogledu i okusavanje domaće hrane iz obiteljske farme OPG Anica Bažika.",
+          "it": "La visita comprende una guida turistica della città con una visita all'osservatorio e un assaggio di prodotti fatti in casa dalla fattoria di OPG Anica Bažika.",
+          "sl": "Turistična potovanja po Korčuli vključuje voditeljsko potovanje po mestu, obisk obližnjega pogleda in okusovanje domače hrane iz obiteljske kmetije OPG Anica Bažika."
+        },
+        "source": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+        "extractionMethod": "ai",
+        "id": "ai-aminess-korcula-entertainment-2024-04-01-taste-of-korcula"
+      },
+      "verifierConfidence": 0,
+      "verifierConcerns": [
+        "The title field 'Okus Korčule' is not supported by the source page text. The source page lists a tour called 'Taste of Korčula', but does not mention 'Okus Korčule'.",
+        "The date field '2024-04-01' is not supported by the source page text. The source page lists multiple tours, but does not mention a tour on this specific date.",
+        "The time field '02:00h' is not supported by the source page text. The source page lists multiple tours, but does not mention a tour at this specific time.",
+        "The venue field 'Korčula' is not supported by the source page text. The source page lists multiple tours, but does not mention a tour in this specific location.",
+        "The town field 'korcula' is not supported by the source page text. The source page lists multiple tours, but does not mention a tour in this specific location.",
+        "The category field 'kids' is not supported by the source page text. The source page lists multiple tours, but does not mention a tour specifically for kids.",
+        "The description field is not supported by the source page text. The source page lists multiple tours, but does not mention the specific description provided in the extracted candidate."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
     }
   ]
 }

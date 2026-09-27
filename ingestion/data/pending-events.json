@@ -4232,6 +4232,801 @@
       ],
       "duplicateMatches": [],
       "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-korcula-racisce-2025-08-11-igre-racica",
+      "sourceId": "visit-korcula-racisce",
+      "sourceUrl": "https://visitkorcula.eu/en/events/summer-in-racisce/",
+      "discoveredAt": "2026-09-27T10:46:21.901Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Igre Račića",
+        "en": "Račić's Games",
+        "de": "Račićs Spiele",
+        "it": "Giochi di Račić",
+        "sl": "Igre Račića",
+        "fr": "Jeux de Račić",
+        "date": "2025-08-11",
+        "endDate": "2025-08-16",
+        "town": "racisce",
+        "venue": "Račišće",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitkorcula.eu/en/events/summer-in-racisce/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-korcula-racisce-2025-08-11-igre-racica"
+      },
+      "verifierConfidence": 0.7,
+      "verifierConcerns": [
+        "The source page lists multiple events for different dates, but the extracted candidate's date range (2025-08-11 to 2025-08-16) is not explicitly mentioned together with the event title ('Igre Račića' or 'Sport games in Račišće') in the text near the extracted candidate. However, the source page does mention '11.–16.8.2025' and '(Igre Račića)' together, which seems to support the extracted candidate's date and title.",
+        "The source page lists multiple events for different dates, but the extracted candidate's end date (2025-08-16) is not explicitly mentioned together with the event title ('Igre Račića' or 'Sport games in Račišće') in the text near the extracted candidate. However, the source page does mention '16.8.' and '(Noć Pumpurele)' together, which seems to support the extracted candidate's end date.",
+        "The source page text does not explicitly mention the venue 'Račišće' together with the event title ('Igre Račića' or 'Sport games in Račišće') near the extracted candidate. However, the source page does mention 'Sport games in Račišće' which suggests that the venue is indeed 'Račišće'.",
+        "The source page text does not explicitly mention the town 'racisce' together with the event title ('Igre Račića' or 'Sport games in Račišće') near the extracted candidate. However, the source page does mention 'Račišće' which suggests that the town is indeed 'Račišće'.",
+        "The source page text does not explicitly mention the category 'kids' together with the event title ('Igre Račića' or 'Sport games in Račišće') near the extracted candidate. However, the source page does mention 'kids' in the context of 'Cultural heritage events' which does not necessarily imply that the extracted candidate's event is for kids.",
+        "The source page text does not explicitly mention the extracted candidate's date range (2025-08-11 to 2025-08-16) as a specific event, but rather as part of a list of events in August. However, the source page does mention '11.–16.8.2025' which seems to support the extracted candidate's date range."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "source-override-always-review",
+        "verifier-confidence-below-threshold:0.7"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-korcula-racisce-2025-08-15-raciska-kronika",
+      "sourceId": "visit-korcula-racisce",
+      "sourceUrl": "https://visitkorcula.eu/en/events/summer-in-racisce/",
+      "discoveredAt": "2026-09-27T10:46:21.901Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Račiška kronika",
+        "en": "Račić Chronicle",
+        "de": "Račiška Chronik",
+        "it": "Cronaca di Račić",
+        "sl": "Račiška kronika",
+        "fr": "Chronique de Račić",
+        "date": "2025-08-15",
+        "town": "racisce",
+        "venue": "Račišće",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitkorcula.eu/en/events/summer-in-racisce/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-korcula-racisce-2025-08-15-raciska-kronika"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The title 'Račiška kronika' is translated as 'Račić Chronicle' but the page lists it as 'Račišće Cronicles (Račiška kronika)' which seems to be a more accurate translation. This discrepancy may indicate that the extracted title is not entirely accurate."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "source-override-always-review"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-korcula-racisce-2025-08-16-noc-pumpurele",
+      "sourceId": "visit-korcula-racisce",
+      "sourceUrl": "https://visitkorcula.eu/en/events/summer-in-racisce/",
+      "discoveredAt": "2026-09-27T10:46:21.901Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Noć Pumpurele",
+        "en": "Pumpkin Night",
+        "de": "Pumpurels Nacht",
+        "it": "Notte della Zucca",
+        "sl": "Pumpureljeva noč",
+        "fr": "Nuit de la Courge",
+        "date": "2025-08-16",
+        "town": "racisce",
+        "venue": "Račišće",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitkorcula.eu/en/events/summer-in-racisce/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-korcula-racisce-2025-08-16-noc-pumpurele"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The title 'Noć Pumpurele' is correctly extracted from the source page, but it's worth noting that it's in Croatian. The extracted title in English, 'Pumpkin Night', seems to be a translation. This might be a concern if the translation is not accurate, but in this case, it seems to be correct.",
+        "The date '2025-08-16' is supported by the text on the source page, specifically the line '16.8. / Evening at the Pumpurela (Noć Pumpurele)'",
+        "The venue 'Račišće' is also supported by the source page, specifically the line 'Sport games in Račišće (Igre Račića)'",
+        "The town 'racisce' seems to be correctly extracted, as it matches the venue 'Račišće'",
+        "The category 'kids' seems to be an incorrect assumption. The source page does not explicitly mention the event as being for kids. The event 'Evening at the Pumpurela' does not provide any information about its target audience.",
+        "There is no explicit mention of the event 'Noć Pumpurele' being a recurring event, but the source page does list other events in the same location, which might suggest that the event is part of a larger series. However, this is not a strong concern, as the specific date and time of the event are still supported by the source page."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "source-override-always-review"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-korcula-racisce-2026-10-03-restaurant-week-slow-food-korcula",
+      "sourceId": "visit-korcula-racisce",
+      "sourceUrl": "https://visitkorcula.eu/en/events/summer-in-racisce/",
+      "discoveredAt": "2026-09-27T10:46:21.901Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Restoran tjedan – Slow Food Korčula",
+        "en": "Restaurant Week – Slow Food Korčula",
+        "de": "Restaurant der Woche – Slow Food Korčula",
+        "it": "Ristorante della settimana – Slow Food Korčula",
+        "sl": "Restavracija tedna – Slow Food Korčula",
+        "fr": "Restaurant de la semaine – Slow Food Korčula",
+        "date": "2026-10-03",
+        "endDate": "2026-10-11",
+        "town": "racisce",
+        "venue": "Račišće",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitkorcula.eu/en/events/summer-in-racisce/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-korcula-racisce-2026-10-03-restaurant-week-slow-food-korcula"
+      },
+      "verifierConfidence": 0.7,
+      "verifierConcerns": [
+        "The page appears to list multiple events on the same dates, but the extracted candidate's date range (2026-10-03 to 2026-10-11) does not match the listed events (03.10.2026 to 11.10.2026). This suggests that the extracted candidate's date range may be incorrect or incomplete.",
+        "The title of the extracted candidate appears to be a translation of the original title on the page, but the original title is not explicitly stated on the page. This could indicate that the extracted title is not entirely accurate.",
+        "The category 'kids' is listed for the extracted candidate, but the page does not mention anything related to children or kids' activities. This could indicate that the category is incorrect or not relevant to the event."
+      ],
+      "blockingReasons": [
+        "source-override-always-review",
+        "verifier-confidence-below-threshold:0.7"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-centar-kulture-korcula-2026-07-16-korcula-i-ja-korcula-and-me-we-invite-you-to-an-inspiring-le",
+      "sourceId": "centar-kulture-korcula",
+      "sourceUrl": "https://kulturakorcula.hr/kino-najave/",
+      "discoveredAt": "2026-09-27T10:46:21.901Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Korčula i ja / Korčula and Me Pozivamo vas na inspirativno predavanje i otvorenu diskusiju o gradu, kulturi, urbanitetu i budućnosti Korčule.",
+        "en": "Korčula i ja / Korčula and Me We invite you to an inspiring lecture and open discussion on the city, culture, urbanity and the future of Korčula.",
+        "de": "Korčula i ja / Korčula and Me Pozivamo vas na inspirativno predavanje i otvorenu diskusiju o gradu, kulturi, urbanitetu i budućnosti Korčule.",
+        "it": "Korčula i ja / Korčula and Me Vi invitiamo a una conferenza ispirante e a una discussione aperta sulla città, la cultura, l'urbanità e il futuro di Korčula.",
+        "sl": "Korčula in jaz / Korčula in jaz Pozivamo vas na inspirativno predavanje in odprto razpravo o mestu, kulturi, urbanitetu in prihodnosti Korčule.",
+        "fr": "Korčula i ja / Korčula and Me Nous vous invitons à une conférence inspirante et à une discussion ouverte sur la ville, la culture, l'urbanité et l'avenir de Korčula.",
+        "date": "2026-07-16",
+        "time": "21:00",
+        "town": "korcula",
+        "venue": "Centar za kulturu Korčula",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://kulturakorcula.hr/kino-najave/",
+        "extractionMethod": "ai",
+        "id": "ai-centar-kulture-korcula-2026-07-16-korcula-i-ja-korcula-and-me-we-invite-you-to-an-inspiring-le"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The title field contains booking-status text ('Ulaz: 5€') instead of just the event title.",
+        "The extracted candidate's category ('kids') doesn't match what the page actually describes ('predavanje / lecture').",
+        "The date field ('2026-07-16') is the same as the date of the event listing on the source page ('četvrtak, 16.7., 21:00'), which suggests that this specific row's date might be correct.",
+        "The time field ('21:00') is consistent with the time listed in the source page ('četvrtak, 16.7., 21:00').",
+        "The venue field ('Centar za kulturu Korčula') is consistent with the source page ('Korčula i ja / Korčula and Me Pozivamo vas na inspirativno predavanje i otvorenu diskusiju o gradu, kulturi, urbanitetu i budućnosti Korčule...').",
+        "The town field ('korcula') is consistent with the source page ('Korčula i ja / Korčula and Me Pozivamo vas na inspirativno predavanje i otvorenu diskusiju o gradu, kulturi, urbanitetu i budućnosti Korčule...').",
+        "The extracted candidate's category ('kids') doesn't match what the page actually describes ('predavanje / lecture')."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-centar-kulture-korcula-2026-07-16-the-odyssey-is-an-upcoming-epic-film-directed-by-christopher",
+      "sourceId": "centar-kulture-korcula",
+      "sourceUrl": "https://kulturakorcula.hr/kino-najave/",
+      "discoveredAt": "2026-09-27T10:46:21.901Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "The Odyssey je nadolazeći epski film redatelja Christopher Nolan temeljen na Homerovom epu Odiseja.",
+        "en": "The Odyssey is an upcoming epic film directed by Christopher Nolan based on Homer's epic poem The Odyssey.",
+        "de": "The Odyssey je nadolazeći epski film redatelja Christopher Nolan temeljen na Homerovom epu Odiseja.",
+        "it": "The Odyssey è un prossimo film epico diretto da Christopher Nolan basato sull'epopea di Omero L'Odissea.",
+        "sl": "The Odyssey je nadaljevanje epskega filma režiserja Christopher Nolanja, ki temelji na Homerjevi epski pesmi Odiseja.",
+        "fr": "The Odyssey est un prochain film épique réalisé par Christopher Nolan basé sur l'épopée d'Homère L'Odyssée.",
+        "date": "2026-07-16",
+        "town": "korcula",
+        "venue": "Centar za kulturu Korčula",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://kulturakorcula.hr/kino-najave/",
+        "extractionMethod": "ai",
+        "id": "ai-centar-kulture-korcula-2026-07-16-the-odyssey-is-an-upcoming-epic-film-directed-by-christopher"
+      },
+      "verifierConfidence": 1,
+      "verifierConcerns": [],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-lumbarda-2026-09-10-lumbarajska-psefizma-festival",
+      "sourceId": "visit-lumbarda",
+      "sourceUrl": "https://www.visitlumbarda.eu/",
+      "discoveredAt": "2026-09-27T10:46:21.901Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Dani lumbarajske pesefizme",
+        "en": "Lumbarajska psefizma festival",
+        "de": "Dani lumbarajske pesefizme",
+        "it": "Festival della psefizma lumbaraise",
+        "sl": "Dani lumbarajske pesefizme",
+        "fr": "Festival de la psefizma lumbaraise",
+        "date": "2026-09-10",
+        "endDate": "2026-09-10",
+        "town": "lumbarda",
+        "venue": "Lumbarda",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://www.visitlumbarda.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-lumbarda-2026-09-10-lumbarajska-psefizma-festival"
+      },
+      "verifierConfidence": 0.5,
+      "verifierConcerns": [
+        "The date '2026-09-10' is mentioned in the source page text, but it appears to be a part of the event title 'Dani lumbarajske pesefizme 2026. 10. rujna 2026.' rather than a separate date field. It's unclear whether this is a correct extraction or if it's a title that contains the date. Further investigation is needed to confirm the date field.",
+        "The venue 'Lumbarda' is mentioned in the source page text, but it appears to be a part of the event title 'Dani lumbarajske pesefizme 2026.' rather than a separate venue field. It's unclear whether this is a correct extraction or if it's a title that contains the venue. Further investigation is needed to confirm the venue field.",
+        "The category 'folklore' is mentioned in the source page text, but it appears to be a part of the event description 'Lumbarajske užance' rather than a separate category field. It's unclear whether this is a correct extraction or if it's a description that contains the category. Further investigation is needed to confirm the category field.",
+        "The extracted candidate contains an 'endDate' field with the same value as the 'date' field, which is unusual. It's unclear whether this is a correct extraction or if it's an error. Further investigation is needed to confirm the 'endDate' field.",
+        "The source page text contains a lot of unrelated sections and information, which makes it difficult to determine the accuracy of the extracted candidate. However, the event information is located in the 'Događanja' section, which suggests that the extracted candidate is likely to be accurate."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.5"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-tz-blato-2026-06-29-34-blatsko-ljeto",
+      "sourceId": "tz-blato",
+      "sourceUrl": "https://tzo-blato.hr/en/",
+      "discoveredAt": "2026-09-27T10:46:21.901Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "34. BLATSKO LJETO",
+        "en": "34. BLATSKO SUMMER",
+        "de": "34. BLATSKO SOMMER",
+        "it": "34. BLATSKO ESTATE",
+        "sl": "34. BLATSKO POLETJE",
+        "fr": "34ème ÉTÉ DE LA PLACE",
+        "date": "2026-06-29",
+        "town": "blato",
+        "venue": "Blato",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://tzo-blato.hr/en/",
+        "extractionMethod": "ai",
+        "id": "ai-tz-blato-2026-06-29-34-blatsko-ljeto"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The date '2026-06-29' appears to be a correct date according to the source text, but it is located in the 'Događanja' section which lists other events as well. However, the specific event '34. BLATSKO LJETO' is mentioned in the same section with the date 'Monday, 29 June 2026'. This seems to be the correct date for the event, but it is worth noting that the source text lists other events with different dates in the same section."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "duplicate-id"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-tz-blato-2026-03-04-panel-povodom-dana-zena",
+      "sourceId": "tz-blato",
+      "sourceUrl": "https://tzo-blato.hr/en/",
+      "discoveredAt": "2026-09-27T10:46:21.901Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Panel povodom Dana žena",
+        "en": "Panel on International Women's Day",
+        "de": "Sitzung zum Frauentag",
+        "it": "Pannello per la Giornata internazionale della donna",
+        "sl": "Sedež ob mednarodnem dne žensk",
+        "fr": "Table ronde à l'occasion de la Journée internationale des femmes",
+        "date": "2026-03-04",
+        "town": "blato",
+        "venue": "Blato",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://tzo-blato.hr/en/",
+        "extractionMethod": "ai",
+        "id": "ai-tz-blato-2026-03-04-panel-povodom-dana-zena"
+      },
+      "verifierConfidence": 0.5,
+      "verifierConcerns": [
+        "The title field 'Panel on International Women's Day' does not appear in the source page text as a title for the event. The title 'Panel povodom Dana žena' does appear in the source page text, which suggests that this is the original title and 'Panel on International Women's Day' may be a translation or embellishment."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.5"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-tz-blato-2026-09-17-pregled-b2b",
+      "sourceId": "tz-blato",
+      "sourceUrl": "https://tzo-blato.hr/en/",
+      "discoveredAt": "2026-09-27T10:46:21.901Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "PREGLED B2B",
+        "en": "B2B OVERVIEW",
+        "de": "ÜBERSICHT B2B",
+        "it": "RIASSUNTO B2B",
+        "sl": "PREGLAD B2B",
+        "fr": "RELEVÉ B2B",
+        "date": "2026-09-17",
+        "town": "blato",
+        "venue": "Blato",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://tzo-blato.hr/en/",
+        "extractionMethod": "ai",
+        "id": "ai-tz-blato-2026-09-17-pregled-b2b"
+      },
+      "verifierConfidence": 1,
+      "verifierConcerns": [],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-tz-blato-2026-08-31-vas-domacin-local-host-prednosti-oznake-za-iznajmljivace",
+      "sourceId": "tz-blato",
+      "sourceUrl": "https://tzo-blato.hr/en/",
+      "discoveredAt": "2026-09-27T10:46:21.901Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "\"Vaš domaćin - Local Host“ - prednosti oznake za iznajmljivace",
+        "en": "Your Host - Local Host“ - Benefits of Labeling for Landlords",
+        "de": "Your Host - Local Host“ - Vorte der Beschriftung für Vermieter",
+        "it": "Il tuo Host - Local Host“ - I vantaggi dell'etichettatura per i proprietari",
+        "sl": "Vaš gostitelj - Local Host“ - Prednosti oznake za najemnike",
+        "fr": "Votre Hôte - Local Host“ - Avantages de l'étiquetage pour les propriétaires",
+        "date": "2026-08-31",
+        "town": "blato",
+        "venue": "Blato",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://tzo-blato.hr/en/",
+        "extractionMethod": "ai",
+        "id": "ai-tz-blato-2026-08-31-vas-domacin-local-host-prednosti-oznake-za-iznajmljivace"
+      },
+      "verifierConfidence": 0.5,
+      "verifierConcerns": [
+        "The title field appears to be a direct quote from the source page, but it is not clear if it is the actual title of the event or a description of it. This could indicate that the title field is embellished beyond what the page text actually says.",
+        "The category field is 'kids', but the page text does not mention anything related to children or family-friendly activities. This could indicate that the category field does not match what the page actually describes.",
+        "The date field is '2026-08-31', but the page text mentions a different event with the same title on the same date. This could indicate that the date field is not well-supported by the text next to it.",
+        "The venue field is 'Blato', but the page text mentions a specific address for the Blato Tourist Board. This could indicate that the venue field is not well-supported by the text next to it.",
+        "There are multiple events listed on the page with the same title, but different dates. This could indicate that the page is listing multiple instances of the same event, and the specific fields for this candidate are not well-supported by the text next to it."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.5"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2023-08-16-zrnovo-s-traditional-sword-dance-performed-on-the-feast-of-s",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/zrnovo/",
+      "discoveredAt": "2026-09-27T10:46:21.901Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Žrnovova tradicionalna mađerka, izvedena prigodom svetog Roka na trgu Pod Kostil u Postrani.",
+        "en": "Žrnovo's traditional sword dance, performed on the feast of Sveti Rok on the Piazza Pod Kostil in Postrana.",
+        "de": "Die traditionelle Žrnovova Mažerka, auf dem Platz unter dem Kostil in Postrani zu Ehren des heiligen Rochus aufgeführt.",
+        "it": "La tradizionale Mažerka di Žrnov, eseguita in occasione della festa di San Rocco in piazza sotto Kostil a Postrani.",
+        "sl": "Žrnovova tradicionalna mažerka, izvedena prigodom svetega Roka na trgu Pod Kostil v Postrani.",
+        "fr": "La traditionnelle Mažerka de Žrnov, présentée à l'occasion de la fête de saint Roch sur la place sous Kostil à Postrani.",
+        "date": "2023-08-16",
+        "time": "16 August",
+        "town": "lumbarda",
+        "venue": "Postrana, Piazza Pod Kostil",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://www.korculainfo.com/zrnovo/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2023-08-16-zrnovo-s-traditional-sword-dance-performed-on-the-feast-of-s"
+      },
+      "verifierConfidence": 0.4,
+      "verifierConcerns": [
+        "The event title contains a direct quote from the page, but the page does not contain the title in this form. The page contains a similar description of the event, but it does not appear to be a direct quote. This may indicate that the event title was embellished beyond what the page text actually says.",
+        "The venue field contains a booking-status text ('Piazza Pod Kostil') instead of just the event venue name. The page text describes the piazza as being in Postrana, but it does not appear to be a booking-status text. This may indicate that the venue field was not accurately extracted.",
+        "The category field contains a description of the event ('folklore') instead of just the category name. The page text describes the event as being a traditional sword dance, but it does not appear to be a category name. This may indicate that the category field was not accurately extracted.",
+        "The date field contains a specific date ('2023-08-16') that appears to be supported by the page text, which mentions the feast of Sveti Rok on August 16th. However, the time field contains a date in a different format ('16 August') that may not be accurately supported by the page text.",
+        "The town field contains a name ('lumbarda') that does not appear to be supported by the page text, which mentions the village of Žrnovo and the town of Korčula. This may indicate that the town field was not accurately extracted."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.4"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2024-06-01-the-kumpanija-sword-dance-is-performed-in-pupnat-as-part-of-",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/pupnat/",
+      "discoveredAt": "2026-09-27T10:46:21.901Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Kumpanija sečuvalski ples izvodi se u Pupnatu kao dio nepokretnog kulturnog dobra UNESCO-a.",
+        "en": "The Kumpanija sword dance is performed in Pupnat as part of the island's UNESCO intangible cultural heritage.",
+        "de": "Die Kumpanija Sečuvalski ples wird in Pupnat als Teil des immobilen UNESCO-Welterbes aufgeführt.",
+        "it": "La danza di spada Kumpanija viene eseguita a Pupnat come parte del patrimonio culturale intangibile dell'UNESCO dell'isola.",
+        "sl": "Kumpanija sečuvalski ples izvajajo v Pupnata kot del nepokretnega kulturnega dediščine UNESCO-a.",
+        "fr": "La danse d'épée Kumpanija est exécutée à Pupnat dans le cadre du patrimoine culturel immatériel de l'UNESCO de l'île.",
+        "date": "2024-06-01",
+        "endDate": "2024-09-30",
+        "town": "korcula",
+        "venue": "Pupnat village, Korčula Island",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://www.korculainfo.com/pupnat/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2024-06-01-the-kumpanija-sword-dance-is-performed-in-pupnat-as-part-of-"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The extracted candidate mentions 'Kumpanija sečuvalski ples', but the source page text uses the term 'Kumpanija sword dance'. The difference in wording could indicate a discrepancy in the title or description of the event."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2023-06-01-the-500-year-old-cypress-the-ancient-cypress-tree-in-front-o",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/cara/",
+      "discoveredAt": "2026-09-27T10:46:21.901Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Stari cipres — star cipres u predvorju crkve Sveti Petar je jedan od najznačajnijih prirodnih znamenitosti na otočkoj.",
+        "en": "The 500-year-old cypress — the ancient cypress tree in front of Sveti Petar church is one of the most striking natural sights on the island.",
+        "de": "Der alte Zypresse – der alte Zypresse im Vorhof der Kirche Sankt Peter ist eines der bedeutendsten Naturwunder auf der Insel.",
+        "it": "Il cipresso di 500 anni — l'antico cipresso situato davanti alla chiesa Sveti Petar è uno dei siti naturali più impressionanti dell'isola.",
+        "sl": "Stari cipres — star cipres pri cerkvi Sveti Petar je eden izmed najpomembnejših naravnih znamenitosti na otoški.",
+        "fr": "Le cèdre de 500 ans — l'ancien cèdre situé devant l'église Sveti Petar est l'un des sites naturels les plus frappants de l'île.",
+        "date": "2023-06-01",
+        "endDate": "2023-09-30",
+        "town": "cara",
+        "venue": "In front of Sveti Petar church",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.korculainfo.com/cara/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2023-06-01-the-500-year-old-cypress-the-ancient-cypress-tree-in-front-o"
+      },
+      "verifierConfidence": 0.5,
+      "verifierConcerns": [
+        "The title field seems to be a summary of the page, not the title of the specific event. The source page has multiple sections, including 'Things to Do' and 'Events', but the extracted title doesn't clearly indicate which section this event belongs to.",
+        "The date field '2023-06-01' seems to be a specific date, but the source page doesn't provide any information about events happening on that date. It's possible that this date is actually the date when the page was last updated, rather than the date of the event.",
+        "The venue field 'In front of Sveti Petar church' is not clearly supported by the source page. The page does mention the church, but it doesn't explicitly state that there is an event happening in front of it.",
+        "The category field 'kids' doesn't seem to be supported by the source page. The page doesn't mention any information about the event being suitable for kids.",
+        "The extracted candidate mentions that the event is one of the most striking natural sights on the island, but the source page doesn't provide any information about the event being a natural sight. It's possible that this is an error or an embellishment.",
+        "The extracted candidate mentions that the cypress tree is approximately 50 meters tall, but the source page states that it is estimated to be around 500 years old. The source page doesn't provide any information about the tree's height.",
+        "The extracted candidate mentions that the event has been protected as a natural monument since 1825, but the source page states that it was placed under legal protection as far back as 1825, making it one of the earliest protected natural monuments in Croatia. The source page doesn't provide any information about the event being a natural monument.",
+        "The extracted candidate mentions that the event is one of the most striking seasonal events on the island, but the source page doesn't provide any information about the event being seasonal. It's possible that this is an error or an embellishment.",
+        "The extracted candidate mentions that the event is worth seeking out even if you are just passing through, but the source page doesn't provide any information about the event being worth seeking out. It's possible that this is an error or an embellishment."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.5"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2023-06-01-posip-wine-tasting-visit-the-cooperative-wine-cellar-in-cars",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/cara/",
+      "discoveredAt": "2026-09-27T10:46:21.901Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Pošip vina — posjetite vinariju u Carskom Polju kako biste okusili najpoznatije bijelo vino otočko. Provjerite lokalno za vrijeme posjeta.",
+        "en": "Pošip wine tasting — visit the cooperative wine cellar in Carsko Polje to taste the island's most celebrated white wine. Check locally for visiting hours.",
+        "de": "Visit the cooperative wine cellar in Carsko Polje to taste the island's most celebrated white wine. Check locally for visiting hours.",
+        "it": "Degustazione di vino Pošip — visita la cantina cooperativa di Carsko Polje per degustare il vino bianco più celebre dell'isola. Controlla le ore di apertura locali.",
+        "sl": "Degustacija Pošip vina — obiščite vinarsko kletišče v Carskem Polju, da bi okusili najbolj znano belo vino otoško. Preverite lokalno za ure posvećenje.",
+        "fr": "Dégustation de vin Pošip — visitez la cave coopérative de Carsko Polje pour déguster le vin blanc le plus célèbre de l'île. Vérifiez les heures d'ouverture locales.",
+        "date": "2023-06-01",
+        "endDate": "2023-09-30",
+        "town": "cara",
+        "venue": "Cooperative wine cellar in Carsko Polje",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.korculainfo.com/cara/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2023-06-01-posip-wine-tasting-visit-the-cooperative-wine-cellar-in-cars"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The title contains a phrase 'Provjerite lokalno za vrijeme posjeta' which appears to be a call to action ('Check locally for visiting hours') rather than just the event title. This is not necessarily a problem, but it does suggest that the title may have been embellished beyond what the page text actually says.",
+        "The venue field contains the phrase 'Cooperative wine cellar in Carsko Polje' which is a description of the location rather than just the event venue. This could be considered a problem, as it includes extraneous information.",
+        "The town field contains the string 'cara' which does not appear to be a valid town name on the page. The page text refers to 'Čara' as the village, and 'Korčula Island' as the location. This could be considered a problem, as it suggests that the town field may have been misread or misinterpreted.",
+        "The category field contains the string 'kids' which does not appear to be a valid category for the event described on the page. The page text refers to the event as a 'wine tasting' and does not mention children. This could be considered a problem, as it suggests that the category field may have been misread or misinterpreted.",
+        "The date field contains the string '2023-06-01' which appears to be a specific date rather than a range of dates. The page text refers to the harvest season as occurring in September and early October, which suggests that the date field may be too specific and does not accurately represent the event.",
+        "The end date field contains the string '2023-09-30' which appears to be a specific date rather than a range of dates. The page text refers to the harvest season as occurring in September and early October, which suggests that the end date field may be too specific and does not accurately represent the event."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2023-06-01-drive-or-cycle-to-the-southern-coast-the-road-from-cara-down",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/cara/",
+      "discoveredAt": "2026-09-27T10:46:21.901Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Vozi ili cikliziraj do južne obale — cesta od Čare do Zavalatice i Žitne prolazi kroz vinograde Carskog Polja s lepim pogledom.",
+        "en": "Drive or cycle to the southern coast — the road from Čara down to Zavalatica and Žitna passes through the vineyards of Carsko Polje with fine views.",
+        "de": "The road from Čara down to Zavalatica and Žitna passes through the vineyards of Carsko Polje with fine views.",
+        "it": "Guida o fai del ciclismo fino alla costa sud — la strada di Čara fino a Zavalatica e Žitna passa attraverso i vigneti di Carsko Polje con delle viste magnifiche.",
+        "sl": "Vozi ali cikliziraj do južne obale — cesta od Čare do Zavalatice in Žitne prehodi kroz vinograde Carskega Polja z lepim pogledom.",
+        "fr": "Conduire ou faire du vélo jusqu'à la côte sud — la route de Čara jusqu'à Zavalatica et Žitna passe par les vignobles de Carsko Polje avec des vues magnifiques.",
+        "date": "2023-06-01",
+        "endDate": "2023-09-30",
+        "town": "cara",
+        "venue": "Carsko Polje",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.korculainfo.com/cara/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2023-06-01-drive-or-cycle-to-the-southern-coast-the-road-from-cara-down"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The extracted candidate contains a category 'kids', but the source page does not mention anything related to children or family-friendly activities. The source page does mention the Kumpanija sword dance, which is a traditional event, but it is not explicitly stated that it is suitable for children. Therefore, I have some concern about the accuracy of the category 'kids'.",
+        "The extracted candidate contains a date range '2023-06-01' to '2023-09-30', but the source page does not mention any specific dates or events for this time period. The source page does mention the harvest season in September and early October, but it does not provide a specific date range. Therefore, I have some concern about the accuracy of the date range.",
+        "The extracted candidate contains a venue 'Carsko Polje', but the source page does not mention this as a separate location. Instead, it mentions Carsko Polje as a field below the village of Čara. Therefore, I have some concern about the accuracy of the venue.",
+        "The extracted candidate contains a town 'cara', but the source page does not mention this as a separate town. Instead, it mentions Čara as a village on Korčula Island. Therefore, I have some concern about the accuracy of the town.",
+        "The extracted candidate contains a title that is a direct translation of the Croatian title, but the source page does not mention any specific event or activity related to driving or cycling to the southern coast. Instead, it mentions the road from Čara down to Zavalatica and Žitna as a scenic route. Therefore, I have some concern about the accuracy of the title."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-cara-zavalatica-local-sources-2023-07-25-the-major-religious-event-of-the-year-in-cara-centred-on-the",
+      "sourceId": "cara-zavalatica-local-sources",
+      "sourceUrl": "https://www.korculainfo.com/cara/",
+      "discoveredAt": "2026-09-27T10:46:21.901Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Glavno vjersko događanje godine u Čari, okrenuto crkvi Gospa od Carskog Polja u polju ispod sela.",
+        "en": "The major religious event of the year in Čara, centred on the church of Gospa od Carskog Polja in the field below the village.",
+        "de": "Haupt religiöses Ereignis des Jahres in Čari, ausgerichtet in der Kirche Gospa od Carskog Polja im Feld unter dem Dorf.",
+        "it": "L'evento religioso principale dell'anno a Čara, centrato sulla chiesa di Gospa od Carskog Polja nel campo sotto il villaggio.",
+        "sl": "Glavno versko dogajanje leta v Čari, okrenjeno cerkvi Gospa od Carskog Polja v polju spodaj sela.",
+        "fr": "L'événement religieux majeur de l'année à Čara, centré sur l'église de Gospa od Carskog Polja dans le champ en dessous du village.",
+        "date": "2023-07-25",
+        "endDate": "2023-07-25",
+        "time": "all day",
+        "town": "cara",
+        "venue": "Gospa od Carskog Polja",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://www.korculainfo.com/cara/",
+        "extractionMethod": "ai",
+        "id": "ai-cara-zavalatica-local-sources-2023-07-25-the-major-religious-event-of-the-year-in-cara-centred-on-the"
+      },
+      "verifierConfidence": 0.5,
+      "verifierConcerns": [
+        "The extracted candidate mentions 'The major religious event of the year in Čara, centred on the church of Gospa od Carskog Polja in the field below the village.' However, the source page text uses the phrase 'the major religious event of the year in Čara, centred on the church of Gospa od Carskog Polja in the field below the village' as a description of an event that occurs every year on July 25th, which is the feast of Sveti Jakov — St James’s Day. The source page text does not mention 'the major religious event of the year' as a standalone title. Therefore, it is unclear if the extracted candidate's title is a direct quote from the source page text or an embellishment.",
+        "The extracted candidate mentions the venue as 'Gospa od Carskog Polja', but the source page text mentions the church as 'the church of Gospa od Carskog Polja (Our Lady of Čara Field)'. The source page text does not use the phrase 'Gospa od Carskog Polja' as a standalone title for the venue. Therefore, it is unclear if the extracted candidate's venue is a direct quote from the source page text or an embellishment.",
+        "The extracted candidate mentions the category as 'folklore', but the source page text does not mention folklore as a category for the event. The source page text does mention the Kumpanija sword dance, which is listed as UNESCO intangible cultural heritage, but it does not mention folklore as a category for the event. Therefore, it is unclear if the extracted candidate's category is a direct quote from the source page text or an embellishment.",
+        "The extracted candidate mentions the date as '2023-07-25', but the source page text mentions the event as occurring 'every year on 25 July (the feast of Sveti Jakov — St James’s Day)'. The source page text does not mention a specific date in the format '2023-07-25'. Therefore, it is unclear if the extracted candidate's date is a direct quote from the source page text or an embellishment."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.5"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-cara-zavalatica-local-sources-2023-07-25-traditional-procession-draws-villagers-and-visitors-from-acr",
+      "sourceId": "cara-zavalatica-local-sources",
+      "sourceUrl": "https://www.korculainfo.com/cara/",
+      "discoveredAt": "2026-09-27T10:46:21.901Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Tradicijska procesija privlači stanovnike i posjetitelje s cijele otočke.",
+        "en": "Traditional procession draws villagers and visitors from across the island.",
+        "de": "Traditionelle Prozession zieht Einwohner und Besucher aus der gesamten Insel an.",
+        "it": "Processione tradizionale attrae i villaggi e i visitatori dell'isola.",
+        "sl": "Tradicionalna procesija privlači prebivalce in obiskovalce celotne otoka.",
+        "fr": "Procession traditionnelle attire les villageois et les visiteurs de l'île.",
+        "date": "2023-07-25",
+        "endDate": "2023-07-25",
+        "time": "all day",
+        "town": "cara",
+        "venue": "Gospa od Carskog Polja",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://www.korculainfo.com/cara/",
+        "extractionMethod": "ai",
+        "id": "ai-cara-zavalatica-local-sources-2023-07-25-traditional-procession-draws-villagers-and-visitors-from-acr"
+      },
+      "verifierConfidence": 0.5,
+      "verifierConcerns": [
+        "The extracted candidate's title is 'Traditional procession draws villagers and visitors from across the island.' However, the source page text does not contain this exact phrase. The source page text mentions 'a traditional procession draws villagers and visitors from across the island' in the context of the 'Sveti Jakov pilgrimage (25 July)' event, but it does not appear to be a separate event listing. It's possible that the extracted candidate's title is a paraphrased version of the source text, but it's unclear without further context.",
+        "The extracted candidate's date is '2023-07-25', which is mentioned in the source page text as the date of the 'Sveti Jakov pilgrimage' event. However, the source page text also mentions that this event is a 'traditional pilgrimage procession from the village' that occurs every year on 25 July, which could imply that the event is a recurring one rather than a one-time event. It's unclear without further context whether the extracted candidate's date is for a specific one-time event or a recurring event.",
+        "The extracted candidate's venue is 'Gospa od Carskog Polja', which is mentioned in the source page text as the location of the 'church of Gospa od Carskog Polja' that is the center of the 'Sveti Jakov pilgrimage' event. However, the source page text also mentions that the procession takes place in the field below the village, which could imply that the event is not specifically located at the church. It's unclear without further context whether the extracted candidate's venue is accurate or not.",
+        "The extracted candidate's category is 'folklore', which is not explicitly mentioned in the source page text. However, the source page text does mention that the 'Kumpanija' sword dance is a 'chain sword dance of great antiquity' that is performed in summer and listed as UNESCO intangible cultural heritage, which could imply that the event is related to folklore or traditional culture. It's unclear without further context whether the extracted candidate's category is accurate or not.",
+        "The extracted candidate's time is 'all day', which is not explicitly mentioned in the source page text. However, the source page text does mention that the 'Sveti Jakov pilgrimage' event is a 'traditional pilgrimage procession from the village' that occurs every year on 25 July, which could imply that the event takes place throughout the day. It's unclear without further context whether the extracted candidate's time is accurate or not."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.5"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-cara-zavalatica-local-sources-2023-06-01-kumpanija-sword-dance-a-chain-sword-dance-of-great-antiquity",
+      "sourceId": "cara-zavalatica-local-sources",
+      "sourceUrl": "https://www.korculainfo.com/cara/",
+      "discoveredAt": "2026-09-27T10:46:21.901Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Kumpanija mačevalačka ples, mačevalačka plesna igra velikog starinskog izvora izvedena u ljeto i upisana u nematerijalno kulturno dobro UNESCO-a.",
+        "en": "Kumpanija sword dance, a chain sword dance of great antiquity performed in summer and listed as UNESCO intangible cultural heritage.",
+        "de": "Traditioneller Tanz der Schwerttänzer, ein traditioneller Tanz großer altherkömmlicher Herkunft, der im Sommer aufgeführt und in das immaterielle UNESCO-Weltkulturerbe aufgenommen wurde.",
+        "it": "Kumpanija danza con spada, una danza con spada a catena di grande antichità eseguita in estate e iscritta nel patrimonio culturale immateriale dell'UNESCO.",
+        "sl": "Kumpanija mačevalaška ples, mačevalaška plesna igra velikih starinskih izvora, izvedena v poletju in vpisana v nematerijalno kulturno dediščino UNESCO.",
+        "fr": "Danse d'épée kumpanija, une danse d'épée en chaines d'une grande antiquité exécutée en été et inscrite au patrimoine culturel immatériel de l'UNESCO.",
+        "date": "2023-06-01",
+        "endDate": "2023-09-30",
+        "time": "summer",
+        "town": "cara",
+        "venue": "Čara",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.korculainfo.com/cara/",
+        "extractionMethod": "ai",
+        "id": "ai-cara-zavalatica-local-sources-2023-06-01-kumpanija-sword-dance-a-chain-sword-dance-of-great-antiquity"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The extracted candidate mentions 'kids' as a category, but the source page does not mention anything about the Kumpanija sword dance being specifically for or suitable for children. The category 'kids' appears to be an incorrect assumption or addition.",
+        "The extracted candidate mentions 'summer' as the time for the Kumpanija sword dance, but the source page does not explicitly state that the dance is performed only in summer. The phrase 'performed in summer' could be interpreted as the dance being performed during the summer months, but it could also be referring to the fact that the dance is listed as a summer event, rather than the specific time of year it is performed.",
+        "The extracted candidate mentions 'Čara' as the venue, but the source page does not explicitly state that the Kumpanija sword dance is performed in Čara. The source page mentions that Čara is one of the five villages on Korčula Island that preserves the Kumpanija sword dance, but it does not specify that the dance is performed in Čara.",
+        "The extracted candidate mentions 'cara' as the town, but the source page actually refers to the village as 'Čara' (with a capital 'C'). This could be a minor error in the extraction process, but it is worth noting that the source page uses the correct spelling 'Čara' throughout.",
+        "The extracted candidate mentions 'Korčula Island' as the location, but this is not explicitly stated in the source page. The source page does mention 'Korčula Island', but it is in the context of providing general information about the island, rather than specifically referring to the location of the Kumpanija sword dance."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-cara-zavalatica-local-sources-2023-09-01-grape-harvest-in-carsko-polje-in-september-and-early-october",
+      "sourceId": "cara-zavalatica-local-sources",
+      "sourceUrl": "https://www.korculainfo.com/cara/",
+      "discoveredAt": "2026-09-27T10:46:21.901Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Žetva grožđa u Carskom Polju u rujnu i početku listopada je jedan od najviše vidljivih sezonskih događaja na otočkom.",
+        "en": "Grape harvest in Carsko Polje in September and early October is one of the most visually striking seasonal events on the island.",
+        "de": "Die Weinlese im Carskopolje im September und zu Beginn Oktober ist einer der sichtbarsten saisonalen Ereignisse auf der Insel.",
+        "it": "Raccolta delle uve a Carsko Polje in settembre e inizio ottobre è uno dei più visivamente impressionanti eventi stagionali dell'isola.",
+        "sl": "Žetva grozdov v Carskem polju v septembru in začetku oktobra je eno izmed najbolj vidnih sezonskih dogodkov na otoku.",
+        "fr": "Récolte des raisins dans Carsko Polje en septembre et début octobre est l'un des événements saisonniers les plus visuellement frappants de l'île.",
+        "date": "2023-09-01",
+        "endDate": "2023-10-14",
+        "time": "all day",
+        "town": "cara",
+        "venue": "Carsko Polje",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.korculainfo.com/cara/",
+        "extractionMethod": "ai",
+        "id": "ai-cara-zavalatica-local-sources-2023-09-01-grape-harvest-in-carsko-polje-in-september-and-early-october"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The title contains the phrase 'one of the most visually striking seasonal events on the island', which is a paraphrased description from the source page, not the title of the event. The actual title of the event is not clearly stated on the source page.",
+        "The date '2023-09-01' is mentioned in the source page, but it seems to be a generic date and not a specific event date. The source page does mention that the grape harvest in Carsko Polje is in September and early October, but it does not provide a specific date for the event.",
+        "The time 'all day' is not explicitly mentioned in the source page, which only mentions that the grape harvest in Carsko Polje is a seasonal event.",
+        "The venue 'Carsko Polje' is mentioned in the source page, but the title 'Žetva grožđa u Carskom Polju' is not explicitly stated on the source page. The title seems to be a translation of the event description.",
+        "The town 'cara' is not explicitly mentioned in the source page, which only mentions that the village of Čara is located on Korčula Island.",
+        "The category 'kids' is not mentioned in the source page, which does not provide any information about the event being suitable for children."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-smokvica-brna-expanded-2025-07-03-a-fun-weekend-for-kids-in-brna",
+      "sourceId": "smokvica-brna-expanded",
+      "sourceUrl": "https://visitsmokvicabrna.com/",
+      "discoveredAt": "2026-09-27T10:46:21.901Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Dječji vikend - kids weekend",
+        "en": "A fun weekend for kids in Brna.",
+        "de": "Kinderwochenende",
+        "it": "Un week-end divertente per i bambini a Brna.",
+        "sl": "Dejanski vikend - kids weekend",
+        "fr": "Un week-end fun pour les enfants à Brna.",
+        "date": "2025-07-03",
+        "endDate": "2025-07-06",
+        "time": "Brna, Mala Riva",
+        "town": "lumbarda",
+        "venue": "Mala Riva",
+        "cats": [
+          "kids",
+          "folklore"
+        ],
+        "source": "https://visitsmokvicabrna.com/",
+        "extractionMethod": "ai",
+        "id": "ai-smokvica-brna-expanded-2025-07-03-a-fun-weekend-for-kids-in-brna"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The 'town' field is listed as 'lumbarda', but the source page text mentions 'Smokvica and Brna' and 'Island of Korčula' which suggests that the correct town is actually 'Smokvica' or 'Korčula'.",
+        "The 'venue' field is listed as 'Mala Riva', but the source page text mentions 'Brna' and the event is described as being in 'Brna, Mala Riva'. This suggests that 'Mala Riva' is actually a location within 'Brna' rather than a separate venue.",
+        "The 'cats' field includes 'kids' and 'folklore', but the source page text only mentions 'DJECJI VIKEND – KIDS WEEKEND' which suggests that the event is primarily a 'kids' event rather than a 'folklore' event.",
+        "The 'date' field is listed as '2025-07-03', but the source page text mentions '03 – 07.2025' which suggests that the correct date is actually '2025-07-03' to '2025-07-06'.",
+        "The 'time' field is listed as 'Brna, Mala Riva', but this appears to be a location rather than a time. The source page text does not provide a specific time for the event.",
+        "The 'cats' field includes 'kids' which is correct, but it also includes 'folklore' which does not appear to be relevant to this event."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
     }
   ]
 }

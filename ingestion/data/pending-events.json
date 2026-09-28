@@ -5027,6 +5027,1403 @@
       ],
       "duplicateMatches": [],
       "status": "needs-review"
+    },
+    {
+      "id": "ai-centar-kulture-korcula-2026-10-30-kino-posljednji-rimski-bog",
+      "sourceId": "centar-kulture-korcula",
+      "sourceUrl": "https://kulturakorcula.hr/kino-najave/",
+      "discoveredAt": "2026-09-28T11:59:34.815Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Žanr: Povijesni spektakl",
+        "en": "KINO / POSLJEDNJI RIMSKI BOG",
+        "de": "Genre: Historisches Spektakel",
+        "it": "Genere: Spettacolo storico",
+        "sl": "Žanr: Zgodovinski spektakel",
+        "fr": "Genre: Spectacle historique",
+        "date": "2026-10-30",
+        "endDate": "2026-10-30",
+        "time": "20:00",
+        "town": "korcula",
+        "venue": "Centar za kulturu Korčula",
+        "cats": [
+          "film"
+        ],
+        "source": "https://kulturakorcula.hr/kino-najave/",
+        "extractionMethod": "ai",
+        "id": "ai-centar-kulture-korcula-2026-10-30-kino-posljednji-rimski-bog"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The title 'Žanr: Povijesni spektakl' and 'KINO / POSLJEDNJI RIMSKI BOG' appear to be in different languages, which may indicate that the title was not correctly extracted.",
+        "The date '2026-10-30' is mentioned in the source page text, but it is not clear if this is the correct date for the event 'KINO / POSLJEDNJI RIMSKI BOG'. The source page text mentions 'Početak prikazivanja: 29.10.2026' for this event, which could be the correct date.",
+        "The venue 'Centar za kulturu Korčula' is mentioned in the source page text, which is consistent with the extracted data.",
+        "The town 'korcula' is mentioned in the source page text, which is consistent with the extracted data.",
+        "The category 'film' is mentioned in the source page text, but it is not clear if this is the correct category for the event 'KINO / POSLJEDNJI RIMSKI BOG'. The source page text mentions 'Žanr: Povijesni spektakl' for this event, which could be the correct category."
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-centar-kulture-korcula-2026-08-27-kino-psi-pod-zvijezdama",
+      "sourceId": "centar-kulture-korcula",
+      "sourceUrl": "https://kulturakorcula.hr/kino-najave/",
+      "discoveredAt": "2026-09-28T11:59:34.815Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Akcija",
+        "en": "KINO / PSI POD ZVIJEZDAMA",
+        "de": "Aktion",
+        "it": "Azione",
+        "sl": "Akcija",
+        "fr": "Action",
+        "date": "2026-08-27",
+        "endDate": "2026-08-27",
+        "time": "21:00",
+        "town": "korcula",
+        "venue": "Centar za kulturu Korčula",
+        "cats": [
+          "film"
+        ],
+        "source": "https://kulturakorcula.hr/kino-najave/",
+        "extractionMethod": "ai",
+        "id": "ai-centar-kulture-korcula-2026-08-27-kino-psi-pod-zvijezdama"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The 'endDate' field is set to the same date as the 'date' field, which suggests that the event has already occurred. However, the 'time' field is set to 21:00, which suggests that the event is still scheduled to take place. This discrepancy raises concerns about the accuracy of the 'endDate' field.",
+        "The title 'KINO / PSI POD ZVIJEZDAMA' appears to be a link, as it is followed by a slash and then the subtitle. This could indicate that the title is not a straightforward description of the event, but rather a navigation link. However, the rest of the text on the page suggests that it is indeed an event title.",
+        "The venue 'Centar za kulturu Korčula' is mentioned multiple times on the page, but the text does not explicitly state that it is the venue for the specific event 'KINO / PSI POD ZVIJEZDAMA'. However, the time and date of the event are mentioned next to the venue, which suggests that it is indeed the correct venue.",
+        "The category 'film' is mentioned on the page, but it is not explicitly stated that it is the category for the specific event 'KINO / PSI POD ZVIJEZDAMA'. However, the text does mention that the event is a film, so it is likely that the category is correct.",
+        "The page contains multiple events, and the text does not explicitly state which event is the focus of the page. However, the event 'KINO / PSI POD ZVIJEZDAMA' is mentioned prominently on the page, and the text suggests that it is the main event being promoted."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-centar-kulture-korcula-2026-08-25-ljeto-u-mrezi-djecak-dupin-2",
+      "sourceId": "centar-kulture-korcula",
+      "sourceUrl": "https://kulturakorcula.hr/kino-najave/",
+      "discoveredAt": "2026-09-28T11:59:34.815Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Animirani",
+        "en": "LJETO U MREŽI / Dječak dupin 2",
+        "de": "Animierte",
+        "it": "Animato",
+        "sl": "Animirani",
+        "fr": "Animé",
+        "date": "2026-08-25",
+        "endDate": "2026-08-25",
+        "time": "20:00",
+        "town": "korcula",
+        "venue": "Centar za kulturu Korčula",
+        "cats": [
+          "film"
+        ],
+        "source": "https://kulturakorcula.hr/kino-najave/",
+        "extractionMethod": "ai",
+        "id": "ai-centar-kulture-korcula-2026-08-25-ljeto-u-mrezi-djecak-dupin-2"
+      },
+      "verifierConfidence": 0.7,
+      "verifierConcerns": [
+        "The extracted candidate's date '2026-08-25' seems to be correct, but it's not the only date in the source page. The source page lists multiple events for the same venue and town, but it's not clear if the extracted candidate's date is actually supported by the text next to it.",
+        "The extracted candidate's title 'LJETO U MREŽI / Dječak dupin 2' appears to be a translation of the source page's text, but it's not entirely clear if the translation is accurate. The source page uses the title 'Animirani' for the same event, and the extracted candidate's title seems to be a combination of two separate titles.",
+        "The extracted candidate's venue 'Centar za kulturu Korčula' appears to be correct, but it's not the only venue listed on the source page. The source page lists multiple venues for the same event, and it's not clear if the extracted candidate's venue is actually supported by the text next to it.",
+        "The extracted candidate's category 'film' appears to be correct, but it's not the only category listed on the source page. The source page uses the category 'Animirani' for the same event, and the extracted candidate's category seems to be a more general term."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.7"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-centar-kulture-korcula-2026-07-23-kino-grad-osvete",
+      "sourceId": "centar-kulture-korcula",
+      "sourceUrl": "https://kulturakorcula.hr/kino-najave/",
+      "discoveredAt": "2026-09-28T11:59:34.815Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Akcija",
+        "en": "KINO / Grad osvete",
+        "de": "Aktion",
+        "it": "Azione",
+        "sl": "Akcija",
+        "fr": "Action",
+        "date": "2026-07-23",
+        "endDate": "2026-07-23",
+        "time": "21:00",
+        "town": "korcula",
+        "venue": "Centar za kulturu Korčula",
+        "cats": [
+          "film"
+        ],
+        "source": "https://kulturakorcula.hr/kino-najave/",
+        "extractionMethod": "ai",
+        "id": "ai-centar-kulture-korcula-2026-07-23-kino-grad-osvete"
+      },
+      "verifierConfidence": 0.9,
+      "verifierConcerns": [
+        "The extracted candidate's title 'KINO / Grad osvete' appears to be a combination of two different events, 'KINO' and 'Grad osvete'. However, upon reviewing the source page, it appears that 'KINO' is a recurring prefix for various film events, and 'Grad osvete' is a specific film title. Therefore, it is likely that the extracted candidate's title is accurate, but it may be worth noting that it is a combination of two separate pieces of information.",
+        "The extracted candidate's date '2026-07-23' appears to be accurate, as it matches the date listed for the 'Grad osvete' event on the source page.",
+        "The extracted candidate's time '21:00' appears to be accurate, as it matches the time listed for the 'Grad osvete' event on the source page.",
+        "The extracted candidate's venue 'Centar za kulturu Korčula' appears to be accurate, as it matches the venue listed for the 'Grad osvete' event on the source page.",
+        "The extracted candidate's town 'Korčula' appears to be accurate, as it matches the location listed for the 'Centar za kulturu Korčula' on the source page.",
+        "The extracted candidate's category 'film' appears to be accurate, as the 'Grad osvete' event is listed as a film event on the source page.",
+        "There is a potential concern that the extracted candidate's fields may not be well-supported by the source page, as the title and date are listed together, but the time and venue are listed separately. However, upon reviewing the source page, it appears that the time and venue are indeed listed for the 'Grad osvete' event, and the extracted candidate's fields are accurate.",
+        "There is no indication that the extracted candidate's fields are duplicated or incorrect, and the source page appears to be accurate in its listing of the 'Grad osvete' event."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-centar-kulture-korcula-2026-07-20-kino-pula-u-gostima-bijelo-se-pere-na-devedeset",
+      "sourceId": "centar-kulture-korcula",
+      "sourceUrl": "https://kulturakorcula.hr/kino-najave/",
+      "discoveredAt": "2026-09-28T11:59:34.815Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Drama",
+        "en": "KINO / PULA U GOSTIMA / Bijelo se pere na devedeset",
+        "de": "Drama",
+        "it": "Dramma",
+        "sl": "Drama",
+        "fr": "Drame",
+        "date": "2026-07-20",
+        "endDate": "2026-07-20",
+        "time": "21:00",
+        "town": "korcula",
+        "venue": "Centar za kulturu Korčula",
+        "cats": [
+          "film"
+        ],
+        "source": "https://kulturakorcula.hr/kino-najave/",
+        "extractionMethod": "ai",
+        "id": "ai-centar-kulture-korcula-2026-07-20-kino-pula-u-gostima-bijelo-se-pere-na-devedeset"
+      },
+      "verifierConfidence": 0.5,
+      "verifierConcerns": [
+        "The extracted candidate lists a Drama category, but the source page text describes it as a 'Drama' film in a specific listing, not as a general category.",
+        "The extracted candidate lists a date of 2026-07-20, but there are multiple listings for the same venue and date in the source page text, which may indicate that the page is listing a recurring show with multiple dates.",
+        "The extracted candidate lists a title of 'KINO / PULA U GOSTIMA / Bijelo se pere na devedeset', but the source page text lists this title in two separate listings with different dates, which may indicate that the title is not unique to this event.",
+        "The extracted candidate lists a venue of 'Centar za kulturu Korčula', but this venue is listed as the location for multiple events in the source page text, which may indicate that the venue is not unique to this event.",
+        "The extracted candidate lists a town of 'korcula', but this town is not explicitly mentioned in the source page text, which may indicate that the town is not well-supported by the text.",
+        "The extracted candidate lists a time of '21:00', but this time is not explicitly mentioned in the source page text for this specific event, which may indicate that the time is not well-supported by the text."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.5"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-centar-kulture-korcula-2026-07-19-kino-pula-u-gostima-bog-nece-pomoci",
+      "sourceId": "centar-kulture-korcula",
+      "sourceUrl": "https://kulturakorcula.hr/kino-najave/",
+      "discoveredAt": "2026-09-28T11:59:34.815Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Drama",
+        "en": "KINO / PULA U GOSTIMA / Bog neće pomoći",
+        "de": "Drama",
+        "it": "Dramma",
+        "sl": "Drama",
+        "fr": "Drame",
+        "date": "2026-07-19",
+        "endDate": "2026-07-19",
+        "time": "21:00",
+        "town": "korcula",
+        "venue": "Centar za kulturu Korčula",
+        "cats": [
+          "film"
+        ],
+        "source": "https://kulturakorcula.hr/kino-najave/",
+        "extractionMethod": "ai",
+        "id": "ai-centar-kulture-korcula-2026-07-19-kino-pula-u-gostima-bog-nece-pomoci"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The event listing for 'Bog neće pomoći' appears to be duplicated in the source page text, with two identical listings on the same day. This could be a sign of an error in the extraction process or a duplicate listing on the source page.",
+        "The source page text appears to be a list of upcoming events, but it's not clear if the events are listed in chronological order or if there are other events listed that are not shown in the text snippet. This could affect the accuracy of the extracted event listing for 'Bog neće pomoći'.",
+        "The event listing for 'Bog neće pomoći' has a date of 'nedjelja, 19.7., 21:00', but the source page text does not explicitly state that this is a one-time event. It's possible that this event is part of a recurring series or that the date is incorrect.",
+        "The source page text mentions 'Ljetno kino Korčula' as the venue for several events, but it's not clear if this is a permanent venue or a temporary one. This could affect the accuracy of the extracted event listing for 'Bog neće pomoći'.",
+        "The event listing for 'Bog neće pomoći' has a category of 'Drama', but the source page text does not explicitly state that this is the only category for this event. It's possible that this event belongs to multiple categories or that the category is incorrect."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-centar-kulture-korcula-2026-07-24-kino-mediteran-bilo-jednom-u-kinu",
+      "sourceId": "centar-kulture-korcula",
+      "sourceUrl": "https://kulturakorcula.hr/kino-najave/",
+      "discoveredAt": "2026-09-28T11:59:34.815Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Drama",
+        "en": "Kino Mediteran / Bilo jednom u kinu",
+        "de": "Drama",
+        "it": "Dramma",
+        "sl": "Drama",
+        "fr": "Drame",
+        "date": "2026-07-24",
+        "endDate": "2026-07-24",
+        "time": "21:00",
+        "town": "korcula",
+        "venue": "Ljetno kino Korčula",
+        "cats": [
+          "film"
+        ],
+        "source": "https://kulturakorcula.hr/kino-najave/",
+        "extractionMethod": "ai",
+        "id": "ai-centar-kulture-korcula-2026-07-24-kino-mediteran-bilo-jednom-u-kinu"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The extracted candidate lists the date as '2026-07-24', but the source page text lists the event as happening on 'petak, 24.7., 21:00', which is likely the same date but with a different format. This is not a major concern, but it does suggest that the extraction may not have perfectly captured the date from the source page.",
+        "The extracted candidate lists the title as 'Kino Mediteran / Bilo jednom u kinu', but the source page text lists the title as 'Bilo jednom u kinu / Kino Mediteran', which is a different order. This is not a major concern, but it does suggest that the extraction may not have perfectly captured the title from the source page.",
+        "The extracted candidate lists the venue as 'Ljetno kino Korčula', but the source page text lists the venue as 'Ljetno kino Korčula / ulaznica- 4€', which includes additional information. This is not a major concern, but it does suggest that the extraction may not have perfectly captured the venue from the source page.",
+        "The extracted candidate lists the category as 'film', but the source page text lists the category as 'Drama', which is a different category. This is a major concern, as it suggests that the extraction may not have perfectly captured the category from the source page.",
+        "The extracted candidate lists the date as '2026-07-24', but there are multiple events listed on the source page with different dates, including some that are in the past (e.g. 'četvrtak, 30.7., 21:00'). This is not a major concern, but it does suggest that the extraction may not have perfectly captured the date from the source page.",
+        "The extracted candidate lists the title as 'Kino Mediteran / Bilo jednom u kinu', but the source page text lists the title as 'Bilo jednom u kinu / Kino Mediteran', which is a different order. This is not a major concern, but it does suggest that the extraction may not have perfectly captured the title from the source page."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-lumbarda-2026-08-25-lumbarda-classic-2026-lumbarajska-vecer-za-pamcenje-klasicno",
+      "sourceId": "visit-lumbarda",
+      "sourceUrl": "https://www.visitlumbarda.eu/",
+      "discoveredAt": "2026-09-28T11:59:34.815Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "LUMBARDA KLASIK 2026. – LUMBARSKA VEČERJA ZA SPOMEN, KLASIČNO...",
+        "en": "LUMBARDA CLASSIC 2026. – LUMBARAJSKA VEČER ZA PAMĆENJE, KLASIČNO…",
+        "de": "LUMBARDA KLASIK 2026. – LUMBARER ABEND ZUM GEDENKEN, KLASISCH...",
+        "it": "LUMBARDA CLASSICA 2026. – SERATA LUMBARA PER IL RICORDO, CLASSICA...",
+        "sl": "LUMBARDA KLASIKA 2026. – LUMBARJSKA VEČERJA ZA SPOMIN, KLASIČNO...",
+        "fr": "LUMBARDA CLASSIC 2026. – SOIRÉE DE LUMBARA POUR LE SOUVENIR, CLASSIQUE...",
+        "date": "2026-08-25",
+        "endDate": "2026-08-25",
+        "time": "No time specified",
+        "town": "lumbarda",
+        "venue": "Lumbarda",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://www.visitlumbarda.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-lumbarda-2026-08-25-lumbarda-classic-2026-lumbarajska-vecer-za-pamcenje-klasicno"
+      },
+      "verifierConfidence": 0.7,
+      "verifierConcerns": [
+        "The title field contains a description ('LUMBARSKA VEČERJA ZA SPOMEN, KLASIČNO...') that seems to be a continuation of the actual title ('LUMBARDA CLASSIC 2026.'). This could be a case of the title being misread or embellished.",
+        "The 'time' field is specified as 'No time specified', but the source page lists the event as a 'Koncert' (concert) on the same date as the extracted event. This suggests that the time might be implied or listed elsewhere on the page.",
+        "The category field is listed as 'folklore', but the source page lists the event as a 'Koncert' (concert), which could be a different category.",
+        "The source page contains a lot of unrelated sections and content, including a privacy policy and cookie notice. However, this does not directly affect the confidence in the extracted fields.",
+        "The extracted event appears to be listed on the same page as other events, including 'Dani lumbarajske pesefizme 2026.' (Lumbarajska psefizma 2026.) and 'Lumbarda Classic 2026.' (20. kolovoza 2026.). This suggests that the extracted event is part of a recurring or seasonal series, but this does not directly affect the confidence in the extracted fields."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.7"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-tz-blato-2026-09-23-discover-the-charms-of-our-destination-on-a-unique-tour-thro",
+      "sourceId": "tz-blato",
+      "sourceUrl": "https://tzo-blato.hr/en/",
+      "discoveredAt": "2026-09-28T11:59:34.815Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Šetnja kroz vinograde i obiteljska poljoprivredna",
+        "en": "Discover the charms of our destination on a unique tour through vineyards and family farming",
+        "de": "Šetnja kroz vinograde i obiteljska poljoprivredna",
+        "it": "Passeggiata attraverso i vigneti e la fattoria familiare",
+        "sl": "Šetnja skozi vinske kleti in družinsko kmetijsko posestvo",
+        "fr": "Promenade à travers les vignobles et la ferme familiale",
+        "date": "2026-09-23",
+        "endDate": "2026-09-30",
+        "town": "blato",
+        "venue": "Blato",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://tzo-blato.hr/en/",
+        "extractionMethod": "ai",
+        "id": "ai-tz-blato-2026-09-23-discover-the-charms-of-our-destination-on-a-unique-tour-thro"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The extracted title is not a direct quote from the source page text. The source page text says 'Otkrijte čari naše destinacije na jedinstvenoj šetnji kroz vinograde i obiteljska poljoprivredna', which translates to 'Discover the charms of our destination on a unique tour through vineyards and family farming'. The extracted title seems to be a slight paraphrase of this text.",
+        "The extracted date '2026-09-23' seems to match the date mentioned in the source page text '23. - 30.09. 2026' for the event 'BLATO WINE EXPERIENCE - stručna i tematska vinska događanja Baštinske eno-gastro ture BLATO WINE TASTE & CREATE'. However, this date is mentioned in the context of an event that already started on the 23rd, and the source page text does not explicitly state that this is a one-time event or a recurring event with the same dates every year. Therefore, it is unclear whether the extracted date is correct or if it refers to the start date of the event.",
+        "The extracted category 'kids' does not seem to match the content of the source page text, which focuses on wine tasting and agrotourism. There is no mention of 'kids' in the context of the event or the page content.",
+        "The extracted venue 'Blato' is mentioned in the source page text, but it is not clear if this is the specific venue for the event or a general reference to the town of Blato. The source page text does not provide a clear distinction between the event venue and the town's general information."
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-tz-blato-2026-06-29-blato-summer",
+      "sourceId": "tz-blato",
+      "sourceUrl": "https://tzo-blato.hr/en/",
+      "discoveredAt": "2026-09-28T11:59:34.815Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "34. BLATSKO LJETO",
+        "en": "Blato Summer",
+        "de": "Blato Summer",
+        "it": "Blato Summer",
+        "sl": "Blato Summer",
+        "fr": "Blato Summer",
+        "date": "2026-06-29",
+        "town": "blato",
+        "venue": "Blato",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://tzo-blato.hr/en/",
+        "extractionMethod": "ai",
+        "id": "ai-tz-blato-2026-06-29-blato-summer"
+      },
+      "verifierConfidence": 0.9,
+      "verifierConcerns": [
+        "The extracted date is '2026-06-29', but the source page lists an event called '34. BLATSKO LJETO' with a date of 'Monday, 29 June 2026', which is June, not June. This could be a formatting issue, but it's worth noting."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-tz-blato-2026-03-04-panel-povodom-dana-zena",
+      "sourceId": "tz-blato",
+      "sourceUrl": "https://tzo-blato.hr/en/",
+      "discoveredAt": "2026-09-28T11:59:34.815Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Panel povodom Dana žena, srijeda 04.03. u 19:30",
+        "en": "Panel povodom Dana žena",
+        "de": "Rundgang anlässlich des Internationalen Frauentags, Mittwoch, 04.03. um 19:30 Uhr",
+        "it": "Tavola rotonda in occasione della Giornata internazionale della donna, mercoledì 04.03. alle 19:30",
+        "sl": "Razprava ob dnevu žensk, sreda 04.03. ob 19:30",
+        "fr": "Table ronde à l'occasion du Jour international des femmes, mardi 04.03. à 19h30",
+        "date": "2026-03-04",
+        "town": "blato",
+        "venue": "Blato",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://tzo-blato.hr/en/",
+        "extractionMethod": "ai",
+        "id": "ai-tz-blato-2026-03-04-panel-povodom-dana-zena"
+      },
+      "verifierConfidence": 0.2,
+      "verifierConcerns": [
+        "The extracted candidate contains the title in both Croatian and English, but the source page only contains the title in Croatian ('Panel povodom Dana žena, srijeda 04.03. u 19:30'). The English title might be an embellishment or incorrect.",
+        "The date '2026-03-04' in the extracted candidate seems to match the date 'Wednesday, 04.03. u 19:30' in the source page, but the source page also mentions 'srijeda 04.03.' which could indicate a different date format or a different date (Wednesday) than what the extracted candidate suggests.",
+        "The town 'blato' in the extracted candidate seems to match the town 'Blato' in the source page, but the source page also contains a mention of 'Blato' as a town in the context of 'Blato Tourist Board' which could indicate that the extracted candidate's 'town' field might be more accurately described as 'Blato Tourist Board' or 'Blato' as a town, not just 'blato'.",
+        "The venue 'Blato' in the extracted candidate seems to match the venue 'Blato' in the source page, but the source page also contains a mention of 'Blato Tourist Board' which could indicate that the extracted candidate's 'venue' field might be more accurately described as 'Blato Tourist Board' or a specific location within Blato, not just 'Blato'.",
+        "The category 'kids' in the extracted candidate does not seem to match the category 'B2B' in the source page, which could indicate that the extracted candidate's 'category' field is incorrect."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.2"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-tz-blato-2026-09-02-vas-domacin-local-host-prednosti-oznake-za-iznajmljivace",
+      "sourceId": "tz-blato",
+      "sourceUrl": "https://tzo-blato.hr/en/",
+      "discoveredAt": "2026-09-28T11:59:34.815Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Vaš domaćin - Local Host“ - prednosti za iznajmljivače",
+        "en": "Vaš domaćin - Local Host“ - prednosti oznake za iznajmljivace",
+        "de": "Ihr Gastgeber - Local Host: Vorteile für Vermieter",
+        "it": "Il vostro host locale - Local Host: vantaggi per i proprietari",
+        "sl": "Vaš lokalni gostitelj - Local Host: prednosti za najemnike",
+        "fr": "Votre hôte local - Local Host : avantages pour les propriétaires",
+        "date": "2026-09-02",
+        "town": "blato",
+        "venue": "Blato",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://tzo-blato.hr/en/",
+        "extractionMethod": "ai",
+        "id": "ai-tz-blato-2026-09-02-vas-domacin-local-host-prednosti-oznake-za-iznajmljivace"
+      },
+      "verifierConfidence": 0.4,
+      "verifierConcerns": [
+        "The extracted candidate lists the event as happening on '2026-09-02', but the source page lists a similar event happening on 'Monday, 31 August 2026', which is a different date. This suggests that the extracted candidate's date may be incorrect.",
+        "The extracted candidate lists the event as happening in 'Blato', but the source page lists the venue as 'Trg Dr. Franje Tuđmana 4', which is a specific address. This suggests that the extracted candidate's venue may be too vague.",
+        "The extracted candidate lists the category as 'kids', but the source page does not mention anything about kids. The category 'B2B' is mentioned, but it seems to be more relevant to the event.",
+        "The extracted candidate lists the title as 'Vaš domaćin - Local Host“ - prednosti za iznajmljivače', but the source page lists a similar title as '“Vaš domaćin - Local Host“ - prednosti oznake za iznajmljivace'. The difference in wording may indicate that the extracted candidate's title is not entirely accurate."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.4"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-tz-blato-2026-08-31-vas-domacin-local-host-prednosti-oznake-za-iznajmljivace",
+      "sourceId": "tz-blato",
+      "sourceUrl": "https://tzo-blato.hr/en/",
+      "discoveredAt": "2026-09-28T11:59:34.815Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Vaš domaćin - Local Host\" - prednosti za iznajmljivače",
+        "en": "Vaš domaćin - Local Host“ - prednosti oznake za iznajmljivace",
+        "de": "Ihr Gastgeber - Local Host \" - Vorteile für Vermieter",
+        "it": "Il tuo ospite locale - Local Host\" - vantaggi per i proprietari",
+        "sl": "Vaš gostitelj - Local Host\" - prednosti za najemnike",
+        "fr": "Votre hôte local - Local Host \" - avantages pour les propriétaires",
+        "date": "2026-08-31",
+        "town": "blato",
+        "venue": "Blato",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://tzo-blato.hr/en/",
+        "extractionMethod": "ai",
+        "id": "ai-tz-blato-2026-08-31-vas-domacin-local-host-prednosti-oznake-za-iznajmljivace"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The title field contains booking-status or call-to-action text ('Vaš domaćin - Local Host“ - prednosti za iznajmljivače') instead of just the event/venue name.",
+        "The date field '2026-08-31' seems to match the date of the text 'Monday, 31 August 2026', but it's not explicitly stated in the source page text. It might be inferred, but it's not directly mentioned.",
+        "The 'town' and 'venue' fields are the same ('Blato'), which seems unusual. It's possible that the page is listing a general event or meeting in Blato, rather than a specific event at a venue within Blato.",
+        "The 'category' field is 'kids', but the source page text doesn't mention anything related to kids. It seems that this field might be incorrect.",
+        "There is no explicit mention of the event on the source page, only a general description of the page's content. This might indicate that the event is not specifically mentioned on this page, but rather on another page or in a different context."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2023-08-05-gospa-od-sniga-the-village-s-main-feast-day-celebrated-at-th",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/pupnat/",
+      "discoveredAt": "2026-09-28T11:59:34.815Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Gospa od Sniga, glavni blagdan sela, proslavlja se u župnoj crkvi uz vjerski obred koji se slijedi zabavom i kulturnim programima.",
+        "en": "Gospa od Sniga, the village's main feast day, celebrated at the parish church with a religious service followed by entertainment and cultural programmes.",
+        "de": "Gospa od Sniga, das Dorf-Festtag, gefeiert in der Pfarrkirche mit einem religiösen Gottesdienst gefolgt von Unterhaltung und kulturellen Programmen.",
+        "it": "Gospa od Sniga, la principale festa del villaggio, celebrata nella chiesa parrocchiale con un servizio religioso seguito da intrattenimento e programmi culturali.",
+        "sl": "Gospa od Sniga, glavni praznik vasi, se praznuje v župni cerkvi z verskim obredom, ki sledi zabavi in kulturnim programom.",
+        "fr": "Gospa od Sniga, la fête du village, célébrée à l'église paroissiale avec un service religieux suivi d'entertainment et de programmes culturels.",
+        "date": "2023-08-05",
+        "endDate": "2023-08-05",
+        "time": "Weekday",
+        "town": "pupnat",
+        "venue": "Pupnat",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://www.korculainfo.com/pupnat/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2023-08-05-gospa-od-sniga-the-village-s-main-feast-day-celebrated-at-th"
+      },
+      "verifierConfidence": 1,
+      "verifierConcerns": [],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2023-08-24-blessed-marko-of-pupnat-a-second-important-feast-day-for-the",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/pupnat/",
+      "discoveredAt": "2026-09-28T11:59:34.815Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Blaženi Marko Pupnatski, drugi važni blagdan za selo, koji označava lokalnog blaženika povezanog s Pupnatom.",
+        "en": "Blessed Marko of Pupnat, a second important feast day for the village, marking the local blessed figure associated with Pupnat.",
+        "de": "Blessed Marko von Pupnat, ein zweiter wichtiger Gedenktag für das Dorf, der den lokalen Heiligen bezeichnet, der mit Pupnat verbunden ist.",
+        "it": "Blessed Marko di Pupnat, un secondo importante giorno festivo per il villaggio, che segna la figura locale beatificata associata a Pupnat.",
+        "sl": "Blaženi Marko Pupnatski, drugi pomemben praznik za vas, ki označuje lokalnega blaženika povezanega s Pupnatom.",
+        "fr": "Blessé Marko de Pupnat, un deuxième jour férié important pour le village, marquant la figure locale béate associée à Pupnat.",
+        "date": "2023-08-24",
+        "endDate": "2023-08-24",
+        "time": "Weekday",
+        "town": "pupnat",
+        "venue": "Pupnat",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://www.korculainfo.com/pupnat/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2023-08-24-blessed-marko-of-pupnat-a-second-important-feast-day-for-the"
+      },
+      "verifierConfidence": 1,
+      "verifierConcerns": [],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2024-07-25-the-sveti-jakov-pilgrimage-is-a-major-religious-event-in-car",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/cara/",
+      "discoveredAt": "2026-09-28T11:59:34.815Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Pilgrimska putovanja na Sveti Jakov su veliki religijski događaji u Čari, koji se okreću oko crkve Gospa od Carskog Polja u polju ispod sela.",
+        "en": "The Sveti Jakov pilgrimage is a major religious event in Čara, centered on the church of Gospa od Carskog Polja in the field below the village.",
+        "de": "Die Pilgerfahrt nach Sveti Jakov ist ein bedeutendes religiöses Ereignis in Čara, das sich um die Kirche Gospa od Carskog Polja im Feld unter dem Dorf konzentriert.",
+        "it": "Il pellegrinaggio di Sveti Jakov è un importante evento religioso a Čara, incentrato sulla chiesa di Gospa od Carskog Polja nel campo sotto il villaggio.",
+        "sl": "Pilgiranje na Sveti Jakov je pomembno versko dogajanje v Čari, ki se osredotoča okoli cerkve Gospa od Carskog Polja v polju pod vasjo.",
+        "fr": "La pèlerinage de Sveti Jakov est un événement religieux majeur à Čara, centré sur l'église de Gospa od Carskog Polja dans le champ en dessous du village.",
+        "date": "2024-07-25",
+        "town": "cara",
+        "venue": "Gospa od Carskog Polja (Our Lady of Čara Field) in the field below the village",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.korculainfo.com/cara/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2024-07-25-the-sveti-jakov-pilgrimage-is-a-major-religious-event-in-car"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The title 'The Sveti Jakov pilgrimage is a major religious event in Čara' appears to be a paraphrased summary of the source page's text, rather than a direct quote. This may indicate that the original text is more nuanced or complex than the extracted title suggests.",
+        "The venue 'Gospa od Carskog Polja (Our Lady of Čara Field) in the field below the village' is accurate according to the source page, but the inclusion of the parenthetical phrase '(Our Lady of Čara Field)' may be an embellishment or an interpretation that is not explicitly stated on the source page.",
+        "The date '2024-07-25' appears to be a specific date mentioned on the source page, but it is not explicitly stated as the date of the Sveti Jakov pilgrimage. Instead, the source page mentions that the pilgrimage takes place 'every year on 25 July'. This may indicate that the extracted date is an assumption or an inference rather than a direct fact.",
+        "The category 'kids' does not appear to be supported by the source page, which mentions that the Sveti Jakov pilgrimage is a 'major religious event' and does not explicitly mention children or families.",
+        "The source page mentions that the Sveti Jakov pilgrimage takes place 'every year on 25 July', which may indicate that the extracted date '2024-07-25' is not a specific date, but rather a recurring event that takes place on the same date every year."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2024-07-25-the-sveti-jakov-pilgrimage-is-a-major-religious-event-in-car",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/cara/",
+      "discoveredAt": "2026-09-28T11:59:34.815Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Svetište Gospa od Carskog Polja u Čari, oko koje se okupljaju pješaci na svetom Jakovu.",
+        "en": "The Sveti Jakov pilgrimage is a major religious event in Čara, centered on the church of Gospa od Carskog Polja in the field below the village.",
+        "de": "Die Pilgerfahrt nach Sveti Jakov ist ein bedeutendes religiöses Ereignis in Čara, das sich auf die Kirche Gospa od Carskog Polja in der unterhalb des Dorfes gelegenen Wiese konzentriert.",
+        "it": "La pellegrinaggio di Sveti Jakov è un importante evento religioso a Čara, centrato sulla chiesa di Gospa od Carskog Polja nel campo sotto il villaggio.",
+        "sl": "Svetišče Gospa od Carskog Polja v Čari, okoli katere se zbirajo pellegrini na Svetem Jakovu.",
+        "fr": "La pèlerinage de Sveti Jakov est un événement religieux majeur à Čara, centré sur l'église de Gospa od Carskog Polja dans le champ en dessous du village.",
+        "date": "2024-07-25",
+        "town": "cara",
+        "venue": "Gospa od Carskog Polja (Our Lady of Čara Field) in the field below the village",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.korculainfo.com/cara/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2024-07-25-the-sveti-jakov-pilgrimage-is-a-major-religious-event-in-car"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The 'kids' category does not match the content of the source page. The page does not mention any specific events or activities suitable for children. The only event mentioned is the Sveti Jakov pilgrimage, which is a traditional religious event and may not be suitable for children."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2024-07-25-the-sveti-jakov-pilgrimage-is-a-major-religious-event-in-car",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/cara/",
+      "discoveredAt": "2026-09-28T11:59:34.815Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Svetište sv. Jakova je velik religijski događaj u Čari, okrenut crkvi Gospa od Carskog Polja u polju ispod sela.",
+        "en": "The Sveti Jakov pilgrimage is a major religious event in Čara, centered on the church of Gospa od Carskog Polja in the field below the village.",
+        "de": "Die Wallfahrt von Sveti Jakov ist ein bedeutender religiöser Event in Čara, der sich auf die Kirche Gospa od Carskog Polja in dem Feld unter dem Dorf konzentriert.",
+        "it": "La pellegrinazione di Sveti Jakov è un importante evento religioso a Čara, centrato sulla chiesa di Gospa od Carskog Polja nel campo sotto il villaggio.",
+        "sl": "Svetišče sv. Jakova je velik verski dogodek v Čari, usmerjen k cerkvi Gospa od Carskog Polja v polju pod vasjo.",
+        "fr": "Le pèlerinage de Sveti Jakov est un grand événement religieux à Čara, centré sur l'église de Gospa od Carskog Polja dans le champ en dessous du village.",
+        "date": "2024-07-25",
+        "town": "cara",
+        "venue": "Gospa od Carskog Polja (Our Lady of Čara Field) in the field below the village",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.korculainfo.com/cara/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2024-07-25-the-sveti-jakov-pilgrimage-is-a-major-religious-event-in-car"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The 'kids' category doesn't seem to match the description of the event. The event description doesn't mention anything related to children or family activities.",
+        "The venue field contains extra information that doesn't seem to be part of the event's title or description. The phrase 'Our Lady of Čara Field' is mentioned in the source text, but it's part of the church's name, not the event's title or description.",
+        "The title field contains a description of the event, rather than just the title. The phrase 'major religious event' is mentioned in the source text, but it's part of the event's description, not the title.",
+        "The date field seems to be supported by the source text, but it's worth noting that the source text mentions that the event is on July 25th, which is a specific date, rather than a range of dates."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2024-07-25-the-sveti-jakov-pilgrimage-is-a-major-religious-event-in-car",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/cara/",
+      "discoveredAt": "2026-09-28T11:59:34.815Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Pilidža Svetog Jakova je veliki vjerski događaj u Čari, okrenut crkvi Gospa od Carskog Polja u polju ispod sela.",
+        "en": "The Sveti Jakov pilgrimage is a major religious event in Čara, centered on the church of Gospa od Carskog Polja in the field below the village.",
+        "de": "Die Wallfahrt nach Sveti Jakov ist ein bedeutender religiöser Anlass in Čara, der sich um die Kirche Gospa od Carskog Polja in der Ebene unter dem Dorf konzentriert.",
+        "it": "La pellegrinazione di Sveti Jakov è un importante evento religioso a Čara, incentrato sulla chiesa di Gospa od Carskog Polja nel campo sotto il villaggio.",
+        "sl": "Pilgovanje po Svetem Jakovu je velik verski dogodek v Čari, ki se osredotoča na cerkev Gospa od Carskog Polja v polju pod vasjo.",
+        "fr": "Le pèlerinage de Sveti Jakov est un événement religieux majeur à Čara, centré sur l'église de Gospa od Carskog Polja dans le champ en dessous du village.",
+        "date": "2024-07-25",
+        "town": "cara",
+        "venue": "Gospa od Carskog Polja (Our Lady of Čara Field) in the field below the village",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://www.korculainfo.com/cara/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2024-07-25-the-sveti-jakov-pilgrimage-is-a-major-religious-event-in-car"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The title field contains a translated title ('The Sveti Jakov pilgrimage is a major religious event in Čara...') whereas the source page's title for this event is 'Sveti Jakov pilgrimage (25 July)'. This discrepancy suggests that the extraction process may have used the English translation instead of the original title.",
+        "The town field is 'cara', which seems to be a misspelling or abbreviation of 'Čara'. The correct spelling is used in the source page's text, so this discrepancy may indicate an error in the extraction process.",
+        "The venue field contains the phrase '(Our Lady of Čara Field) in the field below the village', which is not a direct quote from the source page's text. The source page mentions 'the field below the village' in the context of describing the location of the church, but it does not explicitly include this phrase in the event's description. This discrepancy may indicate that the extraction process added or modified text from the source page.",
+        "The category field is 'folklore', which does not seem to match the content of the source page's text. The source page mentions a traditional pilgrimage procession and a sword dance, but it does not explicitly categorize these events as 'folklore'. This discrepancy may indicate that the extraction process misinterpreted the content of the source page."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2024-07-25-the-sveti-jakov-pilgrimage-is-a-major-religious-event-in-car",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/cara/",
+      "discoveredAt": "2026-09-28T11:59:34.815Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Sveti Jakovova pješačnica je značajan vjerski događaj u Čari, okrenut crkvi Gospa od Carskog Polja u polju ispod sela.",
+        "en": "The Sveti Jakov pilgrimage is a major religious event in Čara, centered on the church of Gospa od Carskog Polja in the field below the village.",
+        "de": "Die Wallfahrt nach Sveti Jakov ist ein bedeutender religiöser Anlass in Čara, der sich um die Kirche Gospa od Carskog Polja im Feld unterhalb des Dorfes konzentriert.",
+        "it": "Il pellegrinaggio di Sveti Jakov è un importante evento religioso a Čara, centrato sulla chiesa di Gospa od Carskog Polja nel campo sotto il villaggio.",
+        "sl": "Pilgostovanje Svetega Jakoba je pomembno versko dogajanje v Čari, ki se osredotoča na cerkev Gospa od Carskog Polja v polju pod vasjo.",
+        "fr": "Le pèlerinage de Sveti Jakov est un grand événement religieux à Čara, centré sur l'église de Gospa od Carskog Polja dans le champ en bas du village.",
+        "date": "2024-07-25",
+        "town": "cara",
+        "venue": "Gospa od Carskog Polja (Our Lady of Čara Field) in the field below the village",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://www.korculainfo.com/cara/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2024-07-25-the-sveti-jakov-pilgrimage-is-a-major-religious-event-in-car"
+      },
+      "verifierConfidence": 1,
+      "verifierConcerns": [],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2024-07-25-the-sveti-jakov-pilgrimage-is-a-major-religious-event-in-car",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/cara/",
+      "discoveredAt": "2026-09-28T11:59:34.815Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Pilidža sv. Jakova je veliki vjerski događaj u Čari, koji se okreće oko crkve Gospa od Carskog Polja u polju ispod sela.",
+        "en": "The Sveti Jakov pilgrimage is a major religious event in Čara, centered on the church of Gospa od Carskog Polja in the field below the village.",
+        "de": "Die Wallfahrt nach Sveti Jakov ist ein bedeutender religiöser Event in Čara, der sich auf die Kirche Gospa od Carskog Polja in dem Feld unter der Dorf konzentriert.",
+        "it": "La pellegrinazione di Sveti Jakov è un importante evento religioso a Čara, centrato sulla chiesa di Gospa od Carskog Polja nel campo sotto il villaggio.",
+        "sl": "Pilgiranje v Sveti Jakov je pomembno versko dogajanje v Čari, ki se osredotoča okoli cerkve Gospa od Carskog Polja v polju spod naseljem.",
+        "fr": "La pèlerinage de Sveti Jakov est un grand événement religieux à Čara, centré sur l'église de Gospa od Carskog Polja dans le champ en dessous du village.",
+        "date": "2024-07-25",
+        "town": "cara",
+        "venue": "Gospa od Carskog Polja (Our Lady of Čara Field) in the field below the village",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://www.korculainfo.com/cara/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2024-07-25-the-sveti-jakov-pilgrimage-is-a-major-religious-event-in-car"
+      },
+      "verifierConfidence": 0.7,
+      "verifierConcerns": [
+        "The 'event' title field contains the phrase 'Sveti Jakov pilgrimage', which is actually a description of the event, not the title of the event itself. The title of the event is not explicitly stated in the source page text.",
+        "The 'venue' field contains the phrase 'Gospa od Carskog Polja (Our Lady of Čara Field) in the field below the village', which is a description of the location, not just the venue name. The source page text does not explicitly state the venue name as a standalone phrase.",
+        "The 'town' field contains the phrase 'cara', which is actually a village name, not a town name. The source page text refers to the village as 'Čara' or 'Cara', not 'cara'.",
+        "The 'date' field contains the date '2024-07-25', which is actually a date mentioned in the source page text as the date of the Sveti Jakov pilgrimage, but the source page text does not explicitly state that this is the date of the event listed in the extracted candidate. The source page text only mentions that the pilgrimage takes place on July 25th, without specifying the year.",
+        "The 'category' field contains the phrase 'folklore', which is not explicitly mentioned in the source page text as a category for the event. The source page text does mention that the event is a 'traditional pilgrimage procession', but it does not categorize it as folklore."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.7"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2024-09-01-the-harvest-season-is-a-visually-striking-seasonal-event-in-",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/cara/",
+      "discoveredAt": "2026-09-28T11:59:34.815Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Dočakivanje žetve je vizualno impresivno sezonsko događanje u Carskom polju, s cijelim poljem u aktivnosti.",
+        "en": "The harvest season is a visually striking seasonal event in Carsko Polje, with the whole field in activity.",
+        "de": "Die Erntezeit ist eine visuell beeindruckende saisonale Veranstaltung in Carsko Polje, bei der das ganze Feld in Aktion ist.",
+        "it": "La stagione della mietitura è un evento stagionale visivamente impressionante a Carsko Polje, dove tutto il campo è in attività.",
+        "sl": "Žetevska sezona je vizualno impresivno sezonsko dogajanje v Carskem polju, s celim poljem v aktivnosti.",
+        "fr": "La saison de récolte est un événement saisonnier visuellement impressionnant à Carsko Polje, où tout le champ est en activité.",
+        "date": "2024-09-01",
+        "endDate": "2024-10-14",
+        "town": "cara",
+        "venue": "Carsko Polje",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.korculainfo.com/cara/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2024-09-01-the-harvest-season-is-a-visually-striking-seasonal-event-in-"
+      },
+      "verifierConfidence": 0.7,
+      "verifierConcerns": [
+        "The category 'kids' doesn't seem to match the description of the event 'Harvest season'. The event is described as a 'visually striking seasonal event in Carsko Polje, with the whole field in activity.' which doesn't specifically mention children. It's possible that the event is family-friendly, but the category 'kids' might be an overstatement.",
+        "The date '2024-09-01' for the event 'Harvest season' seems to be a specific date, but the description of the event suggests that it happens in September and early October. It's possible that the event is a recurring one, and the specific date '2024-09-01' is not actually mentioned on the page.",
+        "The title 'The harvest season is a visually striking seasonal event in Carsko Polje, with the whole field in activity.' seems to be a direct quote from the page, but it's possible that the original text used a different wording or phrasing. The title 'Dočakivanje žetve je vizualno impresivno sezonsko događanje u Carskom polju, s cijelim poljem u aktivnosti.' seems to be a translation of the original text, but it's not clear if it's a direct translation or an interpretation.",
+        "The venue 'Carsko Polje' seems to be mentioned multiple times on the page, but it's not clear if it's the exact venue for the event 'Harvest season'. The page mentions 'Carsko Polje' as a field below the village, but it's not clear if it's the same 'Carsko Polje' mentioned as the venue for the event."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.7"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2024-09-01-the-harvest-season-is-a-visually-striking-seasonal-event-in-",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/cara/",
+      "discoveredAt": "2026-09-28T11:59:34.815Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Uzročna sezona je vizualno impresivno sezonsko događanje u Carskom polju, sa cijelom poljanom u aktivnosti.",
+        "en": "The harvest season is a visually striking seasonal event in Carsko Polje, with the whole field in activity.",
+        "de": "Die Erntezeit ist eine visuell beeindruckende saisonale Veranstaltung in Carsko Polje, bei der das ganze Feld in Aktion ist.",
+        "it": "La stagione di mietitura è un evento stagionale visivamente impressionante a Carsko Polje, con tutto il campo in attività.",
+        "sl": "Deželnost je vizualno impresivno sezonsko dogajanje v Carskem polju, s celim poljem v aktivnosti.",
+        "fr": "La saison de la récolte est un événement saisonnier visuellement impressionnant à Carsko Polje, avec tout le champ en activité.",
+        "date": "2024-09-01",
+        "endDate": "2024-10-14",
+        "town": "cara",
+        "venue": "Carsko Polje",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.korculainfo.com/cara/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2024-09-01-the-harvest-season-is-a-visually-striking-seasonal-event-in-"
+      },
+      "verifierConfidence": 0.7,
+      "verifierConcerns": [
+        "The title field contains text that is a paraphrase of the page's own text, rather than the page's own text. The original text is: 'Harvest season — the grape harvest in Carsko Polje in September and early October is one of the most visually striking seasonal events on the island, with the whole field in activity.' The extracted title is: 'Uzročna sezona je vizualno impresivno sezonsko događanje u Carskom polju, sa cijelom poljanom u aktivnosti.'",
+        "The date field is supported by the text, but the end date is not explicitly mentioned on the page. The extracted end date is: '2024-10-14', but the page only mentions 'September and early October'.",
+        "The category field is supported by the text, but it is not explicitly mentioned as a category. The extracted category is: 'kids', but the page only mentions 'Things to Do' and 'Events' as categories."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.7"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2024-09-01-the-harvest-season-is-a-visually-striking-seasonal-event-in-",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/cara/",
+      "discoveredAt": "2026-09-28T11:59:34.815Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Dočakivanje žetve je vizualno impresivno sezonsko događanje u Carskom polju, gdje cijelo polje radi u punom režimu.",
+        "en": "The harvest season is a visually striking seasonal event in Carsko Polje, with the whole field in activity.",
+        "de": "Die Erntezeit ist ein visuell beeindruckendes saisonales Ereignis in Carsko Polje, wo das ganze Feld in Aktion ist.",
+        "it": "La stagione di raccolto è un evento stagionale visivamente impressionante a Carsko Polje, dove tutto il campo è in attività.",
+        "sl": "Zbiranje žetve je vizualno impresivno sezonsko dogajanje v Carskem polju, kjer celo polje deluje v celoti.",
+        "fr": "La saison de la récolte est un événement saisonnier visuellement impressionnant à Carsko Polje, où tout le champ est en activité.",
+        "date": "2024-09-01",
+        "endDate": "2024-10-14",
+        "town": "cara",
+        "venue": "Carsko Polje",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.korculainfo.com/cara/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2024-09-01-the-harvest-season-is-a-visually-striking-seasonal-event-in-"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The title contains a phrase 'Dočakivanje žetve je vizualno impresivno sezonsko događanje' which is a direct quote from the source page, but it's not a title, it's a description of the event. The actual title of the event is 'Harvest season' as mentioned in the 'Events' section of the source page.",
+        "The date '2024-09-01' is not supported by the source page, which mentions the harvest season in September and early October, but does not specify a exact date.",
+        "The venue 'Carsko Polje' is correct, but the source page mentions that the event takes place in the field below the village, which is not explicitly stated in the extracted candidate.",
+        "The category 'kids' is not supported by the source page, which does not mention anything about the event being suitable for children.",
+        "The town 'cara' is not supported by the source page, which mentions the village of Čara, but does not specify a town with the same name."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2024-09-01-the-harvest-season-is-a-visually-striking-seasonal-event-in-",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/cara/",
+      "discoveredAt": "2026-09-28T11:59:34.815Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Uzrokovni sezone je vizualno impresivno sezonsko događanje u Carskom Polju, sa cijelim poljem u aktivnosti.",
+        "en": "The harvest season is a visually striking seasonal event in Carsko Polje, with the whole field in activity.",
+        "de": "Die Erntezeit ist ein farbenfrohes saisonales Ereignis in Carsko Polje, bei dem das ganze Feld in Aktion ist.",
+        "it": "La stagione della mietitura è un evento stagionale visivamente impressionante a Carsko Polje, con l'intero campo in attività.",
+        "sl": "Sezona zbiranja je vizualno impresivno sezonsko dogajanje v Carskem polju, s celim poljem v aktivnosti.",
+        "fr": "La saison de la récolte est un événement saisonnier visuellement saisissant à Carsko Polje, où tout le champ est en activité.",
+        "date": "2024-09-01",
+        "endDate": "2024-10-14",
+        "town": "cara",
+        "venue": "Carsko Polje",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.korculainfo.com/cara/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2024-09-01-the-harvest-season-is-a-visually-striking-seasonal-event-in-"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The title contains a phrase ('a visually striking seasonal event') that doesn't appear on the page. The page text says 'one of the most visually striking seasonal events on the island' but it's describing the 'harvest season' not the event itself.",
+        "The 'town' field contains 'cara', which is likely a typo and should be 'Čara'. The page text spells it as 'Čara' throughout.",
+        "The 'venue' field contains 'Carsko Polje', which is correct, but it's not the only place with that name on the page. The page text also mentions 'the field of Carsko Polje' and 'the village of Čara' which are separate entities.",
+        "The 'category' field contains 'kids', but the page text doesn't mention anything about the event being suitable for children. It does mention that the Kumpanija sword dance is a UNESCO intangible cultural heritage, but that's not directly related to the harvest season event.",
+        "The 'date' field contains '2024-09-01', which is the start date of the event, but the page text doesn't provide a specific end date. The 'endDate' field contains '2024-10-14', but that's not mentioned on the page.",
+        "The page text doesn't mention the event as being recurring, but it does mention that the grape harvest in Carsko Polje is a seasonal event. It's possible that the event is recurring, but it's not explicitly stated on the page."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2024-09-01-the-harvest-season-is-a-visually-striking-seasonal-event-in-",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/cara/",
+      "discoveredAt": "2026-09-28T11:59:34.815Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Doba žetve je vizualno impresivno sezonsko događanje u Carskom Polju, s cijelim poljem u aktivnosti.",
+        "en": "The harvest season is a visually striking seasonal event in Carsko Polje, with the whole field in activity.",
+        "de": "Die Erntezeit ist ein farbenfrohes saisonales Ereignis in Carsko Polje, bei dem das ganze Feld in Aktion ist.",
+        "it": "La stagione della mietitura è un evento stagionale visivamente impressionante a Carsko Polje, dove tutto il campo è in attività.",
+        "sl": "Zetna sezona je vizualno impresivno sezonsko dogajanje v Carskem polju, s celim poljem v aktivnosti.",
+        "fr": "La saison de la récolte est un événement saisonnier visuellement saisissant à Carsko Polje, où tout le champ est en activité.",
+        "date": "2024-09-01",
+        "endDate": "2024-10-14",
+        "town": "cara",
+        "venue": "Carsko Polje",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.korculainfo.com/cara/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2024-09-01-the-harvest-season-is-a-visually-striking-seasonal-event-in-"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The extracted candidate's title and description seem to be a direct translation from the source page, which might indicate that the title and description were embellished beyond what the page text actually says.",
+        "The venue 'Carsko Polje' is mentioned multiple times in the source page, but it's not clear if the event is actually taking place in the field or if it's just a reference to the location.",
+        "The category 'kids' doesn't seem to be supported by the source page, which mentions the harvest season as a visually striking event but doesn't specifically mention it being suitable for kids.",
+        "The date '2024-09-01' seems to be a specific date, but the source page mentions the harvest season as taking place in September and early October, which suggests that the event might be a recurring one.",
+        "The extracted candidate's title and description don't seem to match the source page's text exactly, which might indicate that the extraction was not done correctly."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2024-09-01-the-harvest-season-is-a-visually-striking-seasonal-event-in-",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/cara/",
+      "discoveredAt": "2026-09-28T11:59:34.815Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Uzročaj je vizualno impresivno sezonsko događanje u Carskom Polju, gdje je cijelo polje aktivno.",
+        "en": "The harvest season is a visually striking seasonal event in Carsko Polje, with the whole field in activity.",
+        "de": "Die Erntezeit ist ein visuell beeindruckender saisonaler Ereignis in Carsko Polje, wo das ganze Feld in Aktion ist.",
+        "it": "La stagione della mietitura è un evento stagionale visivamente impressionante a Carsko Polje, dove tutto il campo è in attività.",
+        "sl": "Zbiralni čas je vizualno impresivno sezonsko dogajanje v Carskem polju, kjer je cel polje aktivno.",
+        "fr": "La saison de récolte est un événement saisonnier visuellement impressionnant à Carsko Polje, où tout le champ est en activité.",
+        "date": "2024-09-01",
+        "endDate": "2024-10-14",
+        "town": "cara",
+        "venue": "Carsko Polje",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://www.korculainfo.com/cara/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2024-09-01-the-harvest-season-is-a-visually-striking-seasonal-event-in-"
+      },
+      "verifierConfidence": 0.5,
+      "verifierConcerns": [
+        "The title field contains a description of the event ('a visually striking seasonal event') rather than the name of the event. The source text does not provide a clear title for the event, only a description.",
+        "The date field ('2024-09-01') appears to be a specific date, but the source text suggests that the harvest season is a recurring event that occurs in September and early October. This may indicate that the date field is not well-supported by the source text.",
+        "The venue field ('Carsko Polje') is correct, but the source text suggests that the event is not exclusively located in Carsko Polje, but rather that the whole field is in activity during the harvest season. This may indicate that the venue field is not well-supported by the source text.",
+        "The category field ('folklore') does not appear to be well-supported by the source text. While the source text does mention traditional events and cultural heritage, it does not explicitly categorize the harvest season as a folklore event.",
+        "The source text does not provide a clear indication of the time of the event. The description suggests that the event occurs during the harvest season, but does not provide a specific time or schedule.",
+        "The town field ('cara') appears to be a shortened or misspelled version of the actual town name ('Čara'). This may indicate that the town field is not well-supported by the source text."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.5"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2024-09-01-the-harvest-season-is-a-visually-striking-seasonal-event-in-",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/cara/",
+      "discoveredAt": "2026-09-28T11:59:34.815Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Doba žetva je vizualno impresivno sezonsko događanje u Carskom polju, sa cijelim poljem u aktivnosti.",
+        "en": "The harvest season is a visually striking seasonal event in Carsko Polje, with the whole field in activity.",
+        "de": "Die Erntezeit ist ein visuell beeindruckender saisonaler Ereignis in Carsko Polje, mit dem ganzen Feld in der Aktivität.",
+        "it": "La stagione della mietitura è un evento stagionale visivamente impressionante a Carsko Polje, con tutto il campo in attività.",
+        "sl": "Dežela je sezonsko dogajanje, ki je vizualno impresivno v Carskem polju, z celim poljem v aktivnosti.",
+        "fr": "La saison de la récolte est un événement saisonnier visuellement impressionnant à Carsko Polje, avec tout le champ en activité.",
+        "date": "2024-09-01",
+        "endDate": "2024-10-14",
+        "town": "cara",
+        "venue": "Carsko Polje",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://www.korculainfo.com/cara/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2024-09-01-the-harvest-season-is-a-visually-striking-seasonal-event-in-"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The 'event' has already happened relative to the stated page context: the harvest season is described as occurring in September and early October, which is well before the date listed in the extracted candidate (2024-09-01)."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2024-09-01-the-harvest-season-is-a-visually-striking-seasonal-event-in-",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/cara/",
+      "discoveredAt": "2026-09-28T11:59:34.815Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Uzročaj je vizualno impresivno sezonsko događanje u Carskom Polju, sa cijelim poljem u aktivnosti.",
+        "en": "The harvest season is a visually striking seasonal event in Carsko Polje, with the whole field in activity.",
+        "de": "Die Erntezeit ist ein visuell beeindruckendes saisonales Ereignis in Carsko Polje, bei dem das ganze Feld in Aktion ist.",
+        "it": "La stagione della mietitura è un evento stagionale visivamente impressionante a Carsko Polje, con tutto il campo in attività.",
+        "sl": "Žetev je vizualno impresivno sezonsko dogajanje v Carskem polju, z vsemi polji v aktivnosti.",
+        "fr": "La saison de la récolte est un événement saisonnier visuellement impressionnant à Carsko Polje, avec tout le champ en activité.",
+        "date": "2024-09-01",
+        "endDate": "2024-10-14",
+        "town": "cara",
+        "venue": "Carsko Polje",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://www.korculainfo.com/cara/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2024-09-01-the-harvest-season-is-a-visually-striking-seasonal-event-in-"
+      },
+      "verifierConfidence": 0.7,
+      "verifierConcerns": [
+        "The event description mentions 'every year on 25 July', which is a specific date, but the extracted candidate lists a date range from 2024-09-01 to 2024-10-14. This suggests that the event is not a one-time occurrence, but rather a recurring event. However, the specific date mentioned in the event description does not match the date range listed in the extracted candidate.",
+        "The extracted candidate lists the category as 'folklore', but the source page text does not explicitly mention folklore. It does mention the Kumpanija sword dance, which is a traditional dance, but it is not clear if this is the only event listed under folklore.",
+        "The extracted candidate lists the venue as 'Carsko Polje', but the source page text mentions that the harvest season event is in the field of Carsko Polje, which is below the village of Čara. It is not clear if the event is specifically taking place in the village of Čara or just in the field of Carsko Polje.",
+        "The extracted candidate lists the town as 'cara', but the source page text mentions that Čara is a village on Korčula Island. It is not clear if the event is specifically taking place in the village of Čara or if the town name is incorrect."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.7"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2024-09-01-the-harvest-season-is-a-visually-striking-seasonal-event-in-",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/cara/",
+      "discoveredAt": "2026-09-28T11:59:34.815Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Doba žetva je vizualno impresivno sezonsko događanje u Carskom polju, s cijelim poljem u aktivnosti.",
+        "en": "The harvest season is a visually striking seasonal event in Carsko Polje, with the whole field in activity.",
+        "de": "Die Erntezeit ist ein visuell beeindruckendes saisonales Ereignis in Carsko Polje, bei dem das ganze Feld in Aktion ist.",
+        "it": "La stagione della mietitura è un evento stagionale visivamente impressionante a Carsko Polje, con tutto il campo in attività.",
+        "sl": "Žetvena sezona je vizualno impresivno sezonsko dogajanje v Carskem polju, s celim poljem v aktivnosti.",
+        "fr": "La saison de la récolte est un événement saisonnier visuellement impressionnant à Carsko Polje, avec tout le champ en activité.",
+        "date": "2024-09-01",
+        "endDate": "2024-10-14",
+        "town": "cara",
+        "venue": "Carsko Polje",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.korculainfo.com/cara/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2024-09-01-the-harvest-season-is-a-visually-striking-seasonal-event-in-"
+      },
+      "verifierConfidence": 0.3,
+      "verifierConcerns": [
+        "The date field '2024-09-01' and '2024-10-14' does not appear together on the page near this listing. The page mentions the harvest season in Carsko Polje in September and early October, but it does not specify the exact dates. The extracted candidate's date fields may be incorrect or not well-supported by the source text.",
+        "The title field 'The harvest season is a visually striking seasonal event in Carsko Polje, with the whole field in activity.' does not appear on the page near this listing. The page mentions the harvest season, but the title field is a paraphrased version of the source text. The extracted candidate's title field may be an embellishment or not well-supported by the source text.",
+        "The venue field 'Carsko Polje' does not appear on the page near this listing. The page mentions Carsko Polje as a location, but it does not specify it as an event venue. The extracted candidate's venue field may be incorrect or not well-supported by the source text.",
+        "The town field 'cara' does not appear on the page near this listing. The page mentions Čara, but it does not specify it as the town where the event takes place. The extracted candidate's town field may be incorrect or not well-supported by the source text.",
+        "The category field 'kids' does not appear on the page near this listing. The page does not mention anything about the event being suitable for kids. The extracted candidate's category field may be incorrect or not well-supported by the source text."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.3"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2024-09-01-the-harvest-season-is-a-visually-striking-seasonal-event-in-",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/cara/",
+      "discoveredAt": "2026-09-28T11:59:34.815Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Sazona prinosa je vidovito impresivni sezonski događaj u Carskom Polju, s cijelim poljem u aktivnosti.",
+        "en": "The harvest season is a visually striking seasonal event in Carsko Polje, with the whole field in activity.",
+        "de": "Die Erntezeit ist eine farbenfrohe saisonale Veranstaltung in Carsko Polje, bei der das ganze Feld in Aktion ist.",
+        "it": "La stagione di raccolta è un evento stagionale visivamente impressionante a Carsko Polje, con tutto il campo in attività.",
+        "sl": "Sobarja je viden impresiven sezonski dogodek v Carskem polju, z vsemi polji v aktivnosti.",
+        "fr": "La saison de la récolte est un événement saisonnier visuellement impressionnant à Carsko Polje, avec tout le champ en activité.",
+        "date": "2024-09-01",
+        "endDate": "2024-10-14",
+        "town": "cara",
+        "venue": "Carsko Polje",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.korculainfo.com/cara/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2024-09-01-the-harvest-season-is-a-visually-striking-seasonal-event-in-"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The title field contains a description of the event, but it's not clear if this is the actual title of the event or a description of it. The source page text does mention 'Harvest season' as an event, but it's not clear if this is the same event as the one described in the extracted candidate.",
+        "The town field contains 'cara', but the source page text consistently spells it as 'Čara'. This could be a typo or a formatting issue.",
+        "The venue field contains 'Carsko Polje', which is correct, but the source page text also mentions 'the whole field in activity', which suggests that the event is not just at the venue, but also in the surrounding area. This could be a minor issue, but it's worth noting.",
+        "The category field contains 'kids', but the source page text does not mention anything about the event being suitable for children. This could be a mistake, but it's also possible that the event is suitable for children and the source page text just didn't mention it."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2024-09-01-the-harvest-season-is-a-visually-striking-seasonal-event-in-",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/cara/",
+      "discoveredAt": "2026-09-28T11:59:34.815Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Dočakivanje žetve je vizualno impresivno sezonsko događanje u Carskom polju, sa čitavim poljem u aktivnosti.",
+        "en": "The harvest season is a visually striking seasonal event in Carsko Polje, with the whole field in activity.",
+        "de": "Die Erntezeit ist eine visuell beeindruckende saisonale Veranstaltung in Carsko Polje, bei der das ganze Feld in Aktion ist.",
+        "it": "La stagione della mietitura è un evento stagionale visivamente impressionante a Carsko Polje, con tutto il campo in attività.",
+        "sl": "Žetev je vizualno impresivno sezonsko dogodek v Carskem polju, z celim poljem v aktivnosti.",
+        "fr": "La saison de la récolte est un événement saisonnier visuellement impressionnant à Carsko Polje, avec tout le champ en activité.",
+        "date": "2024-09-01",
+        "endDate": "2024-10-14",
+        "town": "cara",
+        "venue": "Carsko Polje",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.korculainfo.com/cara/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2024-09-01-the-harvest-season-is-a-visually-striking-seasonal-event-in-"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The 'event' field doesn't match the source page's content. The page mentions the harvest season as a visually striking seasonal event, but it doesn't explicitly state that it's happening on 2024-09-01.",
+        "The 'town' field is 'cara', but the source page mentions 'Čara', which is a proper noun and should be capitalized.",
+        "The 'venue' field is 'Carsko Polje', which is correct, but the source page mentions 'the whole field in Carsko Polje' as the location of the event, not just the field itself.",
+        "The 'cats' field contains 'kids', but the source page doesn't mention anything about the event being suitable for children.",
+        "The 'category' field is 'kids', but the source page doesn't support this categorization. The event is described as a seasonal event, but it doesn't mention anything about it being related to children."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2024-09-01-the-harvest-season-is-a-visually-striking-seasonal-event-in-",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/cara/",
+      "discoveredAt": "2026-09-28T11:59:34.815Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Sazona ugađanja je vizualno impresivno sezonsko događanje u Carskom Polju, s cijelim poljem u aktivnosti.",
+        "en": "The harvest season is a visually striking seasonal event in Carsko Polje, with the whole field in activity.",
+        "de": "Die Erntezeit ist eine visuell beeindruckende saisonale Veranstaltung in Carsko Polje, bei der das ganze Feld in Aktion ist.",
+        "it": "La stagione della mietitura è un evento stagionale visivamente impressionante a Carsko Polje, dove tutto il campo è in attività.",
+        "sl": "Zalivna sezona je vizualno impresivno sezonsko dogajanje v Carskem polju, kjer je vse polje v aktivnosti.",
+        "fr": "La saison de la récolte est un événement saisonnier visuellement impressionnant à Carsko Polje, où tout le champ est en activité.",
+        "date": "2024-09-01",
+        "endDate": "2024-10-14",
+        "town": "cara",
+        "venue": "Carsko Polje",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.korculainfo.com/cara/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2024-09-01-the-harvest-season-is-a-visually-striking-seasonal-event-in-"
+      },
+      "verifierConfidence": 0.7,
+      "verifierConcerns": [
+        "The extracted candidate mentions 'kids' as a category, but the source page does not mention anything about events or activities specifically for children. The category 'kids' seems to be an error.",
+        "The extracted candidate mentions 'town' as 'cara', but the source page does not mention a town by that name. It does mention a village called 'Čara' which is located on the island of Korčula. The correct 'town' field should be 'Korčula' or 'Korčula Island'.",
+        "The extracted candidate mentions 'venue' as 'Carsko Polje', but the source page does not mention 'Carsko Polje' as a venue. It mentions a field or valley called 'Carsko Polje' which is located below the village of Čara. The correct 'venue' field should be 'Čara' or 'the village of Čara'."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.7"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2024-09-01-the-harvest-season-is-a-visually-striking-seasonal-event-in-",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/cara/",
+      "discoveredAt": "2026-09-28T11:59:34.815Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Sazona žetva je vizualno impresivni sezonski događaj u Carskom polju, sa cijelim poljem u aktivnosti.",
+        "en": "The harvest season is a visually striking seasonal event in Carsko Polje, with the whole field in activity.",
+        "de": "Die Erntezeit ist eine visuell beeindruckende saisonale Veranstaltung in Carsko Polje, mit dem gesamten Feld in Betrieb.",
+        "it": "La stagione della mietitura è un evento stagionale visivamente impressionante a Carsko Polje, con tutto il campo in attività.",
+        "sl": "Žetvena sezona je vizualno impresivno sezonsko dogajanje v Carskem polju, z celim poljem v aktivnosti.",
+        "fr": "La saison de récolte est un événement saisonnier visuellement impressionnant à Carsko Polje, avec tout le champ en activité.",
+        "date": "2024-09-01",
+        "endDate": "2024-10-14",
+        "town": "cara",
+        "venue": "Carsko Polje",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://www.korculainfo.com/cara/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2024-09-01-the-harvest-season-is-a-visually-striking-seasonal-event-in-"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The title field appears to be a generic description of the harvest season event, rather than the event's actual name. The source page does not seem to provide a specific title for the event.",
+        "The date field is supported by the text, but the source page also mentions that the event is a seasonal occurrence that happens in September and early October. This suggests that the event may not be a one-time occurrence, but rather a recurring event that spans multiple dates.",
+        "The town field is supported by the text, but the source page does not explicitly mention the village of Čara as the location of the event. The event is described as taking place in Carsko Polje, which is a field located below the village of Čara.",
+        "The venue field is supported by the text, but the source page does not explicitly mention the name 'Carsko Polje' as the venue. The event is described as taking place in the field of Carsko Polje.",
+        "The category field is supported by the text, but the source page does not explicitly mention the term 'folklore' as a category for the event. The event is described as a seasonal occurrence that is related to the grape harvest and wine production."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2024-09-01-the-harvest-season-is-a-visually-striking-seasonal-event-in-",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/cara/",
+      "discoveredAt": "2026-09-28T11:59:34.815Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Doba žetve je vizualno impresivno sezonsko događanje u Carskom polju, s cijelim poljem u aktivnosti.",
+        "en": "The harvest season is a visually striking seasonal event in Carsko Polje, with the whole field in activity.",
+        "de": "Die Erntezeit ist ein farbenfroher saisonaler Ereignis in Carsko Polje, mit dem ganzen Feld in Aktivität.",
+        "it": "La stagione della mietitura è un evento stagionale visivamente impressionante a Carsko Polje, con tutto il campo in attività.",
+        "sl": "Žetvena sezona je vizualno impresivno sezonsko dogodek v Carskem polju, s celim poljem v aktivnosti.",
+        "fr": "La saison de la récolte est un événement saisonnier visuellement impressionnant à Carsko Polje, avec tout le champ en activité.",
+        "date": "2024-09-01",
+        "endDate": "2024-10-14",
+        "town": "cara",
+        "venue": "Carsko Polje",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://www.korculainfo.com/cara/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2024-09-01-the-harvest-season-is-a-visually-striking-seasonal-event-in-"
+      },
+      "verifierConfidence": 0.5,
+      "verifierConcerns": [
+        "The extracted candidate's date range ('2024-09-01' to '2024-10-14') seems to be mentioned in the context of the 'Harvest season' event, but the source page text does not explicitly confirm that this is the start and end date of the event. The text only mentions that the harvest season is in September and early October, without specifying the exact dates.",
+        "The extracted candidate's venue ('Carsko Polje') is mentioned in the source page text, but it is not explicitly stated that this is the location of the event. The text only mentions that the harvest season takes place in the field of Carsko Polje, without specifying that it is the venue of the event.",
+        "The extracted candidate's category ('folklore') is not explicitly mentioned in the source page text. The text only mentions that the harvest season is a 'visually striking seasonal event' and does not provide any information about the category of the event.",
+        "The extracted candidate's town ('cara') seems to be a typo and should be 'Čara'. The source page text consistently uses the name 'Čara' to refer to the village.",
+        "The extracted candidate's title ('The harvest season is a visually striking seasonal event in Carsko Polje, with the whole field in activity.') seems to be a summary of the source page text, but it is not a direct quote. The original text uses more descriptive language to describe the harvest season."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.5"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2024-09-01-the-harvest-season-is-a-visually-striking-seasonal-event-in-",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/cara/",
+      "discoveredAt": "2026-09-28T11:59:34.815Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Dočeka se zima, a u Carskom Polju je sezonski događaj izuzetno vizualno impresivan, s cijelom poljem u aktivnosti.",
+        "en": "The harvest season is a visually striking seasonal event in Carsko Polje, with the whole field in activity.",
+        "de": "Die Erntezeit ist ein farbenfrohes saisonales Ereignis in Carsko Polje, bei dem das ganze Feld in Aktion ist.",
+        "it": "La stagione della mietitura è un evento stagionale visivamente impressionante a Carsko Polje, con tutto il campo in attività.",
+        "sl": "Žetev je sezonski dogodek z izjemen vizualni vpliv v Carskem Polju, kjer je vse polje v aktivnosti.",
+        "fr": "La saison de la récolte est un événement saisonnier visuellement impressionnant à Carsko Polje, avec tout le champ en activité.",
+        "date": "2024-09-01",
+        "endDate": "2024-10-14",
+        "town": "cara",
+        "venue": "Carsko Polje",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://www.korculainfo.com/cara/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2024-09-01-the-harvest-season-is-a-visually-striking-seasonal-event-in-"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The title field 'The harvest season is a visually striking seasonal event in Carsko Polje, with the whole field in activity.' is not a direct quote from the source text. The source text actually says 'Harvest season — the grape harvest in Carsko Polje in September and early October is one of the most visually striking seasonal events on the island, with the whole field in activity.'",
+        "The date field '2024-09-01' is not mentioned in the source text as a specific date. The source text mentions 'September and early October' which could include the date '2024-09-01' but it's not explicitly stated.",
+        "The category field 'folklore' does not match the source text. The source text describes the event as a 'harvest season' which is related to wine production, not folklore.",
+        "The town field 'cara' is not mentioned in the source text. The source text mentions 'Čara' which is the correct name of the village.",
+        "The venue field 'Carsko Polje' is correct but the source text also mentions 'the field below the village' which could be a more accurate description."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-cara-zavalatica-local-sources-2024-07-25-the-major-religious-event-of-the-year-in-cara-centred-on-the",
+      "sourceId": "cara-zavalatica-local-sources",
+      "sourceUrl": "https://www.korculainfo.com/cara/",
+      "discoveredAt": "2026-09-28T11:59:34.815Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Sveti Jakov pilgrimage (25. srpnja) — glavno vjersko događanje godine u Čari, oko crkve Gospa od Carskog Polja u polju ispod sela.",
+        "en": "the major religious event of the year in Čara, centred on the church of Gospa od Carskog Polja in the field below the village.",
+        "de": "A traditional procession draws villagers and visitors from across the island.",
+        "it": "la principale manifestazione religiosa dell'anno a Čara, centrata sulla chiesa di Gospa od Carskog Polja nel campo sotto il villaggio.",
+        "sl": "Sveti Jakov pilgrimage (25. julija) — glavno versko dogajanje leta v Čari, okoli cerkve Gospa od Carskog Polja v polju pod vasjo.",
+        "fr": "le principal événement religieux de l'année à Čara, centré sur l'église de Gospa od Carskog Polja dans le champ en bas du village.",
+        "date": "2024-07-25",
+        "endDate": "2024-07-25",
+        "time": "all day",
+        "town": "cara",
+        "venue": "Gospa od Carskog Polja in the field below the village",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.korculainfo.com/cara/",
+        "extractionMethod": "ai",
+        "id": "ai-cara-zavalatica-local-sources-2024-07-25-the-major-religious-event-of-the-year-in-cara-centred-on-the"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The extracted title contains a phrase ('glavno vjersko događanje godine') that is not present in the source page text. The source page text does mention 'major religious event of the year', but the exact phrasing is different. This suggests that the extraction may have used a translation of the page text rather than the original text.",
+        "The extracted date field ('2024-07-25') appears to be well-supported by the source page text, which mentions 'every year on 25 July' as the date of the Sveti Jakov pilgrimage.",
+        "The extracted time field ('all day') is not explicitly mentioned in the source page text. However, the text does mention that the pilgrimage 'centred on the church of Gospa od Carskog Polja in the field below the village', which suggests that the event is a full-day event.",
+        "The extracted venue field ('Gospa od Carskog Polja in the field below the village') is well-supported by the source page text, which mentions the church and its location.",
+        "The extracted town field ('cara') is not explicitly mentioned in the source page text. However, the text does mention 'Čara' as the name of the village, which is likely the same as 'cara'.",
+        "The extracted category field ('kids') is not explicitly mentioned in the source page text. However, the text does mention that the pilgrimage is a 'traditional procession' and that it is a 'major religious event of the year', which suggests that it may be a family-friendly event.",
+        "The extracted title and date fields do not appear to be related to any specific navigation link, cookie notice, or advertisement on the source page. However, the page does contain a lot of unrelated sections and links, which could potentially be confused with the event listing."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
     }
   ]
 }

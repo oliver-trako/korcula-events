@@ -8022,6 +8022,374 @@
       ],
       "duplicateMatches": [],
       "status": "needs-review"
+    },
+    {
+      "id": "ai-centar-kulture-korcula-2026-10-24-kino-mreze-donosi-djecje-filmske-klasike-i-obiteljske-filmsk",
+      "sourceId": "centar-kulture-korcula",
+      "sourceUrl": "https://kulturakorcula.hr/kino-najave/",
+      "discoveredAt": "2026-10-01T11:48:26.588Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Kino mreže donosi dječje filmske klasike i obiteljske filmske doživljaje u kinima diljem Hrvatske.",
+        "en": "Kino mreže donosi dječje filmske klasike i obiteljske filmske doživljaje u kinima diljem Hrvatske.",
+        "de": "Kinobewegung bringt Kinderklassiker und Familienfilme in Kinos allerorts in Kroatien.",
+        "it": "La rete cinematografica porta classici per bambini e esperienze cinematografiche familiari in tutti i cinema della Croazia.",
+        "sl": "Kino mreže prinaša otroške filmske klasične in družinske filmske izkušnje v kinematografih po vsej Hrvaški.",
+        "fr": "Le cinéma de réseau apporte des classiques pour enfants et des expériences cinématographiques familiales dans les cinémas de toute la Croatie.",
+        "date": "2026-10-24",
+        "endDate": "2026-09-01",
+        "time": "20:00",
+        "town": "korcula",
+        "venue": "Centar za kulturu Korčula",
+        "cats": [
+          "film"
+        ],
+        "source": "https://kulturakorcula.hr/kino-najave/",
+        "extractionMethod": "ai",
+        "id": "ai-centar-kulture-korcula-2026-10-24-kino-mreze-donosi-djecje-filmske-klasike-i-obiteljske-filmsk"
+      },
+      "verifierConfidence": 0.2,
+      "verifierConcerns": [
+        "The extracted candidate mentions a title that is a generic description of the program, while the source page text has multiple events listed with their own titles.",
+        "The extracted candidate mentions a date of 2026-10-24, but the source page text lists events for August and July 2026, which may indicate that the extracted date is not accurate.",
+        "The extracted candidate mentions a time of 20:00, but the source page text lists events with different times, such as 17:00 and 21:00.",
+        "The extracted candidate mentions a venue of Centar za kulturu Korčula, but the source page text lists multiple events with the same venue, which may indicate that the extracted venue is not specific enough.",
+        "The extracted candidate mentions a town of Korčula, but the source page text does not explicitly mention the town for each event.",
+        "The extracted candidate mentions a category of film, but the source page text lists multiple events with different categories, such as drama, action, and animation."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.2"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-centar-kulture-korcula-2026-10-24-kino-mreze-donosi-djecje-filmske-klasike-i-obiteljske-filmsk",
+      "sourceId": "centar-kulture-korcula",
+      "sourceUrl": "https://kulturakorcula.hr/kino-najave/",
+      "discoveredAt": "2026-10-01T11:48:26.588Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Kino mreže donosi dječje filmske klasike i obiteljske filmske doživljaje u kinima diljem Hrvatske.",
+        "en": "Kino mreže donosi dječje filmske klasike i obiteljske filmske doživljaje u kinima diljem Hrvatske.",
+        "de": "Kino mreže donosi dječje filmske klasike i obiteljske filmske doživljaje u kinima diljem Hrvatske.",
+        "it": "La rete cinematografica porta classici cinematografici per bambini e esperienze cinematografiche di famiglia nei cinema della Croazia.",
+        "sl": "Kino mreža prinaša otroške filmske klasične in družinske filmske doživetke v kinematografih po Hrvaški.",
+        "fr": "Réseau cinématographique apporte des classiques cinématographiques pour enfants et des expériences cinématographiques familiales dans les cinémas de Croatie.",
+        "date": "2026-10-24",
+        "endDate": "2026-09-01",
+        "time": "20:00",
+        "town": "korcula",
+        "venue": "Centar za kulturu Korčula",
+        "cats": [
+          "film"
+        ],
+        "source": "https://kulturakorcula.hr/kino-najave/",
+        "extractionMethod": "ai",
+        "id": "ai-centar-kulture-korcula-2026-10-24-kino-mreze-donosi-djecje-filmske-klasike-i-obiteljske-filmsk"
+      },
+      "verifierConfidence": 0,
+      "verifierConcerns": [
+        "The extracted candidate's title does not match the actual title mentioned on the source page. The source page text mentions 'Animirani', 'FILM', 'koncert', 'Akcija', 'Drama', etc., but the extracted candidate's title is 'Kino mreže donosi dječje filmske klasike i obiteljske filmske doživljaje u kinima diljem Hrvatske.' This discrepancy suggests that the extraction may not be accurate.",
+        "The extracted candidate's date is '2026-10-24', but the source page text mentions a different date for the same event, 'subota, 24.10./ 17:00'. The time also differs, with the source page text mentioning '17:00' instead of '20:00'. This discrepancy suggests that the extraction may not be accurate.",
+        "The extracted candidate's venue is 'Centar za kulturu Korčula', but the source page text mentions the same venue for different events, including 'KONCERT KLASIČNE GLAZBE / Marin Limić i Neli Šestanović / Utorak, 25.8., 21:00 / Atrij Gradske vijećnice Korčula'. The source page text does not mention 'Atrij Gradske vijećnice Korčula' as a venue for the event mentioned in the extracted candidate.",
+        "The extracted candidate's category is 'film', but the source page text mentions different categories for different events, including 'Animirani', 'FILM', 'koncert', 'Akcija', 'Drama', etc. This discrepancy suggests that the extraction may not be accurate.",
+        "The extracted candidate's description does not match the actual description mentioned on the source page. The source page text provides a detailed description of the event, but the extracted candidate's description is incomplete and does not provide any information about the event.",
+        "The extracted candidate's fields (title, date, time, venue, town, category) are not well-supported by the text near this listing. The extracted candidate's title does not match the actual title mentioned on the source page, and the extracted candidate's date, time, venue, and category do not match the actual information mentioned on the source page."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-centar-kulture-korcula-2026-07-20-17-godisnja-ainara-nalazi-se-na-raskrizju-zivota-kada-treba-",
+      "sourceId": "centar-kulture-korcula",
+      "sourceUrl": "https://kulturakorcula.hr/kino-najave/",
+      "discoveredAt": "2026-10-01T11:48:26.588Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "17-godišnja Ainara nalazi se na raskrižju života kada treba odlučiti koju sveučilišnu karijeru odabrati.",
+        "en": "17-godišnja Ainara nalazi se na raskrižju života kada treba odlučiti koju sveučilišnu karijeru odabrati.",
+        "de": "17-jährige Ainara steht an einer Kreuzung im Leben, als sie sich entscheiden muss, welche Universitätskarriere sie wählen soll.",
+        "it": "Ainara di 17 anni si trova al bivio della vita e deve decidere quale carriera universitaria scegliere.",
+        "sl": "17-letna Ainara se nahaja na križišču življenja, ko mora odločiti, katero univerzitetno kariero izbere.",
+        "fr": "17 ans, Ainara se trouve au carrefour de la vie, elle doit décider laquelle universitaire carrière choisir.",
+        "date": "2026-07-20",
+        "endDate": "2026-07-20",
+        "time": "21:00",
+        "town": "korcula",
+        "venue": "Katedrala Sv. Marka",
+        "cats": [
+          "film"
+        ],
+        "source": "https://kulturakorcula.hr/kino-najave/",
+        "extractionMethod": "ai",
+        "id": "ai-centar-kulture-korcula-2026-07-20-17-godisnja-ainara-nalazi-se-na-raskrizju-zivota-kada-treba-"
+      },
+      "verifierConfidence": 0,
+      "verifierConcerns": [
+        "The extracted candidate's title, '17-godišnja Ainara nalazi se na raskrižju života kada treba odlučiti koju sveučilišnu karijeru odabrati', seems to be a direct quote from the source page's text, but it doesn't appear to be the actual title of the event. The source page's text describes it as 'Ljetno kino Korčula / ulaznica- 4€ David GleesonLjetno kino KorčulaIrska / 90′ / 2026.Earl Clancy, vlasnik kina u malom irskom gradu, jedan se petak navečer suočava s nizom problema koje pokušava riješiti paralelno s održavanjem filmske...'",
+        "The extracted candidate's title does not match the source page's text. The source page's text describes the event as '17-godišnja Ainara nalazi se na raskrižju života kada treba odlučiti koju sveučilišnu karijeru odabrati' but the extracted candidate's title is the same, suggesting that the title was not correctly extracted.",
+        "The extracted candidate's date, '2026-07-20', seems to be a direct quote from the source page's text, but it doesn't appear to be the actual date of the event. The source page's text describes the event as being on 'petak, 24.7., 21:00' which is a different date.",
+        "The extracted candidate's venue, 'Katedrala Sv. Marka', seems to be a direct quote from the source page's text, but it doesn't appear to be the actual venue of the event. The source page's text describes the event as being at 'Ljetno kino Korčula' which is a different venue.",
+        "The extracted candidate's category, 'film', does not match the source page's text. The source page's text describes the event as a 'drama' which is a different category.",
+        "The extracted candidate's fields do not seem to be well-supported by the source page's text. The source page's text describes the event as a 'drama' but the extracted candidate's fields suggest it is a 'film'."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-centar-kulture-korcula-2026-07-19-derya-i-aziz-poznati-umjetnicki-par-iz-turske-zive-naizgled-",
+      "sourceId": "centar-kulture-korcula",
+      "sourceUrl": "https://kulturakorcula.hr/kino-najave/",
+      "discoveredAt": "2026-10-01T11:48:26.588Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Derya i Aziz, poznati umjetnički par iz Turske, žive naizgled skladnim obiteljskim životom sa svojom kćeri Ezgi.",
+        "en": "Derya i Aziz, poznati umjetnički par iz Turske, žive naizgled skladnim obiteljskim životom sa svojom kćeri Ezgi.",
+        "de": "Derya und Aziz, ein bekanntes Künstlerpaar aus der Türkei, scheinen in ihrer Familie mit ihrer Tochter Ezgi ein harmonisches Familienleben zu führen.",
+        "it": "Derya e Aziz, una famosa coppia d'artisti della Turchia, sembrano vivere una vita familiare apparentemente armoniosa con la loro figlia Ezgi.",
+        "sl": "Derya in Aziz, znana umetniška dvojica iz Turčije, živita na izgled skladnim družinskim življenjem s hčerjo Ezgi.",
+        "fr": "Derya et Aziz, un célèbre couple artistique de Turquie, semblent vivre une vie familiale apparemment harmonieuse avec leur fille Ezgi.",
+        "date": "2026-07-19",
+        "endDate": "2026-07-19",
+        "time": "21:00",
+        "town": "korcula",
+        "venue": "Ljetno kino Korčula",
+        "cats": [
+          "film"
+        ],
+        "source": "https://kulturakorcula.hr/kino-najave/",
+        "extractionMethod": "ai",
+        "id": "ai-centar-kulture-korcula-2026-07-19-derya-i-aziz-poznati-umjetnicki-par-iz-turske-zive-naizgled-"
+      },
+      "verifierConfidence": 0.5,
+      "verifierConcerns": [
+        "The extracted candidate's date (2026-07-19) appears to be after the date of another event on the same page (Spider-Man: Novo doba, 30.7., 21:00). This suggests that the extracted candidate may not be the most recent event on the page.",
+        "The extracted candidate's title and description seem to be taken from a different event on the page (Žuta pisma, 2026. Derya i Aziz, poznati umjetnički par iz Turske...). The extracted candidate's title and description do not match the event it is supposed to represent.",
+        "The extracted candidate's venue (Ljetno kino Korčula) is mentioned in multiple events on the same page. This suggests that the extracted candidate's venue may not be unique or specific to the event it is supposed to represent."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.5"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2026-06-16-a-night-of-moreska-performance-music-and-storytelling",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/tickets",
+      "discoveredAt": "2026-10-01T11:48:26.588Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Večer Moreške izvedbe, glazbe i priče.",
+        "en": "A night of Moreška performance, music, and storytelling.",
+        "de": "Abend der Moreška-Aufführung, Musik und Geschichte",
+        "it": "Serata della Moreška, musica e storia",
+        "sl": "Večer Moreške izvedbe, glazbe in priče.",
+        "fr": "Soirée de Moreška, musique et histoire",
+        "date": "2026-06-16",
+        "endDate": "2026-06-16",
+        "time": "18:00",
+        "town": "korcula",
+        "venue": "Ljetno kino, Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://moreska.eu/tickets",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2026-06-16-a-night-of-moreska-performance-music-and-storytelling"
+      },
+      "verifierConfidence": 0.5,
+      "verifierConcerns": [
+        "The 'date' field could be misread. The source page lists multiple dates for the same show (a season calendar), but this specific row's date is 2026-06-16. This date is present on the page, but it's not immediately clear if it's the correct date for this specific event, especially since the page also mentions that the event starts 'otprilike pola sata prije početka izvedbe' (about half an hour before the performance starts), which might imply a different date for the event start time.",
+        "The 'title_hr' and 'title_en' fields seem to be a direct translation of each other, but the source page text doesn't explicitly mention 'Večer Moreške izvedbe, glazbe i priče.' The page text does mention 'Večer otvara klapa, a zatim se moreška pleše uz puhaći orkestar...' which seems to be a more accurate translation of the event.",
+        "The 'venue' field is 'Ljetno kino, Korčula' which is present on the page, but it's not explicitly mentioned as the venue for this specific event. The page does mention 'Gdje doći' (Where to go) and lists 'Ljetno kino, Korčula' as the location, but it's not clear if it's the correct venue for this event.",
+        "The 'cats' field is 'folklore' which seems to be a correct categorization for the event, but it's not explicitly mentioned on the page. The page text does mention 'Moreška' which is a traditional folk performance, but it's not clear if the page is using 'folklore' as a category.",
+        "The 'time' field is '18:00' which is present on the page, but it's not immediately clear if it's the correct start time for this specific event. The page text does mention 'Izvedba traje otprilike sat vremena' (The performance lasts about an hour) and 'Ulaz se otvara otprilike pola sata prije početka izvedbe' (The entrance opens about half an hour before the performance starts), which might imply a different start time.",
+        "The 'town' field is 'korcula' which is present on the page, but it's not explicitly mentioned as the location for this specific event. The page does mention 'Korčula' as the location, but it's not clear if it's the correct location for this event."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.5"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2026-06-20-a-night-of-moreska-performance-music-and-storytelling",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/tickets",
+      "discoveredAt": "2026-10-01T11:48:26.588Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Večer Moreške izvedbe, glazbe i priče.",
+        "en": "A night of Moreška performance, music, and storytelling.",
+        "de": "Abend der Moreška-Aufführung, Musik und Geschichten",
+        "it": "Serata di Moreška, musica e storie",
+        "sl": "Večer Moreške izvedbe, glazbe in priče.",
+        "fr": "Soirée de la Moreška, musique et contes",
+        "date": "2026-06-20",
+        "endDate": "2026-06-20",
+        "time": "21:00",
+        "town": "korcula",
+        "venue": "Ljetno kino, Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://moreska.eu/tickets",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2026-06-20-a-night-of-moreska-performance-music-and-storytelling"
+      },
+      "verifierConfidence": 0.9,
+      "verifierConcerns": [
+        "The 'date' field is well-supported by the text as it appears as '2026-06-20' in the 'Sezona 2026: sve izvedbe' section.",
+        "The 'endDate' field is well-supported by the text as it appears as '2026-06-20' in the 'Sezona 2026: sve izvedbe' section.",
+        "The 'time' field is well-supported by the text as it appears as '21:00' in the 'LIS 2026' section.",
+        "The 'town' field is well-supported by the text as it appears as 'Korčula' in the 'Gdje doći' section.",
+        "The 'venue' field is well-supported by the text as it appears as 'Ljetno kino, Korčula' in the 'Gdje doći' section.",
+        "The 'cats' field is well-supported by the text as it appears as 'folklore' in the 'Što vas čeka' section."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2026-06-22-a-night-of-moreska-performance-music-and-storytelling",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/tickets",
+      "discoveredAt": "2026-10-01T11:48:26.588Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Večer Moreške izvedbe, glazbe i priče.",
+        "en": "A night of Moreška performance, music, and storytelling.",
+        "de": "Abend der Moreška-Aufführung, Musik und Geschichten",
+        "it": "Serata di Moreška, musica e storie",
+        "sl": "Večer Moreške izvedbe, glazbe in priče.",
+        "fr": "Soirée de la représentation de Moreška, musique et histoire",
+        "date": "2026-06-22",
+        "endDate": "2026-06-22",
+        "time": "21:00",
+        "town": "korcula",
+        "venue": "Ljetno kino, Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://moreska.eu/tickets",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2026-06-22-a-night-of-moreska-performance-music-and-storytelling"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The 'date' and 'endDate' fields appear to be the same, which suggests that the 'endDate' field is not necessary and may be a copy-paste error.",
+        "The 'cats' field lists 'folklore', but the source page text describes the event as a 'Moreška performance, music, and storytelling', which could be related to folklore but is not explicitly stated.",
+        "The 'time' field lists '21:00', but the source page text lists multiple event times, including '18:00' and '21:00'. It is unclear which time is correct for the event listed in the extracted candidate.",
+        "The 'venue' field lists 'Ljetno kino, Korčula', but the source page text lists 'Ljetno kino' as the venue for multiple events, including those with different dates and times. It is unclear which event is being referred to in the extracted candidate.",
+        "The 'town' field lists 'korcula', but the source page text lists 'Korčula' as the town, which is a more specific and correct spelling.",
+        "The source page text lists multiple event dates and times, including some that are not listed in the extracted candidate. It is unclear why these events are not included in the extracted candidate.",
+        "The 'title_hr' field lists 'Večer Moreške izvedbe, glazbe i priče.', but the source page text lists 'Večer otvara klapa, a zatim se moreška pleše uz puhaći orkestar, uz govorni uvod u priču na nekoliko jezika prije same borbe.' as a description of the event. The title field appears to be a summary of the event rather than the actual title.",
+        "The source page text lists multiple links and buttons, including 'Kupi ulaznice' (Buy tickets), but the extracted candidate does not include any information about ticket purchasing."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2023-08-16-autumn-grape-harvest-and-winemaking-is-a-village-tradition-s",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/zrnovo/",
+      "discoveredAt": "2026-10-01T11:48:26.588Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Žrnovska jesenska grožđe trajanja i proizvodnja vina još uvijek je živahna tradicija u Žrnovu.",
+        "en": "Autumn grape harvest and winemaking is a village tradition still practised in Žrnovo.",
+        "de": "Herbsttraubenlese und -weinherstellung ist in Žrnovo ein Dorftradition, die noch heute praktiziert wird.",
+        "it": "La raccolta delle uve autunnali e la produzione di vino è una tradizione rurale ancora praticata a Žrnovo.",
+        "sl": "Podim jesenske grozdje in proizvodnja vina je še vedno živahna tradicija v Žrnovu.",
+        "fr": "La récolte des raisins d'automne et la production de vin est une tradition villageoise qui est encore pratiquée à Žrnovo.",
+        "date": "2023-08-16",
+        "endDate": "2023-08-16",
+        "time": "Weekday · Time · Wine making · Available Buy Tickets →",
+        "town": "lumbarda",
+        "venue": "Žrnovo",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.korculainfo.com/zrnovo/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2023-08-16-autumn-grape-harvest-and-winemaking-is-a-village-tradition-s"
+      },
+      "verifierConfidence": 0.7,
+      "verifierConcerns": [
+        "The category 'kids' doesn't match what the page actually describes. The page mentions 'autumn grape harvest and winemaking' and 'traditional sword dance' but does not mention 'kids'.",
+        "The 'time' field contains booking-status or call-to-action text ('Buy Tickets →') instead of just the event/venue name.",
+        "The 'date' and 'endDate' fields both contain the same date ('2023-08-16'). Typically, an 'endDate' would be a different date, indicating the end of an event. This could be an error or a misunderstanding of the source page's text.",
+        "The 'title_en' field does not appear to be a direct translation of the 'title_hr' field. While it's possible that the English title is a paraphrased version of the Croatian title, it's worth noting that the English title seems to be more of a summary of the event rather than a direct translation of the Croatian title.",
+        "The 'town' field contains the name of a settlement ('Lumbarda') rather than the name of a town or city. However, given the context of the event, it's likely that 'Lumbarda' is a town or city near Žrnovo."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.7"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-cara-zavalatica-local-sources-2024-06-01-a-traditional-procession-draws-villagers-and-visitors-from-a",
+      "sourceId": "cara-zavalatica-local-sources",
+      "sourceUrl": "https://www.korculainfo.com/cara/",
+      "discoveredAt": "2026-10-01T11:48:26.588Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Tradicijska procesija privlači stanovnike i posjetitelje iz cijele otočke.",
+        "en": "A traditional procession draws villagers and visitors from across the island.",
+        "de": "Traditionelle Prozession zieht Bewohner und Besucher aus der gesamten Inselregion an.",
+        "it": "Una processione tradizionale raccoglie i villaggi e i visitatori dell'isola intera.",
+        "sl": "Tradicijska procesija privlači prebivalce in obiskovalce celotnega otoka.",
+        "fr": "Une procession traditionnelle rassemble les villageois et les visiteurs de l'île entière.",
+        "date": "2024-06-01",
+        "endDate": "2024-09-30",
+        "town": "cara",
+        "venue": "Gospa od Carskog Polja",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://www.korculainfo.com/cara/",
+        "extractionMethod": "ai",
+        "id": "ai-cara-zavalatica-local-sources-2024-06-01-a-traditional-procession-draws-villagers-and-visitors-from-a"
+      },
+      "verifierConfidence": 0.5,
+      "verifierConcerns": [
+        "The extracted candidate mentions a 'Sveti Jakov pilgrimage' on 25 July, but the source page text does not mention this event on 25 July, it actually says it happens on 25 July (the feast of Sveti Jakov — St James’s Day) but the church is the centre of a traditional procession from the village every year on this date, which may be the same event but the extracted candidate's description does not match the source page text.",
+        "The extracted candidate mentions a 'folklore' category for the event, but the source page text does not mention folklore at all, it actually mentions a traditional procession and a Kumpanija sword dance, which are both traditional cultural practices but not necessarily folklore.",
+        "The extracted candidate mentions the 'Gospa od Carskog Polja' as the venue, but the source page text actually mentions the 'church of Gospa od Carskog Polja' which is located in the field below the village, it's not clear if this is the same location or not.",
+        "The extracted candidate mentions the 'town' as 'cara', but the source page text actually mentions the 'village' of Čara, it's not clear if this is the same location or not.",
+        "The extracted candidate mentions the 'date' as '2024-06-01', but the source page text does not mention any events happening on this date, it actually mentions the Sveti Jakov pilgrimage on 25 July, which is not the same date.",
+        "The extracted candidate mentions the 'endDate' as '2024-09-30', but the source page text does not mention any events happening after 25 July, it's not clear if this is the correct end date or not.",
+        "The extracted candidate mentions the 'title_hr' as 'Tradicijska procesija privlači stanovnike i posjetitelje iz cijele otočke.', but the source page text actually mentions a 'traditional procession draws villagers and visitors from across the island.', it's not clear if this is the same title or not.",
+        "The extracted candidate mentions the 'title_en' as 'A traditional procession draws villagers and visitors from across the island.', but the source page text actually mentions the same description, it's not clear if this is the same title or not.",
+        "The extracted candidate mentions the 'cats' as ['folklore'], but the source page text does not mention folklore at all, it actually mentions a traditional procession and a Kumpanija sword dance, which are both traditional cultural practices but not necessarily folklore."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.5"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
     }
   ]
 }

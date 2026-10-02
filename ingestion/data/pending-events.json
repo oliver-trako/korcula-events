@@ -8390,6 +8390,166 @@
       ],
       "duplicateMatches": [],
       "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-korcula-racisce-2026-10-01-pansini-s-days-2026",
+      "sourceId": "visit-korcula-racisce",
+      "sourceUrl": "https://visitkorcula.eu/en/events/summer-in-racisce/",
+      "discoveredAt": "2026-10-02T11:15:54.464Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Dani Pansini 2026.",
+        "en": "Pansini’s Days 2026",
+        "de": "Pansinis Tage 2026",
+        "it": "I giorni di Pansini 2026",
+        "sl": "dni Pansini 2026",
+        "fr": "Les jours de Pansini 2026",
+        "date": "2026-10-01",
+        "time": "Oct 1-3",
+        "town": "racisce",
+        "venue": "Račišće",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitkorcula.eu/en/events/summer-in-racisce/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-korcula-racisce-2026-10-01-pansini-s-days-2026"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The title 'Dani Pansini 2026' appears to be a machine translation, whereas the English title 'Pansini’s Days 2026' is more direct. This could indicate that the original text is in a language other than English, and the translation might not be perfect. However, this does not affect the factual accuracy of the title itself.",
+        "The date '2026-10-01' and time 'Oct 1-3' seem to be well-supported by the text, as it appears in the 'Other events' section with the exact same date range.",
+        "The venue 'Račišće' and town 'racisce' appear to be supported by the text, as it mentions 'Events in Račišće' and lists the event '01.10.2026 - 03.10.2026 Pansini’s Days 2026' with the same venue.",
+        "The category 'kids' seems to be an assumption rather than a direct translation or extraction from the text. The text does not explicitly mention 'kids' as a category, and it's possible that the original text uses a different term or phrase. This could be a concern, but it's not a concrete error."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "source-override-always-review"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-centar-kulture-korcula-2026-07-20-film-about-a-family-living-in-slovenia",
+      "sourceId": "centar-kulture-korcula",
+      "sourceUrl": "https://kulturakorcula.hr/kino-najave/",
+      "discoveredAt": "2026-10-02T11:15:54.464Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Film o obitelji koja živi u Sloveniji.",
+        "en": "Film about a family living in Slovenia.",
+        "de": "Film über eine Familie, die in Slovenien lebt.",
+        "it": "Film su una famiglia che vive in Slovenia.",
+        "sl": "Film o družini, ki živita v Sloveniji.",
+        "fr": "Film sur une famille vivant en Slovénie.",
+        "date": "2026-07-20",
+        "endDate": "2026-07-20",
+        "time": "21:00",
+        "town": "lumbarda",
+        "venue": "Ljetno kino Korčula",
+        "cats": [
+          "film"
+        ],
+        "source": "https://kulturakorcula.hr/kino-najave/",
+        "extractionMethod": "ai",
+        "id": "ai-centar-kulture-korcula-2026-07-20-film-about-a-family-living-in-slovenia"
+      },
+      "verifierConfidence": 0.3,
+      "verifierConcerns": [
+        "The extracted candidate's date (2026-07-20) is after the date of the film 'Spider-man: Novo doba' (2026-07-30), which is listed on the same page. This suggests that the extracted candidate's date may be incorrect or the page may be listing future events. The extracted candidate's date should be compared to other dates on the page to determine if it is accurate.",
+        "The extracted candidate's title ('Film about a family living in Slovenia') does not match the title of the film 'Belo se pere na devetdeset' ('BIJELO SE PERE NA DEVEDESET') listed on the same page. This suggests that the extracted candidate's title may be incorrect or the page may be listing multiple films with different titles. The extracted candidate's title should be compared to the title of the film listed on the same page to determine if it is accurate.",
+        "The extracted candidate's venue ('Ljetno kino Korčula') matches the venue of the film 'Zagreb nije moguće' listed on the same page, but the extracted candidate's date (2026-07-20) is before the date of the film 'Zagreb nije moguće' (2026-07-31). This suggests that the extracted candidate's date may be incorrect or the page may be listing multiple films with different dates. The extracted candidate's date should be compared to the date of the film listed on the same page to determine if it is accurate.",
+        "The extracted candidate's category ('film') does not match the category of the film 'Belo se pere na devetdeset' ('Drama') listed on the same page. This suggests that the extracted candidate's category may be incorrect or the page may be listing multiple films with different categories. The extracted candidate's category should be compared to the category of the film listed on the same page to determine if it is accurate.",
+        "The extracted candidate's time ('21:00') matches the time of the film 'Kino Mediteran / Nedjelje' listed on the same page, but the extracted candidate's date (2026-07-20) is after the date of the film 'Kino Mediteran / Nedjelje' (2026-07-31). This suggests that the extracted candidate's date may be incorrect or the page may be listing multiple films with different dates. The extracted candidate's date should be compared to the date of the film listed on the same page to determine if it is accurate.",
+        "The extracted candidate's town ('lumbarda') does not match the town of the film 'Belo se pere na devetdeset' ('Slovenija') listed on the same page. This suggests that the extracted candidate's town may be incorrect or the page may be listing multiple films with different towns. The extracted candidate's town should be compared to the town of the film listed on the same page to determine if it is accurate."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.3"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2024-06-01-pupnat-is-one-of-the-five-villages-on-korcula-island-that-pr",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/pupnat/",
+      "discoveredAt": "2026-10-02T11:15:54.464Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Pupnat je jedno od pet sela na otoku Korčuli koje čuva tradicionalni kumpanija-sabljarki ples.",
+        "en": "Pupnat is one of the five villages on Korčula Island that preserves the traditional Kumpanija sword dance.",
+        "de": "Pupnat ist eines der fünf Dörfer auf der Insel Korčula, das die traditionelle Kumpanija-Schwerttanz bewahrt.",
+        "it": "Pupnat è uno dei cinque villaggi dell'isola di Korčula che conserva la tradizionale danza di spada Kumpanija.",
+        "sl": "Pupnat je eno od pet vasi na otoku Korčuli, ki ohranja tradicionalni kumpanija-ples z mečem.",
+        "fr": "Pupnat est l'un des cinq villages de l'île de Korčula qui conserve le traditionnel Kumpanija-danse d'épée.",
+        "date": "2024-06-01",
+        "time": "Summer",
+        "town": "pupnat",
+        "venue": "Pupnat",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://www.korculainfo.com/pupnat/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2024-06-01-pupnat-is-one-of-the-five-villages-on-korcula-island-that-pr"
+      },
+      "verifierConfidence": 0.7,
+      "verifierConcerns": [
+        "The event title is mentioned in the text, but the source page is primarily focused on general information about Pupnat village, and the event is only mentioned briefly in the 'Events' section. This suggests that the event may be a recurring one, and the page may not be specifically about the event.",
+        "The date '2024-06-01' is mentioned in the extracted candidate, but it is not explicitly stated in the source page text. However, the Kumpanija sword dance is mentioned as being performed in summer, which could imply that the event occurs in June. However, this is not a clear indication of the date, and the source page text does not provide a specific date for the event.",
+        "The time 'Summer' is mentioned in the extracted candidate, but it is not explicitly stated in the source page text. However, the Kumpanija sword dance is mentioned as being performed in summer, which could imply that the event occurs during the summer months.",
+        "The venue 'Pupnat' is mentioned in the extracted candidate, which is consistent with the source page text. However, the venue is not explicitly stated in the 'Events' section where the Kumpanija sword dance is mentioned.",
+        "The town 'pupnat' is mentioned in the extracted candidate, which is consistent with the source page text. However, the town is not explicitly stated in the 'Events' section where the Kumpanija sword dance is mentioned.",
+        "The category 'folklore' is mentioned in the extracted candidate, which is consistent with the source page text. However, the category is not explicitly stated in the 'Events' section where the Kumpanija sword dance is mentioned.",
+        "The extracted candidate mentions that Pupnat is one of the five villages on Korčula Island that preserves the traditional Kumpanija sword dance. However, the source page text does not mention that Pupnat is the only village that preserves the Kumpanija sword dance, and it is possible that other villages on the island also preserve this tradition.",
+        "The extracted candidate does not mention any specific information about the Kumpanija sword dance, such as its history or significance. The source page text only mentions that the Kumpanija is a chain sword dance with roots going back centuries, and that it is listed as an item of UNESCO intangible cultural heritage."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.7"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2024-06-01-the-kumpanija-sword-dance-is-a-traditional-dance-of-great-an",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/cara/",
+      "discoveredAt": "2026-10-02T11:15:54.464Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Kumpanija je tradicionalna plesna igra velike starine, koja se izvodi u ljeto i koja je upisana u nematerijalno kulturno naslijeđe UNESCO-a.",
+        "en": "The Kumpanija sword dance is a traditional dance of great antiquity, performed in summer and listed as UNESCO intangible cultural heritage.",
+        "de": "Kumpanija ist eine traditionelle Tanzspielerei, die in den Sommermonaten aufgeführt wird und in das immaterielle kulturelle Erbe der UNESCO aufgenommen wurde.",
+        "it": "La danza di spada Kumpanija è una tradizionale danza di grande antichità, eseguita in estate e iscritta nel patrimonio culturale immateriale dell'UNESCO.",
+        "sl": "Kumpanija je tradicionalna plešna igra velike starine, ki se izvaja v poletju in je vpisana v nematerijsko kulturno dediščino UNESCO-a.",
+        "fr": "La danse d'épée Kumpanija est une danse traditionnelle d'une grande antiquité, exécutée en été et inscrite au patrimoine culturel immatériel de l'UNESCO.",
+        "date": "2024-06-01",
+        "endDate": "2024-09-30",
+        "town": "cara",
+        "venue": "Čara",
+        "cats": [
+          "kids",
+          "folklore"
+        ],
+        "source": "https://www.korculainfo.com/cara/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2024-06-01-the-kumpanija-sword-dance-is-a-traditional-dance-of-great-an"
+      },
+      "verifierConfidence": 0.7,
+      "verifierConcerns": [
+        "The title field appears to contain a description of the Kumpanija sword dance, rather than the event's title. The actual title is not clearly stated in the source page text.",
+        "The date field appears to be correct, but the endDate field is not well-supported by the source page text. The text mentions that the Kumpanija sword dance is performed in summer, but it does not provide a specific end date. The endDate field may be an incorrect assumption.",
+        "The venue field appears to be correct, but the town field is not well-supported by the source page text. The text mentions that Čara is a village on Korčula Island, but it does not clearly state that Čara is the town.",
+        "The category field appears to be correct, but the text does not provide enough information to confirm the category 'kids'. The text mentions that the Kumpanija sword dance is a traditional dance of great antiquity, but it does not provide any information about it being suitable for children."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.7"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
     }
   ]
 }

@@ -9145,6 +9145,450 @@
       ],
       "duplicateMatches": [],
       "status": "needs-review"
+    },
+    {
+      "id": "ai-tz-blato-2026-06-29-34-blatsko-ljeto",
+      "sourceId": "tz-blato",
+      "sourceUrl": "https://tzo-blato.hr/en/",
+      "discoveredAt": "2026-10-04T11:18:31.118Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "34. BLATSKO LJETO",
+        "en": "34. Balkan Summer",
+        "de": "34. Sommerspiel auf dem Balkan",
+        "it": "34. Estate balcanica",
+        "sl": "34. balkansko poletje",
+        "fr": "34ème été balkanique",
+        "date": "2026-06-29",
+        "town": "blato",
+        "venue": "Blato",
+        "cats": [
+          "kids",
+          "folklore"
+        ],
+        "source": "https://tzo-blato.hr/en/",
+        "extractionMethod": "ai",
+        "id": "ai-tz-blato-2026-06-29-34-blatsko-ljeto"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The title field '34. BLATSKO LJETO' and '34. Balkan Summer' are not a direct translation of each other. 'BLATSKO LJETO' means 'Blato Summer' in Croatian, but 'Balkan Summer' is not a direct translation. This might indicate that the title was embellished beyond what the page text actually says.",
+        "The date field '2026-06-29' is actually supported by the text, which says 'Monday, 29 June 2026'. However, the date format in the source text is 'DD MM YYYY' instead of 'YYYY-MM-DD'.",
+        "The venue field 'Blato' is actually supported by the text, which says 'Blato' multiple times.",
+        "The town field 'blato' is actually supported by the text, which says 'Blato' multiple times.",
+        "The category field 'kids' and 'folklore' do not match what the page actually describes. The page mentions 'Blato Summer', 'Dalmatian folk singing', and 'Carnival', but it does not mention 'kids' or 'folklore' as a category.",
+        "The source page text contains a section about 'BLATO WINE EXPERIENCE - stručna i tematska vinska događanja Baštinske eno-gastro ture BLATO WINE TASTE & CREATE 23. - 30.09. 2026.' which is a different event with a different date. This might indicate that the event has already happened relative to the stated page context, but it's not a strong concern since the date of the extracted candidate is in the past as well."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "duplicate-id"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2024-08-11-autumn-grape-harvest-and-winemaking-a-village-tradition-stil",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/zrnovo/",
+      "discoveredAt": "2026-10-04T11:18:31.118Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Ljetna žetva grožđa i proizvodnja vina, seljska tradicija još uvijek prakticirana u Žrnovu.",
+        "en": "Autumn grape harvest and winemaking, a village tradition still practised in Žrnovo.",
+        "de": "Herbstweinlese und Weinherstellung, ein Dorftradition, die in Žrnovo noch heute praktiziert wird.",
+        "it": "Raccolta delle uve e vinificazione autunnale, una tradizione di paese che ancora si pratica a Žrnovo.",
+        "sl": "Letova žetva grozdov in proizvodnja vina, seljska tradicija še vedno prakticirana v Žrnovu.",
+        "fr": "Récolte des raisins et vinification automne, une tradition villageoise qui est toujours pratiquée à Žrnovo.",
+        "date": "2024-08-11",
+        "endDate": "2024-08-11",
+        "time": "Weekday · Time · Wine making",
+        "town": "lumbarda",
+        "venue": "Žrnovo village, Lumbarda",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.korculainfo.com/zrnovo/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2024-08-11-autumn-grape-harvest-and-winemaking-a-village-tradition-stil"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The title field contains a translation of the event title, which is not necessarily the original text on the page. The page text does not explicitly mention 'Ljetna žetva grožđa i proizvodnja vina' or 'Žrnovo village, Lumbarda' as separate entities, but rather as a phrase in a larger paragraph.",
+        "The time field is incomplete and does not provide a specific time, only 'Weekday · Time · Wine making'. The page text does mention 'wine making' as a village tradition, but it does not provide a specific time for the event.",
+        "The venue field contains a phrase that is not a specific location, but rather a description of the location. The page text does mention 'Žrnovo village' as a location, but it does not explicitly mention 'Lumbarda' as a separate entity.",
+        "The category field is incomplete and does not provide a specific category. The page text does mention 'wine making' as a village tradition, but it does not explicitly mention 'kids' as a category for the event.",
+        "The date field is supported by the page text, which mentions the event as happening in the past (on 16 August). The event listing has an end date that matches the page text's description of the event.",
+        "The page text does mention 'Moštra' as a traditional sword dance, but it does not explicitly mention it as an event on the same day as the wine making event. However, the page text does mention the wine making event as a village tradition still practised in Žrnovo, which could imply that it is an ongoing event, but the exact date is not specified."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2024-07-25-the-kumpanija-sword-dance-is-a-traditional-dance-performed-i",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/cara/",
+      "discoveredAt": "2026-10-04T11:18:31.118Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Kumpanija ples s mačem je tradicionalni ples koji se izvodi u Čari, jednoj od pet sela na ostrvu Korčuli koje čuva ovu staru tradiciju.",
+        "en": "The Kumpanija sword dance is a traditional dance performed in Čara, one of the five villages on Korčula Island that preserves this ancient tradition.",
+        "de": "Der Kumpanija-Schwerttanz ist ein traditioneller Tanz, der in Čara, einem der fünf Dörfer auf der Korčula-Insel, aufbewahrt wird, die diese alte Tradition bewahrt.",
+        "it": "La danza della spada Kumpanija è una danza tradizionale eseguita a Čara, uno dei cinque villaggi dell'isola di Korčula che conserva questa antica tradizione.",
+        "sl": "Kumpanija plec z mečem je tradicionalni plec, ki se izvaja v Čari, eni od pet vasi na otoku Korčuli, ki čuva ta star tradicija.",
+        "fr": "La danse d'épée Kumpanija est une danse traditionnelle qui est exécutée à Čara, l'une des cinq villages de l'île de Korčula qui conserve cette tradition ancienne.",
+        "date": "2024-07-25",
+        "town": "cara",
+        "venue": "Čara",
+        "cats": [
+          "kids",
+          "folklore"
+        ],
+        "source": "https://www.korculainfo.com/cara/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2024-07-25-the-kumpanija-sword-dance-is-a-traditional-dance-performed-i"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The title field contains a description of the dance, not its name. The source page does contain a section titled 'Kumpanija' which is likely the name of the dance, but it's not clear if this is the same event as the one described in the extracted candidate."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-cara-zavalatica-local-sources-2024-07-25-sveti-jakov-pilgrimage",
+      "sourceId": "cara-zavalatica-local-sources",
+      "sourceUrl": "https://www.korculainfo.com/cara/",
+      "discoveredAt": "2026-10-04T11:18:31.118Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Sveti Jakovovo blagdanje",
+        "en": "Sveti Jakov pilgrimage",
+        "de": "Join the traditional pilgrimage procession from the village to the church of Gospa od Carskog Polja.",
+        "it": "Pellegrinaggio di San Giacomo",
+        "sl": "Sveti Jakovovo blagovestje",
+        "fr": "Pèlerinage de Saint Jacques",
+        "date": "2024-07-25",
+        "endDate": "2024-07-25",
+        "time": "afternoon",
+        "town": "cara",
+        "venue": "Gospa od Carskog Polja",
+        "cats": [
+          "kids"
+        ],
+        "desc": {
+          "en": "A traditional procession draws villagers and visitors from across the island.",
+          "hr": "Tradicijska procesija privlači stanovnike i posjetitelje s cijele otočke."
+        },
+        "source": "https://www.korculainfo.com/cara/",
+        "extractionMethod": "ai",
+        "id": "ai-cara-zavalatica-local-sources-2024-07-25-sveti-jakov-pilgrimage"
+      },
+      "verifierConfidence": 0.7,
+      "verifierConcerns": [
+        "The title 'Sveti Jakovovo blagdanje' and 'Sveti Jakov pilgrimage' do not match the source page's own text, which only mentions 'Sveti Jakov pilgrimage' without the full phrase. The extracted title seems to be a translation or a variant of the source page's own text.",
+        "The date '2024-07-25' is mentioned on the source page as the date for the Sveti Jakov pilgrimage, which is well-supported. However, there is no explicit mention of the time 'afternoon' for this event. The source page does mention 'afternoon sunshine' in the village, but this is a general statement and not specifically tied to the Sveti Jakov pilgrimage.",
+        "The venue 'Gospa od Carskog Polja' is mentioned on the source page as the location of the Sveti Jakov pilgrimage, which is well-supported. However, the source page also mentions 'the field of Carsko Polje' as the location of the vineyards and olive groves, which might be a slight discrepancy in terminology.",
+        "The town 'cara' is not explicitly mentioned on the source page as the location of the Sveti Jakov pilgrimage. The source page does mention 'Čara' as a village, but this might be a different entity from 'cara'. It's possible that 'cara' is a misspelling or a variant of 'Čara'.",
+        "The category 'kids' is not mentioned on the source page as a relevant category for the Sveti Jakov pilgrimage. The source page does mention 'villagers and visitors from across the island', but this does not necessarily imply that the event is suitable for children."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "ambiguous-time",
+        "verifier-confidence-below-threshold:0.7"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-cara-zavalatica-local-sources-2024-09-01-harvest-season",
+      "sourceId": "cara-zavalatica-local-sources",
+      "sourceUrl": "https://www.korculainfo.com/cara/",
+      "discoveredAt": "2026-10-04T11:18:31.118Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Uzgojna sezona",
+        "en": "Harvest season",
+        "de": "Join the grape harvest in Carsko Polje.",
+        "it": "Stagione della raccolta",
+        "sl": "Uzgojna sezona",
+        "fr": "Saison de la récolte",
+        "date": "2024-09-01",
+        "endDate": "2024-10-14",
+        "time": "September and early October",
+        "town": "cara",
+        "venue": "Carsko Polje",
+        "cats": [
+          "kids"
+        ],
+        "desc": {
+          "en": "The grape harvest in Carsko Polje in September and early October is one of the most visually striking seasonal events on the island.",
+          "hr": "Uzgoj grožđa u Carskom polju u rujnu i početku listopada jedan je od najzanimljivijih sezonskih događaja na otoku."
+        },
+        "source": "https://www.korculainfo.com/cara/",
+        "extractionMethod": "ai",
+        "id": "ai-cara-zavalatica-local-sources-2024-09-01-harvest-season"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The page contains a section labeled 'Events', which includes a list of events in Čara, but the extracted candidate's date field ('2024-09-01') does not match any of the listed events. The only event that takes place in September is the Sveti Jakov pilgrimage on 25 July, which is not the event described in the extracted candidate. However, the extracted candidate's description does match the description of the Harvest season event listed in the 'Events' section.",
+        "The extracted candidate's venue field ('Carsko Polje') is mentioned in the page text as a field below the village of Čara, but the page text also mentions the village of Čara as a separate entity. The page text does not explicitly state that the Harvest season event takes place in the village of Čara, but rather in the field of Carsko Polje. This could be a potential issue with the accuracy of the venue field.",
+        "The extracted candidate's title field ('Harvest season') is mentioned in the page text as a seasonal event, but the page text does not explicitly state that the Harvest season event is the same event described in the extracted candidate. The page text mentions the Harvest season event as taking place in September and early October, but it does not provide a detailed description of the event. This could be a potential issue with the accuracy of the title field.",
+        "The extracted candidate's date field ('2024-09-01') is mentioned in the page text as a date in September, but the page text does not explicitly state that the Harvest season event takes place on this specific date. The page text mentions that the Harvest season event takes place in September and early October, but it does not provide a specific date. This could be a potential issue with the accuracy of the date field.",
+        "The extracted candidate's time field ('September and early October') is mentioned in the page text as a time period, but the page text does not explicitly state that the Harvest season event takes place during this specific time period. The page text mentions that the Harvest season event takes place in September and early October, but it does not provide a detailed description of the event's schedule. This could be a potential issue with the accuracy of the time field.",
+        "The extracted candidate's category field ('kids') does not match the description of the Harvest season event in the page text. The page text does not mention children or any specific age group as being involved in the Harvest season event. This could be a potential issue with the accuracy of the category field.",
+        "The extracted candidate's town field ('cara') does not match the spelling of the village name in the page text. The page text spells the village name as 'Čara'. This could be a potential issue with the accuracy of the town field."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-aminess-korcula-entertainment-2023-04-23-authentic-korcula-experience",
+      "sourceId": "aminess-korcula-entertainment",
+      "sourceUrl": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+      "discoveredAt": "2026-10-04T11:18:31.118Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Iskustvo ***AUTENTIČNI KORČULA***",
+        "en": "***AUTHENTIC KORČULA*** Experience",
+        "de": "Embark on an unforgettable journey through Korčula’s Old Town with an expert guide, exploring its rich history and Marco Polo heritage. Enjoy panoramic views, local farm tastings, and a scenic vineyard drive, ending with a wine tasting paired with authentic island delicacies.",
+        "it": "Embark on an unforgettable journey through Korčula’s Old Town with an expert guide, exploring its rich history and Marco Polo heritage. Enjoy panoramic views, local farm tastings, and a scenic vineyard drive, ending with a wine tasting paired with authentic island delicacies.",
+        "sl": "Iskustvo ***AUTENTIČNI KORČULA***",
+        "fr": "Embark on an unforgettable journey through Korčula’s Old Town with an expert guide, exploring its rich history and Marco Polo heritage. Enjoy panoramic views, local farm tastings, and a scenic vineyard drive, ending with a wine tasting paired with authentic island delicacies.",
+        "date": "2023-04-23",
+        "endDate": "2023-10-18",
+        "time": "04:00h",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+        "extractionMethod": "ai",
+        "id": "ai-aminess-korcula-entertainment-2023-04-23-authentic-korcula-experience"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The title '**AUTHENTIC KORČULA*** Experience' appears in the source page text, but the extracted candidate's title is a translation of it. This could be a concern if the translation is not accurate, but in this case, the translation seems to be correct.",
+        "The date '2023-04-23' appears to be a start date for a special offer, but it does not necessarily mean that the event '**AUTHENTIC KORČULA*** Experience' is happening on that date. The event's date is listed as '04:00h', which could be a time of day or a date, but it is not clear from the source page text.",
+        "The venue 'Korčula' is listed as the location for the event, but the source page text also lists 'Smokvica' as a location for a different event. This could be a concern if the event is not actually happening in Korčula, but it is not clear from the source page text.",
+        "The category 'folklore' does not seem to match the description of the event '**AUTHENTIC KORČULA*** Experience', which appears to be a guided tour of Korčula's Old Town. This could be a concern if the category is not accurate, but it is not clear from the source page text.",
+        "The extracted candidate's fields seem to be well-supported by the source page text, but there are several other events listed on the page that could potentially be confused with the extracted candidate's event. This could be a concern if the events are not clearly distinguished, but it is not clear from the source page text."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-aminess-korcula-entertainment-2023-04-29-korcula-island-sightseeing-wine-tour",
+      "sourceId": "aminess-korcula-entertainment",
+      "sourceUrl": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+      "discoveredAt": "2026-10-04T11:18:31.118Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Izlet oko otoka Korčule i okusivanje vina",
+        "en": "Korcula Island Sightseeing & Wine Tour",
+        "de": "A 4-hour panoramic tour through Korčula's wine country aboard an open-top cabrio mini bus, visiting 3 family-owned wineries and tasting 10 local wines including Pošip and Grk — grape varieties unique to the island. Honey, olive oil, and liqueur tastings included.",
+        "it": "A 4-hour panoramic tour through Korčula's wine country aboard an open-top cabrio mini bus, visiting 3 family-owned wineries and tasting 10 local wines including Pošip and Grk — grape varieties unique to the island. Honey, olive oil, and liqueur tastings included.",
+        "sl": "Izlet oko otoka Korčule in okusivanje vina",
+        "fr": "A 4-hour panoramic tour through Korčula's wine country aboard an open-top cabrio mini bus, visiting 3 family-owned wineries and tasting 10 local wines including Pošip and Grk — grape varieties unique to the island. Honey, olive oil, and liqueur tastings included.",
+        "date": "2023-04-29",
+        "endDate": "2023-10-14",
+        "time": "04:00h",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+        "extractionMethod": "ai",
+        "id": "ai-aminess-korcula-entertainment-2023-04-29-korcula-island-sightseeing-wine-tour"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The title 'Korcula Island Sightseeing & Wine Tour' appears to be an exact match with the event description on the page, suggesting that the extraction may not be independent and could be a copy-paste error.",
+        "The time '04:00h' appears to be inconsistent with the event description, which mentions a 4-hour panoramic tour. This could indicate that the time was misread or incorrectly extracted.",
+        "The venue 'Korčula' appears to be a duplicate of the town field, which is likely incorrect. The venue should be a specific location within the town, such as a winery or a landmark.",
+        "The category 'folklore' does not appear to be relevant to the event description, which focuses on wine tasting and sightseeing. This could indicate that the category was incorrectly extracted or is not relevant to the event."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-aminess-korcula-entertainment-2023-06-15-taste-of-korcula",
+      "sourceId": "aminess-korcula-entertainment",
+      "sourceUrl": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+      "discoveredAt": "2026-10-04T11:18:31.118Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Okus Korčule",
+        "en": "Taste of Korčula",
+        "de": "The tour includes a guided city tour with a visit to the observation deck and a tasting of homemade products from the family farm OPG Anica Bažika.",
+        "it": "The tour includes a guided city tour with a visit to the observation deck and a tasting of homemade products from the family farm OPG Anica Bažika.",
+        "sl": "Okus Korčule",
+        "fr": "The tour includes a guided city tour with a visit to the observation deck and a tasting of homemade products from the family farm OPG Anica Bažika.",
+        "date": "2023-06-15",
+        "endDate": "2023-08-24",
+        "time": "02:00h",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+        "extractionMethod": "ai",
+        "id": "ai-aminess-korcula-entertainment-2023-06-15-taste-of-korcula"
+      },
+      "verifierConfidence": 0.3,
+      "verifierConcerns": [
+        "The extracted candidate's title is 'Taste of Korčula', but the page contains multiple events with the title 'Taste of Korčula', including one that starts at 02:00h. It is unclear which event the extracted candidate is referring to.",
+        "The extracted candidate's date is 2023-06-15, but the page does not contain any information that directly supports this date. The events listed on the page have dates ranging from 04:00h to 03:00h, but none of these dates match the extracted candidate's date.",
+        "The extracted candidate's venue is 'Korčula', but the page contains multiple hotels and resorts in Korčula, including Marko Polo Maradiso Hotel by Aminess. It is unclear which venue the extracted candidate is referring to.",
+        "The extracted candidate's category is 'kids', but the page does not contain any information that directly supports this category. The events listed on the page include activities such as sailing, surfing, and snorkeling, but none of these activities are specifically related to children.",
+        "The extracted candidate's time is '02:00h', but the page contains multiple events with different start times, including one that starts at 04:00h and another that starts at 03:00h. It is unclear which time the extracted candidate is referring to.",
+        "The extracted candidate's town is 'korcula', but the page contains multiple destinations in Korčula, including the old town and the beach. It is unclear which town the extracted candidate is referring to.",
+        "The extracted candidate's fields are not clearly supported by the source page text. The page contains multiple events, hotels, and resorts, but the extracted candidate's fields do not directly correspond to any specific event or venue on the page."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.3"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-aminess-korcula-entertainment-2023-06-15-sail-away-korcula-tour-with-traditional-craftmanship-boat",
+      "sourceId": "aminess-korcula-entertainment",
+      "sourceUrl": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+      "discoveredAt": "2026-10-04T11:18:31.118Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Odpluti Korčulo - izlet s tradicionalnim loncem",
+        "en": "Sail Away Korčula - tour with traditional craftmanship boat",
+        "de": "Join us on a boat trip around Korčula archipelago islands. Enjoy swimming and snorkeling in crystal clear sea. Refresh yourselves with carefully prepared snacks and cold drinks. Welcome aboard!",
+        "it": "Join us on a boat trip around Korčula archipelago islands. Enjoy swimming and snorkeling in crystal clear sea. Refresh yourselves with carefully prepared snacks and cold drinks. Welcome aboard!",
+        "sl": "Odpluti Korčulo - izlet s tradicionalnim loncem",
+        "fr": "Join us on a boat trip around Korčula archipelago islands. Enjoy swimming and snorkeling in crystal clear sea. Refresh yourselves with carefully prepared snacks and cold drinks. Welcome aboard!",
+        "date": "2023-06-15",
+        "endDate": "2023-08-24",
+        "time": "04:00h",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+        "extractionMethod": "ai",
+        "id": "ai-aminess-korcula-entertainment-2023-06-15-sail-away-korcula-tour-with-traditional-craftmanship-boat"
+      },
+      "verifierConfidence": 0.7,
+      "verifierConcerns": [
+        "The title field appears to be correct, but it's possible that the source page's text was more generic and the title was inferred or added later.",
+        "The date field is well-supported by the source page's text.",
+        "The time field is well-supported by the source page's text.",
+        "The venue field is well-supported by the source page's text.",
+        "The town field is well-supported by the source page's text.",
+        "The category field is not well-supported by the source page's text, as the page lists multiple categories and activities, but the extracted candidate only lists 'kids'."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.7"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-aminess-korcula-entertainment-2023-06-15-a-private-heritage-sunset-voyage",
+      "sourceId": "aminess-korcula-entertainment",
+      "sourceUrl": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+      "discoveredAt": "2026-10-04T11:18:31.118Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Privatni izlet suncem",
+        "en": "A Private Heritage Sunset Voyage",
+        "de": "Unforgettable Adriatic evenings - Private sunset cruise for up to 10 guests. Calm seas, golden horizons, and the whisper of wind in the sails – the perfect way to make unforgettable memories..on the deck of our traditional wooden boat, built in 1941.",
+        "it": "Unforgettable Adriatic evenings - Private sunset cruise for up to 10 guests. Calm seas, golden horizons, and the whisper of wind in the sails – the perfect way to make unforgettable memories..on the deck of our traditional wooden boat, built in 1941.",
+        "sl": "Privatni izlet suncem",
+        "fr": "Unforgettable Adriatic evenings - Private sunset cruise for up to 10 guests. Calm seas, golden horizons, and the whisper of wind in the sails – the perfect way to make unforgettable memories..on the deck of our traditional wooden boat, built in 1941.",
+        "date": "2023-06-15",
+        "endDate": "2023-08-24",
+        "time": "03:00h",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+        "extractionMethod": "ai",
+        "id": "ai-aminess-korcula-entertainment-2023-06-15-a-private-heritage-sunset-voyage"
+      },
+      "verifierConfidence": 0.5,
+      "verifierConcerns": [
+        "The date '2023-06-15' is mentioned in the source text as the start date of a special offer, but it is not clear if it is the date of the event itself. The event 'A Private Heritage Sunset Voyage' is mentioned as starting at '03:00h' on the same day, which could be the correct date for the event.",
+        "The venue 'Korčula' is mentioned in the source text as the location of the hotel, but it is not clear if it is the specific venue for the event 'A Private Heritage Sunset Voyage'. The source text mentions 'Korčula' as the location for several other events as well.",
+        "The category 'kids' is mentioned in the source text as a category for the event 'A Private Heritage Sunset Voyage', but it is not clear if it is the correct category for the event. The source text mentions 'kids' as a category for several other events as well.",
+        "The time '03:00h' is mentioned in the source text as the start time for the event 'A Private Heritage Sunset Voyage', but it is not clear if it is the correct time for the event. The source text mentions '03:00h' as the start time for several other events as well.",
+        "The source text mentions that the event 'A Private Heritage Sunset Voyage' is a 'Private sunset cruise for up to 10 guests', but it is not clear if this is the correct description for the event. The source text mentions similar descriptions for several other events as well.",
+        "The source text mentions that the event 'A Private Heritage Sunset Voyage' is priced at 'From €460', but it is not clear if this is the correct price for the event. The source text mentions similar prices for several other events as well."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.5"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-aminess-korcula-entertainment-2023-06-15-korcula-vintage-electric-car-tour-with-wine-and-olive-oil-ta",
+      "sourceId": "aminess-korcula-entertainment",
+      "sourceUrl": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+      "discoveredAt": "2026-10-04T11:18:31.118Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Izlet oko otoka Korčule u retro vozilu",
+        "en": "Korčula: Vintage / Electric Car Tour with Wine and Olive Oil Tasting",
+        "de": "Explore Korčula in a vintage car, taste local wines and olive oils, and discover the island's rich history and scenic beauty on this guided tour.",
+        "it": "Explore Korčula in a vintage car, taste local wines and olive oils, and discover the island's rich history and scenic beauty on this guided tour.",
+        "sl": "Izlet oko otoka Korčule v retro vozilu",
+        "fr": "Explore Korčula in a vintage car, taste local wines and olive oils, and discover the island's rich history and scenic beauty on this guided tour.",
+        "date": "2023-06-15",
+        "endDate": "2023-08-24",
+        "time": "03:00h",
+        "town": "smokvica",
+        "venue": "Smokvica",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+        "extractionMethod": "ai",
+        "id": "ai-aminess-korcula-entertainment-2023-06-15-korcula-vintage-electric-car-tour-with-wine-and-olive-oil-ta"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The category 'kids' doesn't match the description of the event. The event seems to be a guided tour, and there's no indication that it's specifically designed for children."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
     }
   ]
 }

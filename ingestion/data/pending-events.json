@@ -9589,6 +9589,1913 @@
       ],
       "duplicateMatches": [],
       "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-korcula-racisce-2026-10-04-cooking-workshops-slow-food-korcula",
+      "sourceId": "visit-korcula-racisce",
+      "sourceUrl": "https://visitkorcula.eu/en/events/summer-in-racisce/",
+      "discoveredAt": "2026-10-05T12:29:43.800Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Kuharstva radionica - Slow Food Korčula",
+        "en": "Cooking Workshops -Slow Food Korčula",
+        "de": "Kochwerkstatt - Slow Food Korčula",
+        "it": "Laboratori di cucina - Slow Food Korčula",
+        "sl": "Kuharska delavnica - Slow Food Korčula",
+        "fr": "Ateliers de cuisine - Slow Food Korčula",
+        "date": "2026-10-04",
+        "endDate": "2026-10-07",
+        "town": "racisce",
+        "venue": "Račišće",
+        "cats": [
+          "food"
+        ],
+        "source": "https://visitkorcula.eu/en/events/summer-in-racisce/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-korcula-racisce-2026-10-04-cooking-workshops-slow-food-korcula"
+      },
+      "verifierConfidence": 0.9,
+      "verifierConcerns": [
+        "The title field appears to be correct, but it's worth noting that the source page text uses the English title 'Cooking Workshops -Slow Food Korčula' in a different format (with a hyphen instead of an en dash). However, the source page text does use the title 'Cooking Workshops -Slow Food Korčula' when describing the event on October 4-7.",
+        "The date field appears to be correct, as the source page text does list the event 'Cooking Workshops -Slow Food Korčula' for the dates October 4-7.",
+        "The venue field appears to be correct, as the source page text does mention 'Račišće' as a location, although it's not explicitly stated as the venue for the event.",
+        "The town field appears to be correct, as the source page text does mention 'Račišće' as a location, which is listed as the town where the event is taking place.",
+        "The category field appears to be correct, as the source page text does list the event under the category 'Gastro'."
+      ],
+      "blockingReasons": [
+        "source-override-always-review"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-korcula-racisce-2026-11-28-flavours-and-scents-of-december",
+      "sourceId": "visit-korcula-racisce",
+      "sourceUrl": "https://visitkorcula.eu/en/events/summer-in-racisce/",
+      "discoveredAt": "2026-10-05T12:29:43.800Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Užitci i mirisi prosinca",
+        "en": "Flavours and Scents of December",
+        "de": "Genüsse und Düfte im Dezember",
+        "it": "Gusti e profumi di dicembre",
+        "sl": "Svoježnjci in vonji decembra",
+        "fr": "Saveurs et parfums de décembre",
+        "date": "2026-11-28",
+        "endDate": "2027-01-01",
+        "town": "racisce",
+        "venue": "Račišće",
+        "cats": [
+          "food"
+        ],
+        "source": "https://visitkorcula.eu/en/events/summer-in-racisce/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-korcula-racisce-2026-11-28-flavours-and-scents-of-december"
+      },
+      "verifierConfidence": 0.7,
+      "verifierConcerns": [
+        "The extracted candidate's date '2026-11-28' is after the date of the event listed on the page '28.11.2026 - 01.01.2027', suggesting that the extracted date may be incorrect or the event may have already occurred."
+      ],
+      "blockingReasons": [
+        "source-override-always-review",
+        "verifier-confidence-below-threshold:0.7"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-centar-kulture-korcula-2026-08-11-for-you",
+      "sourceId": "centar-kulture-korcula",
+      "sourceUrl": "https://kulturakorcula.hr/kino-najave/",
+      "discoveredAt": "2026-10-05T12:29:43.800Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Za tebe",
+        "en": "For You",
+        "de": "Für dich",
+        "it": "Per te",
+        "sl": "Za tebe",
+        "fr": "Pour toi",
+        "date": "2026-08-11",
+        "time": "20:00",
+        "town": "lumbarda",
+        "venue": "Ljetno kino Korčula",
+        "cats": [
+          "film"
+        ],
+        "source": "https://kulturakorcula.hr/kino-najave/",
+        "extractionMethod": "ai",
+        "id": "ai-centar-kulture-korcula-2026-08-11-for-you"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The title 'Za tebe' is also used for another event on the page (KINO MEDITERAN / ZA TEBE / Petak, 21.8., 21:00 / Ljetno kino Korčula). This suggests that the title might be a generic name for the event, rather than a specific title for this event.",
+        "The date '2026-08-11' is listed as the date for the event, but the page also lists other events for August 2026 (e.g. 'KINO / PULA U GOSTIMA / Bijelo se pere na devedeset / ponedjeljak, 20.7., 21:00' is listed as happening on 20.7., not 11.8.). This suggests that the date might be incorrect or that the page is not well-organized.",
+        "The venue 'Ljetno kino Korčula' is listed as the venue for the event, but the page also lists other events happening at the same venue (e.g. 'KINO MEDITERAN / U NEPOZNATO / Petak, 28.8, 21:00 / Ljetno kino Korčula'). This suggests that the venue might be correct, but it's not clear if this event is happening at the same time as the other events.",
+        "The category 'film' is listed as the category for the event, but the page also lists other events that are not films (e.g. 'koncert', 'predavanje', etc.). This suggests that the category might be incorrect or that the page is not well-organized."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-tz-blato-2026-09-02-vo-ena-quad-panoramska-tura",
+      "sourceId": "tz-blato",
+      "sourceUrl": "https://tzo-blato.hr/en/",
+      "discoveredAt": "2026-10-05T12:29:43.800Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Vođena quad panoramska tura",
+        "en": "Led a Quad Panorama Tour",
+        "de": "Führte Quad Panorama-Tour",
+        "it": "Ha guidato una tour quad panoramica",
+        "sl": "Vodil panorama turo za quad",
+        "fr": "A mené une tournée quad panoramique",
+        "date": "2026-09-02",
+        "town": "blato",
+        "venue": "Blato",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://tzo-blato.hr/en/",
+        "extractionMethod": "ai",
+        "id": "ai-tz-blato-2026-09-02-vo-ena-quad-panoramska-tura"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The title 'Vođena quad panoramska tura' and 'Led a Quad Panorama Tour' are not directly adjacent to the date and venue in the source page text. This makes it difficult to confirm that this specific event is being described, rather than the event described in the 'PREGLED B2B' section. However, the date and venue for the event 'Vođena quad panoramska tura' are mentioned in the 'PREGLED B2B' section, and they match the extracted candidate's date and venue.",
+        "The category 'kids' does not match the description of the event in the source page text. The event appears to be a guided panoramic tour, which does not necessarily imply that it is for kids. However, it is possible that the event is part of a broader program that includes activities for kids.",
+        "The event 'Vođena quad panoramska tura' appears to be mentioned in the 'PREGLED B2B' section, which is a separate section from the main events list. This suggests that the event may not be a standalone event, but rather part of a larger program or event series."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-orebic-2026-09-03-with-captain-s-tales-orebic-kicks-off-the-post-season",
+      "sourceId": "visit-orebic",
+      "sourceUrl": "https://visitorebic-croatia.hr/",
+      "discoveredAt": "2026-10-05T12:29:43.800Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "S Captainovim pričama, Orebić započinje postsezonsku sezonu",
+        "en": "With Captain’s Tales, Orebić Kicks Off the Post-Season",
+        "de": "Mit Captains Geschichten, Orebić beginnt die Nachsaison",
+        "it": "null",
+        "sl": "null",
+        "fr": "null",
+        "date": "2026-09-03",
+        "endDate": "null",
+        "town": "orebic",
+        "venue": "Orebić",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitorebic-croatia.hr/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-orebic-2026-09-03-with-captain-s-tales-orebic-kicks-off-the-post-season"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The title field appears to be a direct translation of the page's own text, rather than a paraphrased version. This may indicate that the title field is not independently verified, but rather copied directly from the page. However, the title itself appears to be accurate and consistent with the page's content.",
+        "The date field appears to be accurate, as it matches the date of the event listed in the page's news section.",
+        "The venue field appears to be accurate, as it matches the location listed in the page's news section.",
+        "The category field is listed as 'kids', but the page's content does not specifically mention anything related to children. The category field may be incorrect or incomplete.",
+        "The page's content does not provide any information about the event's time. The time field may be incorrect or incomplete.",
+        "The page's content does not provide any information about the event's town. The town field may be incorrect or incomplete.",
+        "The page's content does not provide any information about the event's category beyond what is listed in the 'cats' field. The category field may be incomplete or incorrect."
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-orebic-2026-06-17-orebic-summer-is-in-full-swing",
+      "sourceId": "visit-orebic",
+      "sourceUrl": "https://visitorebic-croatia.hr/",
+      "discoveredAt": "2026-10-05T12:29:43.800Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Ljetna sezona u Orebiću u punom toku!",
+        "en": "Orebić summer is in full swing!",
+        "de": "Die Sommersaison in Orebić ist in vollem Gange!",
+        "it": "null",
+        "sl": "null",
+        "fr": "null",
+        "date": "2026-06-17",
+        "endDate": "null",
+        "town": "orebic",
+        "venue": "Orebić",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitorebic-croatia.hr/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-orebic-2026-06-17-orebic-summer-is-in-full-swing"
+      },
+      "verifierConfidence": 0.7,
+      "verifierConcerns": [
+        "The 'date' field is actually supported by the source text, but it's a bit unclear whether it's the date of the event or a news article. The surrounding text seems to be a news article about the event, but it doesn't explicitly state the date of the event. However, the date '17.06.2026' appears in the news article, and it seems to match the date in the 'date' field.",
+        "The 'title_en' field seems to be a translation of the 'title_hr' field, but it's not entirely clear. The source text has a title 'Orebić summer is in full swing!' which seems to match the 'title_en' field, but it's not explicitly stated as the title of the event.",
+        "The 'venue' field seems to be supported by the source text, as it mentions 'Orebić' in the news article.",
+        "The 'cats' field is not supported by the source text, as it mentions 'kids' which is not explicitly stated as one of the categories for the event.",
+        "The source text has a section 'Events' which lists several events, but it's not entirely clear which one is the specific event being referred to in the extracted candidate. The date and title of the event seem to match the extracted candidate, but it's not explicitly stated as the title of the event.",
+        "The source text has a section 'News & Blogs' which lists several news articles, but it's not entirely clear which one is the specific news article being referred to in the extracted candidate. The date of the news article seems to match the date in the 'date' field, but it's not explicitly stated as the date of the event.",
+        "The source text has a section 'Let’s connect' which lists several social media links, but it's not entirely clear how they relate to the extracted candidate. The links seem to be general links to social media platforms, rather than specific links to the event or news article."
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.7"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-orebic-2026-03-27-sailing-through-tradition-festival-of-peljesac-captains",
+      "sourceId": "visit-orebic",
+      "sourceUrl": "https://visitorebic-croatia.hr/",
+      "discoveredAt": "2026-10-05T12:29:43.800Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Plivanje kroz tradiciju – Festival kapetana Pelješca",
+        "en": "Sailing Through Tradition – Festival of Pelješac Captains",
+        "de": "Schwimmen durch Tradition – Festival des Kapitäns von Pelješac",
+        "it": "null",
+        "sl": "null",
+        "fr": "null",
+        "date": "2026-03-27",
+        "endDate": "null",
+        "town": "orebic",
+        "venue": "Orebić",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitorebic-croatia.hr/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-orebic-2026-03-27-sailing-through-tradition-festival-of-peljesac-captains"
+      },
+      "verifierConfidence": 0.7,
+      "verifierConcerns": [
+        "The title and date fields seem to be supported by the text near the extracted candidate. The title matches the text 'Sailing Through Tradition – Festival of Pelješac Captains' and the date matches the text '27.03.2026.'",
+        "However, there is a potential issue with the venue field. The extracted candidate states 'Orebić', but the text near the candidate only mentions 'Orebić' as a location, without specifying a venue. It's possible that the venue is actually a different location within Orebić, or that the text is simply not explicit about the venue.",
+        "Additionally, the category field is listed as 'kids', but the text near the candidate does not mention anything about the event being for kids. The event is described as a 'Festival of Pelješac Captains', which suggests a more general audience. It's possible that the category is incorrect or that the text is simply not explicit about the target audience."
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.7"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-orebic-2026-03-10-cycling-through-spring-discover-peljesac-on-two-wheels",
+      "sourceId": "visit-orebic",
+      "sourceUrl": "https://visitorebic-croatia.hr/",
+      "discoveredAt": "2026-10-05T12:29:43.800Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Kolima kroz proljeće: otkrijte Pelješac na dvije kotačke",
+        "en": "Cycling Through Spring: Discover Pelješac on Two Wheels",
+        "de": "Durch Kolima hindurch: Entdecken Sie Pelješac auf zwei Rädern",
+        "it": "null",
+        "sl": "null",
+        "fr": "null",
+        "date": "2026-03-10",
+        "endDate": "null",
+        "town": "orebic",
+        "venue": "Orebić",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitorebic-croatia.hr/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-orebic-2026-03-10-cycling-through-spring-discover-peljesac-on-two-wheels"
+      },
+      "verifierConfidence": 0.4,
+      "verifierConcerns": [
+        "The 'event' field seems to be a list item from a list of news articles. The surrounding text describes 'news & blogs' and lists various articles, including the one being extracted. This makes it unclear whether the extracted text is actually an event or just a news article.",
+        "The 'date' field appears to be a date from a list of past events. The surrounding text lists news articles in chronological order, including the one being extracted. This makes it unclear whether the extracted date is actually the date of the event or just the publication date of the news article.",
+        "The 'venue' field is not explicitly mentioned in the surrounding text. The text does mention 'Orebić' in the context of the municipality and its attractions, but it does not explicitly mention 'Orebić' as the venue for the event.",
+        "The 'town' field is not explicitly mentioned in the surrounding text. The text does mention 'Orebić' as the municipality, but it does not explicitly mention 'Orebić' as the town.",
+        "The 'category' field is listed as 'kids', but the surrounding text does not provide any information that suggests the event is related to children. The text does mention 'cycling' as one of the activities, but it does not provide any information that suggests the event is related to children."
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.4"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-orebic-2026-02-06-htp-korcula-d-d-and-htp-orebic-d-d-officially-merge-with-ami",
+      "sourceId": "visit-orebic",
+      "sourceUrl": "https://visitorebic-croatia.hr/",
+      "discoveredAt": "2026-10-05T12:29:43.800Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "HTP Korčula d.d. i HTP Orebić d.d. službeno spoje se s Aminess",
+        "en": "HTP Korčula d.d. and HTP Orebić d.d. officially merge with Aminess",
+        "de": "HTP Korčula d.d. und HTP Orebić d.d. werden offiziell mit Aminess fusionieren",
+        "it": "null",
+        "sl": "null",
+        "fr": "null",
+        "date": "2026-02-06",
+        "endDate": "null",
+        "town": "orebic",
+        "venue": "Orebić",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitorebic-croatia.hr/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-orebic-2026-02-06-htp-korcula-d-d-and-htp-orebic-d-d-officially-merge-with-ami"
+      },
+      "verifierConfidence": 0.5,
+      "verifierConcerns": [
+        "The date field seems to be well-supported by the text, as there is a news article on the same date (06.02.2026) stating 'HTP Korčula d.d. and HTP Orebić d.d. officially merge with Aminess'.",
+        "However, the category field is 'kids', which doesn't seem to match the context of the news article. The article is about a company merger, not a children's event.",
+        "The venue field is 'Orebić', which is mentioned in the news article as the location where the company merger took place.",
+        "The town field is also 'Orebić', which seems to be well-supported by the text, as the news article mentions the location as 'Orebić'.",
+        "The title field seems to be well-supported by the text, as there is a news article on the same date (06.02.2026) stating 'HTP Korčula d.d. and HTP Orebić d.d. officially merge with Aminess'.",
+        "However, the extracted candidate's title is in English, while the news article is in Croatian. While it's possible that the English title is a translation, it's not explicitly stated in the text.",
+        "The extracted candidate's title also includes the phrase 'officially merge with Aminess', which is not present in the news article. While it's possible that the news article is paraphrasing the event, the extracted candidate's title seems to be a more detailed summary of the event.",
+        "Overall, while there are some concerns with the category and title fields, the date, venue, and town fields seem to be well-supported by the text."
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.5"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-orebic-2025-11-26-half-a-century-of-the-dingac-tunnel",
+      "sourceId": "visit-orebic",
+      "sourceUrl": "https://visitorebic-croatia.hr/",
+      "discoveredAt": "2026-10-05T12:29:43.800Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Polovicu stoljeća tunela Dingač",
+        "en": "Half a Century of the Dingač Tunnel",
+        "de": "Zum halben Jahrtausend des Dingač-Tunnels",
+        "it": "null",
+        "sl": "null",
+        "fr": "null",
+        "date": "2025-11-26",
+        "endDate": "null",
+        "town": "orebic",
+        "venue": "Orebić",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitorebic-croatia.hr/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-orebic-2025-11-26-half-a-century-of-the-dingac-tunnel"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The source page lists multiple events, but the extracted candidate's date field matches the date of one of the events listed on the page. However, the event title field in the extracted candidate does not match the title of the event listed on the page. The source page lists 'Half a Century of the Dingač Tunnel' as an event, but the extracted candidate's title field is 'Half a Century of the Dingač Tunnel', which is actually the title of the event, but the title is in English. The source page lists the event in Croatian as 'Polovicu stoljeća tunela Dingač'.",
+        "The extracted candidate's category field is 'kids', but the source page does not describe the event as being for kids. The event is actually a historical event commemorating the opening of the Dingač tunnel, and it does not appear to be a family-friendly event.",
+        "The extracted candidate's venue field is 'Orebić', but the source page lists the event as being located in 'Potomje-Dingač', which is a specific location within the municipality of Orebić. The extracted candidate's venue field could be more specific.",
+        "The extracted candidate's date field is '2025-11-26', but the source page lists the event as having taken place in 2025, but does not specify the exact date. The extracted candidate's date field is likely correct, but it is not explicitly stated on the source page.",
+        "The extracted candidate's time field is not present in the source page, which is not a concern as the time is not explicitly stated on the source page.",
+        "The extracted candidate's town field is 'orebic', but the source page lists the event as being located in 'Orebić', which is the same name, but with a capital letter. The extracted candidate's town field could be more consistent with the source page.",
+        "The source page lists multiple events, but the extracted candidate's fields do not match any of the events listed on the page in terms of the category. The source page lists multiple categories such as 'culture & history', 'excursions', 'rental', etc., but the extracted candidate's category field is 'kids', which does not match any of the categories listed on the source page."
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-orebic-2025-11-12-open-days-of-peljesac-wine-cellars-2025",
+      "sourceId": "visit-orebic",
+      "sourceUrl": "https://visitorebic-croatia.hr/",
+      "discoveredAt": "2026-10-05T12:29:43.800Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Otvorene dane vinogradarskih kleti Pelješca 2025.",
+        "en": "Open Days of Pelješac Wine Cellars 2025",
+        "de": "Eröffnungstage der Weinkelter auf Pelješac 2025",
+        "it": "null",
+        "sl": "null",
+        "fr": "null",
+        "date": "2025-11-12",
+        "endDate": "null",
+        "town": "orebic",
+        "venue": "Orebić",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitorebic-croatia.hr/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-orebic-2025-11-12-open-days-of-peljesac-wine-cellars-2025"
+      },
+      "verifierConfidence": 0.5,
+      "verifierConcerns": [
+        "The title 'Open Days of Pelješac Wine Cellars 2025' is not explicitly mentioned on the page. The page lists several events, but the title of this specific event is not clearly stated.",
+        "The date '2025-11-12' is mentioned in the extracted candidate, but it's not explicitly stated on the page. The page lists several events with their dates, but this specific date is not mentioned next to the event title.",
+        "The venue 'Orebić' is mentioned in the extracted candidate, but it's not explicitly stated on the page. The page mentions Orebić as a destination, but it's not clearly stated as the venue for this specific event.",
+        "The category 'kids' is mentioned in the extracted candidate, but it's not explicitly stated on the page. The page lists several events, but the category of this specific event is not clearly stated."
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.5"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-orebic-2025-09-17-in-love-with-orebic-since-1969",
+      "sourceId": "visit-orebic",
+      "sourceUrl": "https://visitorebic-croatia.hr/",
+      "discoveredAt": "2026-10-05T12:29:43.800Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "U ljubavi s Orebićem od 1969.",
+        "en": "In Love with Orebić Since 1969",
+        "de": "Seit 1969 in Liebe mit Orebić",
+        "it": "null",
+        "sl": "null",
+        "fr": "null",
+        "date": "2025-09-17",
+        "endDate": "null",
+        "town": "orebic",
+        "venue": "Orebić",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitorebic-croatia.hr/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-orebic-2025-09-17-in-love-with-orebic-since-1969"
+      },
+      "verifierConfidence": 0.5,
+      "verifierConcerns": [
+        "The extracted candidate contains a date field of 2025-09-17, which is near the extracted candidate but actually appears below it in the source page's event list. The source page's own date for the 'In Love with Orebić Since 1969' event is actually listed as 17.09.2025. This discrepancy may indicate that the extracted candidate's date field was misread or not well-supported by the source page's text.",
+        "The extracted candidate contains a title field of 'In Love with Orebić Since 1969', which is actually a direct quote from the source page's event description. This may indicate that the extracted candidate's title field was embellished beyond what the source page's text actually says.",
+        "The extracted candidate contains a venue field of 'Orebić', which is actually a town name mentioned in the source page's text. However, the source page's own event description does not explicitly state that the event takes place in 'Orebić'. This may indicate that the extracted candidate's venue field was not well-supported by the source page's text.",
+        "The extracted candidate contains a category field of 'kids', which is not mentioned anywhere in the source page's text. This may indicate that the extracted candidate's category field was not well-supported by the source page's text."
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.5"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-orebic-2025-08-25-wine-and-sunsets-on-peljesac",
+      "sourceId": "visit-orebic",
+      "sourceUrl": "https://visitorebic-croatia.hr/",
+      "discoveredAt": "2026-10-05T12:29:43.800Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Vino i zalaze sunca na Pelješcu",
+        "en": "Wine and Sunsets on Pelješac",
+        "de": "Wein und Sonnenuntergang auf Pelješac",
+        "it": "null",
+        "sl": "null",
+        "fr": "null",
+        "date": "2025-08-25",
+        "endDate": "null",
+        "town": "orebic",
+        "venue": "Orebić",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitorebic-croatia.hr/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-orebic-2025-08-25-wine-and-sunsets-on-peljesac"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The title contains a translation in English, but the source page does not explicitly state that the event title is translated. It could be that the title is simply written in both languages.",
+        "The date field is supported by the source page, but the event title also contains the date '2025-08-25'. This could indicate that the date field is redundant.",
+        "The category field is set to 'kids', but the source page does not explicitly mention children or family-friendly activities in the context of this event. The category could be incorrect.",
+        "The venue field is set to 'Orebić', but the source page lists several locations on the Pelješac peninsula. It is unclear if this event is actually taking place in Orebić or if it is a more general event for the peninsula.",
+        "The town field is set to 'Orebić', but the source page does not explicitly state that the event is taking place in Orebić. The town field could be incorrect or redundant.",
+        "The source page contains a list of news and events, but it is unclear if the extracted candidate is actually a real event or if it is a generic news article or advertisement."
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-orebic-2025-07-17-sun-sea-and-a-summer-full-of-events",
+      "sourceId": "visit-orebic",
+      "sourceUrl": "https://visitorebic-croatia.hr/",
+      "discoveredAt": "2026-10-05T12:29:43.800Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Sunce, more i ljetopis pun događanja",
+        "en": "Sun, Sea and a Summer Full of Events",
+        "de": "Sonne, Meer und ein umfassender Bericht über alles, was passiert",
+        "it": "null",
+        "sl": "null",
+        "fr": "null",
+        "date": "2025-07-17",
+        "endDate": "null",
+        "town": "orebic",
+        "venue": "Orebić",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitorebic-croatia.hr/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-orebic-2025-07-17-sun-sea-and-a-summer-full-of-events"
+      },
+      "verifierConfidence": 0.4,
+      "verifierConcerns": [
+        "The extracted-candidate contains a date of 2025-07-17, but the source-page-text contains an event listing for 'Sun, Sea and a Summer Full of Events' with a date of 17.07.2025. This discrepancy suggests that the extracted-candidate's date may be incorrect or incomplete.",
+        "The extracted-candidate's title is 'Sun, Sea and a Summer Full of Events', but the source-page-text does not contain this exact title. Instead, it contains a similar title 'Sun, Sea and a Summer Full of Events' with a date of 17.07.2025. This discrepancy suggests that the extracted-candidate's title may be incorrect or incomplete.",
+        "The extracted-candidate's venue is 'Orebić', but the source-page-text does not contain this exact venue. Instead, it contains a similar venue 'Orebić' with a date of 17.07.2025. This discrepancy suggests that the extracted-candidate's venue may be incorrect or incomplete.",
+        "The extracted-candidate's category is 'kids', but the source-page-text does not contain any information about an event for kids on 17.07.2025. This discrepancy suggests that the extracted-candidate's category may be incorrect or incomplete.",
+        "The extracted-candidate does not contain any information about the time of the event, but the source-page-text contains a weather forecast with a time range of 06:53 to 18:26 CEST. This discrepancy suggests that the extracted-candidate's time may be missing or incorrect.",
+        "The extracted-candidate's town is 'Orebić', but the source-page-text does not contain this exact town. Instead, it contains a similar town 'Orebić' with a date of 17.07.2025. This discrepancy suggests that the extracted-candidate's town may be incorrect or incomplete.",
+        "The extracted-candidate does not contain any information about the organizer of the event, but the source-page-text contains an event listing for 'Pelješac Wineries Open Days' with an organizer 'Pelješac Wine Routes Association'. This discrepancy suggests that the extracted-candidate's organizer may be missing or incorrect.",
+        "The extracted-candidate does not contain any information about the place of the event, but the source-page-text contains an event listing for 'Pelješac Wineries Open Days' with a place 'Peljesac'. This discrepancy suggests that the extracted-candidate's place may be missing or incorrect.",
+        "The extracted-candidate does not contain any information about the end date of the event, but the source-page-text contains an event listing for 'Pelješac Wineries Open Days' with an end date '06 Dec 2026'. This discrepancy suggests that the extracted-candidate's end date may be missing or incorrect."
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.4"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-orebic-2025-02-10-wild-plants-of-the-peljesac-peninsula",
+      "sourceId": "visit-orebic",
+      "sourceUrl": "https://visitorebic-croatia.hr/",
+      "discoveredAt": "2026-10-05T12:29:43.800Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Divlje bilje Pelješačke pokrajine",
+        "en": "Wild Plants of the Peljesac Peninsula",
+        "de": "Wildpflanzen der Peljesac-Region",
+        "it": "null",
+        "sl": "null",
+        "fr": "null",
+        "date": "2025-02-10",
+        "endDate": "null",
+        "town": "orebic",
+        "venue": "Orebić",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitorebic-croatia.hr/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-orebic-2025-02-10-wild-plants-of-the-peljesac-peninsula"
+      },
+      "verifierConfidence": 0.5,
+      "verifierConcerns": [
+        "The date '2025-02-10' does not appear to be well-supported by the source text. The closest date mentioned is '10.02.2025' which is in the same format as the extracted candidate's date field, but it is not clear if this is the same event.",
+        "The title 'Wild Plants of the Peljesac Peninsula' does not appear to be well-supported by the source text. The source text mentions 'Wild Plants of the Peljesac Peninsula' as a blog post title, but it does not explicitly mention it as an event title.",
+        "The venue 'Orebić' does not appear to be well-supported by the source text. The source text mentions 'Orebić' as a destination, but it does not explicitly mention it as the venue for the event.",
+        "The category 'kids' does not appear to be well-supported by the source text. The source text does not mention 'kids' as a category for the event.",
+        "The source text contains a large amount of unrelated content, including news articles, event listings, and advertisements. It is not clear how much of this content is relevant to the extracted candidate."
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.5"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-orebic-2024-12-02-winter-magic-on-peljesac-visit-advent-in-orebic",
+      "sourceId": "visit-orebic",
+      "sourceUrl": "https://visitorebic-croatia.hr/",
+      "discoveredAt": "2026-10-05T12:29:43.800Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Zimska magija na Pelješcu: posjetite Božić u Orebiću!",
+        "en": "Winter Magic on Pelješac: Visit Advent in Orebić!",
+        "de": "Winterzauber auf Peljesac: Besuchen Sie Weihnachten in Orebić!",
+        "it": "null",
+        "sl": "null",
+        "fr": "null",
+        "date": "2024-12-02",
+        "endDate": "null",
+        "town": "orebic",
+        "venue": "Orebić",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitorebic-croatia.hr/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-orebic-2024-12-02-winter-magic-on-peljesac-visit-advent-in-orebic"
+      },
+      "verifierConfidence": 0.7,
+      "verifierConcerns": [
+        "The source page has a date December 2, 2024, listed in a blog post 'Winter Magic on Pelješac: Visit Advent in Orebić!' which is the same date as the extracted candidate's date. This suggests that the extracted candidate's date is likely correct, but it's worth noting that the source page does not explicitly state that this is a one-time event, and the title of the blog post suggests that it might be a recurring event. ",
+        "The extracted candidate's title 'Winter Magic on Pelješac: Visit Advent in Orebić!' matches the title of the blog post on the source page, which suggests that the extracted candidate's title is likely correct. However, it's worth noting that the title of the blog post is in a promotional style, and the extracted candidate's title is more neutral. ",
+        "The extracted candidate's venue 'Orebić' matches the location of the source page, which suggests that the extracted candidate's venue is likely correct. However, it's worth noting that the source page does not explicitly state that this event is taking place in Orebić, and the location is mentioned in a general context. ",
+        "The extracted candidate's category 'kids' does not match the content of the source page, which suggests that the extracted candidate's category might be incorrect. The source page does not mention 'kids' at all, and the event appears to be a general winter festival. ",
+        "The source page has a navigation menu that includes links to other pages, but it does not appear to be a generic recurring notice or an advertisement. However, the source page does have a lot of promotional content, which could potentially be misleading. "
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.7"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-orebic-2024-10-28-preparation-for-hiking-on-st-ilija-advice-and-safety-measure",
+      "sourceId": "visit-orebic",
+      "sourceUrl": "https://visitorebic-croatia.hr/",
+      "discoveredAt": "2026-10-05T12:29:43.800Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Priprema za planinarenje na St. Iliji: savjeti i sigurnosne mjere",
+        "en": "Preparation for hiking on St. Ilija: Advice and safety measures",
+        "de": "Vorbereitung für Bergsteigen an St. Ilija: Tipps und Sicherheitsmaßnahmen",
+        "it": "null",
+        "sl": "null",
+        "fr": "null",
+        "date": "2024-10-28",
+        "endDate": "null",
+        "town": "orebic",
+        "venue": "Orebić",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitorebic-croatia.hr/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-orebic-2024-10-28-preparation-for-hiking-on-st-ilija-advice-and-safety-measure"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The 'date' field is not well-supported by the source text, as the page lists many dates in the 'Events' section, but the specific date of 2024-10-28 is not highlighted or emphasized in any way. It is possible that this date is incorrect or that the event has already taken place.",
+        "The 'title_en' field contains a phrase that is not a direct translation of the 'title_hr' field. While the title is generally accurate, the English translation appears to be more detailed and descriptive than the Croatian title.",
+        "The 'cats' field contains the category 'kids', which does not appear to be relevant to the event description. The event description focuses on hiking and safety measures, which does not suggest that the event is geared towards children.",
+        "The 'venue' field is well-supported by the source text, as the page mentions Orebić as a destination and lists it as a possible location for various events.",
+        "The 'town' field is well-supported by the source text, as the page mentions Orebić as a town and lists it as a possible location for various events.",
+        "The 'category' field is not well-supported by the source text, as the event description focuses on hiking and safety measures, but the category 'kids' does not seem to be relevant to the event.",
+        "The 'endDate' field is not well-supported by the source text, as the page does not provide any information about the event's end date.",
+        "The source page contains a lot of unrelated content, including news articles, weather forecasts, and information about cookies. While this content is not directly relevant to the event, it does suggest that the page is not focused primarily on the event.",
+        "The source page contains a lot of promotional content, including information about tourist agencies and accommodations. While this content is not directly relevant to the event, it does suggest that the page is trying to promote Orebić as a tourist destination."
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-orebic-2024-09-04-peljesac-wine-peninsula",
+      "sourceId": "visit-orebic",
+      "sourceUrl": "https://visitorebic-croatia.hr/",
+      "discoveredAt": "2026-10-05T12:29:43.800Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Pelješac, vinska pokrajina",
+        "en": "Pelješac, Wine Peninsula",
+        "de": "Pelješac, Weinstadt",
+        "it": "null",
+        "sl": "null",
+        "fr": "null",
+        "date": "2024-09-04",
+        "endDate": "null",
+        "town": "orebic",
+        "venue": "Orebić",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitorebic-croatia.hr/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-orebic-2024-09-04-peljesac-wine-peninsula"
+      },
+      "verifierConfidence": 0.4,
+      "verifierConcerns": [
+        "The title 'Pelješac, Wine Peninsula' appears to be a phrase used in the promotional text, not the actual title of the event. The source page text does not explicitly state that 'Pelješac, Wine Peninsula' is the title of the event, but rather it appears to be a descriptive phrase used in the promotional text.",
+        "The date '2024-09-04' appears to be a specific date mentioned in one of the news articles on the page, but it is not explicitly stated as the date of the event. The source page text does not provide clear evidence that this date is associated with the event listed in the extracted candidate.",
+        "The venue 'Orebić' is mentioned in the promotional text, but it is not explicitly stated as the venue of the event. The source page text does not provide clear evidence that Orebić is the venue of the event listed in the extracted candidate.",
+        "The category 'kids' does not appear to be a relevant category for the event. The source page text does not provide clear evidence that the event is suitable for children or that it is a family-friendly event.",
+        "The source page text contains a section with events, but the events listed are not clearly associated with the event listed in the extracted candidate. The events listed in the source page text appear to be a collection of events, and it is not clear which one is the event listed in the extracted candidate."
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.4"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-orebic-2024-06-18-eventful-hot-summer-in-orebic",
+      "sourceId": "visit-orebic",
+      "sourceUrl": "https://visitorebic-croatia.hr/",
+      "discoveredAt": "2026-10-05T12:29:43.800Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Događajni vrući ljetopis u Orebiću",
+        "en": "Eventful hot summer in Orebić",
+        "de": "Ereignislicher Heißsommer in Orebić",
+        "it": "null",
+        "sl": "null",
+        "fr": "null",
+        "date": "2024-06-18",
+        "endDate": "null",
+        "town": "orebic",
+        "venue": "Orebić",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitorebic-croatia.hr/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-orebic-2024-06-18-eventful-hot-summer-in-orebic"
+      },
+      "verifierConfidence": 0.4,
+      "verifierConcerns": [
+        "The title 'Eventful hot summer in Orebić' seems to be a blog post title, and not a specific event title. This might indicate that the extracted fields are actually describing a general event category or season, rather than a specific event.",
+        "The date '2024-06-18' appears to be a date mentioned in the blog post text, but it's not clear if this is the date of the event being described, or just a random date mentioned in the text.",
+        "The 'kids' category seems to be mentioned in the blog post text, but it's not clear if this is a category for the event, or just a general interest category.",
+        "The venue 'Orebić' seems to be a general location mentioned in the blog post text, but it's not clear if this is the specific venue for the event being described, or just a general location.",
+        "The extracted fields do not seem to be well-supported by the text near this listing. The text appears to be a general blog post about the summer in Orebić, and not a specific event listing.",
+        "The 'endDate' field is set to 'null', which suggests that the event has already happened, or that the page does not provide a specific end date for the event.",
+        "The page text contains a lot of unrelated sections, including a privacy policy, cookie policy, and navigation links. While this is not necessarily a concern, it does suggest that the page is not primarily an event listing page."
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.4"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-orebic-2024-04-26-peljesac-captains-festival-this-is-the-best-prelude-to-summe",
+      "sourceId": "visit-orebic",
+      "sourceUrl": "https://visitorebic-croatia.hr/",
+      "discoveredAt": "2026-10-05T12:29:43.800Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Festival kapetana Pelješca – ovaj je najbolji uvod u ljeto!",
+        "en": "Pelješac Captains Festival – This is the best prelude to summer!",
+        "de": "Festival des Kapitäns von Pelješac – das ist der beste Einlass ins Sommer!",
+        "it": "null",
+        "sl": "null",
+        "fr": "null",
+        "date": "2024-04-26",
+        "endDate": "null",
+        "town": "orebic",
+        "venue": "Orebić",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitorebic-croatia.hr/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-orebic-2024-04-26-peljesac-captains-festival-this-is-the-best-prelude-to-summe"
+      },
+      "verifierConfidence": 0.7,
+      "verifierConcerns": [
+        "The category 'kids' is not supported by the text near the extracted candidate. The source page text mentions various events and activities, but 'kids' is not a clear match for any of them. The closest match is the 'Pelješac Captains Festival', which is mentioned in the source page text, but it does not explicitly mention 'kids'.",
+        "The extracted candidate's date '2024-04-26' is not supported by the text near the extracted candidate. The source page text mentions various events with their dates, but '2024-04-26' is not explicitly mentioned near the extracted candidate. However, the source page text does mention an event 'Pelješac Captains Festival – This is the best prelude to summer!' with the date '26.04.2024' in a news article, which seems to be a match for the extracted candidate's date.",
+        "The extracted candidate's title 'Pelješac Captains Festival – This is the best prelude to summer!' is not supported by the text near the extracted candidate. The source page text mentions various events and activities, but the title 'Pelješac Captains Festival – This is the best prelude to summer!' is not explicitly mentioned near the extracted candidate. However, the source page text does mention an event 'Pelješac Captains Festival – This is the best prelude to summer!' in a news article, which seems to be a match for the extracted candidate's title.",
+        "The extracted candidate's venue 'Orebić' is not supported by the text near the extracted candidate. The source page text mentions various events and activities, but the venue 'Orebić' is not explicitly mentioned near the extracted candidate. However, the source page text does mention Orebić as a destination, which seems to be a match for the extracted candidate's venue.",
+        "The extracted candidate's town 'Orebić' is not supported by the text near the extracted candidate. The source page text mentions various events and activities, but the town 'Orebić' is not explicitly mentioned near the extracted candidate. However, the source page text does mention Orebić as a destination, which seems to be a match for the extracted candidate's town."
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.7"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-orebic-2024-03-15-with-these-seven-tips-spend-an-unforgettable-spring-in-pelje",
+      "sourceId": "visit-orebic",
+      "sourceUrl": "https://visitorebic-croatia.hr/",
+      "discoveredAt": "2026-10-05T12:29:43.800Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "S ovim sedam savjeta, provećite nepozabranu proljeće na Pelješcu!",
+        "en": "With these seven tips, spend an unforgettable spring in Pelješac!",
+        "de": "Mit diesen sieben Tipps, genießen Sie ein unvergessliches Frühjahr auf Pelješac!",
+        "it": "null",
+        "sl": "null",
+        "fr": "null",
+        "date": "2024-03-15",
+        "endDate": "null",
+        "town": "orebic",
+        "venue": "Orebić",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitorebic-croatia.hr/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-orebic-2024-03-15-with-these-seven-tips-spend-an-unforgettable-spring-in-pelje"
+      },
+      "verifierConfidence": 0.5,
+      "verifierConcerns": [
+        "The extracted candidate lists a date of 2024-03-15, but the source page lists an event titled 'With these seven tips, spend an unforgettable spring in Pelješac!' on 15.03.2024. This suggests that the date of the event is actually 2024-03-15, but the source page uses a different date format. However, the extracted candidate's date field matches the source page's date format, so this is not a concern.",
+        "The extracted candidate lists a venue of 'Orebić', but the source page lists a venue of 'Pelješac' for the same event. This could be a concern, but it's possible that 'Pelješac' is a more general term that encompasses the town of 'Orebić'. Without more context, it's difficult to say for sure.",
+        "The extracted candidate lists a category of 'kids', but the source page does not mention this category. The source page does mention 'Gastro guide', 'Wine tasting', and other categories, but not 'kids'. This is a concern, as the extracted candidate's category field does not match the source page's content.",
+        "The source page lists a number of events, including 'Pelješac Captains Festival – This is the best prelude to summer!' and 'Orebić celebrates 120 years of tourism!'. However, the extracted candidate only lists a single event, which suggests that it may have been extracted from a specific section of the source page rather than the entire page. This is not a concern, as the extracted candidate's fields match the source page's content in this section.",
+        "The source page lists a number of dates, including '04.09.2024' and '18.06.2024'. However, the extracted candidate only lists a single date, which suggests that it may have been extracted from a specific section of the source page rather than the entire page. This is not a concern, as the extracted candidate's date field matches the source page's content in this section.",
+        "The source page lists a number of events, including 'Pelješac Wineries Open Days' and 'Kunovo Christmas Traditions'. However, the extracted candidate does not list these events. This is a concern, as the extracted candidate's fields do not match the source page's content.",
+        "The source page lists a number of categories, including 'Culture & History' and 'Outdoor'. However, the extracted candidate only lists a single category, which suggests that it may have been extracted from a specific section of the source page rather than the entire page. This is not a concern, as the extracted candidate's category field matches the source page's content in this section.",
+        "The source page lists a number of dates, including '04 Dec 2026' and '28 Dec 2026'. However, the extracted candidate's date field is '2024-03-15', which is not among the dates listed on the source page. This is a concern, as the extracted candidate's date field does not match the source page's content."
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.5"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-orebic-2023-12-28-orebic-celebrates-120-years-of-tourism",
+      "sourceId": "visit-orebic",
+      "sourceUrl": "https://visitorebic-croatia.hr/",
+      "discoveredAt": "2026-10-05T12:29:43.800Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Orebić slavi 120 godina turizma!",
+        "en": "Orebić celebrates 120 years of tourism!",
+        "de": "Orebić feiert 120 Jahre Tourismus!",
+        "it": "null",
+        "sl": "null",
+        "fr": "null",
+        "date": "2023-12-28",
+        "endDate": "null",
+        "town": "orebic",
+        "venue": "Orebić",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitorebic-croatia.hr/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-orebic-2023-12-28-orebic-celebrates-120-years-of-tourism"
+      },
+      "verifierConfidence": 0.5,
+      "verifierConcerns": [
+        "The title field contains a celebratory phrase ('Orebić celebrates 120 years of tourism!') which may be a translation of a more formal title that appears on the page. The source page contains a section titled 'Events', but the actual title of the event is not explicitly stated. A more formal title may appear on the page, potentially contradicting the candidate's title.",
+        "The date field ('2023-12-28') is listed in the candidate's extracted information, but this date is actually listed as the date of a past event ('Orebić celebrates 120 years of tourism!') on the source page. This could indicate that the candidate's date is incorrect, or that the event is a recurring one with multiple dates. Further investigation is needed to confirm the accuracy of this date.",
+        "The venue field ('Orebić') appears to be accurate based on the source page's content. However, it is worth noting that the source page contains multiple destinations and events, and the candidate's venue may not be the only possible match.",
+        "The category field ('kids') appears to be inaccurate based on the source page's content. The source page does not mention anything related to kids or family activities, and the category 'kids' seems to be an incorrect match.",
+        "The source page contains a section titled 'Events' with multiple dates listed. However, the candidate's extracted information only contains one date, which may indicate that the event is a recurring one with multiple dates. Further investigation is needed to confirm the accuracy of this information."
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.5"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-orebic-2023-11-06-2023-peljesac-wine-cellar-open-days",
+      "sourceId": "visit-orebic",
+      "sourceUrl": "https://visitorebic-croatia.hr/",
+      "discoveredAt": "2026-10-05T12:29:43.800Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Otvorene dane vinogradarskih kleti Pelješca 2023.",
+        "en": "2023 Pelješac Wine Cellar Open Days",
+        "de": "Eröffnungstag der Weinbergkeller von Pelješac 2023",
+        "it": "null",
+        "sl": "null",
+        "fr": "null",
+        "date": "2023-11-06",
+        "endDate": "null",
+        "town": "orebic",
+        "venue": "Orebić",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitorebic-croatia.hr/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-orebic-2023-11-06-2023-peljesac-wine-cellar-open-days"
+      },
+      "verifierConfidence": 0.4,
+      "verifierConcerns": [
+        "The title field contains a date ('2023') which may be part of the actual title, but it's not clear if it's part of the title or a separate piece of information.",
+        "The category field is set to 'kids', but the source page doesn't mention anything about kids. The actual category is likely 'Wines and wineries' or 'Gastro guide' based on the text.",
+        "The venue field is set to 'Orebić', but the source page mentions 'Pelješac' as the location of the event, not just the town of Orebić.",
+        "The date field is set to '2023-11-06', but the source page lists a news article from '06.11.2023' which seems to be the same date. However, it's not clear if this is the actual date of the event or just a coincidence.",
+        "The source page contains a lot of unrelated text, including news articles and weather forecasts. However, it's not clear if this is a separate section from the event listings or if it's all part of the same content.",
+        "The event title '2023 Pelješac Wine Cellar Open Days' seems to be a generic title and not a direct quote from the source page. The source page mentions 'Open Days of Pelješac Wine Cellars 2025' and '2023 Pelješac Wine Cellar Open Days' in different news articles, but it's not clear if this is the actual title of the event."
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.4"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-orebic-2023-09-21-an-autumn-to-remember-on-peljesac",
+      "sourceId": "visit-orebic",
+      "sourceUrl": "https://visitorebic-croatia.hr/",
+      "discoveredAt": "2026-10-05T12:29:43.800Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Jesen koju će se zapamtiti na Pelješcu",
+        "en": "An autumn to remember on Pelješac",
+        "de": "Ein Herbst, der auf Pelješac noch lange in Erinnerung bleiben wird",
+        "it": "null",
+        "sl": "null",
+        "fr": "null",
+        "date": "2023-09-21",
+        "endDate": "null",
+        "town": "orebic",
+        "venue": "Orebić",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitorebic-croatia.hr/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-orebic-2023-09-21-an-autumn-to-remember-on-peljesac"
+      },
+      "verifierConfidence": 0.5,
+      "verifierConcerns": [
+        "The extracted candidate lists a date of '2023-09-21', but the source page lists an event titled 'An autumn to remember on Pelješac' with a date of '21.09.2023'. The dates appear to match, but the source page lists the date in a 'dd.mm.yyyy' format, while the extracted candidate lists it in 'yyyy-mm-dd' format. However, this discrepancy is not a major concern, as the dates are still identical. ",
+        "The extracted candidate lists a venue of 'Orebić', which is also listed on the source page as a destination. However, the source page lists several events with different venues, including 'Peljesac' and 'Kuna'. It is unclear whether the extracted candidate's venue is specific to this event or if it is a general location. ",
+        "The extracted candidate lists a category of 'kids', but the source page does not mention this category in relation to the event. The source page lists several events under the category 'culture & history', but it is unclear whether the extracted candidate's event falls under this category. ",
+        "The extracted candidate lists a title of 'An autumn to remember on Pelješac', which is also listed on the source page. However, the source page lists several events with similar titles, including 'Wine and Sunsets on Pelješac' and 'Pelješac Captains Festival'. It is unclear whether the extracted candidate's title is specific to this event or if it is a general description of the location. ",
+        "The extracted candidate does not list a time, but the source page lists several events with times, including 'Pelješac Wineries Open Days' and 'Kunovo Christmas Traditions'. It is unclear whether the extracted candidate's event has a specific time or if it is a general event. "
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.5"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-orebic-2023-08-11-concert-prljavo-kazaliste-8-8-2023",
+      "sourceId": "visit-orebic",
+      "sourceUrl": "https://visitorebic-croatia.hr/",
+      "discoveredAt": "2026-10-05T12:29:43.800Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Koncert “Prljavo kazaliste” 8.8.2023.",
+        "en": "Concert “Prljavo kazaliste” 8.8.2023.",
+        "de": "Konzert",
+        "it": "null",
+        "sl": "null",
+        "fr": "null",
+        "date": "2023-08-11",
+        "endDate": "null",
+        "town": "orebic",
+        "venue": "Orebić",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitorebic-croatia.hr/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-orebic-2023-08-11-concert-prljavo-kazaliste-8-8-2023"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The date in the candidate is 2023-08-11, but the event 'Concert “Prljavo kazaliste” 8.8.2023.' seems to be referring to an event that occurred on August 8, 2023, not August 11, 2023. This discrepancy raises concerns about the accuracy of the candidate's date field.",
+        "The title field contains the phrase '8.8.2023', which appears to be a date rather than the actual title of the event. This suggests that the title field may be misleading or incorrect.",
+        "The category field is set to 'kids', but the source page does not appear to mention anything about the event being suitable for children. This discrepancy raises concerns about the accuracy of the candidate's category field.",
+        "The venue field is set to 'Orebić', but the source page does not explicitly state that the event took place in Orebić. While it is possible that the event did take place in Orebić, the lack of explicit confirmation raises concerns about the accuracy of the candidate's venue field."
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-orebic-2023-07-20-night-of-the-old-orebic-2023",
+      "sourceId": "visit-orebic",
+      "sourceUrl": "https://visitorebic-croatia.hr/",
+      "discoveredAt": "2026-10-05T12:29:43.800Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Noć stare Orebića 2023",
+        "en": "Night of the old Orebic 2023",
+        "de": "Nacht der alten Orebić 2023",
+        "it": "null",
+        "sl": "null",
+        "fr": "null",
+        "date": "2023-07-20",
+        "endDate": "null",
+        "town": "orebic",
+        "venue": "Orebić",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitorebic-croatia.hr/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-orebic-2023-07-20-night-of-the-old-orebic-2023"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The extracted candidate's title contains translated text, but it's unclear if the original title on the page is in Croatian or another language. This could be a problem if the translation is incorrect or incomplete. However, the translated title is provided, so this is not a major concern.",
+        "The date field is well-supported by the source page text, as the 'Events' section lists the 'Night of the old Orebic 2023' event on 20.07.2023.",
+        "The 'kids' category is not explicitly mentioned in the source page text, but it's possible that it's inferred from the description of the event. However, without explicit confirmation, this is a minor concern.",
+        "The 'venue' field is well-supported by the source page text, as the 'Night of the old Orebic 2023' event is listed under the 'Orebić' destination.",
+        "The 'town' field is well-supported by the source page text, as the 'Orebić' destination is listed under the 'Explore' section."
+      ],
+      "blockingReasons": [
+        "fuzzy-duplicate"
+      ],
+      "duplicateMatches": [
+        {
+          "eventId": "or-noc-starog",
+          "title": "Night of Old Orebić",
+          "date": "2026-07-21",
+          "time": "20:00",
+          "venue": "Orebić (grad)",
+          "score": 0.8,
+          "reasons": [
+            "date within existing range",
+            "same town",
+            "similar venue",
+            "similar title"
+          ]
+        }
+      ],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-orebic-2023-06-16-an-impressive-three-national-championships-in-viganj-this-ye",
+      "sourceId": "visit-orebic",
+      "sourceUrl": "https://visitorebic-croatia.hr/",
+      "discoveredAt": "2026-10-05T12:29:43.800Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Tri nacionalna prvenstva u Viganju ove godine!",
+        "en": "An impressive three national championships in Viganj this year!",
+        "de": "Drei nationale Meisterschaften in Viganj dieses Jahr!",
+        "it": "null",
+        "sl": "null",
+        "fr": "null",
+        "date": "2023-06-16",
+        "endDate": "null",
+        "town": "orebic",
+        "venue": "Orebić",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitorebic-croatia.hr/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-orebic-2023-06-16-an-impressive-three-national-championships-in-viganj-this-ye"
+      },
+      "verifierConfidence": 0.7,
+      "verifierConcerns": [
+        "The extracted candidate's date (2023-06-16) does not match the source page's date (16.06.2023) which is in the format 'day.month.year'. This could be a simple formatting error, but it's worth noting.",
+        "The extracted candidate's title is 'An impressive three national championships in Viganj this year!', which is almost identical to the source page's title. However, the source page's title is a direct quote from the event, whereas the extracted candidate's title is a slightly more elaborate version. This could be a minor embellishment, but it's worth noting.",
+        "The extracted candidate's venue is 'Orebić', which is the same as the source page's location. However, the source page also mentions 'Viganj' in the context of the event, which is a separate location. This could be a minor error, but it's worth noting.",
+        "The extracted candidate's category is 'kids', which does not match the source page's description of the event as a 'national championship'. This could be a significant error, as the category is a crucial part of the extracted candidate's metadata."
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.7"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-orebic-2023-04-18-peljesac-captains-festival-2023",
+      "sourceId": "visit-orebic",
+      "sourceUrl": "https://visitorebic-croatia.hr/",
+      "discoveredAt": "2026-10-05T12:29:43.800Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Festival kapetana Pelješca 2023",
+        "en": "Pelješac Captains’ Festival 2023",
+        "de": "Festival des Kapitäns von Peljesac 2023",
+        "it": "null",
+        "sl": "null",
+        "fr": "null",
+        "date": "2023-04-18",
+        "endDate": "null",
+        "town": "orebic",
+        "venue": "Orebić",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitorebic-croatia.hr/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-orebic-2023-04-18-peljesac-captains-festival-2023"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The date '2023-04-18' appears to be well-supported by the source text, as it is listed in the 'Events' section, specifically under the date '18.04.2023'.",
+        "However, the source text does not explicitly mention the 'Pelješac Captains’ Festival' as a recurring event. The mention of the festival in the source text is limited to a single entry for 2023, which might suggest that it is a one-time event rather than a recurring one.",
+        "The title 'Pelješac Captains’ Festival 2023' is well-supported by the source text, as it is listed under the date '18.04.2023' in the 'Events' section.",
+        "The town 'Orebić' is well-supported by the source text, as it is mentioned in the 'Visit Orebić' section and also in the 'Destinations' section.",
+        "The venue 'Orebić' is well-supported by the source text, as it is mentioned in the 'Visit Orebić' section and also in the 'Destinations' section.",
+        "The category 'kids' is not well-supported by the source text, as there is no mention of any events or activities specifically for kids in the 'Events' section or elsewhere on the page. The category might be inferred from the context of the festival, but it is not explicitly stated in the source text.",
+        "There is no specific concern regarding the date '2023-04-18' being out of date, as the source text does not provide any information about the current date or the date of the festival in relation to the current date."
+      ],
+      "blockingReasons": [
+        "fuzzy-duplicate"
+      ],
+      "duplicateMatches": [
+        {
+          "eventId": "or-captains",
+          "title": "Festival of Pelješac Captains",
+          "date": "2026-05-18",
+          "time": "evening",
+          "venue": "Pomorski muzej, Trg Mimbelli, Vijećnica",
+          "score": 0.68,
+          "reasons": [
+            "date within existing range",
+            "same town",
+            "similar title"
+          ]
+        }
+      ],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-orebic-2023-02-27-walking-trail-circle-around-orebic",
+      "sourceId": "visit-orebic",
+      "sourceUrl": "https://visitorebic-croatia.hr/",
+      "discoveredAt": "2026-10-05T12:29:43.800Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Planinarska staza: oko Orebića",
+        "en": "Walking trail: Circle around Orebić",
+        "de": "Wanderweg: Um Orebić herum",
+        "it": "null",
+        "sl": "null",
+        "fr": "null",
+        "date": "2023-02-27",
+        "endDate": "null",
+        "town": "orebic",
+        "venue": "Orebić",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitorebic-croatia.hr/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-orebic-2023-02-27-walking-trail-circle-around-orebic"
+      },
+      "verifierConfidence": 0.5,
+      "verifierConcerns": [
+        "The 'date' field of 2023-02-27 appears to be a specific date, but the source page contains a list of past events, which suggests that the event may have already happened relative to the stated page context. This is a significant concern, as it implies that the date listed in the extracted candidate may not be accurate.",
+        "The 'title_en' field is 'Walking trail: Circle around Orebić', but the source page does not contain a clear indication that this is an event. The phrase appears to be part of a list of events, but it does not stand out as a distinct event title. This is a moderate concern, as it suggests that the title may have been misread or embellished.",
+        "The 'cats' field lists 'kids', but the source page does not contain any clear indication that this is an event for kids. The list of events appears to be a general list of activities and events in the area, and the 'kids' category may not be relevant to this specific event. This is a minor concern, as it suggests that the category may not be accurate.",
+        "The 'venue' field is 'Orebić', but the source page contains a list of locations, including 'Orebić', which suggests that the venue may not be a specific location for this event. This is a minor concern, as it suggests that the venue may not be accurate.",
+        "The 'town' field is 'orebic', but the source page contains a list of locations, including 'Orebić', which suggests that the town name may not be accurate. This is a minor concern, as it suggests that the town name may not be accurate."
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.5"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-orebic-2023-01-16-blog-discover-the-biodiversity-of-peljesac",
+      "sourceId": "visit-orebic",
+      "sourceUrl": "https://visitorebic-croatia.hr/",
+      "discoveredAt": "2026-10-05T12:29:43.800Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Blog: otkrijte raznoliku biodiverzitet Pelješca!",
+        "en": "Blog: Discover the biodiversity of Pelješac!",
+        "de": "Blog: Entdecken Sie die vielfältige Biodiversität von Pelješac!",
+        "it": "null",
+        "sl": "null",
+        "fr": "null",
+        "date": "2023-01-16",
+        "endDate": "null",
+        "town": "orebic",
+        "venue": "Orebić",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitorebic-croatia.hr/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-orebic-2023-01-16-blog-discover-the-biodiversity-of-peljesac"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The title field contains a generic description of the event, but the source page text does not explicitly mention the title 'Discover the biodiversity of Pelješac!' as the title of the event. Instead, it is listed as a blog post in the 'News & Blogs' section. The actual title of the blog post is 'Blog: Discover the biodiversity of Pelješac!' which is a more accurate representation of the event's title.",
+        "The date field is listed as '2023-01-16', but the source page text does not explicitly mention this date. The date is actually mentioned in the 'News & Blogs' section as '16.01.2023.' which is the same date but in a different format.",
+        "The venue field is listed as 'Orebić', but the source page text does not explicitly mention this as the venue. The location is actually mentioned as 'Pelješac' which is a broader geographic area that includes Orebić.",
+        "The category field is listed as 'kids', but the source page text does not explicitly mention this as the category. The blog post is actually listed under the 'News & Blogs' section, which does not necessarily imply that it is a 'kids' event.",
+        "The source page text contains a lot of unrelated information, including weather forecasts, news articles, and advertisements. This makes it difficult to determine the relevance of the event listing to the rest of the page content."
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-orebic-2022-11-23-event-peljesac-wine-cellar-open-days",
+      "sourceId": "visit-orebic",
+      "sourceUrl": "https://visitorebic-croatia.hr/",
+      "discoveredAt": "2026-10-05T12:29:43.800Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Događaj: Otvorene dane vinogradarskih kleti Pelješca",
+        "en": "Event: Pelješac Wine Cellar Open Days",
+        "de": "Einlass: Öffentliche Tage der Weinbergskeller von Pelješac",
+        "it": "null",
+        "sl": "null",
+        "fr": "null",
+        "date": "2022-11-23",
+        "endDate": "null",
+        "town": "orebic",
+        "venue": "Orebić",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitorebic-croatia.hr/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-orebic-2022-11-23-event-peljesac-wine-cellar-open-days"
+      },
+      "verifierConfidence": 0.4,
+      "verifierConcerns": [
+        "The extracted candidate contains the field 'cats' with the value ['kids'], but the page does not explicitly mention the event as being suitable for children. The field 'cats' is likely a category assigned by the event listing service, not a direct quote from the page.",
+        "The extracted candidate's title field contains the phrase 'Event: Pelješac Wine Cellar Open Days', but this phrase appears to be a translation of the original title. The page's original title is 'Događaj: Otvorene dane vinogradarskih kleti Pelješca'. The translation may not be exact, and the original title should be used for accuracy.",
+        "The extracted candidate's date field is '2022-11-23', but the page contains a list of past events, including '2023 Pelješac Wine Cellar Open Days' and '2022 Pelješac Wine Cellar Open Days'. This suggests that the event may have occurred in the past, and the date field may be incorrect.",
+        "The extracted candidate's venue field is 'Orebić', but the page contains a list of destinations, including 'Orebić'. The venue field may be ambiguous, and it's unclear whether it refers to the specific location of the event or the broader destination of Orebić.",
+        "The extracted candidate's category field is 'kids', but the page does not explicitly mention the event as being suitable for children. The category field may be incorrect, and it's unclear what category the event actually belongs to.",
+        "The extracted candidate's title field contains the phrase 'Open Days', but the page contains a list of past events, including 'Open Days of Pelješac Wine Cellars 2025'. This suggests that the event may be a recurring event, and the title field may not be accurate for all instances of the event.",
+        "The extracted candidate's date field is '2022-11-23', but the page does not contain any information about an event occurring on this date. The date field may be incorrect, and it's unclear what date the event actually occurred on.",
+        "The extracted candidate's venue field is 'Orebić', but the page contains a list of destinations, including 'Pelješac'. The venue field may be ambiguous, and it's unclear whether it refers to the specific location of the event or the broader destination of Pelješac.",
+        "The extracted candidate's category field is 'kids', but the page does not contain any information about the event being suitable for children. The category field may be incorrect, and it's unclear what category the event actually belongs to.",
+        "The extracted candidate's title field contains the phrase 'Event: Pelješac Wine Cellar Open Days', but this phrase appears to be a translation of the original title. The page's original title is 'Događaj: Otvorene dane vinogradarskih kleti Pelješca'. The translation may not be exact, and the original title should be used for accuracy."
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.4"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-orebic-2022-10-11-blog-an-active-vacation-for-cooler-days",
+      "sourceId": "visit-orebic",
+      "sourceUrl": "https://visitorebic-croatia.hr/",
+      "discoveredAt": "2026-10-05T12:29:43.800Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Blog: aktivni odmor za hladnije dane!",
+        "en": "Blog: An active vacation for cooler days!",
+        "de": "Blog: Aktiver Urlaub für kältere Tage!",
+        "it": "null",
+        "sl": "null",
+        "fr": "null",
+        "date": "2022-10-11",
+        "endDate": "null",
+        "town": "orebic",
+        "venue": "Orebić",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitorebic-croatia.hr/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-orebic-2022-10-11-blog-an-active-vacation-for-cooler-days"
+      },
+      "verifierConfidence": 0.4,
+      "verifierConcerns": [
+        "The 'title_en' field is a generic translation of the 'title_hr' field, but it's unclear whether this specific event is the only one that matches this title. The page contains multiple event listings with the same title, and it's not clear which one this is.",
+        "The 'date' field is '2022-10-11', but the page contains a list of past events, including ones from 2026, which suggests that the page may be a archive of past events rather than a list of upcoming ones. This could mean that the 'date' field is incorrect or outdated.",
+        "The 'venue' field is 'Orebić', but the page contains multiple event listings with the same venue, and it's not clear which one this is. Additionally, the 'town' field is also 'Orebić', but it's not clear if this is the same as the venue or if it's a different location.",
+        "The 'cats' field is ['kids'], but the page does not contain any information about events for kids. The page does contain information about events that may be of interest to families or children, but it's not clear if this is the same as the 'kids' category.",
+        "The 'endDate' field is 'null', which suggests that the event may not have an end date. However, the page contains multiple event listings with end dates, which suggests that the 'endDate' field may be incorrect or incomplete."
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.4"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-orebic-2022-09-29-further-development-of-outdoor-offer-on-peljesac",
+      "sourceId": "visit-orebic",
+      "sourceUrl": "https://visitorebic-croatia.hr/",
+      "discoveredAt": "2026-10-05T12:29:43.800Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Dalja razvoj vanjskog programa na Pelješcu!",
+        "en": "Further development of outdoor offer on Pelješac!",
+        "de": "Weiterer Ausbau des Außenprogramms auf Peljesac!",
+        "it": "null",
+        "sl": "null",
+        "fr": "null",
+        "date": "2022-09-29",
+        "endDate": "null",
+        "town": "orebic",
+        "venue": "Orebić",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitorebic-croatia.hr/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-orebic-2022-09-29-further-development-of-outdoor-offer-on-peljesac"
+      },
+      "verifierConfidence": 0.5,
+      "verifierConcerns": [
+        "The title field contains a phrase ('Further development of outdoor offer on Pelješac!') that doesn't appear to be a direct quote from the source text. The source text appears to be a news article with a title that was not extracted correctly.",
+        "The date field ('2022-09-29') appears to be from an older article ('Pelješac Wine Cellar Open Days') rather than the article with the extracted title. This may indicate that the date is not well-supported by the source text.",
+        "The venue field ('Orebić') appears to be correct, but it's worth noting that the source text has a more detailed description of the event location ('Pelješac'). This may indicate that the venue field could be more accurately described as 'Pelješac' or 'Orebić, Pelješac'.",
+        "The category field ('kids') does not appear to be supported by the source text. The source text mentions 'outdoor offer' and 'Pelješac', but does not mention 'kids'. This may indicate that the category field is not well-supported by the source text."
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.5"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-orebic-2022-08-02-the-peljesac-bridge-is-open-to-traffic",
+      "sourceId": "visit-orebic",
+      "sourceUrl": "https://visitorebic-croatia.hr/",
+      "discoveredAt": "2026-10-05T12:29:43.800Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Most Pelješački otvoren za promet!",
+        "en": "The Peljesac bridge is open to traffic!",
+        "de": "Brücke Pelješac ist für den Verkehr geöffnet!",
+        "it": "null",
+        "sl": "null",
+        "fr": "null",
+        "date": "2022-08-02",
+        "endDate": "null",
+        "town": "orebic",
+        "venue": "Orebić",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitorebic-croatia.hr/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-orebic-2022-08-02-the-peljesac-bridge-is-open-to-traffic"
+      },
+      "verifierConfidence": 0.3,
+      "verifierConcerns": [
+        "The title field appears to be a translation of the original title, which is a good practice, but it's not clear if the original title is the actual title used on the page. The original title is 'Most Pelješački otvoren za promet!', which seems to be a more direct translation of 'The Peljesac bridge is open to traffic!' and could be the actual title used on the page.",
+        "The date field is '2022-08-02', but the page contains a list of news and events, including one with the date '02.08.2022', which is the same date as the extracted candidate. However, this date is not highlighted or emphasized in any way, and it's not clear if it's the specific event being referred to. The extracted candidate's date could be correct, but it's not clear if it's the specific event being referred to.",
+        "The venue field is 'Orebić', which is a correct location, but it's not clear if it's the specific venue being referred to. The page contains a list of destinations and locations, including Orebić, but it's not clear if the extracted candidate's venue is the specific location being referred to.",
+        "The category field is 'kids', which seems to be an incorrect category. The page does not mention anything about kids, and the extracted candidate's category does not match any of the categories mentioned on the page. The category 'kids' is not mentioned anywhere on the page, and it's not clear why it was extracted.",
+        "The page contains a list of news and events, including one with the date '02.08.2022', which is the same date as the extracted candidate. However, this date is not highlighted or emphasized in any way, and it's not clear if it's the specific event being referred to. The extracted candidate's date could be correct, but it's not clear if it's the specific event being referred to."
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.3"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-orebic-2022-07-07-peljesac-festival-orebic-2022",
+      "sourceId": "visit-orebic",
+      "sourceUrl": "https://visitorebic-croatia.hr/",
+      "discoveredAt": "2026-10-05T12:29:43.800Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Festival Pelješac Orebić 2022",
+        "en": "Pelješac Festival Orebić 2022",
+        "de": "Peljeüsac-Orebić-Festival 2022",
+        "it": "null",
+        "sl": "null",
+        "fr": "null",
+        "date": "2022-07-07",
+        "endDate": "null",
+        "town": "orebic",
+        "venue": "Orebić",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitorebic-croatia.hr/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-orebic-2022-07-07-peljesac-festival-orebic-2022"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The title contains a translation, which may indicate that the source page has a dynamic title or that the title was extracted from a specific section of the page. This could be a reason to lower confidence in the title field.",
+        "There is no direct evidence that the 'Pelješac Festival Orebić 2022' event actually occurred on '2022-07-07'. The source page lists a number of news articles and events, but only one of them mentions the festival and its date. This could be a reason to lower confidence in the date field.",
+        "The source page lists a number of events, but the 'Pelješac Festival Orebić 2022' event is mentioned in a news article from '07.07.2022', which could be a reason to lower confidence in the date field.",
+        "The venue field contains the name of the town, but not the specific location where the event took place. The source page mentions the 'Pelješac Festival Orebić 2022' event, but does not provide information on the specific venue.",
+        "The category field contains the word 'kids', but the source page does not provide information on the specific category of the event. The event is mentioned in a news article, but the category is not explicitly stated."
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-orebic-2022-05-11-peljesac-captains-festival",
+      "sourceId": "visit-orebic",
+      "sourceUrl": "https://visitorebic-croatia.hr/",
+      "discoveredAt": "2026-10-05T12:29:43.800Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Festival kapetana Pelješca",
+        "en": "Pelješac Captains’ Festival",
+        "de": "Fest des Kapitäns von Pelješac",
+        "it": "null",
+        "sl": "null",
+        "fr": "null",
+        "date": "2022-05-11",
+        "endDate": "null",
+        "town": "orebic",
+        "venue": "Orebić",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitorebic-croatia.hr/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-orebic-2022-05-11-peljesac-captains-festival"
+      },
+      "verifierConfidence": 0.2,
+      "verifierConcerns": [
+        "The source page text does not mention the 'Pelješac Captains' Festival' as a separate event, but rather as a recurring festival with multiple dates listed in the news section. The specific date '2022-05-11' mentioned in the extracted candidate does not have any corresponding information in the source page text. It appears to be a single date extracted from a news article without any clear connection to the rest of the page's content. The extracted candidate's date field does not match the date format used in the source page text, which is 'dd.mm.yyyy'. The extracted candidate's 'title_en' field does not match the text used in the source page, which is 'Pelješac Captains Festival'. The source page text does not mention the 'kids' category in the context of the festival, and the category 'kids' does not seem to be relevant to the festival's description. The source page text does not mention the venue 'Orebić' in the context of the festival, and the venue 'Orebić' does not seem to be a specific location related to the festival's description."
+      ],
+      "blockingReasons": [
+        "fuzzy-duplicate",
+        "verifier-confidence-below-threshold:0.2"
+      ],
+      "duplicateMatches": [
+        {
+          "eventId": "or-captains",
+          "title": "Festival of Pelješac Captains",
+          "date": "2026-05-18",
+          "time": "evening",
+          "venue": "Pomorski muzej, Trg Mimbelli, Vijećnica",
+          "score": 0.68,
+          "reasons": [
+            "date within existing range",
+            "same town",
+            "similar title"
+          ]
+        }
+      ],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-orebic-2022-03-24-javni-natjecaj-za-izbor-i-imenovanje-direktora-direktorice-t",
+      "sourceId": "visit-orebic",
+      "sourceUrl": "https://visitorebic-croatia.hr/",
+      "discoveredAt": "2026-10-05T12:29:43.800Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Javni natječaj za izbor i imenovanje direktora/direktorice TZO Orebić",
+        "en": "Javni natječaj za izbor i imenovanje direktora/direktorice TZO Orebić",
+        "de": "Öffentlicher Wettbewerb zur Auswahl und Ernennung des Direktors/Direktorin des TZO Orebić",
+        "it": "null",
+        "sl": "null",
+        "fr": "null",
+        "date": "2022-03-24",
+        "endDate": "null",
+        "town": "orebic",
+        "venue": "Orebić",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitorebic-croatia.hr/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-orebic-2022-03-24-javni-natjecaj-za-izbor-i-imenovanje-direktora-direktorice-t"
+      },
+      "verifierConfidence": 0.5,
+      "verifierConcerns": [
+        "The category 'kids' seems to be a mismatch for the event title 'Javni natječaj za izbor i imenovanje direktora/direktorice TZO Orebić', which refers to a public competition for the appointment of the director/director of the Orebić Tourist Board, rather than a children's event.",
+        "The 'date' field '2022-03-24' seems to be a specific date in the past, which may not be relevant to the current page context, especially considering the presence of recent news and events listed below it.",
+        "There is no clear indication that the event has not already taken place, but the date listed is several years old, which may raise some concerns about its relevance.",
+        "The 'title_en' field is identical to the 'title_hr' field, which suggests that the English translation may not be accurate or may be missing."
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.5"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-orebic-2022-02-07-from-summer-on-peljesac-over-the-largest-bridge-in-croatia",
+      "sourceId": "visit-orebic",
+      "sourceUrl": "https://visitorebic-croatia.hr/",
+      "discoveredAt": "2026-10-05T12:29:43.800Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Od ljeta na Pelješcu preko najvećeg mosta u Hrvatskoj!",
+        "en": "From summer on Pelješac over the largest bridge in Croatia!",
+        "de": "Von der Sommersaison auf Pelješac über den größten Brücke in Kroatien!",
+        "it": "null",
+        "sl": "null",
+        "fr": "null",
+        "date": "2022-02-07",
+        "endDate": "null",
+        "town": "orebic",
+        "venue": "Orebić",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitorebic-croatia.hr/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-orebic-2022-02-07-from-summer-on-peljesac-over-the-largest-bridge-in-croatia"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The 'date' field is '2022-02-07', but the 'title_en' field mentions 'From summer on Pelješac over the largest bridge in Croatia!', which suggests that the event is happening in the summer, not in February. The source page's event list also includes a post-summer event ('When Summer Slows Down – Pelješac in September'). This discrepancy raises questions about the accuracy of the date field.",
+        "The 'town' and 'venue' fields are both 'orebic', but it's not clear if this is a typo or if the source page actually mentions this as the venue. A more specific location or a clarification of the venue would be helpful.",
+        "The 'cats' field includes 'kids', but the source page doesn't explicitly mention this as a category for the event. It's possible that this is an incorrect extraction or that the source page uses a different term for this category.",
+        "The source page's cookies notice and privacy policy are present, but they don't seem to be related to the event extraction. However, the presence of these notices could indicate that the source page is using cookies in a way that might affect the event extraction."
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-orebic-2021-11-22-peljesac-wine-cellar-open-days",
+      "sourceId": "visit-orebic",
+      "sourceUrl": "https://visitorebic-croatia.hr/",
+      "discoveredAt": "2026-10-05T12:29:43.800Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Otvorene dane vinogradarskih kleti Pelješca",
+        "en": "Pelješac Wine Cellar Open Days",
+        "de": "Eröffnungstage für die Weinbergskellereien von Pelješac",
+        "it": "null",
+        "sl": "null",
+        "fr": "null",
+        "date": "2021-11-22",
+        "endDate": "null",
+        "town": "orebic",
+        "venue": "Orebić",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitorebic-croatia.hr/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-orebic-2021-11-22-peljesac-wine-cellar-open-days"
+      },
+      "verifierConfidence": 0.5,
+      "verifierConcerns": [
+        "The source page does not explicitly mention 'Pelješac Wine Cellar Open Days' as an event on November 22, 2021. The text does mention 'Pelješac Wine Cellar Open Days 2025' as an event on December 12, 2025, but the current date is November 22, 2021, and the title is different.",
+        "The source page lists several news articles, but the title of the current event is not explicitly mentioned in any of the news articles. The news articles mention various events, but the title and date of the current event are not explicitly stated.",
+        "The source page does not explicitly mention the 'kids' category for the event. The text does mention various categories, but the 'kids' category is not explicitly mentioned in relation to the current event.",
+        "The source page lists several events, but the current event is not explicitly mentioned as a recurring event. The text does mention various events, but the current event is not explicitly stated as a recurring event.",
+        "The source page lists several events, but the current event is not explicitly mentioned as a one-time event. The text does mention various events, but the current event is not explicitly stated as a one-time event.",
+        "The source page lists several events, but the current event is not explicitly mentioned as an event that is happening in the near future. The text does mention various events, but the current event is not explicitly stated as an event that is happening soon."
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.5"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-orebic-2021-11-22-renowned-tenor-jose-cura-performs-in-orebic",
+      "sourceId": "visit-orebic",
+      "sourceUrl": "https://visitorebic-croatia.hr/",
+      "discoveredAt": "2026-10-05T12:29:43.800Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Slavni tenor José Cura nastupa u Orebiću",
+        "en": "Renowned Tenor José Cura Performs in Orebić",
+        "de": "Der berühmte Tenor José Cura gastiert in Orebić",
+        "it": "null",
+        "sl": "null",
+        "fr": "null",
+        "date": "2021-11-22",
+        "endDate": "null",
+        "town": "orebic",
+        "venue": "Orebić",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitorebic-croatia.hr/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-orebic-2021-11-22-renowned-tenor-jose-cura-performs-in-orebic"
+      },
+      "verifierConfidence": 0.7,
+      "verifierConcerns": [
+        "The extracted candidate mentions a specific date ('2021-11-22') but the source page contains a list of past events, including one with the same date. This does not necessarily mean the extraction is incorrect, but it's worth noting that the source page appears to be a list of past events, which might indicate that the extraction is referring to an event that has already taken place.",
+        "The title of the event in the source page text is 'Renowned Tenor José Cura Performs in Orebić', which matches the title in the extracted candidate. However, the source page text also contains a mention of the event in the context of past events, which might indicate that the event has already taken place.",
+        "The extracted candidate mentions the category 'kids', but the source page text does not explicitly mention this category. The source page text does mention various activities and events, but it does not explicitly categorize them as 'kids' events.",
+        "The extracted candidate mentions the venue 'Orebić', which is consistent with the source page text. However, the source page text also contains a mention of 'Pelješac' in the context of various events and activities, which might indicate that the event took place in a broader region rather than just in Orebić.",
+        "There is no explicit mention of the date '2021-11-22' in the source page text. The source page text contains a list of past events, but the specific date mentioned in the extracted candidate is not explicitly mentioned in the source page text. This might indicate that the extraction is incorrect or that the source page text is incomplete or inaccurate."
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.7"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-orebic-2021-11-16-night-of-old-orebic",
+      "sourceId": "visit-orebic",
+      "sourceUrl": "https://visitorebic-croatia.hr/",
+      "discoveredAt": "2026-10-05T12:29:43.800Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Noć stare Orebića",
+        "en": "Night of old Orebic",
+        "de": "Die Nacht des alten Orebić",
+        "it": "null",
+        "sl": "null",
+        "fr": "null",
+        "date": "2021-11-16",
+        "endDate": "null",
+        "town": "orebic",
+        "venue": "Orebić",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitorebic-croatia.hr/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-orebic-2021-11-16-night-of-old-orebic"
+      },
+      "verifierConfidence": 1,
+      "verifierConcerns": [],
+      "blockingReasons": [
+        "fuzzy-duplicate"
+      ],
+      "duplicateMatches": [
+        {
+          "eventId": "or-noc-starog",
+          "title": "Night of Old Orebić",
+          "date": "2026-07-21",
+          "time": "20:00",
+          "venue": "Orebić (grad)",
+          "score": 0.8,
+          "reasons": [
+            "date within existing range",
+            "same town",
+            "similar venue",
+            "similar title"
+          ]
+        }
+      ],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-orebic-2021-11-16-bike-hike-map-of-peljesac",
+      "sourceId": "visit-orebic",
+      "sourceUrl": "https://visitorebic-croatia.hr/",
+      "discoveredAt": "2026-10-05T12:29:43.800Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Karta biciklizma i planinarenja Pelješaca",
+        "en": "Bike & Hike Map of Pelješac",
+        "de": "Rad- und Wanderkarte Pelješac",
+        "it": "null",
+        "sl": "null",
+        "fr": "null",
+        "date": "2021-11-16",
+        "endDate": "null",
+        "town": "orebic",
+        "venue": "Orebić",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitorebic-croatia.hr/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-orebic-2021-11-16-bike-hike-map-of-peljesac"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The title field 'Bike & Hike Map of Pelješac' seems to be a direct translation of the page's own text, but the page itself doesn't seem to have a direct title. This could be a sign that the title was taken out of context.",
+        "The date field '2021-11-16' appears to be supported by the source page text, which lists a 'Bike & Hike Map of Pelješac' event on November 16, 2021.",
+        "The town field 'orebic' appears to be supported by the source page text, which mentions Orebić as the location of various events.",
+        "The venue field 'Orebić' appears to be supported by the source page text, which mentions Orebić as the location of various events.",
+        "The category field 'kids' doesn't appear to be supported by the source page text, which mentions cycling and hiking as activities related to the 'Bike & Hike Map of Pelješac' event. It's possible that the category was incorrectly inferred or taken out of context.",
+        "The 'endDate' field is set to 'null', which suggests that the event has already ended. However, the source page text lists events that occurred in 2026, which suggests that the page is being updated regularly and the event may still be active."
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-orebic-2021-08-16-peljesac-wine-festival",
+      "sourceId": "visit-orebic",
+      "sourceUrl": "https://visitorebic-croatia.hr/",
+      "discoveredAt": "2026-10-05T12:29:43.800Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Festival vina Pelješca",
+        "en": "Peljesac wine festival",
+        "de": "Wein-Festival Peljesac",
+        "it": "null",
+        "sl": "null",
+        "fr": "null",
+        "date": "2021-08-16",
+        "endDate": "null",
+        "town": "orebic",
+        "venue": "Orebić",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitorebic-croatia.hr/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-orebic-2021-08-16-peljesac-wine-festival"
+      },
+      "verifierConfidence": 0.2,
+      "verifierConcerns": [
+        "The title field contains a translation of the event title. The source page has both Croatian and English text, but the event title itself is only mentioned in the Croatian text as 'Festival vina Pelješca'. The English translation 'Peljesac wine festival' is not actually present on the source page.",
+        "The category 'kids' is not supported by the source page text, which does not mention children or family-friendly activities as part of the event.",
+        "The date '2021-08-16' is mentioned in the source page text, but it is part of a news article from 2021 and does not appear to be related to the current event listings. The source page lists multiple past events, but the current event listings are for 2026 and 2027.",
+        "The venue 'Orebić' is mentioned in the source page text, but it is part of a general description of the destination rather than a specific event location.",
+        "The source page text does not mention the event 'Pelješac wine festival' as a current event. The text does mention a past event with the same name, but it is not clear if this is the same event as the one listed in the extracted candidate.",
+        "The source page text does not provide any information about the event 'Pelješac wine festival' that matches the fields in the extracted candidate. The text does mention wine-related events, but it does not mention a festival by this name."
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.2"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-orebic-2021-08-13-covid-19-info",
+      "sourceId": "visit-orebic",
+      "sourceUrl": "https://visitorebic-croatia.hr/",
+      "discoveredAt": "2026-10-05T12:29:43.800Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Informacije o COVID-19",
+        "en": "COVID-19 Info",
+        "de": "Informationen zu COVID-19",
+        "it": "null",
+        "sl": "null",
+        "fr": "null",
+        "date": "2021-08-13",
+        "endDate": "null",
+        "town": "orebic",
+        "venue": "Orebić",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitorebic-croatia.hr/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-orebic-2021-08-13-covid-19-info"
+      },
+      "verifierConfidence": 0.2,
+      "verifierConcerns": [
+        "The title 'COVID-19 Info' appears to be a generic label for a section on the page, rather than a specific event title. It doesn't match any specific event on the page.",
+        "The date '2021-08-13' seems to be an old date, as the latest news on the page is from 2026. This may indicate that the event has already happened.",
+        "The venue 'Orebić' appears to be a general location, rather than a specific venue for an event. The page does contain a section for events, but none of the events listed match the title 'COVID-19 Info'.",
+        "The category 'kids' seems unrelated to the title 'COVID-19 Info' or the content of the page.",
+        "The page contains a section for events, but it appears to be a list of news articles and announcements, rather than a list of events in the classical sense. The title 'COVID-19 Info' doesn't match any specific event on the page."
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.2"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-blue-korcula-2026-01-01-nightlife-vibes",
+      "sourceId": "blue-korcula",
+      "sourceUrl": "https://bluekorcula.com/club",
+      "discoveredAt": "2026-10-05T12:29:43.800Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Noćna zabava",
+        "en": "Nightlife Vibes",
+        "de": "2026-12-31",
+        "it": "Festa notturna",
+        "sl": "Nočna zabava",
+        "fr": "Fête nocturne",
+        "date": "2026-01-01",
+        "endDate": "2026-12-31",
+        "time": "23:00",
+        "town": "korcula",
+        "venue": "Blue Club Korčula",
+        "cats": [
+          "nightlife"
+        ],
+        "desc": {
+          "en": "Our top-notch DJs curate an eclectic mix of music that caters to diverse tastes, ensuring everyone finds their rhythm on the dance floor.",
+          "hr": "Naša vrhunska DJ ekipa kreiraju izuzetno raznoliku muzičku zabavu koja će odgovoriti različitim ukusima, tako da će svatko na plesnoj dvorani naći svoj ritam."
+        },
+        "source": "https://bluekorcula.com/club",
+        "extractionMethod": "ai",
+        "id": "ai-blue-korcula-2026-01-01-nightlife-vibes"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The 'date' field is not explicitly mentioned in the source page text, but the 'Upcoming Events' section and the reservation form suggest that the event is ongoing and does not have a specific end date. The 'endDate' field should be removed or updated to reflect this.",
+        "The 'time' field is mentioned in the source page text, but it seems to be a part of the reservation form and not a specific event time. The 'time' field should be removed or updated to reflect the actual event time, which is not explicitly mentioned.",
+        "The 'town' field is mentioned as 'Korčula' in the source page text, which matches the 'town' field. However, the 'venue' field is mentioned as 'Blue Bar' in the source page text, which does not match the 'venue' field 'Blue Club Korčula'. This could be a mistake or a misinterpretation of the source page text.",
+        "The 'cats' field is mentioned as 'nightlife', which matches the source page text. However, the source page text also mentions other categories such as 'Lounge Bar' and 'Bistro Levant', which are not included in the 'cats' field.",
+        "The 'description' field is mentioned in the source page text and matches the 'description' field. However, the source page text also includes promotional language and calls to action, which are not included in the 'description' field."
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2023-08-16-feast-of-sveti-rok-celebrated-at-the-sveti-rok-church-in-pos",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/zrnovo/",
+      "discoveredAt": "2026-10-05T12:29:43.800Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Blagdan Svetog Roka, slavljeno u crkvi Svetog Roka u Postrani.",
+        "en": "Feast of Sveti Rok, celebrated at the Sveti Rok church in Postrana.",
+        "de": "Festtag des heiligen Rochus, gefeiert in der Kirche des Heiligen Rochus in Potsdam.",
+        "it": "Festa di Sveti Rok, celebrata nella chiesa di Sveti Rok a Postrana.",
+        "sl": "Blagdan Svetega Roka, slavljeno v cerkvi Svetega Roka v Postrani.",
+        "fr": "Fête de Sveti Rok, célébrée à l'église de Sveti Rok à Postrana.",
+        "date": "2023-08-16",
+        "endDate": "2023-08-16",
+        "time": "afternoon",
+        "town": "lumbarda",
+        "venue": "Sveti Rok church, Postrana",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://www.korculainfo.com/zrnovo/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2023-08-16-feast-of-sveti-rok-celebrated-at-the-sveti-rok-church-in-pos"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The venue field contains the phrase 'Sveti Rok church, Postrana' which is actually a description of the event, not just the venue. The venue is actually just 'Sveti Rok church'.",
+        "The category 'folklore' is not supported by the source page text, which actually describes the event as a 'feast' and a 'celebration'. The category should be 'holiday' or 'celebration' instead.",
+        "The date field '2023-08-16' is actually mentioned in the context of 'the feast of St Rok (16 August)' on the source page, which implies that the event is held annually on this date. However, the extracted candidate does not provide any information about the event being recurring.",
+        "The time field 'afternoon' is not supported by the source page text, which actually mentions the event as taking place on the 'feast day' which is '16 August'. The exact time of the event is not specified on the source page.",
+        "The town field 'lumbarda' is not supported by the source page text, which actually mentions the event as taking place in 'Postrana' which is a hamlet of Žrnovo. The correct town should be 'Žrnovo' or 'Postrana'."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "ambiguous-time",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2023-08-01-local-families-still-produce-wine-in-zrnovo-in-the-tradition",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/zrnovo/",
+      "discoveredAt": "2026-10-05T12:29:43.800Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Domaći obitelji još uvijek proizvode vino u Žrnovu na tradicionalan način.",
+        "en": "Local families still produce wine in Žrnovo in the traditional way.",
+        "de": "Bereits zu Hause in der Familie produzieren sie Wein auf traditionelle Weise in Žrnovo.",
+        "it": "Le famiglie locali producono ancora vino a Žrnovo in modo tradizionale.",
+        "sl": "Domače družine še vedno proizvajajo vino v Žrnovu na tradicionalen način.",
+        "fr": "Des familles locales produisent encore du vin à Žrnovo de manière traditionnelle.",
+        "date": "2023-08-01",
+        "endDate": "2023-12-31",
+        "town": "lumbarda",
+        "venue": "Žrnovo",
+        "cats": [
+          "food"
+        ],
+        "source": "https://www.korculainfo.com/zrnovo/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2023-08-01-local-families-still-produce-wine-in-zrnovo-in-the-tradition"
+      },
+      "verifierConfidence": 0.5,
+      "verifierConcerns": [
+        "The date '2023-08-01' seems to be unrelated to the text next to it. The page does not mention any specific events or activities for that date. The only event mentioned in the text is 'Wine making — autumn grape harvest and winemaking is a village tradition still practised in Žrnovo.' which does not have a specific date mentioned.",
+        "The 'endDate' field is set to '2023-12-31' which is not mentioned anywhere in the text. It is possible that this is an incorrect assumption or a generic date that was incorrectly extracted.",
+        "The category 'food' seems to be too broad for this event. The text mentions 'wine making' but it is not clear if this is the only food-related activity mentioned in the text. The category should be more specific to accurately represent the event.",
+        "The 'town' field is set to 'lumbarda' which does not match the text. The text mentions 'Žrnovo' as the location, not 'lumbarda'.",
+        "The 'venue' field is set to 'Žrnovo' which is correct, but it is not clear if this is the specific venue for the event. The text mentions different hamlets and locations within Žrnovo, but it does not specify a single venue for the event.",
+        "The text does not mention any specific time for the event. The 'date' field is set to '2023-08-01' but it is not clear if this is the specific date and time for the event. The text mentions 'autumn grape harvest and winemaking' but it does not specify a specific date and time for this event.",
+        "The text does not mention any specific category or type of event. The 'cats' field is set to 'food' but it is not clear if this is the correct category for the event. The text mentions 'wine making' but it is not clear if this is the only type of event mentioned in the text."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.5"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2024-08-24-feast-day-of-blessed-marko-of-pupnat-celebrated-at-the-paris",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/pupnat/",
+      "discoveredAt": "2026-10-05T12:29:43.800Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Svećenstvo blagoslovljenom Marku Pupnatu, slavljeno u crkvi s bogoslužjem.",
+        "en": "Feast day of Blessed Marko of Pupnat, celebrated at the parish church.",
+        "de": "Feiertag für den heiligen Markus von Pupnat, der in der Dorfkirche gefeiert wird.",
+        "it": "Festa del beato Marco di Pupnat, celebrata nella chiesa parrocchiale.",
+        "sl": "Svečanje blagoslovljenemu Marku Pupnatu, slavimo v cerkvi s bogoslužjem.",
+        "fr": "Fête du bienheureux Marc de Pupnat, célébrée dans l'église paroissiale.",
+        "date": "2024-08-24",
+        "endDate": "2024-08-24",
+        "time": "all day",
+        "town": "korcula",
+        "venue": "Pupnat",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://www.korculainfo.com/pupnat/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2024-08-24-feast-day-of-blessed-marko-of-pupnat-celebrated-at-the-paris"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The source page text does not contain the title 'Feast day of Blessed Marko of Pupnat, celebrated at the parish church.' in the English language. The English title is actually extracted from a separate section of the page, which is a description of an event. The actual title of the event, as it appears on the page, is 'Svećenstvo blagoslovljenom Marku Pupnatu, slavljeno u crkvi s bogoslužjem.' which is translated to English as 'Feast day of Blessed Marko of Pupnat, celebrated at the parish church.' but this is not the title of the event as it appears on the page. The title as it appears on the page is not explicitly stated in the source page text, but it can be inferred from the description of the event. ",
+        "The date '2024-08-24' is not explicitly stated in the source page text as the date of the event. The event is mentioned in the 'Events' section of the page, but the date is not explicitly stated. However, it can be inferred from the context that the event is celebrated on August 24th. ",
+        "The time 'all day' is not explicitly stated in the source page text as the time of the event. The event is mentioned in the 'Events' section of the page, but the time is not explicitly stated. However, it can be inferred from the context that the event is celebrated throughout the day. ",
+        "The venue 'Pupnat' is not explicitly stated in the source page text as the venue of the event. The village of Pupnat is mentioned in the 'Events' section of the page, but the event is mentioned to be celebrated at the parish church, which is located in Pupnat. ",
+        "The town 'korcula' is not explicitly stated in the source page text as the town where the event is taking place. The village of Pupnat is mentioned in the 'Events' section of the page, and it is located on Korčula Island. ",
+        "The category 'folklore' is not explicitly stated in the source page text as the category of the event. The event is mentioned in the 'Events' section of the page, but the category is not explicitly stated. However, it can be inferred from the context that the event is a cultural or traditional event. ",
+        "The source page text does not contain any information about the event having already taken place. However, the page does mention that the event is celebrated on August 24th, which is in the future according to the current date. "
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
     }
   ]
 }

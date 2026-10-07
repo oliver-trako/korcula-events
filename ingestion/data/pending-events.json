@@ -12218,6 +12218,429 @@
       ],
       "duplicateMatches": [],
       "status": "needs-review"
+    },
+    {
+      "id": "ai-tz-blato-2026-08-26-okusi-i-mirisi-zavicaja-blato-wine-dine",
+      "sourceId": "tz-blato",
+      "sourceUrl": "https://tzo-blato.hr/en/",
+      "discoveredAt": "2026-10-07T11:56:44.484Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Okusi i mirisi zavičaja/Blato Wine & Dine",
+        "en": "Okusi i mirisi zavičaja/Blato Wine & Dine",
+        "de": "Okusi und Düfte der Heimat/Blato Wine & Dine",
+        "it": "Gusti e profumi della regione/Blato Wine & Dine",
+        "sl": "Okusi in vonji zavičaj/Blato Wine & Dine",
+        "fr": "Saveurs et parfums de la région/Blato Wine & Dine",
+        "date": "2026-08-26",
+        "town": "blato",
+        "venue": "Blato",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://tzo-blato.hr/en/",
+        "extractionMethod": "ai",
+        "id": "ai-tz-blato-2026-08-26-okusi-i-mirisi-zavicaja-blato-wine-dine"
+      },
+      "verifierConfidence": 0.4,
+      "verifierConcerns": [
+        "The title field contains booking-status or call-to-action text ('Okusi i mirisi zavičaja/Blato Wine & Dine') instead of just the event name. This might be a red flag, but it's not conclusive yet.",
+        "The extracted date '2026-08-26' appears to be correct, but it's not explicitly stated in the source text next to the event title. The date appears in a list of upcoming events, but it's not clear if this is the most up-to-date list. However, the date is also mentioned in the text snippet 'Monday, 24 August 2026' which seems to be a recent date, but it's not clear if it's related to the event.",
+        "The extracted category 'kids' does not match what the page actually describes. The event 'Okusi i mirisi zavičaja/Blato Wine & Dine' seems to be a wine and dine event, and there is no mention of kids in the surrounding text.",
+        "The extracted venue 'Blato' appears to be correct, but it's not explicitly stated in the source text next to the event title. The location 'Blato' is mentioned in the general information about the town, but it's not clear if this is the specific venue for the event.",
+        "The extracted town 'blato' appears to be correct, but it's not explicitly stated in the source text next to the event title. The location 'Blato' is mentioned in the general information about the town, but it's not clear if this is the specific town for the event.",
+        "There are multiple dates listed for the same event 'Okusi i mirisi zavičaja/Blato Wine & Dine', which might indicate that the event is recurring. However, it's not clear if this is the case, and if so, which date is the most relevant."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.4"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-tz-blato-2026-08-12-okusi-i-mirisi-zavicaja-blato-wine-dine",
+      "sourceId": "tz-blato",
+      "sourceUrl": "https://tzo-blato.hr/en/",
+      "discoveredAt": "2026-10-07T11:56:44.484Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Okusi i mirisi zavičaja / Blato Wine & Dine",
+        "en": "Okusi i mirisi zavičaja / Blato Wine & Dine",
+        "de": "Okusi und Düfte der Heimat / Blato Wine & Dine",
+        "it": "Gusti e profumi del luogo / Blato Wine & Dine",
+        "sl": "Okusi in vonjiči okolice / Blato Wine & Dine",
+        "fr": "Saveurs et parfums du voisinage / Blato Wine & Dine",
+        "date": "2026-08-12",
+        "town": "blato",
+        "venue": "Blato",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://tzo-blato.hr/en/",
+        "extractionMethod": "ai",
+        "id": "ai-tz-blato-2026-08-12-okusi-i-mirisi-zavicaja-blato-wine-dine"
+      },
+      "verifierConfidence": 0.7,
+      "verifierConcerns": [
+        "The extracted date '2026-08-12' is mentioned in the source page text, but it's not clear if this is the specific event date or one of the other dates mentioned in the text. The source page lists multiple dates for the same event 'Okusi i mirisi zavičaja / Blato Wine & Dine'.",
+        "The venue 'Blato' is mentioned in the source page text, but it's not clear if this is the specific venue for this event or a general location. The source page lists multiple events in Blato, so it's possible that this is a general location rather than a specific venue.",
+        "The category 'kids' is not mentioned in the source page text. The source page does mention 'eno-gastro manifestacije' which could be related to wine and dine events, but it's not clear if this is the specific category for this event."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.7"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-tz-blato-2026-07-22-okusi-i-mirisi-zavicaja-blato-wine-dine",
+      "sourceId": "tz-blato",
+      "sourceUrl": "https://tzo-blato.hr/en/",
+      "discoveredAt": "2026-10-07T11:56:44.484Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Okusi i mirisi zavičaja / Blato Wine & Dine",
+        "en": "Okusi i mirisi zavičaja / Blato Wine & Dine",
+        "de": "Okusi und Düfte der Heimat / Blato Wine & Dine",
+        "it": "Gusti e profumi della regione / Blato Wine & Dine",
+        "sl": "Okusi in vonji zavičajnosti / Blato Wine & Dine",
+        "fr": "Saveurs et odeurs de la région / Blato Wine & Dine",
+        "date": "2026-07-22",
+        "town": "blato",
+        "venue": "Blato",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://tzo-blato.hr/en/",
+        "extractionMethod": "ai",
+        "id": "ai-tz-blato-2026-07-22-okusi-i-mirisi-zavicaja-blato-wine-dine"
+      },
+      "verifierConfidence": 0.3,
+      "verifierConcerns": [
+        "The extracted date (2026-07-22) does not match any of the dates listed in the source page text for the 'Okusi i mirisi zavičaja / Blato Wine & Dine' event. The closest dates mentioned are 22.07.2026, 26.08.2026, and 12.08.2026. It is unclear which date is correct, but the extracted date does not appear to match the source page text.",
+        "The town and venue fields are identical ('blato' and 'Blato'), which may indicate that the extracted fields are not well-supported by the source page text. A more detailed description of the venue or town might be expected.",
+        "The category field is listed as 'kids', which does not match the description of the event provided in the source page text. The event appears to be related to wine and dining, rather than being suitable for children."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.3"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2026-10-14-experience-moreska",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/",
+      "discoveredAt": "2026-10-07T11:56:44.484Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Doživite morešku",
+        "en": "Experience Moreška",
+        "de": "Doživite morešku",
+        "it": "Vivete un'avventura",
+        "sl": "Doživite avanturosko izkušnjo",
+        "fr": "Vivez une aventure",
+        "date": "2026-10-14",
+        "time": "21:00",
+        "town": "korcula",
+        "venue": "Ljetno kino Dostupno Kupi ulaznice → (ticket link: /tickets?date=2026-10-14)",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://moreska.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2026-10-14-experience-moreska"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The 'venue' field contains booking-status or call-to-action text ('Dostupno Kupi ulaznice → (ticket link: /tickets?date=2026-10-14)') instead of just the event/venue name.",
+        "The 'town' field may be incorrect, as the source page text does not explicitly mention 'korčula' as the town. The correct town may be 'Korčula'."
+      ],
+      "blockingReasons": [
+        "fuzzy-duplicate"
+      ],
+      "duplicateMatches": [
+        {
+          "eventId": "kt-moreska-season",
+          "title": "Moreška — historic sword dance",
+          "date": "2026-04-29",
+          "time": "21:00",
+          "venue": "Summer Cinema, Korčula",
+          "score": 0.9,
+          "reasons": [
+            "matches a listed occurrence date",
+            "same town",
+            "overlapping category",
+            "same time"
+          ]
+        }
+      ],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2023-08-05-a-celebration-of-the-village-s-main-church-gospa-od-sniga-wi",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/pupnat/",
+      "discoveredAt": "2026-10-07T11:56:44.484Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Slavljena je glavna crkva u selu, Gospa od Sniga, s vjerskim službenjem, zabavom i kulturnim programima.",
+        "en": "A celebration of the village's main church, Gospa od Sniga, with a religious service, entertainment, and cultural programs.",
+        "de": "Die Hauptkirche in dem Dorf, Gospa od Sniga, wurde feierlich eröffnet, mit religiösen Gottesdiensten, Unterhaltung und kulturellen Programmen.",
+        "it": "Una celebrazione della chiesa principale del villaggio, Gospa od Sniga, con un servizio religioso, intrattenimento e programmi culturali.",
+        "sl": "Praznovanje glavne cerkve v vasi, Gospa od Sniga, z verskim bogoslužjem, zabavo in kulturnimi programi.",
+        "fr": "Une célébration de l'église principale du village, Gospa od Sniga, avec un service religieux, des divertissements et des programmes culturels.",
+        "date": "2023-08-05",
+        "endDate": "2023-08-05",
+        "time": "all day",
+        "town": "korcula",
+        "venue": "Gospa od Sniga, Pupnat",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.korculainfo.com/pupnat/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2023-08-05-a-celebration-of-the-village-s-main-church-gospa-od-sniga-wi"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The title field is a translation of the event description, which may not be the actual title used on the page. The original Croatian title is 'Slavljena je glavna crkva u selu, Gospa od Sniga, s vjerskim službenjem, zabavom i kulturnim programima.'",
+        "The category 'kids' is not mentioned in the page text. The event description does mention 'entertainment and cultural programs', but it does not specify that it's suitable for kids. The Kumpanija sword dance is mentioned as a cultural event, but it's not related to kids.",
+        "The 'endDate' field is not mentioned in the page text. The page only mentions the event date as '5 August'. The 'endDate' field may be an incorrect assumption.",
+        "The 'time' field is listed as 'all day', but the page text mentions that the event is a 'religious service followed by entertainment and cultural programmes'. This implies that the event has a specific schedule, but it's not provided in the page text.",
+        "The 'venue' field is listed as 'Gospa od Sniga, Pupnat', but the page text only mentions 'the parish church of Our Lady of the Snows (Gospa od Sniga)'. The 'Pupnat' part may be an incorrect assumption or an additional location that's not relevant to the event.",
+        "The page text mentions that the event is the village's main feast day, but it does not provide a specific date for the event. The date '5 August' is mentioned, but it's not clear if it's the actual date of the event or a general reference to the event's date.",
+        "The page text does mention the event's date as '5 August', but it does not mention the event's time. The 'time' field may be an incorrect assumption."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2023-08-24-a-celebration-of-the-local-blessed-figure-blessed-marko-of-p",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/pupnat/",
+      "discoveredAt": "2026-10-07T11:56:44.484Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Slavljena je lokalno blaženik, Blaženi Marko Pupnatski, s vjerskim službenjem i kulturnim programima.",
+        "en": "A celebration of the local blessed figure, Blessed Marko of Pupnat, with religious services and cultural programs.",
+        "de": "Der lokale Heilige, der Heilige Marko Pupnatski, wurde mit religiösen Amtshandlungen und kulturellen Programmen geehrt.",
+        "it": "Una celebrazione della figura beatificata locale, il Beato Marco di Pupnat, con servizi religiosi e programmi culturali.",
+        "sl": "Praznovanje lokalnega blaženika, Blaženi Marko Pupnatski, s verskim bogoslužjem in kulturnimi programi.",
+        "fr": "Une célébration de la figure béatifiée locale, le Bienheureux Marko de Pupnat, avec des services religieux et des programmes culturels.",
+        "date": "2023-08-24",
+        "endDate": "2023-08-24",
+        "time": "all day",
+        "town": "korcula",
+        "venue": "Pupnat",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.korculainfo.com/pupnat/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2023-08-24-a-celebration-of-the-local-blessed-figure-blessed-marko-of-p"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The category 'kids' does not match the description on the source page, which mentions 'cultural programs' but does not specifically mention 'kids'.",
+        "The title field contains a description of the event rather than just the name of the event, which is 'Blessed Marko of Pupnat'."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2023-08-15-a-traditional-sword-dance-kumpanija-performed-in-the-village",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/pupnat/",
+      "discoveredAt": "2026-10-07T11:56:44.484Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Tradicijski kumpanija, izveden u selu.",
+        "en": "A traditional sword dance, Kumpanija, performed in the village.",
+        "de": "Traditionelle Kumpanei, auf dem Dorf aufgeführt.",
+        "it": "Una tradizionale danza di spada, Kumpanija, eseguita nel villaggio.",
+        "sl": "Tradicijska kumpanska igra, izvedena v vasu.",
+        "fr": "Une danse traditionnelle de l'épée, Kumpanija, effectuée dans le village.",
+        "date": "2023-08-15",
+        "endDate": "2023-08-15",
+        "time": "summer",
+        "town": "korcula",
+        "venue": "Pupnat",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.korculainfo.com/pupnat/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2023-08-15-a-traditional-sword-dance-kumpanija-performed-in-the-village"
+      },
+      "verifierConfidence": 0.7,
+      "verifierConcerns": [
+        "The date '2023-08-15' seems to be a specific date, but the event description mentions 'summer', which is a vague time period. The source text does not explicitly confirm the event takes place on this specific date.",
+        "The title 'A traditional sword dance, Kumpanija, performed in the village' seems to be a direct translation of the Croatian text. However, the source page does not explicitly mention the title in this exact wording.",
+        "The venue 'Pupnat' is mentioned in the source text, but it is not explicitly stated as the location of the Kumpanija sword dance. The source text mentions Pupnat as a village with a rich history and cultural significance, but it does not confirm that the Kumpanija sword dance takes place specifically in Pupnat.",
+        "The category 'kids' seems to be an incorrect assumption. The source text does not mention the event as being suitable for children, and the Kumpanija sword dance is described as a traditional and potentially intense cultural performance."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.7"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2023-07-25-the-village-of-cara-is-the-centre-of-a-traditional-pilgrimag",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/cara/",
+      "discoveredAt": "2026-10-07T11:56:44.484Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Selo Čara je središte tradicionalne procesije hodočašća iz sela",
+        "en": "The village of Čara is the centre of a traditional pilgrimage procession from the village.",
+        "de": "Das Dorf Čara ist Mittelpunkt einer traditionellen Wallfahrt",
+        "it": "Il villaggio di Čara è il centro di una processione tradizionale di pellegrinaggio dal villaggio",
+        "sl": "Selo Čara je središče tradicionalne procesije hodovalcev iz sela",
+        "fr": "Le village de Čara est le centre d'une procession traditionnelle de pèlerinage du village",
+        "date": "2023-07-25",
+        "town": "cara",
+        "venue": "Gospa od Carskog Polja (Our Lady of Čara Field)",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.korculainfo.com/cara/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2023-07-25-the-village-of-cara-is-the-centre-of-a-traditional-pilgrimag"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The title field contains a description, not the event name. The actual event name is 'Sveti Jakov pilgrimage'.",
+        "The date field is supported by the source page text, but the event description mentions that it happens every year on 25 July. This might imply that the event is not unique to this date, but rather a recurring event. However, the date field only contains a single date, which might not be sufficient to capture the recurring nature of the event.",
+        "The venue field is supported by the source page text, but it contains the full name of the church, including the title 'Our Lady of Čara Field'. This might not be the most common or concise way to refer to the venue.",
+        "The category field contains 'kids', but the source page text does not provide any information that suggests the event is specifically for children. The event is a traditional pilgrimage procession, which might be of interest to people of all ages."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2023-07-25-the-traditional-pilgrimage-procession-from-cara-is-a-major-r",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/cara/",
+      "discoveredAt": "2026-10-07T11:56:44.484Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Tradicionalna procesija hodočašća iz Čare je značajan vjerski događaj godine u Čari.",
+        "en": "The traditional pilgrimage procession from Čara is a major religious event of the year in Čara.",
+        "de": "Die traditionelle Pilgerprozession aus Čara ist ein bedeutendes religiöses Ereignis des Jahres in Čara.",
+        "it": "La tradizionale processione di pellegrinaggio da Čara è un importante evento religioso dell'anno a Čara.",
+        "sl": "Tradicionalna procesija hodovalcev iz Čare je pomemben verski dogodek leta v Čari.",
+        "fr": "La procession traditionnelle de pèlerinage de Čara constitue un événement religieux majeur de l'année à Čara.",
+        "date": "2023-07-25",
+        "town": "cara",
+        "venue": "Gospa od Carskog Polja (Our Lady of Čara Field)",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.korculainfo.com/cara/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2023-07-25-the-traditional-pilgrimage-procession-from-cara-is-a-major-r"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The extracted candidate lists the event as happening on '2023-07-25', but the source page text states that the Sveti Jakov pilgrimage (which this event appears to be) occurs on '25 July (the feast of Sveti Jakov — St James’s Day)' every year. This suggests that the extracted date may be incorrect, as it does not account for the possibility that the event occurs on a different date in different years.",
+        "The extracted candidate lists the venue as 'Gospa od Carskog Polja (Our Lady of Čara Field)', which is consistent with the source page text. However, the source page text also mentions that the church is located in the field below the village, which may imply that the village itself (Čara) is not the venue, but rather the location from which the procession originates.",
+        "The extracted candidate lists the category as 'kids', but the source page text does not mention anything about the event being suitable for children. In fact, the source page text describes the event as a 'traditional pilgrimage procession', which may not be suitable for young children."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2023-07-25-the-village-of-cara-is-one-of-the-five-villages-on-korcula-i",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/cara/",
+      "discoveredAt": "2026-10-07T11:56:44.484Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Selo Čara je jedno od pet sela na otoku Korčuli koje čuva Kumpaniju, ples s mačem.",
+        "en": "The village of Čara is one of the five villages on Korčula Island that preserves the Kumpanija sword dance.",
+        "de": "Das Dorf Čara ist eines von fünf Dörfern auf der Insel Korčula, das die Kumpanija-Schwerttanz erhalten hat.",
+        "it": "Il villaggio di Čara è uno dei cinque villaggi dell'isola di Korčula che conserva la danza di scherma Kumpanija.",
+        "sl": "Selo Čara je eno od pet vasi na otoku Korčuli, ki ohranja Kumpanijo, ples z mečem.",
+        "fr": "Le village de Čara est l'un des cinq villages de l'île de Korčula qui conserve le Kumpanija danse d'épée.",
+        "date": "2023-07-25",
+        "town": "cara",
+        "venue": "Čara",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://www.korculainfo.com/cara/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2023-07-25-the-village-of-cara-is-one-of-the-five-villages-on-korcula-i"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The date '2023-07-25' is mentioned in the 'Events' section as the date of the Sveti Jakov pilgrimage, but it is not explicitly mentioned as the date of the Kumpanija event. This could be a concern if the Kumpanija event is not actually held on the same date as the pilgrimage."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-aminess-korcula-entertainment-2024-04-23-discover-korcula",
+      "sourceId": "aminess-korcula-entertainment",
+      "sourceUrl": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+      "discoveredAt": "2026-10-07T11:56:44.484Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Otkrijte Korčulu",
+        "en": "Discover Korčula",
+        "de": "Entdecken Sie Korčula",
+        "it": "Scopri Korčula",
+        "sl": "Odkrijte Korčulo",
+        "fr": "Découvrez Korčula",
+        "date": "2024-04-23",
+        "endDate": "2024-10-18",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+        "extractionMethod": "ai",
+        "id": "ai-aminess-korcula-entertainment-2024-04-23-discover-korcula"
+      },
+      "verifierConfidence": 0.2,
+      "verifierConcerns": [
+        "The extracted candidate mentions 'Discover Korčula' as the title in English, but the source page text also mentions this phrase as part of a larger promotional text for a tour. It is unclear if this phrase is being used as the title of the event or as part of a larger description.",
+        "The extracted candidate mentions 'Korčula' as the town, but the source page text also mentions 'Island of Korčula' as a separate entity. It is unclear if the extracted candidate is referring to the town or the island.",
+        "The extracted candidate mentions 'Kids' as one of the categories, but the source page text does not mention any events or activities specifically for kids. It is unclear if this category is accurate or if it was incorrectly extracted.",
+        "The extracted candidate mentions '2024-04-23' as the date, but the source page text mentions '23. Apr - 18. Oct' as a period of time when the hotel is open. It is unclear if this date is accurate or if it was incorrectly extracted.",
+        "The extracted candidate mentions 'Korčula' as the venue, but the source page text mentions 'Šetalište F. Kršinića 33, 20260 Korčula' as the address of the hotel. It is unclear if the extracted candidate is referring to the hotel or the town.",
+        "The extracted candidate mentions 'Discover Korčula' as the title, but the source page text also mentions 'Discover Korčula' as part of a larger promotional text for a tour. It is unclear if this phrase is being used as the title of the event or as part of a larger description."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.2"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
     }
   ]
 }

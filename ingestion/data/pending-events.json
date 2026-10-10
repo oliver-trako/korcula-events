@@ -14234,6 +14234,734 @@
       ],
       "duplicateMatches": [],
       "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-korcula-racisce-2026-11-07-a-capella-singing-group-concert",
+      "sourceId": "visit-korcula-racisce",
+      "sourceUrl": "https://visitkorcula.eu/en/events/summer-in-racisce/",
+      "discoveredAt": "2026-10-10T11:21:59.913Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Koncert a cappella pjevačkog sastava",
+        "en": "A capella singing group concert",
+        "de": "A cappella-Konzert",
+        "it": "Concerto del gruppo di canto a cappella",
+        "sl": "Koncert a cappella pevke skupine",
+        "fr": "Concert de groupe d'harmonie vocale",
+        "date": "2026-11-07",
+        "town": "racisce",
+        "venue": "Račišće",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitkorcula.eu/en/events/summer-in-racisce/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-korcula-racisce-2026-11-07-a-capella-singing-group-concert"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The date '2026-11-07' does not match the date listed next to the event in the source page text, which is '07.11.2026'. This suggests that the extracted date may be incorrect.",
+        "The title 'A capella singing group concert' is not the exact title listed next to the event in the source page text, which is 'A capella singing group concert'. However, the source page text does use the same title, but it is listed in a separate section 'Other events' which makes it unclear if this is the correct title for this specific event.",
+        "The venue 'Račišće' is listed correctly, but the town 'racisce' seems to be a misspelling of 'Račišće'. This may indicate that the extracted data is not well-supported by the source page text.",
+        "The category 'kids' does not match the description of the event in the source page text, which does not mention anything about kids. However, the source page text does not provide a clear category for this event either.",
+        "The source page text lists multiple dates for the same recurring show, which is normal and not a red flag. However, the specific date and time listed next to the event in the source page text ('07.11.2026') do not match the extracted date ('2026-11-07')."
+      ],
+      "blockingReasons": [
+        "source-override-always-review",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-lumbarda-2026-09-29-slow-food-korcula-will-take-place-on-september-29-2026",
+      "sourceId": "visit-lumbarda",
+      "sourceUrl": "https://www.visitlumbarda.eu/",
+      "discoveredAt": "2026-10-10T11:21:59.913Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Slow food Korčula će se održati 29. rujna 2026. godine.",
+        "en": "Slow food Korčula will take place on September 29, 2026.",
+        "de": "Slow food Korčula će se održati 29. rujna 2026. godine.",
+        "it": "Slow food Korčula si terrà il 29 settembre 2026.",
+        "sl": "Slow food Korčula bodo potekali 29. septembra 2026.",
+        "fr": "Slow food Korčula se tiendra le 29 septembre 2026.",
+        "date": "2026-09-29",
+        "endDate": "2026-09-29",
+        "town": "lumbarda",
+        "venue": "Lumbarda",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.visitlumbarda.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-lumbarda-2026-09-29-slow-food-korcula-will-take-place-on-september-29-2026"
+      },
+      "verifierConfidence": 0.9,
+      "verifierConcerns": [
+        "The title 'Slow food Korčula' appears in a section labeled 'Događanja' (Events), but it is not clear if this is a specific event or a recurring event. The page lists multiple dates for the same event, which could indicate a recurring event.",
+        "The date '29. rujna 2026.' appears in the text, but it is not clear if this is the exact date of the event or a general date. The text also mentions 'Dani lumbarajske pesefizme 2026.' which suggests that the event may be part of a larger festival or event.",
+        "The venue 'Lumbarda' appears in the text, but it is not clear if this is the exact venue of the event or a general location. The text also mentions 'Otok Korčula' which suggests that the event may be held on the island of Korčula.",
+        "The category 'kids' appears in the extracted candidate, but it is not clear if this is a correct category for the event. The text does not explicitly mention 'kids' as a category for the event.",
+        "The text contains multiple sections and links that are not related to the event, which could indicate that the extracted candidate is not a specific event but rather a general section or link."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-tz-blato-2026-08-12-the-final-summer-edition-of-the-traditional-wine-and-food-fe",
+      "sourceId": "tz-blato",
+      "sourceUrl": "https://tzo-blato.hr/en/",
+      "discoveredAt": "2026-10-10T11:21:59.913Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Završno ovogodišnje ljetno izdanje tradicionalne eno-gastro manifestacije",
+        "en": "The final summer edition of the traditional wine and food festival",
+        "de": "Završno ovogodišnje ljetno izdanje tradicionalne eno-gastro manifestacije",
+        "it": "L'ultima edizione estiva di questo anno della tradizionale manifestazione enogastronomica un-plat",
+        "sl": "Zadnja letošnja poletna izdaja tradicionalne enogastronomsko manifestacije eno-gastro",
+        "fr": "La dernière édition estivale de cette année de la manifestation gastronomique traditionnelle à thème unique",
+        "date": "2026-08-12",
+        "town": "blato",
+        "venue": "Blato Wine & Dine",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://tzo-blato.hr/en/",
+        "extractionMethod": "ai",
+        "id": "ai-tz-blato-2026-08-12-the-final-summer-edition-of-the-traditional-wine-and-food-fe"
+      },
+      "verifierConfidence": 0.7,
+      "verifierConcerns": [
+        "The title 'Završno ovogodišnje ljetno izdanje tradicionalne eno-gastro manifestacije' appears to be a description of the event, but it's not entirely clear if it's the actual title of the event. The source page text does mention 'Okusi i mirisi zavičaja / Blato Wine & Dine' as a specific event, which seems to be the same event as the one in the extracted candidate. It's possible that the extracted candidate's title is an embellishment or a summary of the actual title.",
+        "The date '2026-08-12' appears to be correct, but it's not entirely clear if it's the correct date for the specific event mentioned in the source page text. The source page text does mention 'Okusi i mirisi zavičaja / Blato Wine & Dine 12.08.2026.' as a specific event, which seems to be the same event as the one in the extracted candidate. However, the source page text also mentions another event with the same name but a different date ('Okusi i mirisi zavičaja / Blato Wine & Dine 26.08.2026.'). It's possible that the extracted candidate's date is correct, but it's not entirely clear if it's the correct date for the specific event.",
+        "The venue 'Blato Wine & Dine' appears to be correct, as it's mentioned in the source page text as a specific event.",
+        "The town 'blato' appears to be correct, as it's mentioned in the source page text as the location of the event.",
+        "The category 'kids' appears to be incorrect, as there's no mention of 'kids' in the source page text. The source page text does mention 'Gastro' as a category, which seems to be a more accurate description of the event.",
+        "The extracted candidate's fields appear to be factually well-supported by the text near this listing, but there are some concerns about the accuracy of the title and date. Further investigation would be needed to confirm the accuracy of the extracted candidate's fields."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.7"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-tz-blato-2026-07-22-the-final-summer-edition-of-the-traditional-wine-and-food-fe",
+      "sourceId": "tz-blato",
+      "sourceUrl": "https://tzo-blato.hr/en/",
+      "discoveredAt": "2026-10-10T11:21:59.913Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Završno ovogodišnje ljetno izdanje tradicionalne eno-gastro manifestacije",
+        "en": "The final summer edition of the traditional wine and food festival",
+        "de": "Završno ovogodišnje ljetno izdanje tradicionalne eno-gastro manifestacije",
+        "it": "L'ultimo numero estivo di questo anno della manifestazione tradizionale enogastronomica unico",
+        "sl": "Zadnje letošnje poletno izdajo tradicionalne eno-gastronomskih prirediti",
+        "fr": "Le dernier numéro estival de cette année de la manifestation traditionnelle eno-gastronomique à un seul usage",
+        "date": "2026-07-22",
+        "town": "blato",
+        "venue": "Blato Wine & Dine",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://tzo-blato.hr/en/",
+        "extractionMethod": "ai",
+        "id": "ai-tz-blato-2026-07-22-the-final-summer-edition-of-the-traditional-wine-and-food-fe"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The source page appears to be a general information page for the Blato Tourist Board, and the extracted candidate's date ('2026-07-22') seems to match one of the event listings ('Okusi i mirisi zavičaja / Blato Wine & Dine 22.07.2026.') on the page. However, the page also lists other events that occurred in August and September, which suggests that the event listing may be referring to a recurring event. It would be worth checking if the page explicitly states that this is a one-time event or if it's part of a recurring series.",
+        "The title of the extracted candidate ('The final summer edition of the traditional wine and food festival') seems to be a translation of the original title in Croatian ('Završno ovogodišnje ljetno izdanje tradicionalne eno-gastro manifestacije'). However, the source page text does not explicitly state that this is the final summer edition, so it's possible that the title was embellished or taken out of context.",
+        "The category of the extracted candidate ('kids') does not seem to match the content of the source page text, which appears to be focused on wine and food festivals, rather than events for kids.",
+        "The venue of the extracted candidate ('Blato Wine & Dine') seems to match one of the event listings on the page, but it's not explicitly stated as the venue for this specific event. It would be worth checking if the page explicitly states that this is the venue for this event.",
+        "The town of the extracted candidate ('blato') seems to match the location of the Blato Tourist Board, but it's not explicitly stated as the location for this specific event. It would be worth checking if the page explicitly states that this is the location for this event."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-tz-blato-2026-10-08-held-reception-for-our-long-time-guests-and-their-hosts",
+      "sourceId": "tz-blato",
+      "sourceUrl": "https://tzo-blato.hr/en/",
+      "discoveredAt": "2026-10-10T11:21:59.913Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Održano primanje za naše dugogodišnje goste i njihove domaćine",
+        "en": "Held reception for our long-time guests and their hosts",
+        "de": "Održano primanje za naše dugogodišnje goste i njihove domaćine",
+        "it": "Ricevuto il ricevimento per i nostri ospiti abituali e i loro padroni di casa",
+        "sl": "Prisli smo v sprejem za naše dolgoletne goste in njihove gostitelje",
+        "fr": "Reçu le réception pour nos hôtes réguliers et leurs hôtes",
+        "date": "2026-10-08",
+        "town": "blato",
+        "venue": "Pregled B2B",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://tzo-blato.hr/en/",
+        "extractionMethod": "ai",
+        "id": "ai-tz-blato-2026-10-08-held-reception-for-our-long-time-guests-and-their-hosts"
+      },
+      "verifierConfidence": 0.2,
+      "verifierConcerns": [
+        "The title contains a phrase that is not the page's own text. The phrase 'Held reception for our long-time guests and their hosts' is not present on the source page. Instead, the phrase 'Održano primanje za naše dugogodišnje goste i njihove domaćine' is present, which translates to 'Held reception for our long-time guests and their hosts' but is not an exact match to the title in the extracted-candidate.",
+        "The date '2026-10-08' is present in the extracted-candidate, but the page lists multiple events for the same day. The event 'PREGLED B2B “OKUSI I MIRISI ZAVIČAJA“ predstavljeni kao primjer dobre prakse i održive manifestacije' is listed for the same date, which could indicate that the date is correct but the time is missing.",
+        "The venue 'Pregled B2B' is present in the extracted-candidate, but the page lists multiple events for the same venue. The event 'PREGLED B2B “OKUSI I MIRISI ZAVIČAJA“ predstavljeni kao primjer dobre prakse i održive manifestacije' is listed for the same venue, which could indicate that the venue is correct but the event type is missing.",
+        "The category 'kids' is present in the extracted-candidate, but the page does not list any events that match this category. Instead, the page lists events that are related to tourism and cultural activities.",
+        "The town 'blato' is present in the extracted-candidate, but the page lists multiple events that take place in different locations within the town of Blato. The event 'PREGLED B2B “OKUSI I MIRISI ZAVIČAJA“ predstavljeni kao primjer dobre prakse i održive manifestacije' is listed for the same location, which could indicate that the location is correct but the event type is missing."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.2"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-orebic-2026-08-24-when-summer-slows-down-peljesac-in-september",
+      "sourceId": "visit-orebic",
+      "sourceUrl": "https://visitorebic-croatia.hr/",
+      "discoveredAt": "2026-10-10T11:21:59.913Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Kad ljeta spore",
+        "en": "When Summer Slows Down – Pelješac in September",
+        "de": "Wenn Sommer schwinden",
+        "it": "Quando l'estate declina",
+        "sl": "Ko poletje opušča",
+        "fr": "Lorsque l'été faiblit",
+        "date": "2026-08-24",
+        "town": "orebic",
+        "venue": "Orebić",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitorebic-croatia.hr/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-orebic-2026-08-24-when-summer-slows-down-peljesac-in-september"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The extracted candidate's date (2026-08-24) is before the date of the news article (24.08.2026), which suggests the event may have already occurred."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "duplicate-id"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-orebic-2023-11-03-viganj-tourist-champion-of-the-tourist-patrol-of-vecernji-li",
+      "sourceId": "visit-orebic",
+      "sourceUrl": "https://visitorebic-croatia.hr/",
+      "discoveredAt": "2026-10-10T11:21:59.913Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Viganj turist prvak Večernjeg lista 2023.",
+        "en": "Viganj Tourist Champion of the Tourist Patrol of Večernji list 2023",
+        "de": "Viganj Tourist der Jahrespreis des Večernjeg lista 2023",
+        "it": "Viganj il grande premio turismo del Večernjeg lista 2023",
+        "sl": "Viganj turistična zvezda Večernjega lista 2023",
+        "fr": "Viganj le grand prix touristique du Večernjeg lista 2023",
+        "date": "2023-11-03",
+        "town": "orebic",
+        "venue": "Orebić",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitorebic-croatia.hr/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-orebic-2023-11-03-viganj-tourist-champion-of-the-tourist-patrol-of-vecernji-li"
+      },
+      "verifierConfidence": 0.95,
+      "verifierConcerns": [],
+      "blockingReasons": [
+        "past-event",
+        "duplicate-id"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2026-10-17-moreska-subota",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/",
+      "discoveredAt": "2026-10-10T11:21:59.913Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Moreška subota",
+        "en": "Moreška Saturday",
+        "de": "Moreška Samstag",
+        "it": "Sabato Moreška",
+        "sl": "Moreška sobota",
+        "fr": "Samedi Moreška",
+        "date": "2026-10-17",
+        "time": "19:00",
+        "town": "korcula",
+        "venue": "Centar za kulturu",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://moreska.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2026-10-17-moreska-subota"
+      },
+      "verifierConfidence": 0.7,
+      "verifierConcerns": [
+        "The title field contains 'Moreška subota', which is a generic recurring notice with no real date. The page text actually refers to the event as 'Moreška' and 'Moreška Saturday', but the extracted title only includes the day of the week.",
+        "The date field is well-supported by the text near it, which states '17 LIS 2026 Moreška subota · 19:00 · Centar za kulturu'. However, the time field '19:00' is not explicitly mentioned near this listing, but it is mentioned in the general schedule section. It is possible that the time is correct, but it is not explicitly mentioned near this listing.",
+        "The venue field 'Centar za kulturu' is well-supported by the text near it, which states '17 LIS 2026 Moreška subota · 19:00 · Centar za kulturu'. However, the town field 'korcula' is not explicitly mentioned near this listing, but it is mentioned in the general information section. It is possible that the town is correct, but it is not explicitly mentioned near this listing.",
+        "The category field 'folklore' is not explicitly mentioned near this listing, but it is mentioned in the general information section. It is possible that the category is correct, but it is not explicitly mentioned near this listing."
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.7"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2026-08-17-the-moreska-performance-lasts-about-an-hour",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/tickets",
+      "discoveredAt": "2026-10-10T11:21:59.914Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Izvedba traje otprilike sat vremena.",
+        "en": "The Moreška performance lasts about an hour.",
+        "de": "Die Aufführung dauert ungefähr eine Stunde.",
+        "it": "La rappresentazione dura circa un'ora.",
+        "sl": "Predstavitev traja okoli en ur.",
+        "fr": "La représentation dure environ une heure.",
+        "date": "2026-08-17",
+        "time": "19:00",
+        "town": "korcula",
+        "venue": "Centar za kulturu, Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://moreska.eu/tickets",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2026-08-17-the-moreska-performance-lasts-about-an-hour"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The title field contains a description of the event's duration, not the event's title. The actual title of the event is not explicitly stated in the source page text.",
+        "The date field is supported by the source page text, which lists specific dates and times for the event. However, the time field is not explicitly stated for the given date (2026-08-17). The source page text mentions a performance at 19:00, but it is not clear if this is for the given date or another date.",
+        "The venue field is supported by the source page text, which lists the Centar za kulturu, Korčula as a possible venue for the event.",
+        "The town field is supported by the source page text, which mentions Korčula as the location of the event.",
+        "The category field is supported by the source page text, which describes the event as a 'Moreška performance', a type of folklore."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2026-08-17-unfortunately-this-show-is-sold-out",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/tickets",
+      "discoveredAt": "2026-10-10T11:21:59.914Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Online prodaja za ovaj termin je zatvorena.",
+        "en": "Unfortunately, this show is sold out.",
+        "de": "Online-Verkauf für diesen Zeitraum ist abgeschlossen.",
+        "it": "Purtroppo, questa rappresentazione è sold out.",
+        "sl": "Online prodaja za ta termin je zaprta.",
+        "fr": "Malheureusement, cette représentation est sold out.",
+        "date": "2026-08-17",
+        "time": "19:00",
+        "town": "korcula",
+        "venue": "Centar za kulturu, Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://moreska.eu/tickets",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2026-08-17-unfortunately-this-show-is-sold-out"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The extracted candidate's title field says 'Unfortunately, this show is sold out.' but the source page text says 'Online prodaja za ovaj termin je zatvorena.' and 'Online prodaja zatvorena'. The two titles don't seem to match, and it's possible that the extracted candidate's title is an embellishment beyond what the page text actually says.",
+        "The extracted candidate's date field says '2026-08-17' but the source page text says '17 LIS 2026' which is a more specific date format. The extracted candidate's date field might be an oversimplification of the actual date.",
+        "The extracted candidate's time field says '19:00' but the source page text says 'subota · 19:00 · Centar za kulturu' which includes the day of the week 'subota' and the venue 'Centar za kulturu'. The extracted candidate's time field might be missing some important information.",
+        "The extracted candidate's venue field says 'Centar za kulturu, Korčula' but the source page text says 'Centar za kulturu' which is missing the town 'Korčula'. The extracted candidate's venue field might be including unnecessary information.",
+        "The extracted candidate's category field says 'folklore' but the source page text doesn't explicitly mention the category 'folklore'. It's possible that the extracted candidate's category field is an incorrect assumption.",
+        "The extracted candidate's town field says 'korcula' but the source page text says 'Korčula' which is a more specific spelling. The extracted candidate's town field might be an oversimplification of the actual town name.",
+        "The extracted candidate's category field says 'folklore' but the source page text says 'Moreška' which is a more specific type of folklore. The extracted candidate's category field might be an oversimplification of the actual category.",
+        "The extracted candidate's time field says '19:00' but the source page text says '19:00' but also says 'Ulaz se otvara otprilike pola sata prije početka izvedbe.' which implies that the actual start time might be earlier than 19:00. The extracted candidate's time field might be missing some important information.",
+        "The extracted candidate's title field says 'Unfortunately, this show is sold out.' but the source page text says 'Online prodaja za ovaj termin je zatvorena.' which implies that the show is sold out, but also says 'Karte potražite na ulazu prije početka nastupa.' which implies that tickets might still be available at the door. The extracted candidate's title field might be an oversimplification of the actual situation."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2026-08-17-adults-pay-20-euros-per-person",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/tickets",
+      "discoveredAt": "2026-10-10T11:21:59.914Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Odrasli plaćaju 20 € po osobi.",
+        "en": "Adults pay 20 euros per person.",
+        "de": "Erwachsene zahlen 20 € pro Person.",
+        "it": "Gli adulti pagano 20 euro a persona.",
+        "sl": "Odrasli plačajo 20 € po osebi.",
+        "fr": "Les adultes payent 20 euros par personne.",
+        "date": "2026-08-17",
+        "time": "19:00",
+        "town": "korcula",
+        "venue": "Centar za kulturu, Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://moreska.eu/tickets",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2026-08-17-adults-pay-20-euros-per-person"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The extracted candidate lists the venue as 'Centar za kulturu, Korčula', but the source page text actually lists 'Centar za kulturu, Korčula' as the alternative venue for rainy days. The actual venue for the 17th August event is not explicitly stated on the page, but the source page text does mention 'Ljetno kino, Korčula' as the venue for other events, and the extracted candidate does not mention this. Therefore, I have a concern about the accuracy of the venue field."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2026-08-17-children-under-14-pay-10-euros-per-person",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/tickets",
+      "discoveredAt": "2026-10-10T11:21:59.914Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Djeca (do 14 godina) plaćaju 10 € po osobi.",
+        "en": "Children under 14 pay 10 euros per person.",
+        "de": "Kinder unter 14 Jahren zahlen 10 € pro Person.",
+        "it": "I bambini sotto i 14 anni pagano 10 euro a persona.",
+        "sl": "Ostali (do 14 let) plačujejo 10 € po osebi.",
+        "fr": "Les enfants de moins de 14 ans payent 10 euros par personne.",
+        "date": "2026-08-17",
+        "time": "19:00",
+        "town": "korcula",
+        "venue": "Centar za kulturu, Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://moreska.eu/tickets",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2026-08-17-children-under-14-pay-10-euros-per-person"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The extracted candidate's title and price information appear to be taken from the 'Djeca (do 14 godina)' section of the source page, but the date and time listed in the extracted candidate ('2026-08-17', '19:00') do not match the date and time listed in the 'Djeca (do 14 godina)' section of the source page ('subota · 19:00 · Centar za kulturu'). This suggests that the extracted candidate may be referencing a different date or time, or that the extraction was incorrect.",
+        "The extracted candidate's venue and town fields appear to be correct, but the source page also mentions that the event is held at 'Ljetno kino, Korčula' for some dates, and at 'Centar za kulturu, Korčula' for other dates. This suggests that the extracted candidate may be referencing a specific date or time that is not listed on the source page, or that the extraction was incorrect.",
+        "The extracted candidate's category field lists 'folklore', but the source page does not mention folklore as a category. Instead, the source page mentions that the event is a 'moreška' performance, which is a traditional dance and music performance from the island of Korčula. This suggests that the extracted candidate's category field may be incorrect.",
+        "The extracted candidate's date field lists '2026-08-17', but the source page does not explicitly mention this date. However, the source page does mention that the 'Sezona 2026' is currently ongoing, and that the event schedule for this season is available on the source page. This suggests that the extracted candidate's date field may be referencing a specific date within the ongoing season, but the extraction was incomplete or incorrect."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2026-08-17-the-total-price-is-20-euros",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/tickets",
+      "discoveredAt": "2026-10-10T11:21:59.914Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Ukupno plaća 20 €.",
+        "en": "The total price is 20 euros.",
+        "de": "Gesamtverdienst 20 €.",
+        "it": "Il prezzo totale è di 20 euro.",
+        "sl": "Skupno plača 20 €.",
+        "fr": "Le prix total est de 20 euros.",
+        "date": "2026-08-17",
+        "time": "19:00",
+        "town": "korcula",
+        "venue": "Centar za kulturu, Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://moreska.eu/tickets",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2026-08-17-the-total-price-is-20-euros"
+      },
+      "verifierConfidence": 0.4,
+      "verifierConcerns": [
+        "The title is a price, not an event name. The source text does not support the title 'The total price is 20 euros.' as it is not the page's own text, but rather a price mentioned in the context of ticket prices.",
+        "The date and time fields appear to be supported by the source text, but there is a discrepancy between the date and time fields and the event schedule listed on the page. The event listed on the page for August 17th at 19:00 is marked as 'Online prodaja zatvorena' (online sales closed), which suggests that the event has already happened or is not available for online purchase.",
+        "The venue field appears to be supported by the source text, but there is a discrepancy between the venue listed on the page and the venue listed in the extracted candidate. The page lists the venue as 'Centar za kulturu, Korčula' for multiple events, but the extracted candidate lists it as the venue for a single event.",
+        "The town field appears to be supported by the source text, but it is worth noting that the town is mentioned multiple times on the page, and the extracted candidate lists it as 'korcula' which is a shortened version of the town's name.",
+        "The category field is 'folklore', but the source text does not support this category. The page mentions 'Moreška' which is a traditional dance, but it is not explicitly categorized as folklore."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.4"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2026-08-14-in-case-of-rain-the-performance-will-be-moved-to-the-culture",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/tickets",
+      "discoveredAt": "2026-10-10T11:21:59.914Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Ako pada kiša, izvedbe se sele u Centar za kulturu.",
+        "en": "In case of rain, the performance will be moved to the Culture Center.",
+        "de": "Wenn es regnet, finden die Veranstaltungen im Zentrum für Kultur statt.",
+        "it": "Se piove, la rappresentazione sarà spostata al Centro di cultura.",
+        "sl": "Ko bo padala kislina, prireditve se premešajo v Center za kulturo.",
+        "fr": "En cas de pluie, la représentation sera déplacée au Centre de culture.",
+        "date": "2026-08-14",
+        "time": "21:00",
+        "town": "korcula",
+        "venue": "Centar za kulturu, Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://moreska.eu/tickets",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2026-08-14-in-case-of-rain-the-performance-will-be-moved-to-the-culture"
+      },
+      "verifierConfidence": 0.5,
+      "verifierConcerns": [
+        "The extracted candidate's title is a translation of the original text, which could be a source of error. The original text is 'Ako pada kiša, izvedbe se sele u Centar za kulturu.' which is directly mentioned on the page. The title field should contain the original text or a direct translation of it.",
+        "The extracted candidate's date field is '2026-08-14', but the page text explicitly mentions '14 LIS 2026'. The date format is different, and it's possible that the extracted candidate's date is incorrect.",
+        "The extracted candidate's time field is '21:00', but the page text explicitly mentions 'srijeda · 21:00'. The time is mentioned in the same context as the date, which could indicate that the extracted candidate's time is correct. However, it's still worth noting that the time is mentioned in the same sentence as the date, which could be a source of error.",
+        "The extracted candidate's venue field is 'Centar za kulturu, Korčula', which is correct. However, the page text explicitly mentions 'Centar za kulturu, Korčula' as the venue for the performance in case of rain. The extracted candidate's venue field could be a direct copy of the original text, which could be a source of error.",
+        "The extracted candidate's category field is 'folklore', but the page text does not explicitly mention folklore as the category. The category field should contain the correct category, which is not mentioned on the page."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.5"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2026-08-14-the-performance-starts-about-half-an-hour-before-the-schedul",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/tickets",
+      "discoveredAt": "2026-10-10T11:21:59.914Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Ulaz se otvara otprilike pola sata prije početka izvedbe.",
+        "en": "The performance starts about half an hour before the scheduled start time.",
+        "de": "Der Eingang öffnet sich etwa 30 Minuten vor Beginn der Aufführung.",
+        "it": "L'ingresso si apre circa mezz'ora prima dell'orario di inizio previsto.",
+        "sl": "Vhod se odpre okoli pol ure pred začetkom predstave.",
+        "fr": "La représentation commence environ une demi-heure avant l'heure de début prévue.",
+        "date": "2026-08-14",
+        "time": "21:00",
+        "town": "korcula",
+        "venue": "Centar za kulturu, Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://moreska.eu/tickets",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2026-08-14-the-performance-starts-about-half-an-hour-before-the-schedul"
+      },
+      "verifierConfidence": 0.5,
+      "verifierConcerns": [
+        "The title is not the page's own text, but a translation of it. The original title in Croatian is 'Ulaz se otvara otprilike pola sata prije početka izvedbe.', which is also present on the page. This is not necessarily an error, but it's worth noting that the English title is a translation of the Croatian one.",
+        "The date '2026-08-14' is present on the page, but it's not explicitly stated as the date of the event. The date is mentioned in the context of '14 LIS 2026', which suggests that 'LIS' might be an abbreviation for a month, but it's not clear what it stands for. The page does mention 'Sezona 2026', which implies that the event is part of the 2026 season, but it doesn't explicitly state the date.",
+        "The time '21:00' is present on the page, but it's not explicitly stated as the time of the event. The page does mention 'srijeda · 21:00 · Centar za kulturu', which suggests that the event is taking place on a Wednesday at 21:00, but it's not clear if this is the event being described in the extracted candidate.",
+        "The venue 'Centar za kulturu, Korčula' is present on the page, but it's not explicitly stated as the venue of the event. The page does mention 'Centar za kulturu, Korčula' as the venue of the event on 'srijeda · 21:00', but it's not clear if this is the same event being described in the extracted candidate.",
+        "The town 'Korčula' is present on the page, but it's not explicitly stated as the town of the event. The page does mention 'Korčula' as the location of the event, but it's not clear if this is the same event being described in the extracted candidate.",
+        "The category 'folklore' is not explicitly stated on the page. The page does mention 'Moreška', which is a type of folklore performance, but it's not clear if this is the same event being described in the extracted candidate."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.5"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-cara-zavalatica-local-sources-2024-06-01-kumpanija-sword-dance-performances-take-place-in-cara-during",
+      "sourceId": "cara-zavalatica-local-sources",
+      "sourceUrl": "https://www.korculainfo.com/cara/",
+      "discoveredAt": "2026-10-10T11:21:59.914Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Kumpanija ples s mačem održavaju se u Čari tijekom ljetnih mjeseca.",
+        "en": "Kumpanija sword dance performances take place in Čara during the summer months.",
+        "de": "Kumpanija-Schwerttanz-Aufführungen finden im Sommermonat in Čara statt.",
+        "it": "Si svolgono esibizioni di danza con la spada Kumpanija a Čara durante i mesi estivi.",
+        "sl": "Kumpanija ples z mečem se odvija v Čari med poletjem.",
+        "fr": "Les performances de danse au sabre Kumpanija ont lieu pendant les mois d'été à Čara.",
+        "date": "2024-06-01",
+        "town": "cara",
+        "venue": "Čara village",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://www.korculainfo.com/cara/",
+        "extractionMethod": "ai",
+        "id": "ai-cara-zavalatica-local-sources-2024-06-01-kumpanija-sword-dance-performances-take-place-in-cara-during"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The event listing mentions a Kumpanija sword dance performance, but the source page does not explicitly state that these performances take place in Čara during the summer months. The text only mentions that Čara is one of the five villages on Korčula Island that preserves the Kumpanija sword dance, a chain sword dance of great antiquity performed in summer and listed as UNESCO intangible cultural heritage."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-aminess-korcula-entertainment-2026-04-03-a-private-heritage-sunset-voyage",
+      "sourceId": "aminess-korcula-entertainment",
+      "sourceUrl": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+      "discoveredAt": "2026-10-10T11:21:59.914Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Privatni zaljevni brod - večer u tradicionalnoj brodu",
+        "en": "A Private Heritage Sunset Voyage",
+        "de": "Privatsegelboot - Abend in einem traditionellen Segelboot",
+        "it": "Yacht da diporto - Sera in un barcone tradizionale",
+        "sl": "Privatni jadralni čoln - večer na tradicionalni čoln",
+        "fr": "Voilier de plaisance - Soirée à bord d'un bateau traditionnel",
+        "date": "2026-04-03",
+        "time": "03:00h",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "kids"
+        ],
+        "desc": {
+          "en": "Unforgettable Adriatic evenings - Private sunset cruise for up to 10 guests. Calm seas, golden horizons, and the whisper of wind in the sails – the perfect way to make unforgettable memories..on the deck of our traditional wooden boat, built in 1941.",
+          "hr": "Nesamoranski Adrijatski večeri - privatni zaljevni brod koji će vam omogućiti nepozabavanu večer. Kalmi more, zlatni horizonti i šuškanje vjetra u jedrenicama - savršeni izbor za stvaranje nepozabavnih ugođaja na našoj tradicionalnoj brodu iz 1941. godine."
+        },
+        "source": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+        "extractionMethod": "ai",
+        "id": "ai-aminess-korcula-entertainment-2026-04-03-a-private-heritage-sunset-voyage"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The extracted candidate contains a date of '2026-04-03', but the source page text contains a special offer with a date range of '23. Apr - 18. Oct', which suggests that the current date is within this range. This could imply that the event has already occurred or is about to occur, rather than on a future date.",
+        "The title of the extracted candidate is 'A Private Heritage Sunset Voyage', but the source page text contains a similar title with a different time ('03:00h'). This could suggest that the extracted candidate's time is incorrect or that the two events are actually the same, but the extracted candidate's time is not supported by the source page text.",
+        "The extracted candidate's category is 'kids', but the source page text does not mention anything about the event being suitable for children. This could suggest that the extracted candidate's category is incorrect.",
+        "The extracted candidate's description is not supported by the source page text, which contains a similar description with a different format and wording. This could suggest that the extracted candidate's description is embellished or incorrect."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-aminess-korcula-entertainment-2026-04-03-korcula-vintage-electric-car-tour-with-wine-and-olive-oil-ta",
+      "sourceId": "aminess-korcula-entertainment",
+      "sourceUrl": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+      "discoveredAt": "2026-10-10T11:21:59.914Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Izlet na Korčuli - vintage vozila, vino i ulje",
+        "en": "Korčula: Vintage / Electric Car Tour with Wine and Olive Oil Tasting",
+        "de": "Ausflug nach Korčula - Vintagefahrzeuge, Wein und Öl",
+        "it": "Escursione a Corcyra - Auto d'epoca, vino e olio",
+        "sl": "Izlet na Korčuli - retro vozila, vino in olj",
+        "fr": "Excursion à Korčula - Voitures vintage, vin et huile",
+        "date": "2026-04-03",
+        "time": "03:00h",
+        "town": "smokvica",
+        "venue": "Smokvica",
+        "cats": [
+          "kids"
+        ],
+        "desc": {
+          "en": "Explore Korčula in a vintage car, taste local wines and olive oils, and discover the island's rich history and scenic beauty on this guided tour.",
+          "hr": "Izvrstan način za otkrivanje Korčule - u vintageu će vam omogućiti upoznavanje s lokalnim vinima i uljem, te će vam priprijeći otkrivanje bogate povijesti i ljepote ovog otoka."
+        },
+        "source": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+        "extractionMethod": "ai",
+        "id": "ai-aminess-korcula-entertainment-2026-04-03-korcula-vintage-electric-car-tour-with-wine-and-olive-oil-ta"
+      },
+      "verifierConfidence": 0.7,
+      "verifierConcerns": [
+        "The date field ('2026-04-03') seems to be inconsistent with the time fields ('03:00h', '04:00h') which appear in other tour listings on the same page. Specifically, the 'Korčula: Vintage / Electric Car Tour with Wine and Olive Oil Tasting' listing has a time of '03:00h' but the date field is not explicitly mentioned in the source text as being the same date as the other tour listings. However, the page does seem to be listing the same tour multiple times with different dates, which could suggest that the date field is actually '2026-04-03'. Nevertheless, this inconsistency is a potential red flag.",
+        "The venue field ('Smokvica') appears to be a town rather than a venue. While it is possible that the event is taking place in Smokvica, the source text does not explicitly mention a venue with this name. This could suggest that the venue field is incorrect or incomplete.",
+        "The category field ('kids') seems to be inconsistent with the description of the event, which does not mention anything related to children. While it is possible that the event is suitable for children, the source text does not explicitly mention this. This could suggest that the category field is incorrect or incomplete."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.7"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-aminess-korcula-entertainment-2026-04-02-taste-of-korcula",
+      "sourceId": "aminess-korcula-entertainment",
+      "sourceUrl": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+      "discoveredAt": "2026-10-10T11:21:59.914Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Uživajte u Korčuli",
+        "en": "Taste of Korčula",
+        "de": "Genießen Sie auf Korčula",
+        "it": "Godetevi a Corculla",
+        "sl": "Živite na Korčuli",
+        "fr": "Profitez de Corcyre",
+        "date": "2026-04-02",
+        "time": "02:00h",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "kids"
+        ],
+        "desc": {
+          "en": "The tour includes a guided city tour with a visitor to the observation deck and a tasting of homemade products from the family farm OPG Anica Bažika.",
+          "hr": "U ponudi je izlet po gradu koji će vam omogućiti posjetu obzidnom tornju i degustaciju domaćih proizvoda iz obiteljske farme OPG Anica Bažika."
+        },
+        "source": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+        "extractionMethod": "ai",
+        "id": "ai-aminess-korcula-entertainment-2026-04-02-taste-of-korcula"
+      },
+      "verifierConfidence": 0.4,
+      "verifierConcerns": [
+        "The title 'Taste of Korčula' seems to be a direct quote from the source page's event listing, but the title 'Uživajte u Korčuli' in the Croatian language is not mentioned anywhere on the page. This suggests that the title extraction may have been done incorrectly.",
+        "The 'date' field is listed as '2026-04-02', but the page lists multiple events with the same start time '02:00h'. Without more context, it's unclear if this specific event is actually happening on this date, or if this is a generic date for all events listed.",
+        "The 'time' field is listed as '02:00h', but this seems to be a generic time listed in multiple events on the page. It's unclear if this is the actual start time for this specific event.",
+        "The 'venue' field is listed as 'Korčula', but this is a generic location listed in multiple events on the page. It's unclear if this is the actual venue for this specific event.",
+        "The 'town' field is listed as 'korcula', but this seems to be a generic location listed in multiple events on the page. It's unclear if this is the actual town for this specific event.",
+        "The 'cats' field is listed as ['kids'], but the page doesn't seem to mention anything about the event being suitable for kids. This suggests that the category extraction may have been done incorrectly.",
+        "The 'description' field is listed as 'The tour includes a guided city tour with a visitor to the observation deck and a tasting of homemade products from the family farm OPG Anica Bažika.', but this seems to be a direct quote from the source page's event listing. It's unclear if this is the actual description of the event."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.4"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
     }
   ]
 }

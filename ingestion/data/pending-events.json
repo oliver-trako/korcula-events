@@ -15982,6 +15982,270 @@
       ],
       "duplicateMatches": [],
       "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-lumbarda-2026-10-08-alongside-the-concert-in-fermata-a-well-known-location-on-ko",
+      "sourceId": "visit-lumbarda",
+      "sourceUrl": "https://www.visitlumbarda.eu/",
+      "discoveredAt": "2026-10-13T12:58:43.897Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Pored koncerta u Fermati, poznatom lokaciji na Korčuli",
+        "en": "Alongside the concert in Fermata, a well-known location on Korčula.",
+        "de": "Uz koncert u Fermati, poznatoj lokaciji na Korčuli.",
+        "it": "Accanto al concerto in Fermata, un luogo noto a Corčula",
+        "sl": "Ob koncertu v Fermati, znani lokaciji na Korčuli",
+        "fr": "Au côté du concert à Fermata, un lieu connu à Korčula",
+        "date": "2026-10-08",
+        "time": "8. listopada 2026.",
+        "town": "lumbarda",
+        "venue": "Fermata",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://www.visitlumbarda.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-lumbarda-2026-10-08-alongside-the-concert-in-fermata-a-well-known-location-on-ko"
+      },
+      "verifierConfidence": 0.9,
+      "verifierConcerns": [
+        "The event title in the source page is 'Masterclass violina – 7. Fermata Festival', but the extracted candidate has 'Alongside the concert in Fermata, a well-known location on Korčula.' This title seems to be an embellishment beyond what the source page text actually says.",
+        "The source page text lists several upcoming events, but the extracted candidate's date '2026-10-08' and time '8. listopada 2026.' seem to match the date of one of the events listed on the page, but not necessarily the specific event described in the candidate's title. This could indicate that the extraction is not specific to this event.",
+        "The venue 'Fermata' is mentioned in the source page text as a location for an event, but it's not clear if this is the same event described in the candidate's title. The source page text does not explicitly mention a 'Fermata' event on October 8th, so this could be a potential issue."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-tz-blato-2026-10-08-pregled-b2b",
+      "sourceId": "tz-blato",
+      "sourceUrl": "https://tzo-blato.hr/en/",
+      "discoveredAt": "2026-10-13T12:58:43.897Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "PREGLED B2B",
+        "en": "PREGLED B2B",
+        "de": "ÜBERBLICK B2B",
+        "it": "RACCOLTA B2B",
+        "sl": "PREGLAD B2B",
+        "fr": "RELEVÉ B2B",
+        "date": "2026-10-08",
+        "town": "blato",
+        "venue": "Blato",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://tzo-blato.hr/en/",
+        "extractionMethod": "ai",
+        "id": "ai-tz-blato-2026-10-08-pregled-b2b"
+      },
+      "verifierConfidence": 0.9,
+      "verifierConcerns": [
+        "The title 'PREGLED B2B' seems to be a proper noun referring to an event, but it's also a category on the page. The source page text does contain a section labeled 'Događanja' which translates to 'Events', but it does not contain any information about an event with this title. However, it does contain a section labeled 'PREGLED B2B' which translates to 'PREGLED B2B', and this section contains information about an event with this title.",
+        "The date '2026-10-08' seems to be correct, as it matches the date of the event mentioned in the section labeled 'PREGLED B2B' on the source page text.",
+        "The town 'blato' and venue 'Blato' seem to be correct, as they match the location of the event mentioned in the section labeled 'PREGLED B2B' on the source page text.",
+        "The category 'kids' seems to be incorrect, as the source page text does not contain any information about an event that is primarily for children. The category 'B2B' seems to be more accurate, as it matches the section labeled 'PREGLED B2B' on the source page text."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-orebic-2026-12-19-christmas-concert",
+      "sourceId": "visit-orebic",
+      "sourceUrl": "https://visitorebic-croatia.hr/",
+      "discoveredAt": "2026-10-13T12:58:43.897Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Božićni koncert",
+        "en": "Christmas Concert",
+        "de": "Weihnachtskonzert",
+        "it": "Concerto di Natale",
+        "sl": "Božični koncert",
+        "fr": "Concert de Noël",
+        "date": "2026-12-19",
+        "time": "18:00",
+        "town": "orebic",
+        "venue": "Parish church in Orebić",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitorebic-croatia.hr/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-orebic-2026-12-19-christmas-concert"
+      },
+      "verifierConfidence": 0.5,
+      "verifierConcerns": [
+        "The title field 'Christmas Concert' is not explicitly stated on the page, but rather appears to be a translation of 'Božićni koncert' from the Croatian title. While this may be a valid translation, it is not a direct quote from the page.",
+        "The date field '2026-12-19' is supported by the page, but the time field '18:00' is also present on the page. However, the time field is listed as '18:00' for the Christmas Concert event, but it is not explicitly stated that this is the time for this specific event. It is possible that this time applies to the Pelješac Wineries Open Days event as well.",
+        "The venue field 'Parish church in Orebić' is supported by the page, but the town field 'orebic' does not appear to be explicitly stated on the page. However, 'Orebić' does appear in the page's text, but it is not clear if this refers to the town or the parish.",
+        "The category field 'kids' does not appear to be explicitly stated on the page. The page does mention 'kids' in the context of the Pelješac Captains' Festival, but it does not mention this category in relation to the Christmas Concert event.",
+        "The page lists multiple events, and it is not clear if the Christmas Concert event is the only event listed on this specific page. It is possible that this event is listed on a separate page or section of the website."
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.5"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2024-08-05-gospa-od-sniga-our-lady-of-the-snows",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/pupnat/",
+      "discoveredAt": "2026-10-13T12:58:43.897Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Gospa od Snijega — Naša Gospa od Snijega",
+        "en": "Gospa od Sniga — Our Lady of the Snows",
+        "de": "Gottesmutter der Schneen — Unsere Frau von den Schneen",
+        "it": "Nostra Signora della Neve",
+        "sl": "Goska od Snega — Naša Goska od Snega",
+        "fr": "Notre-Dame des Neiges",
+        "date": "2024-08-05",
+        "town": "pupnat",
+        "venue": "Pupnat",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://www.korculainfo.com/pupnat/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2024-08-05-gospa-od-sniga-our-lady-of-the-snows"
+      },
+      "verifierConfidence": 0.7,
+      "verifierConcerns": [
+        "The category 'folklore' does not seem to match the event description. The event appears to be a religious service and cultural program, not a folklore event. The category should be changed to 'Religious' or 'Cultural'.",
+        "The extracted candidate's title field contains a phrase that is not present in the source page text. The source page text mentions 'The three-nave parish church of Our Lady of the Snows (Gospa od Sniga)', but the extracted candidate's title field is 'Gospa od Sniga — Naša Gospa od Snijega'. The correct title should be 'Our Lady of the Snows' or 'Gospa od Sniga'.",
+        "The extracted candidate's date field is supported by the source page text, which mentions 'Events Gospa od Sniga — Our Lady of the Snows (5 August)'. The date is correctly extracted.",
+        "The extracted candidate's venue field is supported by the source page text, which mentions 'Pupnat is a small inland village of around 500 inhabitants in the eastern part of Korčula Island, about 12 kilometres west of Korčula Town on the main island road.' The venue is correctly extracted.",
+        "The extracted candidate's town field is supported by the source page text, which mentions 'Pupnat — Village Guide, Walks, Beaches & Travel Info | Korcula'. The town is correctly extracted.",
+        "The extracted candidate's category field does not match the event description. The event appears to be a religious service and cultural program, not a folklore event. The category should be changed to 'Religious' or 'Cultural'."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.7"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2024-08-24-kumpanija",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/pupnat/",
+      "discoveredAt": "2026-10-13T12:58:43.897Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Kompānija",
+        "en": "Kumpanija",
+        "de": "Gesellschaft",
+        "it": "Società",
+        "sl": "Kompānija",
+        "fr": "Compagnie",
+        "date": "2024-08-24",
+        "town": "pupnat",
+        "venue": "Pupnat",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://www.korculainfo.com/pupnat/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2024-08-24-kumpanija"
+      },
+      "verifierConfidence": 0.4,
+      "verifierConcerns": [
+        "The 'date' field of '2024-08-24' does not appear to be directly supported by the source text, which lists specific dates for events. However, the date '24 August' does appear in the text, which seems to match the extracted date. Further investigation is needed to confirm the accuracy of this date.",
+        "The 'title_en' field 'Kumpanija' appears to be accurate based on the source text, which mentions the Kumpanija sword dance.",
+        "The 'title_hr' field 'Kompānija' does not appear to be directly supported by the source text, which uses the Croatian word 'Kumpanija' for the title. This may be an error.",
+        "The 'venue' field 'Pupnat' is accurate based on the source text, which mentions Pupnat as the village.",
+        "The 'town' field 'pupnat' appears to be accurate based on the source text, which mentions Pupnat as the village.",
+        "The 'cats' field 'folklore' does not appear to be directly supported by the source text, which mentions the Kumpanija sword dance as an item of UNESCO intangible cultural heritage. While this may be related to folklore, it is not explicitly stated in the text.",
+        "additional-notes"
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.4"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2023-04-29-wine-production-at-the-cooperative-cellar-in-carsko-polje",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/cara/",
+      "discoveredAt": "2026-10-13T12:58:43.897Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Proizvodnja vina u suradničkom podrumu u Carskom polju.",
+        "en": "Wine production at the cooperative cellar in Carsko Polje.",
+        "de": "Weinproduktion in einem Genossenschaftskellerei in Karstfeld.",
+        "it": "Produzione di vino nella cantina cooperativa a Carsko Polje.",
+        "sl": "Proizvodnja vina v suradničkem podrumu v Carskem polju.",
+        "fr": "Production de vin dans la cave coopérative à Carsko Polje.",
+        "date": "2023-04-29",
+        "endDate": "2023-10-14",
+        "town": "cara",
+        "venue": "Pošip cooperative cellar in Carsko Polje",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.korculainfo.com/cara/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2023-04-29-wine-production-at-the-cooperative-cellar-in-carsko-polje"
+      },
+      "verifierConfidence": 0.95,
+      "verifierConcerns": [
+        "The date '2023-04-29' is before the '2023-10-14' end date. This might be a concern if the event is not recurring, but the page lists 'Harvest season' as happening in September and early October, suggesting that the event might be recurring. However, the page does not explicitly state that the wine production event is recurring, so it is unclear whether this date is correct or not.",
+        "The venue 'Pošip cooperative cellar in Carsko Polje' is mentioned in the text, but the page does not explicitly state that the event is taking place at this venue. The text mentions that the Pošip cooperative cellar is located in Carsko Polje, but it does not explicitly link the event to this venue.",
+        "The category 'kids' does not seem to be relevant to the event. The page does not mention anything about the event being suitable for children or that it is a family-friendly event."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-aminess-korcula-entertainment-2026-02-00-taste-of-korcula",
+      "sourceId": "aminess-korcula-entertainment",
+      "sourceUrl": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+      "discoveredAt": "2026-10-13T12:58:43.897Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Užitak od Korčule",
+        "en": "Taste of Korčula",
+        "de": "Geschmack von Korčula",
+        "it": "Sapore di Korčula",
+        "sl": "Okus Korčule",
+        "fr": "Saveur de Korčula",
+        "date": "2026-02-00",
+        "time": "02:00h",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "family"
+        ],
+        "source": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+        "extractionMethod": "ai",
+        "id": "ai-aminess-korcula-entertainment-2026-02-00-taste-of-korcula"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The extracted candidate's title is 'Taste of Korčula', but this phrase appears to be a subtitle in the source page's text. The main title of the page is 'Marko Polo Maradiso Hotel by Aminess'. The extracted candidate's title is not a direct quote from the source page.",
+        "The extracted candidate's date is '2026-02-00', but the source page lists several events for February, and one of them is 'Taste of Korčula' at 02:00h on an unspecified date. The extracted candidate's date is not explicitly supported by the source page.",
+        "The extracted candidate's time is '02:00h', which matches the time listed for 'Taste of Korčula' in the source page.",
+        "The extracted candidate's venue is 'Korčula', which is mentioned in the source page as the location of several events, including 'Taste of Korčula'. The extracted candidate's venue is supported by the source page.",
+        "The extracted candidate's town is 'korcula', which is not explicitly mentioned in the source page. However, the source page does mention 'Korčula' as the location of several events.",
+        "The extracted candidate's category is 'family', which is not explicitly mentioned in the source page. However, the source page does mention 'family farm' in the context of 'Taste of Korčula'."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
     }
   ]
 }

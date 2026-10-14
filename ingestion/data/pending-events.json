@@ -16246,6 +16246,229 @@
       ],
       "duplicateMatches": [],
       "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-korcula-racisce-2025-08-15-racisce-cronicles-raciska-kronika",
+      "sourceId": "visit-korcula-racisce",
+      "sourceUrl": "https://visitkorcula.eu/en/events/summer-in-racisce/",
+      "discoveredAt": "2026-10-14T10:35:09.836Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Račišće Cronicles (Račiška kronika)",
+        "en": "Račišće Chronicles",
+        "de": "Die Račišće Chroniken",
+        "it": "Cronache di Račišće",
+        "sl": "Račiške kronike",
+        "fr": "Les Chroniques de Račišće",
+        "date": "2025-08-15",
+        "town": "racisce",
+        "venue": "Korčula",
+        "cats": [
+          "film"
+        ],
+        "source": "https://visitkorcula.eu/en/events/summer-in-racisce/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-korcula-racisce-2025-08-15-racisce-cronicles-raciska-kronika"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The date '2025-08-15' seems to be incorrect, as the page lists events for August 2025, but the specific date '15.8.' is listed as 'Račišće Cronicles (Račiška kronika)', which suggests that this event occurred on August 15th, 2025. However, the exact date is listed as '11.–16.8.2025' in the 'Events in August' section, which makes the extracted date uncertain.",
+        "The venue 'Korčula' is not explicitly mentioned near the event listing in the source page text. The page does mention Korčula in general, but it is not directly associated with the event.",
+        "The category 'film' seems to be incorrect, as the event is described as 'Račišće Cronicles (Račiška kronika)', which suggests a documentary or historical event, rather than a film."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "source-override-always-review"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-lumbarda-2026-08-10-dani-lumbarajske-psefizme-2026-10-september-2026",
+      "sourceId": "visit-lumbarda",
+      "sourceUrl": "https://www.visitlumbarda.eu/",
+      "discoveredAt": "2026-10-14T10:35:09.836Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Dani lumbarajske psefizme 2026.",
+        "en": "Dani lumbarajske psefizme 2026. - 10. September 2026.",
+        "de": "Dani lumbarajske psefizme 2026. - 10. rujan 2026.",
+        "it": "Giornate della pseudodemocrazia di Lumbaraj 2026",
+        "sl": "Dnevi lumbarajske psefizme 2026",
+        "fr": "Journées de la pseudodémocratie de Lumbaraj 2026",
+        "date": "2026-08-10",
+        "town": "lumbarda",
+        "venue": "Lumbarda",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://www.visitlumbarda.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-lumbarda-2026-08-10-dani-lumbarajske-psefizme-2026-10-september-2026"
+      },
+      "verifierConfidence": 0.5,
+      "verifierConcerns": [
+        "The date of the event (10. September 2026) is mentioned in the title of the extracted candidate, but it's not explicitly mentioned in the source page text. However, the same date is mentioned in the 'Dani lumbarajske psefizme 2026.' event description on the source page.",
+        "The venue is mentioned as 'Lumbarda' in the extracted candidate, but it's not explicitly mentioned as a venue for the event on the source page. However, it's mentioned in the general information about Lumbarda on the source page.",
+        "The category is mentioned as 'folklore' in the extracted candidate, but it's not explicitly mentioned in the source page text. However, the event description does mention 'Lumbarajska psefizma', which is a folklore-related event.",
+        "The extracted candidate mentions a date of '2026-08-10', but this date is not mentioned in the source page text. However, the source page does mention a date of '8. listopada 2026.' for a different event, and '10. rujna 2026.' for the 'Dani lumbarajske pesefizme 2026.' event, which seems to be the same date as the extracted candidate's date.",
+        "The extracted candidate mentions a time for the event, but this time is not mentioned in the source page text. However, the source page does mention a time for a different event, but not for the 'Dani lumbarajske pesefizme 2026.' event."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.5"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-lumbarda-2026-09-25-lumbarda-classic-2026-lumbarajska-vecer-za-pamcenje-klasicno",
+      "sourceId": "visit-lumbarda",
+      "sourceUrl": "https://www.visitlumbarda.eu/",
+      "discoveredAt": "2026-10-14T10:35:09.836Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "LUMBARDA CLASSIC 2026. – LUMBARAJSKA VEČER ZA PAMĆENJE, KLASIČNO…",
+        "en": "LUMBARDA CLASSIC 2026. – LUMBARAJSKA VEČER ZA PAMĆENJE, KLASIČNO…",
+        "de": "LUMBARDA CLASSIC 2026. – LUMBARAJSKA VEČER ZA PAMĆENJE, KLASIČNO…",
+        "it": "LUMBARDA CLASSIC 2026. – SERATA LUMBO-CLASSICA IN MEMORIA…",
+        "sl": "LUMBARDA CLASSIC 2026. – LUMBARAJSKA VEČER ZA POMNITVENOST, KLASIČNO…",
+        "fr": "LUMBARDA CLASSIC 2026. – SOIRÉE LUMBO-CLASSIQUE EN HOMMAGE…",
+        "date": "2026-09-25",
+        "town": "lumbarda",
+        "venue": "Lumbarda",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://www.visitlumbarda.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-lumbarda-2026-09-25-lumbarda-classic-2026-lumbarajska-vecer-za-pamcenje-klasicno"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The page appears to have multiple sections, but the event listing is not clearly marked as separate from the rest of the content. However, the event listing does have a clear title and date, which are the main fields of concern.",
+        "The title field appears to be a direct quote from the page, but the language and formatting are not identical. However, this does not appear to be a significant issue, as the title is still clearly stated on the page.",
+        "The date field is stated as 2026-09-25, but the page actually states that the event is on 25. kolovoza 2026, which is equivalent to 25. August 2026. This is a discrepancy, but it is not clear whether it is a significant issue.",
+        "The venue field is stated as Lumbarda, which is consistent with the page's statement that the event is taking place in Lumbarda.",
+        "The category field is stated as folklore, but the page does not explicitly state that the event is a folklore event. However, the page does mention that Lumbarda is known for its cultural heritage, which could be related to folklore.",
+        "The page does contain a number of other listings, including a concert and a food event, but it is not clear whether these are separate events or related to the LUMBARDA CLASSIC 2026 event."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-lumbarda-2026-10-07-masterclass-violina-7-fermata-festival",
+      "sourceId": "visit-lumbarda",
+      "sourceUrl": "https://www.visitlumbarda.eu/",
+      "discoveredAt": "2026-10-14T10:35:09.836Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Majstorska klasična violina – 7. Fermata Festival",
+        "en": "Masterclass violina – 7. Fermata Festival",
+        "de": "Meisterklasse Violine – 7. Fermata Festival",
+        "it": "Masterclass violino – 7. Fermata Festival",
+        "sl": "Masterska violina – 7. Fermata Festival",
+        "fr": "Maitrise de la violon – 7. Fermata Festival",
+        "date": "2026-10-07",
+        "town": "lumbarda",
+        "venue": "Lumbarda",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.visitlumbarda.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-lumbarda-2026-10-07-masterclass-violina-7-fermata-festival"
+      },
+      "verifierConfidence": 0.95,
+      "verifierConcerns": [
+        "The date '2026-10-07' is not explicitly mentioned in the source page text. The closest match is '8. listopada 2026.' which suggests the 8th of October 2026, not the 7th. This discrepancy could be due to a misread or a formatting issue.",
+        "The title 'Majstorska klasična violina – 7. Fermata Festival' and 'Masterclass violina – 7. Fermata Festival' seem to be the same event, but the source page text lists multiple events, including 'Fermata' and 'Lumbarajska večer za pamćenje, klasično...' which might be related to the Fermata festival. It is unclear whether the extracted candidate is referring to a specific event or a recurring festival.",
+        "The category 'kids' does not seem to be supported by the source page text. The events listed on the page do not explicitly mention 'kids' as a category, and the page text does not provide any information about events targeting children."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-cara-zavalatica-local-sources-2024-07-25-sveti-jakov-pilgrimage",
+      "sourceId": "cara-zavalatica-local-sources",
+      "sourceUrl": "https://www.korculainfo.com/cara/",
+      "discoveredAt": "2026-10-14T10:35:09.836Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Sveti Jakov pilgrimage",
+        "en": "St. James Pilgrimage",
+        "de": "Jakobuswallfahrt",
+        "it": "Pellegrinaggio di San Giacomo",
+        "sl": "Sveti Jakobov pilgrimage",
+        "fr": "Pèlerinage de Saint-Jacques",
+        "date": "2024-07-25",
+        "endDate": "2024-07-25",
+        "town": "cara",
+        "venue": "Gospa od Carskog Polja, Carsko Polje",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.korculainfo.com/cara/",
+        "extractionMethod": "ai",
+        "id": "ai-cara-zavalatica-local-sources-2024-07-25-sveti-jakov-pilgrimage"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The title field 'Sveti Jakov pilgrimage' appears to be correct according to the source page, as it is mentioned in the 'Events' section.",
+        "The date field '2024-07-25' appears to be correct according to the source page, as it is mentioned in the 'Events' section as the date of the Sveti Jakov pilgrimage.",
+        "The venue field 'Gospa od Carskog Polja, Carsko Polje' appears to be correct according to the source page, as it is mentioned in the 'Events' section as the location of the Sveti Jakov pilgrimage.",
+        "The town field 'cara' appears to be correct according to the source page, as it is mentioned in the 'Čara' section as the name of the village.",
+        "The category field 'kids' appears to be incorrect according to the source page, as there is no mention of the event being suitable for children. The event is described as a traditional pilgrimage procession.",
+        "There is no clear indication of the time of the event in the source page, so the confidence in the time field is lower."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-cara-zavalatica-local-sources-2024-07-25-kumpanija",
+      "sourceId": "cara-zavalatica-local-sources",
+      "sourceUrl": "https://www.korculainfo.com/cara/",
+      "discoveredAt": "2026-10-14T10:35:09.836Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Kumpanija",
+        "en": "Crew",
+        "de": "Kumpanei",
+        "it": "Compagnia",
+        "sl": "Kumpanija",
+        "fr": "Équipe",
+        "date": "2024-07-25",
+        "endDate": "2024-07-25",
+        "town": "cara",
+        "venue": "Gospa od Carskog Polja, Carsko Polje",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.korculainfo.com/cara/",
+        "extractionMethod": "ai",
+        "id": "ai-cara-zavalatica-local-sources-2024-07-25-kumpanija"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The extracted title 'Kumpanija' seems to match the event title in the source page text, but the source page text also contains a more specific description of the event as 'Kumpanija — Čara is one of the five villages on Korčula Island that preserves the Kumpanija sword dance, a chain sword dance of great antiquity performed in summer and listed as UNESCO intangible cultural heritage.' The extracted title does not capture this additional information.",
+        "The extracted date '2024-07-25' seems to match the date mentioned in the source page text for the 'Sveti Jakov pilgrimage' event. However, the source page text does not explicitly state that the Kumpanija event is also on this date. The extracted date may be an error or an assumption.",
+        "The extracted category 'kids' does not seem to match the description of the Kumpanija event in the source page text, which mentions a 'chain sword dance of great antiquity.' The category may be incorrect or incomplete.",
+        "The extracted venue 'Gospa od Carskog Polja, Carsko Polje' seems to match the location mentioned in the source page text for the 'church of Gospa od Carskog Polja' event. However, the source page text also mentions that the Kumpanija event is a 'chain sword dance of great antiquity performed in summer,' which may imply a different location or a more general location. The extracted venue may be an error or an assumption."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
     }
   ]
 }

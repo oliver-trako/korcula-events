@@ -18132,6 +18132,316 @@
       ],
       "duplicateMatches": [],
       "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-korcula-2026-09-07-07-09-2026-31-10-2026",
+      "sourceId": "visit-korcula",
+      "sourceUrl": "https://visitkorcula.eu/en/events/",
+      "discoveredAt": "2026-10-20T11:07:31.805Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "07.09.2026 - 31.10.2026",
+        "en": "07.09.2026 - 31.10.2026",
+        "de": "07.09.2026 - 31.10.2026",
+        "it": "07.09.2026 - 31.10.2026",
+        "sl": "07.09.2026 - 31.10.2026",
+        "fr": "07.09.2026 - 31.10.2026",
+        "date": "2026-09-07",
+        "endDate": "2026-10-31",
+        "town": "korcula",
+        "venue": "Wi-Fi galerija siva) (zona",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://visitkorcula.eu/en/events/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-korcula-2026-09-07-07-09-2026-31-10-2026"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The 'title_hr' and 'title_en' fields are identical and appear to be a date range rather than a title. The actual title of the event may not be well-supported by the source text.",
+        "The 'venue' field appears to be a partial title, as it is missing a closing parenthesis. The actual venue may not be well-supported by the source text.",
+        "The 'cats' field lists 'folklore', but the source text does not explicitly mention folklore. The actual category may not be well-supported by the source text.",
+        "The 'town' field is 'korcula', but the source text mentions 'the island of Korčula'. The actual town may not be well-supported by the source text.",
+        "The source text lists multiple events, including '07.11.2026 - A capella singing group concert' and '28.11.2026 - 01.01.2027 - Flavours and Scents of December'. The actual date and time of the event may not be well-supported by the source text.",
+        "The source text mentions a recurring date range '07.09.2026 - 31.10.2026' multiple times, but the actual event details are not explicitly stated. The actual event details may not be well-supported by the source text."
+      ],
+      "blockingReasons": [
+        "duplicate-id"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-korcula-2026-11-28-28-11-2026-01-01-2027",
+      "sourceId": "visit-korcula",
+      "sourceUrl": "https://visitkorcula.eu/en/events/",
+      "discoveredAt": "2026-10-20T11:07:31.805Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "28.11.2026 - 01.01.2027",
+        "en": "November 28, 2026 - January 1, 2027",
+        "de": "28.11.2026 - 01.01.2027",
+        "it": "28.11.2026 - 01.01.2027",
+        "sl": "28.11.2026 - 01.01.2027",
+        "fr": "28.11.2026 - 01.01.2027",
+        "date": "2026-11-28",
+        "endDate": "2027-01-01",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://visitkorcula.eu/en/events/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-korcula-2026-11-28-28-11-2026-01-01-2027"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The title contains a date range ('28.11.2026 - 01.01.2027') which is not explicitly stated on the page. The text near this listing only mentions the date range in a title, not as a standalone fact. The page does mention the date '28.11.2026' in another context, but it's not clear if this is the same event.",
+        "The venue 'Korčula' appears to be a town name, not a specific venue. The page does mention the town 'Korčula', but it's not clear if this is the same event.",
+        "The category 'folklore' does not appear to match the page's description of the event. The page mentions 'Cultural heritage events', but it's not clear if this is the same event.",
+        "The date '2026-11-28' is not explicitly stated on the page. The text near this listing only mentions the date '28.11.2026' in a title, not as a standalone fact. The page does mention the date '07.11.2026' in another context, but it's not clear if this is the same event.",
+        "The end date '2027-01-01' is not explicitly stated on the page. The text near this listing only mentions the date range '28.11.2026 - 01.01.2027' in a title, not as a standalone fact."
+      ],
+      "blockingReasons": [
+        "duplicate-id"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-tz-vela-luka-2026-10-19-stajun-od-lumblije-2026-program-jubilarne-10-manifestacije",
+      "sourceId": "tz-vela-luka",
+      "sourceUrl": "https://tzvelaluka.hr/",
+      "discoveredAt": "2026-10-20T11:07:31.805Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Stajun od Lumblije 2026. – program jubilarne 10. manifestacije",
+        "en": "Staying from London 2026. – programme of the jubilee 10th manifestation",
+        "de": "Stehend von London 2026. – Programm der jubiläums-10. Manifestation",
+        "it": "Soggiorneremo da Londra 2026. – programma della decima edizione giubilare",
+        "sl": "Bivanje iz Londona 2026. – program jubilejnega 10. festivala",
+        "fr": "Séjour à Londres 2026. – programme de la 10e manifestation jubilaire",
+        "date": "2026-10-19",
+        "town": "vela-luka",
+        "venue": "Vela Luka",
+        "cats": [
+          "festival"
+        ],
+        "source": "https://tzvelaluka.hr/",
+        "extractionMethod": "ai",
+        "id": "ai-tz-vela-luka-2026-10-19-stajun-od-lumblije-2026-program-jubilarne-10-manifestacije"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The date '2026-10-19' is mentioned in the source page, but it appears in the context of a list of past events, and is not explicitly stated as a future event. This could indicate that the event has already occurred.",
+        "The title 'Stajun od Lumblije 2026. – program jubilarne 10. manifestacije' is mentioned in the source page, but it appears to be a translation of the original title. The original title is not explicitly stated, and it's possible that the translation is not accurate.",
+        "The venue 'Vela Luka' is mentioned in the source page, but it appears in the context of a list of hotels and other accommodations, rather than as a specific venue for the event. This could indicate that the event is not being held at this location."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2026-05-15-izvedbe-sezone-2026",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/",
+      "discoveredAt": "2026-10-20T11:07:31.805Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Izvedbe sezone 2026.",
+        "en": "Izvedbe sezone 2026.",
+        "de": "Abschluss der Saison 2026.",
+        "it": "Chiusura della stagione 2026.",
+        "sl": "Izvedbe sezone 2026.",
+        "fr": "Clôture de la saison 2026.",
+        "date": "2026-05-15",
+        "endDate": "2026-08-20",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "ticketUrl": "/tickets",
+        "source": "https://moreska.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2026-05-15-izvedbe-sezone-2026"
+      },
+      "verifierConfidence": 0.7,
+      "verifierConcerns": [
+        "The title field is well-supported, as it appears in the source page text: 'Izvedbe sezone 2026.' and 'Izvedbe sezone 2026.'",
+        "The date field is well-supported, as it appears in the source page text: 'Izvedbe sezone 2026.' and 'Sve izvedbe' which mentions '2026.'",
+        "The end date field is not directly supported by the source page text, but the description of the season ( 'Izvedbe sezone 2026.' ) implies it is a recurring event spanning multiple dates, and the source page text mentions 'Sve izvedbe' which might include the end date, so I will not lower confidence based on this alone.",
+        "The town field is well-supported, as it appears in the source page text: 'Korčula'.",
+        "The venue field is well-supported, as it appears in the source page text: 'Korčula' and 'Knežev prolaz 1, 20260 Korčula, Hrvatska'.",
+        "The category field is well-supported, as it appears in the source page text: 'folklore' is not directly mentioned, but 'Moreška' is a type of folklore, and the source page text mentions 'tradiciona bojnog plesa i glazbe' (traditional sword dance and music), so I will not lower confidence based on this alone.",
+        "There is a potential concern that the event has already happened, as the source page text mentions 'od 1883.' (since 1883), which could imply that the event has been ongoing for a long time. However, the specific date '2026-05-15' is mentioned in the source page text, so I will not lower confidence based on this alone.",
+        "There is a potential concern that the title or description was embellished beyond what the page text actually says, as the source page text mentions 'bojni ritual' (sword ritual) and 'tradiciona bojnog plesa i glazbe' (traditional sword dance and music), which might be more specific or detailed than the title field. However, the title field is well-supported, so I will not lower confidence based on this alone.",
+        "There is a potential concern that the title or venue field contains booking-status or call-to-action text, as the source page text mentions 'Ulaznice (ticket link: /tickets)' and 'Kupi ulaznice (ticket link: /tickets)'. However, the title and venue fields are well-supported, so I will not lower confidence based on this alone."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.7"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2026-05-22-moreska",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/",
+      "discoveredAt": "2026-10-20T11:07:31.805Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Moreška",
+        "en": "Moreška",
+        "de": "Moreška",
+        "it": "Moreška",
+        "sl": "Moreška",
+        "fr": "Moreška",
+        "date": "2026-05-22",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "ticketUrl": "/tickets",
+        "source": "https://moreska.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2026-05-22-moreska"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The title field seems to be a direct copy from the source page, which could indicate that it was not actually read and parsed. However, the title does match the text on the page, so this is not a major concern.",
+        "The date field is supported by the text on the page, which mentions 'Izvedbe sezone 2026' (Performances of the 2026 season). This suggests that the event is indeed taking place in 2026.",
+        "The venue field is supported by the text on the page, which mentions 'Korčula' and 'Knežev prolaz 1, 20260 Korčula, Hrvatska' (Prince's Alley 1, 20260 Korčula, Croatia). This suggests that the event is indeed taking place in Korčula.",
+        "The category field mentions 'folklore', but the text on the page does not explicitly mention folklore. However, it does mention 'bojni ritual' (war dance) and 'tradicija bojnog plesa i glazbe' (tradition of war dance and music), which could be related to folklore. This is not a major concern.",
+        "The page contains a lot of text that does not seem to be related to the event, such as the history of the organization, contact information, and social media links. However, this is not a concern as long as the event information is accurate and supported by the text on the page.",
+        "The page contains a section about private performances and experiences, which could be related to the event. However, this is not a concern as long as the event information is accurate and supported by the text on the page.",
+        "The page contains a section about the organization's history and mission, which could be related to the event. However, this is not a concern as long as the event information is accurate and supported by the text on the page.",
+        "The page contains a section about the organization's contact information, which could be related to the event. However, this is not a concern as long as the event information is accurate and supported by the text on the page."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2026-05-29-puhacki-orkestar",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/",
+      "discoveredAt": "2026-10-20T11:07:31.805Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Puhački orkestar",
+        "en": "Puhački orkestar",
+        "de": "Bläserorchester",
+        "it": "Orchestra di fiati",
+        "sl": "Puhački orkester",
+        "fr": "Orchestre de cuivres",
+        "date": "2026-05-29",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "ticketUrl": "/tickets",
+        "source": "https://moreska.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2026-05-29-puhacki-orkestar"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The 'date' field appears to be supported by the page text, but it's not explicitly mentioned in the provided text near the listing. The page does mention a season calendar for 2026, but it's not clear if the specific date mentioned in the listing is part of that calendar.",
+        "The 'title_hr' and 'title_en' fields appear to be supported by the page text, but the 'title_en' field is a direct translation of the 'title_hr' field. It's possible that the page only has a single title in Croatian, and the English translation is not explicitly mentioned.",
+        "The 'venue' field appears to be supported by the page text, but it's not explicitly mentioned in the provided text near the listing. The page does mention Korčula as the location of the event, but it's not clear if the specific venue mentioned in the listing is part of that location.",
+        "The 'town' field appears to be supported by the page text, but it's not explicitly mentioned in the provided text near the listing. The page does mention Korčula as the location of the event, but it's not clear if the specific town mentioned in the listing is part of that location.",
+        "The 'cats' field appears to be supported by the page text, but it's not explicitly mentioned in the provided text near the listing. The page does mention a 'Puhački orkestar' (Wind Orchestra) as part of the event, but it's not clear if that's the only category mentioned in the listing.",
+        "There is a mention of a 'Moreška' event, which seems to be a recurring event. It's possible that the specific date mentioned in the listing is part of that recurring event, but it's not clear if the listing is for a specific performance or a general event."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2026-06-12-zbor",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/",
+      "discoveredAt": "2026-10-20T11:07:31.805Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Let",
+        "en": "Zbor",
+        "de": "Flug",
+        "it": "Volo",
+        "sl": "Polet",
+        "fr": "Vol",
+        "date": "2026-06-12",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "ticketUrl": "/tickets",
+        "source": "https://moreska.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2026-06-12-zbor"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The title field 'Zbor' is actually a subtitle that appears below the main title 'Let'. The main title is in the language specified by the 'title_hr' field, but the subtitle 'Zbor' is in English.",
+        "The date field '2026-06-12' appears to be a specific date, but it is not clear if it is a recurring event or a one-time event. The text below the date field mentions 'Izvedbe sezone 2026' which suggests that it is a recurring event, but it does not specify the exact date.",
+        "The venue field 'Korčula' is actually a town, not a venue. The correct venue is likely 'Knežev prolaz 1' which is mentioned in the 'Korčula, Hrvatska' section.",
+        "The category field 'folklore' does not match the description of the event. The event is actually a traditional sword dance and music performance, not a folklore event."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2024-08-15-kumpanija",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/pupnat/",
+      "discoveredAt": "2026-10-20T11:07:31.805Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Kompavanija",
+        "en": "Kumpanija",
+        "de": "Unternehmen",
+        "it": "Impresa",
+        "sl": "Podjetje",
+        "fr": "Société",
+        "date": "2024-08-15",
+        "endDate": "2024-08-20",
+        "town": "pupnat",
+        "venue": "Pupnat",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://www.korculainfo.com/pupnat/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2024-08-15-kumpanija"
+      },
+      "verifierConfidence": 0.7,
+      "verifierConcerns": [
+        "The 'date' field appears to be '2024-08-15' but the page lists 'Gospa od Sniga — Our Lady of the Snows (5 August)' and 'Blessed Marko of Pupnat (24 August)' as events, which could imply that the Kumpanija event occurs in August, but the exact date is not specified on the page. This discrepancy lowers confidence in the 'date' field.",
+        "The 'title_en' field is 'Kumpanija' but the page text describes it as 'Kumpanija — Pupnat is one of the five villages on Korčula Island that preserves the traditional Kumpanija sword dance.' The page text does not explicitly mention 'Kumpanija' as a title, but rather as a description of the event. This discrepancy lowers confidence in the 'title_en' field.",
+        "The 'cats' field is ['folklore'] but the page text describes the Kumpanija event as a 'traditional Kumpanija sword dance' and lists it as an item of UNESCO intangible cultural heritage. While 'folklore' is a plausible category, it may not be the most accurate description of the event. This discrepancy lowers confidence in the 'cats' field."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.7"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
     }
   ]
 }

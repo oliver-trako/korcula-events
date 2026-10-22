@@ -18632,6 +18632,274 @@
       ],
       "duplicateMatches": [],
       "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-1666-03-07-moreska",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/",
+      "discoveredAt": "2026-10-22T10:20:47.093Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Moreška",
+        "en": "Moreška",
+        "de": "Moreška",
+        "it": "Moreška",
+        "sl": "Moreška",
+        "fr": "Moreška",
+        "date": "1666-03-07",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://moreska.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-1666-03-07-moreska"
+      },
+      "verifierConfidence": 0.7,
+      "verifierConcerns": [
+        "The extracted date of 1666-03-07 appears to be a specific event mentioned in the source text, but it is not clear if this is the only date mentioned for the event. The source text mentions that the Moreška tradition has been performed since 1666, but it does not specify that this is the only date mentioned for the event.",
+        "The venue of 'Korčula' is mentioned multiple times in the source text, but it is not clear if this is the only venue mentioned for the event. The source text mentions that the Moreška tradition is performed in Korčula, but it does not specify that this is the only venue mentioned for the event.",
+        "The title of 'Moreška' is mentioned multiple times in the source text, but it is not clear if this is the only title mentioned for the event. The source text mentions that the Moreška tradition is a sword dance, but it does not specify that this is the only title mentioned for the event.",
+        "The category of 'folklore' is mentioned in the extracted candidate, but it is not clear if this is the only category mentioned for the event. The source text mentions that the Moreška tradition is a cultural heritage, but it does not specify that this is the only category mentioned for the event."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.7"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-1937-01-01-puhacki-orkestar",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/",
+      "discoveredAt": "2026-10-22T10:20:47.093Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Puhački orkestar",
+        "en": "Puhački orkestar",
+        "de": "Bläserorchester",
+        "it": "Orchestra di fiati",
+        "sl": "Puhački orkester",
+        "fr": "Harmonie",
+        "date": "1937-01-01",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://moreska.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-1937-01-01-puhacki-orkestar"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "Title: The title 'Puhački orkestar' appears in the source page, but it's not clear if it's the primary title or just one of the sections. The extracted title seems to match the section title 'Puhački orkestar' which is a subsection of 'Naše sekcije'.",
+        "Date: The date '1937-01-01' seems to be a standalone event date, but the source page mentions that the Puhački orkestar has been performing since 1937. It's unclear if this is the specific date of the event or a general statement.",
+        "Venue: The venue 'Korčula' is mentioned in the source page, but it's not clear if this is the specific venue for the event or a general location.",
+        "Category: The category 'folklore' seems to match the description of the Puhački orkestar, but it's not explicitly stated in the source page.",
+        "General: The source page has a lot of information about the Moreška Korčula - Sword Dance, but it's not clear how the Puhački orkestar is related to this event. The extracted candidate seems to be a separate event, but it's not clear if it's related to the main event.",
+        "General: The source page has a lot of sections and subsections, and it's not clear how they are related to the extracted candidate. This makes it difficult to determine the accuracy of the extracted fields."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2023-01-01-klapa-sveta-cecilija",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/",
+      "discoveredAt": "2026-10-22T10:20:47.093Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Klapa Sveta Cecilija",
+        "en": "Klapa Sveta Cecilija",
+        "de": "Klapa Sveta Cecilija",
+        "it": "Klapa Sveta Cecilija",
+        "sl": "Klapa Sveta Cecilija",
+        "fr": "Klapa Sveta Cecilija",
+        "date": "2023-01-01",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://moreska.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2023-01-01-klapa-sveta-cecilija"
+      },
+      "verifierConfidence": 0.2,
+      "verifierConcerns": [
+        "The title 'Klapa Sveta Cecilija' seems to be taken from the section 'Klapa Sveta Cecilija' which is a subsection of the main page. It's not clear if this is the main title of the event or just a subsection title.",
+        "The date '2023-01-01' seems to be a generic date and not a specific date related to the event. The page mentions 'Izvedbe sezone 2026.' which suggests that the event is part of a season in 2026.",
+        "The venue 'Korčula' is mentioned on the page, but it's not clear if this is the exact venue for the event. The page mentions 'Korčula, Hrvatska' which could be the location of the event, but it's not clear if it's the exact venue.",
+        "The category 'folklore' seems to be a general category and not a specific category related to the event. The page mentions 'Moreška' which is a traditional dance and music performance, but it's not clear if this is the specific category for the event.",
+        "The page mentions 'Ulaznice (ticket link: /tickets)' which suggests that the event is ticketed, but it's not clear if the ticket link is relevant to the specific event listed."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.2"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2023-01-01-zbor",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/",
+      "discoveredAt": "2026-10-22T10:20:47.093Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Let",
+        "en": "Zbor",
+        "de": "Flug",
+        "it": "Volo",
+        "sl": "Let",
+        "fr": "Vol",
+        "date": "2023-01-01",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://moreska.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2023-01-01-zbor"
+      },
+      "verifierConfidence": 0.7,
+      "verifierConcerns": [
+        "The date '2023-01-01' may not be well-supported, as the page mentions 'Zbor obnova 2023' which could imply a new beginning or revival of the choir in 2023, but does not explicitly state that the event occurs on January 1st. The page does not provide a specific date for the event, and it is unclear if the 'obnova' refers to a new beginning of the choir in 2023 or a new season of performances.",
+        "The title 'Zbor' may not be well-supported, as the page mentions 'Zbor obnova 2023' which could imply a new choir or a new season of performances, but does not explicitly state that the event is a choir performance. The page does not provide a clear description of the event, and it is unclear if the 'Zbor' refers to a specific type of performance or a general term.",
+        "The venue 'Korčula' may not be well-supported, as the page mentions 'Korčula, Hrvatska' which could imply that the event is located in Korčula, Croatia, but does not explicitly state that the event takes place in Korčula. The page does not provide a clear description of the event's location, and it is unclear if the 'Korčula' refers to a specific venue or a general location.",
+        "The category 'folklore' may not be well-supported, as the page mentions 'Zbor obnova 2023' which could imply a new choir or a new season of performances, but does not explicitly state that the event is a folklore performance. The page does not provide a clear description of the event, and it is unclear if the 'Zbor' refers to a specific type of performance or a general term."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.7"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-blue-korcula-2024-06-01-nightlife",
+      "sourceId": "blue-korcula",
+      "sourceUrl": "https://bluekorcula.com/club",
+      "discoveredAt": "2026-10-22T10:20:47.093Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Nocni život",
+        "en": "Nightlife",
+        "de": "Nachtleben",
+        "it": "Vita notturna",
+        "sl": "Nočni življenje",
+        "fr": "La vie nocturne",
+        "date": "2024-06-01",
+        "time": "23:00",
+        "town": "korcula",
+        "venue": "Blue Club",
+        "cats": [
+          "nightlife"
+        ],
+        "source": "https://bluekorcula.com/club",
+        "extractionMethod": "ai",
+        "id": "ai-blue-korcula-2024-06-01-nightlife"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The title field contains 'Nightlife', which is a phrase that appears on the page, but it's not the exact text that appears near the event listing. The exact text is 'Night Club' and 'Nightlife Vibes'. This could be an embellishment.",
+        "The date field is '2024-06-01', but the page text does not explicitly mention this date. The page does mention 'Upcoming Events' but does not specify the date of the event. This could be a misinterpretation.",
+        "The time field is '23:00', which matches the 'Club' working hours listed on the page. However, the page text does not explicitly mention this time as the event time. This could be an assumption.",
+        "The venue field is 'Blue Club', which is a correct extraction from the page text. However, the page text does mention 'Blue Bar' and 'Blue Club' interchangeably, which could indicate that the two are the same venue or at least closely related.",
+        "The town field is 'korcula', which is a correct extraction from the page text. However, the page text does mention 'Korčula town' which could be a more specific and accurate description of the location.",
+        "The category field is 'nightlife', which is a correct extraction from the page text. However, the page text does mention 'Nightlife Vibes' which could be a more specific and accurate description of the event category."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-blue-korcula-2024-06-02-nightlife",
+      "sourceId": "blue-korcula",
+      "sourceUrl": "https://bluekorcula.com/club",
+      "discoveredAt": "2026-10-22T10:20:47.093Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Nocni život",
+        "en": "Nightlife",
+        "de": "Nachtleben",
+        "it": "Vita notturna",
+        "sl": "Nočno življenje",
+        "fr": "La vie nocturne",
+        "date": "2024-06-02",
+        "time": "23:00",
+        "town": "korcula",
+        "venue": "Blue Club",
+        "cats": [
+          "nightlife"
+        ],
+        "source": "https://bluekorcula.com/club",
+        "extractionMethod": "ai",
+        "id": "ai-blue-korcula-2024-06-02-nightlife"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The title 'Nightlife' might be a translation of the original title 'Nocni život', but the page text doesn't explicitly mention the title as 'Nightlife'. The title could be 'Blue Club' or 'Night Club' which are mentioned on the page.",
+        "The date '2024-06-02' is not explicitly mentioned on the page. However, the page does mention 'Upcoming Events' and 'See all events', which could imply that the event is scheduled for a future date.",
+        "The time '23:00' is mentioned on the page as part of the working hours for the 'Club' section, but it's not explicitly stated as the time for this specific event.",
+        "The venue 'Blue Club' is mentioned on the page, but it's not explicitly stated as the venue for this specific event. However, the page does mention 'Blue Bar' and 'Blue Club' as two separate entities.",
+        "The town 'Korcula' is mentioned on the page as part of the address, but it's not explicitly stated as the town for this specific event.",
+        "The category 'nightlife' is mentioned on the page, but it's not explicitly stated as the category for this specific event. However, the page does mention 'Nightlife Vibes' as a section title, which could imply that the event is related to nightlife."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-blue-korcula-2024-06-03-nightlife",
+      "sourceId": "blue-korcula",
+      "sourceUrl": "https://bluekorcula.com/club",
+      "discoveredAt": "2026-10-22T10:20:47.093Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Nocni život",
+        "en": "Nightlife",
+        "de": "Nachtleben",
+        "it": "Vita notturna",
+        "sl": "Nočni življenjepasj",
+        "fr": "La vie nocturne",
+        "date": "2024-06-03",
+        "time": "23:00",
+        "town": "korcula",
+        "venue": "Blue Club",
+        "cats": [
+          "nightlife"
+        ],
+        "source": "https://bluekorcula.com/club",
+        "extractionMethod": "ai",
+        "id": "ai-blue-korcula-2024-06-03-nightlife"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The title 'Nightlife' may be an English translation of 'Nocni život', but it's not explicitly stated on the source page. The page does mention 'Night Club' and 'Lounge Bar' but doesn't use 'Nightlife' as a title.",
+        "The 'date' field is '2024-06-03', but the source page mentions 'Upcoming Events' and 'Table reservations can be made up to 4 hours prior to the desired arrival time'. This implies that the event is not a fixed date, but rather a recurring event with multiple dates available. The page does not explicitly state that the event will occur on '2024-06-03'.",
+        "The 'time' field is '23:00', which matches the 'Club' working hours listed on the page. However, the page also lists 'Caffe bar' working hours as '08:00 – 00:00', which seems to contradict the 'time' field.",
+        "The 'venue' field is 'Blue Club', which is mentioned on the page. However, the page also lists the address as 'Obala korčulanskih brodograditelja 9, 20260 Korčula, Croatia', which is not explicitly stated in the 'venue' field.",
+        "The 'town' field is 'korcula', which matches the location mentioned on the page. However, the page also lists the full name of the town as 'Korčula'.",
+        "The 'category' field is 'nightlife', which matches the description of the event on the page. However, the page also mentions 'Lounge Bar' and 'Bistro Levant' as separate categories, which may imply that the 'category' field is too broad."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
     }
   ]
 }

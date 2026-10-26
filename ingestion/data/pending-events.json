@@ -20276,6 +20276,313 @@
       ],
       "duplicateMatches": [],
       "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2026-06-01-moreska-korcula-sword-dance-tickets-moreska-by-hgd-sveta-cec",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/",
+      "discoveredAt": "2026-10-26T11:18:57.644Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Moreška Korčula - Karta za Morešku | Moreška HGD Svetom Ceciliji",
+        "en": "Moreška Korčula - Sword Dance Tickets | Moreška by HGD Sveta Cecilija",
+        "de": "Moreška Korčula - Schwerttanz-Tickets | Moreška von HGD Sveta Cecilija",
+        "it": "Moreška Korčula - Biglietti per la Moreška | Moreška da HGD Sveta Cecilija",
+        "sl": "Moreška Korčula - Karte za Moreško | Moreška HGD Sveta Cecilija",
+        "fr": "Moreška Korčula - Billets pour la Moreška | Moreška par HGD Sveta Cecilija",
+        "date": "2026-06-01",
+        "time": "od 1883.",
+        "town": "korcula",
+        "venue": "Sveta Cecilija",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://moreska.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2026-06-01-moreska-korcula-sword-dance-tickets-moreska-by-hgd-sveta-cec"
+      },
+      "verifierConfidence": 0.5,
+      "verifierConcerns": [
+        "The title field contains text that doesn't appear to be a direct quote from the page, specifically 'Karta za Morešku | Moreška HGD Svetom Ceciliji' and 'Sword Dance Tickets | Moreška by HGD Sveta Cecilija'. The page text contains the latter, but not the former. The former seems to be a possible translation or interpretation of the page's text, rather than a direct quote.",
+        "The time field is 'od 1883.', which appears to be a start time rather than a duration or a specific time of day. The page text does mention 'od 1883.', but it's unclear if this refers to the start time or a duration.",
+        "The venue field is 'Sveta Cecilija', which is a valid venue according to the page text. However, the page text also mentions 'Korčula', which could be considered a town or location, but it's unclear if this is the same as the town field 'korcula'.",
+        "The category field is 'folklore', which is a reasonable inference from the page text. However, the page text also mentions 'bojni ritual' (war dance ritual), which could be a more specific category.",
+        "The date field is '2026-06-01', which appears to be a specific date. However, the page text mentions 'Izvedbe sezone 2026.' (performances of the season 2026), which could imply that the date is part of a recurring event or season, rather than a single date.",
+        "The page text contains multiple sections and subheadings, which could imply that the event is part of a larger context or organization. The page text also mentions 'HGD Sveta Cecilija' (Cultural and Artistic Association Sveta Cecilija), which could be a relevant organization or entity.",
+        "The page text contains links to other pages, such as '/tickets' and '/iskustvo' (experience), which could imply that the event is part of a larger website or platform.",
+        "The page text contains a section titled 'Privatne izvedbe' (private performances), which could imply that the event is not a public performance, but rather a private or exclusive event."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.5"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2026-06-01-odrasli-20-djeca-do-14-godina-10-grupe-svaka-peta-ulaznica-g",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/",
+      "discoveredAt": "2026-10-26T11:18:57.644Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Odrasli 20 € · Djeca do 14 godina 10 € · Grupe: svaka peta ulaznica gratis",
+        "en": "Odrasli 20 € · Djeca do 14 godina 10 € · Grupe: svaka peta ulaznica gratis",
+        "de": "Erwachsene 20 € · Kinder bis 14 Jahre 10 € · Gruppen: jede fünfte Eintrittskarte kostenlos",
+        "it": "Adulti 20 € · Bambini fino a 14 anni 10 € · Gruppi: ogni quinta biglietto gratuito",
+        "sl": "Odrasli 20 € · Otroci do 14 let 10 € · Skupine: vsaka pet vstopnice brezplačna",
+        "fr": "Adultes 20 € · Enfants de 14 ans ou moins 10 € · Groupes: chaque cinquième billet gratuit",
+        "date": "2026-06-01",
+        "town": "korcula",
+        "venue": "Sveta Cecilija",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://moreska.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2026-06-01-odrasli-20-djeca-do-14-godina-10-grupe-svaka-peta-ulaznica-g"
+      },
+      "verifierConfidence": 0.9,
+      "verifierConcerns": [
+        "The date '2026-06-01' seems to be an arbitrary date, as the page mentions 'Izvedbe sezone 2026.' which implies that the event is part of a season calendar. It would be more accurate to extract the season calendar dates from the page, rather than a single arbitrary date.",
+        "The title field contains booking-status text ('Odrasli 20 € · Djeca do 14 godina 10 € · Grupe: svaka peta ulaznica gratis') instead of just the event title. It would be more accurate to extract the event title from the page, which is 'Moreška Korčula - Sword Dance Tickets'.",
+        "The venue field contains a reference to the organization ('HGD Sveta Cecilija') instead of just the venue name. It would be more accurate to extract the venue name from the page, which is 'Sveta Cecilija' or 'Korčula'.",
+        "The category field is 'folklore', but the page describes the event as a 'Sword Dance' and a 'traditional dance'. It would be more accurate to extract the category from the page, which is more specific to the event type.",
+        "The page has a lot of unrelated sections, but the event listing is clearly marked as a 'Sveta Cecilija' event, and the title and date are mentioned in the same section as the event description."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "duplicate-id"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2026-06-01-1991",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/",
+      "discoveredAt": "2026-10-26T11:18:57.644Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "1991.",
+        "en": "1991",
+        "de": "1991.",
+        "it": "1991.",
+        "sl": "1991.",
+        "fr": "1991.",
+        "date": "2026-06-01",
+        "time": "Slobodna Hrvatska",
+        "town": "korcula",
+        "venue": "Sveta Cecilija",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://moreska.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2026-06-01-1991"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The title field appears to be a year ('1991'), but the surrounding text describes it as a significant event in the history of HGD Sveta Cecilija. This may indicate that the title is not actually the name of the event, but rather a year associated with it.",
+        "The time field is 'Slobodna Hrvatska', which is a phrase that appears to be a year and a description of a historical event. This may indicate that the time field is not actually a time, but rather a title or a description.",
+        "The venue field is 'Sveta Cecilija', which appears to be the name of the organization hosting the event, rather than a specific venue.",
+        "The town field is 'korcula', which appears to be a town, but it is not clear if it is the specific town where the event is taking place, or simply a reference to the island of Korčula.",
+        "The category field is 'folklore', which appears to be a broad category, but it is not clear if it accurately reflects the specific type of event described on the page.",
+        "The date field is '2026-06-01', which appears to be a future date. However, the surrounding text describes the event as having a long history, and it is not clear if the event is actually scheduled to take place on this date."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "duplicate-id"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2026-06-01-moreska",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/",
+      "discoveredAt": "2026-10-26T11:18:57.644Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Moreška",
+        "en": "Moreška",
+        "de": "Moreška",
+        "it": "Moreška",
+        "sl": "Moreška",
+        "fr": "Moreška",
+        "date": "2026-06-01",
+        "town": "korcula",
+        "venue": "Sveta Cecilija",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://moreska.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2026-06-01-moreska"
+      },
+      "verifierConfidence": 0.9,
+      "verifierConcerns": [
+        "The page contains multiple mentions of the event's past history, but the extracted candidate's date is 2026-06-01. This suggests that the event may be a recurring one, and the page may be listing past dates. However, the extracted candidate's date is not explicitly stated as a past date, so this is a minor concern.",
+        "The page contains a section titled 'Izvedbe sezone 2026.' which suggests that the event may be a recurring one, and the page may be listing upcoming dates. However, the extracted candidate's date is not explicitly stated as a future date, so this is a minor concern.",
+        "The page contains a section titled 'Privatne izvedbe' which suggests that the event may be available for private bookings. However, the extracted candidate's date is not explicitly stated as a private booking, so this is a minor concern.",
+        "The page contains a section titled 'Moreška iskustvo' which suggests that the event may be an educational or interactive experience. However, the extracted candidate's date is not explicitly stated as an educational or interactive experience, so this is a minor concern.",
+        "The page contains multiple mentions of the event's history and cultural significance, but the extracted candidate's title and description do not explicitly state this information. This is a minor concern.",
+        "The page contains a section titled 'Ulaznice (ticket link: /tickets)' which suggests that the event may be available for purchase. However, the extracted candidate's title and description do not explicitly state this information, so this is a minor concern."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2026-06-01-zbor",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/",
+      "discoveredAt": "2026-10-26T11:18:57.644Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Zbor",
+        "en": "Zbor",
+        "de": "Flug",
+        "it": "Volo",
+        "sl": "Zbor",
+        "fr": "Vol",
+        "date": "2026-06-01",
+        "town": "korcula",
+        "venue": "Sveta Cecilija",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://moreska.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2026-06-01-zbor"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The extracted date '2026-06-01' seems to be unrelated to the page content, which mentions 'Izvedbe sezone 2026.' This suggests that the date might be a generic or future date, rather than a specific date mentioned on the page. However, it's also possible that the page is advertising future events, and the extracted date is indeed correct.",
+        "The title 'Zbor' is mentioned on the page, but it's not clear if it's the only title mentioned. The page also mentions 'Moreška', 'Puhački orkestar', and 'Klapa', which could be alternative titles. This might be a minor concern, but it's worth noting that the title 'Zbor' is not explicitly stated as the only title on the page.",
+        "The venue 'Sveta Cecilija' is mentioned on the page, but it's not clear if it's the only venue mentioned. The page also mentions 'Ljetno kino' and 'Centar za kulturu Korčula', which could be alternative venues. This might be a minor concern, but it's worth noting that the venue 'Sveta Cecilija' is not explicitly stated as the only venue on the page.",
+        "The category 'folklore' is mentioned on the page, but it's not clear if it's the only category mentioned. The page also mentions 'sakralno' and 'suvremeno', which could be alternative categories. This might be a minor concern, but it's worth noting that the category 'folklore' is not explicitly stated as the only category on the page."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2026-06-01-privatne-izvedbe",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/",
+      "discoveredAt": "2026-10-26T11:18:57.644Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Privatne izvedbe",
+        "en": "Privatne izvedbe",
+        "de": "Private Aufführungen",
+        "it": "Spettacoli privati",
+        "sl": "Privatne izvedbe",
+        "fr": "Représentations privées",
+        "date": "2026-06-01",
+        "town": "korcula",
+        "venue": "Sveta Cecilija",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://moreska.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2026-06-01-privatne-izvedbe"
+      },
+      "verifierConfidence": 0.9,
+      "verifierConcerns": [
+        "The title field appears to be a generic title that could apply to any event, rather than a specific description of the event. This suggests that the title may have been misread or is not well-supported by the text near the listing.",
+        "The date field is supported by the text near the listing, which mentions 'Izvedbe sezone 2026.'",
+        "The town field is supported by the text near the listing, which mentions 'Korčula'.",
+        "The venue field is supported by the text near the listing, which mentions 'Sveta Cecilija'.",
+        "The category field is not supported by the text near the listing, which does not mention 'kids'. Instead, it mentions 'Moreška', 'Puhački orkestar', 'Klapa', and 'Zbor'. This suggests that the category may have been misread or is not well-supported by the text near the listing."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2026-06-01-cjelovita-privatna-izvedba-za-grupe-u-ljetnom-kinu-ili-centr",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/",
+      "discoveredAt": "2026-10-26T11:18:57.644Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Cjelovita privatna izvedba za grupe, u Ljetnom kinu ili Centru za kulturu Korčula.",
+        "en": "Cjelovita privatna izvedba za grupe, u Ljetnom kinu ili Centru za kulturu Korčula.",
+        "de": "Vollständige private Veranstaltung für Gruppen, im Sommersaal oder Kulturzentrum Korčula.",
+        "it": "Spettacolo privato completo per gruppi, nel cinema estivo o nel centro culturale di Korčula.",
+        "sl": "Popolna zasebna izvedba za skupine, v Poletnem kinu ali Centru za kulturo Korčula.",
+        "fr": "Spectacle privé complet pour groupes, au cinéma d'été ou au centre culturel de Korčula.",
+        "date": "2026-06-01",
+        "town": "korcula",
+        "venue": "Sveta Cecilija",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://moreska.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2026-06-01-cjelovita-privatna-izvedba-za-grupe-u-ljetnom-kinu-ili-centr"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The title field appears to be copied verbatim from the source page, but it's not entirely clear if the page's own text uses this exact phrase to describe the event. A more careful reading of the page might reveal a slightly different wording.",
+        "The venue field states 'Sveta Cecilija', but the source page actually lists this as the name of the organization ('HGD Sveta Cecilija') rather than a specific venue. It's not clear if 'Sveta Cecilija' refers to the organization or a different location.",
+        "The date field states '2026-06-01', but the source page mentions that the event is part of the 'Izvedbe sezone 2026' (Season Performances 2026). This suggests that the date might be part of a recurring event rather than a one-off performance.",
+        "The category field states 'kids', but the source page doesn't explicitly mention children or any age restrictions. The page does mention that the event is suitable for adults and children, but it's not clear if this is a specific category or just a general statement.",
+        "The town field states 'korcula', but the source page actually lists the town as 'Korčula'. It's not clear if the page's own text uses this exact spelling or if it's a variation."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "duplicate-id"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2026-06-01-intimni-edukativni-susret-s-kostimima-macevima-i-dijalogom-m",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/",
+      "discoveredAt": "2026-10-26T11:18:57.644Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Intimni edukativni susret s kostimima, mačevima i dijalogom. Minimalno 5 osoba.",
+        "en": "Intimni edukativni susret s kostimima, mačevima i dijalogom. Min. 5 osoba.",
+        "de": "Intimer Bildungsbegegnung mit Kostümen, Schwertern und Dialog. Mindestens 5 Personen.",
+        "it": "Incontro educativo intimo con costumi, spade e dialogo. Minimo 5 persone.",
+        "sl": "Intimni izobraževalni sestanek s kostumi, meči in dialogom. Najmanj 5 oseb.",
+        "fr": "Rencontre éducative intime avec costumes, épées et dialogue. Au minimum 5 personnes.",
+        "date": "2026-06-01",
+        "town": "korcula",
+        "venue": "Sveta Cecilija",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://moreska.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2026-06-01-intimni-edukativni-susret-s-kostimima-macevima-i-dijalogom-m"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The 'event' listing appears to be a promotional section for the 'Moreška' experience, which includes a description of the event, but it's not clear if this is a separate event or a part of the regular 'Moreška' performances.",
+        "The 'date' field is not explicitly mentioned in the source page text, but it's mentioned in the event listing as '2026-06-01'. However, the source page text does mention 'Izvedbe sezone 2026.' which could imply that the event is part of the 2026 season, but it's not clear if it's a specific date or a recurring event.",
+        "The 'town' field is mentioned as 'korčula', but the source page text mentions 'Korčula' in a different context, which could imply that it's a proper noun and not just a common noun.",
+        "The 'venue' field is mentioned as 'Sveta Cecilija', which is also mentioned in the source page text as the name of the cultural association, but it's not clear if it's a specific venue or a general term.",
+        "The 'category' field is mentioned as 'kids', but the source page text does not explicitly mention children or any age-related information.",
+        "The event listing mentions 'Intimni edukativni susret s kostimima, mačevima i dijalogom', which is a description of the event, but it's not clear if this is a separate event or a part of the regular 'Moreška' performances."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
     }
   ]
 }

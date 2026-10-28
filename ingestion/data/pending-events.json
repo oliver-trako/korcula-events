@@ -21024,6 +21024,119 @@
       ],
       "duplicateMatches": [],
       "status": "needs-review"
+    },
+    {
+      "id": "ai-centar-kulture-korcula-2025-08-21-film",
+      "sourceId": "centar-kulture-korcula",
+      "sourceUrl": "https://kulturakorcula.hr/kino-najave/",
+      "discoveredAt": "2026-10-28T11:27:35.184Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "FILM",
+        "en": "Film",
+        "de": "Film",
+        "it": "Film",
+        "sl": "Film",
+        "fr": "Film",
+        "date": "2025-08-21",
+        "time": "21:00",
+        "town": "lumbarda",
+        "venue": "Ljetno kino Korčula",
+        "cats": [
+          "film"
+        ],
+        "source": "https://kulturakorcula.hr/kino-najave/",
+        "extractionMethod": "ai",
+        "id": "ai-centar-kulture-korcula-2025-08-21-film"
+      },
+      "verifierConfidence": 0.7,
+      "verifierConcerns": [
+        "The title 'FILM' appears to be a category or a header, rather than the title of the specific event. This could indicate that the extracted title is not actually the title of the event, but rather a label or a category.",
+        "The date '2025-08-21' appears to be a date that is not actually mentioned in the source page text. The closest date mentioned is 'Petak, 28.8, 21:00' which is in a different format and does not match the extracted date.",
+        "The venue 'Ljetno kino Korčula' appears to be mentioned in the source page text, but it is not clear if this is the correct venue for the specific event. The source page text mentions several other venues, including 'Centar za kulturu Korčula'.",
+        "The category 'film' appears to be a correct categorization of the event, but it is not clear if this is the only category or if there are other categories that are also applicable."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.7"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-lumbarda-2026-10-27-masterclass-violin-7-fermata-festival",
+      "sourceId": "visit-lumbarda",
+      "sourceUrl": "https://www.visitlumbarda.eu/",
+      "discoveredAt": "2026-10-28T11:27:35.184Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Masterclass violina – 7. Fermata Festival",
+        "en": "Masterclass violin – 7. Fermata Festival",
+        "de": "Mastersession Violine – 7. Fermata Festival",
+        "it": "Masterclass violino – 7. Fermata Festival",
+        "sl": "Masterska sekcija violina – 7. Fermata Festival",
+        "fr": "Masterclass de violon – 7. Fermata Festival",
+        "date": "2026-10-27",
+        "time": "27. listopada 2026.",
+        "town": "lumbarda",
+        "venue": "Lumbarda",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://www.visitlumbarda.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-lumbarda-2026-10-27-masterclass-violin-7-fermata-festival"
+      },
+      "verifierConfidence": 0.9,
+      "verifierConcerns": [
+        "The date '27. listopada 2026.' appears in a section titled 'Novosti' (News), which suggests that it may be a general notice or a news article rather than a specific event date. However, it is immediately followed by a section titled 'Događanja' (Events) that lists several upcoming events, including 'Masterclass violina – 7. Fermata Festival' on the same date. This suggests that the date is indeed related to the event.",
+        "The title 'Masterclass violina – 7. Fermata Festival' appears to be a combination of the event title and a reference to the festival it is part of. While this is not necessarily incorrect, it does suggest that the title may have been embellished or modified from the original text on the page.",
+        "The category 'folklore' appears to be a general term that may not accurately reflect the specific type of event described in the title. However, without more information, it is difficult to say for certain whether this is a concern or not."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-aminess-korcula-entertainment-2023-04-23-early-booking",
+      "sourceId": "aminess-korcula-entertainment",
+      "sourceUrl": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+      "discoveredAt": "2026-10-28T11:27:35.184Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Rano rezerviranje",
+        "en": "Early Booking",
+        "de": "Frühbuchpreis",
+        "it": "Prenotazione anticipata",
+        "sl": "Rano rezerviranje",
+        "fr": "Réservation précoce",
+        "date": "2023-04-23",
+        "endDate": "2023-10-18",
+        "town": "korcula",
+        "venue": "Marko Polo Maradiso Hotel by Aminess",
+        "cats": [
+          "sports"
+        ],
+        "source": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+        "extractionMethod": "ai",
+        "id": "ai-aminess-korcula-entertainment-2023-04-23-early-booking"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The 'Early Booking' title seems to be a promotion, not the actual name of the event. The source page text does not mention 'Rano rezerviranje' (the title in Croatian) anywhere else, but it does mention 'Early Booking' in the context of a special offer. This suggests that the 'Early Booking' title is likely a marketing term rather than the actual name of the event.",
+        "The date '2023-04-23' is mentioned in the source page text as the start date of the 'Early Booking' special offer, but it is not explicitly stated as the date of the event. This could be a mistake or a misunderstanding of the source page text.",
+        "The 'sports' category does not seem to match the content of the source page text, which focuses on a hotel and its amenities rather than sports. This could be a mistake or a misunderstanding of the source page text.",
+        "The venue 'Marko Polo Maradiso Hotel by Aminess' is mentioned in the source page text, but it is not explicitly stated as the venue of the event. This could be a mistake or a misunderstanding of the source page text.",
+        "The town 'Korčula' is mentioned in the source page text, but it is not explicitly stated as the location of the event. This could be a mistake or a misunderstanding of the source page text.",
+        "The source page text does not mention the 'endDate' '2023-10-18' anywhere else, which could indicate that it is not a supported field."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
     }
   ]
 }

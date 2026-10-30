@@ -22619,6 +22619,344 @@
         }
       ],
       "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-korcula-racisce-2026-11-07-wi-fi-galerija-siva-zona",
+      "sourceId": "visit-korcula-racisce",
+      "sourceUrl": "https://visitkorcula.eu/en/events/summer-in-racisce/",
+      "discoveredAt": "2026-10-30T11:32:36.060Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Wi-Fi galerija siva) (zona",
+        "en": "Wi-Fi Art Gallery (Grey) (Zone)",
+        "de": "Wi-Fi Kunstgalerie grau (Zone)",
+        "it": "Wi-Fi Galleria d'Arte (Grigio) (Zona)",
+        "sl": "Wi-Fi umetniška galerija siva) (območje",
+        "fr": "Wi-Fi galerie d'art gris) (zone",
+        "date": "2026-11-07",
+        "town": "racisce",
+        "venue": "Račišće",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitkorcula.eu/en/events/summer-in-racisce/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-korcula-racisce-2026-11-07-wi-fi-galerija-siva-zona"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The date '2026-11-07' is mentioned as the date of the event 'Wi-Fi galerija siva) (zona', but this date is not actually mentioned next to the event on the source page. Instead, the date '07.11.2026' is mentioned as the date of the event 'A capella singing group concert', which seems to be a different event. This discrepancy suggests that the date of the 'Wi-Fi galerija siva) (zona' event may not be accurately represented in the extracted candidate."
+      ],
+      "blockingReasons": [
+        "source-override-always-review"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-centar-kulture-korcula-2026-11-13-zff-putuje-in-korcula-la-gradiva",
+      "sourceId": "centar-kulture-korcula",
+      "sourceUrl": "https://kulturakorcula.hr/kino-najave/",
+      "discoveredAt": "2026-10-30T11:32:36.060Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "ZFF PUTUJE u Korčulu / La Gradiva",
+        "en": "ZFF PUTUJE in Korčula / La Gradiva",
+        "de": "ZFF REIST nach Korčula / La Gradiva",
+        "it": "ZFF VALE a Corculla / La Gradiva",
+        "sl": "ZFF POŠLI v Korčulo / La Gradiva",
+        "fr": "ZFF PART pour Korčula / La Gradiva",
+        "date": "2026-11-13",
+        "time": "19:00",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "ticketUrl": "Kupi ulaznice",
+        "source": "https://kulturakorcula.hr/kino-najave/",
+        "extractionMethod": "ai",
+        "id": "ai-centar-kulture-korcula-2026-11-13-zff-putuje-in-korcula-la-gradiva"
+      },
+      "verifierConfidence": 0.7,
+      "verifierConcerns": [
+        "The date and time fields ('2026-11-13', '19:00') seem to match a specific event listing on the page ('KINO / ZFF PUTUJE u Korčulu / “La Gradiva” / petak / 13.11 /19:00 / 14+'), but there are other event listings on the same page that also seem to be part of the same program ('ZFF putuje'). This makes me wonder if this specific event listing is actually the one being referred to, or if it's just one of many similar events.",
+        "The title and description fields ('ZFF PUTUJE u Korčulu / La Gradiva', 'Kao i svake godine Centar za kulturu Korčula vam donosi filmove u sklopu programa ZFF putuje...') seem to be taken directly from the page, but they're not the only text on the page that could be considered a title or description. This makes me wonder if the extraction is accurately capturing the title and description of this specific event, or if it's just grabbing the first bit of text it finds."
+      ],
+      "blockingReasons": [
+        "verifier-confidence-below-threshold:0.7"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-tz-blato-2026-10-23-blato-lumblija-festival",
+      "sourceId": "tz-blato",
+      "sourceUrl": "https://tzo-blato.hr/en/",
+      "discoveredAt": "2026-10-30T11:32:36.060Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Dani Lumblije u Blatu – Okusi i mirisi zavičaja",
+        "en": "Blato Lumblija Festival",
+        "de": "Lummblije Tage in Blau - Aromen und Düfte der Heimat",
+        "it": "Giorni di Lumblija a Blato - Sapore e profumi della patria",
+        "sl": "Dnevi Lumblije v Blatu - Okusi in vonji domačega",
+        "fr": "Journées de Lumblija à Blato - Saveurs et parfums de la patrie",
+        "date": "2026-10-23",
+        "endDate": "2026-10-28",
+        "town": "blato",
+        "venue": "Blato",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://tzo-blato.hr/en/",
+        "extractionMethod": "ai",
+        "id": "ai-tz-blato-2026-10-23-blato-lumblija-festival"
+      },
+      "verifierConfidence": 0.9,
+      "verifierConcerns": [
+        "The 'endDate' field is not supported by the text near the listing. The text mentions the event will be held from 23. to 28.10.2026., but does not explicitly state the end date.",
+        "The 'cats' field lists the category as 'folklore', but the text near the listing mentions the event as a festival, which could be a broader category than folklore.",
+        "The 'town' field is well-supported by the text, which mentions Blato as the location of the event.",
+        "The 'venue' field is well-supported by the text, which mentions Blato as the location of the event.",
+        "The 'title_hr' and 'title_en' fields appear to be well-supported by the text near the listing.",
+        "There is no explicit mention of the time of the event in the text near the listing, which could be a concern for the 'date' field.",
+        "The date mentioned in the text near the listing (23.-28.10.2026.) appears to match the 'date' field, but the 'endDate' field is not explicitly mentioned.",
+        "The category mentioned in the text near the listing (manifestacija 'Dani Lumblije u Blatu – Okusi i mirisi zavičaja') does not explicitly match the 'cats' field, which lists the category as 'folklore'.",
+        "The page contains a lot of unrelated sections and announcements, but the text near the listing appears to be relevant to the event."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-tz-blato-2026-10-23-blato-lumblija-festival",
+      "sourceId": "tz-blato",
+      "sourceUrl": "https://tzo-blato.hr/en/",
+      "discoveredAt": "2026-10-30T11:32:36.060Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Dani Lumblije u Blatu – Okusi i mirisi zavičaja",
+        "en": "Blato Lumblija Festival",
+        "de": "Die Tage von Lümbli in Bla – Die Geschmacks- und Duftwelt der Heimat",
+        "it": "I giorni di Lumblija a Blato – Gusti e profumi della patria",
+        "sl": "Dnevi Lumblije v Blatu – Okusi in vonji domačega",
+        "fr": "Les jours de Lumblija à Blato – Saveurs et parfums du pays natal",
+        "date": "2026-10-23",
+        "endDate": "2026-10-28",
+        "town": "blato",
+        "venue": "Blato",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://tzo-blato.hr/en/",
+        "extractionMethod": "ai",
+        "id": "ai-tz-blato-2026-10-23-blato-lumblija-festival"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The extracted title 'Blato Lumblija Festival' does not match the actual title on the page, which is 'Dani Lumblije u Blatu – Okusi i mirisi zavičaja'. Although the page does mention 'Blato Lumblija Festival' in the context of the event, the title of the event as stated on the page is different. This discrepancy lowers confidence.",
+        "The extracted category 'kids' does not match the actual category of the event. The event is related to wine and food, rather than kids. This discrepancy lowers confidence.",
+        "The extracted date '2026-10-23' is mentioned on the page as part of a larger date range '23.-28.10.2026', but it is not explicitly stated as the start date. However, it is mentioned in the context of 'Dani Lumblije u Blatu – Okusi i mirisi zavičaja' which is also stated as starting on the 23rd, so the confidence in this field is not lowered.",
+        "The extracted venue 'Blato' is mentioned on the page as part of the location information, but it is not explicitly stated as the venue for the event. However, it is mentioned in the context of 'Dani Lumblije u Blatu – Okusi i mirisi zavičaja' which is stated as taking place in Blato, so the confidence in this field is not lowered."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-tz-blato-2026-10-28-blato-wine-experience",
+      "sourceId": "tz-blato",
+      "sourceUrl": "https://tzo-blato.hr/en/",
+      "discoveredAt": "2026-10-30T11:32:36.060Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "OKUSI I MIRISI ZAVIČAJA“ predstavljeni kao primjer dobre prakse i održive manifestacije",
+        "en": "Blato Wine Experience",
+        "de": "Blato Wein Erfahrung",
+        "it": "I GUSTI E I PROFUMI DELLA MADREPatria presentati come esempio di buona pratica e manifestazione sostenibile",
+        "sl": "OKUSI IN AROMATI ZA DOMačiji predstavljeni kot primer dobre prakse in trajnostne prireditve",
+        "fr": "LES SAVEURS ET LES ARÔMES DE LA PATRIE présentés comme exemple de bonne pratique et de manifestation durable",
+        "date": "2026-10-28",
+        "town": "blato",
+        "venue": "Blato",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://tzo-blato.hr/en/",
+        "extractionMethod": "ai",
+        "id": "ai-tz-blato-2026-10-28-blato-wine-experience"
+      },
+      "verifierConfidence": 0.95,
+      "verifierConcerns": [
+        "The title 'Blato Wine Experience' may be an embellishment of the original text, as the source page text only mentions 'Okusi i mirisi zavičaja' and 'Blato Wine & Dine'."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2026-07-02-season-2026-performances",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/",
+      "discoveredAt": "2026-10-30T11:32:36.060Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Izvedbe sezone 2026.",
+        "en": "Season 2026 performances.",
+        "de": "Aufführungen der Saison 2026",
+        "it": "Svolgimento della stagione 2026",
+        "sl": "Izvedbe sezone 2026",
+        "fr": "Exécution de la saison 2026",
+        "date": "2026-07-02",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "ticketUrl": "/tickets",
+        "source": "https://moreska.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2026-07-02-season-2026-performances"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The title 'Season 2026 performances' seems to be a translation of the original title 'Izvedbe sezone 2026', which is a generic phrase that could apply to any season. It's possible that the translation is not entirely accurate or that the title is not as specific as it claims to be.",
+        "The date '2026-07-02' is mentioned in the context of 'Izvedbe sezone 2026', which suggests that it might be a specific date for the season, but it's not clear if it's a one-time event or a recurring event.",
+        "The venue 'Korčula' is mentioned multiple times on the page, but it's not clear if it's a specific location for the event or a general reference to the island.",
+        "The category 'folklore' seems to be a general term that could apply to many types of events, and it's not clear if it's a specific category for this event or a broader classification.",
+        "There is no explicit mention of the event's time on the page, which makes it difficult to confirm the exact timing of the event.",
+        "The page contains a lot of general information about the Moreška tradition, the HGD Sveta Cecilija, and the island of Korčula, but it's not clear how much of this information is relevant to the specific event mentioned in the extracted candidate.",
+        "The page has a lot of navigation links and sections, which makes it difficult to determine the relevance of the information to the specific event mentioned in the extracted candidate."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2026-07-03-season-2026-performances",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/",
+      "discoveredAt": "2026-10-30T11:32:36.060Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Izvedbe sezone 2026.",
+        "en": "Season 2026 performances.",
+        "de": "Aufführungen der Saison 2026",
+        "it": "Stagioni 2026",
+        "sl": "Izvedbe sezone 2026",
+        "fr": "Mise en scène de la saison 2026",
+        "date": "2026-07-03",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "ticketUrl": "/tickets",
+        "source": "https://moreska.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2026-07-03-season-2026-performances"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The title 'Season 2026 performances' might be a generic translation of 'Izvedbe sezone 2026' and doesn't exactly match the text on the page, which mentions 'Moreška Korčula - Sword Dance Tickets' and 'Izvedbe sezone 2026'.",
+        "The date '2026-07-03' seems to be mentioned in the context of 'Sve izvedbe' which is a list of all performances, not a specific one. It's not clear if this is the exact date of the event mentioned in the title.",
+        "The venue 'Korčula' is correct, but the page also mentions 'Knežev prolaz 1, 20260 Korčula, Hrvatska' as the address of the organization, which might be the actual venue.",
+        "The category 'folklore' seems to be a good match, but the page also mentions 'bojni ples i glazbe' (sword dance and music) which is a more specific description of the event.",
+        "There is no specific time mentioned in the extracted candidate, but the page mentions 'izvedbe' (performances) which might imply a specific time or schedule.",
+        "The town 'korcula' is correct, but the page also mentions 'Korčula, Hrvatska' as the location, which might be the actual town.",
+        "The extracted candidate mentions 'Korčula' as the venue, but the page also mentions 'Ljetno kino (na otvorenom) ili Centar za kulturu (zatvoreno)' as possible locations for the event.",
+        "The page mentions 'privatne izvedbe' (private performances) and 'cjelovita privatna izvedba za grupe' (private performances for groups) which might imply that the event is not a public performance.",
+        "The page mentions 'Moreška iskustvo' (Moreška experience) which seems to be a more specific description of the event, but it's not clear if it's the same event as the one mentioned in the title."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2026-07-07-1991",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/",
+      "discoveredAt": "2026-10-30T11:32:36.060Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "1991.",
+        "en": "1991",
+        "de": "1991.",
+        "it": "1991.",
+        "sl": "1991.",
+        "fr": "1991.",
+        "date": "2026-07-07",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "ticketUrl": "/tickets",
+        "source": "https://moreska.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2026-07-07-1991"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The date '1991' appears in the source page text, but it is not clear if it refers to the event or another section. The section appears to be about the history of the HGD Sveta Cecilija, and the date '1991' is mentioned in the context of the renewal of the society after the declaration of Croatian independence. However, this is not explicitly stated as the date of the event, and it is possible that the event is actually in 2026, as stated in the extracted candidate.",
+        "The title '1991' is not clearly supported by the source page text. While the date '1991' is mentioned in the text, it is not presented as the title of an event, but rather as a part of a historical narrative. The title of the event is not explicitly stated in the source page text, and it is possible that the extracted candidate's title is an inference rather than a direct quote.",
+        "The venue 'Korčula' is well-supported by the source page text, which mentions Korčula as the location of the HGD Sveta Cecilija and the Moreška Korčula - Sword Dance."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-korculainfo-guides-2024-08-16-mostra",
+      "sourceId": "korculainfo-guides",
+      "sourceUrl": "https://www.korculainfo.com/zrnovo/",
+      "discoveredAt": "2026-10-30T11:32:36.060Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Moštra",
+        "en": "Moštra",
+        "de": "Ausstellung",
+        "it": "Mostra",
+        "sl": "Moštra",
+        "fr": "Exposition",
+        "date": "2024-08-16",
+        "time": "afternoon",
+        "town": "lumbarda",
+        "venue": "Piazza Pod Kostil in Postrana",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://www.korculainfo.com/zrnovo/",
+        "extractionMethod": "ai",
+        "id": "ai-korculainfo-guides-2024-08-16-mostra"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The extracted candidate lists the town as 'lumbarda', but the source page text does not mention this town. The text actually mentions Korčula Island and Žrnovo village. This discrepancy raises some concern about the accuracy of the extracted candidate.",
+        "The extracted candidate lists the venue as 'Piazza Pod Kostil in Postrana', but the source page text does not mention the word 'in Postrana'. The text only mentions 'Piazza Pod Kostil' as the location of the Sveti Rok church. This discrepancy raises some concern about the accuracy of the extracted candidate.",
+        "The extracted candidate lists the category as 'folklore', but the source page text does not explicitly mention this category. The text does mention the traditional sword dance 'Moštra' and the feast of Sveti Rok, but it does not categorize them as 'folklore'. This discrepancy raises some concern about the accuracy of the extracted candidate.",
+        "The extracted candidate lists the date as '2024-08-16', but the source page text does not explicitly mention this date. The text does mention the feast of Sveti Rok, which is celebrated on August 16th, but it does not provide the exact year. This discrepancy raises some concern about the accuracy of the extracted candidate.",
+        "The extracted candidate lists the time as 'afternoon', but the source page text does not provide any information about the time of the event. The text only mentions the feast of Sveti Rok and the traditional sword dance 'Moštra' without specifying the time. This discrepancy raises some concern about the accuracy of the extracted candidate."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "ambiguous-time"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
     }
   ]
 }

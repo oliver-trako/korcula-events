@@ -22957,6 +22957,359 @@
       ],
       "duplicateMatches": [],
       "status": "needs-review"
+    },
+    {
+      "id": "ai-centar-kulture-korcula-2026-11-12-i-am-rocky",
+      "sourceId": "centar-kulture-korcula",
+      "sourceUrl": "https://kulturakorcula.hr/kino-najave/",
+      "discoveredAt": "2026-10-31T11:11:58.925Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Ja sam Rocky",
+        "en": "I am Rocky",
+        "de": "Ich bin Rocky",
+        "it": "Sono Rocky",
+        "sl": "Sem Rocky",
+        "fr": "Je suis Rocky",
+        "date": "2026-11-12",
+        "time": "20:00",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://kulturakorcula.hr/kino-najave/",
+        "extractionMethod": "ai",
+        "id": "ai-centar-kulture-korcula-2026-11-12-i-am-rocky"
+      },
+      "verifierConfidence": 0.9,
+      "verifierConcerns": [
+        "The title 'Ja sam Rocky' is correct, but the English translation 'I am Rocky' is not explicitly stated on the page. The page does mention 'KINO / Ja sam Rocky / četvrtak / 12.11. / 20:00', which suggests that the title is correct, but the translation is not directly supported by the text.",
+        "The date '2026-11-12' is correct, but it is not explicitly stated on the page. The page mentions '12.11.2026', which suggests that the date is correct, but the format is not exactly the same.",
+        "The time '20:00' is correct, but it is not explicitly stated on the page. The page mentions '20:00', which suggests that the time is correct, but it is not directly supported by the text.",
+        "The venue 'Korčula' is correct, but it is not explicitly stated on the page. The page mentions 'KINO / Ja sam Rocky / četvrtak / 12.11. / 20:00 / Centar za kulturu Korčula', which suggests that the venue is correct, but the full name 'Centar za kulturu Korčula' is not mentioned in the extracted candidate.",
+        "The town 'korcula' is correct, but it is not explicitly stated on the page. The page mentions 'Korčula', which suggests that the town is correct, but the exact spelling is not directly supported by the text.",
+        "The category 'folklore' is incorrect. The page mentions 'Biografski', which suggests that the category is actually 'Biography', not 'Folklore'."
+      ],
+      "blockingReasons": [
+        "duplicate-id"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-centar-kulture-korcula-2026-11-14-scrooge-a-christmas-story",
+      "sourceId": "centar-kulture-korcula",
+      "sourceUrl": "https://kulturakorcula.hr/kino-najave/",
+      "discoveredAt": "2026-10-31T11:11:58.925Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "SCROOGE: Božićna priča",
+        "en": "SCROOGE: A Christmas Story",
+        "de": "SCROOGE: Eine Weihnachtsgeschichte",
+        "it": "SCROOGE: Una storia di Natale",
+        "sl": "SCROOGE: Božična zgodba",
+        "fr": "SCROOGE: Une histoire de Noël",
+        "date": "2026-11-14",
+        "time": "20:00",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://kulturakorcula.hr/kino-najave/",
+        "extractionMethod": "ai",
+        "id": "ai-centar-kulture-korcula-2026-11-14-scrooge-a-christmas-story"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The date of the event 'SCROOGE: Božićna priča' is listed as 2026-11-14, but the page text lists the start date of the film as 12.11.2026, which could indicate that the event has already taken place.",
+        "The title of the event is listed as 'SCROOGE: Božićna priča', but the page text lists the title as 'SCROOGE: Božićna prića', which could indicate a typo or a difference in formatting.",
+        "The venue of the event is listed as 'Korčula', but the page text lists the venue as 'Centar za kulturu Korčula', which could indicate a difference in formatting or a more specific location.",
+        "The category of the event is listed as 'kids', but the page text does not explicitly list the event as suitable for children. The category 'kids' might be an incorrect interpretation of the event's content."
+      ],
+      "blockingReasons": [
+        "fuzzy-duplicate"
+      ],
+      "duplicateMatches": [
+        {
+          "eventId": "ai-centar-kulture-korcula-2026-11-14-scrooge-a-christmas-tale",
+          "title": "SCROOGE: A Christmas Tale",
+          "date": "2026-11-14",
+          "time": "20:00",
+          "venue": "Korčula",
+          "score": 1,
+          "reasons": [
+            "same date",
+            "same town",
+            "overlapping category",
+            "same time",
+            "same venue",
+            "similar title"
+          ]
+        }
+      ],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-centar-kulture-korcula-2026-11-15-the-cat-in-the-hat",
+      "sourceId": "centar-kulture-korcula",
+      "sourceUrl": "https://kulturakorcula.hr/kino-najave/",
+      "discoveredAt": "2026-10-31T11:11:58.925Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Mačak u šeširu",
+        "en": "The Cat in the Hat",
+        "de": "Katze im Hut",
+        "it": "Gatto in cappello",
+        "sl": "Mačka v čepu",
+        "fr": "Chat dans le chapeau",
+        "date": "2026-11-15",
+        "time": "17:00",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://kulturakorcula.hr/kino-najave/",
+        "extractionMethod": "ai",
+        "id": "ai-centar-kulture-korcula-2026-11-15-the-cat-in-the-hat"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The title 'Mačak u šeširu' is translated as 'The Cat in the Hat', but the page also mentions another event with the title 'Mačak u šeširu' on 05.11.2026, suggesting that the title might be reused for different events. This could indicate that the extracted title is not unique to this event.",
+        "The extracted date '2026-11-15' is mentioned in the context of another event on the page, which has a similar format. However, the page also mentions other dates in the same format, making it unclear whether the extracted date is specific to this event.",
+        "The page mentions multiple events with the venue 'Korčula', but it is unclear whether the extracted venue is specific to this event.",
+        "The category 'kids' is mentioned, but it is not clear whether this is a specific category for this event or a general category for all events."
+      ],
+      "blockingReasons": [
+        "duplicate-id"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-centar-kulture-korcula-2026-11-20-the-hunger-games-the-rise-of-the-mockingjay",
+      "sourceId": "centar-kulture-korcula",
+      "sourceUrl": "https://kulturakorcula.hr/kino-najave/",
+      "discoveredAt": "2026-10-31T11:11:58.925Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Igre gladi: Svitanje nad žetvom",
+        "en": "The Hunger Games: The Rise of the Mockingjay",
+        "de": "Spiel der Gladiatoren: Der Morgen nach der Ernte",
+        "it": "I giochi dei gladiatori: L'alba dopo la mietitura",
+        "sl": "Igre gladi: Rane nad žetvijo",
+        "fr": "Jeux de gladiateurs : L'aube après la récolte",
+        "date": "2026-11-20",
+        "time": "20:00",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://kulturakorcula.hr/kino-najave/",
+        "extractionMethod": "ai",
+        "id": "ai-centar-kulture-korcula-2026-11-20-the-hunger-games-the-rise-of-the-mockingjay"
+      },
+      "verifierConfidence": 0.7,
+      "verifierConcerns": [
+        "The title field contains a translation of the original title, which may not be the exact title used on the source page.",
+        "The date field is correct, but it's not explicitly stated on the source page. It's mentioned in the 'Početak prikazivanja' (Start of screening) field, which is a separate section.",
+        "The time field is correct, but it's not explicitly stated on the source page. It's mentioned in the 'Početak prikazivanja' (Start of screening) field, which is a separate section.",
+        "The venue field is correct, but it's not explicitly stated on the source page. It's mentioned in the 'Žanr' (Genre) field, which is a separate section.",
+        "The town field is not explicitly stated on the source page. It's mentioned in the 'Žanr' (Genre) field, which is a separate section.",
+        "The category field is not explicitly stated on the source page. It's mentioned in the 'Žanr' (Genre) field, which is a separate section.",
+        "The event description field is not explicitly stated on the source page. It's mentioned in the 'Žanr' (Genre) field, which is a separate section."
+      ],
+      "blockingReasons": [
+        "fuzzy-duplicate",
+        "verifier-confidence-below-threshold:0.7"
+      ],
+      "duplicateMatches": [
+        {
+          "eventId": "ai-centar-kulture-korcula-2026-11-20-the-hunger-games-the-ballad-of-songbirds-and-snakes",
+          "title": "The Hunger Games: The Ballad of Songbirds and Snakes",
+          "date": "2026-11-20",
+          "time": "20:00",
+          "venue": "Korčula",
+          "score": 0.9,
+          "reasons": [
+            "same date",
+            "same town",
+            "same time",
+            "same venue"
+          ]
+        }
+      ],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-centar-kulture-korcula-2026-11-29-hexe-the-kingdom-of-magic",
+      "sourceId": "centar-kulture-korcula",
+      "sourceUrl": "https://kulturakorcula.hr/kino-najave/",
+      "discoveredAt": "2026-10-31T11:11:58.925Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "HEXE: Kraljevstvo čarolije",
+        "en": "HEXE: The Kingdom of Magic",
+        "de": "HEXE: Königreich der Zauber",
+        "it": "HEXE: Il regno della magia",
+        "sl": "HEXE: Kraljestvo čar",
+        "fr": "HEXE: Le royaume de la magie",
+        "date": "2026-11-29",
+        "time": "17:00",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://kulturakorcula.hr/kino-najave/",
+        "extractionMethod": "ai",
+        "id": "ai-centar-kulture-korcula-2026-11-29-hexe-the-kingdom-of-magic"
+      },
+      "verifierConfidence": 0.7,
+      "verifierConcerns": [
+        "The extracted date '2026-11-29' appears to match the date 'nedjelja/ 29.11. / 17:00' mentioned in the source page text for the event 'HEXE: Kraljevstvo čarolije'. However, this date is listed as a future event, while the other events listed on the page have already passed or are scheduled for earlier dates. This suggests that the page may not be up-to-date or that the event has not been officially confirmed.",
+        "The extracted title 'HEXE: The Kingdom of Magic' appears to match the title 'HEXE: Kraljevstvo čarolije' mentioned in the source page text. However, the title in the source page text is in Croatian, while the extracted title is in English. This may indicate that the extracted title is a translation or an interpretation of the original title.",
+        "The extracted category 'kids' does not match the category 'Animirani' (Animated) mentioned in the source page text for the event 'HEXE: Kraljevstvo čarolije'. This may indicate that the extracted category is incorrect or that the source page text uses a different categorization system.",
+        "The extracted venue 'Korčula' appears to match the venue 'Centar za kulturu Korčula' mentioned in the source page text. However, the extracted venue is a shortened version of the full venue name, which may not accurately represent the location of the event.",
+        "The extracted time '17:00' appears to match the time '17:00' mentioned in the source page text for the event 'HEXE: Kraljevstvo čarolije'. However, the time in the source page text is listed as 'nedjelja/ 29.11. / 17:00', which includes the day of the week. This may indicate that the extracted time is incomplete or that the source page text uses a different format for listing event times."
+      ],
+      "blockingReasons": [
+        "fuzzy-duplicate",
+        "verifier-confidence-below-threshold:0.7"
+      ],
+      "duplicateMatches": [
+        {
+          "eventId": "ai-centar-kulture-korcula-2026-11-29-hexe-realm-of-magic",
+          "title": "HEXE: Realm of Magic",
+          "date": "2026-11-29",
+          "time": "17:00",
+          "venue": "Korčula",
+          "score": 1,
+          "reasons": [
+            "same date",
+            "same town",
+            "overlapping category",
+            "same time",
+            "same venue",
+            "similar title"
+          ]
+        }
+      ],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-lumbarda-2026-09-10-dani-lumbarajske-pesefizme-2026",
+      "sourceId": "visit-lumbarda",
+      "sourceUrl": "https://www.visitlumbarda.eu/",
+      "discoveredAt": "2026-10-31T11:11:58.925Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Dani lumbarajske pesefizme 2026.",
+        "en": "Lumbareja Days of Pulse Wave 2026",
+        "de": "Lumbareja Tage der Pulswelle 2026",
+        "it": "Giochi dei giorni di Lumbareja della pulsazione 2026",
+        "sl": "Lumbarejski dnevi pulzne fizičnosti 2026",
+        "fr": "Journées de Lumbareja de la physiologie de la vague pulsaire 2026",
+        "date": "2026-09-10",
+        "town": "lumbarda",
+        "venue": "Lumbarda",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://www.visitlumbarda.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-lumbarda-2026-09-10-dani-lumbarajske-pesefizme-2026"
+      },
+      "verifierConfidence": 0.9,
+      "verifierConcerns": [
+        "The extracted candidate mentions a title in both Croatian and English. However, the page text only mentions the Croatian title \"Dani lumbarajske pesefizme 2026.\" The English title \"Lumbareja Days of Pulse Wave 2026\" seems to be an additional translation, but it's not clear if it's a direct translation or a paraphrased version. This might indicate that the English title is not a direct quote from the page text.",
+        "The extracted candidate mentions a date of \"2026-09-10\" for the event. However, the page text mentions a date of \"10. rujna 2026.\" for the event \"Dani lumbarajske pesefizme 2026.\" The date formats are similar, but the page text uses a more informal date format. This might indicate that the extracted date is not a direct quote from the page text.",
+        "The extracted candidate mentions a venue of \"Lumbarda\". However, the page text mentions the venue as \"Lumbarda\" in several places, but also mentions the address \"Žali bb, 20263 Lumbarda\" in the contact information section. This might indicate that the extracted venue is not a direct quote from the page text, or that the page text provides additional information about the venue.",
+        "The extracted candidate mentions a category of \"folklore\". However, the page text does not explicitly mention folklore as a category for the event \"Dani lumbarajske pesefizme 2026.\" The page text mentions various activities and events related to Lumbarda, but it's not clear if folklore is an accurate category for the event.",
+        "The page text contains a lot of information about Lumbarda, including its history, culture, and tourism information. However, the extracted candidate only mentions a few specific details about the event \"Dani lumbarajske pesefizme 2026.\" This might indicate that the extracted candidate is not a comprehensive summary of the page text, or that the page text provides additional information that is not relevant to the event."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "duplicate-id"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-tz-blato-2026-10-23-blato-week-taste-and-smell-of-homeland",
+      "sourceId": "tz-blato",
+      "sourceUrl": "https://tzo-blato.hr/en/",
+      "discoveredAt": "2026-10-31T11:11:58.925Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Dani Lumblije u Blatu – Okusi i mirisi zavičaja",
+        "en": "Blato Week – Taste and Smell of Homeland",
+        "de": "Lumbardie-Tage in Blato - Aromen und Düfte der Heimat",
+        "it": "Giorni della Lumbardia a Blato - Gusti e profumi della patria",
+        "sl": "Dnevi Lumbelije v Blatu – Okusi in vonji domačega",
+        "fr": "Journées de la Lumbardie à Blato - Saveurs et parfums de la patrie",
+        "date": "2026-10-23",
+        "endDate": "2026-10-28",
+        "town": "blato",
+        "venue": "Blato",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://tzo-blato.hr/en/",
+        "extractionMethod": "ai",
+        "id": "ai-tz-blato-2026-10-23-blato-week-taste-and-smell-of-homeland"
+      },
+      "verifierConfidence": 0.9,
+      "verifierConcerns": [
+        "The title 'Dani Lumblije u Blatu – Okusi i mirisi zavičaja' appears in the source page text, but the English translation 'Blato Week – Taste and Smell of Homeland' does not. This suggests that the English title may be an embellishment or a paraphrase of the original title.",
+        "The source page text lists multiple dates for the same event, including '23.-28.10.2026.' and '23.-30.09. 2026.' The fact that this specific row's date ('2026-10-23' to '2026-10-28') matches one of the listed dates does not necessarily mean that it is well-supported by the text next to it, as the page may be listing multiple dates for the same event.",
+        "The source page text includes a mention of 'Blato Wine & Dine' on '26.08.2026.' and '12.08.2026.', which suggests that the event may have already occurred or may be a recurring event. This could potentially affect the confidence in the extracted date.",
+        "The source page text includes a mention of 'PREGLED B2B' on 'Wednesday, 28 October 2026', which seems to be a different event from 'Dani Lumblije u Blatu – Okusi i mirisi zavičaja'. This suggests that the source page text may be listing multiple events, and the extracted information may not be well-supported by the text next to it."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-tz-blato-2026-09-09-b2b-overview",
+      "sourceId": "tz-blato",
+      "sourceUrl": "https://tzo-blato.hr/en/",
+      "discoveredAt": "2026-10-31T11:11:58.925Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "PREGLED B2B",
+        "en": "B2B Overview",
+        "de": "ÜBERBlick B2B",
+        "it": "VISIONE B2B",
+        "sl": "PREGLED B2B",
+        "fr": "VUE B2B",
+        "date": "2026-09-09",
+        "town": "blato",
+        "venue": "Blato",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://tzo-blato.hr/en/",
+        "extractionMethod": "ai",
+        "id": "ai-tz-blato-2026-09-09-b2b-overview"
+      },
+      "verifierConfidence": 0.9,
+      "verifierConcerns": [
+        "The title 'B2B Overview' doesn't match the page's own text, which is 'PREGLED B2B'. This could indicate that the title was embellished beyond what the page text actually says.",
+        "The date '2026-09-09' doesn't match any date mentioned in the source page text. The closest date mentioned is 'Thursday, 17 September 2026' for an event, but this is a different date. It's possible that the date was misread or doesn't actually appear together on the page near the title.",
+        "The venue 'Blato' is correct according to the source page text, but the town 'blato' doesn't match. The source page text mentions 'Blato' as a town, but the candidate's town field is lowercase and includes a space, which could be an error.",
+        "The category 'kids' doesn't match the page's own text, which is 'B2B'. This could indicate that the category was embellished beyond what the page text actually says."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
     }
   ]
 }

@@ -24228,6 +24228,643 @@
       ],
       "duplicateMatches": [],
       "status": "needs-review"
+    },
+    {
+      "id": "ai-tz-blato-2026-08-12-tastes-and-smells-of-home-blato-wine-dine",
+      "sourceId": "tz-blato",
+      "sourceUrl": "https://tzo-blato.hr/en/",
+      "discoveredAt": "2026-11-04T13:13:01.059Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Okusi i mirisi zavičaja / Blato Wine & Dine",
+        "en": "Tastes and Smells of Home / Blato Wine & Dine",
+        "de": "Die Geschmack und Duft Heimat / Blato Wein & Dine",
+        "it": "Gusti e Profumi di Casa / Blato Wine & Dine",
+        "sl": "Okusi in vonji domačega / Blato Wine & Dine",
+        "fr": "Saveurs et Arômes de la Maison / Blato Wine & Dine",
+        "date": "2026-08-12",
+        "town": "blato",
+        "venue": "Blato",
+        "cats": [
+          "food",
+          "folklore"
+        ],
+        "source": "https://tzo-blato.hr/en/",
+        "extractionMethod": "ai",
+        "id": "ai-tz-blato-2026-08-12-tastes-and-smells-of-home-blato-wine-dine"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The date '2026-08-12' for the event 'Okusi i mirisi zavičaja / Blato Wine & Dine' is listed multiple times on the page, with one instance having a specific date ('26.08.2026.') and the other instance having a date that matches the extracted candidate's date ('12.08.2026.'). This suggests that the extracted candidate's date may be a generic or recurring date, and not a specific date for this event. However, since the specific date '26.08.2026.' is mentioned in a different context, it's possible that the extracted date '12.08.2026.' is indeed correct.",
+        "The venue 'Blato' is listed multiple times on the page, with some instances including additional information such as 'Kumpanjija' or 'Blato Cultural center'. This suggests that the extracted candidate's venue 'Blato' may be too general, and that the event may be taking place at a specific location within Blato. However, without more specific information, it's difficult to say for certain.",
+        "The category 'folklore' is not explicitly mentioned on the page, and the category 'food' is mentioned in a different context. This suggests that the extracted candidate's category may not be accurate."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2026-04-29-povijesni-pregled",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/",
+      "discoveredAt": "2026-11-04T13:13:01.059Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Povijesni pregled",
+        "en": "Povijesni pregled",
+        "de": "Historischer Überblick",
+        "it": "Rassegna storica",
+        "sl": "Zgodovinski pregled",
+        "fr": "Résumé historique",
+        "date": "2026-04-29",
+        "endDate": "2026-10-14",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://moreska.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2026-04-29-povijesni-pregled"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The 'title_en' field contains the same text as the 'title_hr' field. The page text has multiple titles, but this one appears to be a subtitle or a section heading, not the main title of the event. The main title of the event is actually 'Moreška Korčula - Sword Dance Tickets' which is not present in the extracted candidate.",
+        "The 'date' field is '2026-04-29', but the page text does not provide any information about an event happening on that date. The page text is about the history and tradition of the Moreška sword dance, but it does not mention any specific event happening on April 29th. It's possible that the extracted date is actually a reference to a different event or a generic date.",
+        "The 'endDate' field is '2026-10-14', but the page text does not provide any information about an event ending on that date. The page text is about the history and tradition of the Moreška sword dance, but it does not mention any specific event ending on October 14th. It's possible that the extracted end date is actually a reference to a different event or a generic date.",
+        "The 'cats' field contains the category 'folklore', but the page text does not specifically mention folklore as a category. The page text is about the history and tradition of the Moreška sword dance, which is a traditional folk dance, but it does not explicitly mention the category 'folklore'."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2026-04-29-nastanak-moreske",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/",
+      "discoveredAt": "2026-11-04T13:13:01.059Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Nastanak moreške",
+        "en": "Nastanak moreške",
+        "de": "Entstehung der Moreška",
+        "it": "Nascita della Moreška",
+        "sl": "Rojstvo moreške",
+        "fr": "Naissance de la Moreška",
+        "date": "2026-04-29",
+        "endDate": "2026-10-14",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://moreska.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2026-04-29-nastanak-moreske"
+      },
+      "verifierConfidence": 0.7,
+      "verifierConcerns": [
+        "The title 'Nastanak moreške' is repeated in the source text, but only as a section heading, not as a description of an event. This could suggest that the extracted title is not a description of the event listed, but rather a general topic. However, the same title is also mentioned in the text as a specific event, so this is not conclusive evidence.",
+        "The date '2026-04-29' is mentioned in the source text as the start date of the season, but not as a specific event date. This could suggest that the extracted date is not a specific event date, but rather a general start date for the season. However, the same date is also mentioned in the text as a specific event date, so this is not conclusive evidence.",
+        "The venue 'Korčula' is mentioned in the source text as the location of the event, but the extracted venue is 'Korčula' which is the same as the town. This could suggest that the extracted venue is not specific enough, but the source text does not provide a more specific venue.",
+        "The category 'folklore' is mentioned in the source text as a general description of the event, but it is not explicitly stated that the event is a folklore event. This could suggest that the extracted category is not accurate, but the source text does not provide a more specific category.",
+        "The source text contains multiple mentions of the event 'Nastanak moreške' with different dates, which could suggest that the extracted date is not specific enough. However, the same event is also mentioned with the same date in the source text, so this is not conclusive evidence."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.7"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2026-04-29-stipe-nobilo-moreska",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/",
+      "discoveredAt": "2026-11-04T13:13:01.059Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Stipe Nobilo, „Moreška“",
+        "en": "Stipe Nobilo, „Moreška“",
+        "de": "Stipe Nobilo, „Moreška“",
+        "it": "Stipe Nobilo, „Moreška“",
+        "sl": "Stipe Nobilo, „Moreška“",
+        "fr": "Stipe Nobilo, „Moreška“",
+        "date": "2026-04-29",
+        "endDate": "2026-10-14",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://moreska.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2026-04-29-stipe-nobilo-moreska"
+      },
+      "verifierConfidence": 0.7,
+      "verifierConcerns": [
+        "The 'title' field appears to be a direct quote from the page, but the page text does not clearly state that this is the title of the event. The phrase 'Stipe Nobilo, „Moreška“' appears to be a description of the event, rather than the title. However, it is also possible that the title is simply 'Moreška' and the quote is part of the description.",
+        "The 'date' field is well-supported by the page text, which mentions that the event is 'Izvedbe sezone 2026.' However, it is unclear whether this is the specific date of the event mentioned in the 'extracted-candidate' or if it is a general statement about the season.",
+        "The 'endDate' field is not well-supported by the page text, which does not mention any specific end date for the event. The page text does mention that the event is part of the 'Izvedbe sezone 2026' but it does not provide a clear end date.",
+        "The 'venue' field is well-supported by the page text, which mentions that the event is located on the island of Korčula.",
+        "The 'town' field is well-supported by the page text, which mentions that the event is located on the island of Korčula, which is a town.",
+        "The 'cats' field is not well-supported by the page text, which does not clearly categorize the event as 'folklore'. The page text does mention that the event is a traditional sword dance, but it does not explicitly categorize it as folklore."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.7"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2026-04-29-dolazak-na-otok",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/",
+      "discoveredAt": "2026-11-04T13:13:01.059Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Dolazak na otok",
+        "en": "Dolazak na otok",
+        "de": "Ankunft auf der Insel",
+        "it": "Arrivo sull'isola",
+        "sl": "Priselitev na otok",
+        "fr": "Arrivée sur l'île",
+        "date": "2026-04-29",
+        "endDate": "2026-10-14",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://moreska.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2026-04-29-dolazak-na-otok"
+      },
+      "verifierConfidence": 0.5,
+      "verifierConcerns": [],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.5"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2026-04-29-osnutak-drustva",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/",
+      "discoveredAt": "2026-11-04T13:13:01.059Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Osnutak društva",
+        "en": "Osnutak društva",
+        "de": "Gründung der Gesellschaft",
+        "it": "Fondazione della società",
+        "sl": "Ustanovitev društva",
+        "fr": "Fondation de la société",
+        "date": "2026-04-29",
+        "endDate": "2026-10-14",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://moreska.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2026-04-29-osnutak-drustva"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The title 'Osnutak društva' is repeated in the source page text, but it's not clear if it's referring to the same event. The source page text has multiple sections about the history of the Moreška dance and the HGD Sveta Cecilija, and it's possible that this title is referring to a different event or section.",
+        "The date '2026-04-29' is mentioned in the extracted candidate, but it's not clear if it's related to the event described in the source page text. The source page text mentions the season 2026, but it's not clear if this refers to a specific date or a range of dates.",
+        "The venue 'Korčula' is mentioned in the extracted candidate, but it's not clear if it's a specific venue or a general location. The source page text mentions 'Korčula' as a location, but it's not clear if this refers to a specific venue or a general area.",
+        "The category 'folklore' is mentioned in the extracted candidate, but it's not clear if it's a specific category or a general term. The source page text mentions the Moreška dance as a traditional folk dance, but it's not clear if this refers to a specific category or a general term.",
+        "The source page text has a section about the history of the Moreška dance and the HGD Sveta Cecilija, but it's not clear if this is related to the event described in the extracted candidate. The source page text mentions the founding of the HGD Sveta Cecilija in 1883, but it's not clear if this is related to the event described in the extracted candidate.",
+        "The source page text has a section about the Moreška iskustvo, which is an educational experience that includes a tour of the costumes and equipment used in the Moreška dance. It's not clear if this is related to the event described in the extracted candidate.",
+        "The source page text has a section about the privatne izvedbe, which are private performances of the Moreška dance. It's not clear if this is related to the event described in the extracted candidate."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2026-04-29-obnova-drustva",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/",
+      "discoveredAt": "2026-11-04T13:13:01.059Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Obnova društva",
+        "en": "Obnova društva",
+        "de": "Erneuerung der Gesellschaft",
+        "it": "Rinascita della società",
+        "sl": "Obnova družbe",
+        "fr": "Renouveau de la société",
+        "date": "2026-04-29",
+        "endDate": "2026-10-14",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://moreska.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2026-04-29-obnova-drustva"
+      },
+      "verifierConfidence": 0.9,
+      "verifierConcerns": [
+        "The title field is repeated in both languages, which could indicate that the extraction is not properly identifying the main title of the event. However, this is not a significant concern as the title appears to be correct in both languages.",
+        "The date field is not explicitly mentioned in the source page text near the extracted candidate. However, the text does mention 'Izvedbe sezone 2026' (Season 2026 performances) and 'Doživite morešku' (Experience Moreška), which suggests that the extracted date is likely correct. This is not a significant concern.",
+        "The venue field is correct, but the source page text also mentions 'Korčula, Hrvatska' (Korčula, Croatia) as the location. This is not a significant concern as the venue is correctly identified.",
+        "The category field is correct, but the source page text also mentions 'folklore' and 'kultura' (culture), which are related to the category. This is not a significant concern as the category is correctly identified.",
+        "The source page text contains a lot of extraneous information, including links to other pages, contact information, and a cookie policy. However, this is not a significant concern as the extracted candidate is still identifiable and the information is not relevant to the event.",
+        "There is a potential issue with the 'endDate' field, which is set to '2026-10-14'. However, the source page text does not explicitly mention this date, and it is not clear if it is a fixed end date or if it will be updated. This is a moderate concern.",
+        "The source page text contains a lot of repetitive information, including multiple mentions of the same event and dates. However, this is not a significant concern as the extracted candidate is still identifiable and the information is not relevant to the event.",
+        "The source page text contains a lot of extraneous links, including links to other pages and social media profiles. However, this is not a significant concern as the extracted candidate is still identifiable and the information is not relevant to the event."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2026-04-29-nastanak-moreske",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/",
+      "discoveredAt": "2026-11-04T13:13:01.059Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Nastanak moraške",
+        "en": "Nastanak moreške",
+        "de": "Entstehung der Moreske",
+        "it": "Nascita della Moresca",
+        "sl": "Rojstvo moraške",
+        "fr": "Nécessité de la Moresque",
+        "date": "2026-04-29",
+        "endDate": "2026-10-14",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://moreska.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2026-04-29-nastanak-moreske"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The title field contains 'Nastanak moreške' which appears to be a subtitle or a section heading on the source page. The main title of the event appears to be 'Moreška Korčula - Sword Dance Tickets' which is not present in the title field.",
+        "The date field is '2026-04-29' but the source page mentions that 'Izvedbe sezone 2026.' which suggests that the event is a season of performances and not a single date. However, this is not a strong concern as the source page does contain a mention of a specific date.",
+        "The venue field is 'Korčula' but the source page mentions 'Knežev prolaz 1, 20260 Korčula' which appears to be the full address of the venue. This could be considered a minor concern as the extracted venue field does not contain the full address.",
+        "The category field is 'folklore' but the source page mentions 'Moreška' which appears to be a specific type of traditional dance. This could be considered a minor concern as the extracted category field is not as specific as the information present on the source page."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2026-04-29-dolazak-na-otok",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/",
+      "discoveredAt": "2026-11-04T13:13:01.059Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Dolazak na otok",
+        "en": "Dolazak na otok",
+        "de": "Ankunft auf der Insel",
+        "it": "Arrivo sull'isola",
+        "sl": "Prihod na otok",
+        "fr": "Arrivée sur l'île",
+        "date": "2026-04-29",
+        "endDate": "2026-10-14",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://moreska.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2026-04-29-dolazak-na-otok"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2026-04-29-osnutak-drustva",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/",
+      "discoveredAt": "2026-11-04T13:13:01.059Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Osnutak društva",
+        "en": "Osnutak društva",
+        "de": "Gründung der Gesellschaft",
+        "it": "Fondazione della società",
+        "sl": "Ustanovitev društva",
+        "fr": "Fondation de la société",
+        "date": "2026-04-29",
+        "endDate": "2026-10-14",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://moreska.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2026-04-29-osnutak-drustva"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2026-04-29-obnova-drustva",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/",
+      "discoveredAt": "2026-11-04T13:13:01.059Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Obnova društva",
+        "en": "Obnova društva",
+        "de": "Erneuerung der Gesellschaft",
+        "it": "Rinnovamento della società",
+        "sl": "Obnova družbe",
+        "fr": "Renaissance de la société",
+        "date": "2026-04-29",
+        "endDate": "2026-10-14",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://moreska.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2026-04-29-obnova-drustva"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The title field is not unique to this event, as it appears multiple times on the page with different dates.",
+        "The date field '2026-04-29' is not explicitly mentioned on the page, but it is implied that the event 'Obnova društva' is being referred to in the section about the HGD Sveta Cecilija being revived in 1991. However, the page does mention 'Izvedbe sezone 2026.' which could imply that the event is part of the 2026 season, but it does not explicitly confirm the date '2026-04-29'.",
+        "The venue field 'Korčula' is correct, but it is not explicitly mentioned on the page as the venue for this specific event. However, the page does mention 'Korčula, Hrvatska' as the location for the HGD Sveta Cecilija.",
+        "The category field 'folklore' is not explicitly mentioned on the page, but the page does mention 'Moreška Korčula - Sword Dance' which implies a connection to folklore."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2026-04-29-dovedite-moresku-svojoj-skupini",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/",
+      "discoveredAt": "2026-11-04T13:13:01.059Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Dovedite morešku svojoj skupini",
+        "en": "Dovedite morešku svojoj skupini",
+        "de": "Bringen Sie die Meerkatze Ihrer Gruppe",
+        "it": "Portate la volpe arctura del vostro gruppo",
+        "sl": "Pridite morešku svoji skupini",
+        "fr": "Apportez votre groupe de loutre",
+        "date": "2026-04-29",
+        "endDate": "2026-10-14",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://moreska.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2026-04-29-dovedite-moresku-svojoj-skupini"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The extracted candidate's date ('2026-04-29') appears to be a specific date, but the source page text does not mention any specific date for the event 'Dovedite morešku svojoj skupini'. Instead, it mentions that the event 'Moreška' is performed since 1666 and the season calendar for 2026 is mentioned. This could indicate that the extracted date is incorrect or that it refers to a different event.",
+        "The extracted candidate's title ('Dovedite morešku svojoj skupini') seems to be a call-to-action text ('Dovedite morešku svojoj skupini') rather than the actual title of the event. The source page text does not provide a clear title for the event, but it mentions 'Moreška' and 'Dovedite morešku svojoj skupini' as two separate sections.",
+        "The extracted candidate's venue ('Korčula') is mentioned in the source page text, but it is not clear if it refers to the specific location where the event will take place. The source page text mentions 'Korčula' as the location of the HGD Sveta Cecilija, but it does not provide a clear address or location for the event.",
+        "The extracted candidate's category ('folklore') seems to be a correct categorization, as the source page text mentions that 'Moreška' is a traditional folk dance.",
+        "The extracted candidate's end date ('2026-10-14') is not mentioned in the source page text. The text only mentions the season calendar for 2026, but it does not provide a clear end date for the event."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2026-04-29-do-350-gostiju",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/",
+      "discoveredAt": "2026-11-04T13:13:01.059Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Do 350 gostiju",
+        "en": "Do 350 gostiju",
+        "de": "Für bis zu 350 Gäste",
+        "it": "Fino a 350 ospiti",
+        "sl": "Do 350 gostov",
+        "fr": "Pour jusqu'à 350 invités",
+        "date": "2026-04-29",
+        "endDate": "2026-10-14",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://moreska.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2026-04-29-do-350-gostiju"
+      },
+      "verifierConfidence": 0.9,
+      "verifierConcerns": [
+        "The extracted candidate mentions 'Do 350 gostiju' as the title, but this text appears to be a description of a private moreška experience, not the main event title. The actual title of the event, 'Moreška Korčula - Sword Dance Tickets', is mentioned earlier in the page.",
+        "The extracted candidate mentions 'Korčula' as the venue, which is correct, but it's worth noting that the page also mentions 'Ljetno kino (na otvorenom) ili Centar za kulturu (zatvoreno)' as possible locations for the private moreška experience.",
+        "The extracted candidate mentions 'folklore' as the category, which seems to be an accurate description of the event. However, it's worth noting that the page also mentions 'Sword Dance' as a possible category.",
+        "The extracted candidate mentions '2026-04-29' as the date, but this date is not explicitly mentioned in the page text. However, it is implied that the event is taking place in 2026, and the page mentions 'Izvedbe sezone 2026.' which suggests that the event is part of a season in 2026.",
+        "The extracted candidate mentions '2026-10-14' as the end date, but this date is not explicitly mentioned in the page text. However, it is implied that the event is taking place in 2026, and the page mentions 'Sve izvedbe' which suggests that the event is part of a series of performances in 2026.",
+        "The extracted candidate mentions '20 €' and '10 €' as possible prices for the event, but these prices are mentioned in the context of the private moreška experience, not the main event.",
+        "The extracted candidate mentions 'Do 350 gostiju' as the capacity of the event, but this text appears to be a description of the private moreška experience, not the main event.",
+        "confidence"
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2026-04-29-bliski-susret-s-tradicijom",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/",
+      "discoveredAt": "2026-11-04T13:13:01.059Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Bliski susret s tradicijom",
+        "en": "Bliski susret s tradicijom",
+        "de": "Ein enges Treffen mit der Tradition",
+        "it": "Un incontro ravvicinato con la tradizione",
+        "sl": "Bliski sestanek s tradicijo",
+        "fr": "Un rapprochement proche avec la tradition",
+        "date": "2026-04-29",
+        "endDate": "2026-10-14",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://moreska.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2026-04-29-bliski-susret-s-tradicijom"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The 'title' field appears to be a description of an event experience, rather than the title of the event itself. The page's title is actually 'Moreška Korčula - Sword Dance Tickets | Moreška by HGD Sveta Cecilija'.",
+        "The 'endDate' field is present, but it's not clear if this event is recurring or if this is a one-time event. The page mentions 'Izvedbe sezone 2026.' (Performances of the 2026 season), which suggests that the event is part of a recurring series.",
+        "The 'cats' field contains a category of 'folklore', but the page primarily describes a traditional sword dance, which could be classified under multiple categories, including 'dance' or 'theater'.",
+        "The 'town' and 'venue' fields are both 'Korčula', but the page mentions 'Korčula · od 1883.' (Korčula · since 1883) and 'Korčula, Hrvatska' (Korčula, Croatia), which suggests that Korčula is both the town and the venue.",
+        "There is no specific date mentioned in the 'date' field, but the page mentions 'Izvedbe sezone 2026.' (Performances of the 2026 season) and '2026' in the copyright notice. It's possible that the event is recurring and the date is not specified for this particular instance."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2026-04-29-intimni-edukativni-susret-s-kostimima-macevima-i-dijalogom",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/",
+      "discoveredAt": "2026-11-04T13:13:01.059Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Intimni edukativni susret s kostimima, mačevima i dijalogom",
+        "en": "Intimni edukativni susret s kostimima, mačevima i dijalogom",
+        "de": "Intimer Bildungsbegegnung mit Kostümen, Schwertern und Dialog",
+        "it": "Intimo incontro educativo con costumi, spade e dialogo",
+        "sl": "Intimni edukativni srečaj z kostumi, meči in dialogom",
+        "fr": "Rencontre éducative intime avec costumes, épées et dialogue",
+        "date": "2026-04-29",
+        "endDate": "2026-10-14",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://moreska.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2026-04-29-intimni-edukativni-susret-s-kostimima-macevima-i-dijalogom"
+      },
+      "verifierConfidence": 0.7,
+      "verifierConcerns": [
+        "The 'Intimni edukativni susret s kostimima, mačevima i dijalogom' title appears to be a promotional description for a specific event type, but it's not clear if this is a one-time event or a recurring event. The page text mentions 'Izvedbe sezone 2026.' which suggests that this event is part of a larger season calendar. However, the extracted candidate's date field only mentions a single date (2026-04-29), which might not be accurate if this is a recurring event.",
+        "The 'Korčula' venue field seems to be accurate, but it's not clear if this is the only venue for this event. The page text mentions 'Ljetno kino (na otvorenom) ili Centar za kulturu (zatvoreno)' which suggests that there might be multiple venues for this event.",
+        "The 'folklore' category field seems to be accurate, but it's not clear if this is the only category for this event. The page text mentions 'Moreška' which is a specific type of folklore, but it's not clear if this is the only category mentioned on the page.",
+        "The '2026-04-29' date field seems to be accurate, but it's not clear if this is the only date for this event. The page text mentions 'Izvedbe sezone 2026.' which suggests that this event is part of a larger season calendar.",
+        "The 'Intimni edukativni susret s kostimima, mačevima i dijalogom' title seems to be a promotional description for a specific event type, but it's not clear if this is a one-time event or a recurring event. The page text mentions 'Moreška iskustvo' which is a specific type of event, but it's not clear if this is the only type of event mentioned on the page."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.7"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2026-04-29-bastina-i-regalia-kostimi-i-zeljezni-macevi-izbliza",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/",
+      "discoveredAt": "2026-11-04T13:13:01.059Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Baština i regalia: kostimi i željezni mačevi iz bliza",
+        "en": "Baština i regalia: kostimi i željezni mačevi izbliza",
+        "de": "Erb und Regalia: Rüstungen und Stahlklingen aus nächster Nähe",
+        "it": "Eredità e regalia: armature e spade di acciaio da vicino",
+        "sl": "Družina in regalia: oklep in jeklene meče iz blizu",
+        "fr": "Héritage et regalia: armures et lames d'acier de près",
+        "date": "2026-04-29",
+        "endDate": "2026-10-14",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://moreska.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2026-04-29-bastina-i-regalia-kostimi-i-zeljezni-macevi-izbliza"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The title field contains booking-status text ('Kupi ulaznice') instead of just the event name.",
+        "The venue field contains booking-status text ('Kupi ulaznice') instead of just the venue name.",
+        "The category field 'folklore' is not supported by the text next to the listing, which mentions 'bojni ritual', 'glazbe', and 'kultura'."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2026-04-29-dramski-dijalozi-na-arhaicnom-korculanskom-u-izvodima",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/",
+      "discoveredAt": "2026-11-04T13:13:01.059Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Dramski dijalozi na arhaičnom korčulanskom, u izvedbama",
+        "en": "Dramski dijalozi na arhaičnom korčulanskom, u izvodima",
+        "de": "Dramatische Dialoge auf altkorčulanisch, in Aufführungen",
+        "it": "Drammatici dialoghi in corso-corso, in rappresentazioni",
+        "sl": "Dramski dialogi na starokorčulanskem, v uprizoritvah",
+        "fr": "Dialogues dramatiques en corso-corso, en représentations",
+        "date": "2026-04-29",
+        "endDate": "2026-10-14",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://moreska.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2026-04-29-dramski-dijalozi-na-arhaicnom-korculanskom-u-izvodima"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The 'date' field could be misread. The source page text does not explicitly state a specific date for the 'Dramski dijalozi na arhaičnom korčulanskom, u izvodima' event. The event is mentioned in the context of the 'Moreška iskustvo' section, which mentions that it can be experienced 'Po dogovoru' (by appointment), which could imply that the event does not have a fixed date.",
+        "The 'endDate' field could be misread. The source page text does not explicitly state an end date for the 'Dramski dijalozi na arhaičnom korčulanskom, u izvodima' event. The 'Moreška iskustvo' section mentions that it can be experienced 'Po dogovoru', which could imply that the event does not have a fixed end date.",
+        "The 'venue' field could be misread. The source page text mentions 'Korčula' as the location, but it is not clear if this is the specific venue for the 'Dramski dijalozi na arhaičnom korčulanskom, u izvodima' event.",
+        "The 'town' field could be misread. The source page text mentions 'Korčula' as the location, but it is not clear if this is the specific town for the 'Dramski dijalozi na arhaičnom korčulanskom, u izvodima' event.",
+        "The 'category' field could be misread. The source page text mentions 'Moreška', which is a type of sword dance, but it is not clear if this is the specific category for the 'Dramski dijalozi na arhaičnom korčulanskom, u izvodima' event.",
+        "The 'title_hr' field could be misread. The source page text mentions 'Dramski dijalozi na arhaičnom korčulanskom, u izvodima', but it is not clear if this is the specific title for the event in Croatian.",
+        "The 'title_en' field could be misread. The source page text mentions 'Dramski dijalozi na arhaičnom korčulanskom, u izvodima', but it is not clear if this is the specific title for the event in English.",
+        "suggestions"
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
     }
   ]
 }

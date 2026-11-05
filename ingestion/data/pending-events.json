@@ -24865,6 +24865,256 @@
       ],
       "duplicateMatches": [],
       "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-1666-03-07-1666",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/",
+      "discoveredAt": "2026-11-05T13:12:35.403Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "1666.",
+        "en": "1666",
+        "de": "1666.",
+        "it": "1666.",
+        "sl": "1666.",
+        "fr": "1666.",
+        "date": "1666-03-07",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://moreska.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-1666-03-07-1666"
+      },
+      "verifierConfidence": 0.7,
+      "verifierConcerns": [
+        "The date '1666-03-07' appears to be a specific date mentioned in the source text, but it is not clear if this is the date of the event or the date when the event was first performed. The source text mentions that the event was performed in 1666, but it does not specify the exact date.",
+        "The title '1666' does not match the title on the source page, which is 'Moreška Korčula - Sword Dance Tickets | Moreška by HGD Sveta Cecilija'. The extracted title seems to be a shortened version of the original title.",
+        "The venue 'Korčula' is mentioned in the source text, but it is not clear if this is the specific venue where the event is being held. The source text mentions that the event is being held on the island of Korčula, but it does not specify the exact location.",
+        "The category 'folklore' does not match the category of the event on the source page, which is a traditional sword dance. The extracted category seems to be a generic term that does not accurately describe the event.",
+        "The source page contains multiple sections and events, and it is not clear if the extracted information is related to the correct event or section."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.7"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-aminess-korcula-entertainment-2023-04-04-sail-away-korcula-tour-with-traditional-craftmanship-boat",
+      "sourceId": "aminess-korcula-entertainment",
+      "sourceUrl": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+      "discoveredAt": "2026-11-05T13:12:35.403Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Plovi Od Korčule - izlet s tradicionalnim brodom",
+        "en": "Sail Away Korčula - tour with traditional craftmanship boat",
+        "de": "Sail Away Korčula - Bootstour mit traditioneller Handwerkskunst",
+        "it": "Naviga via Korčula - tour con barca di artigianato tradizionale",
+        "sl": "Plovimo iz Korčule - tura z tradicijo plovila",
+        "fr": "Sail Away Korčula - tour en bateau avec artisanat traditionnel",
+        "date": "2023-04-04",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+        "extractionMethod": "ai",
+        "id": "ai-aminess-korcula-entertainment-2023-04-04-sail-away-korcula-tour-with-traditional-craftmanship-boat"
+      },
+      "verifierConfidence": 0.7,
+      "verifierConcerns": [
+        "The extracted candidate's title ('Sail Away Korčula - tour with traditional craftmanship boat') seems to be a duplicate of one of the event listings on the page ('Sail Away Korčula - tour with traditional craftmanship boat'). This might suggest that the extraction is not accurate, as the page is listing multiple events, and the same event is repeated. However, the page does contain multiple events, so this is not necessarily a red flag. Further investigation is needed to determine the accuracy of the extraction.",
+        "The extracted candidate's date ('2023-04-04') seems to be out of date relative to the page context, as the page appears to be listing events that are still relevant in 2026. However, this is not a definitive concern, as the page may be listing events from previous years, and the extracted date may still be accurate. Further investigation is needed to determine the accuracy of the extraction.",
+        "The extracted candidate's venue ('Korčula') is mentioned multiple times on the page, but it is not clear if this is the specific venue for the event, or if it is simply a reference to the island of Korčula. Further investigation is needed to determine the accuracy of the extraction.",
+        "The extracted candidate's category ('kids') does not seem to match the content of the page, as the page appears to be listing a variety of events, including boat tours, wine tastings, and heritage tours. Further investigation is needed to determine the accuracy of the extraction."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.7"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-aminess-korcula-entertainment-2023-04-04-korcula-island-sightseeing-wine-tour",
+      "sourceId": "aminess-korcula-entertainment",
+      "sourceUrl": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+      "discoveredAt": "2026-11-05T13:12:35.403Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Sprehajanje po otoku Korčula & Vinski turnir",
+        "en": "Korcula Island Sightseeing & Wine Tour",
+        "de": "Insel Korüla - Sehenswördigkeiten & Wein-Tour",
+        "it": "Visita all'isola di Korüla & Tour dei vini",
+        "sl": "Izlet po otoku Korčula & Vinski turnir",
+        "fr": "Visite de l'île de Korüla & Tour des vins",
+        "date": "2023-04-04",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+        "extractionMethod": "ai",
+        "id": "ai-aminess-korcula-entertainment-2023-04-04-korcula-island-sightseeing-wine-tour"
+      },
+      "verifierConfidence": 1,
+      "verifierConcerns": [],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-aminess-korcula-entertainment-2023-03-04-a-private-heritage-sunset-voyage",
+      "sourceId": "aminess-korcula-entertainment",
+      "sourceUrl": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+      "discoveredAt": "2026-11-05T13:12:35.403Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Privatni Sjeverni Suncokret Plovba",
+        "en": "A Private Heritage Sunset Voyage",
+        "de": "Privater Erbe Sonnenuntergangsreise",
+        "it": "Voyage di Eredità Privato al Tramonto",
+        "sl": "Privatna Mestna Sončni Zapad Plovba",
+        "fr": "Croisière de Patrimoine Privé au Coucher du Soleil",
+        "date": "2023-03-04",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+        "extractionMethod": "ai",
+        "id": "ai-aminess-korcula-entertainment-2023-03-04-a-private-heritage-sunset-voyage"
+      },
+      "verifierConfidence": 0.9,
+      "verifierConcerns": [
+        "The page contains a list of multiple events, but it's not clear which one the extracted candidate refers to. The extracted candidate's date is '2023-03-04', but there are multiple events with similar dates listed on the page. It's possible that the extracted candidate refers to a different event or a generic listing.",
+        "The venue 'Korčula' is mentioned multiple times on the page, but it's not clear if it's a hotel name or a location. The extracted candidate's title mentions 'Privatni Sjeverni Suncokret Plovba', which seems to be a specific event, but the page doesn't provide much information about it.",
+        "The page contains a list of special offers and packages, but it's not clear if the extracted candidate is a part of one of these packages or a standalone event."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-aminess-korcula-entertainment-2023-03-03-korcula-vintage-electric-car-tour-with-wine-and-olive-oil-ta",
+      "sourceId": "aminess-korcula-entertainment",
+      "sourceUrl": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+      "discoveredAt": "2026-11-05T13:12:35.403Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Korčula: Retro / Električni Automobilski Tur: Vino i Maslinovo Ulje Okus",
+        "en": "Korčula: Vintage / Electric Car Tour with Wine and Olive Oil Tasting",
+        "de": "Korčula: Vintage / Elektroauto-Tour mit Wein- und Olivenöl-Tasting",
+        "it": "Korčula: Tour in Auto d'Epoca / Elettrico con Degustazione di Vino e Olio d'Olive",
+        "sl": "Korčula: Retro / Električni Avtomobilski Tvor z Vinsko in Oljno Okusom",
+        "fr": "Korčula: Tour en Voiture d'Époque / Électrique avec Dégustation de Vin et d'Huile d'Olive",
+        "date": "2023-03-03",
+        "town": "smokvica",
+        "venue": "Smokvica",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+        "extractionMethod": "ai",
+        "id": "ai-aminess-korcula-entertainment-2023-03-03-korcula-vintage-electric-car-tour-with-wine-and-olive-oil-ta"
+      },
+      "verifierConfidence": 0.9,
+      "verifierConcerns": [
+        "The title 'Korčula: Vintage / Electric Car Tour with Wine and Olive Oil Tasting' does not appear on the page as a standalone title, but rather as a listing in the 'Discover More with Aminess' section. This might suggest that the extraction was not a direct reading of the page, but rather a interpretation of the content.",
+        "The date '2023-03-03' is not mentioned anywhere on the page. The page does mention '23. Apr - 18. Oct' as a special offer period, but this does not necessarily imply that the event occurred on that date. It's possible that the date was misread or incorrectly extracted.",
+        "The town 'smokvica' is not mentioned on the page. The page does mention 'Korčula' as the location of the hotel and several events, but it does not explicitly mention 'smokvica' as a separate location.",
+        "The venue 'Smokvica' is mentioned on the page, but it's not clear if this is the correct venue for the event. The page does mention 'Smokvica' as a location, but it's not explicitly linked to the event.",
+        "The category 'kids' does not seem to be relevant to the event. The page does mention 'Kids' as a category in the 'Restaurants and Bars' section, but it does not explicitly mention it in relation to the event."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-aminess-korcula-entertainment-2023-04-04-authentic-korcula-experience",
+      "sourceId": "aminess-korcula-entertainment",
+      "sourceUrl": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+      "discoveredAt": "2026-11-05T13:12:35.403Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "***AUTENTIČNA KORČULA*** Iskustvo",
+        "en": "***AUTHENTIC KORČULA*** Experience",
+        "de": "***AUTHENTISCHE KORČULA*** Erlebnis",
+        "it": "***KORČULA AUTENTICA*** Esperienza",
+        "sl": "***AVTENTIČNA KORČULA*** Izkušnja",
+        "fr": "***KORČULA AUTHENTIQUE*** Expérience",
+        "date": "2023-04-04",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+        "extractionMethod": "ai",
+        "id": "ai-aminess-korcula-entertainment-2023-04-04-authentic-korcula-experience"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The '***AUTHENTIC KORČULA*** Experience' event listing appears to be a promotional tour or activity, rather than a generic event listing. This is based on the text 'Embark on an unforgettable journey through Korčula’s Old Town with an expert guide...' which suggests a guided tour.",
+        "The event title '***AUTHENTIC KORČULA*** Experience' is not explicitly stated as a separate title on the page, but rather appears to be part of a promotional listing for a specific tour or activity. This could be a minor concern, but it does not significantly impact the confidence in the extracted fields.",
+        "The 'kids' category is not explicitly mentioned in the text near the event listing, and it is unclear how this category was assigned. This could be a minor concern, but it does not significantly impact the confidence in the extracted fields.",
+        "The page contains a lot of unrelated content, including hotel information, contact details, and a map. While this is normal for a page listing multiple events, it does make it more difficult to verify the accuracy of the extracted fields."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-aminess-korcula-entertainment-2023-02-02-taste-of-korcula",
+      "sourceId": "aminess-korcula-entertainment",
+      "sourceUrl": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+      "discoveredAt": "2026-11-05T13:12:35.403Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Užitak Korčule",
+        "en": "Taste of Korčula",
+        "de": "Geschmack von Korčula",
+        "it": "Sapore di Korčula",
+        "sl": "Okus Korčule",
+        "fr": "Saveur de Korčula",
+        "date": "2023-02-02",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+        "extractionMethod": "ai",
+        "id": "ai-aminess-korcula-entertainment-2023-02-02-taste-of-korcula"
+      },
+      "verifierConfidence": 0.9,
+      "verifierConcerns": [
+        "The date '2023-02-02' does not appear to be supported by the source page text. The page contains a section about 'Special offers' with a period from '23. Apr - 18. Oct', but this does not appear to be related to the extracted event. However, the page does contain a section about 'Taste of Korčula' which appears to be a tour, and it has a price of 'From €70'. This could be the event, but the date is not clear.",
+        "The venue 'Korčula' appears to be a town, but the source page text contains a section about 'Marko Polo Maradiso Hotel by Aminess' which is located in Korčula. This could be the event, but it's not clear if it's the same 'Taste of Korčula' event.",
+        "The category 'kids' does not appear to be supported by the source page text. The page contains a section about 'AMENITIES AND ACTIVITIES' which includes 'Beautify your holiday with activities' and 'It’s time for self-care', but there is no mention of 'kids'.",
+        "The title 'Taste of Korčula' appears to be supported by the source page text, but it's not clear if it's the same event as the 'Marko Polo Maradiso Hotel by Aminess' section."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
     }
   ]
 }

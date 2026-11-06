@@ -25115,6 +25115,42 @@
       ],
       "duplicateMatches": [],
       "status": "needs-review"
+    },
+    {
+      "id": "ai-centar-kulture-korcula-2026-10-29-theatre-performance-in-the-centre-for-culture",
+      "sourceId": "centar-kulture-korcula",
+      "sourceUrl": "https://kulturakorcula.hr/kino-najave/",
+      "discoveredAt": "2026-11-06T13:02:33.651Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Kazališna predstava u Centru za kulturu",
+        "en": "Theatre Performance in the Centre for Culture",
+        "de": "Theateraufführung im Kulturzentrum",
+        "it": "Spettacolo teatrale al Centro per la cultura",
+        "sl": "Gledališka predstavitev v Centru za kulturo",
+        "fr": "Mise en scène théâtrale au Centre culturel",
+        "date": "2026-10-29",
+        "time": "10:30",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://kulturakorcula.hr/kino-najave/",
+        "extractionMethod": "ai",
+        "id": "ai-centar-kulture-korcula-2026-10-29-theatre-performance-in-the-centre-for-culture"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The extracted candidate mentions a 'Kazališna predstava u Centru za kulturu' (Theatre Performance in the Centre for Culture) on 2026-10-29 at 10:30 in Korčula, but the page text does not provide a clear description of the event. The only mention of a theatre performance is a generic announcement 'Kazališna predstava u Centru za kulturu, 29.10. 10:30' without any additional details.",
+        "The page text contains multiple movie listings, but the extracted candidate does not seem to match any of them. The closest match is 'WILDWOOD- TAJNA ZABRANJENE ŠUME / sink / subota, 24.10./ 17:00 / Centar za kulturu Korčula' which is a movie screening, not a theatre performance.",
+        "The page text does not provide a clear description of the 'Korčula' venue. It is mentioned in multiple movie listings, but it is not clear if it refers to the same physical location."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
     }
   ]
 }

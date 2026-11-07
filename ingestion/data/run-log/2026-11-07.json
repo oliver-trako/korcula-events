@@ -1,0 +1,3383 @@
+{
+  "runDate": "2026-11-07",
+  "shadow": false,
+  "sources": [
+    {
+      "sourceId": "visit-korcula",
+      "url": "https://visitkorcula.eu/en/events/",
+      "published": 0,
+      "review": 3
+    },
+    {
+      "sourceId": "visit-korcula-racisce",
+      "url": "https://visitkorcula.eu/en/events/summer-in-racisce/",
+      "published": 0,
+      "review": 11
+    },
+    {
+      "sourceId": "centar-kulture-korcula",
+      "url": "https://kulturakorcula.hr/kino-najave/",
+      "published": 0,
+      "review": 13
+    },
+    {
+      "sourceId": "visit-lumbarda",
+      "url": "https://www.visitlumbarda.eu/",
+      "published": 0,
+      "review": 3
+    },
+    {
+      "sourceId": "tz-vela-luka",
+      "url": "https://tzvelaluka.hr/",
+      "published": 0,
+      "review": 3
+    },
+    {
+      "sourceId": "tz-blato",
+      "url": "https://tzo-blato.hr/en/",
+      "published": 0,
+      "review": 10
+    },
+    {
+      "sourceId": "visit-orebic",
+      "url": "https://visitorebic-croatia.hr/",
+      "published": 0,
+      "review": 0
+    },
+    {
+      "sourceId": "moreska",
+      "url": "https://moreska.eu/",
+      "published": 0,
+      "review": 4
+    },
+    {
+      "sourceId": "moreska",
+      "url": "https://moreska.eu/tickets",
+      "published": 0,
+      "review": 17
+    },
+    {
+      "sourceId": "blue-korcula",
+      "url": "https://bluekorcula.com/club",
+      "published": 0,
+      "review": 0
+    },
+    {
+      "sourceId": "blue-korcula",
+      "url": "https://core-event.co/en/search?query=Kor%C4%8Dula",
+      "published": 0,
+      "review": 0
+    },
+    {
+      "sourceId": "la-banya",
+      "url": "https://labanya.hr",
+      "published": 0,
+      "review": 4
+    },
+    {
+      "sourceId": "core-event-korcula",
+      "url": "https://core-event.co/en/search?query=Kor%C4%8Dula",
+      "published": 0,
+      "review": 0
+    },
+    {
+      "sourceId": "core-event-korcula",
+      "url": "https://core-event.co/en/search?query=Korcula",
+      "published": 0,
+      "review": 0
+    },
+    {
+      "sourceId": "adriatic-pearl-weekly-events",
+      "url": "https://adriaticpearlkorcula.com/weeklyevents",
+      "published": 0,
+      "review": 0
+    },
+    {
+      "sourceId": "korculainfo-guides",
+      "url": "https://www.korculainfo.com/zrnovo/",
+      "published": 0,
+      "review": 1
+    },
+    {
+      "sourceId": "korculainfo-guides",
+      "url": "https://www.korculainfo.com/pupnat/",
+      "published": 0,
+      "review": 3
+    },
+    {
+      "sourceId": "korculainfo-guides",
+      "url": "https://www.korculainfo.com/cara/",
+      "published": 0,
+      "review": 2
+    },
+    {
+      "sourceId": "zrnovo-local-sources",
+      "url": "https://www.zrnovo.com/",
+      "published": 0,
+      "review": 0
+    },
+    {
+      "sourceId": "cara-zavalatica-local-sources",
+      "url": "https://www.korculainfo.com/cara/",
+      "published": 0,
+      "review": 1
+    },
+    {
+      "sourceId": "smokvica-brna-expanded",
+      "url": "https://visitsmokvicabrna.com/",
+      "published": 0,
+      "review": 1
+    },
+    {
+      "sourceId": "aminess-korcula-entertainment",
+      "url": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+      "published": 0,
+      "review": 6
+    },
+    {
+      "sourceId": "hajduk-split-fixtures",
+      "url": "https://hajduk.hr/utakmice",
+      "published": 0,
+      "review": 0
+    },
+    {
+      "sourceId": "hajduk-split-fixtures",
+      "url": "https://www.sofascore.com/football/team/hnk-hajduk-split/2036",
+      "published": 0,
+      "review": 0
+    }
+  ],
+  "errors": [
+    {
+      "sourceId": "visit-orebic",
+      "url": "https://visitorebic-croatia.hr/",
+      "stage": "fetch",
+      "error": "socket hang up"
+    },
+    {
+      "sourceId": "blue-korcula",
+      "url": "https://core-event.co/en/search?query=Kor%C4%8Dula",
+      "stage": "fetch",
+      "error": "Safe retrieval blocked: http-error:403"
+    },
+    {
+      "sourceId": "core-event-korcula",
+      "url": "https://core-event.co/en/search?query=Kor%C4%8Dula",
+      "stage": "fetch",
+      "error": "Safe retrieval blocked: http-error:403"
+    },
+    {
+      "sourceId": "core-event-korcula",
+      "url": "https://core-event.co/en/search?query=Korcula",
+      "stage": "fetch",
+      "error": "Safe retrieval blocked: http-error:403"
+    },
+    {
+      "sourceId": "adriatic-pearl-weekly-events",
+      "url": "https://adriaticpearlkorcula.com/weeklyevents",
+      "stage": "fetch",
+      "error": "Safe retrieval blocked: http-error:404"
+    },
+    {
+      "sourceId": "hajduk-split-fixtures",
+      "url": "https://hajduk.hr/utakmice",
+      "stage": "fetch",
+      "error": "Safe retrieval blocked: http-error:403"
+    },
+    {
+      "sourceId": "hajduk-split-fixtures",
+      "url": "https://www.sofascore.com/football/team/hnk-hajduk-split/2036",
+      "stage": "fetch",
+      "error": "Safe retrieval blocked: http-error:403"
+    }
+  ],
+  "rejectedCandidates": [
+    {
+      "sourceId": "tz-blato",
+      "url": "https://tzo-blato.hr/en/",
+      "reason": "missing-title",
+      "candidate": {
+        "hr": "",
+        "en": "",
+        "de": "",
+        "it": "",
+        "sl": "",
+        "fr": "",
+        "date": "2026-10-08",
+        "time": "",
+        "town": "blato",
+        "venue": "Blato",
+        "cats": [
+          "kids"
+        ],
+        "desc": {
+          "hr": "",
+          "sl": ""
+        }
+      }
+    },
+    {
+      "sourceId": "moreska",
+      "url": "https://moreska.eu/",
+      "reason": "bad-date:",
+      "candidate": {
+        "hr": "Moreška iskustvo",
+        "en": "Moreška experience",
+        "de": "",
+        "it": "",
+        "sl": "",
+        "fr": "",
+        "date": "",
+        "endDate": "",
+        "time": "",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "desc": {
+          "hr": "Bliski susret s tradicijom, kostimima, mačevima i dijalogom.",
+          "de": "",
+          "it": "",
+          "sl": "",
+          "fr": ""
+        }
+      }
+    },
+    {
+      "sourceId": "blue-korcula",
+      "url": "https://bluekorcula.com/club",
+      "reason": "bad-date:",
+      "candidate": {
+        "hr": "Noćni klub - Blue Centar Korčula",
+        "en": "Night Club - Blue Centar Korčula",
+        "de": "",
+        "it": "",
+        "sl": "",
+        "fr": "",
+        "date": "",
+        "endDate": "",
+        "time": "",
+        "town": "korcula",
+        "venue": "Blue Club",
+        "cats": [
+          "nightlife"
+        ],
+        "desc": {
+          "hr": "Kao sunce zalazi nad slikovitim otokom Korčuli, energija na Blue Bar transformira u električnu noćnu zabavu na Blue Clubu. Naši vrhunski DJ-ji krate ekliptični mix glazbe koji se prilagođava različitim ukusima, osiguravajući da svaki nađe svoj ritam na plesnoj podlozi.",
+          "de": "",
+          "it": "",
+          "sl": "",
+          "fr": ""
+        }
+      }
+    },
+    {
+      "sourceId": "blue-korcula",
+      "url": "https://bluekorcula.com/club",
+      "reason": "bad-date:",
+      "candidate": {
+        "hr": "Zaljubljeni u ritam",
+        "en": "Nightlife Vibes",
+        "de": "",
+        "it": "",
+        "sl": "",
+        "fr": "",
+        "date": "",
+        "endDate": "",
+        "time": "",
+        "town": "korcula",
+        "venue": "Blue Club",
+        "cats": [
+          "nightlife"
+        ],
+        "desc": {
+          "hr": "Zajedno s nama živite noćne priče na Blue Clubu.",
+          "de": "",
+          "it": "",
+          "sl": "",
+          "fr": ""
+        }
+      }
+    },
+    {
+      "sourceId": "blue-korcula",
+      "url": "https://bluekorcula.com/club",
+      "reason": "bad-date:",
+      "candidate": {
+        "hr": "",
+        "en": "Book Your Table",
+        "de": "",
+        "it": "",
+        "sl": "",
+        "fr": "",
+        "date": "",
+        "endDate": "",
+        "time": "",
+        "town": "korcula",
+        "venue": "Blue Club",
+        "cats": [
+          "nightlife"
+        ],
+        "desc": {
+          "hr": "Rezervirajte stol za večeru ili zabavu.",
+          "de": "",
+          "it": "",
+          "sl": "",
+          "fr": ""
+        }
+      }
+    },
+    {
+      "sourceId": "blue-korcula",
+      "url": "https://bluekorcula.com/club",
+      "reason": "bad-date:",
+      "candidate": {
+        "hr": "Rezervacija",
+        "en": "Reservation",
+        "de": "",
+        "it": "",
+        "sl": "",
+        "fr": "",
+        "date": "",
+        "endDate": "",
+        "time": "",
+        "town": "korcula",
+        "venue": "Blue Club",
+        "cats": [
+          "nightlife"
+        ],
+        "desc": {
+          "hr": "Rezervirajte stol za večeru ili zabavu.",
+          "de": "",
+          "it": "",
+          "sl": "",
+          "fr": ""
+        }
+      }
+    },
+    {
+      "sourceId": "blue-korcula",
+      "url": "https://bluekorcula.com/club",
+      "reason": "bad-date:",
+      "candidate": {
+        "hr": "Bistro Levant",
+        "en": "Bistro Levant",
+        "de": "",
+        "it": "",
+        "sl": "",
+        "fr": "",
+        "date": "",
+        "endDate": "",
+        "time": "",
+        "town": "korcula",
+        "venue": "Blue Club",
+        "cats": [
+          "nightlife"
+        ],
+        "desc": {
+          "hr": "",
+          "de": "",
+          "it": "",
+          "sl": "",
+          "fr": ""
+        }
+      }
+    },
+    {
+      "sourceId": "blue-korcula",
+      "url": "https://bluekorcula.com/club",
+      "reason": "bad-date:",
+      "candidate": {
+        "hr": "Lounge Bar",
+        "en": "Lounge Bar",
+        "de": "",
+        "it": "",
+        "sl": "",
+        "fr": "",
+        "date": "",
+        "endDate": "",
+        "time": "",
+        "town": "korcula",
+        "venue": "Blue Club",
+        "cats": [
+          "nightlife"
+        ],
+        "desc": {
+          "hr": "",
+          "de": "",
+          "it": "",
+          "sl": "",
+          "fr": ""
+        }
+      }
+    },
+    {
+      "sourceId": "blue-korcula",
+      "url": "https://bluekorcula.com/club",
+      "reason": "bad-date:",
+      "candidate": {
+        "hr": "Night Club",
+        "en": "Night Club",
+        "de": "",
+        "it": "",
+        "sl": "",
+        "fr": "",
+        "date": "",
+        "endDate": "",
+        "time": "",
+        "town": "korcula",
+        "venue": "Blue Club",
+        "cats": [
+          "nightlife"
+        ],
+        "desc": {
+          "hr": "",
+          "de": "",
+          "it": "",
+          "sl": "",
+          "fr": ""
+        }
+      }
+    },
+    {
+      "sourceId": "korculainfo-guides",
+      "url": "https://www.korculainfo.com/zrnovo/",
+      "reason": "bad-date:",
+      "candidate": {
+        "hr": "Feast of Sveti Martin",
+        "en": "Feast of the village’s patron saint",
+        "de": "",
+        "it": "",
+        "sl": "",
+        "fr": "",
+        "date": "",
+        "endDate": "",
+        "time": "",
+        "town": "lumbarda",
+        "venue": "Sveti Martin church in Kampus",
+        "cats": [
+          "folklore"
+        ],
+        "desc": {
+          "hr": "celebrated at the Sveti Martin church in Kampus.",
+          "de": "",
+          "it": "",
+          "sl": "",
+          "fr": ""
+        }
+      }
+    },
+    {
+      "sourceId": "korculainfo-guides",
+      "url": "https://www.korculainfo.com/zrnovo/",
+      "reason": "bad-date:",
+      "candidate": {
+        "hr": "Wine making",
+        "en": "autumn grape harvest and winemaking",
+        "de": "",
+        "it": "",
+        "sl": "",
+        "fr": "",
+        "date": "",
+        "endDate": "",
+        "time": "",
+        "town": "lumbarda",
+        "venue": "Žrnovo",
+        "cats": [
+          "kids"
+        ],
+        "desc": {
+          "hr": "a village tradition still practised in Žrnovo.",
+          "de": "",
+          "it": "",
+          "sl": "",
+          "fr": ""
+        }
+      }
+    },
+    {
+      "sourceId": "korculainfo-guides",
+      "url": "https://www.korculainfo.com/cara/",
+      "reason": "bad-date:",
+      "candidate": {
+        "hr": "Kumpanija",
+        "en": "Kumpanija",
+        "de": "",
+        "it": "",
+        "sl": "",
+        "fr": "",
+        "date": "",
+        "endDate": "",
+        "time": "",
+        "town": "cara",
+        "venue": "Korčula Island, village of Čara",
+        "cats": [
+          "kids",
+          "folklore"
+        ],
+        "desc": {
+          "hr": "U Čari se održava kumpanija, jedan od najstarijih plesnih običaja na Korčuli.",
+          "de": "",
+          "it": "",
+          "sl": "",
+          "fr": ""
+        }
+      }
+    },
+    {
+      "sourceId": "cara-zavalatica-local-sources",
+      "url": "https://www.korculainfo.com/cara/",
+      "reason": "bad-date:",
+      "candidate": {
+        "hr": "Kumpanija",
+        "en": "Kumpanija",
+        "de": "",
+        "it": "",
+        "sl": "",
+        "fr": "",
+        "date": "",
+        "endDate": "",
+        "time": "",
+        "town": "cara",
+        "venue": "Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "desc": {
+          "hr": "Kumpanija je tradicionalni ples na mačevima koji se izvodi samo u pet sela na Korčuli, uključujući Čaru. Ples se izvodi tokom ljetnih meseci.",
+          "de": "",
+          "it": "",
+          "sl": "",
+          "fr": ""
+        }
+      }
+    },
+    {
+      "sourceId": "cara-zavalatica-local-sources",
+      "url": "https://www.korculainfo.com/cara/",
+      "reason": "bad-date:",
+      "candidate": {
+        "hr": "Harvest season",
+        "en": "Harvest season",
+        "de": "",
+        "it": "",
+        "sl": "",
+        "fr": "",
+        "date": "",
+        "endDate": "",
+        "time": "",
+        "town": "cara",
+        "venue": "Carsko Polje",
+        "cats": [
+          "food"
+        ],
+        "desc": {
+          "hr": "Žetva u Carskom polju u rujnu i početku listopada je jedan od najljepših sezonskih događaja na otoku. Cijelo polje je aktivno tokom ove vremenske razdoblja.",
+          "de": "",
+          "it": "",
+          "sl": "",
+          "fr": ""
+        }
+      }
+    }
+  ],
+  "totals": {
+    "published": 0,
+    "review": 82,
+    "aiCalls": 186
+  },
+  "aiUsage": [
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:c7162472da0b0390a76941b742a439df3abc96994d50426d54829bcf7cb9c907",
+      "promptChars": 11293,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 2817,
+        "completion_tokens": 432,
+        "total_tokens": 3249,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 26.66489028930664
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:c7162472da0b0390a76941b742a439df3abc96994d50426d54829bcf7cb9c907",
+      "promptChars": 241,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 90,
+        "completion_tokens": 73,
+        "total_tokens": 163,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 2.9160218238830566
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:c7162472da0b0390a76941b742a439df3abc96994d50426d54829bcf7cb9c907",
+      "promptChars": 4435,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 1148,
+        "completion_tokens": 267,
+        "total_tokens": 1415,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 14.037818908691406
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:c7162472da0b0390a76941b742a439df3abc96994d50426d54829bcf7cb9c907",
+      "promptChars": 230,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 84,
+        "completion_tokens": 77,
+        "total_tokens": 161,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 3.0307817459106445
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:c7162472da0b0390a76941b742a439df3abc96994d50426d54829bcf7cb9c907",
+      "promptChars": 4447,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 1153,
+        "completion_tokens": 17,
+        "total_tokens": 1170,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 5.341454982757568
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:c7162472da0b0390a76941b742a439df3abc96994d50426d54829bcf7cb9c907",
+      "promptChars": 227,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 83,
+        "completion_tokens": 69,
+        "total_tokens": 152,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 2.747720718383789
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:c7162472da0b0390a76941b742a439df3abc96994d50426d54829bcf7cb9c907",
+      "promptChars": 4435,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 1154,
+        "completion_tokens": 445,
+        "total_tokens": 1599,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 20.269004821777344
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:e32878a2e049316b78abe0682e04baf3eae1e115e4e647136e1e468161d1dc04",
+      "promptChars": 11763,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3032,
+        "completion_tokens": 1127,
+        "total_tokens": 4159,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 51.78351974487305
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:e32878a2e049316b78abe0682e04baf3eae1e115e4e647136e1e468161d1dc04",
+      "promptChars": 241,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 90,
+        "completion_tokens": 73,
+        "total_tokens": 163,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 2.9160218238830566
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:e32878a2e049316b78abe0682e04baf3eae1e115e4e647136e1e468161d1dc04",
+      "promptChars": 4915,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 1363,
+        "completion_tokens": 415,
+        "total_tokens": 1778,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 20.08374786376953
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:e32878a2e049316b78abe0682e04baf3eae1e115e4e647136e1e468161d1dc04",
+      "promptChars": 225,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 85,
+        "completion_tokens": 69,
+        "total_tokens": 154,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 2.755957841873169
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:e32878a2e049316b78abe0682e04baf3eae1e115e4e647136e1e468161d1dc04",
+      "promptChars": 4913,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 1370,
+        "completion_tokens": 295,
+        "total_tokens": 1665,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 15.928439140319824
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:e32878a2e049316b78abe0682e04baf3eae1e115e4e647136e1e468161d1dc04",
+      "promptChars": 225,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 85,
+        "completion_tokens": 66,
+        "total_tokens": 151,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 2.6513545513153076
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:e32878a2e049316b78abe0682e04baf3eae1e115e4e647136e1e468161d1dc04",
+      "promptChars": 4913,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 1370,
+        "completion_tokens": 244,
+        "total_tokens": 1614,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 14.150179862976074
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:e32878a2e049316b78abe0682e04baf3eae1e115e4e647136e1e468161d1dc04",
+      "promptChars": 231,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 84,
+        "completion_tokens": 68,
+        "total_tokens": 152,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 2.7169713973999023
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:e32878a2e049316b78abe0682e04baf3eae1e115e4e647136e1e468161d1dc04",
+      "promptChars": 4928,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 1368,
+        "completion_tokens": 309,
+        "total_tokens": 1677,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 16.40835189819336
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:e32878a2e049316b78abe0682e04baf3eae1e115e4e647136e1e468161d1dc04",
+      "promptChars": 216,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 81,
+        "completion_tokens": 53,
+        "total_tokens": 134,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 2.181598424911499
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:e32878a2e049316b78abe0682e04baf3eae1e115e4e647136e1e468161d1dc04",
+      "promptChars": 4877,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 1354,
+        "completion_tokens": 331,
+        "total_tokens": 1685,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 17.117782592773438
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:e32878a2e049316b78abe0682e04baf3eae1e115e4e647136e1e468161d1dc04",
+      "promptChars": 231,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 79,
+        "completion_tokens": 69,
+        "total_tokens": 148,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 2.7312464714050293
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:e32878a2e049316b78abe0682e04baf3eae1e115e4e647136e1e468161d1dc04",
+      "promptChars": 4877,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 1353,
+        "completion_tokens": 8000,
+        "total_tokens": 9353,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 284.5150451660156
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:e32878a2e049316b78abe0682e04baf3eae1e115e4e647136e1e468161d1dc04",
+      "promptChars": 4877,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 1353,
+        "completion_tokens": 498,
+        "total_tokens": 1851,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 22.93659210205078
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:e32878a2e049316b78abe0682e04baf3eae1e115e4e647136e1e468161d1dc04",
+      "promptChars": 220,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 80,
+        "completion_tokens": 51,
+        "total_tokens": 131,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 2.1077442169189453
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:e32878a2e049316b78abe0682e04baf3eae1e115e4e647136e1e468161d1dc04",
+      "promptChars": 4876,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 1352,
+        "completion_tokens": 282,
+        "total_tokens": 1634,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 15.401023864746094
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:e32878a2e049316b78abe0682e04baf3eae1e115e4e647136e1e468161d1dc04",
+      "promptChars": 218,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 80,
+        "completion_tokens": 52,
+        "total_tokens": 132,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 2.1426119804382324
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:e32878a2e049316b78abe0682e04baf3eae1e115e4e647136e1e468161d1dc04",
+      "promptChars": 4881,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 1353,
+        "completion_tokens": 176,
+        "total_tokens": 1529,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 11.709152221679688
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:e32878a2e049316b78abe0682e04baf3eae1e115e4e647136e1e468161d1dc04",
+      "promptChars": 241,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 84,
+        "completion_tokens": 88,
+        "total_tokens": 172,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 3.41432785987854
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:e32878a2e049316b78abe0682e04baf3eae1e115e4e647136e1e468161d1dc04",
+      "promptChars": 4925,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 1371,
+        "completion_tokens": 287,
+        "total_tokens": 1658,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 15.653615951538086
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:e32878a2e049316b78abe0682e04baf3eae1e115e4e647136e1e468161d1dc04",
+      "promptChars": 236,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 88,
+        "completion_tokens": 75,
+        "total_tokens": 163,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 2.97752046585083
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:e32878a2e049316b78abe0682e04baf3eae1e115e4e647136e1e468161d1dc04",
+      "promptChars": 4923,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 1371,
+        "completion_tokens": 315,
+        "total_tokens": 1686,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 16.629913330078125
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:e32878a2e049316b78abe0682e04baf3eae1e115e4e647136e1e468161d1dc04",
+      "promptChars": 247,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 88,
+        "completion_tokens": 73,
+        "total_tokens": 161,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 2.9077847003936768
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:e32878a2e049316b78abe0682e04baf3eae1e115e4e647136e1e468161d1dc04",
+      "promptChars": 4951,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 1372,
+        "completion_tokens": 242,
+        "total_tokens": 1614,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 14.0886812210083
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:8d10f2d3caae40fa05874bb98959b3c7f65df45497113bc2ff6af342ce55b118",
+      "promptChars": 17256,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 5323,
+        "completion_tokens": 1934,
+        "total_tokens": 7257,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 89.35748291015625
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:8d10f2d3caae40fa05874bb98959b3c7f65df45497113bc2ff6af342ce55b118",
+      "promptChars": 217,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 78,
+        "completion_tokens": 43,
+        "total_tokens": 121,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 1.8205643892288208
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:8d10f2d3caae40fa05874bb98959b3c7f65df45497113bc2ff6af342ce55b118",
+      "promptChars": 10368,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3645,
+        "completion_tokens": 261,
+        "total_tokens": 3906,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 24.11266326904297
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:8d10f2d3caae40fa05874bb98959b3c7f65df45497113bc2ff6af342ce55b118",
+      "promptChars": 235,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 88,
+        "completion_tokens": 84,
+        "total_tokens": 172,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 3.2913308143615723
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:8d10f2d3caae40fa05874bb98959b3c7f65df45497113bc2ff6af342ce55b118",
+      "promptChars": 10403,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3666,
+        "completion_tokens": 465,
+        "total_tokens": 4131,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 31.31218719482422
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:8d10f2d3caae40fa05874bb98959b3c7f65df45497113bc2ff6af342ce55b118",
+      "promptChars": 240,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 89,
+        "completion_tokens": 88,
+        "total_tokens": 177,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 3.4349207878112793
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:8d10f2d3caae40fa05874bb98959b3c7f65df45497113bc2ff6af342ce55b118",
+      "promptChars": 10417,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3669,
+        "completion_tokens": 489,
+        "total_tokens": 4158,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 32.161373138427734
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:8d10f2d3caae40fa05874bb98959b3c7f65df45497113bc2ff6af342ce55b118",
+      "promptChars": 227,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 87,
+        "completion_tokens": 76,
+        "total_tokens": 163,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 3.008269786834717
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:8d10f2d3caae40fa05874bb98959b3c7f65df45497113bc2ff6af342ce55b118",
+      "promptChars": 10388,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3657,
+        "completion_tokens": 373,
+        "total_tokens": 4030,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 28.067279815673828
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:8d10f2d3caae40fa05874bb98959b3c7f65df45497113bc2ff6af342ce55b118",
+      "promptChars": 219,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 84,
+        "completion_tokens": 52,
+        "total_tokens": 136,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 2.159086227416992
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:8d10f2d3caae40fa05874bb98959b3c7f65df45497113bc2ff6af342ce55b118",
+      "promptChars": 10370,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3651,
+        "completion_tokens": 387,
+        "total_tokens": 4038,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 28.530719757080078
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:8d10f2d3caae40fa05874bb98959b3c7f65df45497113bc2ff6af342ce55b118",
+      "promptChars": 236,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 88,
+        "completion_tokens": 93,
+        "total_tokens": 181,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 3.6051414012908936
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:8d10f2d3caae40fa05874bb98959b3c7f65df45497113bc2ff6af342ce55b118",
+      "promptChars": 10418,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3661,
+        "completion_tokens": 428,
+        "total_tokens": 4089,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 30.00148582458496
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:8d10f2d3caae40fa05874bb98959b3c7f65df45497113bc2ff6af342ce55b118",
+      "promptChars": 231,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 85,
+        "completion_tokens": 71,
+        "total_tokens": 156,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 2.8256936073303223
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:8d10f2d3caae40fa05874bb98959b3c7f65df45497113bc2ff6af342ce55b118",
+      "promptChars": 10394,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3655,
+        "completion_tokens": 58,
+        "total_tokens": 3713,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 17.0756778717041
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:8d10f2d3caae40fa05874bb98959b3c7f65df45497113bc2ff6af342ce55b118",
+      "promptChars": 249,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 96,
+        "completion_tokens": 106,
+        "total_tokens": 202,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 4.091371536254883
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:8d10f2d3caae40fa05874bb98959b3c7f65df45497113bc2ff6af342ce55b118",
+      "promptChars": 10452,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3679,
+        "completion_tokens": 170,
+        "total_tokens": 3849,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 21.079721450805664
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:8d10f2d3caae40fa05874bb98959b3c7f65df45497113bc2ff6af342ce55b118",
+      "promptChars": 226,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 82,
+        "completion_tokens": 58,
+        "total_tokens": 140,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 2.360055923461914
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:8d10f2d3caae40fa05874bb98959b3c7f65df45497113bc2ff6af342ce55b118",
+      "promptChars": 10382,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3650,
+        "completion_tokens": 251,
+        "total_tokens": 3901,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 23.784576416015625
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:8d10f2d3caae40fa05874bb98959b3c7f65df45497113bc2ff6af342ce55b118",
+      "promptChars": 249,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 92,
+        "completion_tokens": 82,
+        "total_tokens": 174,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 3.238069534301758
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:8d10f2d3caae40fa05874bb98959b3c7f65df45497113bc2ff6af342ce55b118",
+      "promptChars": 10417,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3665,
+        "completion_tokens": 163,
+        "total_tokens": 3828,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 20.777986526489258
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:8d10f2d3caae40fa05874bb98959b3c7f65df45497113bc2ff6af342ce55b118",
+      "promptChars": 237,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 88,
+        "completion_tokens": 83,
+        "total_tokens": 171,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 3.256463050842285
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:8d10f2d3caae40fa05874bb98959b3c7f65df45497113bc2ff6af342ce55b118",
+      "promptChars": 10408,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3662,
+        "completion_tokens": 381,
+        "total_tokens": 4043,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 28.366817474365234
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:8d10f2d3caae40fa05874bb98959b3c7f65df45497113bc2ff6af342ce55b118",
+      "promptChars": 245,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 90,
+        "completion_tokens": 90,
+        "total_tokens": 180,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 3.508774995803833
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:8d10f2d3caae40fa05874bb98959b3c7f65df45497113bc2ff6af342ce55b118",
+      "promptChars": 10434,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3666,
+        "completion_tokens": 477,
+        "total_tokens": 4143,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 31.730602264404297
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:8d10f2d3caae40fa05874bb98959b3c7f65df45497113bc2ff6af342ce55b118",
+      "promptChars": 249,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 94,
+        "completion_tokens": 120,
+        "total_tokens": 214,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 4.571284294128418
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:8d10f2d3caae40fa05874bb98959b3c7f65df45497113bc2ff6af342ce55b118",
+      "promptChars": 10410,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3668,
+        "completion_tokens": 70,
+        "total_tokens": 3738,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 17.54763412475586
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:0ea4e7c487349c0aab1713f86a9d93dbe0f7c86f1dff311593507f8130a28140",
+      "promptChars": 16901,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 4964,
+        "completion_tokens": 489,
+        "total_tokens": 5453,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 37.494911193847656
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:0ea4e7c487349c0aab1713f86a9d93dbe0f7c86f1dff311593507f8130a28140",
+      "promptChars": 246,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 86,
+        "completion_tokens": 72,
+        "total_tokens": 158,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 2.8646798133850098
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:0ea4e7c487349c0aab1713f86a9d93dbe0f7c86f1dff311593507f8130a28140",
+      "promptChars": 10066,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3296,
+        "completion_tokens": 70,
+        "total_tokens": 3366,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 16.01552963256836
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:0ea4e7c487349c0aab1713f86a9d93dbe0f7c86f1dff311593507f8130a28140",
+      "promptChars": 231,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 80,
+        "completion_tokens": 83,
+        "total_tokens": 163,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 3.2235145568847656
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:0ea4e7c487349c0aab1713f86a9d93dbe0f7c86f1dff311593507f8130a28140",
+      "promptChars": 10016,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3286,
+        "completion_tokens": 260,
+        "total_tokens": 3546,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 22.59922981262207
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:0ea4e7c487349c0aab1713f86a9d93dbe0f7c86f1dff311593507f8130a28140",
+      "promptChars": 237,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 87,
+        "completion_tokens": 89,
+        "total_tokens": 176,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 3.4615516662597656
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:0ea4e7c487349c0aab1713f86a9d93dbe0f7c86f1dff311593507f8130a28140",
+      "promptChars": 10043,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3300,
+        "completion_tokens": 17,
+        "total_tokens": 3317,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 14.184008598327637
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:32400162a7620b03b2b1425e6d865661316971bcf1b8ad2bb5739f2a7a926d07",
+      "promptChars": 14279,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 4225,
+        "completion_tokens": 499,
+        "total_tokens": 4724,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 34.79997253417969
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:32400162a7620b03b2b1425e6d865661316971bcf1b8ad2bb5739f2a7a926d07",
+      "promptChars": 276,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 98,
+        "completion_tokens": 155,
+        "total_tokens": 253,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 5.808132648468018
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:32400162a7620b03b2b1425e6d865661316971bcf1b8ad2bb5739f2a7a926d07",
+      "promptChars": 7487,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 2582,
+        "completion_tokens": 342,
+        "total_tokens": 2924,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 22.55892562866211
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:32400162a7620b03b2b1425e6d865661316971bcf1b8ad2bb5739f2a7a926d07",
+      "promptChars": 255,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 91,
+        "completion_tokens": 104,
+        "total_tokens": 195,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 4.001043319702148
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:32400162a7620b03b2b1425e6d865661316971bcf1b8ad2bb5739f2a7a926d07",
+      "promptChars": 7444,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 2565,
+        "completion_tokens": 279,
+        "total_tokens": 2844,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 20.292236328125
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:32400162a7620b03b2b1425e6d865661316971bcf1b8ad2bb5739f2a7a926d07",
+      "promptChars": 255,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 91,
+        "completion_tokens": 104,
+        "total_tokens": 195,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 4.001043319702148
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:32400162a7620b03b2b1425e6d865661316971bcf1b8ad2bb5739f2a7a926d07",
+      "promptChars": 7444,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 2565,
+        "completion_tokens": 251,
+        "total_tokens": 2816,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 19.315937042236328
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:bd32e51a45db21762c8a7e04e3a33bcd601b0a535ceb135421d460294f454ed8",
+      "promptChars": 14594,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 4038,
+        "completion_tokens": 1903,
+        "total_tokens": 5941,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 82.9842300415039
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:bd32e51a45db21762c8a7e04e3a33bcd601b0a535ceb135421d460294f454ed8",
+      "promptChars": 252,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 93,
+        "completion_tokens": 108,
+        "total_tokens": 201,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 4.148751735687256
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:bd32e51a45db21762c8a7e04e3a33bcd601b0a535ceb135421d460294f454ed8",
+      "promptChars": 7798,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 2389,
+        "completion_tokens": 305,
+        "total_tokens": 2694,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 20.47393226623535
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:bd32e51a45db21762c8a7e04e3a33bcd601b0a535ceb135421d460294f454ed8",
+      "promptChars": 226,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 81,
+        "completion_tokens": 64,
+        "total_tokens": 145,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 2.5651445388793945
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:bd32e51a45db21762c8a7e04e3a33bcd601b0a535ceb135421d460294f454ed8",
+      "promptChars": 7742,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 2368,
+        "completion_tokens": 315,
+        "total_tokens": 2683,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 20.736120223999023
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:bd32e51a45db21762c8a7e04e3a33bcd601b0a535ceb135421d460294f454ed8",
+      "promptChars": 246,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 91,
+        "completion_tokens": 94,
+        "total_tokens": 185,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 3.65236496925354
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:bd32e51a45db21762c8a7e04e3a33bcd601b0a535ceb135421d460294f454ed8",
+      "promptChars": 7735,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 2371,
+        "completion_tokens": 252,
+        "total_tokens": 2623,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 18.551803588867188
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:bd32e51a45db21762c8a7e04e3a33bcd601b0a535ceb135421d460294f454ed8",
+      "promptChars": 246,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 91,
+        "completion_tokens": 96,
+        "total_tokens": 187,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 3.7221007347106934
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:bd32e51a45db21762c8a7e04e3a33bcd601b0a535ceb135421d460294f454ed8",
+      "promptChars": 7735,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 2371,
+        "completion_tokens": 254,
+        "total_tokens": 2625,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 18.621540069580078
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:bd32e51a45db21762c8a7e04e3a33bcd601b0a535ceb135421d460294f454ed8",
+      "promptChars": 222,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 84,
+        "completion_tokens": 8000,
+        "total_tokens": 8084,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 279.28857421875
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:bd32e51a45db21762c8a7e04e3a33bcd601b0a535ceb135421d460294f454ed8",
+      "promptChars": 222,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 84,
+        "completion_tokens": 8000,
+        "total_tokens": 8084,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 279.28857421875
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:bd32e51a45db21762c8a7e04e3a33bcd601b0a535ceb135421d460294f454ed8",
+      "promptChars": 222,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 84,
+        "completion_tokens": 8000,
+        "total_tokens": 8084,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 279.28857421875
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:bd32e51a45db21762c8a7e04e3a33bcd601b0a535ceb135421d460294f454ed8",
+      "promptChars": 222,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 84,
+        "completion_tokens": 65,
+        "total_tokens": 149,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 2.612367868423462
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:bd32e51a45db21762c8a7e04e3a33bcd601b0a535ceb135421d460294f454ed8",
+      "promptChars": 7710,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 2362,
+        "completion_tokens": 396,
+        "total_tokens": 2758,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 23.535701751708984
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:bd32e51a45db21762c8a7e04e3a33bcd601b0a535ceb135421d460294f454ed8",
+      "promptChars": 228,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 80,
+        "completion_tokens": 70,
+        "total_tokens": 150,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 2.770232915878296
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:bd32e51a45db21762c8a7e04e3a33bcd601b0a535ceb135421d460294f454ed8",
+      "promptChars": 7749,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 2366,
+        "completion_tokens": 305,
+        "total_tokens": 2671,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 20.37920570373535
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:bd32e51a45db21762c8a7e04e3a33bcd601b0a535ceb135421d460294f454ed8",
+      "promptChars": 216,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 81,
+        "completion_tokens": 57,
+        "total_tokens": 138,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 2.3210697174072266
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:bd32e51a45db21762c8a7e04e3a33bcd601b0a535ceb135421d460294f454ed8",
+      "promptChars": 7700,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 2359,
+        "completion_tokens": 335,
+        "total_tokens": 2694,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 21.396411895751953
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:bd32e51a45db21762c8a7e04e3a33bcd601b0a535ceb135421d460294f454ed8",
+      "promptChars": 249,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 94,
+        "completion_tokens": 103,
+        "total_tokens": 197,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 3.9785308837890625
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:bd32e51a45db21762c8a7e04e3a33bcd601b0a535ceb135421d460294f454ed8",
+      "promptChars": 7784,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 2383,
+        "completion_tokens": 370,
+        "total_tokens": 2753,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 22.71562957763672
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:bd32e51a45db21762c8a7e04e3a33bcd601b0a535ceb135421d460294f454ed8",
+      "promptChars": 259,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 99,
+        "completion_tokens": 99,
+        "total_tokens": 198,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 3.859652519226074
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:bd32e51a45db21762c8a7e04e3a33bcd601b0a535ceb135421d460294f454ed8",
+      "promptChars": 7811,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 2396,
+        "completion_tokens": 319,
+        "total_tokens": 2715,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 20.99091339111328
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:bd32e51a45db21762c8a7e04e3a33bcd601b0a535ceb135421d460294f454ed8",
+      "promptChars": 275,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 97,
+        "completion_tokens": 117,
+        "total_tokens": 214,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 4.479036331176758
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:bd32e51a45db21762c8a7e04e3a33bcd601b0a535ceb135421d460294f454ed8",
+      "promptChars": 7826,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 2382,
+        "completion_tokens": 506,
+        "total_tokens": 2888,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 27.453535079956055
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:28a307c3d148b788a1a88fe8519fcef847952cf96555fdd0b0c628699bd23360",
+      "promptChars": 15302,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 4603,
+        "completion_tokens": 790,
+        "total_tokens": 5393,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 46.503326416015625
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:28a307c3d148b788a1a88fe8519fcef847952cf96555fdd0b0c628699bd23360",
+      "promptChars": 225,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 83,
+        "completion_tokens": 66,
+        "total_tokens": 149,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 2.6431174278259277
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:28a307c3d148b788a1a88fe8519fcef847952cf96555fdd0b0c628699bd23360",
+      "promptChars": 8445,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 2936,
+        "completion_tokens": 321,
+        "total_tokens": 3257,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 23.284671783447266
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:28a307c3d148b788a1a88fe8519fcef847952cf96555fdd0b0c628699bd23360",
+      "promptChars": 221,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 77,
+        "completion_tokens": 50,
+        "total_tokens": 127,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 2.060520648956299
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:28a307c3d148b788a1a88fe8519fcef847952cf96555fdd0b0c628699bd23360",
+      "promptChars": 8391,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 2917,
+        "completion_tokens": 364,
+        "total_tokens": 3281,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 24.705734252929688
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:28a307c3d148b788a1a88fe8519fcef847952cf96555fdd0b0c628699bd23360",
+      "promptChars": 221,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 77,
+        "completion_tokens": 47,
+        "total_tokens": 124,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 1.9559171199798584
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:28a307c3d148b788a1a88fe8519fcef847952cf96555fdd0b0c628699bd23360",
+      "promptChars": 8391,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 2917,
+        "completion_tokens": 374,
+        "total_tokens": 3291,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 25.054412841796875
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:28a307c3d148b788a1a88fe8519fcef847952cf96555fdd0b0c628699bd23360",
+      "promptChars": 221,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 77,
+        "completion_tokens": 44,
+        "total_tokens": 121,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 1.851313591003418
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:28a307c3d148b788a1a88fe8519fcef847952cf96555fdd0b0c628699bd23360",
+      "promptChars": 8391,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 2917,
+        "completion_tokens": 291,
+        "total_tokens": 3208,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 22.160385131835938
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:6d0b3c8d5336f3cf3b9192fba38030304b6f5f2e20a23f9b45132b913f3d0ae4",
+      "promptChars": 11205,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 2931,
+        "completion_tokens": 2927,
+        "total_tokens": 5858,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 114.12963104248047
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:6d0b3c8d5336f3cf3b9192fba38030304b6f5f2e20a23f9b45132b913f3d0ae4",
+      "promptChars": 221,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 77,
+        "completion_tokens": 46,
+        "total_tokens": 123,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 1.9210492372512817
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:6d0b3c8d5336f3cf3b9192fba38030304b6f5f2e20a23f9b45132b913f3d0ae4",
+      "promptChars": 4307,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 1249,
+        "completion_tokens": 173,
+        "total_tokens": 1422,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 11.176218032836914
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:6d0b3c8d5336f3cf3b9192fba38030304b6f5f2e20a23f9b45132b913f3d0ae4",
+      "promptChars": 221,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 77,
+        "completion_tokens": 44,
+        "total_tokens": 121,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 1.851313591003418
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:6d0b3c8d5336f3cf3b9192fba38030304b6f5f2e20a23f9b45132b913f3d0ae4",
+      "promptChars": 4307,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 1249,
+        "completion_tokens": 272,
+        "total_tokens": 1521,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 14.628132820129395
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:6d0b3c8d5336f3cf3b9192fba38030304b6f5f2e20a23f9b45132b913f3d0ae4",
+      "promptChars": 221,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 77,
+        "completion_tokens": 44,
+        "total_tokens": 121,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 1.851313591003418
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:6d0b3c8d5336f3cf3b9192fba38030304b6f5f2e20a23f9b45132b913f3d0ae4",
+      "promptChars": 4307,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 1249,
+        "completion_tokens": 305,
+        "total_tokens": 1554,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 15.77877140045166
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:6d0b3c8d5336f3cf3b9192fba38030304b6f5f2e20a23f9b45132b913f3d0ae4",
+      "promptChars": 221,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 77,
+        "completion_tokens": 44,
+        "total_tokens": 121,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 1.851313591003418
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:6d0b3c8d5336f3cf3b9192fba38030304b6f5f2e20a23f9b45132b913f3d0ae4",
+      "promptChars": 4307,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 1249,
+        "completion_tokens": 247,
+        "total_tokens": 1496,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 13.756437301635742
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:6d0b3c8d5336f3cf3b9192fba38030304b6f5f2e20a23f9b45132b913f3d0ae4",
+      "promptChars": 221,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 77,
+        "completion_tokens": 47,
+        "total_tokens": 124,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 1.9559171199798584
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:6d0b3c8d5336f3cf3b9192fba38030304b6f5f2e20a23f9b45132b913f3d0ae4",
+      "promptChars": 4307,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 1249,
+        "completion_tokens": 315,
+        "total_tokens": 1564,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 16.12744903564453
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:6d0b3c8d5336f3cf3b9192fba38030304b6f5f2e20a23f9b45132b913f3d0ae4",
+      "promptChars": 221,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 77,
+        "completion_tokens": 44,
+        "total_tokens": 121,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 1.851313591003418
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:6d0b3c8d5336f3cf3b9192fba38030304b6f5f2e20a23f9b45132b913f3d0ae4",
+      "promptChars": 4307,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 1249,
+        "completion_tokens": 321,
+        "total_tokens": 1570,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 16.33665657043457
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:6d0b3c8d5336f3cf3b9192fba38030304b6f5f2e20a23f9b45132b913f3d0ae4",
+      "promptChars": 221,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 77,
+        "completion_tokens": 47,
+        "total_tokens": 124,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 1.9559171199798584
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:6d0b3c8d5336f3cf3b9192fba38030304b6f5f2e20a23f9b45132b913f3d0ae4",
+      "promptChars": 4307,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 1249,
+        "completion_tokens": 431,
+        "total_tokens": 1680,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 20.172117233276367
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:6d0b3c8d5336f3cf3b9192fba38030304b6f5f2e20a23f9b45132b913f3d0ae4",
+      "promptChars": 221,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 77,
+        "completion_tokens": 47,
+        "total_tokens": 124,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 1.9559171199798584
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:6d0b3c8d5336f3cf3b9192fba38030304b6f5f2e20a23f9b45132b913f3d0ae4",
+      "promptChars": 4307,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 1249,
+        "completion_tokens": 349,
+        "total_tokens": 1598,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 17.312955856323242
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:6d0b3c8d5336f3cf3b9192fba38030304b6f5f2e20a23f9b45132b913f3d0ae4",
+      "promptChars": 221,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 77,
+        "completion_tokens": 44,
+        "total_tokens": 121,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 1.851313591003418
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:6d0b3c8d5336f3cf3b9192fba38030304b6f5f2e20a23f9b45132b913f3d0ae4",
+      "promptChars": 4307,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 1249,
+        "completion_tokens": 302,
+        "total_tokens": 1551,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 15.67416763305664
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:6d0b3c8d5336f3cf3b9192fba38030304b6f5f2e20a23f9b45132b913f3d0ae4",
+      "promptChars": 221,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 77,
+        "completion_tokens": 44,
+        "total_tokens": 121,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 1.851313591003418
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:6d0b3c8d5336f3cf3b9192fba38030304b6f5f2e20a23f9b45132b913f3d0ae4",
+      "promptChars": 4307,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 1249,
+        "completion_tokens": 106,
+        "total_tokens": 1355,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 8.840073585510254
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:6d0b3c8d5336f3cf3b9192fba38030304b6f5f2e20a23f9b45132b913f3d0ae4",
+      "promptChars": 221,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 77,
+        "completion_tokens": 47,
+        "total_tokens": 124,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 1.9559171199798584
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:6d0b3c8d5336f3cf3b9192fba38030304b6f5f2e20a23f9b45132b913f3d0ae4",
+      "promptChars": 4307,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 1249,
+        "completion_tokens": 380,
+        "total_tokens": 1629,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 18.393857955932617
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:6d0b3c8d5336f3cf3b9192fba38030304b6f5f2e20a23f9b45132b913f3d0ae4",
+      "promptChars": 221,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 77,
+        "completion_tokens": 46,
+        "total_tokens": 123,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 1.9210492372512817
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:6d0b3c8d5336f3cf3b9192fba38030304b6f5f2e20a23f9b45132b913f3d0ae4",
+      "promptChars": 4307,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 1249,
+        "completion_tokens": 210,
+        "total_tokens": 1459,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 12.466327667236328
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:6d0b3c8d5336f3cf3b9192fba38030304b6f5f2e20a23f9b45132b913f3d0ae4",
+      "promptChars": 221,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 77,
+        "completion_tokens": 44,
+        "total_tokens": 121,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 1.851313591003418
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:6d0b3c8d5336f3cf3b9192fba38030304b6f5f2e20a23f9b45132b913f3d0ae4",
+      "promptChars": 4307,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 1249,
+        "completion_tokens": 432,
+        "total_tokens": 1681,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 20.206985473632812
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:6d0b3c8d5336f3cf3b9192fba38030304b6f5f2e20a23f9b45132b913f3d0ae4",
+      "promptChars": 221,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 77,
+        "completion_tokens": 44,
+        "total_tokens": 121,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 1.851313591003418
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:6d0b3c8d5336f3cf3b9192fba38030304b6f5f2e20a23f9b45132b913f3d0ae4",
+      "promptChars": 4307,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 1249,
+        "completion_tokens": 333,
+        "total_tokens": 1582,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 16.755069732666016
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:6d0b3c8d5336f3cf3b9192fba38030304b6f5f2e20a23f9b45132b913f3d0ae4",
+      "promptChars": 221,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 77,
+        "completion_tokens": 47,
+        "total_tokens": 124,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 1.9559171199798584
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:6d0b3c8d5336f3cf3b9192fba38030304b6f5f2e20a23f9b45132b913f3d0ae4",
+      "promptChars": 4307,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 1249,
+        "completion_tokens": 360,
+        "total_tokens": 1609,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 17.696502685546875
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:6d0b3c8d5336f3cf3b9192fba38030304b6f5f2e20a23f9b45132b913f3d0ae4",
+      "promptChars": 221,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 77,
+        "completion_tokens": 44,
+        "total_tokens": 121,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 1.851313591003418
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:6d0b3c8d5336f3cf3b9192fba38030304b6f5f2e20a23f9b45132b913f3d0ae4",
+      "promptChars": 4307,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 1249,
+        "completion_tokens": 340,
+        "total_tokens": 1589,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 16.9991455078125
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:6d0b3c8d5336f3cf3b9192fba38030304b6f5f2e20a23f9b45132b913f3d0ae4",
+      "promptChars": 249,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 91,
+        "completion_tokens": 97,
+        "total_tokens": 188,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 3.7569684982299805
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:6d0b3c8d5336f3cf3b9192fba38030304b6f5f2e20a23f9b45132b913f3d0ae4",
+      "promptChars": 4415,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 1284,
+        "completion_tokens": 384,
+        "total_tokens": 1668,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 18.677478790283203
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:c6b7b09bbd8dc9648be6135a3ef23d07acdca3e2dcc301fff061f319fdac1b36",
+      "promptChars": 12187,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3098,
+        "completion_tokens": 1015,
+        "total_tokens": 4113,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 48.150146484375
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f00a5e24c176e78e3bdd567fd62e5e962c24fc9827b8caf12bdb6b3c211247fd",
+      "promptChars": 14644,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3557,
+        "completion_tokens": 738,
+        "total_tokens": 4295,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 40.38218307495117
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f00a5e24c176e78e3bdd567fd62e5e962c24fc9827b8caf12bdb6b3c211247fd",
+      "promptChars": 280,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 89,
+        "completion_tokens": 160,
+        "total_tokens": 249,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 5.945404052734375
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f00a5e24c176e78e3bdd567fd62e5e962c24fc9827b8caf12bdb6b3c211247fd",
+      "promptChars": 7868,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 1909,
+        "completion_tokens": 115,
+        "total_tokens": 2024,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 11.872135162353516
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f00a5e24c176e78e3bdd567fd62e5e962c24fc9827b8caf12bdb6b3c211247fd",
+      "promptChars": 288,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 92,
+        "completion_tokens": 153,
+        "total_tokens": 245,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 5.713685035705566
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f00a5e24c176e78e3bdd567fd62e5e962c24fc9827b8caf12bdb6b3c211247fd",
+      "promptChars": 7869,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 1909,
+        "completion_tokens": 265,
+        "total_tokens": 2174,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 17.102310180664062
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f00a5e24c176e78e3bdd567fd62e5e962c24fc9827b8caf12bdb6b3c211247fd",
+      "promptChars": 279,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 91,
+        "completion_tokens": 153,
+        "total_tokens": 244,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 5.709566593170166
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f00a5e24c176e78e3bdd567fd62e5e962c24fc9827b8caf12bdb6b3c211247fd",
+      "promptChars": 7858,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 1908,
+        "completion_tokens": 288,
+        "total_tokens": 2196,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 17.900150299072266
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f00a5e24c176e78e3bdd567fd62e5e962c24fc9827b8caf12bdb6b3c211247fd",
+      "promptChars": 280,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 92,
+        "completion_tokens": 152,
+        "total_tokens": 244,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 5.678817272186279
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f00a5e24c176e78e3bdd567fd62e5e962c24fc9827b8caf12bdb6b3c211247fd",
+      "promptChars": 7849,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 1907,
+        "completion_tokens": 293,
+        "total_tokens": 2200,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 18.070371627807617
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:7dc10479cdf6e3f2355c0ad5d42e88c129f935b10944cfdabc859efbb1c09b0a",
+      "promptChars": 20026,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 5545,
+        "completion_tokens": 460,
+        "total_tokens": 6005,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 38.876625061035156
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:7dc10479cdf6e3f2355c0ad5d42e88c129f935b10944cfdabc859efbb1c09b0a",
+      "promptChars": 211,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 78,
+        "completion_tokens": 41,
+        "total_tokens": 119,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 1.750828742980957
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:7dc10479cdf6e3f2355c0ad5d42e88c129f935b10944cfdabc859efbb1c09b0a",
+      "promptChars": 13591,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3967,
+        "completion_tokens": 356,
+        "total_tokens": 4323,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 28.751283645629883
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:53477b848927a09d59ba154217eb477d2260615d2e0bfc37fa6317a6826745fe",
+      "promptChars": 18469,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 4970,
+        "completion_tokens": 464,
+        "total_tokens": 5434,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 36.647926330566406
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:53477b848927a09d59ba154217eb477d2260615d2e0bfc37fa6317a6826745fe",
+      "promptChars": 252,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 88,
+        "completion_tokens": 68,
+        "total_tokens": 156,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 2.733445644378662
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:53477b848927a09d59ba154217eb477d2260615d2e0bfc37fa6317a6826745fe",
+      "promptChars": 11999,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3388,
+        "completion_tokens": 303,
+        "total_tokens": 3691,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 24.518640518188477
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:53477b848927a09d59ba154217eb477d2260615d2e0bfc37fa6317a6826745fe",
+      "promptChars": 237,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 82,
+        "completion_tokens": 76,
+        "total_tokens": 158,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 2.9876768589019775
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:53477b848927a09d59ba154217eb477d2260615d2e0bfc37fa6317a6826745fe",
+      "promptChars": 11991,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3388,
+        "completion_tokens": 288,
+        "total_tokens": 3676,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 23.995622634887695
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:53477b848927a09d59ba154217eb477d2260615d2e0bfc37fa6317a6826745fe",
+      "promptChars": 223,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 78,
+        "completion_tokens": 60,
+        "total_tokens": 138,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 2.4133174419403076
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:53477b848927a09d59ba154217eb477d2260615d2e0bfc37fa6317a6826745fe",
+      "promptChars": 11988,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3385,
+        "completion_tokens": 20,
+        "total_tokens": 3405,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 14.638689041137695
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:66f7d572433c9e913e888b24a7a2daec708424bb05b5dac6418ba63bbb8a6c66",
+      "promptChars": 19494,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 5232,
+        "completion_tokens": 533,
+        "total_tokens": 5765,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 40.13286590576172
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:66f7d572433c9e913e888b24a7a2daec708424bb05b5dac6418ba63bbb8a6c66",
+      "promptChars": 235,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 85,
+        "completion_tokens": 95,
+        "total_tokens": 180,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 3.6625213623046875
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:66f7d572433c9e913e888b24a7a2daec708424bb05b5dac6418ba63bbb8a6c66",
+      "promptChars": 13112,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3677,
+        "completion_tokens": 353,
+        "total_tokens": 4030,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 27.45229721069336
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:66f7d572433c9e913e888b24a7a2daec708424bb05b5dac6418ba63bbb8a6c66",
+      "promptChars": 228,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 77,
+        "completion_tokens": 68,
+        "total_tokens": 145,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 2.6881415843963623
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:66f7d572433c9e913e888b24a7a2daec708424bb05b5dac6418ba63bbb8a6c66",
+      "promptChars": 13066,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3661,
+        "completion_tokens": 334,
+        "total_tokens": 3995,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 26.72391128540039
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:6c6142afe8835fd0d7649407b2ad457eac298a8310159c29060cd363b96c8d61",
+      "promptChars": 10892,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 2624,
+        "completion_tokens": 8,
+        "total_tokens": 2632,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 11.086050033569336
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:66f7d572433c9e913e888b24a7a2daec708424bb05b5dac6418ba63bbb8a6c66",
+      "promptChars": 19878,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 5315,
+        "completion_tokens": 603,
+        "total_tokens": 5918,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 42.91545867919922
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:66f7d572433c9e913e888b24a7a2daec708424bb05b5dac6418ba63bbb8a6c66",
+      "promptChars": 244,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 85,
+        "completion_tokens": 8000,
+        "total_tokens": 8085,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 279.2926940917969
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:66f7d572433c9e913e888b24a7a2daec708424bb05b5dac6418ba63bbb8a6c66",
+      "promptChars": 244,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 85,
+        "completion_tokens": 113,
+        "total_tokens": 198,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 4.290142059326172
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:66f7d572433c9e913e888b24a7a2daec708424bb05b5dac6418ba63bbb8a6c66",
+      "promptChars": 13056,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3664,
+        "completion_tokens": 196,
+        "total_tokens": 3860,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 21.92450714111328
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:b8373ff796daeadf83fb0fab8fd32e7152db1f07d5731ebd47426125f5ef8815",
+      "promptChars": 12268,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3224,
+        "completion_tokens": 140,
+        "total_tokens": 3364,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 18.159740447998047
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:b8373ff796daeadf83fb0fab8fd32e7152db1f07d5731ebd47426125f5ef8815",
+      "promptChars": 242,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 86,
+        "completion_tokens": 97,
+        "total_tokens": 183,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 3.736375570297241
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:b8373ff796daeadf83fb0fab8fd32e7152db1f07d5731ebd47426125f5ef8815",
+      "promptChars": 5450,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 1568,
+        "completion_tokens": 242,
+        "total_tokens": 1810,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 14.895919799804688
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:cc7717ea1db1985cb79cabdd072c907d1f607e1aa41501050c98cd30158bc1a7",
+      "promptChars": 19180,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 4813,
+        "completion_tokens": 1286,
+        "total_tokens": 6099,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 64.66266632080078
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:cc7717ea1db1985cb79cabdd072c907d1f607e1aa41501050c98cd30158bc1a7",
+      "promptChars": 252,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 84,
+        "completion_tokens": 111,
+        "total_tokens": 195,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 4.216288089752197
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:cc7717ea1db1985cb79cabdd072c907d1f607e1aa41501050c98cd30158bc1a7",
+      "promptChars": 12351,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3153,
+        "completion_tokens": 28,
+        "total_tokens": 3181,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 13.962125778198242
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:cc7717ea1db1985cb79cabdd072c907d1f607e1aa41501050c98cd30158bc1a7",
+      "promptChars": 246,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 80,
+        "completion_tokens": 102,
+        "total_tokens": 182,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 3.886003255844116
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:cc7717ea1db1985cb79cabdd072c907d1f607e1aa41501050c98cd30158bc1a7",
+      "promptChars": 12334,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3149,
+        "completion_tokens": 176,
+        "total_tokens": 3325,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 19.106090545654297
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:cc7717ea1db1985cb79cabdd072c907d1f607e1aa41501050c98cd30158bc1a7",
+      "promptChars": 282,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 91,
+        "completion_tokens": 170,
+        "total_tokens": 261,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 6.3023200035095215
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:cc7717ea1db1985cb79cabdd072c907d1f607e1aa41501050c98cd30158bc1a7",
+      "promptChars": 12413,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3175,
+        "completion_tokens": 282,
+        "total_tokens": 3457,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 22.909162521362305
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:cc7717ea1db1985cb79cabdd072c907d1f607e1aa41501050c98cd30158bc1a7",
+      "promptChars": 248,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 84,
+        "completion_tokens": 95,
+        "total_tokens": 179,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 3.658402681350708
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:cc7717ea1db1985cb79cabdd072c907d1f607e1aa41501050c98cd30158bc1a7",
+      "promptChars": 12336,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3154,
+        "completion_tokens": 261,
+        "total_tokens": 3415,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 22.0904483795166
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:cc7717ea1db1985cb79cabdd072c907d1f607e1aa41501050c98cd30158bc1a7",
+      "promptChars": 230,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 80,
+        "completion_tokens": 82,
+        "total_tokens": 162,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 3.1886467933654785
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:cc7717ea1db1985cb79cabdd072c907d1f607e1aa41501050c98cd30158bc1a7",
+      "promptChars": 12296,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3141,
+        "completion_tokens": 290,
+        "total_tokens": 3431,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 23.048072814941406
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:cc7717ea1db1985cb79cabdd072c907d1f607e1aa41501050c98cd30158bc1a7",
+      "promptChars": 273,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 87,
+        "completion_tokens": 116,
+        "total_tokens": 203,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 4.402982711791992
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:cc7717ea1db1985cb79cabdd072c907d1f607e1aa41501050c98cd30158bc1a7",
+      "promptChars": 12380,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3159,
+        "completion_tokens": 167,
+        "total_tokens": 3326,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 18.833465576171875
+      }
+    }
+  ],
+  "published": []
+}

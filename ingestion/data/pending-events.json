@@ -25823,6 +25823,81 @@
       ],
       "duplicateMatches": [],
       "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-lumbarda-2026-10-08-koncert",
+      "sourceId": "visit-lumbarda",
+      "sourceUrl": "https://www.visitlumbarda.eu/",
+      "discoveredAt": "2026-11-08T12:06:46.003Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Koncert",
+        "en": "Koncert",
+        "de": "Konzert",
+        "it": "Concerto",
+        "sl": "Koncert",
+        "fr": "Concert",
+        "date": "2026-10-08",
+        "town": "lumbarda",
+        "venue": "Lumbarda",
+        "cats": [
+          "music"
+        ],
+        "ticketUrl": "https://fermatafestival.com/",
+        "source": "https://www.visitlumbarda.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-lumbarda-2026-10-08-koncert"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The date '2026-10-08' seems to match the date mentioned in the 'Događanja' section of the source page, but it's not explicitly stated next to the extracted candidate. However, it's possible that the date is implied by the context.",
+        "The title 'Koncert' is mentioned multiple times on the source page, but it's not clear if this is the exact title used for the specific event mentioned in the extracted candidate. The title could be a generic term used for multiple events.",
+        "The venue 'Lumbarda' is mentioned in the 'Želite saznati više o Lumbardi' section of the source page, but it's not clear if this is the exact venue used for the specific event mentioned in the extracted candidate. The venue could be a general term used to describe multiple locations.",
+        "The category 'music' is not explicitly mentioned in the source page, but it's possible that it's implied by the context. However, it's worth noting that the source page mentions multiple categories such as 'Fermata', 'Hrana', and 'Lumbarajske užance' which are not related to music."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-tz-blato-2026-10-23-lumblija-days-in-blato-flavours-and-scents-of-home",
+      "sourceId": "tz-blato",
+      "sourceUrl": "https://tzo-blato.hr/en/",
+      "discoveredAt": "2026-11-08T12:06:46.003Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Dani Lumblije u Blatu – Okusi i mirisi zavičaja",
+        "en": "Lumblija Days in Blato – Flavours and scents of home",
+        "de": "Die Tage von Lümbli in Blau – Aromen und Düfte der Heimat",
+        "it": "I giorni di Lumblija a Blato – Gusti e profumi della patria",
+        "sl": "Dnevi Lumblije v Blatu – Okusi in vonji domačega",
+        "fr": "Les Jours de Lumbli à Blato – Saveurs et parfums de la patrie",
+        "date": "2026-10-23",
+        "endDate": "2026-10-28",
+        "town": "blato",
+        "venue": "Blato",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://tzo-blato.hr/en/",
+        "extractionMethod": "ai",
+        "id": "ai-tz-blato-2026-10-23-lumblija-days-in-blato-flavours-and-scents-of-home"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The title contains a translation. The source page text contains both the Croatian and English titles. This could indicate that the extraction was not directly from the page, but rather from a translation or a secondary source.",
+        "The category is listed as 'kids' but the source page text does not explicitly mention 'kids' in the context of the event. The category 'B2B' is mentioned, but it seems to be related to a different announcement.",
+        "The event description is not explicitly mentioned in the source page text. The text does mention 'Okusi i mirisi zavičaja' which is the title of the event in Croatian, but it does not provide a description.",
+        "The source page text contains multiple announcements and events, and the event in question is not explicitly highlighted or separated from the other announcements.",
+        "The 'endDate' field is set to '2026-10-28' but the source page text mentions the event as running from '23.-28.10.2026.' which could indicate that the end date is actually the 28th of October, but the page text uses a different date format."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
     }
   ]
 }

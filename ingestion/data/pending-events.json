@@ -25898,6 +25898,45 @@
       ],
       "duplicateMatches": [],
       "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2026-05-01-season-2026-performances",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/",
+      "discoveredAt": "2026-11-09T14:04:53.611Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Izvedbe sezone 2026.",
+        "en": "Season 2026 Performances",
+        "de": "Aufführungen der Saison 2026.",
+        "it": "Repliche della stagione 2026.",
+        "sl": "Izvedbe sezone 2026.",
+        "fr": "Représentations de la saison 2026.",
+        "date": "2026-05-01",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://moreska.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2026-05-01-season-2026-performances"
+      },
+      "verifierConfidence": 0,
+      "verifierConcerns": [
+        "The title field appears to be a generic title for the event section, rather than the actual name of the event. The source page text has multiple sections with event-like information, but this specific section is titled 'Izvedbe sezone 2026.' which translates to 'Season 2026 Performances'. This could be a generic title for a section that contains multiple events, rather than a specific event title.",
+        "The date field is '2026-05-01', but the source page text does not explicitly mention this date. The page does mention 'Izvedbe sezone 2026.' which suggests that it is a season or a series of events, rather than a single event on a specific date.",
+        "The venue field is 'Korčula', but the source page text does not explicitly mention this venue. The page does mention 'Korčula' in the context of the Moreška Korčula - Sword Dance, but it is not clear if this is the specific venue for the event on '2026-05-01'.",
+        "The category field is 'folklore', but the source page text does not explicitly mention this category. The page does mention 'Moreška', which is a traditional folk dance, but it is not clear if this is the specific category for the event on '2026-05-01'.",
+        "The source page text contains multiple links to buy tickets, but it is not clear if this is the specific event on '2026-05-01'. The page does mention 'Ulaznice (ticket link: /tickets)' which suggests that tickets are available for purchase, but it is not clear if this is for the specific event on '2026-05-01'.",
+        "The source page text contains multiple sections with event-like information, but this specific section is not clearly separated from the other sections. This makes it difficult to determine if this is a specific event or a generic title for a section that contains multiple events."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
     }
   ]
 }

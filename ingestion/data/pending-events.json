@@ -26317,6 +26317,204 @@
       ],
       "duplicateMatches": [],
       "status": "needs-review"
+    },
+    {
+      "id": "ai-tz-blato-2026-10-08-good-practice-and-sustainable-event-okusi-i-mirisi-zavicaja",
+      "sourceId": "tz-blato",
+      "sourceUrl": "https://tzo-blato.hr/en/",
+      "discoveredAt": "2026-11-11T12:56:40.978Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Dobra praksa i održivi događaj",
+        "en": "Good Practice and Sustainable Event \"Okusi i mirisi zavičaja\"",
+        "de": "Gute Praxis und nachhaltiges Event",
+        "it": "Buona pratica e evento sostenibile",
+        "sl": "Dobra praksa in trajnostni dogodek",
+        "fr": "Bonne pratique et événement durable",
+        "date": "2026-10-08",
+        "town": "blato",
+        "venue": "Blato",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://tzo-blato.hr/en/",
+        "extractionMethod": "ai",
+        "id": "ai-tz-blato-2026-10-08-good-practice-and-sustainable-event-okusi-i-mirisi-zavicaja"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The title field contains additional information that doesn't appear in the source page text. The source page text only mentions 'Okusi i mirisi zavičaja' as an event title, but the extracted candidate includes 'Good Practice and Sustainable Event'. This suggests that the extracted candidate's title may be an embellishment.",
+        "The date field is supported by the source page text, but the surrounding text suggests that the event may have already happened. The source page text mentions 'Dani Lumblije u Blatu – Okusi i mirisi zavičaja' as having occurred from 23.-28.10.2026, which is in the past relative to the current date. However, this is not a conclusive reason to lower confidence, as the source page text does not explicitly state that the event is over.",
+        "The venue field is supported by the source page text, but the surrounding text suggests that the event may have already happened. The source page text mentions 'Dani Lumblije u Blatu – Okusi i mirisi zavičaja' as having occurred in Blato, which is consistent with the extracted candidate's venue field.",
+        "The category field is supported by the source page text, but the surrounding text suggests that the event may have already happened. The source page text mentions 'Dani Lumblije u Blatu – Okusi i mirisi zavičaja' as a folklore event, which is consistent with the extracted candidate's category field."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2026-05-15-dozivite-moresku",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/",
+      "discoveredAt": "2026-11-11T12:56:40.978Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Doživite morešku",
+        "en": "Doživite morešku",
+        "de": "Erleben Sie das Meer",
+        "it": "Vivere il mare",
+        "sl": "Doživite moreško",
+        "fr": "Vivez la mer",
+        "date": "2026-05-15",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://moreska.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2026-05-15-dozivite-moresku"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The title field contains 'Doživite morešku' which is a call-to-action ('Experience the Moreška') and not just the event/venue name.",
+        "The date field is '2026-05-15' but the page text mentions 'Izvedbe sezone 2026' which suggests that the event is part of a season, not a single date.",
+        "The town field is 'korcula' but the page text mentions 'Korčula, Hrvatska' which is a more specific location.",
+        "The category field is 'folklore' but the page text mentions 'Moreška' which is a specific type of folk dance.",
+        "The venue field is 'Korčula' but the page text mentions 'Korčula, Hrvatska' which is a more specific location.",
+        "The page text mentions 'Ulaznice (ticket link: /tickets)' which suggests that the event is still selling tickets, but the date field is '2026-05-15' which is in the future. This could be a red flag if the event has already been announced and tickets are still available."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-blue-korcula-2024-07-01-upcoming-events",
+      "sourceId": "blue-korcula",
+      "sourceUrl": "https://bluekorcula.com/club",
+      "discoveredAt": "2026-11-11T12:56:40.978Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Slijedeća događanja",
+        "en": "Upcoming Events",
+        "de": "Kommende Veranstaltungen",
+        "it": "Eventi imminenti",
+        "sl": "Prihodnje dogodke",
+        "fr": "Événements à venir",
+        "date": "2024-07-01",
+        "time": "23:00",
+        "town": "korcula",
+        "venue": "Blue Club",
+        "cats": [
+          "nightlife"
+        ],
+        "ticketUrl": "https://www.bluekorcula.com/reservation",
+        "source": "https://bluekorcula.com/club",
+        "extractionMethod": "ai",
+        "id": "ai-blue-korcula-2024-07-01-upcoming-events"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The title field contains 'Upcoming Events' which is a generic label and not a specific event name. This could indicate that the extraction is not specifically about an event, but rather a navigation link or a generic section title.",
+        "The date field is '2024-07-01' which is a specific date, but it's not clear if this is an actual event date or a placeholder date. The surrounding text mentions 'Upcoming Events' but does not provide any specific information about the events.",
+        "The time field is '23:00' which seems to match the 'Club' working hours mentioned in the source page text. However, it's not clear if this is a specific event time or a general working hour.",
+        "The venue field is 'Blue Club' which is a correct extraction, but it's not clear if this is a specific event venue or a general venue information.",
+        "The category field is 'nightlife' which seems to match the 'Nightlife Vibes' section in the source page text. However, it's not clear if this is a specific event category or a general section title.",
+        "The source page text contains multiple sections and information about the venue, including working hours, contact information, and social media links. This suggests that the source page is a general information page about the venue, rather than a specific event page.",
+        "The source page text does not mention any specific events or dates, but rather provides general information about the venue and its services. This suggests that the extraction may not be specifically about an event, but rather a general information page."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-blue-korcula-2024-07-01-upcoming-events",
+      "sourceId": "blue-korcula",
+      "sourceUrl": "https://bluekorcula.com/club",
+      "discoveredAt": "2026-11-11T12:56:40.978Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Nadolazeći događaji",
+        "en": "Upcoming Events",
+        "de": "Kommende Veranstaltungen",
+        "it": "Eventi imminenti",
+        "sl": "Prihodnji dogodki",
+        "fr": "Événements à venir",
+        "date": "2024-07-01",
+        "time": "23:30",
+        "town": "korcula",
+        "venue": "Blue Club",
+        "cats": [
+          "nightlife"
+        ],
+        "ticketUrl": "https://www.bluekorcula.com/reservation",
+        "source": "https://bluekorcula.com/club",
+        "extractionMethod": "ai",
+        "id": "ai-blue-korcula-2024-07-01-upcoming-events"
+      },
+      "verifierConfidence": 0.9,
+      "verifierConcerns": [
+        "The title 'Upcoming Events' is a generic title and does not necessarily refer to a specific event. It's possible that this is a navigation link or a generic section heading.",
+        "The date '2024-07-01' is mentioned in the source page text, but it's not explicitly stated as a date for the Blue Club event. It's possible that this date is not relevant to the event.",
+        "The time '23:30' is mentioned in the source page text, but it's not explicitly stated as the time for the Blue Club event. However, the working hours for the Club are listed as '23:00 – 05:00', which suggests that the event may be taking place during this time.",
+        "The venue 'Blue Club' is mentioned in the source page text, but it's not explicitly stated as the location for the event. However, the address 'Obala korčulanskih brodograditelja 9, 20260 Korčula, Croatia' is listed as the contact information for the Blue Club, which suggests that it may be the correct venue.",
+        "The town 'korcula' is mentioned in the source page text, but it's not explicitly stated as the location for the event. However, the address 'Obala korčulanskih brodograditelja 9, 20260 Korčula, Croatia' is listed as the contact information for the Blue Club, which suggests that it may be the correct town.",
+        "The category 'nightlife' is mentioned in the source page text, but it's not explicitly stated as the category for the event. However, the event description mentions 'electrifying nightlife experience', which suggests that it may be a correct category."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-blue-korcula-2024-07-01-upcoming-events",
+      "sourceId": "blue-korcula",
+      "sourceUrl": "https://bluekorcula.com/club",
+      "discoveredAt": "2026-11-11T12:56:40.978Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Nakladeni događaji",
+        "en": "Upcoming Events",
+        "de": "Kommende Veranstaltungen",
+        "it": "Eventi in arrivo",
+        "sl": "Prihodnje dogodke",
+        "fr": "Événements à venir",
+        "date": "2024-07-01",
+        "time": "00:00",
+        "town": "korcula",
+        "venue": "Blue Club",
+        "cats": [
+          "nightlife"
+        ],
+        "ticketUrl": "https://www.bluekorcula.com/reservation",
+        "source": "https://bluekorcula.com/club",
+        "extractionMethod": "ai",
+        "id": "ai-blue-korcula-2024-07-01-upcoming-events"
+      },
+      "verifierConfidence": 0.7,
+      "verifierConcerns": [
+        "The title field appears to be 'Upcoming Events', which is a generic heading and does not seem to be a specific event title. It's possible that this is a navigation link or a generic section header.",
+        "The date field is '2024-07-01', but the page text does not explicitly mention this date. The page does mention 'Upcoming Events', but it does not provide a specific date for the event.",
+        "The time field is '00:00', which is likely a placeholder or a default value. The page text does provide a list of possible times, but it does not specify which time is associated with the event.",
+        "The venue field is 'Blue Club', which is correct, but the page text also mentions 'Blue Bar'. It's possible that 'Blue Club' is a sub-venue or a part of the larger 'Blue Bar' complex.",
+        "The town field is 'korcula', which is correct, but the page text also mentions 'Korčula town'. It's possible that 'korcula' is an abbreviation or a shortened version of the full town name.",
+        "The category field is 'nightlife', which is correct, but the page text also mentions 'Nightlife Vibes'. It's possible that 'nightlife' is a broader category that encompasses the 'Nightlife Vibes' section.",
+        "The page text mentions 'Table reservations can be made up to 4 hours prior to the desired arrival time', which suggests that the event is a reservation-based event. However, the candidate's fields do not mention this information."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.7"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
     }
   ]
 }

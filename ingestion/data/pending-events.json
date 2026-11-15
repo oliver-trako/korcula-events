@@ -26906,6 +26906,386 @@
       ],
       "duplicateMatches": [],
       "status": "needs-review"
+    },
+    {
+      "id": "ai-tz-blato-2026-11-10-pregled-b2b",
+      "sourceId": "tz-blato",
+      "sourceUrl": "https://tzo-blato.hr/en/",
+      "discoveredAt": "2026-11-15T12:51:29.795Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "PREGLED B2B",
+        "en": "B2B REVIEW",
+        "de": "B2B-BEWEISSTHÄTIGUNG",
+        "it": "VALUTAZIONE B2B",
+        "sl": "B2B PREVERJAVA",
+        "fr": "EXAMEN B2B",
+        "date": "2026-11-10",
+        "town": "blato",
+        "venue": "Blato",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://tzo-blato.hr/en/",
+        "extractionMethod": "ai",
+        "id": "ai-tz-blato-2026-11-10-pregled-b2b"
+      },
+      "verifierConfidence": 0.9,
+      "verifierConcerns": [
+        "The category 'kids' does not appear anywhere near the extracted candidate in the source page text. The category 'B2B' is mentioned, but it seems to be related to a business-to-business event, not specifically a children's event."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-tz-blato-2026-09-11-blato-wine-experience-strucna-i-tematska-vinska-doga-anja",
+      "sourceId": "tz-blato",
+      "sourceUrl": "https://tzo-blato.hr/en/",
+      "discoveredAt": "2026-11-15T12:51:29.795Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "BLATO WINE EXPERIENCE - stručna i tematska vinska događanja",
+        "en": "BLATO WINE EXPERIENCE - professional and thematic wine events",
+        "de": "BLATO WEINERFAHRUNG - Fach- und themenbezogene Weinveranstaltungen",
+        "it": "BLATO EXPERIENZA VINITICA - eventi enologici professionali e tematici",
+        "sl": "BLATO VINIZEMENSKI IZKUS - strokovna in tematska vinska dogajanja",
+        "fr": "BLATO EXPÉRIENCE VITICOLE - événements vinicoles professionnels et thématiques",
+        "date": "2026-09-11",
+        "town": "blato",
+        "venue": "Blato",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://tzo-blato.hr/en/",
+        "extractionMethod": "ai",
+        "id": "ai-tz-blato-2026-09-11-blato-wine-experience-strucna-i-tematska-vinska-doga-anja"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The extracted date '2026-09-11' does not match any date mentioned in the source page text. The closest date mentioned is 'Friday, 11 September 2026', which is the same day but is mentioned in a different context. However, there is another event mentioned on the same day, but it is not clear if it is the same event as the extracted one.",
+        "The extracted category 'kids' does not match the category 'B2B' mentioned in the source page text. The source page text does not mention the category 'kids' at all.",
+        "The extracted title 'BLATO WINE EXPERIENCE - stručna i tematska vinska događanja' is mentioned in the source page text, but it is not clear if it is the main title of the event. The source page text mentions other events with similar titles, such as 'Dani Lumblije u Blatu – Okusi i mirisi zavičaja' and 'Okusi i mirisi zavičaja/Blato Wine & Dine'.",
+        "The extracted venue 'Blato' is mentioned in the source page text, but it is not clear if it is the specific venue for the event. The source page text mentions other locations in Blato, such as 'Trg Dr. Franje Tuđmana 4'."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2026-06-01-1991",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/",
+      "discoveredAt": "2026-11-15T12:51:29.795Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "1991.",
+        "en": "1991",
+        "de": "1991.",
+        "it": "1991.",
+        "sl": "1991.",
+        "fr": "1991.",
+        "date": "2026-06-01",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://moreska.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2026-06-01-1991"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The date '1991' in the extracted candidate's title field seems to be a year mentioned in the source page's text, but it's not clear if it's the title of the event or a year mentioned in the description. The source page does mention '1991' as a year when the HGD Sveta Cecilija was re-established, but it's not explicitly stated as the title of the event.",
+        "The extracted candidate's title field is in English, but the source page's text is mostly in Croatian. While the English translation is provided, it's not clear if the English title is the original title or a translation. The source page does mention '1991' as the title in Croatian ('1991.'), but it's not clear if this is the original title or a translation.",
+        "The extracted candidate's date field is '2026-06-01', but the source page does not explicitly mention this date. The source page does mention that the event 'Moreška' has been performed since 1666, and that the HGD Sveta Cecilija has been active since 1883, but it does not provide a specific date for the event.",
+        "The extracted candidate's venue field is 'Korčula', which is mentioned in the source page's text. However, the source page also mentions that the event 'Moreška' is performed in various locations, including the Ljetno kino (open-air) and the Centar za kulturu (closed). It's not clear if the extracted candidate's venue field refers to a specific location or a general location.",
+        "The extracted candidate's category field is 'folklore', which is mentioned in the source page's text. However, the source page also mentions that the event 'Moreška' is a traditional sword dance, which could also be classified as a 'traditional dance' or a 'cultural event'. It's not clear if the extracted candidate's category field accurately reflects the nature of the event.",
+        "The extracted candidate's town field is 'korcula', which is mentioned in the source page's text. However, the source page also mentions that the event 'Moreška' is performed in Korčula, Hrvatska (Croatia), which could also be written as 'Korčula' or 'Korčula, Hrvatska'. It's not clear if the extracted candidate's town field accurately reflects the location of the event."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "duplicate-id"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-blue-korcula-2024-07-02-nightlife-vibes",
+      "sourceId": "blue-korcula",
+      "sourceUrl": "https://bluekorcula.com/club",
+      "discoveredAt": "2026-11-15T12:51:29.795Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Bljesak energije u Blue Clubu",
+        "en": "Nightlife Vibes",
+        "de": "Blitz der Energie im Blue Club",
+        "it": "Scoppio d'energia al Blue Club",
+        "sl": "Ples energije v Blue Clubu",
+        "fr": "Frappe d'énergie au Blue Club",
+        "date": "2024-07-02",
+        "time": "23:00",
+        "town": "korcula",
+        "venue": "Blue Club Korčula",
+        "cats": [
+          "nightlife"
+        ],
+        "source": "https://bluekorcula.com/club",
+        "extractionMethod": "ai",
+        "id": "ai-blue-korcula-2024-07-02-nightlife-vibes"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The title 'Nightlife Vibes' is not explicitly mentioned on the page as the title of this specific event. Instead, it appears to be a generic title in the 'Upcoming Events' section.",
+        "The date '2024-07-02' is not explicitly mentioned on the page as the date of this specific event. However, the page does mention that the club is open from 23:00 to 05:00, which suggests that the event might be happening on a night with this opening hour. Still, this is not a strong evidence to support the date.",
+        "The time '23:00' is well-supported by the page text, as it mentions the club's opening hours.",
+        "The venue 'Blue Club Korčula' is well-supported by the page text, as it mentions 'Blue Club Korčula' in the 'General firm data' section.",
+        "The town 'Korčula' is well-supported by the page text, as it mentions 'Korčula' in the 'General firm data' section.",
+        "The category 'nightlife' is well-supported by the page text, as it mentions 'Nightlife Vibes' in the 'Upcoming Events' section and the page is about a night club."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-blue-korcula-2024-07-04-nightlife-vibes",
+      "sourceId": "blue-korcula",
+      "sourceUrl": "https://bluekorcula.com/club",
+      "discoveredAt": "2026-11-15T12:51:29.795Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Bljesak energije u Blue Clubu",
+        "en": "Nightlife Vibes",
+        "de": "Blitz der Energie im Blue Club",
+        "it": "Scoppio di energia al Blue Club",
+        "sl": "Pogodec energije v Blue Clubu",
+        "fr": "Déflagration d'énergie au Blue Club",
+        "date": "2024-07-04",
+        "time": "23:00",
+        "town": "korcula",
+        "venue": "Blue Club Korčula",
+        "cats": [
+          "nightlife"
+        ],
+        "source": "https://bluekorcula.com/club",
+        "extractionMethod": "ai",
+        "id": "ai-blue-korcula-2024-07-04-nightlife-vibes"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The title 'Nightlife Vibes' does not appear on the source page. Instead, the page uses 'As the sun sets... electrifying nightlife experience at Blue Club' to describe the event. This suggests that the title 'Nightlife Vibes' may be an embellishment.",
+        "The date '2024-07-04' is not explicitly mentioned on the source page. However, the page does mention 'Upcoming Events' which implies that the event is scheduled for a future date. The date '2024-07-04' could be a plausible match, but it's not explicitly stated.",
+        "The time '23:00' is mentioned on the source page as part of the working hours for the club ('23:00 – 05:00'). However, the page does not explicitly mention that this is the time for the specific event 'Nightlife Vibes'. It's possible that this is the correct time, but it's not explicitly stated.",
+        "The venue 'Blue Club Korčula' is mentioned on the source page, which matches the extracted candidate. However, the page also mentions 'Blue Bar' as the location where the energy transforms into an electrifying nightlife experience. This could suggest that the venue is indeed 'Blue Bar' rather than 'Blue Club Korčula'.",
+        "The town 'Korčula' is mentioned on the source page, which matches the extracted candidate."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-blue-korcula-2024-07-05-nightlife-vibes",
+      "sourceId": "blue-korcula",
+      "sourceUrl": "https://bluekorcula.com/club",
+      "discoveredAt": "2026-11-15T12:51:29.795Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Bljesak energije u Blue Clubu",
+        "en": "Nightlife Vibes",
+        "de": "Blitz der Energie im Blue Club",
+        "it": "Scoppio di energia al Blue Club",
+        "sl": "Zapovganje energije v Blue Clubu",
+        "fr": "Éclair de l'énergie au Blue Club",
+        "date": "2024-07-05",
+        "time": "23:00",
+        "town": "korcula",
+        "venue": "Blue Club Korčula",
+        "cats": [
+          "nightlife"
+        ],
+        "source": "https://bluekorcula.com/club",
+        "extractionMethod": "ai",
+        "id": "ai-blue-korcula-2024-07-05-nightlife-vibes"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The title field contains a call-to-action ('Get your Reservation') instead of just the event title. The actual title on the page is 'Nightlife Vibes', but it appears in a separate section 'Upcoming Events' and not directly next to the listing.",
+        "The venue field contains 'Blue Club Korčula', but the page text only mentions 'Blue Club' and the full address is given in a separate section 'Contact'. It's unclear if 'Blue Club Korčula' is an accurate representation of the venue.",
+        "The date field is well-supported by the text 'Upcoming Events', but it's not clear if this event has already taken place or not. The page text does not provide any information about past events.",
+        "The time field is well-supported by the text 'Pick a Date and Time * 23:00', but it's not clear if this is a fixed time or a time slot for reservations.",
+        "The town field is well-supported by the text 'Obala korčulanskih brodograditelja 9, 20260 Korčula, Croatia', but it's not clear if 'Korčula' is the correct town name. The page text uses both 'Korčula' and 'Korčula town' interchangeably."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-blue-korcula-2024-07-06-nightlife-vibes",
+      "sourceId": "blue-korcula",
+      "sourceUrl": "https://bluekorcula.com/club",
+      "discoveredAt": "2026-11-15T12:51:29.795Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Bljesak energije u Blue Clubu",
+        "en": "Nightlife Vibes",
+        "de": "Blitz der Energie im Blue Club",
+        "it": "Scoppio di energia al Blue Club",
+        "sl": "Izbris energije v Blue Clubu",
+        "fr": "Éclair de l'énergie au Blue Club",
+        "date": "2024-07-06",
+        "time": "23:00",
+        "town": "korcula",
+        "venue": "Blue Club Korčula",
+        "cats": [
+          "nightlife"
+        ],
+        "source": "https://bluekorcula.com/club",
+        "extractionMethod": "ai",
+        "id": "ai-blue-korcula-2024-07-06-nightlife-vibes"
+      },
+      "verifierConfidence": 0.9,
+      "verifierConcerns": [
+        "The 'title_en' field ('Nightlife Vibes') seems to be a generic title that could apply to multiple events, rather than a specific title for this event. The original text mentions 'Nightlife Vibes' as a title, but it's unclear if it's a specific event title or a recurring event series.",
+        "The 'date' field ('2024-07-06') is supported by the text, which mentions 'Upcoming Events' and 'First name *' in the context of making a reservation, suggesting that the event is indeed upcoming.",
+        "The 'time' field ('23:00') is supported by the text, which mentions 'Club: 23:00 – 05:00' in the 'Working hours' section.",
+        "The 'venue' field ('Blue Club Korčula') is supported by the text, which mentions 'Blue Club Korčula' as the location of the event.",
+        "The 'town' field ('korcula') is supported by the text, which mentions 'Korčula town' as the location of the event.",
+        "The 'category' field ('nightlife') is supported by the text, which mentions 'Nightlife Vibes' as the title of the event.",
+        "The 'title_hr' field ('Bljesak energije u Blue Clubu') seems to be a more specific title that captures the essence of the event, rather than a generic title like 'Nightlife Vibes'. This suggests that the 'title_en' field may be a translation or a more general title, rather than a specific title for this event."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-blue-korcula-2024-07-07-nightlife-vibes",
+      "sourceId": "blue-korcula",
+      "sourceUrl": "https://bluekorcula.com/club",
+      "discoveredAt": "2026-11-15T12:51:29.795Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Bljesak energije u Blue Clubu",
+        "en": "Nightlife Vibes",
+        "de": "Blitz der Energie im Blue Club",
+        "it": "Sfida di energia al Blue Club",
+        "sl": "Bljesk energije v Blue Clubu",
+        "fr": "Éclair de l'énergie au Blue Club",
+        "date": "2024-07-07",
+        "time": "23:00",
+        "town": "korcula",
+        "venue": "Blue Club Korčula",
+        "cats": [
+          "nightlife"
+        ],
+        "source": "https://bluekorcula.com/club",
+        "extractionMethod": "ai",
+        "id": "ai-blue-korcula-2024-07-07-nightlife-vibes"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The source page text does not explicitly mention the title 'Bljesak energije u Blue Clubu' or 'Nightlife Vibes' near the extracted candidate's date. The text does mention 'Night Club' and 'Nightlife Vibes' in other sections, but not directly next to the date '2024-07-07'.",
+        "The title 'Bljesak energije u Blue Clubu' seems to be a translation of 'Nightlife Vibes', which is mentioned in the source page text. This could be a sign of embellishment or incorrect translation.",
+        "The extracted candidate's time '23:00' is mentioned in the source page text as part of the working hours for the Club, but it is not explicitly mentioned next to the date '2024-07-07'.",
+        "The venue 'Blue Club Korčula' is mentioned in the source page text, but it is not explicitly mentioned next to the date '2024-07-07'. However, the address 'Obala korčulanskih brodograditelja 9, 20260 Korčula, Croatia' is mentioned, which could be a sign of correct venue information.",
+        "The category 'nightlife' is mentioned in the source page text, but it is not explicitly mentioned next to the date '2024-07-07'. However, the section 'Upcoming Events' does mention 'Nightlife Vibes' and 'Blue Club', which could be a sign of correct category information."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-blue-korcula-2024-07-08-nightlife-vibes",
+      "sourceId": "blue-korcula",
+      "sourceUrl": "https://bluekorcula.com/club",
+      "discoveredAt": "2026-11-15T12:51:29.795Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Bljesak energije u Blue Clubu",
+        "en": "Nightlife Vibes",
+        "de": "Blitz der Energie im Blue Club",
+        "it": "Sfida di energia al Blue Club",
+        "sl": "Bljesk energije v Blue Clubu",
+        "fr": "Éclair de l'énergie au Blue Club",
+        "date": "2024-07-08",
+        "time": "23:00",
+        "town": "korcula",
+        "venue": "Blue Club Korčula",
+        "cats": [
+          "nightlife"
+        ],
+        "source": "https://bluekorcula.com/club",
+        "extractionMethod": "ai",
+        "id": "ai-blue-korcula-2024-07-08-nightlife-vibes"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The title 'Nightlife Vibes' may be an embellishment of the original text, which describes the event as an 'electrifying nightlife experience'. The source text does not explicitly state that the event is called 'Nightlife Vibes'.",
+        "The date '2024-07-08' and time '23:00' are not explicitly mentioned in the source text. However, the working hours for the club are listed as 'Club: 23:00 – 05:00', which suggests that the club is open at 23:00. It is possible that the extracted date and time are correct, but it would be more accurate to say that the club is open at 23:00, rather than specifying a specific date and time for an event.",
+        "The venue 'Blue Club Korčula' is mentioned in the source text, but the address 'Obala korčulanskih brodograditelja 9, 20260 Korčula, Croatia' is not directly associated with the event. However, it is likely that the event is taking place at the Blue Club Korčula location.",
+        "The category 'nightlife' is well-supported by the source text, which describes the event as a 'nightlife experience'.",
+        "The town 'Korčula' is mentioned in the source text, which is consistent with the extracted town field."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-blue-korcula-2024-07-09-nightlife-vibes",
+      "sourceId": "blue-korcula",
+      "sourceUrl": "https://bluekorcula.com/club",
+      "discoveredAt": "2026-11-15T12:51:29.795Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Bljesak energije u Blue Clubu",
+        "en": "Nightlife Vibes",
+        "de": "Blitz der Energie im Blue Club",
+        "it": "Scoppio di energia al Blue Club",
+        "sl": "Zamet energije v Blue Clubu",
+        "fr": "Éclair de l'énergie au Blue Club",
+        "date": "2024-07-09",
+        "time": "23:00",
+        "town": "korcula",
+        "venue": "Blue Club Korčula",
+        "cats": [
+          "nightlife"
+        ],
+        "source": "https://bluekorcula.com/club",
+        "extractionMethod": "ai",
+        "id": "ai-blue-korcula-2024-07-09-nightlife-vibes"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The title 'Nightlife Vibes' does not appear on the source page. The actual title is not explicitly stated, but the page does contain the phrase 'Nightlife experience at Blue Club'. This discrepancy suggests that the title may have been inferred or added by the extraction process.",
+        "The date '2024-07-09' is not explicitly stated on the source page. The page does mention 'Upcoming Events', but the specific date is not provided. This could indicate that the date was inferred or added by the extraction process.",
+        "The time '23:00' is supported by the source page, which lists the working hours for the Club as '23:00 – 05:00'.",
+        "The venue 'Blue Club Korčula' is supported by the source page, which lists the address as 'Obala korčulanskih brodograditelja 9, 20260 Korčula, Croatia' and mentions 'Blue Club' multiple times.",
+        "The town 'korcula' is supported by the source page, which lists the address as 'Obala korčulanskih brodograditelja 9, 20260 Korčula, Croatia'.",
+        "The category 'nightlife' is supported by the source page, which mentions 'Nightlife experience at Blue Club' and lists the page as 'Night Club - Blue Centar Korčula'.",
+        "The source page contains multiple sections and links, including a reservation form and a list of working hours. It is unclear how the extraction process distinguished the event listing from these other sections.",
+        "confidence-reasoning"
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
     }
   ]
 }

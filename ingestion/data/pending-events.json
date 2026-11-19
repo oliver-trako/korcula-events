@@ -27286,6 +27286,399 @@
       ],
       "duplicateMatches": [],
       "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-lumbarda-2026-09-10-lumbaraja-psefizma-days-2026",
+      "sourceId": "visit-lumbarda",
+      "sourceUrl": "https://www.visitlumbarda.eu/",
+      "discoveredAt": "2026-11-19T14:39:03.028Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Dani lumbarajske pesefizme 2026.",
+        "en": "Lumbaraja Psefizma Days 2026.",
+        "de": "Tage der Lumbaralischen Pulsfunktion 2026",
+        "it": "Giorni della funzione pulsazionale lombare 2026",
+        "sl": "Dne lumbarajske pesnične fizike 2026",
+        "fr": "Journées de la fonction pulsatile lombaire 2026",
+        "date": "2026-09-10",
+        "town": "lumbarda",
+        "venue": "Lumbarda",
+        "cats": [
+          "festival",
+          "folklore"
+        ],
+        "source": "https://www.visitlumbarda.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-lumbarda-2026-09-10-lumbaraja-psefizma-days-2026"
+      },
+      "verifierConfidence": 0.9,
+      "verifierConcerns": [
+        "The title field contains a phrase that might be a description or a tagline, rather than just the event title. The page's text uses the phrase 'Dani lumbarajske pesefizme 2026.' in a section titled 'Novosti' (News), which could imply that it's a news article or announcement rather than a direct event title.",
+        "The date field is well-supported by the text, but it's not clear whether this event is a one-time occurrence or a recurring event. The page's text mentions 'Dani lumbarajske pesefizme' as a recurring event, but it's not clear how often it happens.",
+        "The venue field is well-supported by the text, but it's not clear whether the 'Lumbarda' mentioned in the text is the same as the 'Lumbarda' mentioned in the extracted candidate. The page's text uses the phrase 'Lumbarda' in different contexts, which could imply that it's referring to different locations or concepts.",
+        "The category field is well-supported by the text, but it's not clear whether the 'festival' and 'folklore' categories are accurate. The page's text mentions 'Lumbarajske užance' (Lumbarda Delights) as a recurring event, which could imply that it's a cultural or entertainment event rather than a festival or folklore event."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-tz-vela-luka-2026-10-19-stajun-od-lumblije-2026-program-jubilarne-10-manifestacije",
+      "sourceId": "tz-vela-luka",
+      "sourceUrl": "https://tzvelaluka.hr/",
+      "discoveredAt": "2026-11-19T14:39:03.028Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Stajun od Lumblije 2026. – program jubilarne 10. manifestacije",
+        "en": "Stay from Lumbly 2026. – Programme of the 10th Anniversary Event",
+        "de": "Stehen Sie von Lumbly 2026. – Programm der 10. Jubiläumsveranstaltung",
+        "it": "Restare da Lumbly 2026. – Programm del 10° anniversario",
+        "sl": "Ostani od Lumblije 2026. – program jubilejnega 10. festivala",
+        "fr": "Rester de Lumbly 2026. – Programme du 10e anniversaire",
+        "date": "2026-10-19",
+        "town": "vela-luka",
+        "venue": "Vela Luka",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://tzvelaluka.hr/",
+        "extractionMethod": "ai",
+        "id": "ai-tz-vela-luka-2026-10-19-stajun-od-lumblije-2026-program-jubilarne-10-manifestacije"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The page contains a repeated section with the same title ('Dobro došli u Velu Luku') and a generic welcome message, which suggests that the event listing might be part of a recurring or static section, rather than a specific event. However, this does not necessarily mean that the event listing is incorrect, but it could indicate that the extraction was incomplete or that the event listing was not clearly separated from the surrounding content.",
+        "The event listing appears to be part of a list of upcoming events ('Događanja'), which is a reasonable place to find event information. However, the surrounding content is mostly promotional and does not provide much context about the event itself.",
+        "The title of the event ('Stajun od Lumblije 2026. – program jubilarne 10. manifestacije') is not explicitly mentioned in the source page text, but it is likely a translation of the Croatian text ('TZ Vela Luka - ...'). This suggests that the title might have been extracted correctly, but it would be good to verify this with the original Croatian text.",
+        "The date of the event ('2026-10-19') is mentioned in the source page text, but it is not explicitly stated as a date. However, the surrounding text suggests that the event is taking place in October 2026, which is consistent with the extracted date.",
+        "The venue of the event ('Vela Luka') is mentioned in the source page text, which is consistent with the extracted information.",
+        "The category of the event ('kids') is not explicitly mentioned in the source page text, but it is possible that the event is suitable for children. However, this should be verified with the original Croatian text to ensure that the category is accurate.",
+        "There is no clear indication that the event has already taken place or that the page is outdated. However, the surrounding content is mostly promotional and does not provide much context about the event itself, which could suggest that the event is not recent or that the page is not up-to-date."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-tz-blato-2026-11-16-b2b-overview",
+      "sourceId": "tz-blato",
+      "sourceUrl": "https://tzo-blato.hr/en/",
+      "discoveredAt": "2026-11-19T14:39:03.028Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "PREGLED B2B",
+        "en": "B2B Overview",
+        "de": "ÜBERSICHT B2B",
+        "it": "RACCOLTA B2B",
+        "sl": "PREGLED B2B",
+        "fr": "RECAP B2B",
+        "date": "2026-11-16",
+        "town": "blato",
+        "venue": "Blato",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://tzo-blato.hr/en/",
+        "extractionMethod": "ai",
+        "id": "ai-tz-blato-2026-11-16-b2b-overview"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The title 'B2B Overview' might be an English translation of 'PREGLED B2B' from the source page, but it's possible that the original title is more specific or relevant to the event. It's worth noting that the event description doesn't seem to match the title, as the title suggests a business-to-business overview, but the event description doesn't provide any information about this.",
+        "The date '2026-11-16' seems to match the date mentioned in the source page for the event 'PREGLED B2B' on 'Monday, 16 November 2026'. However, it's worth noting that this event seems to be a one-time event, and it's not clear if it's a recurring event or a one-time occurrence.",
+        "The venue 'Blato' seems to match the source page's information about the Blato Tourist Board. However, it's worth noting that the source page provides more specific information about the venue, including its address and contact information.",
+        "The category 'kids' seems to be an incorrect match, as the source page doesn't provide any information about the event being related to kids. The category 'B2B' seems to be a more accurate match, as the event description suggests a business-to-business overview.",
+        "The source page provides a lot of information about the Blato Tourist Board and the town of Blato, but it's not clear if this information is directly related to the event 'PREGLED B2B'. It's worth noting that the event description doesn't seem to match the title, and it's possible that the event is not as relevant to the town's tourist board as the source page suggests."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2026-05-02-moreska",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/tickets",
+      "discoveredAt": "2026-11-19T14:39:03.028Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Moreška",
+        "en": "Moreška",
+        "de": "Moreška",
+        "it": "Moreška",
+        "sl": "Moreška",
+        "fr": "Moreška",
+        "date": "2026-05-02",
+        "time": "19:00",
+        "town": "korcula",
+        "venue": "Ljetno kino, Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://moreska.eu/tickets",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2026-05-02-moreska"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The source page does not explicitly state the title as 'Moreška' in the English section. Although the title is repeated in both the English and Croatian sections, it appears as part of the page's title section, not as a separate event title. This might suggest that the title is not explicitly mentioned as a separate event title on the page.",
+        "The source page does not explicitly mention the time '19:00' in the provided text. The page does mention that the 'Ulaz se otvara otprilike pola sata prije početka izvedbe.' which translates to 'The entrance opens about half an hour before the start of the performance.' This implies that the time might be related to the entrance opening, not the performance itself.",
+        "The source page does not explicitly state the date '2026-05-02' in the provided text. The page does mention 'Sezona 2026: sve izvedbe' which translates to 'Season 2026: all performances.' This implies that the season is 2026, but it does not explicitly mention the date '2026-05-02'.",
+        "The source page does not explicitly state the venue as 'Ljetno kino, Korčula' in the provided text. The page does mention 'Gdje doći' which translates to 'Where to come' and then lists 'Ljetno kino, Korčula' as the location. This implies that the venue is indeed 'Ljetno kino, Korčula', but it is not explicitly mentioned as a separate event venue on the page.",
+        "The source page does not explicitly state the town as 'Korčula' in the provided text. The page does mention 'Korčula · Sezona 2026.' which implies that the event takes place in Korčula, but it is not explicitly mentioned as a separate event location on the page.",
+        "The source page does not explicitly state the category as 'folklore' in the provided text. The page does mention 'Moreška' which is a traditional dance, but it does not explicitly categorize it as 'folklore'."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2026-05-03-moreska",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/tickets",
+      "discoveredAt": "2026-11-19T14:39:03.028Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Moreška",
+        "en": "Moreška",
+        "de": "Moreška",
+        "it": "Moreška",
+        "sl": "Moreška",
+        "fr": "Moreška",
+        "date": "2026-05-03",
+        "time": "19:00",
+        "town": "korcula",
+        "venue": "Ljetno kino, Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://moreska.eu/tickets",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2026-05-03-moreska"
+      },
+      "verifierConfidence": 0.9,
+      "verifierConcerns": [
+        "The title field appears to be well-supported, as 'Moreška' is mentioned multiple times on the page, including in the section title 'Moreška'.",
+        "The date field appears to be well-supported, as the page mentions 'Sezona 2026' and lists the 2026 season schedule with dates, including '2026-05-03'.",
+        "The time field appears to be well-supported, as the page mentions 'Ulaz se otvara otprilike pola sata prije početka izvedbe.', which translates to 'The entrance opens about half an hour before the start of the performance.'",
+        "The venue field appears to be well-supported, as the page mentions 'Ljetno kino, Korčula' multiple times, including in the section title 'Gdje doći' (Where to come) and in the map link.",
+        "The town field appears to be well-supported, as the page mentions 'Korčula' multiple times, including in the section title 'Korčula · Sezona 2026.'",
+        "The category field appears to be well-supported, as the page mentions 'folklore' in the context of the Moreška performance, although it is not explicitly listed as a category.",
+        "There is no concrete error to point to, but the page structure and content suggest that the event listing is accurate and well-supported by the source text.",
+        "However, the page does mention 'Trenutno nema zakazanih izvedbi.' (There are no scheduled performances currently), which could potentially indicate that the event has already happened or is not scheduled for the listed date. However, this is not a concrete error and the page does list the 2026 season schedule with dates, including '2026-05-03'.",
+        "Additionally, the page does mention 'Kupi ulaznice' (Buy tickets) multiple times, which could potentially indicate that the title or venue field contains booking-status or call-to-action text. However, this is not a concrete error and the page does mention 'Ljetno kino, Korčula' as the venue.",
+        "The page also mentions 'Korčula · Sezona 2026.' (Korčula · Season 2026) which could potentially indicate that the town field contains booking-status or call-to-action text. However, this is not a concrete error and the page does mention 'Korčula' as the town.",
+        "Overall, the event listing appears to be well-supported by the source text, but there are some minor concerns that could potentially indicate errors or ambiguities."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2026-05-04-moreska",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/tickets",
+      "discoveredAt": "2026-11-19T14:39:03.028Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Moreška",
+        "en": "Moreška",
+        "de": "Moreška",
+        "it": "Moreška",
+        "sl": "Moreška",
+        "fr": "Moreška",
+        "date": "2026-05-04",
+        "time": "19:00",
+        "town": "korcula",
+        "venue": "Ljetno kino, Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "source": "https://moreska.eu/tickets",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2026-05-04-moreska"
+      },
+      "verifierConfidence": 0.9,
+      "verifierConcerns": [
+        "The extracted candidate's date ('2026-05-04') matches the page's mention of 'Sezona 2026', but the page also mentions 'Trenutno nema zakazanih izvedbi' (There are no scheduled performances currently), which could imply that the listed date might not be accurate. However, since the page does not explicitly state that the listed date is incorrect, I will not lower confidence significantly. The page does not provide a clear indication that the listed date is not well-supported by the source text.",
+        "The extracted candidate's title ('Moreška') matches the page's title, but the page does not explicitly mention the title in the section where the extracted candidate was taken from. The title is mentioned in the page's header, but it's also mentioned in the section where the extracted candidate was taken from, which is a list of performances. However, the page does not provide a clear indication that the listed title is not well-supported by the source text.",
+        "The extracted candidate's venue ('Ljetno kino, Korčula') matches the page's mention of 'Gdje doći' (Where to go), which is 'Ljetno kino, Korčula'. The page does not provide a clear indication that the listed venue is not well-supported by the source text.",
+        "The extracted candidate's town ('korcula') matches the page's mention of 'Korčula'. The page does not provide a clear indication that the listed town is not well-supported by the source text.",
+        "The extracted candidate's category ('folklore') does not match the page's description. The page mentions 'Moreška', which is a traditional folk dance, but it's not explicitly categorized as 'folklore'. However, the page does not provide a clear indication that the listed category is not well-supported by the source text.",
+        "The extracted candidate's time ('19:00') does not match the page's mention of 'Izvedba traje otprilike sat vremena' (The performance lasts approximately one hour). However, the page does not explicitly state the start time of the performance, so I will not lower confidence significantly."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-blue-korcula-2023-08-01-night-club",
+      "sourceId": "blue-korcula",
+      "sourceUrl": "https://bluekorcula.com/club",
+      "discoveredAt": "2026-11-19T14:39:03.028Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Noćni klub",
+        "en": "Night Club",
+        "de": "Nachtclub",
+        "it": "Club notturno",
+        "sl": "Nočni klub",
+        "fr": "Club nocturne",
+        "date": "2023-08-01",
+        "time": "23:00",
+        "town": "korcula",
+        "venue": "Blue Centar Korčula",
+        "cats": [
+          "nightlife"
+        ],
+        "source": "https://bluekorcula.com/club",
+        "extractionMethod": "ai",
+        "id": "ai-blue-korcula-2023-08-01-night-club"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The title 'Night Club' appears multiple times on the page, but it's unclear if this is the actual title of the event or just a repeated navigation link. However, the title 'Noćni klub' in Croatian also appears, which suggests that 'Night Club' is indeed the title.",
+        "The date '2023-08-01' is mentioned in the source page text as a possible date for the event, but it's not explicitly stated as the date for the 'Night Club' event. However, given the context and the fact that the date is mentioned near the event description, it's likely that this is the correct date.",
+        "The time '23:00' is mentioned in the source page text as part of the working hours for the Club, but it's not explicitly stated as the time for the 'Night Club' event. However, given the context and the fact that the time is mentioned near the event description, it's likely that this is the correct time.",
+        "The venue 'Blue Centar Korčula' is mentioned multiple times on the page, which suggests that this is the correct venue.",
+        "The town 'korcula' is mentioned in the source page text as the location of the Blue Club, which suggests that this is the correct town.",
+        "The category 'nightlife' is mentioned in the source page text as a possible category for the event, which suggests that this is the correct category."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-blue-korcula-2023-08-02-night-club",
+      "sourceId": "blue-korcula",
+      "sourceUrl": "https://bluekorcula.com/club",
+      "discoveredAt": "2026-11-19T14:39:03.028Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Noćni klub",
+        "en": "Night Club",
+        "de": "Nachtclub",
+        "it": "Club notturno",
+        "sl": "Nočni klub",
+        "fr": "Club nocturne",
+        "date": "2023-08-02",
+        "time": "23:00",
+        "town": "korcula",
+        "venue": "Blue Centar Korčula",
+        "cats": [
+          "nightlife"
+        ],
+        "source": "https://bluekorcula.com/club",
+        "extractionMethod": "ai",
+        "id": "ai-blue-korcula-2023-08-02-night-club"
+      },
+      "verifierConfidence": 0.9,
+      "verifierConcerns": [
+        "The 'date' field is well-supported, as '2023-08-02' appears in the source page text in the 'Upcoming Events' section.",
+        "The 'time' field is well-supported, as '23:00' is listed in the 'Working hours' section under 'Club'.",
+        "The 'town' field is well-supported, as 'Korčula' appears in the source page text in the 'Contact' section.",
+        "The 'venue' field is well-supported, as 'Blue Centar Korčula' is listed in the source page text in the initial 'Night Club - Blue Centar Korčula' heading.",
+        "The 'cats' field is well-supported, as 'Nightlife' is a category that matches the source page text, particularly in the 'Upcoming Events' section.",
+        "However, there is a potential issue with the 'title_hr' and 'title_en' fields. While 'Night Club' is indeed mentioned in the source page text, the phrase 'Noćni klub' (which translates to 'Night Club' in English) does not appear in the source page text. It's possible that this is a correct translation, but it's worth noting that the English title 'Night Club' appears in multiple places on the page, including the initial heading and in the 'Upcoming Events' section. This could suggest that 'Noćni klub' is not the actual title used on the page, but rather a translation of the English title.",
+        "Additionally, the 'title_en' field is not an issue, as 'Night Club' is indeed mentioned in the source page text in multiple places.",
+        "The 'town' field contains a typo ('korcula' instead of 'Korčula'), but this does not affect the overall confidence level, as the correct town name is still present in the source page text."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-blue-korcula-2023-08-03-night-club",
+      "sourceId": "blue-korcula",
+      "sourceUrl": "https://bluekorcula.com/club",
+      "discoveredAt": "2026-11-19T14:39:03.028Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Noćni klub",
+        "en": "Night Club",
+        "de": "Nachtclub",
+        "it": "Club notturno",
+        "sl": "Nočni klub",
+        "fr": "Club nocturne",
+        "date": "2023-08-03",
+        "time": "23:00",
+        "town": "korcula",
+        "venue": "Blue Centar Korčula",
+        "cats": [
+          "nightlife"
+        ],
+        "source": "https://bluekorcula.com/club",
+        "extractionMethod": "ai",
+        "id": "ai-blue-korcula-2023-08-03-night-club"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The 'Upcoming Events' section does not provide any specific information about an event on August 3rd. This could indicate that the extracted candidate's date is not actually supported by the text near it.",
+        "The page contains a 'Working hours' section that lists different opening hours for the club, lounge, and caffe bar. The club's opening hours are listed as 23:00 - 05:00, which could indicate that the extracted candidate's time of 23:00 is actually a closing time rather than an opening time.",
+        "The 'Reservation' section allows users to book tables up to 4 hours in advance, but does not provide any information about events or activities that are scheduled for specific dates. This could indicate that the extracted candidate's title and category are not actually supported by the text near it.",
+        "The page contains multiple language options, including Croatian and English. The extracted candidate's title is listed in both languages, but the date and time are only listed in English. This could indicate that the extracted candidate's fields are not actually supported by the text near it, but rather are a translation of the original text.",
+        "The page contains a 'Quick Links' section that lists various links to other pages on the site. The extracted candidate's title and category are not listed in this section, which could indicate that they are not actually part of the site's navigation or structure."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-aminess-korcula-entertainment-2023-04-23-black-friday",
+      "sourceId": "aminess-korcula-entertainment",
+      "sourceUrl": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+      "discoveredAt": "2026-11-19T14:39:03.028Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Crni Petak",
+        "en": "Black Friday",
+        "de": "Schwarzer Freitag",
+        "it": "Venerdì Nero",
+        "sl": "Črni Petek",
+        "fr": "Vendredi Noir",
+        "date": "2023-04-23",
+        "endDate": "2023-10-24",
+        "town": "korcula",
+        "venue": "Marko Polo Maradiso Hotel by Aminess",
+        "cats": [
+          "festival"
+        ],
+        "source": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+        "extractionMethod": "ai",
+        "id": "ai-aminess-korcula-entertainment-2023-04-23-black-friday"
+      },
+      "verifierConfidence": 0.95,
+      "verifierConcerns": [
+        "The title field contains a generic English translation ('Black Friday') that doesn't seem to match the actual title in the source page text ('Crni Petak'). While the source page does mention 'Black Friday' as a promotion, it's not the main title of the event.",
+        "The date field seems to be well-supported by the source page text, which mentions '23. Apr - 24. Oct' as the period during which the event is taking place. However, it's worth noting that the source page text doesn't explicitly mention the specific date '2023-04-23' as the start date of the event.",
+        "The venue field seems to be well-supported by the source page text, which mentions 'Marko Polo Maradiso Hotel by Aminess' as the location of the event.",
+        "The town field seems to be well-supported by the source page text, which mentions 'Korčula' as the location of the event.",
+        "The category field seems to be well-supported by the source page text, which mentions 'festival' as a possible interpretation of the event, but it's not explicitly mentioned as the main category.",
+        "There is no mention of 'endDate' in the source page text, which makes me question the validity of this field.",
+        "The source page text mentions several other events and activities, which makes me wonder if this event is actually taking place on the specified date."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
     }
   ]
 }

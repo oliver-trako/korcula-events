@@ -27679,6 +27679,79 @@
       ],
       "duplicateMatches": [],
       "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2026-06-01-klapa",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/",
+      "discoveredAt": "2026-11-20T14:49:48.711Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Klapa",
+        "en": "Klapa",
+        "de": "Klapa",
+        "it": "Klapa",
+        "sl": "Klapa",
+        "fr": "Klapa",
+        "date": "2026-06-01",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "ticketUrl": "/tickets",
+        "source": "https://moreska.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2026-06-01-klapa"
+      },
+      "verifierConfidence": 0.2,
+      "verifierConcerns": [
+        "The extracted candidate's date (2026-06-01) appears to be in the future, which may indicate that the event has not yet occurred. However, the source page text does not explicitly state that the event is scheduled for a specific date, and the text 'Izvedbe sezone 2026.' suggests that the event is part of a recurring season, which may include multiple dates.",
+        "The extracted candidate's title ('Klapa') is mentioned in the source page text, but it is not clear if this is the only event mentioned on the page. The page appears to be a website for a cultural organization, and the title 'Klapa' may be a section or a category within the website.",
+        "The extracted candidate's venue ('Korčula') is mentioned in the source page text, but it is not clear if this is the specific venue for the event. The page mentions 'Korčula' as the location of the organization, but it does not explicitly state that the event will take place at this location.",
+        "The extracted candidate's category ('folklore') is mentioned in the source page text, but it is not clear if this is the only category for the event. The page appears to be a website for a cultural organization, and the category 'folklore' may be a section or a category within the website."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.2"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-2026-06-01-ekskluzivna-izvedba-iskljucivo-za-vasu-skupinu",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/",
+      "discoveredAt": "2026-11-20T14:49:48.712Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Ekskluzivna izvedba, isključivo za vašu skupinu",
+        "en": "Ekskluzivna izvedba, isključivo za vašu skupinu",
+        "de": "Ekskluzivna izvedba, isključivo za vašu skupinu",
+        "it": "Ekskluzivna izvedba, isključivo za vašu skupinu",
+        "sl": "Ekskluzivna izvedba, isključivo za vašu skupinu",
+        "fr": "Ekskluzivna izvedba, isključivo za vašu skupinu",
+        "date": "2026-06-01",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "ticketUrl": "/tickets",
+        "source": "https://moreska.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-2026-06-01-ekskluzivna-izvedba-iskljucivo-za-vasu-skupinu"
+      },
+      "verifierConfidence": 0,
+      "verifierConcerns": [
+        "verifier call failed: Model call failed: http-error:429:{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (6be07822-2231-489a-96b5-fbd2ae778c7b)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
     }
   ]
 }

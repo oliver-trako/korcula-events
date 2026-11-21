@@ -1,0 +1,3089 @@
+{
+  "runDate": "2026-11-21",
+  "shadow": false,
+  "sources": [
+    {
+      "sourceId": "visit-korcula",
+      "url": "https://visitkorcula.eu/en/events/",
+      "published": 0,
+      "review": 3
+    },
+    {
+      "sourceId": "visit-korcula-racisce",
+      "url": "https://visitkorcula.eu/en/events/summer-in-racisce/",
+      "published": 0,
+      "review": 4
+    },
+    {
+      "sourceId": "centar-kulture-korcula",
+      "url": "https://kulturakorcula.hr/kino-najave/",
+      "published": 0,
+      "review": 16
+    },
+    {
+      "sourceId": "visit-lumbarda",
+      "url": "https://www.visitlumbarda.eu/",
+      "published": 0,
+      "review": 2
+    },
+    {
+      "sourceId": "tz-vela-luka",
+      "url": "https://tzvelaluka.hr/",
+      "published": 0,
+      "review": 3
+    },
+    {
+      "sourceId": "tz-blato",
+      "url": "https://tzo-blato.hr/en/",
+      "published": 0,
+      "review": 10
+    },
+    {
+      "sourceId": "visit-orebic",
+      "url": "https://visitorebic-croatia.hr/",
+      "published": 0,
+      "review": 0
+    },
+    {
+      "sourceId": "moreska",
+      "url": "https://moreska.eu/",
+      "published": 0,
+      "review": 12
+    },
+    {
+      "sourceId": "moreska",
+      "url": "https://moreska.eu/tickets",
+      "published": 0,
+      "review": 1
+    },
+    {
+      "sourceId": "blue-korcula",
+      "url": "https://bluekorcula.com/club",
+      "published": 0,
+      "review": 0
+    },
+    {
+      "sourceId": "blue-korcula",
+      "url": "https://core-event.co/en/search?query=Kor%C4%8Dula",
+      "published": 0,
+      "review": 0
+    },
+    {
+      "sourceId": "la-banya",
+      "url": "https://labanya.hr",
+      "published": 0,
+      "review": 4
+    },
+    {
+      "sourceId": "core-event-korcula",
+      "url": "https://core-event.co/en/search?query=Kor%C4%8Dula",
+      "published": 0,
+      "review": 0
+    },
+    {
+      "sourceId": "core-event-korcula",
+      "url": "https://core-event.co/en/search?query=Korcula",
+      "published": 0,
+      "review": 0
+    },
+    {
+      "sourceId": "adriatic-pearl-weekly-events",
+      "url": "https://adriaticpearlkorcula.com/weeklyevents",
+      "published": 0,
+      "review": 0
+    },
+    {
+      "sourceId": "korculainfo-guides",
+      "url": "https://www.korculainfo.com/zrnovo/",
+      "published": 0,
+      "review": 1
+    },
+    {
+      "sourceId": "korculainfo-guides",
+      "url": "https://www.korculainfo.com/pupnat/",
+      "published": 0,
+      "review": 2
+    },
+    {
+      "sourceId": "korculainfo-guides",
+      "url": "https://www.korculainfo.com/cara/",
+      "published": 0,
+      "review": 3
+    },
+    {
+      "sourceId": "zrnovo-local-sources",
+      "url": "https://www.zrnovo.com/",
+      "published": 0,
+      "review": 0
+    },
+    {
+      "sourceId": "cara-zavalatica-local-sources",
+      "url": "https://www.korculainfo.com/cara/",
+      "published": 0,
+      "review": 0
+    },
+    {
+      "sourceId": "smokvica-brna-expanded",
+      "url": "https://visitsmokvicabrna.com/",
+      "published": 0,
+      "review": 0
+    },
+    {
+      "sourceId": "aminess-korcula-entertainment",
+      "url": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+      "published": 0,
+      "review": 0
+    },
+    {
+      "sourceId": "hajduk-split-fixtures",
+      "url": "https://hajduk.hr/utakmice",
+      "published": 0,
+      "review": 0
+    },
+    {
+      "sourceId": "hajduk-split-fixtures",
+      "url": "https://www.sofascore.com/football/team/hnk-hajduk-split/2036",
+      "published": 0,
+      "review": 0
+    }
+  ],
+  "errors": [
+    {
+      "sourceId": "blue-korcula",
+      "url": "https://core-event.co/en/search?query=Kor%C4%8Dula",
+      "stage": "fetch",
+      "error": "Safe retrieval blocked: http-error:403"
+    },
+    {
+      "sourceId": "core-event-korcula",
+      "url": "https://core-event.co/en/search?query=Kor%C4%8Dula",
+      "stage": "fetch",
+      "error": "Safe retrieval blocked: http-error:403"
+    },
+    {
+      "sourceId": "core-event-korcula",
+      "url": "https://core-event.co/en/search?query=Korcula",
+      "stage": "fetch",
+      "error": "Safe retrieval blocked: http-error:403"
+    },
+    {
+      "sourceId": "adriatic-pearl-weekly-events",
+      "url": "https://adriaticpearlkorcula.com/weeklyevents",
+      "stage": "fetch",
+      "error": "Safe retrieval blocked: http-error:404"
+    },
+    {
+      "sourceId": "korculainfo-guides",
+      "url": "https://www.korculainfo.com/cara/",
+      "stage": "translate",
+      "candidateId": "ai-korculainfo-guides-2024-07-25-sveti-jakov-pilgrimage",
+      "error": "Model call failed: http-error:429:{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (e7ee496a-0e9a-4880-b9ec-eaaa9ef84915)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "sourceId": "korculainfo-guides",
+      "url": "https://www.korculainfo.com/cara/",
+      "stage": "verify",
+      "candidateId": "ai-korculainfo-guides-2024-07-25-sveti-jakov-pilgrimage",
+      "error": "Model call failed: http-error:429:{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (2d0a7cab-4370-4182-8ea4-53e0839d3020)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "sourceId": "korculainfo-guides",
+      "url": "https://www.korculainfo.com/cara/",
+      "stage": "translate",
+      "candidateId": "ai-korculainfo-guides-2024-07-25-kumpanija",
+      "error": "Model call failed: http-error:429:{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (3305cd32-74f5-4f1c-a34b-dc4d4d8bc5c5)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "sourceId": "korculainfo-guides",
+      "url": "https://www.korculainfo.com/cara/",
+      "stage": "verify",
+      "candidateId": "ai-korculainfo-guides-2024-07-25-kumpanija",
+      "error": "Model call failed: http-error:429:{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (f1ef386e-e280-4fa9-93ae-a7ff8d74a0db)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "sourceId": "korculainfo-guides",
+      "url": "https://www.korculainfo.com/cara/",
+      "stage": "translate",
+      "candidateId": "ai-korculainfo-guides-2024-09-01-harvest-season",
+      "error": "Model call failed: http-error:429:{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (4d1320ce-10f6-4860-b58f-dcfffb246f89)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "sourceId": "korculainfo-guides",
+      "url": "https://www.korculainfo.com/cara/",
+      "stage": "verify",
+      "candidateId": "ai-korculainfo-guides-2024-09-01-harvest-season",
+      "error": "Model call failed: http-error:429:{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (35011969-f10a-4513-9326-35a9e425612a)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "sourceId": "zrnovo-local-sources",
+      "url": "https://www.zrnovo.com/",
+      "stage": "extract",
+      "error": "Model call failed: http-error:429:{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (7a405bd3-12ec-417f-b657-3fd48daa46af)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "sourceId": "cara-zavalatica-local-sources",
+      "url": "https://www.korculainfo.com/cara/",
+      "stage": "extract",
+      "error": "Model call failed: http-error:429:{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (57084df2-80be-4a36-816b-b88af535c8c2)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "sourceId": "smokvica-brna-expanded",
+      "url": "https://visitsmokvicabrna.com/",
+      "stage": "extract",
+      "error": "Model call failed: http-error:429:{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (7f5e3821-82fa-4dce-b608-16bac51db578)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "sourceId": "aminess-korcula-entertainment",
+      "url": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+      "stage": "extract",
+      "error": "Model call failed: http-error:429:{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (5a4bcf76-9427-4a31-afa6-cc0ebd28b5fc)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "sourceId": "hajduk-split-fixtures",
+      "url": "https://hajduk.hr/utakmice",
+      "stage": "fetch",
+      "error": "Safe retrieval blocked: http-error:403"
+    },
+    {
+      "sourceId": "hajduk-split-fixtures",
+      "url": "https://www.sofascore.com/football/team/hnk-hajduk-split/2036",
+      "stage": "fetch",
+      "error": "Safe retrieval blocked: http-error:403"
+    }
+  ],
+  "rejectedCandidates": [
+    {
+      "sourceId": "visit-korcula-racisce",
+      "url": "https://visitkorcula.eu/en/events/summer-in-racisce/",
+      "reason": "missing-venue",
+      "candidate": {
+        "hr": "Flavours and Scents of December",
+        "en": "Flavours and Scents of December",
+        "de": "",
+        "it": "",
+        "sl": "",
+        "fr": "",
+        "date": "2026-11-28",
+        "endDate": "2026-12-01",
+        "town": "racisce",
+        "venue": "",
+        "cats": [
+          "kids"
+        ],
+        "desc": {
+          "hr": "Ugošćeno u decembru",
+          "fr": "Accueil en décembre"
+        }
+      }
+    },
+    {
+      "sourceId": "visit-korcula-racisce",
+      "url": "https://visitkorcula.eu/en/events/summer-in-racisce/",
+      "reason": "missing-venue",
+      "candidate": {
+        "hr": "Advent in Korčula 2026",
+        "en": "Advent in Korčula 2026",
+        "de": "",
+        "it": "",
+        "sl": "",
+        "fr": "",
+        "date": "2026-11-29",
+        "endDate": "2026-12-06",
+        "town": "racisce",
+        "venue": "",
+        "cats": [
+          "kids"
+        ],
+        "desc": {
+          "hr": "Advent u Korčuli 2026",
+          "fr": "Advent à Korčula 2026"
+        }
+      }
+    },
+    {
+      "sourceId": "visit-korcula-racisce",
+      "url": "https://visitkorcula.eu/en/events/summer-in-racisce/",
+      "reason": "missing-venue",
+      "candidate": {
+        "hr": "Camino Korčula Weekend 2027",
+        "en": "Camino Korčula Weekend 2027",
+        "de": "",
+        "it": "",
+        "sl": "",
+        "fr": "",
+        "date": "2027-03-19",
+        "endDate": "2027-03-21",
+        "town": "racisce",
+        "venue": "",
+        "cats": [
+          "kids"
+        ],
+        "desc": {
+          "hr": "Camino Korčula vikend 2027",
+          "fr": "Week-end Camino Korčula 2027"
+        }
+      }
+    },
+    {
+      "sourceId": "visit-korcula-racisce",
+      "url": "https://visitkorcula.eu/en/events/summer-in-racisce/",
+      "reason": "missing-venue",
+      "candidate": {
+        "hr": "Vela setemana (Holy Week)",
+        "en": "Vela setemana (Holy Week)",
+        "de": "",
+        "it": "",
+        "sl": "",
+        "fr": "",
+        "date": "2027-03-21",
+        "endDate": "2027-03-29",
+        "town": "racisce",
+        "venue": "",
+        "cats": [
+          "kids"
+        ],
+        "desc": {
+          "hr": "Vela setemana (Svetu noc)",
+          "fr": "Vela setemana (Semaine sainte)"
+        }
+      }
+    },
+    {
+      "sourceId": "visit-korcula-racisce",
+      "url": "https://visitkorcula.eu/en/events/summer-in-racisce/",
+      "reason": "missing-venue",
+      "candidate": {
+        "hr": "Slow Food Korčula Festival - Spring Edition",
+        "en": "Slow Food Korčula Festival - Spring Edition",
+        "de": "",
+        "it": "",
+        "sl": "",
+        "fr": "",
+        "date": "2027-03-22",
+        "endDate": "2027-03-29",
+        "town": "racisce",
+        "venue": "",
+        "cats": [
+          "kids"
+        ],
+        "desc": {
+          "hr": "Festival Slow Food Korčula - proljetna edicija",
+          "fr": "Festival Slow Food Korčula - édition printemps"
+        }
+      }
+    },
+    {
+      "sourceId": "visit-korcula-racisce",
+      "url": "https://visitkorcula.eu/en/events/summer-in-racisce/",
+      "reason": "missing-venue",
+      "candidate": {
+        "hr": "Re-create!",
+        "en": "Re-create!",
+        "de": "",
+        "it": "",
+        "sl": "",
+        "fr": "",
+        "date": "2027-09-23",
+        "endDate": "2027-09-30",
+        "town": "racisce",
+        "venue": "",
+        "cats": [
+          "kids"
+        ],
+        "desc": {
+          "hr": "Re-create!",
+          "fr": "Re-create!"
+        }
+      }
+    },
+    {
+      "sourceId": "tz-blato",
+      "url": "https://tzo-blato.hr/en/",
+      "reason": "title-too-long:191",
+      "candidate": {
+        "hr": "Javni poziv za prijavu programa sufinanciranja marketinških aktivnosti pružatelja ugostiteljskih usluga smještaja u domaćinstvu (privatni iznajmljivači – objekti u domaćinstvu) u 2026. godini",
+        "en": "Public Call for Application for the Subsidy Program for Marketing Activities of Accommodation Providers in Private Homes (Private Renters - Objects in Private Homes) in 2026",
+        "de": "",
+        "it": "",
+        "sl": "",
+        "fr": "",
+        "date": "2026-04-07",
+        "time": "",
+        "town": "blato",
+        "venue": "Blato",
+        "cats": [
+          "festival"
+        ],
+        "desc": {
+          "hr": "Temeljem Programa rada za 2026.godinu, Turistička zajednica Općine Blato objavljuje Javni poziv za prijavu programa sufinanciranja marketinških aktivnosti pružatelja ugostiteljskih usluga smještaja u domaćinstvu (privatni iznajmljivači – objekti u domaćinstvu) u 2026. godini.",
+          "de": "",
+          "it": "",
+          "sl": "",
+          "fr": ""
+        }
+      }
+    },
+    {
+      "sourceId": "blue-korcula",
+      "url": "https://bluekorcula.com/club",
+      "reason": "bad-date:",
+      "candidate": {
+        "hr": "Upcoming Events",
+        "en": "Upcoming Events",
+        "de": "",
+        "it": "",
+        "sl": "",
+        "fr": "",
+        "date": "",
+        "endDate": "",
+        "time": "",
+        "town": "korcula",
+        "venue": "Blue Club",
+        "cats": [
+          "nightlife"
+        ],
+        "desc": {
+          "en": "The energy at Blue Bar transforms into an electrifying nightlife experience at Blue Club."
+        }
+      }
+    },
+    {
+      "sourceId": "korculainfo-guides",
+      "url": "https://www.korculainfo.com/zrnovo/",
+      "reason": "bad-date:",
+      "candidate": {
+        "hr": "Feast of Sveti Martin",
+        "en": "Feast of the village’s patron saint",
+        "de": "",
+        "it": "",
+        "sl": "",
+        "fr": "",
+        "date": "",
+        "endDate": "",
+        "time": "",
+        "town": "zrnovo",
+        "venue": "Sveti Martin church in Kampus",
+        "cats": [
+          "religious"
+        ],
+        "desc": {
+          "hr": "The feast of the village’s patron saint, celebrated at the Sveti Martin church in Kampus.",
+          "de": "",
+          "it": "",
+          "sl": "",
+          "fr": ""
+        }
+      }
+    },
+    {
+      "sourceId": "korculainfo-guides",
+      "url": "https://www.korculainfo.com/zrnovo/",
+      "reason": "missing-venue",
+      "candidate": {
+        "hr": "Wine making",
+        "en": "autumn grape harvest and winemaking",
+        "de": "",
+        "it": "",
+        "sl": "",
+        "fr": "",
+        "date": "",
+        "endDate": "",
+        "time": "",
+        "town": "zrnovo",
+        "venue": "",
+        "cats": [
+          "food"
+        ],
+        "desc": {
+          "hr": "autumn grape harvest and winemaking is a village tradition still practised in Žrnovo.",
+          "de": "",
+          "it": "",
+          "sl": "",
+          "fr": ""
+        }
+      }
+    },
+    {
+      "sourceId": "korculainfo-guides",
+      "url": "https://www.korculainfo.com/pupnat/",
+      "reason": "bad-date:Summer",
+      "candidate": {
+        "hr": "Kumpanija",
+        "en": "Kumpanija",
+        "de": "",
+        "it": "",
+        "sl": "",
+        "fr": "",
+        "date": "Summer",
+        "endDate": "",
+        "time": "Weekday · Time",
+        "town": "pupnat",
+        "venue": "Pupnat",
+        "cats": [
+          "folklore"
+        ],
+        "desc": {
+          "en": "A chain sword dance with roots going back centuries, and is listed as an item of UNESCO intangible cultural heritage."
+        }
+      }
+    }
+  ],
+  "totals": {
+    "published": 0,
+    "review": 61,
+    "aiCalls": 198
+  },
+  "aiUsage": [
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:83ac266ec2cfd41d09d7122b3ed8f0033594202438a67f2d65179036b9c15cae",
+      "promptChars": 11311,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 2839,
+        "completion_tokens": 419,
+        "total_tokens": 3258,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 26.302217483520508
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:83ac266ec2cfd41d09d7122b3ed8f0033594202438a67f2d65179036b9c15cae",
+      "promptChars": 245,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 83,
+        "completion_tokens": 83,
+        "total_tokens": 166,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 3.235870361328125
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:83ac266ec2cfd41d09d7122b3ed8f0033594202438a67f2d65179036b9c15cae",
+      "promptChars": 4466,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 1176,
+        "completion_tokens": 270,
+        "total_tokens": 1446,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 14.257741928100586
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:83ac266ec2cfd41d09d7122b3ed8f0033594202438a67f2d65179036b9c15cae",
+      "promptChars": 236,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 83,
+        "completion_tokens": 79,
+        "total_tokens": 162,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 3.0963990688323975
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:83ac266ec2cfd41d09d7122b3ed8f0033594202438a67f2d65179036b9c15cae",
+      "promptChars": 4453,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 1176,
+        "completion_tokens": 463,
+        "total_tokens": 1639,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 20.987234115600586
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:83ac266ec2cfd41d09d7122b3ed8f0033594202438a67f2d65179036b9c15cae",
+      "promptChars": 241,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 84,
+        "completion_tokens": 82,
+        "total_tokens": 166,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 3.2051210403442383
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:83ac266ec2cfd41d09d7122b3ed8f0033594202438a67f2d65179036b9c15cae",
+      "promptChars": 4464,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 1178,
+        "completion_tokens": 201,
+        "total_tokens": 1379,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 11.860099792480469
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:fe619324f3a6192b652aec50629367a1cb629b6fcb50373a7d2c92a9f6f734a0",
+      "promptChars": 11773,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3058,
+        "completion_tokens": 1304,
+        "total_tokens": 4362,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 58.06221008300781
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:fe619324f3a6192b652aec50629367a1cb629b6fcb50373a7d2c92a9f6f734a0",
+      "promptChars": 216,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 81,
+        "completion_tokens": 48,
+        "total_tokens": 129,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 2.0072593688964844
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:fe619324f3a6192b652aec50629367a1cb629b6fcb50373a7d2c92a9f6f734a0",
+      "promptChars": 4910,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 1389,
+        "completion_tokens": 285,
+        "total_tokens": 1674,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 15.658013343811035
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:fe619324f3a6192b652aec50629367a1cb629b6fcb50373a7d2c92a9f6f734a0",
+      "promptChars": 231,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 79,
+        "completion_tokens": 70,
+        "total_tokens": 149,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 2.7661144733428955
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:fe619324f3a6192b652aec50629367a1cb629b6fcb50373a7d2c92a9f6f734a0",
+      "promptChars": 4887,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 1379,
+        "completion_tokens": 269,
+        "total_tokens": 1648,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 15.058942794799805
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:fe619324f3a6192b652aec50629367a1cb629b6fcb50373a7d2c92a9f6f734a0",
+      "promptChars": 220,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 80,
+        "completion_tokens": 51,
+        "total_tokens": 131,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 2.1077442169189453
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:fe619324f3a6192b652aec50629367a1cb629b6fcb50373a7d2c92a9f6f734a0",
+      "promptChars": 4886,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 1378,
+        "completion_tokens": 248,
+        "total_tokens": 1626,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 14.322599411010742
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:fe619324f3a6192b652aec50629367a1cb629b6fcb50373a7d2c92a9f6f734a0",
+      "promptChars": 218,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 80,
+        "completion_tokens": 56,
+        "total_tokens": 136,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 2.28208327293396
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:fe619324f3a6192b652aec50629367a1cb629b6fcb50373a7d2c92a9f6f734a0",
+      "promptChars": 4891,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 1379,
+        "completion_tokens": 398,
+        "total_tokens": 1777,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 19.55689239501953
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:460f58980234645a5a60f3001a35551d69d0e7859453112c0d9c7685801bd9a4",
+      "promptChars": 17258,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 5323,
+        "completion_tokens": 2910,
+        "total_tokens": 8233,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 123.38848876953125
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:460f58980234645a5a60f3001a35551d69d0e7859453112c0d9c7685801bd9a4",
+      "promptChars": 217,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 78,
+        "completion_tokens": 39,
+        "total_tokens": 117,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 1.6810930967330933
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:460f58980234645a5a60f3001a35551d69d0e7859453112c0d9c7685801bd9a4",
+      "promptChars": 10375,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3646,
+        "completion_tokens": 454,
+        "total_tokens": 4100,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 30.846271514892578
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:460f58980234645a5a60f3001a35551d69d0e7859453112c0d9c7685801bd9a4",
+      "promptChars": 235,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 88,
+        "completion_tokens": 76,
+        "total_tokens": 164,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 3.012388229370117
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:460f58980234645a5a60f3001a35551d69d0e7859453112c0d9c7685801bd9a4",
+      "promptChars": 10414,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3668,
+        "completion_tokens": 218,
+        "total_tokens": 3886,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 22.708072662353516
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:460f58980234645a5a60f3001a35551d69d0e7859453112c0d9c7685801bd9a4",
+      "promptChars": 240,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 89,
+        "completion_tokens": 83,
+        "total_tokens": 172,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 3.2605817317962646
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:460f58980234645a5a60f3001a35551d69d0e7859453112c0d9c7685801bd9a4",
+      "promptChars": 10424,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3670,
+        "completion_tokens": 495,
+        "total_tokens": 4165,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 32.374698638916016
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:460f58980234645a5a60f3001a35551d69d0e7859453112c0d9c7685801bd9a4",
+      "promptChars": 227,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 87,
+        "completion_tokens": 73,
+        "total_tokens": 160,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 2.9036662578582764
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:460f58980234645a5a60f3001a35551d69d0e7859453112c0d9c7685801bd9a4",
+      "promptChars": 10399,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3659,
+        "completion_tokens": 18,
+        "total_tokens": 3677,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 15.697440147399902
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:460f58980234645a5a60f3001a35551d69d0e7859453112c0d9c7685801bd9a4",
+      "promptChars": 219,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 84,
+        "completion_tokens": 51,
+        "total_tokens": 135,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 2.124218463897705
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:460f58980234645a5a60f3001a35551d69d0e7859453112c0d9c7685801bd9a4",
+      "promptChars": 10385,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3654,
+        "completion_tokens": 8000,
+        "total_tokens": 11654,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 293.9918518066406
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:460f58980234645a5a60f3001a35551d69d0e7859453112c0d9c7685801bd9a4",
+      "promptChars": 10385,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3654,
+        "completion_tokens": 161,
+        "total_tokens": 3815,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 20.662946701049805
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:460f58980234645a5a60f3001a35551d69d0e7859453112c0d9c7685801bd9a4",
+      "promptChars": 236,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 88,
+        "completion_tokens": 82,
+        "total_tokens": 170,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 3.221595287322998
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:460f58980234645a5a60f3001a35551d69d0e7859453112c0d9c7685801bd9a4",
+      "promptChars": 10428,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3664,
+        "completion_tokens": 236,
+        "total_tokens": 3900,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 23.3192195892334
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:460f58980234645a5a60f3001a35551d69d0e7859453112c0d9c7685801bd9a4",
+      "promptChars": 231,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 85,
+        "completion_tokens": 67,
+        "total_tokens": 152,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 2.6862223148345947
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:460f58980234645a5a60f3001a35551d69d0e7859453112c0d9c7685801bd9a4",
+      "promptChars": 10405,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3657,
+        "completion_tokens": 371,
+        "total_tokens": 4028,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 27.99754524230957
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:460f58980234645a5a60f3001a35551d69d0e7859453112c0d9c7685801bd9a4",
+      "promptChars": 249,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 95,
+        "completion_tokens": 98,
+        "total_tokens": 193,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 3.8083105087280273
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:460f58980234645a5a60f3001a35551d69d0e7859453112c0d9c7685801bd9a4",
+      "promptChars": 10453,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3675,
+        "completion_tokens": 485,
+        "total_tokens": 4160,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 32.04661178588867
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:460f58980234645a5a60f3001a35551d69d0e7859453112c0d9c7685801bd9a4",
+      "promptChars": 222,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 82,
+        "completion_tokens": 58,
+        "total_tokens": 140,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 2.360055923461914
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:460f58980234645a5a60f3001a35551d69d0e7859453112c0d9c7685801bd9a4",
+      "promptChars": 10388,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3653,
+        "completion_tokens": 453,
+        "total_tokens": 4106,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 30.840232849121094
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:460f58980234645a5a60f3001a35551d69d0e7859453112c0d9c7685801bd9a4",
+      "promptChars": 243,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 93,
+        "completion_tokens": 102,
+        "total_tokens": 195,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 3.939544677734375
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:460f58980234645a5a60f3001a35551d69d0e7859453112c0d9c7685801bd9a4",
+      "promptChars": 10443,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3673,
+        "completion_tokens": 627,
+        "total_tokens": 4300,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 36.98960494995117
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:460f58980234645a5a60f3001a35551d69d0e7859453112c0d9c7685801bd9a4",
+      "promptChars": 233,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 89,
+        "completion_tokens": 79,
+        "total_tokens": 168,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 3.121110439300537
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:460f58980234645a5a60f3001a35551d69d0e7859453112c0d9c7685801bd9a4",
+      "promptChars": 10424,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3666,
+        "completion_tokens": 142,
+        "total_tokens": 3808,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 20.049880981445312
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:460f58980234645a5a60f3001a35551d69d0e7859453112c0d9c7685801bd9a4",
+      "promptChars": 255,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 97,
+        "completion_tokens": 107,
+        "total_tokens": 204,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 4.13035774230957
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:460f58980234645a5a60f3001a35551d69d0e7859453112c0d9c7685801bd9a4",
+      "promptChars": 10470,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3681,
+        "completion_tokens": 365,
+        "total_tokens": 4046,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 27.887184143066406
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:460f58980234645a5a60f3001a35551d69d0e7859453112c0d9c7685801bd9a4",
+      "promptChars": 256,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 95,
+        "completion_tokens": 107,
+        "total_tokens": 202,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 4.1221208572387695
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:460f58980234645a5a60f3001a35551d69d0e7859453112c0d9c7685801bd9a4",
+      "promptChars": 10442,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3673,
+        "completion_tokens": 218,
+        "total_tokens": 3891,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 22.72866439819336
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:460f58980234645a5a60f3001a35551d69d0e7859453112c0d9c7685801bd9a4",
+      "promptChars": 244,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 91,
+        "completion_tokens": 98,
+        "total_tokens": 189,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 3.7918362617492676
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:460f58980234645a5a60f3001a35551d69d0e7859453112c0d9c7685801bd9a4",
+      "promptChars": 10433,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3670,
+        "completion_tokens": 17,
+        "total_tokens": 3687,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 15.707877159118652
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:460f58980234645a5a60f3001a35551d69d0e7859453112c0d9c7685801bd9a4",
+      "promptChars": 230,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 85,
+        "completion_tokens": 63,
+        "total_tokens": 148,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 2.546751022338867
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:460f58980234645a5a60f3001a35551d69d0e7859453112c0d9c7685801bd9a4",
+      "promptChars": 10423,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3662,
+        "completion_tokens": 519,
+        "total_tokens": 4181,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 33.1785774230957
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:460f58980234645a5a60f3001a35551d69d0e7859453112c0d9c7685801bd9a4",
+      "promptChars": 258,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 94,
+        "completion_tokens": 85,
+        "total_tokens": 179,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 3.350910186767578
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:460f58980234645a5a60f3001a35551d69d0e7859453112c0d9c7685801bd9a4",
+      "promptChars": 10428,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3672,
+        "completion_tokens": 258,
+        "total_tokens": 3930,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 24.119258880615234
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:975bdb4ea5613eaf4ad7d6b29b7ed59eac196743b4119688823af45d284456d3",
+      "promptChars": 16923,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 4967,
+        "completion_tokens": 284,
+        "total_tokens": 5251,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 30.359359741210938
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:975bdb4ea5613eaf4ad7d6b29b7ed59eac196743b4119688823af45d284456d3",
+      "promptChars": 255,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 86,
+        "completion_tokens": 99,
+        "total_tokens": 185,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 3.8061110973358154
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:975bdb4ea5613eaf4ad7d6b29b7ed59eac196743b4119688823af45d284456d3",
+      "promptChars": 10119,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3313,
+        "completion_tokens": 19,
+        "total_tokens": 3332,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 14.30728530883789
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:975bdb4ea5613eaf4ad7d6b29b7ed59eac196743b4119688823af45d284456d3",
+      "promptChars": 231,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 80,
+        "completion_tokens": 75,
+        "total_tokens": 155,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 2.9445719718933105
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:975bdb4ea5613eaf4ad7d6b29b7ed59eac196743b4119688823af45d284456d3",
+      "promptChars": 10063,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3300,
+        "completion_tokens": 223,
+        "total_tokens": 3523,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 21.36678123474121
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:32400162a7620b03b2b1425e6d865661316971bcf1b8ad2bb5739f2a7a926d07",
+      "promptChars": 14279,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 4225,
+        "completion_tokens": 499,
+        "total_tokens": 4724,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 34.79997253417969
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:32400162a7620b03b2b1425e6d865661316971bcf1b8ad2bb5739f2a7a926d07",
+      "promptChars": 276,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 98,
+        "completion_tokens": 152,
+        "total_tokens": 250,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 5.703528881072998
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:32400162a7620b03b2b1425e6d865661316971bcf1b8ad2bb5739f2a7a926d07",
+      "promptChars": 7487,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 2581,
+        "completion_tokens": 249,
+        "total_tokens": 2830,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 19.312097549438477
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:32400162a7620b03b2b1425e6d865661316971bcf1b8ad2bb5739f2a7a926d07",
+      "promptChars": 255,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 91,
+        "completion_tokens": 8000,
+        "total_tokens": 8091,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 279.3174133300781
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:32400162a7620b03b2b1425e6d865661316971bcf1b8ad2bb5739f2a7a926d07",
+      "promptChars": 255,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 91,
+        "completion_tokens": 105,
+        "total_tokens": 196,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 4.0359110832214355
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:32400162a7620b03b2b1425e6d865661316971bcf1b8ad2bb5739f2a7a926d07",
+      "promptChars": 7444,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 2565,
+        "completion_tokens": 183,
+        "total_tokens": 2748,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 16.944923400878906
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:32400162a7620b03b2b1425e6d865661316971bcf1b8ad2bb5739f2a7a926d07",
+      "promptChars": 255,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 91,
+        "completion_tokens": 106,
+        "total_tokens": 197,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 4.070778846740723
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:32400162a7620b03b2b1425e6d865661316971bcf1b8ad2bb5739f2a7a926d07",
+      "promptChars": 7444,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 2565,
+        "completion_tokens": 482,
+        "total_tokens": 3047,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 27.370405197143555
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:345e56431c350b7cd71211a897f45e2e25541b239c98fe5b98114d1abedec2fa",
+      "promptChars": 14566,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 4029,
+        "completion_tokens": 1936,
+        "total_tokens": 5965,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 84.0978012084961
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:345e56431c350b7cd71211a897f45e2e25541b239c98fe5b98114d1abedec2fa",
+      "promptChars": 252,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 93,
+        "completion_tokens": 104,
+        "total_tokens": 197,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 4.009280204772949
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:345e56431c350b7cd71211a897f45e2e25541b239c98fe5b98114d1abedec2fa",
+      "promptChars": 7771,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 2383,
+        "completion_tokens": 358,
+        "total_tokens": 2741,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 22.297216415405273
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:345e56431c350b7cd71211a897f45e2e25541b239c98fe5b98114d1abedec2fa",
+      "promptChars": 316,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 114,
+        "completion_tokens": 209,
+        "total_tokens": 323,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 7.756892204284668
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:345e56431c350b7cd71211a897f45e2e25541b239c98fe5b98114d1abedec2fa",
+      "promptChars": 7874,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 2406,
+        "completion_tokens": 337,
+        "total_tokens": 2743,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 21.659717559814453
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:345e56431c350b7cd71211a897f45e2e25541b239c98fe5b98114d1abedec2fa",
+      "promptChars": 246,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 91,
+        "completion_tokens": 97,
+        "total_tokens": 188,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 3.7569684982299805
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:345e56431c350b7cd71211a897f45e2e25541b239c98fe5b98114d1abedec2fa",
+      "promptChars": 7738,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 2371,
+        "completion_tokens": 545,
+        "total_tokens": 2916,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 28.768077850341797
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:345e56431c350b7cd71211a897f45e2e25541b239c98fe5b98114d1abedec2fa",
+      "promptChars": 248,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 91,
+        "completion_tokens": 94,
+        "total_tokens": 185,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 3.65236496925354
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:345e56431c350b7cd71211a897f45e2e25541b239c98fe5b98114d1abedec2fa",
+      "promptChars": 7742,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 2371,
+        "completion_tokens": 237,
+        "total_tokens": 2608,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 18.028785705566406
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:345e56431c350b7cd71211a897f45e2e25541b239c98fe5b98114d1abedec2fa",
+      "promptChars": 222,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 84,
+        "completion_tokens": 8000,
+        "total_tokens": 8084,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 279.28857421875
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:345e56431c350b7cd71211a897f45e2e25541b239c98fe5b98114d1abedec2fa",
+      "promptChars": 222,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 84,
+        "completion_tokens": 63,
+        "total_tokens": 147,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 2.5426323413848877
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:345e56431c350b7cd71211a897f45e2e25541b239c98fe5b98114d1abedec2fa",
+      "promptChars": 7686,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 2354,
+        "completion_tokens": 614,
+        "total_tokens": 2968,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 31.103940963745117
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:345e56431c350b7cd71211a897f45e2e25541b239c98fe5b98114d1abedec2fa",
+      "promptChars": 228,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 80,
+        "completion_tokens": 76,
+        "total_tokens": 156,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 2.9794397354125977
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:345e56431c350b7cd71211a897f45e2e25541b239c98fe5b98114d1abedec2fa",
+      "promptChars": 7725,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 2358,
+        "completion_tokens": 339,
+        "total_tokens": 2697,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 21.531763076782227
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:345e56431c350b7cd71211a897f45e2e25541b239c98fe5b98114d1abedec2fa",
+      "promptChars": 216,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 81,
+        "completion_tokens": 52,
+        "total_tokens": 133,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 2.146730661392212
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:345e56431c350b7cd71211a897f45e2e25541b239c98fe5b98114d1abedec2fa",
+      "promptChars": 7676,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 2351,
+        "completion_tokens": 369,
+        "total_tokens": 2720,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 22.548969268798828
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:345e56431c350b7cd71211a897f45e2e25541b239c98fe5b98114d1abedec2fa",
+      "promptChars": 258,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 96,
+        "completion_tokens": 108,
+        "total_tokens": 204,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 4.161107540130615
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:345e56431c350b7cd71211a897f45e2e25541b239c98fe5b98114d1abedec2fa",
+      "promptChars": 7767,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 2378,
+        "completion_tokens": 310,
+        "total_tokens": 2688,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 20.60296630859375
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:345e56431c350b7cd71211a897f45e2e25541b239c98fe5b98114d1abedec2fa",
+      "promptChars": 258,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 97,
+        "completion_tokens": 8000,
+        "total_tokens": 8097,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 279.3421325683594
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:345e56431c350b7cd71211a897f45e2e25541b239c98fe5b98114d1abedec2fa",
+      "promptChars": 258,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 97,
+        "completion_tokens": 112,
+        "total_tokens": 209,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 4.304697036743164
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:345e56431c350b7cd71211a897f45e2e25541b239c98fe5b98114d1abedec2fa",
+      "promptChars": 7768,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 2379,
+        "completion_tokens": 221,
+        "total_tokens": 2600,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 17.503849029541016
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:345e56431c350b7cd71211a897f45e2e25541b239c98fe5b98114d1abedec2fa",
+      "promptChars": 237,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 84,
+        "completion_tokens": 70,
+        "total_tokens": 154,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 2.7867071628570557
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:345e56431c350b7cd71211a897f45e2e25541b239c98fe5b98114d1abedec2fa",
+      "promptChars": 7714,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 2355,
+        "completion_tokens": 353,
+        "total_tokens": 2708,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 22.007556915283203
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:dc0e7830e13b5b38da14e4884a0c56b0873ce5a4dc59f8852b4384e3065adfdb",
+      "promptChars": 15302,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 4603,
+        "completion_tokens": 8000,
+        "total_tokens": 12603,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 297.9003601074219
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:dc0e7830e13b5b38da14e4884a0c56b0873ce5a4dc59f8852b4384e3065adfdb",
+      "promptChars": 15302,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 4603,
+        "completion_tokens": 8000,
+        "total_tokens": 12603,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 297.9003601074219
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:dc0e7830e13b5b38da14e4884a0c56b0873ce5a4dc59f8852b4384e3065adfdb",
+      "promptChars": 15302,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 4603,
+        "completion_tokens": 8000,
+        "total_tokens": 12603,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 297.9003601074219
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:dc0e7830e13b5b38da14e4884a0c56b0873ce5a4dc59f8852b4384e3065adfdb",
+      "promptChars": 15302,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 4603,
+        "completion_tokens": 8000,
+        "total_tokens": 12603,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 297.9003601074219
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:dc0e7830e13b5b38da14e4884a0c56b0873ce5a4dc59f8852b4384e3065adfdb",
+      "promptChars": 15302,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 4603,
+        "completion_tokens": 1946,
+        "total_tokens": 6549,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 86.81053161621094
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:dc0e7830e13b5b38da14e4884a0c56b0873ce5a4dc59f8852b4384e3065adfdb",
+      "promptChars": 283,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 94,
+        "completion_tokens": 157,
+        "total_tokens": 251,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 5.861393928527832
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:dc0e7830e13b5b38da14e4884a0c56b0873ce5a4dc59f8852b4384e3065adfdb",
+      "promptChars": 8555,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 2971,
+        "completion_tokens": 491,
+        "total_tokens": 3462,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 29.356351852416992
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:dc0e7830e13b5b38da14e4884a0c56b0873ce5a4dc59f8852b4384e3065adfdb",
+      "promptChars": 234,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 83,
+        "completion_tokens": 8000,
+        "total_tokens": 8083,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 279.2844543457031
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:dc0e7830e13b5b38da14e4884a0c56b0873ce5a4dc59f8852b4384e3065adfdb",
+      "promptChars": 234,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 83,
+        "completion_tokens": 79,
+        "total_tokens": 162,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 3.0963990688323975
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:dc0e7830e13b5b38da14e4884a0c56b0873ce5a4dc59f8852b4384e3065adfdb",
+      "promptChars": 8461,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 2948,
+        "completion_tokens": 506,
+        "total_tokens": 3454,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 29.78464126586914
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:dc0e7830e13b5b38da14e4884a0c56b0873ce5a4dc59f8852b4384e3065adfdb",
+      "promptChars": 218,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 78,
+        "completion_tokens": 38,
+        "total_tokens": 116,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 1.6462252140045166
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:dc0e7830e13b5b38da14e4884a0c56b0873ce5a4dc59f8852b4384e3065adfdb",
+      "promptChars": 8437,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 2938,
+        "completion_tokens": 232,
+        "total_tokens": 3170,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 20.18967056274414
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:dc0e7830e13b5b38da14e4884a0c56b0873ce5a4dc59f8852b4384e3065adfdb",
+      "promptChars": 218,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 78,
+        "completion_tokens": 45,
+        "total_tokens": 123,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 1.8903000354766846
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:dc0e7830e13b5b38da14e4884a0c56b0873ce5a4dc59f8852b4384e3065adfdb",
+      "promptChars": 8437,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 2941,
+        "completion_tokens": 244,
+        "total_tokens": 3185,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 20.620441436767578
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:dc0e7830e13b5b38da14e4884a0c56b0873ce5a4dc59f8852b4384e3065adfdb",
+      "promptChars": 218,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 78,
+        "completion_tokens": 44,
+        "total_tokens": 122,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 1.855432152748108
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:dc0e7830e13b5b38da14e4884a0c56b0873ce5a4dc59f8852b4384e3065adfdb",
+      "promptChars": 8444,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 2939,
+        "completion_tokens": 109,
+        "total_tokens": 3048,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 15.905047416687012
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:dc0e7830e13b5b38da14e4884a0c56b0873ce5a4dc59f8852b4384e3065adfdb",
+      "promptChars": 218,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 78,
+        "completion_tokens": 51,
+        "total_tokens": 129,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 2.0995070934295654
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:dc0e7830e13b5b38da14e4884a0c56b0873ce5a4dc59f8852b4384e3065adfdb",
+      "promptChars": 8436,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 2937,
+        "completion_tokens": 172,
+        "total_tokens": 3109,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 18.093482971191406
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:dc0e7830e13b5b38da14e4884a0c56b0873ce5a4dc59f8852b4384e3065adfdb",
+      "promptChars": 221,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 77,
+        "completion_tokens": 44,
+        "total_tokens": 121,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 1.851313591003418
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:dc0e7830e13b5b38da14e4884a0c56b0873ce5a4dc59f8852b4384e3065adfdb",
+      "promptChars": 8487,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 2951,
+        "completion_tokens": 280,
+        "total_tokens": 3231,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 21.9168701171875
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:dc0e7830e13b5b38da14e4884a0c56b0873ce5a4dc59f8852b4384e3065adfdb",
+      "promptChars": 230,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 82,
+        "completion_tokens": 64,
+        "total_tokens": 146,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 2.569262981414795
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:dc0e7830e13b5b38da14e4884a0c56b0873ce5a4dc59f8852b4384e3065adfdb",
+      "promptChars": 8485,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 2957,
+        "completion_tokens": 238,
+        "total_tokens": 3195,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 20.477130889892578
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:dc0e7830e13b5b38da14e4884a0c56b0873ce5a4dc59f8852b4384e3065adfdb",
+      "promptChars": 234,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 82,
+        "completion_tokens": 73,
+        "total_tokens": 155,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 2.883073329925537
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:dc0e7830e13b5b38da14e4884a0c56b0873ce5a4dc59f8852b4384e3065adfdb",
+      "promptChars": 8509,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 2963,
+        "completion_tokens": 467,
+        "total_tokens": 3430,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 28.486576080322266
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:dc0e7830e13b5b38da14e4884a0c56b0873ce5a4dc59f8852b4384e3065adfdb",
+      "promptChars": 218,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 77,
+        "completion_tokens": 42,
+        "total_tokens": 119,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 1.7815779447555542
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:dc0e7830e13b5b38da14e4884a0c56b0873ce5a4dc59f8852b4384e3065adfdb",
+      "promptChars": 8476,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 2953,
+        "completion_tokens": 248,
+        "total_tokens": 3201,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 20.80933380126953
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:dc0e7830e13b5b38da14e4884a0c56b0873ce5a4dc59f8852b4384e3065adfdb",
+      "promptChars": 230,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 81,
+        "completion_tokens": 72,
+        "total_tokens": 153,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 2.8440871238708496
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:dc0e7830e13b5b38da14e4884a0c56b0873ce5a4dc59f8852b4384e3065adfdb",
+      "promptChars": 8469,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 2946,
+        "completion_tokens": 428,
+        "total_tokens": 3374,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 27.056713104248047
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:dc0e7830e13b5b38da14e4884a0c56b0873ce5a4dc59f8852b4384e3065adfdb",
+      "promptChars": 230,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 81,
+        "completion_tokens": 68,
+        "total_tokens": 149,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 2.704615831375122
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:dc0e7830e13b5b38da14e4884a0c56b0873ce5a4dc59f8852b4384e3065adfdb",
+      "promptChars": 8464,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 2946,
+        "completion_tokens": 342,
+        "total_tokens": 3288,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 24.058082580566406
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:9f0ddd2ca1fcb44e18dd91e44cd081307961d78e486e99fcba82b154d54a3f02",
+      "promptChars": 11205,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 2931,
+        "completion_tokens": 161,
+        "total_tokens": 3092,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 17.685226440429688
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:9f0ddd2ca1fcb44e18dd91e44cd081307961d78e486e99fcba82b154d54a3f02",
+      "promptChars": 229,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 85,
+        "completion_tokens": 71,
+        "total_tokens": 156,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 2.8256936073303223
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:9f0ddd2ca1fcb44e18dd91e44cd081307961d78e486e99fcba82b154d54a3f02",
+      "promptChars": 4369,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 1272,
+        "completion_tokens": 252,
+        "total_tokens": 1524,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 14.025503158569336
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:1828d09f2f9fb8b39bf84a6f53a774c4404c174aced076f04fcf4be8048a225c",
+      "promptChars": 12187,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3098,
+        "completion_tokens": 120,
+        "total_tokens": 3218,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 16.943445205688477
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:af3fd49a617075de9d09e6252bd25a0ca15ca4ebb03c15a4ba513aa7a949e0d1",
+      "promptChars": 14729,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3565,
+        "completion_tokens": 733,
+        "total_tokens": 4298,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 40.24079132080078
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:af3fd49a617075de9d09e6252bd25a0ca15ca4ebb03c15a4ba513aa7a949e0d1",
+      "promptChars": 280,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 89,
+        "completion_tokens": 151,
+        "total_tokens": 240,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 5.631593704223633
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:af3fd49a617075de9d09e6252bd25a0ca15ca4ebb03c15a4ba513aa7a949e0d1",
+      "promptChars": 7951,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 1917,
+        "completion_tokens": 211,
+        "total_tokens": 2128,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 15.252395629882812
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:af3fd49a617075de9d09e6252bd25a0ca15ca4ebb03c15a4ba513aa7a949e0d1",
+      "promptChars": 288,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 92,
+        "completion_tokens": 145,
+        "total_tokens": 237,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 5.434742450714111
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:af3fd49a617075de9d09e6252bd25a0ca15ca4ebb03c15a4ba513aa7a949e0d1",
+      "promptChars": 7954,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 1918,
+        "completion_tokens": 234,
+        "total_tokens": 2152,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 16.058473587036133
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:af3fd49a617075de9d09e6252bd25a0ca15ca4ebb03c15a4ba513aa7a949e0d1",
+      "promptChars": 279,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 91,
+        "completion_tokens": 165,
+        "total_tokens": 256,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 6.127980709075928
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:af3fd49a617075de9d09e6252bd25a0ca15ca4ebb03c15a4ba513aa7a949e0d1",
+      "promptChars": 7949,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 1919,
+        "completion_tokens": 371,
+        "total_tokens": 2290,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 20.83948516845703
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:af3fd49a617075de9d09e6252bd25a0ca15ca4ebb03c15a4ba513aa7a949e0d1",
+      "promptChars": 280,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 92,
+        "completion_tokens": 145,
+        "total_tokens": 237,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 5.434742450714111
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:af3fd49a617075de9d09e6252bd25a0ca15ca4ebb03c15a4ba513aa7a949e0d1",
+      "promptChars": 7929,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 1914,
+        "completion_tokens": 305,
+        "total_tokens": 2219,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 18.517616271972656
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:305f2d61fd3d37e3ab1796ecf6f991447255c9afd3e9014e146184245962a778",
+      "promptChars": 20026,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 5545,
+        "completion_tokens": 471,
+        "total_tokens": 6016,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 39.26017379760742
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:305f2d61fd3d37e3ab1796ecf6f991447255c9afd3e9014e146184245962a778",
+      "promptChars": 211,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 78,
+        "completion_tokens": 40,
+        "total_tokens": 118,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 1.7159608602523804
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:305f2d61fd3d37e3ab1796ecf6f991447255c9afd3e9014e146184245962a778",
+      "promptChars": 13584,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3965,
+        "completion_tokens": 224,
+        "total_tokens": 4189,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 24.140491485595703
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:a12a46c119b864dc6620b09fbc35c6915245f8d707da18ad00ea11a6fec1561e",
+      "promptChars": 18469,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 4970,
+        "completion_tokens": 432,
+        "total_tokens": 5402,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 35.53215408325195
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:a12a46c119b864dc6620b09fbc35c6915245f8d707da18ad00ea11a6fec1561e",
+      "promptChars": 252,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 88,
+        "completion_tokens": 80,
+        "total_tokens": 168,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 3.1518595218658447
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:a12a46c119b864dc6620b09fbc35c6915245f8d707da18ad00ea11a6fec1561e",
+      "promptChars": 12023,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3395,
+        "completion_tokens": 287,
+        "total_tokens": 3682,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 23.989585876464844
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:a12a46c119b864dc6620b09fbc35c6915245f8d707da18ad00ea11a6fec1561e",
+      "promptChars": 236,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 89,
+        "completion_tokens": 94,
+        "total_tokens": 183,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 3.64412784576416
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:a12a46c119b864dc6620b09fbc35c6915245f8d707da18ad00ea11a6fec1561e",
+      "promptChars": 12023,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 3398,
+        "completion_tokens": 266,
+        "total_tokens": 3664,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 23.269716262817383
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f278109e8597b2bb116d059ccb9ea2cf1cd1f6824ed14efcd81366d7d2722979",
+      "promptChars": 19494,
+      "success": true,
+      "usage": {
+        "prompt_tokens": 5232,
+        "completion_tokens": 300,
+        "total_tokens": 5532,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 32.0086669921875
+      }
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f278109e8597b2bb116d059ccb9ea2cf1cd1f6824ed14efcd81366d7d2722979",
+      "promptChars": 236,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (42b55738-80cd-4d97-bae2-0d05ab0ccfeb)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f278109e8597b2bb116d059ccb9ea2cf1cd1f6824ed14efcd81366d7d2722979",
+      "promptChars": 236,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (6fca03ad-b619-4c7b-be67-7fee97fcf597)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f278109e8597b2bb116d059ccb9ea2cf1cd1f6824ed14efcd81366d7d2722979",
+      "promptChars": 236,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (8ff65e07-599e-4d2a-8ae2-9e86f7af5aef)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f278109e8597b2bb116d059ccb9ea2cf1cd1f6824ed14efcd81366d7d2722979",
+      "promptChars": 236,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (d77fb167-34eb-4f5f-a962-90d9d0cdc149)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f278109e8597b2bb116d059ccb9ea2cf1cd1f6824ed14efcd81366d7d2722979",
+      "promptChars": 236,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (d20185d9-e9d2-4899-a709-1c0658c870dc)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f278109e8597b2bb116d059ccb9ea2cf1cd1f6824ed14efcd81366d7d2722979",
+      "promptChars": 236,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (e7ee496a-0e9a-4880-b9ec-eaaa9ef84915)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f278109e8597b2bb116d059ccb9ea2cf1cd1f6824ed14efcd81366d7d2722979",
+      "promptChars": 13038,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (5355f1cf-719b-477f-ab8e-50e7537ea899)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f278109e8597b2bb116d059ccb9ea2cf1cd1f6824ed14efcd81366d7d2722979",
+      "promptChars": 13038,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (8ef6f977-8d02-40f6-9b9c-ec995d9f7294)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f278109e8597b2bb116d059ccb9ea2cf1cd1f6824ed14efcd81366d7d2722979",
+      "promptChars": 13038,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (bfa5951f-b06f-4f23-acf5-0d5b20d97e49)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f278109e8597b2bb116d059ccb9ea2cf1cd1f6824ed14efcd81366d7d2722979",
+      "promptChars": 13038,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (bcd71db8-afe1-47b8-93b6-1f35baf0e61f)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f278109e8597b2bb116d059ccb9ea2cf1cd1f6824ed14efcd81366d7d2722979",
+      "promptChars": 13038,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (63dc7c05-2451-4ff3-b15d-23dfad2471de)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f278109e8597b2bb116d059ccb9ea2cf1cd1f6824ed14efcd81366d7d2722979",
+      "promptChars": 13038,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (2d0a7cab-4370-4182-8ea4-53e0839d3020)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f278109e8597b2bb116d059ccb9ea2cf1cd1f6824ed14efcd81366d7d2722979",
+      "promptChars": 223,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (7e9b6e77-f3cb-430f-b3c0-68985317dc2a)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f278109e8597b2bb116d059ccb9ea2cf1cd1f6824ed14efcd81366d7d2722979",
+      "promptChars": 223,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (29b3244e-13bf-4838-8774-210ee6084a60)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f278109e8597b2bb116d059ccb9ea2cf1cd1f6824ed14efcd81366d7d2722979",
+      "promptChars": 223,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (0c20df41-886b-4ed7-b425-56e4ba79ee5d)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f278109e8597b2bb116d059ccb9ea2cf1cd1f6824ed14efcd81366d7d2722979",
+      "promptChars": 223,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (3b6f5bcd-c744-462d-837a-a0fecb43c0bc)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f278109e8597b2bb116d059ccb9ea2cf1cd1f6824ed14efcd81366d7d2722979",
+      "promptChars": 223,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (1901e3d2-de7a-4d8e-b8c8-c67822194bbb)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f278109e8597b2bb116d059ccb9ea2cf1cd1f6824ed14efcd81366d7d2722979",
+      "promptChars": 223,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (3305cd32-74f5-4f1c-a34b-dc4d4d8bc5c5)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f278109e8597b2bb116d059ccb9ea2cf1cd1f6824ed14efcd81366d7d2722979",
+      "promptChars": 12992,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (fd1626a8-5ef7-4292-a2b5-dcea61174932)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f278109e8597b2bb116d059ccb9ea2cf1cd1f6824ed14efcd81366d7d2722979",
+      "promptChars": 12992,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (08a61355-b3ca-4be5-84df-bf56152f85bb)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f278109e8597b2bb116d059ccb9ea2cf1cd1f6824ed14efcd81366d7d2722979",
+      "promptChars": 12992,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (40b18cc1-4ca9-4903-b1bb-8c730b6afb23)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f278109e8597b2bb116d059ccb9ea2cf1cd1f6824ed14efcd81366d7d2722979",
+      "promptChars": 12992,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (18f8c9b9-5997-4ec4-b7d2-608e18fce257)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f278109e8597b2bb116d059ccb9ea2cf1cd1f6824ed14efcd81366d7d2722979",
+      "promptChars": 12992,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (715c518e-3fa8-4795-bebb-6e2182616a4e)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f278109e8597b2bb116d059ccb9ea2cf1cd1f6824ed14efcd81366d7d2722979",
+      "promptChars": 12992,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (f1ef386e-e280-4fa9-93ae-a7ff8d74a0db)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f278109e8597b2bb116d059ccb9ea2cf1cd1f6824ed14efcd81366d7d2722979",
+      "promptChars": 228,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (483e551b-16b5-4d7c-8644-115ba718c94f)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f278109e8597b2bb116d059ccb9ea2cf1cd1f6824ed14efcd81366d7d2722979",
+      "promptChars": 228,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (1dd1e393-9232-471d-9ce2-d158b10082d2)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f278109e8597b2bb116d059ccb9ea2cf1cd1f6824ed14efcd81366d7d2722979",
+      "promptChars": 228,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (a4205690-d7c8-4d6d-a00b-ab4775e5586c)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f278109e8597b2bb116d059ccb9ea2cf1cd1f6824ed14efcd81366d7d2722979",
+      "promptChars": 228,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (add8efdb-cf5b-481b-8933-8f0ea1a958af)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f278109e8597b2bb116d059ccb9ea2cf1cd1f6824ed14efcd81366d7d2722979",
+      "promptChars": 228,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (05067a5e-332c-4193-a1e9-81fe2e2b2914)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f278109e8597b2bb116d059ccb9ea2cf1cd1f6824ed14efcd81366d7d2722979",
+      "promptChars": 228,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (4d1320ce-10f6-4860-b58f-dcfffb246f89)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f278109e8597b2bb116d059ccb9ea2cf1cd1f6824ed14efcd81366d7d2722979",
+      "promptChars": 13021,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (23895a0b-0384-4962-b907-337d01e08678)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f278109e8597b2bb116d059ccb9ea2cf1cd1f6824ed14efcd81366d7d2722979",
+      "promptChars": 13021,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (d17ed92d-6a1b-4c6b-8489-74158e861754)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f278109e8597b2bb116d059ccb9ea2cf1cd1f6824ed14efcd81366d7d2722979",
+      "promptChars": 13021,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (7d8043ab-4adc-4409-924b-f5af8b7b24da)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f278109e8597b2bb116d059ccb9ea2cf1cd1f6824ed14efcd81366d7d2722979",
+      "promptChars": 13021,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (45ced2ed-ca15-4df0-b64a-077690562ef6)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f278109e8597b2bb116d059ccb9ea2cf1cd1f6824ed14efcd81366d7d2722979",
+      "promptChars": 13021,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (9d7aa246-dbec-4fed-a57b-3e6d51df78f6)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f278109e8597b2bb116d059ccb9ea2cf1cd1f6824ed14efcd81366d7d2722979",
+      "promptChars": 13021,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (35011969-f10a-4513-9326-35a9e425612a)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:6c6142afe8835fd0d7649407b2ad457eac298a8310159c29060cd363b96c8d61",
+      "promptChars": 10892,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (0e323e92-647f-460e-929d-493a489ff4de)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:6c6142afe8835fd0d7649407b2ad457eac298a8310159c29060cd363b96c8d61",
+      "promptChars": 10892,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (70d6f7d6-c53d-4f0d-b871-f5ac0bbe735f)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:6c6142afe8835fd0d7649407b2ad457eac298a8310159c29060cd363b96c8d61",
+      "promptChars": 10892,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (e6bec47a-e578-4248-af8d-9fdae84e89aa)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:6c6142afe8835fd0d7649407b2ad457eac298a8310159c29060cd363b96c8d61",
+      "promptChars": 10892,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (129c4923-98f8-43d6-b131-cd7609962a27)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:6c6142afe8835fd0d7649407b2ad457eac298a8310159c29060cd363b96c8d61",
+      "promptChars": 10892,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (c485fba2-6edd-464c-9dc9-a55eb2e41215)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:6c6142afe8835fd0d7649407b2ad457eac298a8310159c29060cd363b96c8d61",
+      "promptChars": 10892,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (7a405bd3-12ec-417f-b657-3fd48daa46af)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f278109e8597b2bb116d059ccb9ea2cf1cd1f6824ed14efcd81366d7d2722979",
+      "promptChars": 19878,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (32b31183-8509-47b0-a9fe-eb921991bcc9)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f278109e8597b2bb116d059ccb9ea2cf1cd1f6824ed14efcd81366d7d2722979",
+      "promptChars": 19878,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (8005ea77-38df-4fb6-a50d-07225c2fe0c1)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f278109e8597b2bb116d059ccb9ea2cf1cd1f6824ed14efcd81366d7d2722979",
+      "promptChars": 19878,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (af260ab1-18d5-4ff0-9dfc-0e8acedadf30)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f278109e8597b2bb116d059ccb9ea2cf1cd1f6824ed14efcd81366d7d2722979",
+      "promptChars": 19878,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (9e4f393a-dabb-4649-82b5-aee673c799fe)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f278109e8597b2bb116d059ccb9ea2cf1cd1f6824ed14efcd81366d7d2722979",
+      "promptChars": 19878,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (c57d4e00-78e3-4fd0-af5e-e137f291cd76)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f278109e8597b2bb116d059ccb9ea2cf1cd1f6824ed14efcd81366d7d2722979",
+      "promptChars": 19878,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (57084df2-80be-4a36-816b-b88af535c8c2)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f172584820f07b63bca8964caea4f72da929bb23ef9ee514533ea03b9b542dc4",
+      "promptChars": 12247,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (4a72d705-bb89-4b12-8ab7-a9cef0980e7a)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f172584820f07b63bca8964caea4f72da929bb23ef9ee514533ea03b9b542dc4",
+      "promptChars": 12247,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (efac93ed-449d-4572-9aea-143404f0acf8)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f172584820f07b63bca8964caea4f72da929bb23ef9ee514533ea03b9b542dc4",
+      "promptChars": 12247,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (5310a49b-0e76-4172-a7bd-b57b7aacebcb)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f172584820f07b63bca8964caea4f72da929bb23ef9ee514533ea03b9b542dc4",
+      "promptChars": 12247,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (ef79513b-3b9f-4c8f-b7ab-188bd60ab882)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f172584820f07b63bca8964caea4f72da929bb23ef9ee514533ea03b9b542dc4",
+      "promptChars": 12247,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (973da9a2-3779-4a4d-9cc2-f482f9355c0f)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:f172584820f07b63bca8964caea4f72da929bb23ef9ee514533ea03b9b542dc4",
+      "promptChars": 12247,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (7f5e3821-82fa-4dce-b608-16bac51db578)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:a98bd5673c6c97227599e040c91fedae2921717805cb9850725039f457f6eeba",
+      "promptChars": 19239,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (027e6750-2928-4b70-a0e2-c0a93c2f2f5e)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:a98bd5673c6c97227599e040c91fedae2921717805cb9850725039f457f6eeba",
+      "promptChars": 19239,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (f176a4fb-68ea-4790-808d-39a519bbd075)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:a98bd5673c6c97227599e040c91fedae2921717805cb9850725039f457f6eeba",
+      "promptChars": 19239,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (51ce1297-50b4-442a-bfc6-1a362615a839)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:a98bd5673c6c97227599e040c91fedae2921717805cb9850725039f457f6eeba",
+      "promptChars": 19239,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (848e453f-a73c-4a81-8f19-d8ef04c4306d)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:a98bd5673c6c97227599e040c91fedae2921717805cb9850725039f457f6eeba",
+      "promptChars": 19239,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (bc09da57-8a3c-42d2-94b3-4c99ed6e806e)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    },
+    {
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "evidenceHash": "sha256:a98bd5673c6c97227599e040c91fedae2921717805cb9850725039f457f6eeba",
+      "promptChars": 19239,
+      "success": false,
+      "status": 429,
+      "body": "{\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (5a4bcf76-9427-4a31-afa6-cc0ebd28b5fc)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]}"
+    }
+  ],
+  "published": []
+}

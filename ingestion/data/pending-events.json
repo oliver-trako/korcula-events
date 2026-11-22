@@ -27825,6 +27825,270 @@
       ],
       "duplicateMatches": [],
       "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-korcula-racisce-2025-08-15-cinema-pancakes",
+      "sourceId": "visit-korcula-racisce",
+      "sourceUrl": "https://visitkorcula.eu/en/events/summer-in-racisce/",
+      "discoveredAt": "2026-11-22T13:23:44.746Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Kino i pancete",
+        "en": "Cinema & Pancakes",
+        "de": "Kino und Pfannkuchen",
+        "it": "Cinema e pancake",
+        "sl": "Kino in kruh",
+        "fr": "Cinéma et crêpes",
+        "date": "2025-08-15",
+        "town": "racisce",
+        "venue": "Račišće",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitkorcula.eu/en/events/summer-in-racisce/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-korcula-racisce-2025-08-15-cinema-pancakes"
+      },
+      "verifierConfidence": 0.6,
+      "verifierConcerns": [
+        "The title 'Cinema & Pancakes' seems to match the source page text 'Cinema & Pancakes' (13.8.), but the date '2025-08-15' appears to be in the future relative to the stated page context, which lists events from 2025. However, the source page text does list 'Cinema & Pancakes' on 13.8., which is actually 13th August, not 15th. The actual date of the event is therefore 13.8. 2025, not 15.8.",
+        "The category 'kids' does not appear to match the source page text, which describes the event as 'Sport games in Račišće' (Igre Račića). The category 'kids' seems to be an incorrect assumption.",
+        "The venue 'Račišće' is correct, but the town is listed as 'racisce', which seems to be a misspelling of the actual town name 'Račišće'."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "source-override-always-review",
+        "verifier-confidence-below-threshold:0.6"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-korcula-racisce-2025-08-16-racisce-cronicles",
+      "sourceId": "visit-korcula-racisce",
+      "sourceUrl": "https://visitkorcula.eu/en/events/summer-in-racisce/",
+      "discoveredAt": "2026-11-22T13:23:44.746Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Račiška kronika",
+        "en": "Račišće Cronicles",
+        "de": "Ratschicha-Kronik",
+        "it": "Cronaca di Račiška",
+        "sl": "Račiška kronika",
+        "fr": "Chronique de Račiška",
+        "date": "2025-08-16",
+        "town": "racisce",
+        "venue": "Račišće",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://visitkorcula.eu/en/events/summer-in-racisce/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-korcula-racisce-2025-08-16-racisce-cronicles"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The extracted candidate's date ('2025-08-16') is before the date of the next event on the page ('11.–16.8.2025'), which suggests that the event may have already occurred relative to the stated page context.",
+        "The title field contains a translation ('Račišće Cronicles') that is not present on the page. The page text uses the Croatian title ('Račiška kronika'), but it is not clear if this is the primary title.",
+        "The category ('kids') does not match the description of the event on the page ('Račiška kronika'). The page describes the event as part of the 'Events in August' section, but it does not explicitly mention a 'kids' category."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "source-override-always-review"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-lumbarda-2026-11-20-otok-korcula-proglasen-najpozeljnijom-turistickom-destinacij",
+      "sourceId": "visit-lumbarda",
+      "sourceUrl": "https://www.visitlumbarda.eu/",
+      "discoveredAt": "2026-11-22T13:23:44.746Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Otok Korčula proglašen najpoželjnijom turističkom destinacijom na otocima!",
+        "en": "Otok Korčula proglašen najpoželjnijom turističkom destinacijom na otocima!",
+        "de": "Die Insel Korčula wird zur unerwünschtesten touristischen Destination auf den Inseln erklärt!",
+        "it": "L'isola di Korčula viene dichiarata la destinazione turistica più sgradita nelle isole!",
+        "sl": "Otok Korčula je bil razglašen za najmanj željen turistično destinacijo na otokih!",
+        "fr": "L'île de Korčula est déclarée la destination touristique la moins désirée dans les îles!",
+        "date": "2026-11-20",
+        "time": "20. studenoga 2026.",
+        "town": "lumbarda",
+        "venue": "Lumbarda",
+        "cats": [
+          "festival"
+        ],
+        "source": "https://www.visitlumbarda.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-lumbarda-2026-11-20-otok-korcula-proglasen-najpozeljnijom-turistickom-destinacij"
+      },
+      "verifierConfidence": 0.9,
+      "verifierConcerns": [
+        "The title appears to be a direct quote from the page text, but it's not entirely clear if it's the actual title of the event or just a descriptive phrase.",
+        "The date '20. studenoga 2026.' appears to be well-supported by the page text, but it's not entirely clear if this is a specific event date or a recurring event date.",
+        "The venue 'Lumbarda' appears to be well-supported by the page text, but it's not entirely clear if this is a specific venue or a generic location.",
+        "The category 'festival' appears to be a reasonable inference based on the page text, but it's not entirely clear if this is the correct category for this specific event.",
+        "The page text appears to contain a mix of event announcements, general information about Lumbarda, and other content. It's not entirely clear how to distinguish between these different types of content."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-moreska-1937-01-01-puhacki-orkestar",
+      "sourceId": "moreska",
+      "sourceUrl": "https://moreska.eu/",
+      "discoveredAt": "2026-11-22T13:23:44.746Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Puhački orkestar",
+        "en": "Wind Orchestra",
+        "de": "Blasinstrumenten-Orchester",
+        "it": "Orchestra d'archi",
+        "sl": "Pihalni orkester",
+        "fr": "Orchestre d'instruments à vent",
+        "date": "1937-01-01",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "ticketUrl": "/tickets",
+        "source": "https://moreska.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-moreska-1937-01-01-puhacki-orkestar"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The 'date' field is '1937-01-01', which seems to be a date for the Puhački orkestar, but the page text mentions that the Moreška tradition has been preserved on the island since 1666. The Puhački orkestar might have been established later, but it's unclear if this is the correct date for the Puhački orkestar's founding.",
+        "The 'town' field is 'korcula', but the page text mentions Korčula as the location, not Korcula. It's possible that the difference in spelling is just a minor error, but it's worth noting.",
+        "The 'category' field is 'folklore', but the page text mentions that the Puhački orkestar performs 'mjedeni zvuk svake izvedbe od 1937. godine', which could imply a more specific category, such as 'wind orchestra' or 'orchestral music'."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-aminess-korcula-entertainment-2023-11-24-black-friday",
+      "sourceId": "aminess-korcula-entertainment",
+      "sourceUrl": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+      "discoveredAt": "2026-11-22T13:23:44.746Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Crni petak",
+        "en": "Black Friday",
+        "de": "Schwarzer Freitag",
+        "it": "Venerdì nero",
+        "sl": "Črni petek",
+        "fr": "Vendredi noir",
+        "date": "2023-11-24",
+        "endDate": "2024-10-24",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "festival"
+        ],
+        "source": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+        "extractionMethod": "ai",
+        "id": "ai-aminess-korcula-entertainment-2023-11-24-black-friday"
+      },
+      "verifierConfidence": 0.9,
+      "verifierConcerns": [],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-aminess-korcula-entertainment-2026-09-10-sail-away-korcula-tour-with-traditional-craftmanship-boat",
+      "sourceId": "aminess-korcula-entertainment",
+      "sourceUrl": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+      "discoveredAt": "2026-11-22T13:23:44.747Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Izdaj se na Korčuli - turistić brodom tradicionalnog izrađa",
+        "en": "Sail Away Korčula - tour with traditional craftmanship boat",
+        "de": "Sail Away Korčula - Bootstour mit traditioneller Handwerkskunst",
+        "it": "Partenza per Korčula - tour con imbarcazione d'epoca",
+        "sl": "Odpeljaj se na Korčulo - turistić z tradicionalnim plovilom",
+        "fr": "Partez pour Korčula - tour en bateau d'artisanat traditionnel",
+        "date": "2026-09-10",
+        "time": "04:00h",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "kids",
+          "folklore"
+        ],
+        "source": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+        "extractionMethod": "ai",
+        "id": "ai-aminess-korcula-entertainment-2026-09-10-sail-away-korcula-tour-with-traditional-craftmanship-boat"
+      },
+      "verifierConfidence": 0.7,
+      "verifierConcerns": [
+        "The title 'Sail Away Korčula - tour with traditional craftmanship boat' does not match the text near it, which describes the event as 'Join us on a boat trip around Korčula archipelago islands.' The text does not mention 'traditional craftmanship boat' or 'sail away'.",
+        "The time '04:00h' is not explicitly stated as the event time in the text near it. The text mentions '04:00h' as the time for the 'Sail Away Korčula' event, but it does not clarify whether this is the start or end time.",
+        "The venue 'Korčula' is not explicitly stated as the event venue in the text near it. The text mentions 'Korčula' as the location for the event, but it does not clarify whether this is the venue or a general location.",
+        "The category 'kids' does not match the text near it, which does not mention 'kids' or any related activities.",
+        "The category 'folklore' does not match the text near it, which does not mention 'folklore' or any related activities.",
+        "The date '2026-09-10' is not explicitly stated as the event date in the text near it. The text mentions 'Price on 10/09/2026' as the date for the event prices, but it does not clarify whether this is the event date or a general date.",
+        "The event 'Sail Away Korčula - tour with traditional craftmanship boat' appears to be a recurring event, as it is listed alongside other events with similar descriptions. However, the text near it does not provide any information about the event's frequency or schedule."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.7"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-aminess-korcula-entertainment-2026-09-10-taste-of-korcula",
+      "sourceId": "aminess-korcula-entertainment",
+      "sourceUrl": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+      "discoveredAt": "2026-11-22T13:23:44.747Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Užitak od Korčule",
+        "en": "Taste of Korčula",
+        "de": "Geschmack von Korčula",
+        "it": "Il Sapore di Korčula",
+        "sl": "Okus Korčule",
+        "fr": "Saveur de Korčula",
+        "date": "2026-09-10",
+        "time": "02:00h",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.aminess.com/en/accommodation/hotels-and-resorts/korcula/marko-polo-hotel-by-aminess/aminess-entertainment/",
+        "extractionMethod": "ai",
+        "id": "ai-aminess-korcula-entertainment-2026-09-10-taste-of-korcula"
+      },
+      "verifierConfidence": 0.4,
+      "verifierConcerns": [
+        "the title 'Taste of Korčula' is supported by the text 'Taste of Korčula' is listed as an event under the section 'You might also like...', but the text does not explicitly state that it is an event on the same date as the other events listed, which have start times between 03:00h and 04:00h",
+        "the date '2026-09-10' is supported by the text 'Price on 10/09/2026: €75' for the event 'Taste of Korčula', but it is not explicitly stated that the event occurs on this date",
+        "the time '02:00h' is supported by the text 'Taste of Korčula 02:00h Korčula From €70 Price on 10/09/2026: €70' under the section 'You might also like...'",
+        "the venue 'Korčula' is supported by the text 'Island of Korčula' which is a description of the location where the event 'Taste of Korčula' takes place",
+        "the town 'korcula' is supported by the text 'Island of Korčula' which is a description of the location where the event 'Taste of Korčula' takes place",
+        "the category 'kids' is not supported by the text, as the event 'Taste of Korčula' does not seem to be related to kids, but rather a food tasting tour",
+        "the description of the event 'Taste of Korčula' does not match the text, as the text does not mention anything about the event being a food tasting tour, but rather a guided city tour with a visitor to the observation deck and a tasting of homemade products from the family farm OPG Anica Bažika",
+        "the event 'Taste of Korčula' seems to be listed under the section 'You might also like...' which is a list of other events and activities, rather than a list of events that are happening on the same date as the other events listed",
+        "the text does not explicitly state that the event 'Taste of Korčula' is happening on the same date as the other events listed, which have start times between 03:00h and 04:00h"
+      ],
+      "blockingReasons": [
+        "past-event",
+        "verifier-confidence-below-threshold:0.4"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
     }
   ]
 }

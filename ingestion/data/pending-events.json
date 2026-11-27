@@ -30978,6 +30978,152 @@
       ],
       "duplicateMatches": [],
       "status": "needs-review"
+    },
+    {
+      "id": "ai-centar-kulture-korcula-2026-11-18-fantazija",
+      "sourceId": "centar-kulture-korcula",
+      "sourceUrl": "https://kulturakorcula.hr/kino-najave/",
+      "discoveredAt": "2026-11-27T15:19:29.327Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "KINO / OSVETNICI: Uspon doktora Dooma / Petak / 18.11. / 20:00 / 12+",
+        "en": "Fantazija",
+        "de": "KINO / HÄRTERE RECHT: Der Aufstieg des Dr. Doom / Freitag / 18.11. / 20:00 / 12+",
+        "it": "CINEMA / I VIGILI DEL FUOCO: L'ascesa del dottor Doom / Venerdì / 18.11. / 20:00 / 12+",
+        "sl": "KINO / OŠTRENCI: Vzpon dr. Doma / Petek / 18.11. / 20:00 / 12+",
+        "fr": "CINÉMA / LES GUETTES : L'ascension du docteur Doom / Vendredi / 18.11. / 20:00 / 12+",
+        "date": "2026-11-18",
+        "time": "20:00",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "ticketUrl": "Buy Tickets →",
+        "source": "https://kulturakorcula.hr/kino-najave/",
+        "extractionMethod": "ai",
+        "id": "ai-centar-kulture-korcula-2026-11-18-fantazija"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The date of the event 'KINO / OSVETNICI: Uspon doktora Dooma' is given as '18.11.2026', but the source page text lists the start date of the film as '17.12.2026'. This suggests that the event may have already occurred relative to the stated page context.",
+        "The title of the event 'KINO / OSVETNICI: Uspon doktora Dooma' is given as 'Fantazija' in the extracted candidate, but the source page text lists the title as 'KINO / OSVETNICI: Uspon doktora Dooma' with the subtitle 'Žanr: SF Spektakl2h 45minPočetak prikazivanja: 17.12.2026'. This suggests that the title may have been embellished beyond what the page text actually says.",
+        "The category of the event 'KINO / OSVETNICI: Uspon doktora Dooma' is given as 'folklore' in the extracted candidate, but the source page text lists the category as 'SF Spektakl'. This suggests that the category may not match what the page actually describes."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-lumbarda-2026-11-20-korcula-island-declared-most-desirable-tourist-destination-o",
+      "sourceId": "visit-lumbarda",
+      "sourceUrl": "https://www.visitlumbarda.eu/",
+      "discoveredAt": "2026-11-27T15:19:29.327Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Otok Korčula proglašen najpoželjnijom turističkom destinacijom na otocima!",
+        "en": "Korčula Island Declared Most Desirable Tourist Destination on the Islands!",
+        "de": "Die Insel Korčula wird zur unwillkommensten touristischen Destination auf den Inseln erklärt!",
+        "it": "L'isola di Korčula dichiarata la destinazione turistica più sgradita tra le isole!",
+        "sl": "Otok Korčula proglašen najmanj željenim turističnim ciljem na otokih!",
+        "fr": "L'île de Korčula est déclarée la destination touristique la moins souhaitée parmi les îles!",
+        "date": "2026-11-20",
+        "town": "lumbarda",
+        "venue": "Lumbarda",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.visitlumbarda.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-lumbarda-2026-11-20-korcula-island-declared-most-desirable-tourist-destination-o"
+      },
+      "verifierConfidence": 0.9,
+      "verifierConcerns": [
+        "The title field appears to be a translation of the actual title on the page, which is 'Otok Korčula proglašen najpoželjnijom turističkom destinacijom na otocima!' in both Croatian and English. The candidate's title field is a translation of this title, but it's not the original title. This is a minor issue, but it's worth noting that the title field is not a direct quote from the page.",
+        "The category field is set to 'kids', but the page does not mention anything about kids. The category field should be 'event' or something similar, as the page is listing a news article or an announcement.",
+        "The date field is set to '2026-11-20', but the page lists the event as happening on '27. studenoga 2026.' This is a discrepancy between the candidate's date field and the actual date on the page. The correct date should be '27. studenoga 2026.'"
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-lumbarda-2026-10-27-private-rental-owners",
+      "sourceId": "visit-lumbarda",
+      "sourceUrl": "https://www.visitlumbarda.eu/",
+      "discoveredAt": "2026-11-27T15:19:29.327Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Privatni iznajmljivači",
+        "en": "Private Rental Owners",
+        "de": "Private Vermieter",
+        "it": "Proprietari privati",
+        "sl": "Osebni najemniki",
+        "fr": "Propriétaires privés",
+        "date": "2026-10-27",
+        "town": "lumbarda",
+        "venue": "Lumbarda",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.visitlumbarda.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-lumbarda-2026-10-27-private-rental-owners"
+      },
+      "verifierConfidence": 0.9,
+      "verifierConcerns": [
+        "The source page contains multiple events, but the extracted candidate does not specify if it's a one-time event or part of a recurring series. This could be a concern if the event is actually a recurring series and the extracted date is just one instance of it.",
+        "The title of the event, 'Privatni iznajmljivači' and 'Private Rental Owners', seems to be a translation of the same phrase. This could be a concern if the title is actually a translation of a different phrase on the source page.",
+        "The venue 'Lumbarda' is mentioned multiple times on the source page, but it's not clear if it's a specific location or a general area. This could be a concern if the venue is actually a general area and not a specific location.",
+        "The category 'kids' seems out of place given the context of the event. This could be a concern if the event is actually not related to kids at all."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-tz-blato-2026-11-16-pregled-b2b",
+      "sourceId": "tz-blato",
+      "sourceUrl": "https://tzo-blato.hr/en/",
+      "discoveredAt": "2026-11-27T15:19:29.327Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "PREGLED B2B",
+        "en": "PREGLED B2B",
+        "de": "B2B-ÜBERSICHT",
+        "it": "RACCOLTA B2B",
+        "sl": "PREGLED B2B",
+        "fr": "RELEVÉ B2B",
+        "date": "2026-11-16",
+        "town": "blato",
+        "venue": "Blato",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://tzo-blato.hr/en/",
+        "extractionMethod": "ai",
+        "id": "ai-tz-blato-2026-11-16-pregled-b2b"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The title field contains the Croatian and English translations of 'PREGLED B2B', but the page text does not contain the exact phrase 'PREGLED B2B' in both languages. The title field may be incorrect.",
+        "The date field is '2026-11-16', but the page text contains an event with the title 'PREGLED B2B' on the same date. However, the page text also contains other events on the same date, so it's possible that the event listed in the candidate is correct. However, without more information, it's difficult to determine if the event listed in the candidate is the same event as the one mentioned in the page text.",
+        "The venue field is 'Blato', which is correct according to the page text. However, the town field is also 'Blato', which is redundant information.",
+        "The category field is 'kids', but the page text does not contain any information about an event for kids on the date '2026-11-16'. The category field may be incorrect.",
+        "The page text does not contain any information about an event on '2026-11-16' that matches the title 'PREGLED B2B' exactly. However, the page text does contain an event with the title 'PREGLED B2B' on the same date, but it's possible that the event listed in the candidate is a different event."
+      ],
+      "blockingReasons": [
+        "past-event",
+        "duplicate-id"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
     }
   ]
 }

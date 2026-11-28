@@ -31124,6 +31124,378 @@
       ],
       "duplicateMatches": [],
       "status": "needs-review"
+    },
+    {
+      "id": "ai-centar-kulture-korcula-2026-12-30-fantom-opery-wednesday-30-12-20-00-14",
+      "sourceId": "centar-kulture-korcula",
+      "sourceUrl": "https://kulturakorcula.hr/kino-najave/",
+      "discoveredAt": "2026-11-28T14:23:18.032Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "KINO / FANTOM OPERE / Srijeda / 30.12. / 20:00 / 14+",
+        "en": "Fantom Opery / Wednesday / 30.12. / 20:00 / 14+",
+        "de": "KINO / PHANTOM DER OPER / Mittwoch / 30.12. / 20:00 / 14+",
+        "it": "CINEMA / IL FANTASMA DELL'OPERA / Mercoledì / 30.12. / 20:00 / 14+",
+        "sl": "KINO / FANTOM OPERE / Sreda / 30.12. / 20:00 / 14+",
+        "fr": "CINÉMA / LE FANTÔME DE L'OPÉRA / Mercredi / 30.12. / 20:00 / 14+",
+        "date": "2026-12-30",
+        "time": "20:00",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "folklore"
+        ],
+        "ticketUrl": "Buy Tickets →",
+        "source": "https://kulturakorcula.hr/kino-najave/",
+        "extractionMethod": "ai",
+        "id": "ai-centar-kulture-korcula-2026-12-30-fantom-opery-wednesday-30-12-20-00-14"
+      },
+      "verifierConfidence": 0.9,
+      "verifierConcerns": [
+        "title_hr"
+      ],
+      "blockingReasons": [
+        "fuzzy-duplicate"
+      ],
+      "duplicateMatches": [
+        {
+          "eventId": "ai-centar-kulture-korcula-2026-12-30-fantazija",
+          "title": "Fantazija",
+          "date": "2026-12-30",
+          "time": "20:00",
+          "venue": "Korčula",
+          "score": 0.88,
+          "reasons": [
+            "same date",
+            "same town",
+            "overlapping category",
+            "same time",
+            "same venue"
+          ]
+        }
+      ],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-centar-kulture-korcula-2026-12-29-jumanji-otvoreni-svijet-tuesday-29-12-19-00-12",
+      "sourceId": "centar-kulture-korcula",
+      "sourceUrl": "https://kulturakorcula.hr/kino-najave/",
+      "discoveredAt": "2026-11-28T14:23:18.032Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "KINO / JUMANJI: Otvoreni svijet / Utorak / 29.12. / 19:00 / 12+",
+        "en": "Jumanji: Otvoreni svijet / Tuesday / 29.12. / 19:00 / 12+",
+        "de": "KINO / JUMANJI: DER OFFENE ZEITRAUM / DIENSTAG / 29.12. / 19:00 / 12+",
+        "it": "CINEMA / JUMANJI: IL MONDO APERTO / MARTEDÌ / 29.12. / 19:00 / 12+",
+        "sl": "KINO / JUMANJI: OTVORJEN SVET / TISTI / 29.12. / 19:00 / 12+",
+        "fr": "CINÉMA / JUMANJI : LE MONDE OUVERT / MARDI / 29.12. / 19:00 / 12+",
+        "date": "2026-12-29",
+        "time": "19:00",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "kids"
+        ],
+        "ticketUrl": "Buy Tickets →",
+        "source": "https://kulturakorcula.hr/kino-najave/",
+        "extractionMethod": "ai",
+        "id": "ai-centar-kulture-korcula-2026-12-29-jumanji-otvoreni-svijet-tuesday-29-12-19-00-12"
+      },
+      "verifierConfidence": 0.7,
+      "verifierConcerns": [
+        "The extracted candidate's title field contains the text 'Jumanji: Otvoreni svijet', which appears to be a translation of the title 'KINO / JUMANJI: Otvoreni svijet' found on the source page. This suggests that the title field may have been translated from the source page's text, rather than being directly extracted. However, the translation appears to be accurate, so this is not a major concern.",
+        "The extracted candidate's date field is '2026-12-29', which appears to be a correct extraction of the date found on the source page. However, the source page lists multiple events, and it's possible that the date field may not be correctly associated with the correct event.",
+        "The extracted candidate's time field is '19:00', which appears to be a correct extraction of the time found on the source page. However, the source page lists multiple events, and it's possible that the time field may not be correctly associated with the correct event.",
+        "The extracted candidate's venue field is 'Korčula', which appears to be a correct extraction of the venue found on the source page. However, the source page lists multiple events, and it's possible that the venue field may not be correctly associated with the correct event.",
+        "The extracted candidate's town field is 'korcula', which appears to be a correct extraction of the town found on the source page. However, the source page lists multiple events, and it's possible that the town field may not be correctly associated with the correct event.",
+        "The extracted candidate's category field is 'kids', which appears to be an incorrect extraction of the category found on the source page. The source page lists the category as 'Akcijska Avantura', which is a more accurate description of the event.",
+        "The extracted candidate's source page appears to be a list of events, but the events are not clearly separated or distinguished from each other. This makes it difficult to determine which event the extracted candidate is associated with, and whether the extracted fields are accurate."
+      ],
+      "blockingReasons": [
+        "fuzzy-duplicate",
+        "verifier-confidence-below-threshold:0.7"
+      ],
+      "duplicateMatches": [
+        {
+          "eventId": "ai-centar-kulture-korcula-2026-12-29-avantura",
+          "title": "Avantura",
+          "date": "2026-12-29",
+          "time": "19:00",
+          "venue": "Korčula",
+          "score": 0.8,
+          "reasons": [
+            "same date",
+            "same town",
+            "same time",
+            "same venue"
+          ]
+        }
+      ],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-centar-kulture-korcula-2026-12-17-dune-treci-dio-thursday-17-12-20-00-12",
+      "sourceId": "centar-kulture-korcula",
+      "sourceUrl": "https://kulturakorcula.hr/kino-najave/",
+      "discoveredAt": "2026-11-28T14:23:18.032Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "KINO / DINA: Treći dio / Četvrtak / 17.12./20:00 / 12+",
+        "en": "Dune: Treći dio / Thursday / 17.12./20:00 / 12+",
+        "de": "KINO / DINA: Dritter Teil / Donnerstag / 17.12./20:00 / 12+",
+        "it": "KINO / DINA: Terzo atto / Giovedì / 17.12./20:00 / 12+",
+        "sl": "KINO / DINA: Tretji del / Četrtek / 17.12./20:00 / 12+",
+        "fr": "KINO / DINA : Troisième partie / Jeudi / 17.12./20:00 / 12+",
+        "date": "2026-12-17",
+        "time": "20:00",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "kids"
+        ],
+        "ticketUrl": "Buy Tickets →",
+        "source": "https://kulturakorcula.hr/kino-najave/",
+        "extractionMethod": "ai",
+        "id": "ai-centar-kulture-korcula-2026-12-17-dune-treci-dio-thursday-17-12-20-00-12"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "venue",
+        "town",
+        "category"
+      ],
+      "blockingReasons": [
+        "fuzzy-duplicate"
+      ],
+      "duplicateMatches": [
+        {
+          "eventId": "ai-centar-kulture-korcula-2026-12-17-fantazija",
+          "title": "Fantazija",
+          "date": "2026-12-17",
+          "time": "20:00",
+          "venue": "Korčula",
+          "score": 0.8,
+          "reasons": [
+            "same date",
+            "same town",
+            "same time",
+            "same venue"
+          ]
+        }
+      ],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-centar-kulture-korcula-2026-12-12-asterix-kraljevstvo-nubije-saturday-12-12-17-00-sink",
+      "sourceId": "centar-kulture-korcula",
+      "sourceUrl": "https://kulturakorcula.hr/kino-najave/",
+      "discoveredAt": "2026-11-28T14:23:18.032Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "KINO / ASTERIX: KRALJEVSTVO NUBIJE / Subota/ 12.12. / 17:00 / sink.",
+        "en": "Asterix: Kraljevstvo Nubije / Saturday / 12.12. / 17:00 / sink.",
+        "de": "KINO / ASTERIX: KÖNIGREICH NUBIEN / Samstag/ 12.12. / 17:00 / sink.",
+        "it": "CINEMA / ASTERIX: IL REGNO DELLA NUBIA / Sabato/ 12.12. / 17:00 / sink.",
+        "sl": "KINO / ASTERIX: KRALJSTVO NUBIJE / Sobota/ 12.12. / 17:00 / sink.",
+        "fr": "CINÉMA / ASTERIX: ROYAUME DE LA NUBIE / Samedi/ 12.12. / 17:00 / sink.",
+        "date": "2026-12-12",
+        "time": "17:00",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "kids"
+        ],
+        "ticketUrl": "Buy Tickets →",
+        "source": "https://kulturakorcula.hr/kino-najave/",
+        "extractionMethod": "ai",
+        "id": "ai-centar-kulture-korcula-2026-12-12-asterix-kraljevstvo-nubije-saturday-12-12-17-00-sink"
+      },
+      "verifierConfidence": 0.9,
+      "verifierConcerns": [
+        "The title field contains a call-to-action text ('sink.') instead of just the event title.",
+        "The 'date' field seems to be well-supported by the text next to it, but the 'time' field is not explicitly mentioned in the source page text. However, the time is mentioned in the 'Animirani' section, which seems to be the same event.",
+        "The 'town' field is well-supported by the text next to it, but the 'venue' field is not explicitly mentioned in the source page text. However, the venue is mentioned in the 'Animirani' section, which seems to be the same event.",
+        "The 'category' field is well-supported by the text next to it, but it's worth noting that the source page text uses the term 'Animirani' to describe this event, which is a more specific genre than the 'kids' category."
+      ],
+      "blockingReasons": [
+        "fuzzy-duplicate"
+      ],
+      "duplicateMatches": [
+        {
+          "eventId": "ai-centar-kulture-korcula-2026-12-12-animirani",
+          "title": "Animirani",
+          "date": "2026-12-12",
+          "time": "17:00",
+          "venue": "Korčula",
+          "score": 0.8,
+          "reasons": [
+            "same date",
+            "same town",
+            "same time",
+            "same venue"
+          ]
+        }
+      ],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-centar-kulture-korcula-2026-12-11-godina-nulto-kristovo-ro-enje-friday-11-12-20-00-12",
+      "sourceId": "centar-kulture-korcula",
+      "sourceUrl": "https://kulturakorcula.hr/kino-najave/",
+      "discoveredAt": "2026-11-28T14:23:18.032Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "KINO / GODINA NULTA: Kristovo rođenje / Petak/ 11.12. / 20:00 / 12+",
+        "en": "Godina Nulto: Kristovo Rođenje / Friday / 11.12. / 20:00 / 12+",
+        "de": "KINO / JAHRE NULL: Die Geburt Christi / Freitag/ 11.12. / 20:00 / 12+",
+        "it": "CINEMA / ANNO ZERO: La nascita di Cristo / Venerdì/ 11.12. / 20:00 / 12+",
+        "sl": "KINO / LETO NULO: Jezusovo rojstvo / Petek/ 11.12. / 20:00 / 12+",
+        "fr": "CINÉMA / ANNÉE ZÉRO: La naissance de Jésus / Vendredi/ 11.12. / 20:00 / 12+",
+        "date": "2026-12-11",
+        "time": "20:00",
+        "town": "korcula",
+        "venue": "Korčula",
+        "cats": [
+          "kids"
+        ],
+        "ticketUrl": "Buy Tickets →",
+        "source": "https://kulturakorcula.hr/kino-najave/",
+        "extractionMethod": "ai",
+        "id": "ai-centar-kulture-korcula-2026-12-11-godina-nulto-kristovo-ro-enje-friday-11-12-20-00-12"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The extracted candidate's date '2026-12-11' seems to match the date mentioned in the source page text for another event ('Žanr: Povijesni spektakl1h 47minPočetak prikazivanja: 10.12.2026.' and 'Žanr: Povijesni spektakl1h 47minPočetak prikazivanja: 10.12.2026.' for another event). This could indicate that the extraction is not specific to this event, but rather a recurring pattern. However, this is not a strong concern as the date still appears to be correct.",
+        "The extracted candidate's title 'Godina Nulto: Kristovo Rođenje / Friday / 11.12. / 20:00 / 12+' does not exactly match any of the titles in the source page text. The closest match is 'BiografijaKINO / GODINA NULTA: Kristovo rođenje / Petak/ 11.12. / 20:00 / 12+', which is a different title. This could indicate that the extraction is not accurate.",
+        "The extracted candidate's venue 'Korčula' appears to be correct, as it is mentioned in the source page text for another event ('Žanr: Povijesni spektakl1h 47minPočetak prikazivanja: 10.12.2026.'). However, this is not a strong concern as the venue is still mentioned in the source page text.",
+        "The extracted candidate's category 'kids' does not match any of the categories mentioned in the source page text. The closest match is 'Žanr: Povijesni spektakl', which is a different category. This could indicate that the extraction is not accurate."
+      ],
+      "blockingReasons": [
+        "fuzzy-duplicate"
+      ],
+      "duplicateMatches": [
+        {
+          "eventId": "ai-centar-kulture-korcula-2026-12-11-biografija",
+          "title": "Biografija",
+          "date": "2026-12-11",
+          "time": "20:00",
+          "venue": "Korčula",
+          "score": 0.8,
+          "reasons": [
+            "same date",
+            "same town",
+            "same time",
+            "same venue"
+          ]
+        }
+      ],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-lumbarda-2026-11-27-advent-u-lumbardi",
+      "sourceId": "visit-lumbarda",
+      "sourceUrl": "https://www.visitlumbarda.eu/",
+      "discoveredAt": "2026-11-28T14:23:18.032Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Advent u Lumbardi",
+        "en": "Advent in Lumbardy",
+        "de": "Advent in Lumbardien",
+        "it": "L'Avvento in Lumbardia",
+        "sl": "Božič v Lumbardiji",
+        "fr": "L'Advent en Lombarde",
+        "date": "2026-11-27",
+        "time": "studenoga",
+        "town": "lumbarda",
+        "venue": "Lumbarda",
+        "cats": [
+          "festival",
+          "kids"
+        ],
+        "source": "https://www.visitlumbarda.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-lumbarda-2026-11-27-advent-u-lumbardi"
+      },
+      "verifierConfidence": 1,
+      "verifierConcerns": [],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-visit-lumbarda-2026-10-27-private-renters",
+      "sourceId": "visit-lumbarda",
+      "sourceUrl": "https://www.visitlumbarda.eu/",
+      "discoveredAt": "2026-11-28T14:23:18.032Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "Privatni iznajmljivači",
+        "en": "Private Renters",
+        "de": "Private Vermieter",
+        "it": "Venditori privati",
+        "sl": "Osebni najemniki",
+        "fr": "Propriétaires privés",
+        "date": "2026-10-27",
+        "town": "lumbarda",
+        "venue": "Lumbarda",
+        "cats": [
+          "kids"
+        ],
+        "source": "https://www.visitlumbarda.eu/",
+        "extractionMethod": "ai",
+        "id": "ai-visit-lumbarda-2026-10-27-private-renters"
+      },
+      "verifierConfidence": 0.9,
+      "verifierConcerns": [
+        "The title field 'Privatni iznajmljivači' and 'Private Renters' do not appear together on the page near each other. They appear in two different sections.",
+        "The date field '2026-10-27' appears to be correct, but it is not clear if it refers to the current year or a previous year. The text '27. studenoga 2026' appears to be a more accurate date.",
+        "The town field 'lumbarda' appears to be correct, but it is not clear if it refers to the town of Lumbarda or the region of Lumbarda.",
+        "The venue field 'Lumbarda' appears to be correct, but it is not clear if it refers to the town of Lumbarda or the region of Lumbarda.",
+        "The category field 'kids' does not appear to be supported by the text. The text 'Online edukacija za iznajmljivače' appears to be related to the category 'Privatni iznajmljivači'."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
+    },
+    {
+      "id": "ai-tz-blato-2026-11-16-b2b-review",
+      "sourceId": "tz-blato",
+      "sourceUrl": "https://tzo-blato.hr/en/",
+      "discoveredAt": "2026-11-28T14:23:18.032Z",
+      "extractionMethod": "ai",
+      "event": {
+        "hr": "PREGLED B2B",
+        "en": "B2B Review",
+        "de": "ÜBERSICHT B2B",
+        "it": "RISCONTRO B2B",
+        "sl": "OGLIŠITEV B2B",
+        "fr": "RELEVÉ B2B",
+        "date": "2026-11-16",
+        "town": "blato",
+        "venue": "Blato",
+        "cats": [
+          "food"
+        ],
+        "source": "https://tzo-blato.hr/en/",
+        "extractionMethod": "ai",
+        "id": "ai-tz-blato-2026-11-16-b2b-review"
+      },
+      "verifierConfidence": 0.8,
+      "verifierConcerns": [
+        "The title 'B2B Review' does not appear on the page. The actual title 'PREGLED B2B' is in Croatian, and it's possible that the English translation 'B2B Review' is not accurate.",
+        "The date '2026-11-16' is mentioned in the page, but it's not clear if it's related to the event 'PREGLED B2B'. There are multiple dates mentioned on the page, and it's possible that this date is for a different event.",
+        "The venue 'Blato' is mentioned on the page, but it's not clear if it's the actual venue for the event 'PREGLED B2B'. The page mentions multiple locations in Blato, and it's possible that this is not the correct venue.",
+        "The category 'food' does not seem to match the content of the page. The page appears to be a tourist board website, and the events mentioned are not related to food."
+      ],
+      "blockingReasons": [
+        "past-event"
+      ],
+      "duplicateMatches": [],
+      "status": "needs-review"
     }
   ]
 }
